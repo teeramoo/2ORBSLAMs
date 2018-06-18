@@ -1,0 +1,126 @@
+\hypertarget{classg2o_1_1RobustKernelTukey}{}\section{g2o\+:\+:Robust\+Kernel\+Tukey Class Reference}
+\label{classg2o_1_1RobustKernelTukey}\index{g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}}
+
+
+Tukey Cost Function.  
+
+
+
+
+{\ttfamily \#include $<$robust\+\_\+kernel\+\_\+impl.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Robust\+Kernel\+Tukey\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Robust\+Kernel\+Tukey\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classg2o_1_1RobustKernelTukey_a0602ba130364506d65fb86f3473209aa}{set\+Delta\+Sqr} (const double \&delta\+Sqr, const double \&inv)
+\item 
+virtual void \hyperlink{classg2o_1_1RobustKernelTukey_abcc5f9921110f775db6d652f8fcf4f42}{robustify} (double e2, Eigen\+::\+Vector3d \&rho) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classg2o_1_1RobustKernelTukey_a3964d90966fa04e5d8002c1c52bda718}{\+\_\+delta\+Sqr}
+\item 
+float \hyperlink{classg2o_1_1RobustKernelTukey_addca0bfe5d4cafbe0a030c645efd2754}{\+\_\+inv\+Delta\+Sqr}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Tukey Cost Function. 
+
+If e$^\wedge$(1/2) $<$ d rho(e) = delta2(1-\/(1-\/e/delta2)$^\wedge$3)
+
+else
+
+rho(e) = delta2 
+
+Definition at line 98 of file robust\+\_\+kernel\+\_\+impl.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}!robustify@{robustify}}
+\index{robustify@{robustify}!g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}}
+\subsubsection[{\texorpdfstring{robustify(double e2, Eigen\+::\+Vector3d \&rho) const }{robustify(double e2, Eigen::Vector3d &rho) const }}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Robust\+Kernel\+Tukey\+::robustify (
+\begin{DoxyParamCaption}
+\item[{double}]{squared\+Error, }
+\item[{Eigen\+::\+Vector3d \&}]{rho}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1RobustKernelTukey_abcc5f9921110f775db6d652f8fcf4f42}{}\label{classg2o_1_1RobustKernelTukey_abcc5f9921110f775db6d652f8fcf4f42}
+compute the scaling factor for a error\+: The error is e$^\wedge$T Omega e The output rho is rho\mbox{[}0\mbox{]}\+: The actual scaled error value rho\mbox{[}1\mbox{]}\+: First derivative of the scaling function rho\mbox{[}2\mbox{]}\+: Second derivative of the scaling function 
+
+Implements \hyperlink{classg2o_1_1RobustKernel_ab47b071a0cfe466be063f0104bc41d0f}{g2o\+::\+Robust\+Kernel}.
+
+
+
+Definition at line 100 of file robust\+\_\+kernel\+\_\+impl.\+cpp.
+
+
+\begin{DoxyCode}
+101 \{
+102   \textcolor{keywordflow}{if} (e <= \hyperlink{classg2o_1_1RobustKernelTukey_a3964d90966fa04e5d8002c1c52bda718}{\_deltaSqr}) \{ \textcolor{comment}{// inlier}
+103     \textcolor{keywordtype}{double} factor = e*\hyperlink{classg2o_1_1RobustKernelTukey_addca0bfe5d4cafbe0a030c645efd2754}{\_invDeltaSqr};
+104     \textcolor{keywordtype}{double} d = 1-factor;
+105     \textcolor{keywordtype}{double} dd = d*d;
+106     rho[0] = \hyperlink{classg2o_1_1RobustKernelTukey_a3964d90966fa04e5d8002c1c52bda718}{\_deltaSqr}*(1-dd*d);
+107     rho[1] = 3*dd;
+108     rho[2] = -6*\_invDeltaSqr*d;
+109   \} \textcolor{keywordflow}{else} \{ \textcolor{comment}{// outlier}
+110     rho[0] = \hyperlink{classg2o_1_1RobustKernelTukey_a3964d90966fa04e5d8002c1c52bda718}{\_deltaSqr}; \textcolor{comment}{// rho(e)   = delta^2}
+111     rho[1] = 0.;
+112     rho[2] = 0.;   
+113   \}
+114 \}
+\end{DoxyCode}
+\index{g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}!set\+Delta\+Sqr@{set\+Delta\+Sqr}}
+\index{set\+Delta\+Sqr@{set\+Delta\+Sqr}!g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}}
+\subsubsection[{\texorpdfstring{set\+Delta\+Sqr(const double \&delta\+Sqr, const double \&inv)}{setDeltaSqr(const double &deltaSqr, const double &inv)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Robust\+Kernel\+Tukey\+::set\+Delta\+Sqr (
+\begin{DoxyParamCaption}
+\item[{const double \&}]{delta\+Sqr, }
+\item[{const double \&}]{inv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1RobustKernelTukey_a0602ba130364506d65fb86f3473209aa}{}\label{classg2o_1_1RobustKernelTukey_a0602ba130364506d65fb86f3473209aa}
+
+
+Definition at line 93 of file robust\+\_\+kernel\+\_\+impl.\+cpp.
+
+
+\begin{DoxyCode}
+94 \{
+95  \hyperlink{classg2o_1_1RobustKernelTukey_a3964d90966fa04e5d8002c1c52bda718}{\_deltaSqr} = deltaSqr;
+96  \hyperlink{classg2o_1_1RobustKernelTukey_addca0bfe5d4cafbe0a030c645efd2754}{\_invDeltaSqr} = inv;
+97  
+98 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}!\+\_\+delta\+Sqr@{\+\_\+delta\+Sqr}}
+\index{\+\_\+delta\+Sqr@{\+\_\+delta\+Sqr}!g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}}
+\subsubsection[{\texorpdfstring{\+\_\+delta\+Sqr}{_deltaSqr}}]{\setlength{\rightskip}{0pt plus 5cm}float g2o\+::\+Robust\+Kernel\+Tukey\+::\+\_\+delta\+Sqr\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classg2o_1_1RobustKernelTukey_a3964d90966fa04e5d8002c1c52bda718}{}\label{classg2o_1_1RobustKernelTukey_a3964d90966fa04e5d8002c1c52bda718}
+
+
+Definition at line 105 of file robust\+\_\+kernel\+\_\+impl.\+h.
+
+\index{g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}!\+\_\+inv\+Delta\+Sqr@{\+\_\+inv\+Delta\+Sqr}}
+\index{\+\_\+inv\+Delta\+Sqr@{\+\_\+inv\+Delta\+Sqr}!g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}}
+\subsubsection[{\texorpdfstring{\+\_\+inv\+Delta\+Sqr}{_invDeltaSqr}}]{\setlength{\rightskip}{0pt plus 5cm}float g2o\+::\+Robust\+Kernel\+Tukey\+::\+\_\+inv\+Delta\+Sqr\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classg2o_1_1RobustKernelTukey_addca0bfe5d4cafbe0a030c645efd2754}{}\label{classg2o_1_1RobustKernelTukey_addca0bfe5d4cafbe0a030c645efd2754}
+
+
+Definition at line 106 of file robust\+\_\+kernel\+\_\+impl.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{robust__kernel__impl_8h}{robust\+\_\+kernel\+\_\+impl.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{robust__kernel__impl_8cpp}{robust\+\_\+kernel\+\_\+impl.\+cpp}\end{DoxyCompactItemize}

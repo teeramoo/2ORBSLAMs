@@ -1,0 +1,78 @@
+\hypertarget{structg2o_1_1HyperDijkstra_1_1TreeAction}{}\section{g2o\+:\+:Hyper\+Dijkstra\+:\+:Tree\+Action Struct Reference}
+\label{structg2o_1_1HyperDijkstra_1_1TreeAction}\index{g2o\+::\+Hyper\+Dijkstra\+::\+Tree\+Action@{g2o\+::\+Hyper\+Dijkstra\+::\+Tree\+Action}}
+
+
+{\ttfamily \#include $<$hyper\+\_\+dijkstra.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \hyperlink{structg2o_1_1HyperDijkstra_1_1TreeAction_aacd1280762e801f05b04874950cf052b}{perform} (\hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Hyper\+Graph\+::\+Vertex} $\ast$v, \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Hyper\+Graph\+::\+Vertex} $\ast$v\+Parent, \hyperlink{classg2o_1_1HyperGraph_1_1Edge}{Hyper\+Graph\+::\+Edge} $\ast$e)
+\item 
+virtual double \hyperlink{structg2o_1_1HyperDijkstra_1_1TreeAction_a2f78bac199af9afea7105f3dd9f2e963}{perform} (\hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Hyper\+Graph\+::\+Vertex} $\ast$v, \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Hyper\+Graph\+::\+Vertex} $\ast$v\+Parent, \hyperlink{classg2o_1_1HyperGraph_1_1Edge}{Hyper\+Graph\+::\+Edge} $\ast$e, double distance)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 44 of file hyper\+\_\+dijkstra.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Hyper\+Dijkstra\+::\+Tree\+Action@{g2o\+::\+Hyper\+Dijkstra\+::\+Tree\+Action}!perform@{perform}}
+\index{perform@{perform}!g2o\+::\+Hyper\+Dijkstra\+::\+Tree\+Action@{g2o\+::\+Hyper\+Dijkstra\+::\+Tree\+Action}}
+\subsubsection[{\texorpdfstring{perform(\+Hyper\+Graph\+::\+Vertex $\ast$v, Hyper\+Graph\+::\+Vertex $\ast$v\+Parent, Hyper\+Graph\+::\+Edge $\ast$e)}{perform(HyperGraph::Vertex *v, HyperGraph::Vertex *vParent, HyperGraph::Edge *e)}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Hyper\+Dijkstra\+::\+Tree\+Action\+::perform (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+::\+Vertex} $\ast$}]{v, }
+\item[{{\bf Hyper\+Graph\+::\+Vertex} $\ast$}]{v\+Parent, }
+\item[{{\bf Hyper\+Graph\+::\+Edge} $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{structg2o_1_1HyperDijkstra_1_1TreeAction_aacd1280762e801f05b04874950cf052b}{}\label{structg2o_1_1HyperDijkstra_1_1TreeAction_aacd1280762e801f05b04874950cf052b}
+
+
+Definition at line 39 of file hyper\+\_\+dijkstra.\+cpp.
+
+
+
+Referenced by g2o\+::\+Hyper\+Dijkstra\+::visit\+Adjacency\+Map().
+
+
+\begin{DoxyCode}
+39                                                                                                           \{
+40     (void) v;
+41     (void) vParent;
+42     (void) e;
+43     \textcolor{keywordflow}{return} std::numeric\_limits<double>::max();
+44   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Dijkstra\+::\+Tree\+Action@{g2o\+::\+Hyper\+Dijkstra\+::\+Tree\+Action}!perform@{perform}}
+\index{perform@{perform}!g2o\+::\+Hyper\+Dijkstra\+::\+Tree\+Action@{g2o\+::\+Hyper\+Dijkstra\+::\+Tree\+Action}}
+\subsubsection[{\texorpdfstring{perform(\+Hyper\+Graph\+::\+Vertex $\ast$v, Hyper\+Graph\+::\+Vertex $\ast$v\+Parent, Hyper\+Graph\+::\+Edge $\ast$e, double distance)}{perform(HyperGraph::Vertex *v, HyperGraph::Vertex *vParent, HyperGraph::Edge *e, double distance)}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Hyper\+Dijkstra\+::\+Tree\+Action\+::perform (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+::\+Vertex} $\ast$}]{v, }
+\item[{{\bf Hyper\+Graph\+::\+Vertex} $\ast$}]{v\+Parent, }
+\item[{{\bf Hyper\+Graph\+::\+Edge} $\ast$}]{e, }
+\item[{double}]{distance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{structg2o_1_1HyperDijkstra_1_1TreeAction_a2f78bac199af9afea7105f3dd9f2e963}{}\label{structg2o_1_1HyperDijkstra_1_1TreeAction_a2f78bac199af9afea7105f3dd9f2e963}
+
+
+Definition at line 46 of file hyper\+\_\+dijkstra.\+cpp.
+
+
+\begin{DoxyCode}
+46                                                                                                            
+                      \{
+47     \textcolor{keywordflow}{if} (distance==-1)
+48       \textcolor{keywordflow}{return} \hyperlink{structg2o_1_1HyperDijkstra_1_1TreeAction_aacd1280762e801f05b04874950cf052b}{perform} (v,vParent,e);
+49     \textcolor{keywordflow}{return} std::numeric\_limits<double>::max();
+50   \}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{hyper__dijkstra_8h}{hyper\+\_\+dijkstra.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{hyper__dijkstra_8cpp}{hyper\+\_\+dijkstra.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,1653 @@
+\hypertarget{classg2o_1_1SparseBlockMatrix}{}\section{g2o\+:\+:Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ Class Template Reference}
+\label{classg2o_1_1SparseBlockMatrix}\index{g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$@{g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$}}
+
+
+Sparse matrix which uses blocks.  
+
+
+
+
+{\ttfamily \#include $<$sparse\+\_\+block\+\_\+matrix.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Matrix\+Type \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{Sparse\+Matrix\+Block}
+\begin{DoxyCompactList}\small\item\em this is the type of the elementary block, it is an Eigen\+::\+Matrix. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ int, \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{Sparse\+Matrix\+Block} $\ast$ $>$ \hyperlink{classg2o_1_1SparseBlockMatrix_aaa6ca1ae454ed70f62992b6401645f4e}{Int\+Block\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classg2o_1_1SparseBlockMatrix_ab854ca59f370d93229852e32a7b49d3e}{cols} () const 
+\begin{DoxyCompactList}\small\item\em columns of the matrix \end{DoxyCompactList}\item 
+int \hyperlink{classg2o_1_1SparseBlockMatrix_adf18fb267e545b9036314cf9f8f10473}{rows} () const 
+\begin{DoxyCompactList}\small\item\em rows of the matrix \end{DoxyCompactList}\item 
+\hyperlink{classg2o_1_1SparseBlockMatrix_a0407f26837522322d7b7fd7a5259ee3c}{Sparse\+Block\+Matrix} (const int $\ast$rbi, const int $\ast$cbi, int rb, int cb, bool has\+Storage=true)
+\item 
+\hyperlink{classg2o_1_1SparseBlockMatrix_af9b8a9cb09a88bc444775a9974db8760}{Sparse\+Block\+Matrix} ()
+\item 
+\hyperlink{classg2o_1_1SparseBlockMatrix_a70d18ec0265a69e1291083e20a5bc95e}{$\sim$\+Sparse\+Block\+Matrix} ()
+\item 
+void \hyperlink{classg2o_1_1SparseBlockMatrix_af14b7aaa588b339f2c06793fcc0d4e09}{clear} (bool dealloc=false)
+\begin{DoxyCompactList}\small\item\em this zeroes all the blocks. If dealloc=true the blocks are removed from memory \end{DoxyCompactList}\item 
+\hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{Sparse\+Matrix\+Block} $\ast$ \hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block} (int \hyperlink{sparse__helper_8cpp_acab531abaa74a7e664e3986f2522b33a}{r}, int \hyperlink{sparse__helper_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}, bool alloc=false)
+\begin{DoxyCompactList}\small\item\em returns the block at location r,c. if alloc=true he block is created if it does not exist \end{DoxyCompactList}\item 
+const \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{Sparse\+Matrix\+Block} $\ast$ \hyperlink{classg2o_1_1SparseBlockMatrix_a1dd47246358ea852f8ff3db76aa6a287}{block} (int \hyperlink{sparse__helper_8cpp_acab531abaa74a7e664e3986f2522b33a}{r}, int \hyperlink{sparse__helper_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}) const 
+\begin{DoxyCompactList}\small\item\em returns the block at location r,c \end{DoxyCompactList}\item 
+int \hyperlink{classg2o_1_1SparseBlockMatrix_a2f1eceae58978d7ee263a80961006d22}{rows\+Of\+Block} (int \hyperlink{sparse__helper_8cpp_acab531abaa74a7e664e3986f2522b33a}{r}) const 
+\begin{DoxyCompactList}\small\item\em how many rows does the block at block-\/row r has? \end{DoxyCompactList}\item 
+int \hyperlink{classg2o_1_1SparseBlockMatrix_adb88ef292aedf1468f57cf5dc751a8e2}{cols\+Of\+Block} (int \hyperlink{sparse__helper_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}) const 
+\begin{DoxyCompactList}\small\item\em how many cols does the block at block-\/col c has? \end{DoxyCompactList}\item 
+int \hyperlink{classg2o_1_1SparseBlockMatrix_a176a2dbe00711e248ea25dc1995c6b4c}{row\+Base\+Of\+Block} (int \hyperlink{sparse__helper_8cpp_acab531abaa74a7e664e3986f2522b33a}{r}) const 
+\begin{DoxyCompactList}\small\item\em where does the row at block-\/row r starts? \end{DoxyCompactList}\item 
+int \hyperlink{classg2o_1_1SparseBlockMatrix_adf282a20d7c77c5949a0d93ca2651271}{col\+Base\+Of\+Block} (int \hyperlink{sparse__helper_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}) const 
+\begin{DoxyCompactList}\small\item\em where does the col at block-\/col r starts? \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classg2o_1_1SparseBlockMatrix_a52c11b08907dbb80ac44ad5459bc70fe}{non\+Zeros} () const 
+\begin{DoxyCompactList}\small\item\em number of non-\/zero elements \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classg2o_1_1SparseBlockMatrix_a4e2ecdfdec3b47b2f9373c56aecc7d15}{non\+Zero\+Blocks} () const 
+\begin{DoxyCompactList}\small\item\em number of allocated blocks \end{DoxyCompactList}\item 
+\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix} $\ast$ \hyperlink{classg2o_1_1SparseBlockMatrix_ac2946d6216dd2adfbd257b495a589d13}{clone} () const 
+\begin{DoxyCompactList}\small\item\em deep copy of a sparse-\/block-\/matrix; \end{DoxyCompactList}\item 
+\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix} $\ast$ \hyperlink{classg2o_1_1SparseBlockMatrix_abc8836f73757f69b97965459944043a5}{slice} (int rmin, int rmax, int cmin, int cmax, bool alloc=true) const 
+\item 
+{\footnotesize template$<$class Matrix\+Transposed\+Type $>$ }\\bool \hyperlink{classg2o_1_1SparseBlockMatrix_a85d0915bc613dac1a46d372fc1cacde7}{transpose} (\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Transposed\+Type $>$ $\ast$\&dest) const 
+\begin{DoxyCompactList}\small\item\em transposes a block matrix, The transposed type should match the argument false on failure \end{DoxyCompactList}\item 
+bool \hyperlink{classg2o_1_1SparseBlockMatrix_a47d026462af0a744cdba6cbf9caa0b3b}{add} (\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ $\ast$\&dest) const 
+\begin{DoxyCompactList}\small\item\em adds the current matrix to the destination \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Matrix\+Result\+Type , class Matrix\+Factor\+Type $>$ }\\bool \hyperlink{classg2o_1_1SparseBlockMatrix_a7e37bb74f265c78174fbb5ac9f4df131}{multiply} (\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Result\+Type $>$ $\ast$\&dest, const \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Factor\+Type $>$ $\ast$M) const 
+\begin{DoxyCompactList}\small\item\em dest = ($\ast$this) $\ast$ M \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1SparseBlockMatrix_aa0718ac7391b2d88861bc2c9f1b93ab2}{multiply} (double $\ast$\&dest, const double $\ast$src) const 
+\begin{DoxyCompactList}\small\item\em dest = ($\ast$this) $\ast$ src \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1SparseBlockMatrix_ab162724d457b342e675c535dd78165cd}{multiply\+Symmetric\+Upper\+Triangle} (double $\ast$\&dest, const double $\ast$src) const 
+\item 
+void \hyperlink{classg2o_1_1SparseBlockMatrix_abd3d832d520ccbcdd4cfed817cd55e81}{right\+Multiply} (double $\ast$\&dest, const double $\ast$src) const 
+\begin{DoxyCompactList}\small\item\em dest = M $\ast$ ($\ast$this) \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1SparseBlockMatrix_afbccb3c0404beeba566e21429089e288}{scale} (double a)
+\begin{DoxyCompactList}\small\item\em $\ast$this $\ast$= a \end{DoxyCompactList}\item 
+bool \hyperlink{classg2o_1_1SparseBlockMatrix_a19b0010ec521b275bc88fda5c66b1b48}{symm\+Permutation} (\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ $\ast$\&dest, const int $\ast$pinv, bool only\+Upper=false) const 
+\item 
+int \hyperlink{classg2o_1_1SparseBlockMatrix_a71b97c895688e06ab48eaf53c93c39ed}{fill\+C\+CS} (int $\ast$Cp, int $\ast$Ci, double $\ast$Cx, bool upper\+Triangle=false) const 
+\item 
+int \hyperlink{classg2o_1_1SparseBlockMatrix_a77bf1e20da0968a5ad55d590406700a7}{fill\+C\+CS} (double $\ast$Cx, bool upper\+Triangle=false) const 
+\item 
+void \hyperlink{classg2o_1_1SparseBlockMatrix_a7c9f06c801b5421752673b349477f617}{fill\+Block\+Structure} (\hyperlink{classg2o_1_1MatrixStructure}{Matrix\+Structure} \&ms) const 
+\begin{DoxyCompactList}\small\item\em exports the non zero blocks in the structure matrix ms \end{DoxyCompactList}\item 
+const std\+::vector$<$ \hyperlink{classg2o_1_1SparseBlockMatrix_aaa6ca1ae454ed70f62992b6401645f4e}{Int\+Block\+Map} $>$ \& \hyperlink{classg2o_1_1SparseBlockMatrix_a8e53797223fff106487d0b0080a3e36e}{block\+Cols} () const 
+\begin{DoxyCompactList}\small\item\em the block matrices per block-\/column \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classg2o_1_1SparseBlockMatrix_aaa6ca1ae454ed70f62992b6401645f4e}{Int\+Block\+Map} $>$ \& \hyperlink{classg2o_1_1SparseBlockMatrix_a31236f3e11cb7af4979d68fdba3d5e33}{block\+Cols} ()
+\item 
+const std\+::vector$<$ int $>$ \& \hyperlink{classg2o_1_1SparseBlockMatrix_ab9f9e621c9bca7c660c61b3948b8ece3}{row\+Block\+Indices} () const 
+\begin{DoxyCompactList}\small\item\em indices of the row blocks \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \& \hyperlink{classg2o_1_1SparseBlockMatrix_a03a2cfdb856c2dac4875889d55ecda84}{row\+Block\+Indices} ()
+\item 
+const std\+::vector$<$ int $>$ \& \hyperlink{classg2o_1_1SparseBlockMatrix_adfaf13a5f3134205a58c8346a09a672a}{col\+Block\+Indices} () const 
+\begin{DoxyCompactList}\small\item\em indices of the column blocks \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \& \hyperlink{classg2o_1_1SparseBlockMatrix_aba255bdbb8e0a0d2802ae27e6d4f7cc7}{col\+Block\+Indices} ()
+\item 
+bool \hyperlink{classg2o_1_1SparseBlockMatrix_a58a311fa5e66df880b29c8abb631474e}{write\+Octave} (const char $\ast$filename, bool upper\+Triangle=true) const 
+\item 
+int \hyperlink{classg2o_1_1SparseBlockMatrix_a1f596d1bd27de9f62282eee7e65a9f27}{fill\+Sparse\+Block\+Matrix\+C\+CS} (\hyperlink{classg2o_1_1SparseBlockMatrixCCS}{Sparse\+Block\+Matrix\+C\+CS}$<$ Matrix\+Type $>$ \&block\+C\+CS) const 
+\item 
+int \hyperlink{classg2o_1_1SparseBlockMatrix_a0fbc51ac6aebfceed54a6eb75d2f3ab2}{fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed} (\hyperlink{classg2o_1_1SparseBlockMatrixCCS}{Sparse\+Block\+Matrix\+C\+CS}$<$ Matrix\+Type $>$ \&block\+C\+CS) const 
+\item 
+void \hyperlink{classg2o_1_1SparseBlockMatrix_a0b1e9dc3a24b0ab41d7002396a61c833}{take\+Pattern\+From\+Hash} (\hyperlink{classg2o_1_1SparseBlockMatrixHashMap}{Sparse\+Block\+Matrix\+Hash\+Map}$<$ Matrix\+Type $>$ \&hash\+Matrix)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\+\_\+row\+Block\+Indices}
+\begin{DoxyCompactList}\small\item\em vector of the indices of the blocks along the rows. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\+\_\+col\+Block\+Indices}
+\item 
+std\+::vector$<$ \hyperlink{classg2o_1_1SparseBlockMatrix_aaa6ca1ae454ed70f62992b6401645f4e}{Int\+Block\+Map} $>$ \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\+\_\+block\+Cols}
+\item 
+bool \hyperlink{classg2o_1_1SparseBlockMatrix_ae3f063a5efc2708b41806ac361fd3ca6}{\+\_\+has\+Storage}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Matrix\+Type = Matrix\+Xd$>$\\*
+class g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$}
+
+Sparse matrix which uses blocks. 
+
+Template class that specifies a sparse block matrix. A block matrix is a sparse matrix made of dense blocks. These blocks cannot have a random pattern, but follow a (variable) grid structure. This structure is specified by a partition of the rows and the columns of the matrix. The blocks are represented by the Eigen\+::\+Matrix structure, thus they can be statically or dynamically allocated. For efficiency reasons it is convenient to allocate them statically, when possible. A static block matrix has all blocks of the same size, and the size of the block is specified by the template argument. If this is not the case, and you have different block sizes than you have to use a dynamic-\/block matrix (default template argument). 
+
+Definition at line 62 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!Int\+Block\+Map@{Int\+Block\+Map}}
+\index{Int\+Block\+Map@{Int\+Block\+Map}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{Int\+Block\+Map}{IntBlockMap}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ typedef std\+::map$<$int, {\bf Sparse\+Matrix\+Block}$\ast$$>$ {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::{\bf Int\+Block\+Map}}\hypertarget{classg2o_1_1SparseBlockMatrix_aaa6ca1ae454ed70f62992b6401645f4e}{}\label{classg2o_1_1SparseBlockMatrix_aaa6ca1ae454ed70f62992b6401645f4e}
+
+
+Definition at line 73 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!Sparse\+Matrix\+Block@{Sparse\+Matrix\+Block}}
+\index{Sparse\+Matrix\+Block@{Sparse\+Matrix\+Block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{Sparse\+Matrix\+Block}{SparseMatrixBlock}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ typedef Matrix\+Type {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::{\bf Sparse\+Matrix\+Block}}\hypertarget{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{}\label{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}
+
+
+this is the type of the elementary block, it is an Eigen\+::\+Matrix. 
+
+
+
+Definition at line 66 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!Sparse\+Block\+Matrix@{Sparse\+Block\+Matrix}}
+\index{Sparse\+Block\+Matrix@{Sparse\+Block\+Matrix}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{Sparse\+Block\+Matrix(const int $\ast$rbi, const int $\ast$cbi, int rb, int cb, bool has\+Storage=true)}{SparseBlockMatrix(const int *rbi, const int *cbi, int rb, int cb, bool hasStorage=true)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::{\bf Sparse\+Block\+Matrix} (
+\begin{DoxyParamCaption}
+\item[{const int $\ast$}]{rbi, }
+\item[{const int $\ast$}]{cbi, }
+\item[{int}]{rb, }
+\item[{int}]{cb, }
+\item[{bool}]{has\+Storage = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseBlockMatrix_a0407f26837522322d7b7fd7a5259ee3c}{}\label{classg2o_1_1SparseBlockMatrix_a0407f26837522322d7b7fd7a5259ee3c}
+constructs a sparse block matrix having a specific layout 
+\begin{DoxyParams}{Parameters}
+{\em rbi} & array of int containing the row layout of the blocks. the component i of the array should contain the index of the first row of the block i+1. \\
+\hline
+{\em rbi} & array of int containing the column layout of the blocks. the component i of the array should contain the index of the first col of the block i+1. \\
+\hline
+{\em rb} & number of row blocks \\
+\hline
+{\em cb} & number of col blocks \\
+\hline
+{\em has\+Storage} & set it to true if the matrix \char`\"{}owns\char`\"{} the blocks, thus it deletes it on destruction. if false the matrix is only a \char`\"{}view\char`\"{} over an existing structure. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+\begin{DoxyCode}
+54                                                                                                            
+              :
+55     \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}(rbi,rbi+rb),
+56     \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}(cbi,cbi+cb),
+57     \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}(cb), \hyperlink{classg2o_1_1SparseBlockMatrix_ae3f063a5efc2708b41806ac361fd3ca6}{\_hasStorage}(hasStorage) 
+58   \{
+59   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!Sparse\+Block\+Matrix@{Sparse\+Block\+Matrix}}
+\index{Sparse\+Block\+Matrix@{Sparse\+Block\+Matrix}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{Sparse\+Block\+Matrix()}{SparseBlockMatrix()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::{\bf Sparse\+Block\+Matrix} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseBlockMatrix_af9b8a9cb09a88bc444775a9974db8760}{}\label{classg2o_1_1SparseBlockMatrix_af9b8a9cb09a88bc444775a9974db8760}
+
+
+Definition at line 62 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+Referenced by g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::add(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::clone(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::slice(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::symm\+Permutation().
+
+
+\begin{DoxyCode}
+62                                                    :
+63     \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}(0), \hyperlink{classg2o_1_1SparseBlockMatrix_ae3f063a5efc2708b41806ac361fd3ca6}{\_hasStorage}(\textcolor{keyword}{true}) 
+64   \{
+65   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!````~Sparse\+Block\+Matrix@{$\sim$\+Sparse\+Block\+Matrix}}
+\index{````~Sparse\+Block\+Matrix@{$\sim$\+Sparse\+Block\+Matrix}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{$\sim$\+Sparse\+Block\+Matrix()}{~SparseBlockMatrix()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::$\sim${\bf Sparse\+Block\+Matrix} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseBlockMatrix_a70d18ec0265a69e1291083e20a5bc95e}{}\label{classg2o_1_1SparseBlockMatrix_a70d18ec0265a69e1291083e20a5bc95e}
+
+
+Definition at line 86 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+has\+Storage, and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::clear().
+
+
+\begin{DoxyCode}
+86                                                    \{
+87     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseBlockMatrix_ae3f063a5efc2708b41806ac361fd3ca6}{\_hasStorage})
+88       \hyperlink{classg2o_1_1SparseBlockMatrix_af14b7aaa588b339f2c06793fcc0d4e09}{clear}(\textcolor{keyword}{true});
+89   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!add@{add}}
+\index{add@{add}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{add(\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ $\ast$\&dest) const }{add(SparseBlockMatrix< MatrixType > *&dest) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type$>$ bool {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::add (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ $\ast$\&}]{dest}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_a47d026462af0a744cdba6cbf9caa0b3b}{}\label{classg2o_1_1SparseBlockMatrix_a47d026462af0a744cdba6cbf9caa0b3b}
+
+
+adds the current matrix to the destination 
+
+
+
+Definition at line 169 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+col\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+has\+Storage, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+row\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+Sparse\+Block\+Matrix().
+
+
+
+Referenced by main(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve().
+
+
+\begin{DoxyCode}
+169                                                                         \{
+170     \textcolor{keywordflow}{if} (! dest)\{
+171       dest=\textcolor{keyword}{new} \hyperlink{classg2o_1_1SparseBlockMatrix_af9b8a9cb09a88bc444775a9974db8760}{SparseBlockMatrix}(&\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[0], &
+      \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}[0], \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}.size(), 
+      \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}.size());
+172     \} \textcolor{keywordflow}{else} \{
+173       \textcolor{keywordflow}{if} (! dest->\_hasStorage)
+174         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+175       \textcolor{keywordflow}{if}(\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}.size()!=dest->\_rowBlockIndices.size())
+176         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+177       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}.size()!=dest->\_colBlockIndices.size())
+178         \textcolor{keywordflow}{return}  \textcolor{keyword}{false};
+179       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}.size(); ++i)\{
+180         \textcolor{keywordflow}{if}(\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[i]!=dest->\_rowBlockIndices[i])
+181           \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+182       \}
+183       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}.size(); ++i)\{
+184         \textcolor{keywordflow}{if}(\hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}[i]!=dest->\_colBlockIndices[i])
+185           \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+186       \}
+187     \}
+188     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size(); ++i)\{
+189       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); ++it)\{
+190         \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * s=it->second;
+191         \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * d=dest->block(it->first,i,\textcolor{keyword}{true});
+192         (*d)+=*s;
+193       \}
+194     \}
+195     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+196   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!block@{block}}
+\index{block@{block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{block(int r, int c, bool alloc=false)}{block(int r, int c, bool alloc=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::{\bf Sparse\+Matrix\+Block} $\ast$ {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::block (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{c, }
+\item[{bool}]{alloc = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{}\label{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}
+
+
+returns the block at location r,c. if alloc=true he block is created if it does not exist 
+
+
+
+Definition at line 92 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+has\+Storage, c, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols\+Of\+Block(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows\+Of\+Block().
+
+
+
+Referenced by g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::add(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Marginal\+Covariance\+Cholesky\+::compute\+Covariance(), main(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::restore\+Diagonal(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::set\+Lambda(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::symm\+Permutation(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::transpose(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::update\+Structure().
+
+
+\begin{DoxyCode}
+92                                                                                                            
+                   \{
+93     \textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::iterator it =\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[
+      \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}].find(\hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r});
+94     \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * \_block=0;
+95     \textcolor{keywordflow}{if} (it==\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}].end())\{
+96       \textcolor{keywordflow}{if} (!\hyperlink{classg2o_1_1SparseBlockMatrix_ae3f063a5efc2708b41806ac361fd3ca6}{\_hasStorage} && ! alloc )
+97         \textcolor{keywordflow}{return} 0;
+98       \textcolor{keywordflow}{else} \{
+99         \textcolor{keywordtype}{int} rb=\hyperlink{classg2o_1_1SparseBlockMatrix_a2f1eceae58978d7ee263a80961006d22}{rowsOfBlock}(\hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r});
+100         \textcolor{keywordtype}{int} cb=\hyperlink{classg2o_1_1SparseBlockMatrix_adb88ef292aedf1468f57cf5dc751a8e2}{colsOfBlock}(\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c});
+101         \_block=\textcolor{keyword}{new} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      (rb,cb);
+102         \_block->setZero();
+103         std::pair < typename SparseBlockMatrix<MatrixType>::IntBlockMap::iterator, \textcolor{keywordtype}{bool}> result
+104           =\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}].insert(std::make\_pair(\hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r},\_block)); (void) result;
+105         assert (result.second);
+106       \}
+107     \} \textcolor{keywordflow}{else} \{
+108       \_block=it->second;
+109     \}
+110     \textcolor{keywordflow}{return} \_block;
+111   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!block@{block}}
+\index{block@{block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{block(int r, int c) const }{block(int r, int c) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ const {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::{\bf Sparse\+Matrix\+Block} $\ast$ {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::block (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_a1dd47246358ea852f8ff3db76aa6a287}{}\label{classg2o_1_1SparseBlockMatrix_a1dd47246358ea852f8ff3db76aa6a287}
+
+
+returns the block at location r,c 
+
+
+
+Definition at line 114 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, and c.
+
+
+\begin{DoxyCode}
+114                                                                                                            
+                   \{
+115     \textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it =
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}].find(\hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r});
+116     \textcolor{keywordflow}{if} (it==\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}].end())
+117   \textcolor{keywordflow}{return} 0;
+118     \textcolor{keywordflow}{return} it->second;
+119   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!block\+Cols@{block\+Cols}}
+\index{block\+Cols@{block\+Cols}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{block\+Cols() const }{blockCols() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ const std\+::vector$<${\bf Int\+Block\+Map}$>$\& {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::block\+Cols (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseBlockMatrix_a8e53797223fff106487d0b0080a3e36e}{}\label{classg2o_1_1SparseBlockMatrix_a8e53797223fff106487d0b0080a3e36e}
+
+
+the block matrices per block-\/column 
+
+
+
+Definition at line 178 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::compute\+Symbolic\+Decomposition(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+Sparse\+Block\+Matrix\+C\+C\+S(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed(), g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::fill\+Sparse\+Matrix(), g2o\+::operator$<$$<$(), g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::solve(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::take\+Pattern\+From\+Hash(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::update\+Structure().
+
+
+\begin{DoxyCode}
+178 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!block\+Cols@{block\+Cols}}
+\index{block\+Cols@{block\+Cols}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{block\+Cols()}{blockCols()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ std\+::vector$<${\bf Int\+Block\+Map}$>$\& {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::block\+Cols (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseBlockMatrix_a31236f3e11cb7af4979d68fdba3d5e33}{}\label{classg2o_1_1SparseBlockMatrix_a31236f3e11cb7af4979d68fdba3d5e33}
+
+
+Definition at line 179 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+\begin{DoxyCode}
+179 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!clear@{clear}}
+\index{clear@{clear}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{clear(bool dealloc=false)}{clear(bool dealloc=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ void {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::clear (
+\begin{DoxyParamCaption}
+\item[{bool}]{dealloc = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseBlockMatrix_af14b7aaa588b339f2c06793fcc0d4e09}{}\label{classg2o_1_1SparseBlockMatrix_af14b7aaa588b339f2c06793fcc0d4e09}
+
+
+this zeroes all the blocks. If dealloc=true the blocks are removed from memory 
+
+
+
+Definition at line 68 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+has\+Storage.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+System(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::init(), main(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::symm\+Permutation(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::$\sim$\+Sparse\+Block\+Matrix().
+
+
+\begin{DoxyCode}
+68                                                         \{
+69 \textcolor{preprocessor}{#   ifdef G2O\_OPENMP}
+70 \textcolor{preprocessor}{#   pragma omp parallel for default (shared) if (\_blockCols.size() > 100)}
+71 \textcolor{preprocessor}{#   endif}
+72     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i < static\_cast<int>(\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size()); ++i) \{
+73       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); ++it)\{
+74         \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * b=it->second;
+75         \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseBlockMatrix_ae3f063a5efc2708b41806ac361fd3ca6}{\_hasStorage} && dealloc)
+76           \textcolor{keyword}{delete} b;
+77         \textcolor{keywordflow}{else}
+78           b->setZero();
+79       \}
+80       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseBlockMatrix_ae3f063a5efc2708b41806ac361fd3ca6}{\_hasStorage} && dealloc)
+81         \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].clear();
+82     \}
+83   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!clone@{clone}}
+\index{clone@{clone}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ $\ast$ {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_ac2946d6216dd2adfbd257b495a589d13}{}\label{classg2o_1_1SparseBlockMatrix_ac2946d6216dd2adfbd257b495a589d13}
+
+
+deep copy of a sparse-\/block-\/matrix; 
+
+
+
+Definition at line 123 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+col\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+has\+Storage, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+row\+Block\+Indices, and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+Sparse\+Block\+Matrix().
+
+
+\begin{DoxyCode}
+123                                                                             \{
+124     \hyperlink{classg2o_1_1SparseBlockMatrix_af9b8a9cb09a88bc444775a9974db8760}{SparseBlockMatrix}* ret= \textcolor{keyword}{new} \hyperlink{classg2o_1_1SparseBlockMatrix_af9b8a9cb09a88bc444775a9974db8760}{SparseBlockMatrix}(&
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[0], &\hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}[0], 
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}.size(), \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}.size());
+125     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size(); ++i)\{
+126       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); ++it)\{
+127         \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * b=\textcolor{keyword}{new} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      (*it->second);
+128         ret->\_blockCols[i].insert(std::make\_pair(it->first, b));
+129       \}
+130     \}
+131     ret->\_hasStorage=\textcolor{keyword}{true};
+132     \textcolor{keywordflow}{return} ret;
+133   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!col\+Base\+Of\+Block@{col\+Base\+Of\+Block}}
+\index{col\+Base\+Of\+Block@{col\+Base\+Of\+Block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{col\+Base\+Of\+Block(int c) const }{colBaseOfBlock(int c) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ int {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::col\+Base\+Of\+Block (
+\begin{DoxyParamCaption}
+\item[{int}]{c}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseBlockMatrix_adf282a20d7c77c5949a0d93ca2651271}{}\label{classg2o_1_1SparseBlockMatrix_adf282a20d7c77c5949a0d93ca2651271}
+
+
+where does the col at block-\/col r starts? 
+
+
+
+Definition at line 111 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+Referenced by g2o\+::\+Marginal\+Covariance\+Cholesky\+::compute\+Covariance(), g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::compute\+Symbolic\+Decomposition(), g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+::compute\+Symbolic\+Decomposition(), g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::fill\+Sparse\+Matrix(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply\+Symmetric\+Upper\+Triangle(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::right\+Multiply(), g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::solve(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::write\+Octave().
+
+
+\begin{DoxyCode}
+111 \{ \textcolor{keywordflow}{return} \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c} ? \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}[\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}-1] : 0 ; \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!col\+Block\+Indices@{col\+Block\+Indices}}
+\index{col\+Block\+Indices@{col\+Block\+Indices}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{col\+Block\+Indices() const }{colBlockIndices() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ const std\+::vector$<$int$>$\& {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::col\+Block\+Indices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseBlockMatrix_adfaf13a5f3134205a58c8346a09a672a}{}\label{classg2o_1_1SparseBlockMatrix_adfaf13a5f3134205a58c8346a09a672a}
+
+
+indices of the column blocks 
+
+
+
+Definition at line 186 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Linear\+Solver\+C\+C\+S$<$ Matrix\+Type $>$\+::init\+Matrix\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::update\+Structure().
+
+
+\begin{DoxyCode}
+186 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!col\+Block\+Indices@{col\+Block\+Indices}}
+\index{col\+Block\+Indices@{col\+Block\+Indices}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{col\+Block\+Indices()}{colBlockIndices()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ std\+::vector$<$int$>$\& {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::col\+Block\+Indices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseBlockMatrix_aba255bdbb8e0a0d2802ae27e6d4f7cc7}{}\label{classg2o_1_1SparseBlockMatrix_aba255bdbb8e0a0d2802ae27e6d4f7cc7}
+
+
+Definition at line 187 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+\begin{DoxyCode}
+187 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!cols@{cols}}
+\index{cols@{cols}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{cols() const }{cols() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ int {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::cols (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseBlockMatrix_ab854ca59f370d93229852e32a7b49d3e}{}\label{classg2o_1_1SparseBlockMatrix_ab854ca59f370d93229852e32a7b49d3e}
+
+
+columns of the matrix 
+
+
+
+Definition at line 69 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+Referenced by g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::compute\+Symbolic\+Decomposition(), g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+::fill\+Cholmod\+Ext(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply\+Symmetric\+Upper\+Triangle(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::non\+Zeros(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::right\+Multiply(), g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::solve(), g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::solve(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::symm\+Permutation(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::write\+Octave().
+
+
+\begin{DoxyCode}
+69 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}.size() ? \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}.back() : 0;\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!cols\+Of\+Block@{cols\+Of\+Block}}
+\index{cols\+Of\+Block@{cols\+Of\+Block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{cols\+Of\+Block(int c) const }{colsOfBlock(int c) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ int {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::cols\+Of\+Block (
+\begin{DoxyParamCaption}
+\item[{int}]{c}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseBlockMatrix_adb88ef292aedf1468f57cf5dc751a8e2}{}\label{classg2o_1_1SparseBlockMatrix_adb88ef292aedf1468f57cf5dc751a8e2}
+
+
+how many cols does the block at block-\/col c has? 
+
+
+
+Definition at line 105 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+Referenced by g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block(), g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::compute\+Symbolic\+Decomposition(), g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+::compute\+Symbolic\+Decomposition(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+C\+C\+S(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::slice(), g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::solve(), and g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+::solve\+Blocks().
+
+
+\begin{DoxyCode}
+105 \{ \textcolor{keywordflow}{return} \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c} ? \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}[\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}] - \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}[
+      \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}-1] : \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}[0]; \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!fill\+Block\+Structure@{fill\+Block\+Structure}}
+\index{fill\+Block\+Structure@{fill\+Block\+Structure}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{fill\+Block\+Structure(\+Matrix\+Structure \&ms) const }{fillBlockStructure(MatrixStructure &ms) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ void {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::fill\+Block\+Structure (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix\+Structure} \&}]{ms}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_a7c9f06c801b5421752673b349477f617}{}\label{classg2o_1_1SparseBlockMatrix_a7c9f06c801b5421752673b349477f617}
+
+
+exports the non zero blocks in the structure matrix ms 
+
+
+
+Definition at line 520 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+col\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+row\+Block\+Indices, g2o\+::\+Matrix\+Structure\+::\+Aii, g2o\+::\+Matrix\+Structure\+::alloc(), g2o\+::\+Matrix\+Structure\+::\+Ap, c, g2o\+::\+Matrix\+Structure\+::m, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::non\+Zero\+Blocks(), and r.
+
+
+
+Referenced by g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+::compute\+Symbolic\+Decomposition().
+
+
+\begin{DoxyCode}
+521   \{
+522     \textcolor{keywordtype}{int} n     = \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}.size();
+523     \textcolor{keywordtype}{int} nzMax = (int)\hyperlink{classg2o_1_1SparseBlockMatrix_a4e2ecdfdec3b47b2f9373c56aecc7d15}{nonZeroBlocks}();
+524 
+525     ms.alloc(n, nzMax);
+526     ms.m = \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}.size();
+527 
+528     \textcolor{keywordtype}{int} nz = 0;
+529     \textcolor{keywordtype}{int}* Cp = ms.Ap;
+530     \textcolor{keywordtype}{int}* Ci = ms.Aii;
+531     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < static\_cast<int>(\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size()); ++i)\{
+532       *Cp = nz;
+533       \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c} = i;
+534       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); ++it) \{
+535         \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r} = it->first;
+536         \textcolor{keywordflow}{if} (r <= c) \{
+537           *Ci++ = \hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r};
+538           ++nz;
+539         \}
+540       \}
+541       Cp++;
+542     \}
+543     *Cp=nz;
+544     assert(nz <= nzMax);
+545   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!fill\+C\+CS@{fill\+C\+CS}}
+\index{fill\+C\+CS@{fill\+C\+CS}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{fill\+C\+C\+S(int $\ast$\+Cp, int $\ast$\+Ci, double $\ast$\+Cx, bool upper\+Triangle=false) const }{fillCCS(int *Cp, int *Ci, double *Cx, bool upperTriangle=false) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ int {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::fill\+C\+CS (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{Cp, }
+\item[{int $\ast$}]{Ci, }
+\item[{double $\ast$}]{Cx, }
+\item[{bool}]{upper\+Triangle = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_a71b97c895688e06ab48eaf53c93c39ed}{}\label{classg2o_1_1SparseBlockMatrix_a71b97c895688e06ab48eaf53c93c39ed}
+fill the C\+CS arrays of a matrix, arrays have to be allocated beforehand 
+
+Definition at line 490 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+col\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+row\+Block\+Indices, c, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols\+Of\+Block(), r, and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows().
+
+
+
+Referenced by g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::fill\+Sparse\+Matrix().
+
+
+\begin{DoxyCode}
+491   \{
+492     assert(Cp && Ci && Cx && \textcolor{stringliteral}{"Target destination is NULL"});
+493     \textcolor{keywordtype}{int} nz=0;
+494     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size(); ++i)\{
+495       \textcolor{keywordtype}{int} cstart=i ? \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}[i-1] : 0;
+496       \textcolor{keywordtype}{int} csize=\hyperlink{classg2o_1_1SparseBlockMatrix_adb88ef292aedf1468f57cf5dc751a8e2}{colsOfBlock}(i);
+497       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}=0; \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}<csize; ++\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}) \{
+498         *Cp=nz;
+499         \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); ++it)\{
+500           \textcolor{keyword}{const} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * b=it->second;
+501           \textcolor{keywordtype}{int} rstart=it->first ? \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[it->first-1] : 0;
+502 
+503           \textcolor{keywordtype}{int} elemsToCopy = b->rows();
+504           \textcolor{keywordflow}{if} (upperTriangle && rstart == cstart)
+505             elemsToCopy = \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c} + 1;
+506           \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r}=0; \hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r}<elemsToCopy; ++\hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r})\{
+507             *Cx++ = (*b)(\hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r},\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c});
+508             *Ci++ = rstart++;
+509             ++nz;
+510           \}
+511         \}
+512         ++Cp;
+513       \}
+514     \}
+515     *Cp=nz;
+516     \textcolor{keywordflow}{return} nz;
+517   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!fill\+C\+CS@{fill\+C\+CS}}
+\index{fill\+C\+CS@{fill\+C\+CS}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{fill\+C\+C\+S(double $\ast$\+Cx, bool upper\+Triangle=false) const }{fillCCS(double *Cx, bool upperTriangle=false) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ int {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::fill\+C\+CS (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{Cx, }
+\item[{bool}]{upper\+Triangle = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_a77bf1e20da0968a5ad55d590406700a7}{}\label{classg2o_1_1SparseBlockMatrix_a77bf1e20da0968a5ad55d590406700a7}
+fill the C\+CS arrays of a matrix, arrays have to be allocated beforehand. This function only writes the values and assumes that column and row structures have already been written. 
+
+Definition at line 465 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+col\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+row\+Block\+Indices, c, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols\+Of\+Block(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows().
+
+
+\begin{DoxyCode}
+466   \{
+467     assert(Cx && \textcolor{stringliteral}{"Target destination is NULL"});
+468     \textcolor{keywordtype}{double}* CxStart = Cx;
+469     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size(); ++i)\{
+470       \textcolor{keywordtype}{int} cstart=i ? \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}[i-1] : 0;
+471       \textcolor{keywordtype}{int} csize=\hyperlink{classg2o_1_1SparseBlockMatrix_adb88ef292aedf1468f57cf5dc751a8e2}{colsOfBlock}(i);
+472       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}=0; \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}<csize; ++\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}) \{
+473         \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); ++it)\{
+474           \textcolor{keyword}{const} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * b=it->second;
+475           \textcolor{keywordtype}{int} rstart=it->first ? \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[it->first-1] : 0;
+476 
+477           \textcolor{keywordtype}{int} elemsToCopy = b->rows();
+478           \textcolor{keywordflow}{if} (upperTriangle && rstart == cstart)
+479             elemsToCopy = \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c} + 1;
+480           memcpy(Cx, b->data() + \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}*b->rows(), elemsToCopy * \textcolor{keyword}{sizeof}(double));
+481           Cx += elemsToCopy;
+482 
+483         \}
+484       \}
+485     \}
+486     \textcolor{keywordflow}{return} Cx - CxStart;
+487   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!fill\+Sparse\+Block\+Matrix\+C\+CS@{fill\+Sparse\+Block\+Matrix\+C\+CS}}
+\index{fill\+Sparse\+Block\+Matrix\+C\+CS@{fill\+Sparse\+Block\+Matrix\+C\+CS}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{fill\+Sparse\+Block\+Matrix\+C\+C\+S(\+Sparse\+Block\+Matrix\+C\+C\+S$<$ Matrix\+Type $>$ \&block\+C\+C\+S) const }{fillSparseBlockMatrixCCS(SparseBlockMatrixCCS< MatrixType > &blockCCS) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type$>$ int {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::fill\+Sparse\+Block\+Matrix\+C\+CS (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix\+C\+CS}$<$ Matrix\+Type $>$ \&}]{block\+C\+CS}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_a1f596d1bd27de9f62282eee7e65a9f27}{}\label{classg2o_1_1SparseBlockMatrix_a1f596d1bd27de9f62282eee7e65a9f27}
+copy into C\+CS structure \begin{DoxyReturn}{Returns}
+number of processed blocks, -\/1 on error 
+\end{DoxyReturn}
+
+
+Definition at line 592 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix\+C\+C\+S$<$ Matrix\+Type $>$\+::block\+Cols(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block\+Cols().
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), and g2o\+::\+Linear\+Solver\+C\+C\+S$<$ Matrix\+Type $>$\+::init\+Matrix\+Structure().
+
+
+\begin{DoxyCode}
+593   \{
+594     blockCCS.blockCols().resize(\hyperlink{classg2o_1_1SparseBlockMatrix_a8e53797223fff106487d0b0080a3e36e}{blockCols}().size());
+595     \textcolor{keywordtype}{int} numblocks = 0;
+596     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classg2o_1_1SparseBlockMatrix_a8e53797223fff106487d0b0080a3e36e}{blockCols}().size(); ++i) \{
+597       \textcolor{keyword}{const} \hyperlink{classg2o_1_1SparseBlockMatrix_aaa6ca1ae454ed70f62992b6401645f4e}{IntBlockMap}& row = \hyperlink{classg2o_1_1SparseBlockMatrix_a8e53797223fff106487d0b0080a3e36e}{blockCols}()[i];
+598       \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrixCCS_a4fc5dfe0a9ff9bd62065ca4b17f25bc1}{SparseBlockMatrixCCS<MatrixType>::SparseColumn}
+      & dest = blockCCS.blockCols()[i];
+599       dest.clear();
+600       dest.reserve(row.size());
+601       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} IntBlockMap::const\_iterator it = row.begin(); it != row.end(); ++it) \{
+602         dest.push\_back(\textcolor{keyword}{typename} SparseBlockMatrixCCS<MatrixType>::RowBlock(it->first, it->second));
+603         ++numblocks;
+604       \}
+605     \}
+606     \textcolor{keywordflow}{return} numblocks;
+607   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed@{fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed}}
+\index{fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed@{fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed(\+Sparse\+Block\+Matrix\+C\+C\+S$<$ Matrix\+Type $>$ \&block\+C\+C\+S) const }{fillSparseBlockMatrixCCSTransposed(SparseBlockMatrixCCS< MatrixType > &blockCCS) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type$>$ int {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix\+C\+CS}$<$ Matrix\+Type $>$ \&}]{block\+C\+CS}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_a0fbc51ac6aebfceed54a6eb75d2f3ab2}{}\label{classg2o_1_1SparseBlockMatrix_a0fbc51ac6aebfceed54a6eb75d2f3ab2}
+copy as transposed into a C\+CS structure \begin{DoxyReturn}{Returns}
+number of processed blocks, -\/1 on error 
+\end{DoxyReturn}
+
+
+Definition at line 610 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+row\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix\+C\+C\+S$<$ Matrix\+Type $>$\+::block\+Cols(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block\+Cols().
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure().
+
+
+\begin{DoxyCode}
+611   \{
+612     blockCCS.blockCols().clear();
+613     blockCCS.blockCols().resize(\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}.size());
+614     \textcolor{keywordtype}{int} numblocks = 0;
+615     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classg2o_1_1SparseBlockMatrix_a8e53797223fff106487d0b0080a3e36e}{blockCols}().size(); ++i) \{
+616       \textcolor{keyword}{const} \hyperlink{classg2o_1_1SparseBlockMatrix_aaa6ca1ae454ed70f62992b6401645f4e}{IntBlockMap}& row = \hyperlink{classg2o_1_1SparseBlockMatrix_a8e53797223fff106487d0b0080a3e36e}{blockCols}()[i];
+617       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} IntBlockMap::const\_iterator it = row.begin(); it != row.end(); ++it) \{
+618         \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrixCCS_a4fc5dfe0a9ff9bd62065ca4b17f25bc1}{SparseBlockMatrixCCS<MatrixType>::SparseColumn}
+      & dest = blockCCS.blockCols()[it->first];
+619         dest.push\_back(\textcolor{keyword}{typename} SparseBlockMatrixCCS<MatrixType>::RowBlock(i, it->second));
+620         ++numblocks;
+621       \}
+622     \}
+623     \textcolor{keywordflow}{return} numblocks;
+624   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!multiply@{multiply}}
+\index{multiply@{multiply}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{multiply(\+Sparse\+Block\+Matrix$<$ Matrix\+Result\+Type $>$ $\ast$\&dest, const Sparse\+Block\+Matrix$<$ Matrix\+Factor\+Type $>$ $\ast$\+M) const }{multiply(SparseBlockMatrix< MatrixResultType > *&dest, const SparseBlockMatrix< MatrixFactorType > *M) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ template$<$class Matrix\+Result\+Type , class Matrix\+Factor\+Type $>$ bool {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::multiply (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix}$<$ Matrix\+Result\+Type $>$ $\ast$\&}]{dest, }
+\item[{const {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Factor\+Type $>$ $\ast$}]{M}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_a7e37bb74f265c78174fbb5ac9f4df131}{}\label{classg2o_1_1SparseBlockMatrix_a7e37bb74f265c78174fbb5ac9f4df131}
+
+
+dest = ($\ast$this) $\ast$ M 
+
+
+
+Definition at line 200 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+col\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+has\+Storage, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+row\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block(), c, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows().
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+200                                                                                                            
+                                         \{
+201     \textcolor{comment}{// sanity check}
+202     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}.size()!=M->\_rowBlockIndices.size())
+203       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+204     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}.size(); ++i)\{
+205       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}[i]!=M->\_rowBlockIndices[i])
+206         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+207     \}
+208     \textcolor{keywordflow}{if} (! dest) \{
+209       dest=\textcolor{keyword}{new} SparseBlockMatrix<MatrixResultType>(&\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[0],&(M->
+      \_colBlockIndices[0]), \_rowBlockIndices.size(), M->\_colBlockIndices.size() );
+210     \}
+211     \textcolor{keywordflow}{if} (! dest->\_hasStorage)
+212       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+213     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<M->\_blockCols.size(); ++i)\{
+214       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixFactorType>::IntBlockMap::const\_iterator it=M->\_blockCols[i].
+      begin(); it!=M->\_blockCols[i].end(); ++it)\{
+215         \textcolor{comment}{// look for a non-zero block in a row of column it}
+216         \textcolor{keywordtype}{int} colM=i;
+217         \textcolor{keyword}{const} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixFactorType>::SparseMatrixBlock}
+       *b=it->second;
+218         \textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator rbt=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[it->first].begin();
+219         \textcolor{keywordflow}{while}(rbt!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[it->first].end())\{
+220           \textcolor{comment}{//int colA=it->first;}
+221           \textcolor{keywordtype}{int} rowA=rbt->first;
+222           \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+       *a=rbt->second;
+223           \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixResultType>::SparseMatrixBlock}
+       *\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}=dest->block(rowA,colM,\textcolor{keyword}{true});
+224           assert (c->rows()==a->rows());
+225           assert (c->cols()==b->cols());
+226           ++rbt;
+227           (*c)+=(*a)*(*b);
+228         \}
+229       \}
+230     \}
+231     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+232   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!multiply@{multiply}}
+\index{multiply@{multiply}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{multiply(double $\ast$\&dest, const double $\ast$src) const }{multiply(double *&dest, const double *src) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ void {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::multiply (
+\begin{DoxyParamCaption}
+\item[{double $\ast$\&}]{dest, }
+\item[{const double $\ast$}]{src}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_aa0718ac7391b2d88861bc2c9f1b93ab2}{}\label{classg2o_1_1SparseBlockMatrix_aa0718ac7391b2d88861bc2c9f1b93ab2}
+
+
+dest = ($\ast$this) $\ast$ src 
+
+
+
+Definition at line 235 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+col\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+row\+Block\+Indices, g2o\+::internal\+::axpy(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows().
+
+
+\begin{DoxyCode}
+235                                                                                      \{
+236     \textcolor{keywordflow}{if} (! dest)\{
+237       dest=\textcolor{keyword}{new} \textcolor{keywordtype}{double} [\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}.size()-1] ];
+238       memset(dest,0, \_rowBlockIndices[\_rowBlockIndices.size()-1]*\textcolor{keyword}{sizeof}(double));
+239     \}
+240 
+241     \textcolor{comment}{// map the memory by Eigen}
+242     Eigen::Map<VectorXd> destVec(dest, \hyperlink{classg2o_1_1SparseBlockMatrix_adf18fb267e545b9036314cf9f8f10473}{rows}());
+243     \textcolor{keyword}{const} Eigen::Map<const VectorXd> srcVec(src, \hyperlink{classg2o_1_1SparseBlockMatrix_ab854ca59f370d93229852e32a7b49d3e}{cols}());
+244 
+245     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size(); ++i)\{
+246       \textcolor{keywordtype}{int} srcOffset = i ? \hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}[i-1] : 0;
+247 
+248       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); ++it)\{
+249         \textcolor{keyword}{const} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * a=it->second;
+250         \textcolor{keywordtype}{int} destOffset = it->first ? \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[it->first - 1] : 0;
+251         \textcolor{comment}{// destVec += *a * srcVec (according to the sub-vector parts)}
+252         \hyperlink{namespaceg2o_1_1internal_a3beb413c2d04c629c60a8ce5e05ddf8f}{internal::axpy}(*a, srcVec, srcOffset, destVec, destOffset);
+253       \}
+254     \}
+255   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!multiply\+Symmetric\+Upper\+Triangle@{multiply\+Symmetric\+Upper\+Triangle}}
+\index{multiply\+Symmetric\+Upper\+Triangle@{multiply\+Symmetric\+Upper\+Triangle}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{multiply\+Symmetric\+Upper\+Triangle(double $\ast$\&dest, const double $\ast$src) const }{multiplySymmetricUpperTriangle(double *&dest, const double *src) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ void {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::multiply\+Symmetric\+Upper\+Triangle (
+\begin{DoxyParamCaption}
+\item[{double $\ast$\&}]{dest, }
+\item[{const double $\ast$}]{src}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_ab162724d457b342e675c535dd78165cd}{}\label{classg2o_1_1SparseBlockMatrix_ab162724d457b342e675c535dd78165cd}
+compute dest = ($\ast$this) $\ast$ src However, assuming that this is a symmetric matrix where only the upper triangle is stored 
+
+Definition at line 258 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+row\+Block\+Indices, g2o\+::internal\+::atxpy(), g2o\+::internal\+::axpy(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::col\+Base\+Of\+Block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::row\+Base\+Of\+Block(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows().
+
+
+\begin{DoxyCode}
+259   \{
+260     \textcolor{keywordflow}{if} (! dest)\{
+261       dest=\textcolor{keyword}{new} \textcolor{keywordtype}{double} [\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}.size()-1] ];
+262       memset(dest,0, \_rowBlockIndices[\_rowBlockIndices.size()-1]*\textcolor{keyword}{sizeof}(double));
+263     \}
+264 
+265     \textcolor{comment}{// map the memory by Eigen}
+266     Eigen::Map<VectorXd> destVec(dest, \hyperlink{classg2o_1_1SparseBlockMatrix_adf18fb267e545b9036314cf9f8f10473}{rows}());
+267     \textcolor{keyword}{const} Eigen::Map<const VectorXd> srcVec(src, \hyperlink{classg2o_1_1SparseBlockMatrix_ab854ca59f370d93229852e32a7b49d3e}{cols}());
+268 
+269     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size(); ++i)\{
+270       \textcolor{keywordtype}{int} srcOffset = \hyperlink{classg2o_1_1SparseBlockMatrix_adf282a20d7c77c5949a0d93ca2651271}{colBaseOfBlock}(i);
+271       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); ++it)\{
+272         \textcolor{keyword}{const} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * a=it->second;
+273         \textcolor{keywordtype}{int} destOffset = \hyperlink{classg2o_1_1SparseBlockMatrix_a176a2dbe00711e248ea25dc1995c6b4c}{rowBaseOfBlock}(it->first);
+274         \textcolor{keywordflow}{if} (destOffset > srcOffset) \textcolor{comment}{// only upper triangle}
+275           \textcolor{keywordflow}{break};
+276         \textcolor{comment}{// destVec += *a * srcVec (according to the sub-vector parts)}
+277         \hyperlink{namespaceg2o_1_1internal_a3beb413c2d04c629c60a8ce5e05ddf8f}{internal::axpy}(*a, srcVec, srcOffset, destVec, destOffset);
+278         \textcolor{keywordflow}{if} (destOffset < srcOffset)
+279           \hyperlink{namespaceg2o_1_1internal_ad176878dff85b91f1dbabed52cbf696e}{internal::atxpy}(*a, srcVec, destOffset, destVec, srcOffset);
+280       \}
+281     \}
+282   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!non\+Zero\+Blocks@{non\+Zero\+Blocks}}
+\index{non\+Zero\+Blocks@{non\+Zero\+Blocks}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{non\+Zero\+Blocks() const }{nonZeroBlocks() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ size\+\_\+t {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::non\+Zero\+Blocks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_a4e2ecdfdec3b47b2f9373c56aecc7d15}{}\label{classg2o_1_1SparseBlockMatrix_a4e2ecdfdec3b47b2f9373c56aecc7d15}
+
+
+number of allocated blocks 
+
+
+
+Definition at line 354 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols.
+
+
+
+Referenced by g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+Block\+Structure(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::non\+Zeros().
+
+
+\begin{DoxyCode}
+354                                                             \{
+355     \textcolor{keywordtype}{size\_t} count=0;
+356     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size(); ++i)
+357       count+=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].size();
+358     \textcolor{keywordflow}{return} count;
+359   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!non\+Zeros@{non\+Zeros}}
+\index{non\+Zeros@{non\+Zeros}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{non\+Zeros() const }{nonZeros() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ size\+\_\+t {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::non\+Zeros (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_a52c11b08907dbb80ac44ad5459bc70fe}{}\label{classg2o_1_1SparseBlockMatrix_a52c11b08907dbb80ac44ad5459bc70fe}
+
+
+number of non-\/zero elements 
+
+
+
+Definition at line 362 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::non\+Zero\+Blocks(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows().
+
+
+
+Referenced by g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+::fill\+Cholmod\+Ext(), and g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::fill\+Sparse\+Matrix().
+
+
+\begin{DoxyCode}
+362                                                       \{
+363     \textcolor{keywordflow}{if} (MatrixType::SizeAtCompileTime != Eigen::Dynamic) \{
+364       \textcolor{keywordtype}{size\_t} nnz = \hyperlink{classg2o_1_1SparseBlockMatrix_a4e2ecdfdec3b47b2f9373c56aecc7d15}{nonZeroBlocks}() * MatrixType::SizeAtCompileTime;
+365       \textcolor{keywordflow}{return} nnz;
+366     \} \textcolor{keywordflow}{else} \{
+367       \textcolor{keywordtype}{size\_t} count=0;
+368       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size(); ++i)\{
+369         \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); ++it)\{
+370           \textcolor{keyword}{const} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * a=it->second;
+371           count += a->cols()*a->rows();
+372         \}
+373       \}
+374       \textcolor{keywordflow}{return} count;
+375     \}
+376   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!right\+Multiply@{right\+Multiply}}
+\index{right\+Multiply@{right\+Multiply}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{right\+Multiply(double $\ast$\&dest, const double $\ast$src) const }{rightMultiply(double *&dest, const double *src) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ void {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::right\+Multiply (
+\begin{DoxyParamCaption}
+\item[{double $\ast$\&}]{dest, }
+\item[{const double $\ast$}]{src}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_abd3d832d520ccbcdd4cfed817cd55e81}{}\label{classg2o_1_1SparseBlockMatrix_abd3d832d520ccbcdd4cfed817cd55e81}
+
+
+dest = M $\ast$ ($\ast$this) 
+
+
+
+Definition at line 285 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::internal\+::atxpy(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::col\+Base\+Of\+Block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::row\+Base\+Of\+Block(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows().
+
+
+\begin{DoxyCode}
+285                                                                                           \{
+286     \textcolor{keywordtype}{int} destSize=\hyperlink{classg2o_1_1SparseBlockMatrix_ab854ca59f370d93229852e32a7b49d3e}{cols}();
+287 
+288     \textcolor{keywordflow}{if} (! dest)\{
+289       dest=\textcolor{keyword}{new} \textcolor{keywordtype}{double} [ destSize ];
+290       memset(dest,0, destSize*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+291     \}
+292 
+293     \textcolor{comment}{// map the memory by Eigen}
+294     Eigen::Map<VectorXd> destVec(dest, destSize);
+295     Eigen::Map<const VectorXd> srcVec(src, \hyperlink{classg2o_1_1SparseBlockMatrix_adf18fb267e545b9036314cf9f8f10473}{rows}());
+296 
+297 \textcolor{preprocessor}{#   ifdef G2O\_OPENMP}
+298 \textcolor{preprocessor}{#   pragma omp parallel for default (shared) schedule(dynamic, 10)}
+299 \textcolor{preprocessor}{#   endif}
+300     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i < static\_cast<int>(\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size()); ++i)\{
+301       \textcolor{keywordtype}{int} destOffset = \hyperlink{classg2o_1_1SparseBlockMatrix_adf282a20d7c77c5949a0d93ca2651271}{colBaseOfBlock}(i);
+302       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); 
+303           it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); 
+304           ++it)\{
+305         \textcolor{keyword}{const} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * a=it->second;
+306         \textcolor{keywordtype}{int} srcOffset = \hyperlink{classg2o_1_1SparseBlockMatrix_a176a2dbe00711e248ea25dc1995c6b4c}{rowBaseOfBlock}(it->first);
+307         \textcolor{comment}{// destVec += *a.transpose() * srcVec (according to the sub-vector parts)}
+308         \hyperlink{namespaceg2o_1_1internal_ad176878dff85b91f1dbabed52cbf696e}{internal::atxpy}(*a, srcVec, srcOffset, destVec, destOffset);
+309       \}
+310     \}
+311     
+312   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!row\+Base\+Of\+Block@{row\+Base\+Of\+Block}}
+\index{row\+Base\+Of\+Block@{row\+Base\+Of\+Block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{row\+Base\+Of\+Block(int r) const }{rowBaseOfBlock(int r) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ int {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::row\+Base\+Of\+Block (
+\begin{DoxyParamCaption}
+\item[{int}]{r}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseBlockMatrix_a176a2dbe00711e248ea25dc1995c6b4c}{}\label{classg2o_1_1SparseBlockMatrix_a176a2dbe00711e248ea25dc1995c6b4c}
+
+
+where does the row at block-\/row r starts? 
+
+
+
+Definition at line 108 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+Referenced by g2o\+::\+Marginal\+Covariance\+Cholesky\+::compute\+Covariance(), g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::fill\+Sparse\+Matrix(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply\+Symmetric\+Upper\+Triangle(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::right\+Multiply(), g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::solve(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::write\+Octave().
+
+
+\begin{DoxyCode}
+108 \{ \textcolor{keywordflow}{return} \hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r} ? \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[\hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r}-1] : 0 ; \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!row\+Block\+Indices@{row\+Block\+Indices}}
+\index{row\+Block\+Indices@{row\+Block\+Indices}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{row\+Block\+Indices() const }{rowBlockIndices() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ const std\+::vector$<$int$>$\& {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::row\+Block\+Indices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseBlockMatrix_ab9f9e621c9bca7c660c61b3948b8ece3}{}\label{classg2o_1_1SparseBlockMatrix_ab9f9e621c9bca7c660c61b3948b8ece3}
+
+
+indices of the row blocks 
+
+
+
+Definition at line 182 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Linear\+Solver\+C\+C\+S$<$ Matrix\+Type $>$\+::init\+Matrix\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+::solve\+Blocks(), g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+::solve\+Pattern(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::update\+Structure().
+
+
+\begin{DoxyCode}
+182 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!row\+Block\+Indices@{row\+Block\+Indices}}
+\index{row\+Block\+Indices@{row\+Block\+Indices}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{row\+Block\+Indices()}{rowBlockIndices()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ std\+::vector$<$int$>$\& {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::row\+Block\+Indices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseBlockMatrix_a03a2cfdb856c2dac4875889d55ecda84}{}\label{classg2o_1_1SparseBlockMatrix_a03a2cfdb856c2dac4875889d55ecda84}
+
+
+Definition at line 183 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+\begin{DoxyCode}
+183 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!rows@{rows}}
+\index{rows@{rows}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{rows() const }{rows() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ int {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseBlockMatrix_adf18fb267e545b9036314cf9f8f10473}{}\label{classg2o_1_1SparseBlockMatrix_adf18fb267e545b9036314cf9f8f10473}
+
+
+rows of the matrix 
+
+
+
+Definition at line 71 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+Referenced by g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::compute\+Symbolic\+Decomposition(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+C\+C\+S(), g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+::fill\+Cholmod\+Ext(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply\+Symmetric\+Upper\+Triangle(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::non\+Zeros(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::right\+Multiply(), g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::solve(), g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+::solve\+Blocks(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::symm\+Permutation(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::write\+Octave().
+
+
+\begin{DoxyCode}
+71 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}.size() ? \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}.back() : 0;\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!rows\+Of\+Block@{rows\+Of\+Block}}
+\index{rows\+Of\+Block@{rows\+Of\+Block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{rows\+Of\+Block(int r) const }{rowsOfBlock(int r) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ int {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::rows\+Of\+Block (
+\begin{DoxyParamCaption}
+\item[{int}]{r}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseBlockMatrix_a2f1eceae58978d7ee263a80961006d22}{}\label{classg2o_1_1SparseBlockMatrix_a2f1eceae58978d7ee263a80961006d22}
+
+
+how many rows does the block at block-\/row r has? 
+
+
+
+Definition at line 102 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+Referenced by g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::slice(), g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::solve(), and g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+::solve\+Blocks().
+
+
+\begin{DoxyCode}
+102 \{ \textcolor{keywordflow}{return} \hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r} ? \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[\hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r}] - \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[
+      \hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r}-1] : \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[0] ; \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!scale@{scale}}
+\index{scale@{scale}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{scale(double a)}{scale(double a)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ void {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::scale (
+\begin{DoxyParamCaption}
+\item[{double}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseBlockMatrix_afbccb3c0404beeba566e21429089e288}{}\label{classg2o_1_1SparseBlockMatrix_afbccb3c0404beeba566e21429089e288}
+
+
+$\ast$this $\ast$= a 
+
+
+
+Definition at line 315 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols.
+
+
+\begin{DoxyCode}
+315                                                      \{
+316     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size(); ++i)\{
+317       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); ++it)\{
+318         \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * a=it->second;
+319         *a *= a\_;
+320       \}
+321     \}
+322   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!slice@{slice}}
+\index{slice@{slice}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{slice(int rmin, int rmax, int cmin, int cmax, bool alloc=true) const }{slice(int rmin, int rmax, int cmin, int cmax, bool alloc=true) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ $\ast$ {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::slice (
+\begin{DoxyParamCaption}
+\item[{int}]{rmin, }
+\item[{int}]{rmax, }
+\item[{int}]{cmin, }
+\item[{int}]{cmax, }
+\item[{bool}]{alloc = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_abc8836f73757f69b97965459944043a5}{}\label{classg2o_1_1SparseBlockMatrix_abc8836f73757f69b97965459944043a5}
+returns a view or a copy of the block matrix 
+\begin{DoxyParams}{Parameters}
+{\em rmin} & starting block row \\
+\hline
+{\em rmax} & ending block row \\
+\hline
+{\em cmin} & starting block col \\
+\hline
+{\em cmax} & ending block col \\
+\hline
+{\em alloc} & if true it makes a deep copy, if false it creates a view. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 325 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+has\+Storage, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols\+Of\+Block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows\+Of\+Block(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+Sparse\+Block\+Matrix().
+
+
+\begin{DoxyCode}
+325                                                                                                            
+                          \{
+326     \textcolor{keywordtype}{int} m=rmax-rmin;
+327     \textcolor{keywordtype}{int} n=cmax-cmin;
+328     \textcolor{keywordtype}{int} rowIdx [m];
+329     rowIdx[0] = \hyperlink{classg2o_1_1SparseBlockMatrix_a2f1eceae58978d7ee263a80961006d22}{rowsOfBlock}(rmin);
+330     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=1; i<m; ++i)\{
+331       rowIdx[i]=rowIdx[i-1]+\hyperlink{classg2o_1_1SparseBlockMatrix_a2f1eceae58978d7ee263a80961006d22}{rowsOfBlock}(rmin+i);
+332     \}
+333 
+334     \textcolor{keywordtype}{int} colIdx [n];
+335     colIdx[0] = \hyperlink{classg2o_1_1SparseBlockMatrix_adb88ef292aedf1468f57cf5dc751a8e2}{colsOfBlock}(cmin);
+336     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=1; i<n; ++i)\{
+337       colIdx[i]=colIdx[i-1]+\hyperlink{classg2o_1_1SparseBlockMatrix_adb88ef292aedf1468f57cf5dc751a8e2}{colsOfBlock}(cmin+i);
+338     \}
+339     \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_af9b8a9cb09a88bc444775a9974db8760}{SparseBlockMatrix<MatrixType>::SparseBlockMatrix}
+      * s=\textcolor{keyword}{new} \hyperlink{classg2o_1_1SparseBlockMatrix_af9b8a9cb09a88bc444775a9974db8760}{SparseBlockMatrix}(rowIdx, colIdx, m, n, \textcolor{keyword}{true});
+340     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<n; ++i)\{
+341       \textcolor{keywordtype}{int} mc=cmin+i;
+342       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[mc].begin(); it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[mc].end(); ++it)\{
+343         \textcolor{keywordflow}{if} (it->first >= rmin && it->first < rmax)\{
+344           \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * b = alloc ? \textcolor{keyword}{new} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+       (* (it->second) ) : it->second;
+345           s->\_blockCols[i].insert(std::make\_pair(it->first-rmin, b));
+346         \}
+347       \}
+348     \}
+349     s->\_hasStorage=alloc;
+350     \textcolor{keywordflow}{return} s;
+351   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!symm\+Permutation@{symm\+Permutation}}
+\index{symm\+Permutation@{symm\+Permutation}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{symm\+Permutation(\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ $\ast$\&dest, const int $\ast$pinv, bool only\+Upper=false) const }{symmPermutation(SparseBlockMatrix< MatrixType > *&dest, const int *pinv, bool onlyUpper=false) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type$>$ bool {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::symm\+Permutation (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ $\ast$\&}]{dest, }
+\item[{const int $\ast$}]{pinv, }
+\item[{bool}]{only\+Upper = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_a19b0010ec521b275bc88fda5c66b1b48}{}\label{classg2o_1_1SparseBlockMatrix_a19b0010ec521b275bc88fda5c66b1b48}
+writes in dest a block permutaton specified by pinv. 
+\begin{DoxyParams}{Parameters}
+{\em pinv} & array such that new\+\_\+block\mbox{[}i\mbox{]} = old\+\_\+block\mbox{[}pinv\mbox{[}i\mbox{]}\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 400 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+col\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+row\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::clear(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+Sparse\+Block\+Matrix(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::transpose().
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+400                                                                                                            
+                                \{
+401     \textcolor{comment}{// compute the permuted version of the new row/column layout}
+402     \textcolor{keywordtype}{size\_t} n=\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}.size();
+403     \textcolor{comment}{// computed the block sizes}
+404     \textcolor{keywordtype}{int} blockSizes[\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}.size()];
+405     blockSizes[0]=\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[0];
+406     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=1; i<n; ++i)\{
+407       blockSizes[i]=\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[i]-\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[i-1];
+408     \}
+409     \textcolor{comment}{// permute them}
+410     \textcolor{keywordtype}{int} pBlockIndices[\hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}.size()];
+411     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<n; ++i)\{
+412       pBlockIndices[pinv[i]]=blockSizes[i];
+413     \}
+414     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=1; i<n; ++i)\{
+415       pBlockIndices[i]+=pBlockIndices[i-1];
+416     \}
+417     \textcolor{comment}{// allocate C, or check the structure;}
+418     \textcolor{keywordflow}{if} (! dest)\{
+419       dest=\textcolor{keyword}{new} \hyperlink{classg2o_1_1SparseBlockMatrix_af9b8a9cb09a88bc444775a9974db8760}{SparseBlockMatrix}(pBlockIndices, pBlockIndices, n, n);
+420     \} \textcolor{keywordflow}{else} \{
+421       \textcolor{keywordflow}{if} (dest->\_rowBlockIndices.size()!=n)
+422         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+423       \textcolor{keywordflow}{if} (dest->\_colBlockIndices.size()!=n)
+424         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+425       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<n; ++i)\{
+426         \textcolor{keywordflow}{if} (dest->\_rowBlockIndices[i]!=pBlockIndices[i])
+427           \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+428         \textcolor{keywordflow}{if} (dest->\_colBlockIndices[i]!=pBlockIndices[i])
+429           \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+430       \}
+431       dest->clear();
+432     \}
+433     \textcolor{comment}{// now ready to permute the columns}
+434     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<n; ++i)\{
+435       \textcolor{comment}{//cerr << PVAR(i) <<  " ";}
+436       \textcolor{keywordtype}{int} pi=pinv[i];
+437       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); 
+438           it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); ++it)\{
+439         \textcolor{keywordtype}{int} pj=pinv[it->first];
+440 
+441         \textcolor{keyword}{const} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * s=it->second;
+442 
+443         \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * b=0;
+444         \textcolor{keywordflow}{if} (! upperTriangle || pj<=pi) \{
+445           b=dest->block(pj,pi,\textcolor{keyword}{true});
+446           assert(b->cols()==s->cols());
+447           assert(b->rows()==s->rows());
+448           *b=*s;
+449         \} \textcolor{keywordflow}{else} \{
+450           b=dest->block(pi,pj,\textcolor{keyword}{true});
+451           assert(b);
+452           assert(b->rows()==s->cols());
+453           assert(b->cols()==s->rows());
+454           *b=s->transpose();
+455         \}
+456       \}
+457       \textcolor{comment}{//cerr << endl;}
+458       \textcolor{comment}{// within each row, }
+459     \}
+460     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+461     
+462   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!take\+Pattern\+From\+Hash@{take\+Pattern\+From\+Hash}}
+\index{take\+Pattern\+From\+Hash@{take\+Pattern\+From\+Hash}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{take\+Pattern\+From\+Hash(\+Sparse\+Block\+Matrix\+Hash\+Map$<$ Matrix\+Type $>$ \&hash\+Matrix)}{takePatternFromHash(SparseBlockMatrixHashMap< MatrixType > &hashMatrix)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type$>$ void {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::take\+Pattern\+From\+Hash (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix\+Hash\+Map}$<$ Matrix\+Type $>$ \&}]{hash\+Matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseBlockMatrix_a0b1e9dc3a24b0ab41d7002396a61c833}{}\label{classg2o_1_1SparseBlockMatrix_a0b1e9dc3a24b0ab41d7002396a61c833}
+take over the memory and matrix pattern from a hash matrix. The structure of the hash matrix will be cleared. 
+
+Definition at line 627 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block\+Cols(), and g2o\+::\+Sparse\+Block\+Matrix\+Hash\+Map$<$ Matrix\+Type $>$\+::block\+Cols().
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure().
+
+
+\begin{DoxyCode}
+628   \{
+629     \textcolor{comment}{// sort the sparse columns and add them to the map structures by}
+630     \textcolor{comment}{// exploiting that we are inserting a sorted structure}
+631     \textcolor{keyword}{typedef} std::pair<int, MatrixType*> SparseColumnPair;
+632     \textcolor{keyword}{typedef} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrixHashMap_ae364a722296b90e32dd6c3a8fbeb49ae}{SparseBlockMatrixHashMap<MatrixType>::SparseColumn}
+       HashSparseColumn;
+633     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < hashMatrix.blockCols().size(); ++i) \{
+634       \textcolor{comment}{// prepare a temporary vector for sorting}
+635       HashSparseColumn& column = hashMatrix.blockCols()[i];
+636       \textcolor{keywordflow}{if} (column.size() == 0)
+637         \textcolor{keywordflow}{continue};
+638       std::vector<SparseColumnPair> sparseRowSorted; \textcolor{comment}{// temporary structure}
+639       sparseRowSorted.reserve(column.size());
+640       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} HashSparseColumn::const\_iterator it = column.begin(); it != column.end(); ++it)
+641         sparseRowSorted.push\_back(*it);
+642       std::sort(sparseRowSorted.begin(), sparseRowSorted.end(), CmpPairFirst<int, MatrixType*>());
+643       \textcolor{comment}{// try to free some memory early}
+644       HashSparseColumn aux;
+645       swap(aux, column);
+646       \textcolor{comment}{// now insert sorted vector to the std::map structure}
+647       \hyperlink{classg2o_1_1SparseBlockMatrix_aaa6ca1ae454ed70f62992b6401645f4e}{IntBlockMap}& destColumnMap = \hyperlink{classg2o_1_1SparseBlockMatrix_a8e53797223fff106487d0b0080a3e36e}{blockCols}()[i];
+648       destColumnMap.insert(sparseRowSorted[0]);
+649       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j = 1; j < sparseRowSorted.size(); ++j) \{
+650         \textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::iterator hint = destColumnMap.end();
+651         --hint; \textcolor{comment}{// cppreference says the element goes after the hint (until C++11)}
+652         destColumnMap.insert(hint, sparseRowSorted[j]);
+653       \}
+654     \}
+655   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!transpose@{transpose}}
+\index{transpose@{transpose}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{transpose(\+Sparse\+Block\+Matrix$<$ Matrix\+Transposed\+Type $>$ $\ast$\&dest) const }{transpose(SparseBlockMatrix< MatrixTransposedType > *&dest) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ template$<$class Matrix\+Transposed\+Type $>$ bool {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::transpose (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix}$<$ Matrix\+Transposed\+Type $>$ $\ast$\&}]{dest}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_a85d0915bc613dac1a46d372fc1cacde7}{}\label{classg2o_1_1SparseBlockMatrix_a85d0915bc613dac1a46d372fc1cacde7}
+
+
+transposes a block matrix, The transposed type should match the argument false on failure 
+
+
+
+Definition at line 138 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+col\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+has\+Storage, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+row\+Block\+Indices, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::transpose().
+
+
+
+Referenced by main(), g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::solve(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::symm\+Permutation(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::transpose().
+
+
+\begin{DoxyCode}
+138                                                                                                     \{
+139     \textcolor{keywordflow}{if} (! dest)\{
+140       dest=\textcolor{keyword}{new} SparseBlockMatrix<MatrixTransposedType>(&\hyperlink{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{\_colBlockIndices}[0], &
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\_rowBlockIndices}[0], \_colBlockIndices.size(), \_rowBlockIndices.size());
+141     \} \textcolor{keywordflow}{else} \{
+142       \textcolor{keywordflow}{if} (! dest->\_hasStorage)
+143         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+144       \textcolor{keywordflow}{if}(\_rowBlockIndices.size()!=dest->\_colBlockIndices.size())
+145         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+146       \textcolor{keywordflow}{if} (\_colBlockIndices.size()!=dest->\_rowBlockIndices.size())
+147         \textcolor{keywordflow}{return}  \textcolor{keyword}{false};
+148       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\_rowBlockIndices.size(); ++i)\{
+149         \textcolor{keywordflow}{if}(\_rowBlockIndices[i]!=dest->\_colBlockIndices[i])
+150           \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+151       \}
+152       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\_colBlockIndices.size(); ++i)\{
+153         \textcolor{keywordflow}{if}(\_colBlockIndices[i]!=dest->\_rowBlockIndices[i])
+154           \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+155       \}
+156     \}
+157 
+158     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size(); ++i)\{
+159       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); ++it)\{
+160         \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixType>::SparseMatrixBlock}
+      * s=it->second;
+161         \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrix<MatrixTransposedType>::SparseMatrixBlock}
+      * d=dest->block(i,it->first,\textcolor{keyword}{true});
+162         *d = s->transpose();
+163       \}
+164     \}
+165     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+166   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!write\+Octave@{write\+Octave}}
+\index{write\+Octave@{write\+Octave}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{write\+Octave(const char $\ast$filename, bool upper\+Triangle=true) const }{writeOctave(const char *filename, bool upperTriangle=true) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type $>$ bool {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::write\+Octave (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{bool}]{upper\+Triangle = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseBlockMatrix_a58a311fa5e66df880b29c8abb631474e}{}\label{classg2o_1_1SparseBlockMatrix_a58a311fa5e66df880b29c8abb631474e}
+write the content of this matrix to a stream loadable by Octave 
+\begin{DoxyParams}{Parameters}
+{\em upper\+Triangle} & does this matrix store only the upper triangular blocks \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 548 of file sparse\+\_\+block\+\_\+matrix.\+hpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols, c, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::col\+Base\+Of\+Block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols(), r, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::row\+Base\+Of\+Block(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows().
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::save\+Hessian(), and g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::solve().
+
+
+\begin{DoxyCode}
+549   \{
+550     std::string name = filename;
+551     std::string::size\_type lastDot = name.find\_last\_of(\textcolor{charliteral}{'.'});
+552     \textcolor{keywordflow}{if} (lastDot != std::string::npos) 
+553       name = name.substr(0, lastDot);
+554 
+555     std::vector<TripletEntry> entries;
+556     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i<\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}.size(); ++i)\{
+557       \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c} = i;
+558       \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it=
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].begin(); it!=\hyperlink{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{\_blockCols}[i].end(); ++it) \{
+559         \textcolor{keyword}{const} \textcolor{keywordtype}{int}& \hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r} = it->first;
+560         \textcolor{keyword}{const} MatrixType& m = *(it->second);
+561         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} cc = 0; cc < m.cols(); ++cc)
+562           \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} rr = 0; rr < m.rows(); ++rr) \{
+563             \textcolor{keywordtype}{int} aux\_r = \hyperlink{classg2o_1_1SparseBlockMatrix_a176a2dbe00711e248ea25dc1995c6b4c}{rowBaseOfBlock}(r) + rr;
+564             \textcolor{keywordtype}{int} aux\_c = \hyperlink{classg2o_1_1SparseBlockMatrix_adf282a20d7c77c5949a0d93ca2651271}{colBaseOfBlock}(c) + cc;
+565             entries.push\_back(TripletEntry(aux\_r, aux\_c, m(rr, cc)));
+566             \textcolor{keywordflow}{if} (upperTriangle && r != c) \{
+567               entries.push\_back(TripletEntry(aux\_c, aux\_r, m(rr, cc)));
+568             \}
+569           \}
+570       \}
+571     \}
+572 
+573     \textcolor{keywordtype}{int} nz = entries.size();
+574     std::sort(entries.begin(), entries.end(), TripletColSort());
+575 
+576     std::ofstream fout(filename);
+577     fout << \textcolor{stringliteral}{"# name: "} << name << std::endl;
+578     fout << \textcolor{stringliteral}{"# type: sparse matrix"} << std::endl;
+579     fout << \textcolor{stringliteral}{"# nnz: "} << nz << std::endl;
+580     fout << \textcolor{stringliteral}{"# rows: "} << \hyperlink{classg2o_1_1SparseBlockMatrix_adf18fb267e545b9036314cf9f8f10473}{rows}() << std::endl;
+581     fout << \textcolor{stringliteral}{"# columns: "} << \hyperlink{classg2o_1_1SparseBlockMatrix_ab854ca59f370d93229852e32a7b49d3e}{cols}() << std::endl;
+582     fout << std::setprecision(9) << std::fixed << std::endl;
+583 
+584     \textcolor{keywordflow}{for} (std::vector<TripletEntry>::const\_iterator it = entries.begin(); it != entries.end(); ++it) \{
+585       \textcolor{keyword}{const} TripletEntry& entry = *it;
+586       fout << entry.r+1 << \textcolor{stringliteral}{" "} << entry.c+1 << \textcolor{stringliteral}{" "} << entry.x << std::endl;
+587     \}
+588     \textcolor{keywordflow}{return} fout.good();
+589   \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!\+\_\+block\+Cols@{\+\_\+block\+Cols}}
+\index{\+\_\+block\+Cols@{\+\_\+block\+Cols}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{\+\_\+block\+Cols}{_blockCols}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ std\+::vector$<${\bf Int\+Block\+Map}$>$ {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}{}\label{classg2o_1_1SparseBlockMatrix_ae236d56a01ba4d292450a518621b41f8}
+array of maps of blocks. The index of the array represent a block column of the matrix and the block column is stored as a map row\+\_\+block -\/$>$ matrix\+\_\+block\+\_\+ptr. 
+
+Definition at line 218 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+Referenced by g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::add(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::clear(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::clone(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+Block\+Structure(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+C\+C\+S(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply\+Symmetric\+Upper\+Triangle(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::non\+Zero\+Blocks(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::non\+Zeros(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::right\+Multiply(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::scale(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::slice(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::symm\+Permutation(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::transpose(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::write\+Octave().
+
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!\+\_\+col\+Block\+Indices@{\+\_\+col\+Block\+Indices}}
+\index{\+\_\+col\+Block\+Indices@{\+\_\+col\+Block\+Indices}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{\+\_\+col\+Block\+Indices}{_colBlockIndices}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ std\+::vector$<$int$>$ {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::\+\_\+col\+Block\+Indices\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}{}\label{classg2o_1_1SparseBlockMatrix_aca008740c37d2d00b90f696ab19abb59}
+vector of the indices of the blocks along the cols 
+
+Definition at line 215 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+Referenced by g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::add(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::clone(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+Block\+Structure(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+C\+C\+S(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::symm\+Permutation(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::transpose().
+
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!\+\_\+has\+Storage@{\+\_\+has\+Storage}}
+\index{\+\_\+has\+Storage@{\+\_\+has\+Storage}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{\+\_\+has\+Storage}{_hasStorage}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ bool {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::\+\_\+has\+Storage\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseBlockMatrix_ae3f063a5efc2708b41806ac361fd3ca6}{}\label{classg2o_1_1SparseBlockMatrix_ae3f063a5efc2708b41806ac361fd3ca6}
+
+
+Definition at line 219 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+Referenced by g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::add(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::clear(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::clone(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::slice(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::transpose(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::$\sim$\+Sparse\+Block\+Matrix().
+
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!\+\_\+row\+Block\+Indices@{\+\_\+row\+Block\+Indices}}
+\index{\+\_\+row\+Block\+Indices@{\+\_\+row\+Block\+Indices}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection[{\texorpdfstring{\+\_\+row\+Block\+Indices}{_rowBlockIndices}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matrix\+Type = Matrix\+Xd$>$ std\+::vector$<$int$>$ {\bf g2o\+::\+Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$\+::\+\_\+row\+Block\+Indices\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}{}\label{classg2o_1_1SparseBlockMatrix_ab0bd9c6d5b7b8704af1bc679032382e3}
+
+
+vector of the indices of the blocks along the rows. 
+
+
+
+Definition at line 214 of file sparse\+\_\+block\+\_\+matrix.\+h.
+
+
+
+Referenced by g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::add(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::clone(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+Block\+Structure(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+C\+C\+S(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply\+Symmetric\+Upper\+Triangle(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::symm\+Permutation(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::transpose().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{sparse__block__matrix_8h}{sparse\+\_\+block\+\_\+matrix.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{sparse__block__matrix_8hpp}{sparse\+\_\+block\+\_\+matrix.\+hpp}\end{DoxyCompactItemize}

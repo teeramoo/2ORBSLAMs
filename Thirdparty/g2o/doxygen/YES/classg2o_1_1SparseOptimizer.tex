@@ -1,0 +1,2030 @@
+\hypertarget{classg2o_1_1SparseOptimizer}{}\section{g2o\+:\+:Sparse\+Optimizer Class Reference}
+\label{classg2o_1_1SparseOptimizer}\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+
+
+{\ttfamily \#include $<$sparse\+\_\+optimizer.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Sparse\+Optimizer\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Sparse\+Optimizer\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1a040ef6eacdbc7ede37bc5280dc5a2814}{A\+T\+\_\+\+C\+O\+M\+P\+U\+T\+E\+A\+C\+T\+I\+V\+E\+R\+R\+OR} = Optimizable\+Graph\+:\+:A\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+M\+E\+N\+TS, 
+\hyperlink{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1a9e4fe5403aed6a2ac8b31651c9379098}{A\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+M\+E\+N\+TS}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1SparseOptimizer_a00492515b99393555aec477ab486195b}{Sparse\+Optimizer} ()
+\item 
+virtual \hyperlink{classg2o_1_1SparseOptimizer_a3c3602d865a05486a94ce48c6839bbd6}{$\sim$\+Sparse\+Optimizer} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1SparseOptimizer_a56c0c13954ac7204cfb031c141ece9ae}{initialize\+Optimization} (\hyperlink{classg2o_1_1HyperGraph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Hyper\+Graph\+::\+Edge\+Set} \&eset)
+\item 
+virtual bool \hyperlink{classg2o_1_1SparseOptimizer_ab16dd36e32577ba5856239ce721ec70b}{initialize\+Optimization} (\hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set} \&vset, int level=0)
+\item 
+virtual bool \hyperlink{classg2o_1_1SparseOptimizer_ace3994bf5f403c7fa0305635aa598473}{initialize\+Optimization} (int level=0)
+\item 
+virtual bool \hyperlink{classg2o_1_1SparseOptimizer_ae971d068585055973798f93ac2363d94}{update\+Initialization} (\hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set} \&vset, \hyperlink{classg2o_1_1HyperGraph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Hyper\+Graph\+::\+Edge\+Set} \&eset)
+\item 
+virtual void \hyperlink{classg2o_1_1SparseOptimizer_a59db9f16934d3b9f7a52511f0be1bb07}{compute\+Initial\+Guess} ()
+\item 
+virtual void \hyperlink{classg2o_1_1SparseOptimizer_a2fba11c8572fce4a8c1bcca4fa3e43fb}{compute\+Initial\+Guess} (\hyperlink{classg2o_1_1EstimatePropagatorCost}{Estimate\+Propagator\+Cost} \&propagator)
+\item 
+virtual void \hyperlink{classg2o_1_1SparseOptimizer_ab8af902464774ec3d3910a3674791714}{set\+To\+Origin} ()
+\item 
+int \hyperlink{classg2o_1_1SparseOptimizer_a098257ee6f13dbb79be07075244d9930}{optimize} (int iterations, bool online=false)
+\item 
+bool \hyperlink{classg2o_1_1SparseOptimizer_a656be8b8244a48dc1207f29eec77af5a}{compute\+Marginals} (\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ \&spinv, const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices)
+\item 
+bool \hyperlink{classg2o_1_1SparseOptimizer_ad9f7ba03f7f37114f757f34f67dd48e5}{compute\+Marginals} (\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ \&spinv, const \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Vertex} $\ast$\hyperlink{structg2o_1_1OptimizableGraph_a19e014e8ec2e9a6e894da8c3a8f8e50d}{vertex})
+\item 
+bool \hyperlink{classg2o_1_1SparseOptimizer_a06bd3e9f1576dafeae317d2697c6f532}{compute\+Marginals} (\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ \&spinv, const \hyperlink{structg2o_1_1OptimizableGraph_a54f01b9b6071e65e6abeebe4afb29dec}{Vertex\+Container} \&\hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices})
+\item 
+virtual \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Vertex} $\ast$ \hyperlink{classg2o_1_1SparseOptimizer_aad77b73bf7d192fcebf1daf9ae103036}{find\+Gauge} ()
+\begin{DoxyCompactList}\small\item\em finds a gauge in the graph to remove the undefined dof. \end{DoxyCompactList}\item 
+bool \hyperlink{classg2o_1_1SparseOptimizer_ac99e785f4822dd540b389ea179ce4f06}{gauge\+Freedom} ()
+\item 
+double \hyperlink{classg2o_1_1SparseOptimizer_add4d83073e22dbb48b66b953d0185ffa}{active\+Chi2} () const 
+\item 
+double \hyperlink{classg2o_1_1SparseOptimizer_ae47c5023e53685523499fc00d6057d14}{active\+Robust\+Chi2} () const 
+\item 
+bool \hyperlink{classg2o_1_1SparseOptimizer_a99851ba4f2a507e724de43d7fe92f903}{verbose} () const 
+\begin{DoxyCompactList}\small\item\em verbose information during optimization \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_a422f4c5c78a0c475f4998e24ee173cc7}{set\+Verbose} (bool \hyperlink{classg2o_1_1SparseOptimizer_a99851ba4f2a507e724de43d7fe92f903}{verbose})
+\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_a32afd0ab949f170297b4a59f0d9eab81}{set\+Force\+Stop\+Flag} (bool $\ast$flag)
+\item 
+bool $\ast$ \hyperlink{classg2o_1_1SparseOptimizer_a13b3b195dd3169303c2c8e0f6edb1bb7}{force\+Stop\+Flag} () const 
+\item 
+bool \hyperlink{classg2o_1_1SparseOptimizer_ae592f525151d0cfb5bde3e7213f7ab11}{terminate} ()
+\begin{DoxyCompactList}\small\item\em if external stop flag is given, return its state. False otherwise \end{DoxyCompactList}\item 
+const \hyperlink{structg2o_1_1OptimizableGraph_a54f01b9b6071e65e6abeebe4afb29dec}{Vertex\+Container} \& \hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{index\+Mapping} () const 
+\begin{DoxyCompactList}\small\item\em the index mapping of the vertices \end{DoxyCompactList}\item 
+const \hyperlink{structg2o_1_1OptimizableGraph_a54f01b9b6071e65e6abeebe4afb29dec}{Vertex\+Container} \& \hyperlink{classg2o_1_1SparseOptimizer_a5715f0bab2cb9c1e8a330b2c3c217859}{active\+Vertices} () const 
+\begin{DoxyCompactList}\small\item\em the vertices active in the current optimization \end{DoxyCompactList}\item 
+const \hyperlink{structg2o_1_1OptimizableGraph_a2b43e807ae6d61ef8749ca1ef7c25f62}{Edge\+Container} \& \hyperlink{classg2o_1_1SparseOptimizer_aef20b7dd401862d572a851349d1bc124}{active\+Edges} () const 
+\begin{DoxyCompactList}\small\item\em the edges active in the current optimization \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classg2o_1_1SparseOptimizer_a0fb2a5e2b250bf2530a600f6dcaad03f}{remove\+Vertex} (\hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Hyper\+Graph\+::\+Vertex} $\ast$v)
+\item 
+Vertex\+Container\+::const\+\_\+iterator \hyperlink{classg2o_1_1SparseOptimizer_a89ae01e9d070110a775d8a266717d719}{find\+Active\+Vertex} (const \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex}{Optimizable\+Graph\+::\+Vertex} $\ast$v) const 
+\item 
+Edge\+Container\+::const\+\_\+iterator \hyperlink{classg2o_1_1SparseOptimizer_a68b59bf6d56a390717b82b3ae009ccf0}{find\+Active\+Edge} (const \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge}{Optimizable\+Graph\+::\+Edge} $\ast$e) const 
+\item 
+const \hyperlink{classg2o_1_1OptimizationAlgorithm}{Optimization\+Algorithm} $\ast$ \hyperlink{classg2o_1_1SparseOptimizer_a7dad5beea6a44d92b1cc47c0e526a676}{algorithm} () const 
+\begin{DoxyCompactList}\small\item\em the solver used by the optimizer \end{DoxyCompactList}\item 
+\hyperlink{classg2o_1_1OptimizationAlgorithm}{Optimization\+Algorithm} $\ast$ \hyperlink{classg2o_1_1SparseOptimizer_aaa505e19f70caa4f0a8fe8eccdbcd768}{solver} ()
+\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_a5ed7404ef361b479c75a0baf34e0a2bd}{set\+Algorithm} (\hyperlink{classg2o_1_1OptimizationAlgorithm}{Optimization\+Algorithm} $\ast$\hyperlink{classg2o_1_1SparseOptimizer_a7dad5beea6a44d92b1cc47c0e526a676}{algorithm})
+\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_a08833d6f9ae487f5608f6113f3635b6b}{push} (\hyperlink{classg2o_1_1HyperGraph_a9339534c99300a0ddac87ba976ef188c}{Sparse\+Optimizer\+::\+Vertex\+Container} \&vlist)
+\begin{DoxyCompactList}\small\item\em push the estimate of a subset of the variables onto a stack \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_ac9a5fd64764e61d99e8a90734118a8bf}{push} (\hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set} \&vlist)
+\begin{DoxyCompactList}\small\item\em push the estimate of a subset of the variables onto a stack \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_a4c121d69052291775860d06507aba698}{push} ()
+\begin{DoxyCompactList}\small\item\em push all the active vertices onto a stack \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_a57dbbb584122c6cfa292bb79d8fcd7ad}{pop} (\hyperlink{classg2o_1_1HyperGraph_a9339534c99300a0ddac87ba976ef188c}{Sparse\+Optimizer\+::\+Vertex\+Container} \&vlist)
+\begin{DoxyCompactList}\small\item\em pop (restore) the estimate a subset of the variables from the stack \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_aa6688f8636bf89ef919d72947692d59c}{pop} (\hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set} \&vlist)
+\begin{DoxyCompactList}\small\item\em pop (restore) the estimate a subset of the variables from the stack \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_ad2f7f62ebe17b40e050f0525db64355b}{pop} ()
+\begin{DoxyCompactList}\small\item\em pop (restore) the estimate of the active vertices from the stack \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_ac6344493dc9f66d5443759ff9f2abf6c}{discard\+Top} (\hyperlink{classg2o_1_1HyperGraph_a9339534c99300a0ddac87ba976ef188c}{Sparse\+Optimizer\+::\+Vertex\+Container} \&vlist)
+\begin{DoxyCompactList}\small\item\em ignore the latest stored element on the stack, remove it from the stack but do not restore the estimate \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_a20ed9e9f1201bfb874456a8d30f169fb}{discard\+Top} ()
+\begin{DoxyCompactList}\small\item\em same as above, but for the active vertices \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1SparseOptimizer_a4881e4ac9ba9a58d4e249dc03ef9683d}{clear} ()
+\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_a09572668aa85b75a5bebf7b66401ce8f}{compute\+Active\+Errors} ()
+\item 
+const \hyperlink{namespaceg2o_a526b32fde21f83173acb2bb29db68275}{Batch\+Statistics\+Container} \& \hyperlink{classg2o_1_1SparseOptimizer_ac0b9e0f3c9d05f600882b9c9b8a5c7c1}{batch\+Statistics} () const 
+\item 
+\hyperlink{namespaceg2o_a526b32fde21f83173acb2bb29db68275}{Batch\+Statistics\+Container} \& \hyperlink{classg2o_1_1SparseOptimizer_aa93ecf8d3b99e2eef3709a5c70cc8632}{batch\+Statistics} ()
+\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_a775fe12d7df941acbbd86bcf838f0f3c}{set\+Compute\+Batch\+Statistics} (bool \hyperlink{classg2o_1_1SparseOptimizer_a4a4261f1008f1b0f660381b9c46b78f7}{compute\+Batch\+Statistics})
+\item 
+bool \hyperlink{classg2o_1_1SparseOptimizer_a4a4261f1008f1b0f660381b9c46b78f7}{compute\+Batch\+Statistics} () const 
+\item 
+bool \hyperlink{classg2o_1_1SparseOptimizer_a43517d9f9f23ba6041061c57dddd916d}{add\+Compute\+Error\+Action} (\hyperlink{classg2o_1_1HyperGraphAction}{Hyper\+Graph\+Action} $\ast$action)
+\begin{DoxyCompactList}\small\item\em add an action to be executed before the error vectors are computed \end{DoxyCompactList}\item 
+bool \hyperlink{classg2o_1_1SparseOptimizer_aaeb1bffea0c80d98b6650cbf51be2b80}{remove\+Compute\+Error\+Action} (\hyperlink{classg2o_1_1HyperGraphAction}{Hyper\+Graph\+Action} $\ast$action)
+\begin{DoxyCompactList}\small\item\em remove an action that should no longer be execured before computing the error vectors \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_a8a8c6f08bc9b8a4e520aa73198268991}{sort\+Vector\+Containers} ()
+\item 
+bool \hyperlink{classg2o_1_1SparseOptimizer_a8c6af9785e85153ade1490beacad73ce}{build\+Index\+Mapping} (\hyperlink{classg2o_1_1HyperGraph_a9339534c99300a0ddac87ba976ef188c}{Sparse\+Optimizer\+::\+Vertex\+Container} \&vlist)
+\item 
+void \hyperlink{classg2o_1_1SparseOptimizer_ab6f1f4ad2b1fd50b8019c6abb89ac6a8}{clear\+Index\+Mapping} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool $\ast$ \hyperlink{classg2o_1_1SparseOptimizer_aac4a9f9b7d875ee40cae55f98d3437ab}{\+\_\+force\+Stop\+Flag}
+\item 
+bool \hyperlink{classg2o_1_1SparseOptimizer_a41b3803182a4db6c0ff8c8d4352dd149}{\+\_\+verbose}
+\item 
+\hyperlink{structg2o_1_1OptimizableGraph_a54f01b9b6071e65e6abeebe4afb29dec}{Vertex\+Container} \hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\+\_\+iv\+Map}
+\item 
+\hyperlink{structg2o_1_1OptimizableGraph_a54f01b9b6071e65e6abeebe4afb29dec}{Vertex\+Container} \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\+\_\+active\+Vertices}
+\begin{DoxyCompactList}\small\item\em sorted according to Vertex\+I\+D\+Compare \end{DoxyCompactList}\item 
+\hyperlink{structg2o_1_1OptimizableGraph_a2b43e807ae6d61ef8749ca1ef7c25f62}{Edge\+Container} \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\+\_\+active\+Edges}
+\begin{DoxyCompactList}\small\item\em sorted according to Edge\+I\+D\+Compare \end{DoxyCompactList}\item 
+\hyperlink{classg2o_1_1OptimizationAlgorithm}{Optimization\+Algorithm} $\ast$ \hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\+\_\+algorithm}
+\item 
+\hyperlink{namespaceg2o_a526b32fde21f83173acb2bb29db68275}{Batch\+Statistics\+Container} \hyperlink{classg2o_1_1SparseOptimizer_a21215378d9e8de28aee8d55b4d25ff89}{\+\_\+batch\+Statistics}
+\begin{DoxyCompactList}\small\item\em global statistics of the optimizer, e.\+g., timing, num-\/non-\/zeros \end{DoxyCompactList}\item 
+bool \hyperlink{classg2o_1_1SparseOptimizer_a3bd44c498c4d983c092f23673de14d5d}{\+\_\+compute\+Batch\+Statistics}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classg2o_1_1SparseOptimizer_af974cb94744550cc732d61f7fd7d63ed}{Active\+Path\+Cost\+Function}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 45 of file sparse\+\_\+optimizer.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1}{}\label{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+T\+\_\+\+C\+O\+M\+P\+U\+T\+E\+A\+C\+T\+I\+V\+E\+R\+R\+OR@{A\+T\+\_\+\+C\+O\+M\+P\+U\+T\+E\+A\+C\+T\+I\+V\+E\+R\+R\+OR}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!A\+T\+\_\+\+C\+O\+M\+P\+U\+T\+E\+A\+C\+T\+I\+V\+E\+R\+R\+OR@{A\+T\+\_\+\+C\+O\+M\+P\+U\+T\+E\+A\+C\+T\+I\+V\+E\+R\+R\+OR}}\item[{\em 
+A\+T\+\_\+\+C\+O\+M\+P\+U\+T\+E\+A\+C\+T\+I\+V\+E\+R\+R\+OR\hypertarget{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1a040ef6eacdbc7ede37bc5280dc5a2814}{}\label{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1a040ef6eacdbc7ede37bc5280dc5a2814}
+}]\index{A\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+M\+E\+N\+TS@{A\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+M\+E\+N\+TS}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!A\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+M\+E\+N\+TS@{A\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+M\+E\+N\+TS}}\item[{\em 
+A\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+M\+E\+N\+TS\hypertarget{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1a9e4fe5403aed6a2ac8b31651c9379098}{}\label{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1a9e4fe5403aed6a2ac8b31651c9379098}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 48 of file sparse\+\_\+optimizer.\+h.
+
+
+\begin{DoxyCode}
+48          \{
+49       \hyperlink{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1a040ef6eacdbc7ede37bc5280dc5a2814}{AT\_COMPUTEACTIVERROR} = 
+      \hyperlink{structg2o_1_1OptimizableGraph_a16d90305c171fe0582c6a8aef40ba89da33b97f5bc80d2e6227c95364573d3651}{OptimizableGraph::AT\_NUM\_ELEMENTS},
+50       \hyperlink{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1a9e4fe5403aed6a2ac8b31651c9379098}{AT\_NUM\_ELEMENTS}, \textcolor{comment}{// keep as last element}
+51     \};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!Sparse\+Optimizer@{Sparse\+Optimizer}}
+\index{Sparse\+Optimizer@{Sparse\+Optimizer}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{Sparse\+Optimizer()}{SparseOptimizer()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Sparse\+Optimizer\+::\+Sparse\+Optimizer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseOptimizer_a00492515b99393555aec477ab486195b}{}\label{classg2o_1_1SparseOptimizer_a00492515b99393555aec477ab486195b}
+
+
+Definition at line 50 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+\_\+graph\+Actions, and A\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+M\+E\+N\+TS.
+
+
+\begin{DoxyCode}
+50                                    :
+51     \hyperlink{classg2o_1_1SparseOptimizer_aac4a9f9b7d875ee40cae55f98d3437ab}{\_forceStopFlag}(0), \hyperlink{classg2o_1_1SparseOptimizer_a41b3803182a4db6c0ff8c8d4352dd149}{\_verbose}(\textcolor{keyword}{false}), \hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm}(0), 
+      \hyperlink{classg2o_1_1SparseOptimizer_a3bd44c498c4d983c092f23673de14d5d}{\_computeBatchStatistics}(\textcolor{keyword}{false})
+52   \{
+53     \hyperlink{structg2o_1_1OptimizableGraph_a5e6a371ad7709692e52886ecf3e7250c}{\_graphActions}.resize(\hyperlink{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1a9e4fe5403aed6a2ac8b31651c9379098}{AT\_NUM\_ELEMENTS});
+54   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!````~Sparse\+Optimizer@{$\sim$\+Sparse\+Optimizer}}
+\index{````~Sparse\+Optimizer@{$\sim$\+Sparse\+Optimizer}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{$\sim$\+Sparse\+Optimizer()}{~SparseOptimizer()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Sparse\+Optimizer\+::$\sim$\+Sparse\+Optimizer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_a3c3602d865a05486a94ce48c6839bbd6}{}\label{classg2o_1_1SparseOptimizer_a3c3602d865a05486a94ce48c6839bbd6}
+
+
+Definition at line 56 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+algorithm, and g2o\+::\+G2\+O\+Batch\+Statistics\+::set\+Global\+Stats().
+
+
+\begin{DoxyCode}
+56                                    \{
+57     \textcolor{keyword}{delete} \hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm};
+58     \hyperlink{structg2o_1_1G2OBatchStatistics_a8c56e85d25e346ba87718621407247fc}{G2OBatchStatistics::setGlobalStats}(0);
+59   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!active\+Chi2@{active\+Chi2}}
+\index{active\+Chi2@{active\+Chi2}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{active\+Chi2() const }{activeChi2() const }}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Sparse\+Optimizer\+::active\+Chi2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseOptimizer_add4d83073e22dbb48b66b953d0185ffa}{}\label{classg2o_1_1SparseOptimizer_add4d83073e22dbb48b66b953d0185ffa}
+returns the cached chi2 of the active portion of the graph 
+
+Definition at line 90 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+active\+Edges, and g2o\+::\+Optimizable\+Graph\+::\+Edge\+::chi2().
+
+
+
+Referenced by compute\+Initial\+Guess(), and compute\+Marginals().
+
+
+\begin{DoxyCode}
+91   \{
+92     \textcolor{keywordtype}{double} chi = 0.0;
+93     \textcolor{keywordflow}{for} (EdgeContainer::const\_iterator it = \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.begin(); it != 
+      \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.end(); ++it) \{
+94       \textcolor{keyword}{const} OptimizableGraph::Edge* e = *it;
+95       chi += e->chi2();
+96     \}
+97     \textcolor{keywordflow}{return} chi;
+98   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!active\+Edges@{active\+Edges}}
+\index{active\+Edges@{active\+Edges}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{active\+Edges() const }{activeEdges() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Edge\+Container}\& g2o\+::\+Sparse\+Optimizer\+::active\+Edges (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseOptimizer_aef20b7dd401862d572a851349d1bc124}{}\label{classg2o_1_1SparseOptimizer_aef20b7dd401862d572a851349d1bc124}
+
+
+the edges active in the current optimization 
+
+
+
+Definition at line 195 of file sparse\+\_\+optimizer.\+h.
+
+
+
+References \+\_\+active\+Edges, find\+Active\+Edge(), find\+Active\+Vertex(), and remove\+Vertex().
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+System(), g2o\+::\+Estimate\+Propagator\+Cost\+::operator()(), and g2o\+::\+Estimate\+Propagator\+Cost\+Odometry\+::operator()().
+
+
+\begin{DoxyCode}
+195 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!active\+Robust\+Chi2@{active\+Robust\+Chi2}}
+\index{active\+Robust\+Chi2@{active\+Robust\+Chi2}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{active\+Robust\+Chi2() const }{activeRobustChi2() const }}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Sparse\+Optimizer\+::active\+Robust\+Chi2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseOptimizer_ae47c5023e53685523499fc00d6057d14}{}\label{classg2o_1_1SparseOptimizer_ae47c5023e53685523499fc00d6057d14}
+returns the cached chi2 of the active portion of the graph. In contrast to \hyperlink{classg2o_1_1SparseOptimizer_add4d83073e22dbb48b66b953d0185ffa}{active\+Chi2()} this functions considers the weighting of the error according to the robustification of the error functions. 
+
+Definition at line 100 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+active\+Edges, g2o\+::\+Optimizable\+Graph\+::\+Edge\+::chi2(), g2o\+::\+Robust\+Kernel\+::robustify(), and g2o\+::\+Optimizable\+Graph\+::\+Edge\+::robust\+Kernel().
+
+
+
+Referenced by compute\+Marginals(), optimize(), g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve(), and g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve().
+
+
+\begin{DoxyCode}
+101   \{
+102     Eigen::Vector3d rho;
+103     \textcolor{keywordtype}{double} chi = 0.0;
+104     \textcolor{keywordflow}{for} (EdgeContainer::const\_iterator it = \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.begin(); it != 
+      \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.end(); ++it) \{
+105       \textcolor{keyword}{const} OptimizableGraph::Edge* e = *it;
+106       \textcolor{keywordflow}{if} (e->robustKernel()) \{
+107         e->robustKernel()->robustify(e->chi2(), rho);
+108         chi += rho[0];
+109       \}
+110       \textcolor{keywordflow}{else}
+111         chi += e->chi2();
+112     \}
+113     \textcolor{keywordflow}{return} chi;
+114   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!active\+Vertices@{active\+Vertices}}
+\index{active\+Vertices@{active\+Vertices}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{active\+Vertices() const }{activeVertices() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Vertex\+Container}\& g2o\+::\+Sparse\+Optimizer\+::active\+Vertices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseOptimizer_a5715f0bab2cb9c1e8a330b2c3c217859}{}\label{classg2o_1_1SparseOptimizer_a5715f0bab2cb9c1e8a330b2c3c217859}
+
+
+the vertices active in the current optimization 
+
+
+
+Definition at line 193 of file sparse\+\_\+optimizer.\+h.
+
+
+
+References \+\_\+active\+Vertices.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::init().
+
+
+\begin{DoxyCode}
+193 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!add\+Compute\+Error\+Action@{add\+Compute\+Error\+Action}}
+\index{add\+Compute\+Error\+Action@{add\+Compute\+Error\+Action}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{add\+Compute\+Error\+Action(\+Hyper\+Graph\+Action $\ast$action)}{addComputeErrorAction(HyperGraphAction *action)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::add\+Compute\+Error\+Action (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+Action} $\ast$}]{action}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseOptimizer_a43517d9f9f23ba6041061c57dddd916d}{}\label{classg2o_1_1SparseOptimizer_a43517d9f9f23ba6041061c57dddd916d}
+
+
+add an action to be executed before the error vectors are computed 
+
+
+
+Definition at line 589 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+\_\+graph\+Actions, and A\+T\+\_\+\+C\+O\+M\+P\+U\+T\+E\+A\+C\+T\+I\+V\+E\+R\+R\+OR.
+
+
+
+Referenced by compute\+Batch\+Statistics().
+
+
+\begin{DoxyCode}
+590   \{
+591     std::pair<HyperGraphActionSet::iterator, bool> insertResult = \hyperlink{structg2o_1_1OptimizableGraph_a5e6a371ad7709692e52886ecf3e7250c}{\_graphActions}[
+      \hyperlink{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1a040ef6eacdbc7ede37bc5280dc5a2814}{AT\_COMPUTEACTIVERROR}].insert(action);
+592     \textcolor{keywordflow}{return} insertResult.second;
+593   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!algorithm@{algorithm}}
+\index{algorithm@{algorithm}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{algorithm() const }{algorithm() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Optimization\+Algorithm}$\ast$ g2o\+::\+Sparse\+Optimizer\+::algorithm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseOptimizer_a7dad5beea6a44d92b1cc47c0e526a676}{}\label{classg2o_1_1SparseOptimizer_a7dad5beea6a44d92b1cc47c0e526a676}
+
+
+the solver used by the optimizer 
+
+
+
+Definition at line 217 of file sparse\+\_\+optimizer.\+h.
+
+
+
+References \+\_\+algorithm.
+
+
+
+Referenced by set\+Algorithm(), and solver().
+
+
+\begin{DoxyCode}
+217 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!batch\+Statistics@{batch\+Statistics}}
+\index{batch\+Statistics@{batch\+Statistics}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{batch\+Statistics() const }{batchStatistics() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Batch\+Statistics\+Container}\& g2o\+::\+Sparse\+Optimizer\+::batch\+Statistics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseOptimizer_ac0b9e0f3c9d05f600882b9c9b8a5c7c1}{}\label{classg2o_1_1SparseOptimizer_ac0b9e0f3c9d05f600882b9c9b8a5c7c1}
+Linearizes the system by computing the Jacobians for the nodes and edges in the graph returns the set of batch statistics about the optimisation 
+
+Definition at line 271 of file sparse\+\_\+optimizer.\+h.
+
+
+
+References \+\_\+batch\+Statistics.
+
+
+\begin{DoxyCode}
+271 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a21215378d9e8de28aee8d55b4d25ff89}{\_batchStatistics};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!batch\+Statistics@{batch\+Statistics}}
+\index{batch\+Statistics@{batch\+Statistics}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{batch\+Statistics()}{batchStatistics()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Batch\+Statistics\+Container}\& g2o\+::\+Sparse\+Optimizer\+::batch\+Statistics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseOptimizer_aa93ecf8d3b99e2eef3709a5c70cc8632}{}\label{classg2o_1_1SparseOptimizer_aa93ecf8d3b99e2eef3709a5c70cc8632}
+returns the set of batch statistics about the optimisation 
+
+Definition at line 275 of file sparse\+\_\+optimizer.\+h.
+
+
+
+References \+\_\+batch\+Statistics, compute\+Batch\+Statistics(), and set\+Compute\+Batch\+Statistics().
+
+
+\begin{DoxyCode}
+275 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a21215378d9e8de28aee8d55b4d25ff89}{\_batchStatistics};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!build\+Index\+Mapping@{build\+Index\+Mapping}}
+\index{build\+Index\+Mapping@{build\+Index\+Mapping}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{build\+Index\+Mapping(\+Sparse\+Optimizer\+::\+Vertex\+Container \&vlist)}{buildIndexMapping(SparseOptimizer::VertexContainer &vlist)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::build\+Index\+Mapping (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Optimizer\+::\+Vertex\+Container} \&}]{vlist}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseOptimizer_a8c6af9785e85153ade1490beacad73ce}{}\label{classg2o_1_1SparseOptimizer_a8c6af9785e85153ade1490beacad73ce}
+builds the mapping of the active vertices to the (block) row / column in the Hessian 
+
+Definition at line 166 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+iv\+Map, g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::fixed(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::marginalized(), and g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Hessian\+Index().
+
+
+
+Referenced by initialize\+Optimization().
+
+
+\begin{DoxyCode}
+166                                                                               \{
+167     \textcolor{keywordflow}{if} (! vlist.size())\{
+168       \hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\_ivMap}.clear();
+169       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+170     \}
+171 
+172     \hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\_ivMap}.resize(vlist.size());
+173     \textcolor{keywordtype}{size\_t} i = 0;
+174     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k=0; k<2; k++)
+175       \textcolor{keywordflow}{for} (VertexContainer::iterator it=vlist.begin(); it!=vlist.end(); ++it)\{
+176       OptimizableGraph::Vertex* v = *it;
+177       \textcolor{keywordflow}{if} (! v->fixed())\{
+178         \textcolor{keywordflow}{if} (static\_cast<int>(v->marginalized()) == k)\{
+179           v->setHessianIndex(i);
+180           \hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\_ivMap}[i]=v;
+181           i++;
+182         \}
+183       \}
+184       \textcolor{keywordflow}{else} \{
+185         v->setHessianIndex(-1);
+186       \}
+187     \}
+188     \hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\_ivMap}.resize(i);
+189     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+190   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!clear@{clear}}
+\index{clear@{clear}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{clear()}{clear()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_a4881e4ac9ba9a58d4e249dc03ef9683d}{}\label{classg2o_1_1SparseOptimizer_a4881e4ac9ba9a58d4e249dc03ef9683d}
+clears the graph, and polishes some intermediate structures Note that this only removes nodes / edges. Parameters can be removed with \hyperlink{structg2o_1_1OptimizableGraph_a15171b6d335115858e2e86dcf576ba78}{clear\+Parameters()}. 
+
+Reimplemented from \hyperlink{classg2o_1_1HyperGraph_a6b629dff2928dbd704ca81f24858e72f}{g2o\+::\+Hyper\+Graph}.
+
+
+
+Definition at line 489 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+active\+Edges, \+\_\+active\+Vertices, \+\_\+iv\+Map, and g2o\+::\+Hyper\+Graph\+::clear().
+
+
+
+Referenced by solver().
+
+
+\begin{DoxyCode}
+489                               \{
+490     \hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\_ivMap}.clear();
+491     \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.clear();
+492     \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.clear();
+493     \hyperlink{classg2o_1_1HyperGraph_a6b629dff2928dbd704ca81f24858e72f}{OptimizableGraph::clear}();
+494   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!clear\+Index\+Mapping@{clear\+Index\+Mapping}}
+\index{clear\+Index\+Mapping@{clear\+Index\+Mapping}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{clear\+Index\+Mapping()}{clearIndexMapping()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::clear\+Index\+Mapping (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseOptimizer_ab6f1f4ad2b1fd50b8019c6abb89ac6a8}{}\label{classg2o_1_1SparseOptimizer_ab6f1f4ad2b1fd50b8019c6abb89ac6a8}
+
+
+Definition at line 192 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+iv\+Map.
+
+
+
+Referenced by initialize\+Optimization(), and remove\+Vertex().
+
+
+\begin{DoxyCode}
+192                                          \{
+193     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\_ivMap}.size(); ++i)\{
+194       \hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\_ivMap}[i]->setHessianIndex(-1);
+195       \hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\_ivMap}[i]=0;
+196     \}
+197   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!compute\+Active\+Errors@{compute\+Active\+Errors}}
+\index{compute\+Active\+Errors@{compute\+Active\+Errors}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{compute\+Active\+Errors()}{computeActiveErrors()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::compute\+Active\+Errors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseOptimizer_a09572668aa85b75a5bebf7b66401ce8f}{}\label{classg2o_1_1SparseOptimizer_a09572668aa85b75a5bebf7b66401ce8f}
+computes the error vectors of all edges in the active\+Set, and caches them 
+
+Definition at line 61 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+active\+Edges, g2o\+::\+Optimizable\+Graph\+::\+\_\+graph\+Actions, g2o\+::array\+Has\+Na\+N(), A\+T\+\_\+\+C\+O\+M\+P\+U\+T\+E\+A\+C\+T\+I\+V\+E\+R\+R\+OR, g2o\+::\+Optimizable\+Graph\+::\+Edge\+::compute\+Error(), g2o\+::\+Optimizable\+Graph\+::\+Edge\+::dimension(), and g2o\+::\+Optimizable\+Graph\+::\+Edge\+::error\+Data().
+
+
+
+Referenced by compute\+Initial\+Guess(), optimize(), g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::solve(), g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve(), g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve(), and solver().
+
+
+\begin{DoxyCode}
+62   \{
+63     \textcolor{comment}{// call the callbacks in case there is something registered}
+64     \hyperlink{structg2o_1_1OptimizableGraph_aa3562ad6794c36ea832095131cfffaac}{HyperGraphActionSet}& actions = \hyperlink{structg2o_1_1OptimizableGraph_a5e6a371ad7709692e52886ecf3e7250c}{\_graphActions}[
+      \hyperlink{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1a040ef6eacdbc7ede37bc5280dc5a2814}{AT\_COMPUTEACTIVERROR}];
+65     \textcolor{keywordflow}{if} (actions.size() > 0) \{
+66       \textcolor{keywordflow}{for} (HyperGraphActionSet::iterator it = actions.begin(); it != actions.end(); ++it)
+67         (*(*it))(\textcolor{keyword}{this});
+68     \}
+69 
+70 \textcolor{preprocessor}{#   ifdef G2O\_OPENMP}
+71 \textcolor{preprocessor}{#   pragma omp parallel for default (shared) if (\_activeEdges.size() > 50)}
+72 \textcolor{preprocessor}{#   endif}
+73     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k < static\_cast<int>(\hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.size()); ++k) \{
+74       OptimizableGraph::Edge* e = \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}[k];
+75       e->computeError();
+76     \}
+77 
+78 \textcolor{preprocessor}{#  ifndef NDEBUG}
+79     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k < static\_cast<int>(\hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.size()); ++k) \{
+80       OptimizableGraph::Edge* e = \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}[k];
+81       \textcolor{keywordtype}{bool} hasNan = \hyperlink{namespaceg2o_a123840a60e0d1dde58088d15a1e1fffa}{arrayHasNaN}(e->errorData(), e->dimension());
+82       \textcolor{keywordflow}{if} (hasNan) \{
+83         cerr << \textcolor{stringliteral}{"computeActiveErrors(): found NaN in error for edge "} << e << endl;
+84       \}
+85     \}
+86 \textcolor{preprocessor}{#  endif}
+87 
+88   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!compute\+Batch\+Statistics@{compute\+Batch\+Statistics}}
+\index{compute\+Batch\+Statistics@{compute\+Batch\+Statistics}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{compute\+Batch\+Statistics() const }{computeBatchStatistics() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::compute\+Batch\+Statistics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseOptimizer_a4a4261f1008f1b0f660381b9c46b78f7}{}\label{classg2o_1_1SparseOptimizer_a4a4261f1008f1b0f660381b9c46b78f7}
+
+
+Definition at line 279 of file sparse\+\_\+optimizer.\+h.
+
+
+
+References \+\_\+compute\+Batch\+Statistics, add\+Compute\+Error\+Action(), and remove\+Compute\+Error\+Action().
+
+
+
+Referenced by batch\+Statistics(), and set\+Compute\+Batch\+Statistics().
+
+
+\begin{DoxyCode}
+279 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a3bd44c498c4d983c092f23673de14d5d}{\_computeBatchStatistics};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!compute\+Initial\+Guess@{compute\+Initial\+Guess}}
+\index{compute\+Initial\+Guess@{compute\+Initial\+Guess}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{compute\+Initial\+Guess()}{computeInitialGuess()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::compute\+Initial\+Guess (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_a59db9f16934d3b9f7a52511f0be1bb07}{}\label{classg2o_1_1SparseOptimizer_a59db9f16934d3b9f7a52511f0be1bb07}
+Propagates an initial guess from the vertex specified as origin. It should be called after initialize\+Optimization(...), as it relies on the \+\_\+active\+Vertices/\+\_\+edges structures. It constructs a set of trees starting from the nodes in the graph which are fixed and eligible for preforming optimization. The trees are constructed by utlizing a cost-\/function specified. 
+\begin{DoxyParams}{Parameters}
+{\em cost\+Function} & the cost function used  max\+Distance\+: the distance where to stop the search \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 300 of file sparse\+\_\+optimizer.\+cpp.
+
+
+\begin{DoxyCode}
+301   \{
+302     \hyperlink{classg2o_1_1EstimatePropagator_a67a42f9c6d5f92562ac4ea12f81c8d9c}{EstimatePropagator::PropagateCost} costFunction(\textcolor{keyword}{this});
+303     \hyperlink{classg2o_1_1SparseOptimizer_a59db9f16934d3b9f7a52511f0be1bb07}{computeInitialGuess}(costFunction);
+304   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!compute\+Initial\+Guess@{compute\+Initial\+Guess}}
+\index{compute\+Initial\+Guess@{compute\+Initial\+Guess}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{compute\+Initial\+Guess(\+Estimate\+Propagator\+Cost \&propagator)}{computeInitialGuess(EstimatePropagatorCost &propagator)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::compute\+Initial\+Guess (
+\begin{DoxyParamCaption}
+\item[{{\bf Estimate\+Propagator\+Cost} \&}]{propagator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_a2fba11c8572fce4a8c1bcca4fa3e43fb}{}\label{classg2o_1_1SparseOptimizer_a2fba11c8572fce4a8c1bcca4fa3e43fb}
+Same as above but using a specific propagator 
+
+Definition at line 306 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+active\+Edges, active\+Chi2(), compute\+Active\+Errors(), g2o\+::\+Hyper\+Graph\+::\+Vertex\+::edges(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::fixed(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::hessian\+Index(), g2o\+::\+Optimizable\+Graph\+::\+Edge\+::initial\+Estimate(), g2o\+::\+Optimizable\+Graph\+::\+Edge\+::initial\+Estimate\+Possible(), g2o\+::\+Estimate\+Propagator\+Cost\+::name(), g2o\+::\+Estimate\+Propagator\+::propagate(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::push(), verbose(), g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertex(), and g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertices().
+
+
+\begin{DoxyCode}
+307   \{
+308     \hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{OptimizableGraph::VertexSet} emptySet;
+309     std::set<Vertex*> backupVertices;
+310     \hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{HyperGraph::VertexSet} fixedVertices; \textcolor{comment}{// these are the root nodes where to start
+       the initialization}
+311     \textcolor{keywordflow}{for} (EdgeContainer::iterator it = \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.begin(); it != 
+      \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.end(); ++it) \{
+312       OptimizableGraph::Edge* e = *it;
+313       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < e->vertices().size(); ++i) \{
+314         OptimizableGraph::Vertex* v = \textcolor{keyword}{static\_cast<}OptimizableGraph::Vertex*\textcolor{keyword}{>}(e->vertex(i));
+315         \textcolor{keywordflow}{if} (v->fixed())
+316           fixedVertices.insert(v);
+317         \textcolor{keywordflow}{else} \{ \textcolor{comment}{// check for having a prior which is able to fully initialize a vertex}
+318           \textcolor{keywordflow}{for} (EdgeSet::const\_iterator vedgeIt = v->edges().begin(); vedgeIt != v->edges().end(); ++vedgeIt
+      ) \{
+319             OptimizableGraph::Edge* vedge = \textcolor{keyword}{static\_cast<}OptimizableGraph::Edge*\textcolor{keyword}{>}(*vedgeIt);
+320             \textcolor{keywordflow}{if} (vedge->vertices().size() == 1 && vedge->initialEstimatePossible(emptySet, v) > 0.) \{
+321               \textcolor{comment}{//cerr << "Initialize with prior for " << v->id() << endl;}
+322               vedge->initialEstimate(emptySet, v);
+323               fixedVertices.insert(v);
+324             \}
+325           \}
+326         \}
+327         \textcolor{keywordflow}{if} (v->hessianIndex() == -1) \{
+328           std::set<Vertex*>::const\_iterator foundIt = backupVertices.find(v);
+329           \textcolor{keywordflow}{if} (foundIt == backupVertices.end()) \{
+330             v->push();
+331             backupVertices.insert(v);
+332           \}
+333         \}
+334       \}
+335     \}
+336 
+337     EstimatePropagator estimatePropagator(\textcolor{keyword}{this});
+338     estimatePropagator.propagate(fixedVertices, costFunction);
+339 
+340     \textcolor{comment}{// restoring the vertices that should not be initialized}
+341     \textcolor{keywordflow}{for} (std::set<Vertex*>::iterator it = backupVertices.begin(); it != backupVertices.end(); ++it) \{
+342       Vertex* v = *it;
+343       v->pop();
+344     \}
+345     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseOptimizer_a99851ba4f2a507e724de43d7fe92f903}{verbose}()) \{
+346       \hyperlink{classg2o_1_1SparseOptimizer_a09572668aa85b75a5bebf7b66401ce8f}{computeActiveErrors}();
+347       cerr << \textcolor{stringliteral}{"iteration= -1\(\backslash\)t chi2= "} << \hyperlink{classg2o_1_1SparseOptimizer_add4d83073e22dbb48b66b953d0185ffa}{activeChi2}()
+348           << \textcolor{stringliteral}{"\(\backslash\)t time= 0.0"}
+349           << \textcolor{stringliteral}{"\(\backslash\)t cumTime= 0.0"}
+350           << \textcolor{stringliteral}{"\(\backslash\)t (using initial guess from "} << costFunction.name() << \textcolor{stringliteral}{")"} << endl;
+351     \}
+352   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!compute\+Marginals@{compute\+Marginals}}
+\index{compute\+Marginals@{compute\+Marginals}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{compute\+Marginals(\+Sparse\+Block\+Matrix$<$ Matrix\+Xd $>$ \&spinv, const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices)}{computeMarginals(SparseBlockMatrix< MatrixXd > &spinv, const std::vector< std::pair< int, int > > &blockIndices)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::compute\+Marginals (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ \&}]{spinv, }
+\item[{const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&}]{block\+Indices}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseOptimizer_a656be8b8244a48dc1207f29eec77af5a}{}\label{classg2o_1_1SparseOptimizer_a656be8b8244a48dc1207f29eec77af5a}
+computes the blocks of the inverse of the specified pattern. the pattern is given via pairs $<$row, col$>$ of the blocks in the hessian 
+\begin{DoxyParams}{Parameters}
+{\em block\+Indices} & the pattern \\
+\hline
+{\em spinv} & the sparse block matrix with the result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the operation is not supported by the solver 
+\end{DoxyReturn}
+
+
+Definition at line 570 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+algorithm, and g2o\+::\+Optimization\+Algorithm\+::compute\+Marginals().
+
+
+
+Referenced by compute\+Marginals().
+
+
+\begin{DoxyCode}
+570                                                                                                            
+                        \{
+571     \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm}->\hyperlink{classg2o_1_1OptimizationAlgorithm_a67b159f3a83471ba9ebcc0a9162a0e23}{computeMarginals}(spinv, blockIndices);
+572   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!compute\+Marginals@{compute\+Marginals}}
+\index{compute\+Marginals@{compute\+Marginals}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{compute\+Marginals(\+Sparse\+Block\+Matrix$<$ Matrix\+Xd $>$ \&spinv, const Vertex $\ast$vertex)}{computeMarginals(SparseBlockMatrix< MatrixXd > &spinv, const Vertex *vertex)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::compute\+Marginals (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ \&}]{spinv, }
+\item[{const {\bf Vertex} $\ast$}]{vertex}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseOptimizer_ad9f7ba03f7f37114f757f34f67dd48e5}{}\label{classg2o_1_1SparseOptimizer_ad9f7ba03f7f37114f757f34f67dd48e5}
+computes the inverse of the specified vertex. 
+\begin{DoxyParams}{Parameters}
+{\em vertex} & the vertex whose state is to be marginalised \\
+\hline
+{\em spinv} & the sparse block matrix with the result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the operation is not supported by the solver 
+\end{DoxyReturn}
+
+
+Definition at line 138 of file sparse\+\_\+optimizer.\+h.
+
+
+
+References compute\+Marginals().
+
+
+\begin{DoxyCode}
+138                                                                                     \{
+139       \textcolor{keywordflow}{if} (\hyperlink{structg2o_1_1OptimizableGraph_a19e014e8ec2e9a6e894da8c3a8f8e50d}{vertex}->hessianIndex() < 0) \{
+140           \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+141       \}
+142       std::vector<std::pair<int, int> > index;
+143       index.push\_back(std::pair<int, int>(\hyperlink{structg2o_1_1OptimizableGraph_a19e014e8ec2e9a6e894da8c3a8f8e50d}{vertex}->hessianIndex(), \hyperlink{structg2o_1_1OptimizableGraph_a19e014e8ec2e9a6e894da8c3a8f8e50d}{vertex}->hessianIndex()));
+144       \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a656be8b8244a48dc1207f29eec77af5a}{computeMarginals}(spinv, index);
+145     \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!compute\+Marginals@{compute\+Marginals}}
+\index{compute\+Marginals@{compute\+Marginals}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{compute\+Marginals(\+Sparse\+Block\+Matrix$<$ Matrix\+Xd $>$ \&spinv, const Vertex\+Container \&vertices)}{computeMarginals(SparseBlockMatrix< MatrixXd > &spinv, const VertexContainer &vertices)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::compute\+Marginals (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ \&}]{spinv, }
+\item[{const {\bf Vertex\+Container} \&}]{vertices}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseOptimizer_a06bd3e9f1576dafeae317d2697c6f532}{}\label{classg2o_1_1SparseOptimizer_a06bd3e9f1576dafeae317d2697c6f532}
+computes the inverse of the set specified vertices, assembled into a single covariance matrix. 
+\begin{DoxyParams}{Parameters}
+{\em vertex} & the pattern \\
+\hline
+{\em spinv} & the sparse block matrix with the result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the operation is not supported by the solver 
+\end{DoxyReturn}
+
+
+Definition at line 153 of file sparse\+\_\+optimizer.\+h.
+
+
+
+References active\+Chi2(), active\+Robust\+Chi2(), compute\+Marginals(), find\+Gauge(), and gauge\+Freedom().
+
+
+\begin{DoxyCode}
+153                                                                                                \{
+154       std::vector<std::pair<int, int> > indices;
+155       \textcolor{keywordflow}{for} (VertexContainer::const\_iterator it = \hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}.begin(); it != 
+      \hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}.end(); ++it) \{
+156         indices.push\_back(std::pair<int, int>((*it)->hessianIndex(),(*it)->hessianIndex()));
+157       \}
+158       \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a656be8b8244a48dc1207f29eec77af5a}{computeMarginals}(spinv, indices);
+159     \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!discard\+Top@{discard\+Top}}
+\index{discard\+Top@{discard\+Top}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{discard\+Top(\+Sparse\+Optimizer\+::\+Vertex\+Container \&vlist)}{discardTop(SparseOptimizer::VertexContainer &vlist)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::discard\+Top (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Optimizer\+::\+Vertex\+Container} \&}]{vlist}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseOptimizer_ac6344493dc9f66d5443759ff9f2abf6c}{}\label{classg2o_1_1SparseOptimizer_ac6344493dc9f66d5443759ff9f2abf6c}
+
+
+ignore the latest stored element on the stack, remove it from the stack but do not restore the estimate 
+
+
+
+Definition at line 550 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve(), and g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve().
+
+
+\begin{DoxyCode}
+551   \{
+552     \textcolor{keywordflow}{for} (VertexContainer::iterator it = vlist.begin(); it != vlist.end(); ++it)
+553       (*it)->discardTop();
+554   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!discard\+Top@{discard\+Top}}
+\index{discard\+Top@{discard\+Top}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{discard\+Top()}{discardTop()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::discard\+Top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_a20ed9e9f1201bfb874456a8d30f169fb}{}\label{classg2o_1_1SparseOptimizer_a20ed9e9f1201bfb874456a8d30f169fb}
+
+
+same as above, but for the active vertices 
+
+
+
+Reimplemented from \hyperlink{structg2o_1_1OptimizableGraph_a368b5f22dbc57abd2f651a20d039f61c}{g2o\+::\+Optimizable\+Graph}.
+
+
+
+Definition at line 610 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+active\+Vertices.
+
+
+
+Referenced by solver().
+
+
+\begin{DoxyCode}
+611   \{
+612     \hyperlink{classg2o_1_1SparseOptimizer_a20ed9e9f1201bfb874456a8d30f169fb}{discardTop}(\hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices});
+613   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!find\+Active\+Edge@{find\+Active\+Edge}}
+\index{find\+Active\+Edge@{find\+Active\+Edge}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{find\+Active\+Edge(const Optimizable\+Graph\+::\+Edge $\ast$e) const }{findActiveEdge(const OptimizableGraph::Edge *e) const }}]{\setlength{\rightskip}{0pt plus 5cm}Sparse\+Optimizer\+::\+Edge\+Container\+::const\+\_\+iterator g2o\+::\+Sparse\+Optimizer\+::find\+Active\+Edge (
+\begin{DoxyParamCaption}
+\item[{const {\bf Optimizable\+Graph\+::\+Edge} $\ast$}]{e}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseOptimizer_a68b59bf6d56a390717b82b3ae009ccf0}{}\label{classg2o_1_1SparseOptimizer_a68b59bf6d56a390717b82b3ae009ccf0}
+search for an edge in \+\_\+active\+Edges and return the iterator pointing to it get\+Active\+Edges().end() if not found 
+
+Definition at line 506 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+active\+Edges.
+
+
+
+Referenced by active\+Edges(), g2o\+::\+Estimate\+Propagator\+Cost\+::operator()(), and g2o\+::\+Estimate\+Propagator\+Cost\+Odometry\+::operator()().
+
+
+\begin{DoxyCode}
+507   \{
+508     EdgeContainer::const\_iterator lower = lower\_bound(\hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.begin(), 
+      \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.end(), e, EdgeIDCompare());
+509     \textcolor{keywordflow}{if} (lower == \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.end())
+510       \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.end();
+511     \textcolor{keywordflow}{if} ((*lower) == e)
+512       \textcolor{keywordflow}{return} lower;
+513     \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.end();
+514   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!find\+Active\+Vertex@{find\+Active\+Vertex}}
+\index{find\+Active\+Vertex@{find\+Active\+Vertex}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{find\+Active\+Vertex(const Optimizable\+Graph\+::\+Vertex $\ast$v) const }{findActiveVertex(const OptimizableGraph::Vertex *v) const }}]{\setlength{\rightskip}{0pt plus 5cm}Sparse\+Optimizer\+::\+Vertex\+Container\+::const\+\_\+iterator g2o\+::\+Sparse\+Optimizer\+::find\+Active\+Vertex (
+\begin{DoxyParamCaption}
+\item[{const {\bf Optimizable\+Graph\+::\+Vertex} $\ast$}]{v}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1SparseOptimizer_a89ae01e9d070110a775d8a266717d719}{}\label{classg2o_1_1SparseOptimizer_a89ae01e9d070110a775d8a266717d719}
+search for an edge in \+\_\+active\+Vertices and return the iterator pointing to it get\+Active\+Vertices().end() if not found 
+
+Definition at line 496 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+active\+Vertices.
+
+
+
+Referenced by active\+Edges().
+
+
+\begin{DoxyCode}
+497   \{
+498     VertexContainer::const\_iterator lower = lower\_bound(\hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.begin(), 
+      \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.end(), v, VertexIDCompare());
+499     \textcolor{keywordflow}{if} (lower == \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.end())
+500       \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.end();
+501     \textcolor{keywordflow}{if} ((*lower) == v)
+502       \textcolor{keywordflow}{return} lower;
+503     \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.end();
+504   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!find\+Gauge@{find\+Gauge}}
+\index{find\+Gauge@{find\+Gauge}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{find\+Gauge()}{findGauge()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Optimizable\+Graph\+::\+Vertex} $\ast$ g2o\+::\+Sparse\+Optimizer\+::find\+Gauge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_aad77b73bf7d192fcebf1daf9ae103036}{}\label{classg2o_1_1SparseOptimizer_aad77b73bf7d192fcebf1daf9ae103036}
+
+
+finds a gauge in the graph to remove the undefined dof. 
+
+
+
+Definition at line 116 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::dimension(), and g2o\+::\+Hyper\+Graph\+::vertices().
+
+
+
+Referenced by compute\+Marginals().
+
+
+\begin{DoxyCode}
+116                                                     \{
+117     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().empty())
+118       \textcolor{keywordflow}{return} 0;
+119 
+120     \textcolor{keywordtype}{int} maxDim=0;
+121     \textcolor{keywordflow}{for} (HyperGraph::VertexIDMap::iterator it=\hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().begin(); it!=
+      \hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().end(); ++it)\{
+122       OptimizableGraph::Vertex* v=\textcolor{keyword}{static\_cast<}OptimizableGraph::Vertex*\textcolor{keyword}{>}(it->second); 
+123       maxDim=std::max(maxDim,v->dimension());
+124     \}
+125     
+126     OptimizableGraph::Vertex* rut=0;
+127     \textcolor{keywordflow}{for} (HyperGraph::VertexIDMap::iterator it=\hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().begin(); it!=
+      \hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().end(); ++it)\{
+128       OptimizableGraph::Vertex* v=\textcolor{keyword}{static\_cast<}OptimizableGraph::Vertex*\textcolor{keyword}{>}(it->second);
+129       \textcolor{keywordflow}{if} (v->dimension()==maxDim)\{
+130         rut=v;
+131         \textcolor{keywordflow}{break};
+132       \}
+133     \}
+134     \textcolor{keywordflow}{return} rut;
+135   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!force\+Stop\+Flag@{force\+Stop\+Flag}}
+\index{force\+Stop\+Flag@{force\+Stop\+Flag}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{force\+Stop\+Flag() const }{forceStopFlag() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool$\ast$ g2o\+::\+Sparse\+Optimizer\+::force\+Stop\+Flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseOptimizer_a13b3b195dd3169303c2c8e0f6edb1bb7}{}\label{classg2o_1_1SparseOptimizer_a13b3b195dd3169303c2c8e0f6edb1bb7}
+
+
+Definition at line 185 of file sparse\+\_\+optimizer.\+h.
+
+
+
+References \+\_\+force\+Stop\+Flag.
+
+
+\begin{DoxyCode}
+185 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_aac4a9f9b7d875ee40cae55f98d3437ab}{\_forceStopFlag};\};
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!gauge\+Freedom@{gauge\+Freedom}}
+\index{gauge\+Freedom@{gauge\+Freedom}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{gauge\+Freedom()}{gaugeFreedom()}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::gauge\+Freedom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseOptimizer_ac99e785f4822dd540b389ea179ce4f06}{}\label{classg2o_1_1SparseOptimizer_ac99e785f4822dd540b389ea179ce4f06}
+
+
+Definition at line 137 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::dimension(), g2o\+::\+Optimizable\+Graph\+::\+Edge\+::dimension(), g2o\+::\+Hyper\+Graph\+::\+Vertex\+::edges(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::fixed(), g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertices(), and g2o\+::\+Hyper\+Graph\+::vertices().
+
+
+
+Referenced by compute\+Marginals().
+
+
+\begin{DoxyCode}
+138   \{
+139     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().empty())
+140       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+141 
+142     \textcolor{keywordtype}{int} maxDim=0;
+143     \textcolor{keywordflow}{for} (HyperGraph::VertexIDMap::iterator it=\hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().begin(); it!=
+      \hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().end(); ++it)\{
+144       OptimizableGraph::Vertex* v=\textcolor{keyword}{static\_cast<}OptimizableGraph::Vertex*\textcolor{keyword}{>}(it->second); 
+145       maxDim = std::max(maxDim,v->dimension());
+146     \}
+147 
+148     \textcolor{keywordflow}{for} (HyperGraph::VertexIDMap::iterator it=\hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().begin(); it!=
+      \hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().end(); ++it)\{
+149       OptimizableGraph::Vertex* v=\textcolor{keyword}{static\_cast<}OptimizableGraph::Vertex*\textcolor{keyword}{>}(it->second);
+150       \textcolor{keywordflow}{if} (v->dimension() == maxDim) \{
+151         \textcolor{comment}{// test for fixed vertex}
+152         \textcolor{keywordflow}{if} (v->fixed()) \{
+153           \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+154         \}
+155         \textcolor{comment}{// test for full dimension prior}
+156         \textcolor{keywordflow}{for} (HyperGraph::EdgeSet::const\_iterator eit = v->edges().begin(); eit != v->edges().end(); ++eit) 
+      \{
+157           OptimizableGraph::Edge* e = \textcolor{keyword}{static\_cast<}OptimizableGraph::Edge*\textcolor{keyword}{>}(*eit);
+158           \textcolor{keywordflow}{if} (e->vertices().size() == 1 && e->dimension() == maxDim)
+159             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+160         \}
+161       \}
+162     \}
+163     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+164   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!index\+Mapping@{index\+Mapping}}
+\index{index\+Mapping@{index\+Mapping}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{index\+Mapping() const }{indexMapping() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Vertex\+Container}\& g2o\+::\+Sparse\+Optimizer\+::index\+Mapping (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{}\label{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}
+
+
+the index mapping of the vertices 
+
+
+
+Definition at line 191 of file sparse\+\_\+optimizer.\+h.
+
+
+
+References \+\_\+iv\+Map.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+System(), and g2o\+::\+Optimization\+Algorithm\+Levenberg\+::compute\+Lambda\+Init().
+
+
+\begin{DoxyCode}
+191 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\_ivMap};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!initialize\+Optimization@{initialize\+Optimization}}
+\index{initialize\+Optimization@{initialize\+Optimization}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{initialize\+Optimization(\+Hyper\+Graph\+::\+Edge\+Set \&eset)}{initializeOptimization(HyperGraph::EdgeSet &eset)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::initialize\+Optimization (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+::\+Edge\+Set} \&}]{eset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_a56c0c13954ac7204cfb031c141ece9ae}{}\label{classg2o_1_1SparseOptimizer_a56c0c13954ac7204cfb031c141ece9ae}
+Initializes the structures for optimizing a portion of the graph specified by a subset of edges. Before calling it be sure to invoke marginalized() and fixed() to the vertices you want to include in the schur complement or to set as fixed during the optimization. 
+\begin{DoxyParams}{Parameters}
+{\em eset} & the subgraph to be optimized. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if somethings goes wrong 
+\end{DoxyReturn}
+
+
+Definition at line 269 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+active\+Edges, \+\_\+active\+Vertices, g2o\+::\+Optimizable\+Graph\+::\+\_\+jacobian\+Workspace, g2o\+::\+Jacobian\+Workspace\+::allocate(), build\+Index\+Mapping(), clear\+Index\+Mapping(), sort\+Vector\+Containers(), and g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertices().
+
+
+
+Referenced by initialize\+Optimization().
+
+
+\begin{DoxyCode}
+269                                                                      \{
+270     \textcolor{keywordtype}{bool} workspaceAllocated = \hyperlink{structg2o_1_1OptimizableGraph_a161c01a29d09cca22e223ab2048eaba8}{\_jacobianWorkspace}.\hyperlink{classg2o_1_1JacobianWorkspace_a8e1d23ced91b721fdb5bd68c8c4e9fc3}{allocate}(); (void) 
+      workspaceAllocated;
+271     assert(workspaceAllocated && \textcolor{stringliteral}{"Error while allocating memory for the Jacobians"});
+272     \hyperlink{classg2o_1_1SparseOptimizer_ab6f1f4ad2b1fd50b8019c6abb89ac6a8}{clearIndexMapping}();
+273     \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.clear();
+274     \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.clear();
+275     \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.reserve(eset.size());
+276     set<Vertex*> auxVertexSet; \textcolor{comment}{// temporary structure to avoid duplicates}
+277     \textcolor{keywordflow}{for} (HyperGraph::EdgeSet::iterator it=eset.begin(); it!=eset.end(); ++it)\{
+278       OptimizableGraph::Edge* e=(OptimizableGraph::Edge*)(*it);
+279       \textcolor{keywordflow}{for} (vector<HyperGraph::Vertex*>::const\_iterator vit = e->vertices().begin(); vit != e->vertices().
+      end(); ++vit) \{
+280         auxVertexSet.insert(static\_cast<OptimizableGraph::Vertex*>(*vit));
+281       \}
+282       \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.push\_back(reinterpret\_cast<OptimizableGraph::Edge*>(*it));
+283     \}
+284 
+285     \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.reserve(auxVertexSet.size());
+286     \textcolor{keywordflow}{for} (set<Vertex*>::iterator it = auxVertexSet.begin(); it != auxVertexSet.end(); ++it)
+287       \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.push\_back(*it);
+288 
+289     \hyperlink{classg2o_1_1SparseOptimizer_a8a8c6f08bc9b8a4e520aa73198268991}{sortVectorContainers}();
+290     \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a8c6af9785e85153ade1490beacad73ce}{buildIndexMapping}(\hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices});
+291   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!initialize\+Optimization@{initialize\+Optimization}}
+\index{initialize\+Optimization@{initialize\+Optimization}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{initialize\+Optimization(\+Hyper\+Graph\+::\+Vertex\+Set \&vset, int level=0)}{initializeOptimization(HyperGraph::VertexSet &vset, int level=0)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::initialize\+Optimization (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+::\+Vertex\+Set} \&}]{vset, }
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_ab16dd36e32577ba5856239ce721ec70b}{}\label{classg2o_1_1SparseOptimizer_ab16dd36e32577ba5856239ce721ec70b}
+Initializes the structures for optimizing a portion of the graph specified by a subset of vertices. Before calling it be sure to invoke marginalized() and fixed() to the vertices you want to include in the schur complement or to set as fixed during the optimization. 
+\begin{DoxyParams}{Parameters}
+{\em vset} & the subgraph to be optimized. \\
+\hline
+{\em level} & is the level (in multilevel optimization) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if somethings goes wrong 
+\end{DoxyReturn}
+
+
+Definition at line 206 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, \+\_\+active\+Edges, \+\_\+active\+Vertices, g2o\+::\+Optimizable\+Graph\+::\+\_\+jacobian\+Workspace, g2o\+::\+Jacobian\+Workspace\+::allocate(), g2o\+::\+Optimizable\+Graph\+::\+Edge\+::all\+Vertices\+Fixed(), g2o\+::array\+Has\+Na\+N(), build\+Index\+Mapping(), clear\+Index\+Mapping(), g2o\+::\+Hyper\+Graph\+::\+Vertex\+::edges(), g2o\+::\+Hyper\+Graph\+::edges(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::estimate\+Dimension(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::get\+Estimate\+Data(), g2o\+::\+Hyper\+Graph\+::\+Vertex\+::id(), sort\+Vector\+Containers(), and g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertices().
+
+
+\begin{DoxyCode}
+206                                                                                   \{
+207     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1HyperGraph_acb3391945ed7c3f09243101d9ef0aaf0}{edges}().size() == 0) \{
+208       cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": Attempt to initialize an empty graph"} << endl;
+209       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+210     \}
+211     \textcolor{keywordtype}{bool} workspaceAllocated = \hyperlink{structg2o_1_1OptimizableGraph_a161c01a29d09cca22e223ab2048eaba8}{\_jacobianWorkspace}.\hyperlink{classg2o_1_1JacobianWorkspace_a8e1d23ced91b721fdb5bd68c8c4e9fc3}{allocate}(); (void) 
+      workspaceAllocated;
+212     assert(workspaceAllocated && \textcolor{stringliteral}{"Error while allocating memory for the Jacobians"});
+213     \hyperlink{classg2o_1_1SparseOptimizer_ab6f1f4ad2b1fd50b8019c6abb89ac6a8}{clearIndexMapping}();
+214     \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.clear();
+215     \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.reserve(vset.size());
+216     \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.clear();
+217     set<Edge*> auxEdgeSet; \textcolor{comment}{// temporary structure to avoid duplicates}
+218     \textcolor{keywordflow}{for} (HyperGraph::VertexSet::iterator it=vset.begin(); it!=vset.end(); ++it)\{
+219       OptimizableGraph::Vertex* v= (OptimizableGraph::Vertex*) *it;
+220       \textcolor{keyword}{const} \hyperlink{classg2o_1_1HyperGraph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{OptimizableGraph::EdgeSet}& vEdges=v->edges();
+221       \textcolor{comment}{// count if there are edges in that level. If not remove from the pool}
+222       \textcolor{keywordtype}{int} levelEdges=0;
+223       \textcolor{keywordflow}{for} (OptimizableGraph::EdgeSet::const\_iterator it=vEdges.begin(); it!=vEdges.end(); ++it)\{
+224         OptimizableGraph::Edge* e=\textcolor{keyword}{reinterpret\_cast<}OptimizableGraph::Edge*\textcolor{keyword}{>}(*it);
+225         \textcolor{keywordflow}{if} (level < 0 || e->level() == level) \{
+226 
+227           \textcolor{keywordtype}{bool} allVerticesOK = \textcolor{keyword}{true};
+228           \textcolor{keywordflow}{for} (vector<HyperGraph::Vertex*>::const\_iterator vit = e->vertices().begin(); vit != e->vertices(
+      ).end(); ++vit) \{
+229             \textcolor{keywordflow}{if} (vset.find(*vit) == vset.end()) \{
+230               allVerticesOK = \textcolor{keyword}{false};
+231               \textcolor{keywordflow}{break};
+232             \}
+233           \}
+234           \textcolor{keywordflow}{if} (allVerticesOK && !e->allVerticesFixed()) \{
+235             auxEdgeSet.insert(e);
+236             levelEdges++;
+237           \}
+238 
+239         \}
+240       \}
+241       \textcolor{keywordflow}{if} (levelEdges)\{
+242         \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.push\_back(v);
+243 
+244         \textcolor{comment}{// test for NANs in the current estimate if we are debugging}
+245 \textcolor{preprocessor}{#      ifndef NDEBUG}
+246         \textcolor{keywordtype}{int} estimateDim = v->estimateDimension();
+247         \textcolor{keywordflow}{if} (estimateDim > 0) \{
+248           Eigen::VectorXd estimateData(estimateDim);
+249           \textcolor{keywordflow}{if} (v->getEstimateData(estimateData.data()) == \textcolor{keyword}{true}) \{
+250             \textcolor{keywordtype}{int} k;
+251             \textcolor{keywordtype}{bool} hasNan = \hyperlink{namespaceg2o_a123840a60e0d1dde58088d15a1e1fffa}{arrayHasNaN}(estimateData.data(), estimateDim, &k);
+252             \textcolor{keywordflow}{if} (hasNan)
+253               cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": Vertex "} << v->id() << \textcolor{stringliteral}{" contains a nan
+       entry at index "} << k << endl;
+254           \}
+255         \}
+256 \textcolor{preprocessor}{#      endif}
+257 
+258       \}
+259     \}
+260 
+261     \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.reserve(auxEdgeSet.size());
+262     \textcolor{keywordflow}{for} (set<Edge*>::iterator it = auxEdgeSet.begin(); it != auxEdgeSet.end(); ++it)
+263       \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.push\_back(*it);
+264 
+265     \hyperlink{classg2o_1_1SparseOptimizer_a8a8c6f08bc9b8a4e520aa73198268991}{sortVectorContainers}();
+266     \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a8c6af9785e85153ade1490beacad73ce}{buildIndexMapping}(\hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices});
+267   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!initialize\+Optimization@{initialize\+Optimization}}
+\index{initialize\+Optimization@{initialize\+Optimization}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{initialize\+Optimization(int level=0)}{initializeOptimization(int level=0)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::initialize\+Optimization (
+\begin{DoxyParamCaption}
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_ace3994bf5f403c7fa0305635aa598473}{}\label{classg2o_1_1SparseOptimizer_ace3994bf5f403c7fa0305635aa598473}
+Initializes the structures for optimizing the whole graph. Before calling it be sure to invoke marginalized() and fixed() to the vertices you want to include in the schur complement or to set as fixed during the optimization. 
+\begin{DoxyParams}{Parameters}
+{\em level} & is the level (in multilevel optimization) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if somethings goes wrong 
+\end{DoxyReturn}
+
+
+Definition at line 199 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References initialize\+Optimization(), and g2o\+::\+Hyper\+Graph\+::vertices().
+
+
+\begin{DoxyCode}
+199                                                        \{
+200     \hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{HyperGraph::VertexSet} vset;
+201     \textcolor{keywordflow}{for} (VertexIDMap::iterator it=\hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().begin(); it!=\hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().end(); ++it)
+202       vset.insert(it->second);
+203     \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a56c0c13954ac7204cfb031c141ece9ae}{initializeOptimization}(vset,level);
+204   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!optimize@{optimize}}
+\index{optimize@{optimize}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{optimize(int iterations, bool online=false)}{optimize(int iterations, bool online=false)}}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Sparse\+Optimizer\+::optimize (
+\begin{DoxyParamCaption}
+\item[{int}]{iterations, }
+\item[{bool}]{online = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_a098257ee6f13dbb79be07075244d9930}{}\label{classg2o_1_1SparseOptimizer_a098257ee6f13dbb79be07075244d9930}
+starts one optimization run given the current configuration of the graph, and the current settings stored in the class instance. It can be called only after initialize\+Optimization 
+
+Reimplemented from \hyperlink{structg2o_1_1OptimizableGraph_ac1b2e36c05680dd3e60ed6f90dddf5d8}{g2o\+::\+Optimizable\+Graph}.
+
+
+
+Definition at line 354 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, \+\_\+active\+Edges, \+\_\+active\+Vertices, \+\_\+algorithm, \+\_\+batch\+Statistics, \+\_\+compute\+Batch\+Statistics, \+\_\+iv\+Map, active\+Robust\+Chi2(), g2o\+::array\+Has\+Na\+N(), compute\+Active\+Errors(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::dimension(), g2o\+::\+Optimization\+Algorithm\+::\+Fail, g2o\+::get\+\_\+monotonic\+\_\+time(), g2o\+::\+Hyper\+Graph\+::\+Vertex\+::id(), g2o\+::\+Optimization\+Algorithm\+::init(), g2o\+::\+G2\+O\+Batch\+Statistics\+::iteration, g2o\+::\+G2\+O\+Batch\+Statistics\+::num\+Edges, g2o\+::\+G2\+O\+Batch\+Statistics\+::num\+Vertices, g2o\+::\+Optimization\+Algorithm\+::\+OK, g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::oplus(), g2o\+::\+Optimizable\+Graph\+::post\+Iteration(), g2o\+::\+Optimizable\+Graph\+::pre\+Iteration(), g2o\+::\+Optimization\+Algorithm\+::print\+Verbose(), g2o\+::\+G2\+O\+Batch\+Statistics\+::set\+Global\+Stats(), g2o\+::\+Optimization\+Algorithm\+::solve(), terminate(), and verbose().
+
+
+\begin{DoxyCode}
+355   \{
+356     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\_ivMap}.size() == 0) \{
+357       cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": 0 vertices to optimize, maybe forgot to call
+       initializeOptimization()"} << endl;
+358       \textcolor{keywordflow}{return} -1;
+359     \}
+360 
+361     \textcolor{keywordtype}{int} cjIterations=0;
+362     \textcolor{keywordtype}{double} cumTime=0;
+363     \textcolor{keywordtype}{bool} ok=\textcolor{keyword}{true};
+364 
+365     ok = \hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm}->\hyperlink{classg2o_1_1OptimizationAlgorithm_af5b54ea6d40a8ab4c16d448ba02a0c80}{init}(online);
+366     \textcolor{keywordflow}{if} (! ok) \{
+367       cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{" Error while initializing"} << endl;
+368       \textcolor{keywordflow}{return} -1;
+369     \}
+370 
+371     \hyperlink{classg2o_1_1SparseOptimizer_a21215378d9e8de28aee8d55b4d25ff89}{\_batchStatistics}.clear();
+372     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseOptimizer_a3bd44c498c4d983c092f23673de14d5d}{\_computeBatchStatistics})
+373       \hyperlink{classg2o_1_1SparseOptimizer_a21215378d9e8de28aee8d55b4d25ff89}{\_batchStatistics}.resize(iterations);
+374     
+375     \hyperlink{classg2o_1_1OptimizationAlgorithm_a705d58d7bc19528a8ab718570d090cdf}{OptimizationAlgorithm::SolverResult} result = 
+      \hyperlink{classg2o_1_1OptimizationAlgorithm_a705d58d7bc19528a8ab718570d090cdfa5e94b8ee7748cc4c1a5c86de2e8cc962}{OptimizationAlgorithm::OK};
+376     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<iterations && ! \hyperlink{classg2o_1_1SparseOptimizer_ae592f525151d0cfb5bde3e7213f7ab11}{terminate}() && ok; i++)\{
+377       \hyperlink{structg2o_1_1OptimizableGraph_ad295e7f06651db627b8ebde3d8898bab}{preIteration}(i);
+378 
+379       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseOptimizer_a3bd44c498c4d983c092f23673de14d5d}{\_computeBatchStatistics}) \{
+380         G2OBatchStatistics& cstat = \hyperlink{classg2o_1_1SparseOptimizer_a21215378d9e8de28aee8d55b4d25ff89}{\_batchStatistics}[i];
+381         \hyperlink{structg2o_1_1G2OBatchStatistics_a8c56e85d25e346ba87718621407247fc}{G2OBatchStatistics::setGlobalStats}(&cstat);
+382         cstat.iteration = i;
+383         cstat.numEdges =  \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.size();
+384         cstat.numVertices = \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.size();
+385       \}
+386       
+387       \textcolor{keywordtype}{double} ts = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+388       result = \hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm}->\hyperlink{classg2o_1_1OptimizationAlgorithm_ab174deeeb2551ceaf715ea09f0f9c077}{solve}(i, online);
+389       ok = ( result == \hyperlink{classg2o_1_1OptimizationAlgorithm_a705d58d7bc19528a8ab718570d090cdfa5e94b8ee7748cc4c1a5c86de2e8cc962}{OptimizationAlgorithm::OK} );
+390 
+391       \textcolor{keywordtype}{bool} errorComputed = \textcolor{keyword}{false};
+392       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseOptimizer_a3bd44c498c4d983c092f23673de14d5d}{\_computeBatchStatistics}) \{
+393         \hyperlink{classg2o_1_1SparseOptimizer_a09572668aa85b75a5bebf7b66401ce8f}{computeActiveErrors}();
+394         errorComputed = \textcolor{keyword}{true};
+395         \hyperlink{classg2o_1_1SparseOptimizer_a21215378d9e8de28aee8d55b4d25ff89}{\_batchStatistics}[i].chi2 = \hyperlink{classg2o_1_1SparseOptimizer_ae47c5023e53685523499fc00d6057d14}{activeRobustChi2}();
+396         \hyperlink{classg2o_1_1SparseOptimizer_a21215378d9e8de28aee8d55b4d25ff89}{\_batchStatistics}[i].timeIteration = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}()-ts;
+397       \}
+398 
+399       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseOptimizer_a99851ba4f2a507e724de43d7fe92f903}{verbose}())\{
+400         \textcolor{keywordtype}{double} dts = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}()-ts;
+401         cumTime += dts;
+402         \textcolor{keywordflow}{if} (! errorComputed)
+403           \hyperlink{classg2o_1_1SparseOptimizer_a09572668aa85b75a5bebf7b66401ce8f}{computeActiveErrors}();
+404         cerr << \textcolor{stringliteral}{"iteration= "} << i
+405           << \textcolor{stringliteral}{"\(\backslash\)t chi2= "} << FIXED(\hyperlink{classg2o_1_1SparseOptimizer_ae47c5023e53685523499fc00d6057d14}{activeRobustChi2}())
+406           << \textcolor{stringliteral}{"\(\backslash\)t time= "} << dts
+407           << \textcolor{stringliteral}{"\(\backslash\)t cumTime= "} << cumTime
+408           << \textcolor{stringliteral}{"\(\backslash\)t edges= "} << \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.size();
+409         \hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm}->\hyperlink{classg2o_1_1OptimizationAlgorithm_a61fe205d498ed3b0ac1f812a78c4b0f0}{printVerbose}(cerr);
+410         cerr << endl;
+411       \}
+412       ++cjIterations; 
+413       \hyperlink{structg2o_1_1OptimizableGraph_ac8d41dc0830f1ae07e9cb4a8341d3ffb}{postIteration}(i);
+414     \}
+415     \textcolor{keywordflow}{if} (result == \hyperlink{classg2o_1_1OptimizationAlgorithm_a705d58d7bc19528a8ab718570d090cdfa375598c3a146bb5116b5d19bb1a88f84}{OptimizationAlgorithm::Fail}) \{
+416       \textcolor{keywordflow}{return} 0;
+417     \}
+418     \textcolor{keywordflow}{return} cjIterations;
+419   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!pop@{pop}}
+\index{pop@{pop}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{pop(\+Sparse\+Optimizer\+::\+Vertex\+Container \&vlist)}{pop(SparseOptimizer::VertexContainer &vlist)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::pop (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Optimizer\+::\+Vertex\+Container} \&}]{vlist}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseOptimizer_a57dbbb584122c6cfa292bb79d8fcd7ad}{}\label{classg2o_1_1SparseOptimizer_a57dbbb584122c6cfa292bb79d8fcd7ad}
+
+
+pop (restore) the estimate a subset of the variables from the stack 
+
+
+
+Definition at line 522 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve(), and g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve().
+
+
+\begin{DoxyCode}
+523   \{
+524     \textcolor{keywordflow}{for} (VertexContainer::iterator it = vlist.begin(); it != vlist.end(); ++it)
+525       (*it)->pop();
+526   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!pop@{pop}}
+\index{pop@{pop}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{pop(\+Hyper\+Graph\+::\+Vertex\+Set \&vlist)}{pop(HyperGraph::VertexSet &vlist)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::pop (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+::\+Vertex\+Set} \&}]{vlist}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_aa6688f8636bf89ef919d72947692d59c}{}\label{classg2o_1_1SparseOptimizer_aa6688f8636bf89ef919d72947692d59c}
+
+
+pop (restore) the estimate a subset of the variables from the stack 
+
+
+
+Reimplemented from \hyperlink{structg2o_1_1OptimizableGraph_a83425dbe755d22877ba692e93e04a6af}{g2o\+::\+Optimizable\+Graph}.
+
+
+
+Definition at line 539 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::pop().
+
+
+\begin{DoxyCode}
+540   \{
+541     \textcolor{keywordflow}{for} (HyperGraph::VertexSet::iterator it = vlist.begin(); it != vlist.end(); ++it)\{
+542       OptimizableGraph::Vertex* v = \textcolor{keyword}{dynamic\_cast<}OptimizableGraph::Vertex*\textcolor{keyword}{>} (*it);
+543       \textcolor{keywordflow}{if} (v)
+544         v->pop();
+545       \textcolor{keywordflow}{else} 
+546         cerr << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{": FATAL POP SET"} << endl;
+547     \}
+548   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!pop@{pop}}
+\index{pop@{pop}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{pop()}{pop()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_ad2f7f62ebe17b40e050f0525db64355b}{}\label{classg2o_1_1SparseOptimizer_ad2f7f62ebe17b40e050f0525db64355b}
+
+
+pop (restore) the estimate of the active vertices from the stack 
+
+
+
+Reimplemented from \hyperlink{structg2o_1_1OptimizableGraph_a8487f537b16ac7a2ee416ea294a1e22e}{g2o\+::\+Optimizable\+Graph}.
+
+
+
+Definition at line 605 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+active\+Vertices.
+
+
+
+Referenced by solver().
+
+
+\begin{DoxyCode}
+606   \{
+607     \hyperlink{classg2o_1_1SparseOptimizer_ad2f7f62ebe17b40e050f0525db64355b}{pop}(\hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices});
+608   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!push@{push}}
+\index{push@{push}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{push(\+Sparse\+Optimizer\+::\+Vertex\+Container \&vlist)}{push(SparseOptimizer::VertexContainer &vlist)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::push (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Optimizer\+::\+Vertex\+Container} \&}]{vlist}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseOptimizer_a08833d6f9ae487f5608f6113f3635b6b}{}\label{classg2o_1_1SparseOptimizer_a08833d6f9ae487f5608f6113f3635b6b}
+
+
+push the estimate of a subset of the variables onto a stack 
+
+
+
+Definition at line 516 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve(), and g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve().
+
+
+\begin{DoxyCode}
+517   \{
+518     \textcolor{keywordflow}{for} (VertexContainer::iterator it = vlist.begin(); it != vlist.end(); ++it)
+519       (*it)->push();
+520   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!push@{push}}
+\index{push@{push}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{push(\+Hyper\+Graph\+::\+Vertex\+Set \&vlist)}{push(HyperGraph::VertexSet &vlist)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::push (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+::\+Vertex\+Set} \&}]{vlist}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_ac9a5fd64764e61d99e8a90734118a8bf}{}\label{classg2o_1_1SparseOptimizer_ac9a5fd64764e61d99e8a90734118a8bf}
+
+
+push the estimate of a subset of the variables onto a stack 
+
+
+
+Reimplemented from \hyperlink{structg2o_1_1OptimizableGraph_a1d65a6854936147a92f7ba664302993e}{g2o\+::\+Optimizable\+Graph}.
+
+
+
+Definition at line 528 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::push().
+
+
+\begin{DoxyCode}
+529   \{
+530     \textcolor{keywordflow}{for} (HyperGraph::VertexSet::iterator it = vlist.begin(); it != vlist.end(); ++it) \{
+531       OptimizableGraph::Vertex* v = \textcolor{keyword}{dynamic\_cast<}OptimizableGraph::Vertex*\textcolor{keyword}{>}(*it);
+532       \textcolor{keywordflow}{if} (v)
+533         v->push();
+534       \textcolor{keywordflow}{else} 
+535         cerr << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{": FATAL PUSH SET"} << endl;
+536     \}
+537   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!push@{push}}
+\index{push@{push}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{push()}{push()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::push (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_a4c121d69052291775860d06507aba698}{}\label{classg2o_1_1SparseOptimizer_a4c121d69052291775860d06507aba698}
+
+
+push all the active vertices onto a stack 
+
+
+
+Reimplemented from \hyperlink{structg2o_1_1OptimizableGraph_a3db385b25818a5659d1fa8407cb0db45}{g2o\+::\+Optimizable\+Graph}.
+
+
+
+Definition at line 600 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+active\+Vertices.
+
+
+
+Referenced by solver().
+
+
+\begin{DoxyCode}
+601   \{
+602     \hyperlink{classg2o_1_1SparseOptimizer_a4c121d69052291775860d06507aba698}{push}(\hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices});
+603   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!remove\+Compute\+Error\+Action@{remove\+Compute\+Error\+Action}}
+\index{remove\+Compute\+Error\+Action@{remove\+Compute\+Error\+Action}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{remove\+Compute\+Error\+Action(\+Hyper\+Graph\+Action $\ast$action)}{removeComputeErrorAction(HyperGraphAction *action)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::remove\+Compute\+Error\+Action (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+Action} $\ast$}]{action}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseOptimizer_aaeb1bffea0c80d98b6650cbf51be2b80}{}\label{classg2o_1_1SparseOptimizer_aaeb1bffea0c80d98b6650cbf51be2b80}
+
+
+remove an action that should no longer be execured before computing the error vectors 
+
+
+
+Definition at line 595 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+\_\+graph\+Actions, and A\+T\+\_\+\+C\+O\+M\+P\+U\+T\+E\+A\+C\+T\+I\+V\+E\+R\+R\+OR.
+
+
+
+Referenced by compute\+Batch\+Statistics().
+
+
+\begin{DoxyCode}
+596   \{
+597     \textcolor{keywordflow}{return} \hyperlink{structg2o_1_1OptimizableGraph_a5e6a371ad7709692e52886ecf3e7250c}{\_graphActions}[\hyperlink{classg2o_1_1SparseOptimizer_ae32133d08b51364935cfb34d612892b1a040ef6eacdbc7ede37bc5280dc5a2814}{AT\_COMPUTEACTIVERROR}].erase(action) > 0;
+598   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!remove\+Vertex@{remove\+Vertex}}
+\index{remove\+Vertex@{remove\+Vertex}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{remove\+Vertex(\+Hyper\+Graph\+::\+Vertex $\ast$v)}{removeVertex(HyperGraph::Vertex *v)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::remove\+Vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+::\+Vertex} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_a0fb2a5e2b250bf2530a600f6dcaad03f}{}\label{classg2o_1_1SparseOptimizer_a0fb2a5e2b250bf2530a600f6dcaad03f}
+Remove a vertex. If the vertex is contained in the currently active set of vertices, then the internal temporary structures are cleaned, e.\+g., the index mapping is erased. In case you need the index mapping for manipulating the graph, you have to store it in your own copy. 
+
+Reimplemented from \hyperlink{classg2o_1_1HyperGraph_a97ab8302aa027d513253387bba9e0dd5}{g2o\+::\+Hyper\+Graph}.
+
+
+
+Definition at line 579 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+iv\+Map, clear\+Index\+Mapping(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::hessian\+Index(), and g2o\+::\+Hyper\+Graph\+::remove\+Vertex().
+
+
+
+Referenced by active\+Edges().
+
+
+\begin{DoxyCode}
+580   \{
+581     OptimizableGraph::Vertex* vv = \textcolor{keyword}{static\_cast<}OptimizableGraph::Vertex*\textcolor{keyword}{>}(v);
+582     \textcolor{keywordflow}{if} (vv->hessianIndex() >= 0) \{
+583       \hyperlink{classg2o_1_1SparseOptimizer_ab6f1f4ad2b1fd50b8019c6abb89ac6a8}{clearIndexMapping}();
+584       \hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\_ivMap}.clear();
+585     \}
+586     \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1HyperGraph_a97ab8302aa027d513253387bba9e0dd5}{HyperGraph::removeVertex}(v);
+587   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!set\+Algorithm@{set\+Algorithm}}
+\index{set\+Algorithm@{set\+Algorithm}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{set\+Algorithm(\+Optimization\+Algorithm $\ast$algorithm)}{setAlgorithm(OptimizationAlgorithm *algorithm)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::set\+Algorithm (
+\begin{DoxyParamCaption}
+\item[{{\bf Optimization\+Algorithm} $\ast$}]{algorithm}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseOptimizer_a5ed7404ef361b479c75a0baf34e0a2bd}{}\label{classg2o_1_1SparseOptimizer_a5ed7404ef361b479c75a0baf34e0a2bd}
+
+
+Definition at line 561 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+algorithm, algorithm(), and g2o\+::\+Optimization\+Algorithm\+::set\+Optimizer().
+
+
+
+Referenced by solver().
+
+
+\begin{DoxyCode}
+562   \{
+563     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm}) \textcolor{comment}{// reset the optimizer for the formerly used solver}
+564       \hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm}->\hyperlink{classg2o_1_1OptimizationAlgorithm_aff88a3dc8357c98712ff0047e601bd5e}{setOptimizer}(0);
+565     \hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm} = \hyperlink{classg2o_1_1SparseOptimizer_a7dad5beea6a44d92b1cc47c0e526a676}{algorithm};
+566     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm})
+567       \hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm}->\hyperlink{classg2o_1_1OptimizationAlgorithm_aff88a3dc8357c98712ff0047e601bd5e}{setOptimizer}(\textcolor{keyword}{this});
+568   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!set\+Compute\+Batch\+Statistics@{set\+Compute\+Batch\+Statistics}}
+\index{set\+Compute\+Batch\+Statistics@{set\+Compute\+Batch\+Statistics}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{set\+Compute\+Batch\+Statistics(bool compute\+Batch\+Statistics)}{setComputeBatchStatistics(bool computeBatchStatistics)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::set\+Compute\+Batch\+Statistics (
+\begin{DoxyParamCaption}
+\item[{bool}]{compute\+Batch\+Statistics}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseOptimizer_a775fe12d7df941acbbd86bcf838f0f3c}{}\label{classg2o_1_1SparseOptimizer_a775fe12d7df941acbbd86bcf838f0f3c}
+
+
+Definition at line 437 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+batch\+Statistics, \+\_\+compute\+Batch\+Statistics, compute\+Batch\+Statistics(), and g2o\+::\+G2\+O\+Batch\+Statistics\+::set\+Global\+Stats().
+
+
+
+Referenced by batch\+Statistics().
+
+
+\begin{DoxyCode}
+438   \{
+439     \textcolor{keywordflow}{if} ((\hyperlink{classg2o_1_1SparseOptimizer_a3bd44c498c4d983c092f23673de14d5d}{\_computeBatchStatistics} == \textcolor{keyword}{true}) && (
+      \hyperlink{classg2o_1_1SparseOptimizer_a4a4261f1008f1b0f660381b9c46b78f7}{computeBatchStatistics} == \textcolor{keyword}{false})) \{
+440       \hyperlink{structg2o_1_1G2OBatchStatistics_a8c56e85d25e346ba87718621407247fc}{G2OBatchStatistics::setGlobalStats}(0);
+441       \hyperlink{classg2o_1_1SparseOptimizer_a21215378d9e8de28aee8d55b4d25ff89}{\_batchStatistics}.clear();
+442     \}
+443     \hyperlink{classg2o_1_1SparseOptimizer_a3bd44c498c4d983c092f23673de14d5d}{\_computeBatchStatistics} = \hyperlink{classg2o_1_1SparseOptimizer_a4a4261f1008f1b0f660381b9c46b78f7}{computeBatchStatistics};
+444   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!set\+Force\+Stop\+Flag@{set\+Force\+Stop\+Flag}}
+\index{set\+Force\+Stop\+Flag@{set\+Force\+Stop\+Flag}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{set\+Force\+Stop\+Flag(bool $\ast$flag)}{setForceStopFlag(bool *flag)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::set\+Force\+Stop\+Flag (
+\begin{DoxyParamCaption}
+\item[{bool $\ast$}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseOptimizer_a32afd0ab949f170297b4a59f0d9eab81}{}\label{classg2o_1_1SparseOptimizer_a32afd0ab949f170297b4a59f0d9eab81}
+sets a variable checked at every iteration to force a user stop. The iteration exits when the variable is true; 
+
+Definition at line 574 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+force\+Stop\+Flag.
+
+
+
+Referenced by verbose().
+
+
+\begin{DoxyCode}
+575   \{
+576     \hyperlink{classg2o_1_1SparseOptimizer_aac4a9f9b7d875ee40cae55f98d3437ab}{\_forceStopFlag}=flag;
+577   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!set\+To\+Origin@{set\+To\+Origin}}
+\index{set\+To\+Origin@{set\+To\+Origin}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{set\+To\+Origin()}{setToOrigin()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::set\+To\+Origin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_ab8af902464774ec3d3910a3674791714}{}\label{classg2o_1_1SparseOptimizer_ab8af902464774ec3d3910a3674791714}
+sets all vertices to their origin. 
+
+Definition at line 293 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+To\+Origin(), and g2o\+::\+Hyper\+Graph\+::vertices().
+
+
+\begin{DoxyCode}
+293                                    \{
+294     \textcolor{keywordflow}{for} (VertexIDMap::iterator it=\hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().begin(); it!=\hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().end(); ++it) \{
+295       OptimizableGraph::Vertex* v = \textcolor{keyword}{static\_cast<}OptimizableGraph::Vertex*\textcolor{keyword}{>}(it->second);
+296       v->setToOrigin();
+297     \}
+298   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!set\+Verbose@{set\+Verbose}}
+\index{set\+Verbose@{set\+Verbose}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{set\+Verbose(bool verbose)}{setVerbose(bool verbose)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::set\+Verbose (
+\begin{DoxyParamCaption}
+\item[{bool}]{verbose}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1SparseOptimizer_a422f4c5c78a0c475f4998e24ee173cc7}{}\label{classg2o_1_1SparseOptimizer_a422f4c5c78a0c475f4998e24ee173cc7}
+
+
+Definition at line 556 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+verbose, and verbose().
+
+
+
+Referenced by verbose().
+
+
+\begin{DoxyCode}
+557   \{
+558     \hyperlink{classg2o_1_1SparseOptimizer_a41b3803182a4db6c0ff8c8d4352dd149}{\_verbose} = \hyperlink{classg2o_1_1SparseOptimizer_a99851ba4f2a507e724de43d7fe92f903}{verbose};
+559   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!solver@{solver}}
+\index{solver@{solver}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{solver()}{solver()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Optimization\+Algorithm}$\ast$ g2o\+::\+Sparse\+Optimizer\+::solver (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseOptimizer_aaa505e19f70caa4f0a8fe8eccdbcd768}{}\label{classg2o_1_1SparseOptimizer_aaa505e19f70caa4f0a8fe8eccdbcd768}
+
+
+Definition at line 218 of file sparse\+\_\+optimizer.\+h.
+
+
+
+References \+\_\+algorithm, algorithm(), clear(), compute\+Active\+Errors(), discard\+Top(), g2o\+::\+Optimizable\+Graph\+::discard\+Top(), G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED, pop(), push(), and set\+Algorithm().
+
+
+\begin{DoxyCode}
+218 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!sort\+Vector\+Containers@{sort\+Vector\+Containers}}
+\index{sort\+Vector\+Containers@{sort\+Vector\+Containers}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{sort\+Vector\+Containers()}{sortVectorContainers()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Sparse\+Optimizer\+::sort\+Vector\+Containers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseOptimizer_a8a8c6f08bc9b8a4e520aa73198268991}{}\label{classg2o_1_1SparseOptimizer_a8a8c6f08bc9b8a4e520aa73198268991}
+
+
+Definition at line 482 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+active\+Edges, and \+\_\+active\+Vertices.
+
+
+
+Referenced by initialize\+Optimization().
+
+
+\begin{DoxyCode}
+483   \{
+484     \textcolor{comment}{// sort vector structures to get deterministic ordering based on IDs}
+485     sort(\hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.begin(), \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.end(), VertexIDCompare());
+486     sort(\hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.begin(), \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.end(), EdgeIDCompare());
+487   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!terminate@{terminate}}
+\index{terminate@{terminate}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{terminate()}{terminate()}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::terminate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseOptimizer_ae592f525151d0cfb5bde3e7213f7ab11}{}\label{classg2o_1_1SparseOptimizer_ae592f525151d0cfb5bde3e7213f7ab11}
+
+
+if external stop flag is given, return its state. False otherwise 
+
+
+
+Definition at line 188 of file sparse\+\_\+optimizer.\+h.
+
+
+
+References \+\_\+force\+Stop\+Flag.
+
+
+
+Referenced by optimize(), and g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve().
+
+
+\begin{DoxyCode}
+188 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_aac4a9f9b7d875ee40cae55f98d3437ab}{\_forceStopFlag} ? (*\_forceStopFlag) : \textcolor{keyword}{false}; \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!update\+Initialization@{update\+Initialization}}
+\index{update\+Initialization@{update\+Initialization}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{update\+Initialization(\+Hyper\+Graph\+::\+Vertex\+Set \&vset, Hyper\+Graph\+::\+Edge\+Set \&eset)}{updateInitialization(HyperGraph::VertexSet &vset, HyperGraph::EdgeSet &eset)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::update\+Initialization (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+::\+Vertex\+Set} \&}]{vset, }
+\item[{{\bf Hyper\+Graph\+::\+Edge\+Set} \&}]{eset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1SparseOptimizer_ae971d068585055973798f93ac2363d94}{}\label{classg2o_1_1SparseOptimizer_ae971d068585055973798f93ac2363d94}
+H\+A\+CK updating the internal structures for online processing 
+
+Definition at line 446 of file sparse\+\_\+optimizer.\+cpp.
+
+
+
+References \+\_\+active\+Edges, \+\_\+active\+Vertices, \+\_\+algorithm, \+\_\+iv\+Map, g2o\+::\+Optimizable\+Graph\+::\+Edge\+::all\+Vertices\+Fixed(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::fixed(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::marginalized(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Hessian\+Index(), and g2o\+::\+Optimization\+Algorithm\+::update\+Structure().
+
+
+\begin{DoxyCode}
+447   \{
+448     std::vector<HyperGraph::Vertex*> newVertices;
+449     newVertices.reserve(vset.size());
+450     \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.reserve(\hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.size() + vset.size());
+451     \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.reserve(\hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.size() + eset.size());
+452     \textcolor{keywordflow}{for} (HyperGraph::EdgeSet::iterator it = eset.begin(); it != eset.end(); ++it) \{
+453       OptimizableGraph::Edge* e = \textcolor{keyword}{static\_cast<}OptimizableGraph::Edge*\textcolor{keyword}{>}(*it);
+454       \textcolor{keywordflow}{if} (!e->allVerticesFixed()) \hyperlink{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{\_activeEdges}.push\_back(e);
+455     \}
+456     
+457     \textcolor{comment}{// update the index mapping}
+458     \textcolor{keywordtype}{size\_t} next = \hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\_ivMap}.size();
+459     \textcolor{keywordflow}{for} (HyperGraph::VertexSet::iterator it = vset.begin(); it != vset.end(); ++it) \{
+460       OptimizableGraph::Vertex* v=\textcolor{keyword}{static\_cast<}OptimizableGraph::Vertex*\textcolor{keyword}{>}(*it);
+461       \textcolor{keywordflow}{if} (! v->fixed())\{
+462         \textcolor{keywordflow}{if} (! v->marginalized())\{
+463           v->setHessianIndex(next);
+464           \hyperlink{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{\_ivMap}.push\_back(v);
+465           newVertices.push\_back(v);
+466           \hyperlink{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{\_activeVertices}.push\_back(v);
+467           next++;
+468         \} 
+469         \textcolor{keywordflow}{else} \textcolor{comment}{// not supported right now}
+470           abort();
+471       \}
+472       \textcolor{keywordflow}{else} \{
+473         v->setHessianIndex(-1);
+474       \}
+475     \}
+476 
+477     \textcolor{comment}{//if (newVertices.size() != vset.size())}
+478     \textcolor{comment}{//cerr << \_\_PRETTY\_FUNCTION\_\_ << ": something went wrong " << PVAR(vset.size()) << " " <<
+       PVAR(newVertices.size()) << endl;}
+479     \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{\_algorithm}->\hyperlink{classg2o_1_1OptimizationAlgorithm_a6b86c5d3c56a41c18f2aee611b62d71b}{updateStructure}(newVertices, eset);
+480   \}
+\end{DoxyCode}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!verbose@{verbose}}
+\index{verbose@{verbose}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{verbose() const }{verbose() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::verbose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SparseOptimizer_a99851ba4f2a507e724de43d7fe92f903}{}\label{classg2o_1_1SparseOptimizer_a99851ba4f2a507e724de43d7fe92f903}
+
+
+verbose information during optimization 
+
+
+
+Definition at line 178 of file sparse\+\_\+optimizer.\+h.
+
+
+
+References \+\_\+verbose, set\+Force\+Stop\+Flag(), and set\+Verbose().
+
+
+
+Referenced by compute\+Initial\+Guess(), optimize(), and set\+Verbose().
+
+
+\begin{DoxyCode}
+178 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SparseOptimizer_a41b3803182a4db6c0ff8c8d4352dd149}{\_verbose};\}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!Active\+Path\+Cost\+Function@{Active\+Path\+Cost\+Function}}
+\index{Active\+Path\+Cost\+Function@{Active\+Path\+Cost\+Function}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{Active\+Path\+Cost\+Function}{ActivePathCostFunction}}]{\setlength{\rightskip}{0pt plus 5cm}friend class Active\+Path\+Cost\+Function\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classg2o_1_1SparseOptimizer_af974cb94744550cc732d61f7fd7d63ed}{}\label{classg2o_1_1SparseOptimizer_af974cb94744550cc732d61f7fd7d63ed}
+
+
+Definition at line 53 of file sparse\+\_\+optimizer.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!\+\_\+active\+Edges@{\+\_\+active\+Edges}}
+\index{\+\_\+active\+Edges@{\+\_\+active\+Edges}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{\+\_\+active\+Edges}{_activeEdges}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Edge\+Container} g2o\+::\+Sparse\+Optimizer\+::\+\_\+active\+Edges\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}{}\label{classg2o_1_1SparseOptimizer_a3207df163943bc1672fc7872964a6d6c}
+
+
+sorted according to Edge\+I\+D\+Compare 
+
+
+
+Definition at line 295 of file sparse\+\_\+optimizer.\+h.
+
+
+
+Referenced by active\+Chi2(), active\+Edges(), active\+Robust\+Chi2(), clear(), compute\+Active\+Errors(), compute\+Initial\+Guess(), find\+Active\+Edge(), initialize\+Optimization(), optimize(), sort\+Vector\+Containers(), and update\+Initialization().
+
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!\+\_\+active\+Vertices@{\+\_\+active\+Vertices}}
+\index{\+\_\+active\+Vertices@{\+\_\+active\+Vertices}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{\+\_\+active\+Vertices}{_activeVertices}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertex\+Container} g2o\+::\+Sparse\+Optimizer\+::\+\_\+active\+Vertices\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}{}\label{classg2o_1_1SparseOptimizer_a805e1db97802980fa4dfef95cfa5e63e}
+
+
+sorted according to Vertex\+I\+D\+Compare 
+
+
+
+Definition at line 294 of file sparse\+\_\+optimizer.\+h.
+
+
+
+Referenced by active\+Vertices(), clear(), discard\+Top(), find\+Active\+Vertex(), initialize\+Optimization(), optimize(), pop(), push(), sort\+Vector\+Containers(), and update\+Initialization().
+
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!\+\_\+algorithm@{\+\_\+algorithm}}
+\index{\+\_\+algorithm@{\+\_\+algorithm}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{\+\_\+algorithm}{_algorithm}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Optimization\+Algorithm}$\ast$ g2o\+::\+Sparse\+Optimizer\+::\+\_\+algorithm\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}{}\label{classg2o_1_1SparseOptimizer_a665d4ba54db76a1174bfc85a6dbc5127}
+
+
+Definition at line 299 of file sparse\+\_\+optimizer.\+h.
+
+
+
+Referenced by algorithm(), compute\+Marginals(), optimize(), set\+Algorithm(), solver(), update\+Initialization(), and $\sim$\+Sparse\+Optimizer().
+
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!\+\_\+batch\+Statistics@{\+\_\+batch\+Statistics}}
+\index{\+\_\+batch\+Statistics@{\+\_\+batch\+Statistics}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{\+\_\+batch\+Statistics}{_batchStatistics}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Batch\+Statistics\+Container} g2o\+::\+Sparse\+Optimizer\+::\+\_\+batch\+Statistics\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseOptimizer_a21215378d9e8de28aee8d55b4d25ff89}{}\label{classg2o_1_1SparseOptimizer_a21215378d9e8de28aee8d55b4d25ff89}
+
+
+global statistics of the optimizer, e.\+g., timing, num-\/non-\/zeros 
+
+
+
+Definition at line 307 of file sparse\+\_\+optimizer.\+h.
+
+
+
+Referenced by batch\+Statistics(), optimize(), and set\+Compute\+Batch\+Statistics().
+
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!\+\_\+compute\+Batch\+Statistics@{\+\_\+compute\+Batch\+Statistics}}
+\index{\+\_\+compute\+Batch\+Statistics@{\+\_\+compute\+Batch\+Statistics}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{\+\_\+compute\+Batch\+Statistics}{_computeBatchStatistics}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::\+\_\+compute\+Batch\+Statistics\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseOptimizer_a3bd44c498c4d983c092f23673de14d5d}{}\label{classg2o_1_1SparseOptimizer_a3bd44c498c4d983c092f23673de14d5d}
+
+
+Definition at line 308 of file sparse\+\_\+optimizer.\+h.
+
+
+
+Referenced by compute\+Batch\+Statistics(), optimize(), and set\+Compute\+Batch\+Statistics().
+
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!\+\_\+force\+Stop\+Flag@{\+\_\+force\+Stop\+Flag}}
+\index{\+\_\+force\+Stop\+Flag@{\+\_\+force\+Stop\+Flag}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{\+\_\+force\+Stop\+Flag}{_forceStopFlag}}]{\setlength{\rightskip}{0pt plus 5cm}bool$\ast$ g2o\+::\+Sparse\+Optimizer\+::\+\_\+force\+Stop\+Flag\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseOptimizer_aac4a9f9b7d875ee40cae55f98d3437ab}{}\label{classg2o_1_1SparseOptimizer_aac4a9f9b7d875ee40cae55f98d3437ab}
+
+
+Definition at line 290 of file sparse\+\_\+optimizer.\+h.
+
+
+
+Referenced by force\+Stop\+Flag(), set\+Force\+Stop\+Flag(), and terminate().
+
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!\+\_\+iv\+Map@{\+\_\+iv\+Map}}
+\index{\+\_\+iv\+Map@{\+\_\+iv\+Map}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{\+\_\+iv\+Map}{_ivMap}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertex\+Container} g2o\+::\+Sparse\+Optimizer\+::\+\_\+iv\+Map\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}{}\label{classg2o_1_1SparseOptimizer_a488b95a90a61454c787e9c13458e510b}
+
+
+Definition at line 293 of file sparse\+\_\+optimizer.\+h.
+
+
+
+Referenced by build\+Index\+Mapping(), clear(), clear\+Index\+Mapping(), index\+Mapping(), optimize(), remove\+Vertex(), and update\+Initialization().
+
+\index{g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}!\+\_\+verbose@{\+\_\+verbose}}
+\index{\+\_\+verbose@{\+\_\+verbose}!g2o\+::\+Sparse\+Optimizer@{g2o\+::\+Sparse\+Optimizer}}
+\subsubsection[{\texorpdfstring{\+\_\+verbose}{_verbose}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Sparse\+Optimizer\+::\+\_\+verbose\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SparseOptimizer_a41b3803182a4db6c0ff8c8d4352dd149}{}\label{classg2o_1_1SparseOptimizer_a41b3803182a4db6c0ff8c8d4352dd149}
+
+
+Definition at line 291 of file sparse\+\_\+optimizer.\+h.
+
+
+
+Referenced by set\+Verbose(), and verbose().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{sparse__optimizer_8h}{sparse\+\_\+optimizer.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{sparse__optimizer_8cpp}{sparse\+\_\+optimizer.\+cpp}\end{DoxyCompactItemize}

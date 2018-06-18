@@ -1,0 +1,122 @@
+\hypertarget{structg2o_1_1CholmodExt}{}\section{g2o\+:\+:Cholmod\+Ext Struct Reference}
+\label{structg2o_1_1CholmodExt}\index{g2o\+::\+Cholmod\+Ext@{g2o\+::\+Cholmod\+Ext}}
+
+
+Our extension of the C\+H\+O\+L\+M\+OD matrix struct.  
+
+
+
+
+{\ttfamily \#include $<$linear\+\_\+solver\+\_\+cholmod.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Cholmod\+Ext\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Cholmod\+Ext\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structg2o_1_1CholmodExt_a1766740b74df990243cc540eacd8f4fc}{Cholmod\+Ext} ()
+\item 
+\hyperlink{structg2o_1_1CholmodExt_a6f851b01b5f54da6d1a03e624ed97e50}{$\sim$\+Cholmod\+Ext} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{structg2o_1_1CholmodExt_a17fb33389283164f05225ed9670cb8c1}{columns\+Allocated}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Our extension of the C\+H\+O\+L\+M\+OD matrix struct. 
+
+Definition at line 43 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Cholmod\+Ext@{g2o\+::\+Cholmod\+Ext}!Cholmod\+Ext@{Cholmod\+Ext}}
+\index{Cholmod\+Ext@{Cholmod\+Ext}!g2o\+::\+Cholmod\+Ext@{g2o\+::\+Cholmod\+Ext}}
+\subsubsection[{\texorpdfstring{Cholmod\+Ext()}{CholmodExt()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Cholmod\+Ext\+::\+Cholmod\+Ext (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1CholmodExt_a1766740b74df990243cc540eacd8f4fc}{}\label{structg2o_1_1CholmodExt_a1766740b74df990243cc540eacd8f4fc}
+
+
+Definition at line 45 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+
+References columns\+Allocated, and x.
+
+
+
+Referenced by g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+::\+Linear\+Solver\+Cholmod().
+
+
+\begin{DoxyCode}
+46   \{
+47     nzmax = 0;
+48     nrow  = 0;
+49     ncol  = 0;
+50     p     = 0;
+51     i     = 0;
+52     nz    = 0;
+53     \hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x}     = 0;
+54     z     = 0;
+55     stype = 1; \textcolor{comment}{// upper triangular block only}
+56     itype = CHOLMOD\_INT;
+57     xtype = CHOLMOD\_REAL;
+58     dtype = CHOLMOD\_DOUBLE;
+59     sorted = 1;
+60     packed = 1;
+61     \hyperlink{structg2o_1_1CholmodExt_a17fb33389283164f05225ed9670cb8c1}{columnsAllocated} = 0;
+62   \}
+\end{DoxyCode}
+\index{g2o\+::\+Cholmod\+Ext@{g2o\+::\+Cholmod\+Ext}!````~Cholmod\+Ext@{$\sim$\+Cholmod\+Ext}}
+\index{````~Cholmod\+Ext@{$\sim$\+Cholmod\+Ext}!g2o\+::\+Cholmod\+Ext@{g2o\+::\+Cholmod\+Ext}}
+\subsubsection[{\texorpdfstring{$\sim$\+Cholmod\+Ext()}{~CholmodExt()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Cholmod\+Ext\+::$\sim$\+Cholmod\+Ext (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1CholmodExt_a6f851b01b5f54da6d1a03e624ed97e50}{}\label{structg2o_1_1CholmodExt_a6f851b01b5f54da6d1a03e624ed97e50}
+
+
+Definition at line 63 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+
+References x.
+
+
+\begin{DoxyCode}
+64   \{
+65     \textcolor{keyword}{delete}[] (\textcolor{keywordtype}{int}*)p; p = 0;
+66     \textcolor{keyword}{delete}[] (\textcolor{keywordtype}{double}*)\hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x}; \hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x} = 0;
+67     \textcolor{keyword}{delete}[] (\textcolor{keywordtype}{int}*)i; i = 0;
+68   \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Cholmod\+Ext@{g2o\+::\+Cholmod\+Ext}!columns\+Allocated@{columns\+Allocated}}
+\index{columns\+Allocated@{columns\+Allocated}!g2o\+::\+Cholmod\+Ext@{g2o\+::\+Cholmod\+Ext}}
+\subsubsection[{\texorpdfstring{columns\+Allocated}{columnsAllocated}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t g2o\+::\+Cholmod\+Ext\+::columns\+Allocated}\hypertarget{structg2o_1_1CholmodExt_a17fb33389283164f05225ed9670cb8c1}{}\label{structg2o_1_1CholmodExt_a17fb33389283164f05225ed9670cb8c1}
+
+
+Definition at line 69 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+
+Referenced by Cholmod\+Ext(), and g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+::fill\+Cholmod\+Ext().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/solvers/\hyperlink{linear__solver__cholmod_8h}{linear\+\_\+solver\+\_\+cholmod.\+h}\end{DoxyCompactItemize}

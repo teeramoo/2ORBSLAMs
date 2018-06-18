@@ -1,0 +1,38 @@
+digraph "g2o::VertexSim3Expmap"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="g2o::VertexSim3Expmap",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="g2o::BaseVertex\< 7,\l Sim3 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1BaseVertex.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="g2o::OptimizableGraph\l::Vertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1OptimizableGraph_1_1Vertex.html",tooltip="A general case Vertex for optimization. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="g2o::HyperGraph::Vertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1HyperGraph_1_1Vertex.html",tooltip="abstract Vertex, your types must derive from that one "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="g2o::HyperGraph::HyperGraph\lElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structg2o_1_1HyperGraph_1_1HyperGraphElement.html"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _cacheContainer" ];
+  Node6 [label="g2o::CacheContainer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1CacheContainer.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="std::map\< Cache::CacheKey,\l Cache * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _vertex" ];
+  Node8 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _graph" ];
+  Node8 [label="g2o::OptimizableGraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structg2o_1_1OptimizableGraph.html"];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="g2o::HyperGraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1HyperGraph.html"];
+  Node10 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _jacobianWorkspace" ];
+  Node10 [label="g2o::JacobianWorkspace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1JacobianWorkspace.html",tooltip="provide memory workspace for computing the Jacobians "];
+  Node11 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _parameters" ];
+  Node11 [label="g2o::ParameterContainer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1ParameterContainer.html",tooltip="map id to parameters "];
+  Node12 -> Node11 [dir="back",color="darkgreen",fontsize="10",style="solid"];
+  Node12 [label="std::map\< int, Parameter * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node13 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _quadraticFormMutex" ];
+  Node13 [label="g2o::OpenMPMutex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1OpenMPMutex.html"];
+  Node14 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _userData" ];
+  Node14 [label="g2o::OptimizableGraph\l::Data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1OptimizableGraph_1_1Data.html",tooltip="data packet for a vertex. Extend this class to store in the vertices the potential additional informa..."];
+  Node5 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _next" ];
+  Node15 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _estimate" ];
+  Node15 [label="g2o::Sim3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structg2o_1_1Sim3.html"];
+}

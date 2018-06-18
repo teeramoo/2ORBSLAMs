@@ -1,0 +1,123 @@
+\hypertarget{classg2o_1_1LinearSolverCCS}{}\section{g2o\+:\+:Linear\+Solver\+C\+CS$<$ Matrix\+Type $>$ Class Template Reference}
+\label{classg2o_1_1LinearSolverCCS}\index{g2o\+::\+Linear\+Solver\+C\+C\+S$<$ Matrix\+Type $>$@{g2o\+::\+Linear\+Solver\+C\+C\+S$<$ Matrix\+Type $>$}}
+
+
+\hyperlink{classg2o_1_1Solver}{Solver} with faster iterating structure for the linear matrix.  
+
+
+
+
+{\ttfamily \#include $<$linear\+\_\+solver.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Linear\+Solver\+C\+CS$<$ Matrix\+Type $>$\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Linear\+Solver\+C\+CS$<$ Matrix\+Type $>$\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1LinearSolverCCS_aa4a8b0612a60769481c40d2d1a6b03ce}{Linear\+Solver\+C\+CS} ()
+\item 
+\hyperlink{classg2o_1_1LinearSolverCCS_aa131fa8ea836eafdc1313fdf3a4217f9}{$\sim$\+Linear\+Solver\+C\+CS} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classg2o_1_1LinearSolverCCS_a070138d7e2a68a576e015f5073a4a464}{init\+Matrix\+Structure} (const \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&A)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1SparseBlockMatrixCCS}{Sparse\+Block\+Matrix\+C\+CS}$<$ Matrix\+Type $>$ $\ast$ \hyperlink{classg2o_1_1LinearSolverCCS_a07f0df9a6012d567e26a89063c53aa12}{\+\_\+ccs\+Matrix}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Matrix\+Type$>$\\*
+class g2o\+::\+Linear\+Solver\+C\+C\+S$<$ Matrix\+Type $>$}
+
+\hyperlink{classg2o_1_1Solver}{Solver} with faster iterating structure for the linear matrix. 
+
+Definition at line 87 of file linear\+\_\+solver.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Linear\+Solver\+C\+CS@{g2o\+::\+Linear\+Solver\+C\+CS}!Linear\+Solver\+C\+CS@{Linear\+Solver\+C\+CS}}
+\index{Linear\+Solver\+C\+CS@{Linear\+Solver\+C\+CS}!g2o\+::\+Linear\+Solver\+C\+CS@{g2o\+::\+Linear\+Solver\+C\+CS}}
+\subsubsection[{\texorpdfstring{Linear\+Solver\+C\+C\+S()}{LinearSolverCCS()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ {\bf g2o\+::\+Linear\+Solver\+C\+CS}$<$ Matrix\+Type $>$\+::{\bf Linear\+Solver\+C\+CS} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1LinearSolverCCS_aa4a8b0612a60769481c40d2d1a6b03ce}{}\label{classg2o_1_1LinearSolverCCS_aa4a8b0612a60769481c40d2d1a6b03ce}
+
+
+Definition at line 90 of file linear\+\_\+solver.\+h.
+
+
+\begin{DoxyCode}
+90 : LinearSolver<MatrixType>(), \hyperlink{classg2o_1_1LinearSolverCCS_a07f0df9a6012d567e26a89063c53aa12}{\_ccsMatrix}(0) \{\}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+C\+CS@{g2o\+::\+Linear\+Solver\+C\+CS}!````~Linear\+Solver\+C\+CS@{$\sim$\+Linear\+Solver\+C\+CS}}
+\index{````~Linear\+Solver\+C\+CS@{$\sim$\+Linear\+Solver\+C\+CS}!g2o\+::\+Linear\+Solver\+C\+CS@{g2o\+::\+Linear\+Solver\+C\+CS}}
+\subsubsection[{\texorpdfstring{$\sim$\+Linear\+Solver\+C\+C\+S()}{~LinearSolverCCS()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ {\bf g2o\+::\+Linear\+Solver\+C\+CS}$<$ Matrix\+Type $>$\+::$\sim${\bf Linear\+Solver\+C\+CS} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1LinearSolverCCS_aa131fa8ea836eafdc1313fdf3a4217f9}{}\label{classg2o_1_1LinearSolverCCS_aa131fa8ea836eafdc1313fdf3a4217f9}
+
+
+Definition at line 91 of file linear\+\_\+solver.\+h.
+
+
+\begin{DoxyCode}
+92     \{
+93       \textcolor{keyword}{delete} \hyperlink{classg2o_1_1LinearSolverCCS_a07f0df9a6012d567e26a89063c53aa12}{\_ccsMatrix};
+94     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Linear\+Solver\+C\+CS@{g2o\+::\+Linear\+Solver\+C\+CS}!init\+Matrix\+Structure@{init\+Matrix\+Structure}}
+\index{init\+Matrix\+Structure@{init\+Matrix\+Structure}!g2o\+::\+Linear\+Solver\+C\+CS@{g2o\+::\+Linear\+Solver\+C\+CS}}
+\subsubsection[{\texorpdfstring{init\+Matrix\+Structure(const Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ \&\+A)}{initMatrixStructure(const SparseBlockMatrix< MatrixType > &A)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ void {\bf g2o\+::\+Linear\+Solver\+C\+CS}$<$ Matrix\+Type $>$\+::init\+Matrix\+Structure (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&}]{A}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverCCS_a070138d7e2a68a576e015f5073a4a464}{}\label{classg2o_1_1LinearSolverCCS_a070138d7e2a68a576e015f5073a4a464}
+
+
+Definition at line 99 of file linear\+\_\+solver.\+h.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::col\+Block\+Indices(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+Sparse\+Block\+Matrix\+C\+C\+S(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::row\+Block\+Indices().
+
+
+\begin{DoxyCode}
+100     \{
+101       \textcolor{keyword}{delete} \hyperlink{classg2o_1_1LinearSolverCCS_a07f0df9a6012d567e26a89063c53aa12}{\_ccsMatrix};
+102       \hyperlink{classg2o_1_1LinearSolverCCS_a07f0df9a6012d567e26a89063c53aa12}{\_ccsMatrix} = \textcolor{keyword}{new} SparseBlockMatrixCCS<MatrixType>(A.rowBlockIndices(), A.colBlockIndices())
+      ;
+103       A.fillSparseBlockMatrixCCS(*\hyperlink{classg2o_1_1LinearSolverCCS_a07f0df9a6012d567e26a89063c53aa12}{\_ccsMatrix});
+104     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Linear\+Solver\+C\+CS@{g2o\+::\+Linear\+Solver\+C\+CS}!\+\_\+ccs\+Matrix@{\+\_\+ccs\+Matrix}}
+\index{\+\_\+ccs\+Matrix@{\+\_\+ccs\+Matrix}!g2o\+::\+Linear\+Solver\+C\+CS@{g2o\+::\+Linear\+Solver\+C\+CS}}
+\subsubsection[{\texorpdfstring{\+\_\+ccs\+Matrix}{_ccsMatrix}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ {\bf Sparse\+Block\+Matrix\+C\+CS}$<$Matrix\+Type$>$$\ast$ {\bf g2o\+::\+Linear\+Solver\+C\+CS}$<$ Matrix\+Type $>$\+::\+\_\+ccs\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverCCS_a07f0df9a6012d567e26a89063c53aa12}{}\label{classg2o_1_1LinearSolverCCS_a07f0df9a6012d567e26a89063c53aa12}
+
+
+Definition at line 97 of file linear\+\_\+solver.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{linear__solver_8h}{linear\+\_\+solver.\+h}\end{DoxyCompactItemize}

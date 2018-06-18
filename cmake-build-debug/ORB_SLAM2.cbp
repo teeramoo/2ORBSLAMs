@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ORB_SLAM2"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\usr\local\share\OpenCV\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\Pangolin\;CMake Files\cmake_modules\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="eutech_no_imu">
+				<Option output="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/eutech_no_imu" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 eutech_no_imu"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="eutech_no_imu/fast">
+				<Option output="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/eutech_no_imu" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 eutech_no_imu/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="eutech_vertical">
+				<Option output="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/eutech_vertical" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 eutech_vertical"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="eutech_vertical/fast">
+				<Option output="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/eutech_vertical" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 eutech_vertical/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ORB_SLAM2">
+				<Option output="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/lib/libORB_SLAM2.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 ORB_SLAM2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ORB_SLAM2/fast">
+				<Option output="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/lib/libORB_SLAM2.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 ORB_SLAM2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="euro_imu">
+				<Option output="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/euro_imu" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 euro_imu"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="euro_imu/fast">
+				<Option output="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/euro_imu" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 euro_imu/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="eutech_imu">
+				<Option output="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/eutech_imu" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 eutech_imu"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="eutech_imu/fast">
+				<Option output="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/eutech_imu" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 eutech_imu/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="eutech_imu_2">
+				<Option output="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/eutech_imu_2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 eutech_imu_2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="eutech_imu_2/fast">
+				<Option output="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/eutech_imu_2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCOMPILEDWITHC11"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include"/>
+					<Add directory="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/lib/cmake/Pangolin/../../../include"/>
+					<Add directory="/usr/include/suitesparse"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 eutech_imu_2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/euro_imu.cc">
+			<Option target="euro_imu"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/eutech_imu.cc">
+			<Option target="eutech_imu"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/eutech_imu_2.cc">
+			<Option target="eutech_imu_2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/eutech_no_imu.cc">
+			<Option target="eutech_no_imu"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/Examples/Monocular/eutech_vertical.cc">
+			<Option target="eutech_vertical"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include/Frame.h">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include/KeyFrame.h">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include/LocalMapping.h">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/include/Tracking.h">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/Converter.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/Frame.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/FrameDrawer.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/IMU/IMUPreintegrator.cpp">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/IMU/IMUPreintegrator.h">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/IMU/NavState.cpp">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/IMU/NavState.h">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/IMU/configparam.cpp">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/IMU/configparam.h">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/IMU/g2otypes.cpp">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/IMU/g2otypes.h">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/IMU/imudata.cpp">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/IMU/imudata.h">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/IMU/so3.cpp">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/IMU/so3.h">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/Initializer.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/KeyFrame.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/KeyFrameDatabase.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/LocalMapping.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/LoopClosing.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/Map.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/MapDrawer.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/MapPoint.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/ORBextractor.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/ORBmatcher.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/Optimizer.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/PnPsolver.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/Sim3Solver.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/System.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/Tracking.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/src/Viewer.cc">
+			<Option target="ORB_SLAM2"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/../../../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/../../../../../usr/local/share/OpenCV/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/../../../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/../../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/../../../../../usr/local/lib/cmake/Pangolin/PangolinConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\Pangolin\"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/../../../../../usr/local/lib/cmake/Pangolin/PangolinConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\Pangolin\"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/../../../../../usr/local/lib/cmake/Pangolin/PangolinTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\Pangolin\"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/../../../../../usr/local/lib/cmake/Pangolin/PangolinTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\Pangolin\"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake_modules/FindCholmod.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+		<Unit filename="/home/teeramoo/Desktop/Thesis_work/LearnVIORB-master/cmake_modules/FindEigen3.cmake">
+			<Option virtualFolder="CMake Files\cmake_modules\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,181 @@
+\hypertarget{structg2o_1_1OptimizationAlgorithmProperty}{}\section{g2o\+:\+:Optimization\+Algorithm\+Property Struct Reference}
+\label{structg2o_1_1OptimizationAlgorithmProperty}\index{g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}}
+
+
+describe the properties of a solver  
+
+
+
+
+{\ttfamily \#include $<$optimization\+\_\+algorithm\+\_\+property.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a2d83548ee175988e11738ae43c7a9803}{Optimization\+Algorithm\+Property} ()
+\item 
+\hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a5633cbd029eda42670f801de508f945b}{Optimization\+Algorithm\+Property} (const std\+::string \&name\+\_\+, const std\+::string \&desc\+\_\+, const std\+::string \&type\+\_\+, bool requires\+Marginalize\+\_\+, int pose\+Dim\+\_\+, int landmark\+Dim\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_aedb3c54122d6a75d49e1677e836bac22}{name}
+\begin{DoxyCompactList}\small\item\em name of the solver, e.\+g., var \end{DoxyCompactList}\item 
+std\+::string \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a9390204f7ff2f092241f55656d8458b1}{desc}
+\begin{DoxyCompactList}\small\item\em short description of the solver \end{DoxyCompactList}\item 
+std\+::string \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a199f33f536f48f6ceda037f6a2ff206d}{type}
+\begin{DoxyCompactList}\small\item\em type of solver, e.\+g., \char`\"{}\+C\+Sparse Cholesky\char`\"{}, \char`\"{}\+P\+C\+G\char`\"{} \end{DoxyCompactList}\item 
+bool \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a179837f3866e8786ce3a7f7a34bdda44}{requires\+Marginalize}
+\begin{DoxyCompactList}\small\item\em whether the solver requires marginalization of landmarks \end{DoxyCompactList}\item 
+int \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a2c0c87eeaa423e8c944cfa846eb6a553}{pose\+Dim}
+\begin{DoxyCompactList}\small\item\em dimension of the pose vertices (-\/1 if variable) \end{DoxyCompactList}\item 
+int \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_ad946dec26df70a6fb6d99f2ab76db269}{landmark\+Dim}
+\begin{DoxyCompactList}\small\item\em dimension of the landmar vertices (-\/1 if variable) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+describe the properties of a solver 
+
+Definition at line 37 of file optimization\+\_\+algorithm\+\_\+property.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}!Optimization\+Algorithm\+Property@{Optimization\+Algorithm\+Property}}
+\index{Optimization\+Algorithm\+Property@{Optimization\+Algorithm\+Property}!g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}}
+\subsubsection[{\texorpdfstring{Optimization\+Algorithm\+Property()}{OptimizationAlgorithmProperty()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Optimization\+Algorithm\+Property\+::\+Optimization\+Algorithm\+Property (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1OptimizationAlgorithmProperty_a2d83548ee175988e11738ae43c7a9803}{}\label{structg2o_1_1OptimizationAlgorithmProperty_a2d83548ee175988e11738ae43c7a9803}
+
+
+Definition at line 45 of file optimization\+\_\+algorithm\+\_\+property.\+h.
+
+
+\begin{DoxyCode}
+45                                   :
+46     \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_aedb3c54122d6a75d49e1677e836bac22}{name}(), \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a9390204f7ff2f092241f55656d8458b1}{desc}(), \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a199f33f536f48f6ceda037f6a2ff206d}{type}(), \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a179837f3866e8786ce3a7f7a34bdda44}{requiresMarginalize}(\textcolor{keyword}{false}), 
+      \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a2c0c87eeaa423e8c944cfa846eb6a553}{poseDim}(-1), \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_ad946dec26df70a6fb6d99f2ab76db269}{landmarkDim}(-1)
+47   \{
+48   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}!Optimization\+Algorithm\+Property@{Optimization\+Algorithm\+Property}}
+\index{Optimization\+Algorithm\+Property@{Optimization\+Algorithm\+Property}!g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}}
+\subsubsection[{\texorpdfstring{Optimization\+Algorithm\+Property(const std\+::string \&name\+\_\+, const std\+::string \&desc\+\_\+, const std\+::string \&type\+\_\+, bool requires\+Marginalize\+\_\+, int pose\+Dim\+\_\+, int landmark\+Dim\+\_\+)}{OptimizationAlgorithmProperty(const std::string &name_, const std::string &desc_, const std::string &type_, bool requiresMarginalize_, int poseDim_, int landmarkDim_)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Optimization\+Algorithm\+Property\+::\+Optimization\+Algorithm\+Property (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name\+\_\+, }
+\item[{const std\+::string \&}]{desc\+\_\+, }
+\item[{const std\+::string \&}]{type\+\_\+, }
+\item[{bool}]{requires\+Marginalize\+\_\+, }
+\item[{int}]{pose\+Dim\+\_\+, }
+\item[{int}]{landmark\+Dim\+\_\+}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1OptimizationAlgorithmProperty_a5633cbd029eda42670f801de508f945b}{}\label{structg2o_1_1OptimizationAlgorithmProperty_a5633cbd029eda42670f801de508f945b}
+
+
+Definition at line 49 of file optimization\+\_\+algorithm\+\_\+property.\+h.
+
+
+\begin{DoxyCode}
+49                                                                                                            
+                                                              :
+50     \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_aedb3c54122d6a75d49e1677e836bac22}{name}(name\_), \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a9390204f7ff2f092241f55656d8458b1}{desc}(desc\_), \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a199f33f536f48f6ceda037f6a2ff206d}{type}(type\_), \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a179837f3866e8786ce3a7f7a34bdda44}{requiresMarginalize}(
+      requiresMarginalize\_), \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_a2c0c87eeaa423e8c944cfa846eb6a553}{poseDim}(poseDim\_), \hyperlink{structg2o_1_1OptimizationAlgorithmProperty_ad946dec26df70a6fb6d99f2ab76db269}{landmarkDim}(landmarkDim\_)
+51   \{
+52   \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}!desc@{desc}}
+\index{desc@{desc}!g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}}
+\subsubsection[{\texorpdfstring{desc}{desc}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::\+Optimization\+Algorithm\+Property\+::desc}\hypertarget{structg2o_1_1OptimizationAlgorithmProperty_a9390204f7ff2f092241f55656d8458b1}{}\label{structg2o_1_1OptimizationAlgorithmProperty_a9390204f7ff2f092241f55656d8458b1}
+
+
+short description of the solver 
+
+
+
+Definition at line 40 of file optimization\+\_\+algorithm\+\_\+property.\+h.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Factory\+::list\+Solvers().
+
+\index{g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}!landmark\+Dim@{landmark\+Dim}}
+\index{landmark\+Dim@{landmark\+Dim}!g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}}
+\subsubsection[{\texorpdfstring{landmark\+Dim}{landmarkDim}}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Optimization\+Algorithm\+Property\+::landmark\+Dim}\hypertarget{structg2o_1_1OptimizationAlgorithmProperty_ad946dec26df70a6fb6d99f2ab76db269}{}\label{structg2o_1_1OptimizationAlgorithmProperty_ad946dec26df70a6fb6d99f2ab76db269}
+
+
+dimension of the landmar vertices (-\/1 if variable) 
+
+
+
+Definition at line 44 of file optimization\+\_\+algorithm\+\_\+property.\+h.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::is\+Solver\+Suitable().
+
+\index{g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}!name@{name}}
+\index{name@{name}!g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::\+Optimization\+Algorithm\+Property\+::name}\hypertarget{structg2o_1_1OptimizationAlgorithmProperty_aedb3c54122d6a75d49e1677e836bac22}{}\label{structg2o_1_1OptimizationAlgorithmProperty_aedb3c54122d6a75d49e1677e836bac22}
+
+
+name of the solver, e.\+g., var 
+
+
+
+Definition at line 39 of file optimization\+\_\+algorithm\+\_\+property.\+h.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Factory\+::find\+Solver(), g2o\+::\+Optimization\+Algorithm\+Factory\+::list\+Solvers(), g2o\+::\+Optimization\+Algorithm\+Factory\+::register\+Solver(), and g2o\+::\+Optimization\+Algorithm\+Factory\+::unregister\+Solver().
+
+\index{g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}!pose\+Dim@{pose\+Dim}}
+\index{pose\+Dim@{pose\+Dim}!g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}}
+\subsubsection[{\texorpdfstring{pose\+Dim}{poseDim}}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Optimization\+Algorithm\+Property\+::pose\+Dim}\hypertarget{structg2o_1_1OptimizationAlgorithmProperty_a2c0c87eeaa423e8c944cfa846eb6a553}{}\label{structg2o_1_1OptimizationAlgorithmProperty_a2c0c87eeaa423e8c944cfa846eb6a553}
+
+
+dimension of the pose vertices (-\/1 if variable) 
+
+
+
+Definition at line 43 of file optimization\+\_\+algorithm\+\_\+property.\+h.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::is\+Solver\+Suitable().
+
+\index{g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}!requires\+Marginalize@{requires\+Marginalize}}
+\index{requires\+Marginalize@{requires\+Marginalize}!g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}}
+\subsubsection[{\texorpdfstring{requires\+Marginalize}{requiresMarginalize}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Optimization\+Algorithm\+Property\+::requires\+Marginalize}\hypertarget{structg2o_1_1OptimizationAlgorithmProperty_a179837f3866e8786ce3a7f7a34bdda44}{}\label{structg2o_1_1OptimizationAlgorithmProperty_a179837f3866e8786ce3a7f7a34bdda44}
+
+
+whether the solver requires marginalization of landmarks 
+
+
+
+Definition at line 42 of file optimization\+\_\+algorithm\+\_\+property.\+h.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::is\+Solver\+Suitable().
+
+\index{g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}!type@{type}}
+\index{type@{type}!g2o\+::\+Optimization\+Algorithm\+Property@{g2o\+::\+Optimization\+Algorithm\+Property}}
+\subsubsection[{\texorpdfstring{type}{type}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::\+Optimization\+Algorithm\+Property\+::type}\hypertarget{structg2o_1_1OptimizationAlgorithmProperty_a199f33f536f48f6ceda037f6a2ff206d}{}\label{structg2o_1_1OptimizationAlgorithmProperty_a199f33f536f48f6ceda037f6a2ff206d}
+
+
+type of solver, e.\+g., \char`\"{}\+C\+Sparse Cholesky\char`\"{}, \char`\"{}\+P\+C\+G\char`\"{} 
+
+
+
+Definition at line 41 of file optimization\+\_\+algorithm\+\_\+property.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{optimization__algorithm__property_8h}{optimization\+\_\+algorithm\+\_\+property.\+h}\end{DoxyCompactItemize}

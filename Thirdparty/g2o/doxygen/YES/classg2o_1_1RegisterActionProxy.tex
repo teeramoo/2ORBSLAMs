@@ -1,0 +1,103 @@
+\hypertarget{classg2o_1_1RegisterActionProxy}{}\section{g2o\+:\+:Register\+Action\+Proxy$<$ T $>$ Class Template Reference}
+\label{classg2o_1_1RegisterActionProxy}\index{g2o\+::\+Register\+Action\+Proxy$<$ T $>$@{g2o\+::\+Register\+Action\+Proxy$<$ T $>$}}
+
+
+{\ttfamily \#include $<$hyper\+\_\+graph\+\_\+action.\+h$>$}
+
+
+
+Collaboration diagram for g2o\+:\+:Register\+Action\+Proxy$<$ T $>$\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1RegisterActionProxy_a2998e33a5b4627b38b58a493c16d65e6}{Register\+Action\+Proxy} ()
+\item 
+\hyperlink{classg2o_1_1RegisterActionProxy_a73e8eacc965c3e9bb2084570c6b67eed}{$\sim$\+Register\+Action\+Proxy} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1HyperGraphElementAction}{Hyper\+Graph\+Element\+Action} $\ast$ \hyperlink{classg2o_1_1RegisterActionProxy_abab95a1b707467ceebfe1448e40202b8}{\+\_\+action}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class g2o\+::\+Register\+Action\+Proxy$<$ T $>$}
+
+
+
+Definition at line 192 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Register\+Action\+Proxy@{g2o\+::\+Register\+Action\+Proxy}!Register\+Action\+Proxy@{Register\+Action\+Proxy}}
+\index{Register\+Action\+Proxy@{Register\+Action\+Proxy}!g2o\+::\+Register\+Action\+Proxy@{g2o\+::\+Register\+Action\+Proxy}}
+\subsubsection[{\texorpdfstring{Register\+Action\+Proxy()}{RegisterActionProxy()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf g2o\+::\+Register\+Action\+Proxy}$<$ T $>$\+::{\bf Register\+Action\+Proxy} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1RegisterActionProxy_a2998e33a5b4627b38b58a493c16d65e6}{}\label{classg2o_1_1RegisterActionProxy_a2998e33a5b4627b38b58a493c16d65e6}
+
+
+Definition at line 195 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+
+
+References g2o\+::\+Hyper\+Graph\+Action\+Library\+::instance(), and g2o\+::\+Hyper\+Graph\+Action\+Library\+::register\+Action().
+
+
+\begin{DoxyCode}
+196           \{
+197 \textcolor{preprocessor}{#ifdef G2O\_DEBUG\_ACTIONLIB}
+198             std::cout << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{": Registering action of type "} << \textcolor{keyword}{typeid}(T).name() << std::endl;
+199 \textcolor{preprocessor}{#endif}
+200             \hyperlink{classg2o_1_1RegisterActionProxy_abab95a1b707467ceebfe1448e40202b8}{\_action} = \textcolor{keyword}{new} T();
+201             \hyperlink{classg2o_1_1HyperGraphActionLibrary_a12074e3f4d9bcb3da20a4fe23d18b745}{HyperGraphActionLibrary::instance}()->
+      \hyperlink{classg2o_1_1HyperGraphActionLibrary_a8ff09559af9efdf636ad14a011ef73ae}{registerAction}(\hyperlink{classg2o_1_1RegisterActionProxy_abab95a1b707467ceebfe1448e40202b8}{\_action});
+202           \}
+\end{DoxyCode}
+\index{g2o\+::\+Register\+Action\+Proxy@{g2o\+::\+Register\+Action\+Proxy}!````~Register\+Action\+Proxy@{$\sim$\+Register\+Action\+Proxy}}
+\index{````~Register\+Action\+Proxy@{$\sim$\+Register\+Action\+Proxy}!g2o\+::\+Register\+Action\+Proxy@{g2o\+::\+Register\+Action\+Proxy}}
+\subsubsection[{\texorpdfstring{$\sim$\+Register\+Action\+Proxy()}{~RegisterActionProxy()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf g2o\+::\+Register\+Action\+Proxy}$<$ T $>$\+::$\sim${\bf Register\+Action\+Proxy} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1RegisterActionProxy_a73e8eacc965c3e9bb2084570c6b67eed}{}\label{classg2o_1_1RegisterActionProxy_a73e8eacc965c3e9bb2084570c6b67eed}
+
+
+Definition at line 204 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+
+
+References g2o\+::\+Hyper\+Graph\+Action\+Library\+::instance(), and g2o\+::\+Hyper\+Graph\+Action\+Library\+::unregister\+Action().
+
+
+\begin{DoxyCode}
+205           \{
+206 \textcolor{preprocessor}{#ifdef G2O\_DEBUG\_ACTIONLIB}
+207             std::cout << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{": Unregistering action of type "} << \textcolor{keyword}{typeid}(T).name() << std::endl
+      ;
+208 \textcolor{preprocessor}{#endif}
+209             \hyperlink{classg2o_1_1HyperGraphActionLibrary_a12074e3f4d9bcb3da20a4fe23d18b745}{HyperGraphActionLibrary::instance}()->
+      \hyperlink{classg2o_1_1HyperGraphActionLibrary_abe4c076e6734ffa79f6d2bff07f9fad5}{unregisterAction}(\hyperlink{classg2o_1_1RegisterActionProxy_abab95a1b707467ceebfe1448e40202b8}{\_action});
+210             \textcolor{keyword}{delete} \hyperlink{classg2o_1_1RegisterActionProxy_abab95a1b707467ceebfe1448e40202b8}{\_action};
+211           \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Register\+Action\+Proxy@{g2o\+::\+Register\+Action\+Proxy}!\+\_\+action@{\+\_\+action}}
+\index{\+\_\+action@{\+\_\+action}!g2o\+::\+Register\+Action\+Proxy@{g2o\+::\+Register\+Action\+Proxy}}
+\subsubsection[{\texorpdfstring{\+\_\+action}{_action}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Hyper\+Graph\+Element\+Action}$\ast$ {\bf g2o\+::\+Register\+Action\+Proxy}$<$ T $>$\+::\+\_\+action\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classg2o_1_1RegisterActionProxy_abab95a1b707467ceebfe1448e40202b8}{}\label{classg2o_1_1RegisterActionProxy_abab95a1b707467ceebfe1448e40202b8}
+
+
+Definition at line 214 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{hyper__graph__action_8h}{hyper\+\_\+graph\+\_\+action.\+h}\end{DoxyCompactItemize}

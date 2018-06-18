@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="g2o::BlockSolverTraits\l\< Eigen::Dynamic, Eigen\l::Dynamic \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4.html",tooltip="traits to summarize the properties of the dynamic size optimization problem "];
+}

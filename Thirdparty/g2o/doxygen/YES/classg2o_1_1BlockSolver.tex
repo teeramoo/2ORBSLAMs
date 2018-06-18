@@ -1,0 +1,1435 @@
+\hypertarget{classg2o_1_1BlockSolver}{}\section{g2o\+:\+:Block\+Solver$<$ Traits $>$ Class Template Reference}
+\label{classg2o_1_1BlockSolver}\index{g2o\+::\+Block\+Solver$<$ Traits $>$@{g2o\+::\+Block\+Solver$<$ Traits $>$}}
+
+
+Implementation of a solver operating on the blocks of the Hessian.  
+
+
+
+
+{\ttfamily \#include $<$block\+\_\+solver.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Block\+Solver$<$ Traits $>$\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Block\+Solver$<$ Traits $>$\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Traits\+::\+Pose\+Matrix\+Type \hyperlink{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{Pose\+Matrix\+Type}
+\item 
+typedef Traits\+::\+Landmark\+Matrix\+Type \hyperlink{classg2o_1_1BlockSolver_afd898a666343291129d37a979e23ded6}{Landmark\+Matrix\+Type}
+\item 
+typedef Traits\+::\+Pose\+Landmark\+Matrix\+Type \hyperlink{classg2o_1_1BlockSolver_a96bf60b923f816086cd2f24de38736ec}{Pose\+Landmark\+Matrix\+Type}
+\item 
+typedef Traits\+::\+Pose\+Vector\+Type \hyperlink{classg2o_1_1BlockSolver_a65d51b9281e2e2597df05eb00801ee76}{Pose\+Vector\+Type}
+\item 
+typedef Traits\+::\+Landmark\+Vector\+Type \hyperlink{classg2o_1_1BlockSolver_a19ade5e432f32e46557192ae75074304}{Landmark\+Vector\+Type}
+\item 
+typedef Traits\+::\+Pose\+Hessian\+Type \hyperlink{classg2o_1_1BlockSolver_a0e7f862860a1e3391cec3cfaf69c48be}{Pose\+Hessian\+Type}
+\item 
+typedef Traits\+::\+Landmark\+Hessian\+Type \hyperlink{classg2o_1_1BlockSolver_a465b1252905d90fd69b4243716620c45}{Landmark\+Hessian\+Type}
+\item 
+typedef Traits\+::\+Pose\+Landmark\+Hessian\+Type \hyperlink{classg2o_1_1BlockSolver_aed8b44e394d2f19ca03c87adf90cc97c}{Pose\+Landmark\+Hessian\+Type}
+\item 
+typedef Traits\+::\+Linear\+Solver\+Type \hyperlink{classg2o_1_1BlockSolver_a717fa8cb1dd5a212e41d8ebef67955e6}{Linear\+Solver\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1BlockSolver_a04701a223a14708c9c84ce4d7e7af3f6}{Block\+Solver} (\hyperlink{classg2o_1_1BlockSolver_a717fa8cb1dd5a212e41d8ebef67955e6}{Linear\+Solver\+Type} $\ast$\hyperlink{classg2o_1_1BlockSolver_adb09637f5f87327d26928f672d6caadf}{linear\+Solver})
+\item 
+\hyperlink{classg2o_1_1BlockSolver_a7587b13ec3494c00ad95a3d0ce7fd9a9}{$\sim$\+Block\+Solver} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1BlockSolver_a8bf01018abc3bfddfa3b29a380a1d6cb}{init} (\hyperlink{classg2o_1_1SparseOptimizer}{Sparse\+Optimizer} $\ast$optmizer, bool online=false)
+\item 
+virtual bool \hyperlink{classg2o_1_1BlockSolver_a17e4392d3cca9a9d7cf38bb46d073b86}{build\+Structure} (bool zero\+Blocks=false)
+\item 
+virtual bool \hyperlink{classg2o_1_1BlockSolver_acc497239c5e681ddec2140e34dfc5938}{update\+Structure} (const std\+::vector$<$ \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Hyper\+Graph\+::\+Vertex} $\ast$ $>$ \&vset, const \hyperlink{classg2o_1_1HyperGraph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Hyper\+Graph\+::\+Edge\+Set} \&edges)
+\item 
+virtual bool \hyperlink{classg2o_1_1BlockSolver_a2654a8d52f38e5ce23720a8de302e2e7}{build\+System} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1BlockSolver_a589a75a131cce100c1945ad2786214d7}{solve} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1BlockSolver_ac21cd7e2c9b8a1414f7a2dccb0d30a0e}{compute\+Marginals} (\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ \&spinv, const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices)
+\item 
+virtual bool \hyperlink{classg2o_1_1BlockSolver_acc63a23e5b35e4f72d46dc22719aa56f}{set\+Lambda} (double lambda, bool backup=false)
+\item 
+virtual void \hyperlink{classg2o_1_1BlockSolver_a2136931d7aa2f54df5207556c4685809}{restore\+Diagonal} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1BlockSolver_a68dc822ce48e80ceacce69c7bd029674}{supports\+Schur} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1BlockSolver_a382173946f1dd929a625e3708c959883}{schur} ()
+\begin{DoxyCompactList}\small\item\em should the solver perform the schur complement or not \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1BlockSolver_a6dd8e7e7a099410005cb96ff874d8866}{set\+Schur} (bool s)
+\item 
+\hyperlink{classg2o_1_1LinearSolver}{Linear\+Solver}$<$ \hyperlink{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{Pose\+Matrix\+Type} $>$ $\ast$ \hyperlink{classg2o_1_1BlockSolver_adb09637f5f87327d26928f672d6caadf}{linear\+Solver} () const 
+\item 
+virtual void \hyperlink{classg2o_1_1BlockSolver_a1bff5dc13e3408fa76c019347104acd0}{set\+Write\+Debug} (bool \hyperlink{classg2o_1_1BlockSolver_a5a127b36e9f6ec45b2b1d39c22a9901f}{write\+Debug})
+\item 
+virtual bool \hyperlink{classg2o_1_1BlockSolver_a5a127b36e9f6ec45b2b1d39c22a9901f}{write\+Debug} () const 
+\item 
+virtual bool \hyperlink{classg2o_1_1BlockSolver_a79adbc8926b11c564bdd8cf73a55b1ef}{save\+Hessian} (const std\+::string \&file\+Name) const 
+\begin{DoxyCompactList}\small\item\em write the hessian to disk using the specified file name \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1BlockSolver_a615892075357273ec8bb06e101d9155b}{multiply\+Hessian} (double $\ast$dest, const double $\ast$src) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classg2o_1_1BlockSolver_a9a68f557c8e04cd76565fc45e1747e45}{Pose\+Dim} = Traits\+::\+Pose\+Dim
+\item 
+static const int \hyperlink{classg2o_1_1BlockSolver_a2d5e499f65a71985a8256e98c1608dd9}{Landmark\+Dim} = Traits\+::\+Landmark\+Dim
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classg2o_1_1BlockSolver_a0075af2df18364cf99fd80f813b8ce4b}{resize} (int $\ast$block\+Pose\+Indices, int num\+Pose\+Blocks, int $\ast$block\+Landmark\+Indices, int num\+Landmark\+Blocks, int total\+Dim)
+\item 
+void \hyperlink{classg2o_1_1BlockSolver_a1877467844b7b9ab51bd6600e3a93eb0}{deallocate} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ \hyperlink{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{Pose\+Matrix\+Type} $>$ $\ast$ \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\+\_\+\+Hpp}
+\item 
+\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ \hyperlink{classg2o_1_1BlockSolver_afd898a666343291129d37a979e23ded6}{Landmark\+Matrix\+Type} $>$ $\ast$ \hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\+\_\+\+Hll}
+\item 
+\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ \hyperlink{classg2o_1_1BlockSolver_a96bf60b923f816086cd2f24de38736ec}{Pose\+Landmark\+Matrix\+Type} $>$ $\ast$ \hyperlink{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}{\+\_\+\+Hpl}
+\item 
+\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ \hyperlink{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{Pose\+Matrix\+Type} $>$ $\ast$ \hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\+\_\+\+Hschur}
+\item 
+\hyperlink{classg2o_1_1SparseBlockMatrixDiagonal}{Sparse\+Block\+Matrix\+Diagonal}$<$ \hyperlink{classg2o_1_1BlockSolver_afd898a666343291129d37a979e23ded6}{Landmark\+Matrix\+Type} $>$ $\ast$ \hyperlink{classg2o_1_1BlockSolver_ad6a1a8f17c8fb854962a8204c79bc981}{\+\_\+\+D\+Inv\+Schur}
+\item 
+\hyperlink{classg2o_1_1SparseBlockMatrixCCS}{Sparse\+Block\+Matrix\+C\+CS}$<$ \hyperlink{classg2o_1_1BlockSolver_a96bf60b923f816086cd2f24de38736ec}{Pose\+Landmark\+Matrix\+Type} $>$ $\ast$ \hyperlink{classg2o_1_1BlockSolver_ab54eb7bb13f8b3a8a5f135a98f2050ec}{\+\_\+\+Hpl\+C\+CS}
+\item 
+\hyperlink{classg2o_1_1SparseBlockMatrixCCS}{Sparse\+Block\+Matrix\+C\+CS}$<$ \hyperlink{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{Pose\+Matrix\+Type} $>$ $\ast$ \hyperlink{classg2o_1_1BlockSolver_acea4b8ea8db5a29b63bea4bc568b0b26}{\+\_\+\+Hschur\+Transposed\+C\+CS}
+\item 
+\hyperlink{classg2o_1_1LinearSolver}{Linear\+Solver}$<$ \hyperlink{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{Pose\+Matrix\+Type} $>$ $\ast$ \hyperlink{classg2o_1_1BlockSolver_a676a4ef473ccaecb23050284e19659af}{\+\_\+linear\+Solver}
+\item 
+std\+::vector$<$ \hyperlink{classg2o_1_1BlockSolver_a65d51b9281e2e2597df05eb00801ee76}{Pose\+Vector\+Type}, Eigen\+::aligned\+\_\+allocator$<$ \hyperlink{classg2o_1_1BlockSolver_a65d51b9281e2e2597df05eb00801ee76}{Pose\+Vector\+Type} $>$ $>$ \hyperlink{classg2o_1_1BlockSolver_a3cb6f86c522c2ea26478ad44b7c32f76}{\+\_\+diagonal\+Backup\+Pose}
+\item 
+std\+::vector$<$ \hyperlink{classg2o_1_1BlockSolver_a19ade5e432f32e46557192ae75074304}{Landmark\+Vector\+Type}, Eigen\+::aligned\+\_\+allocator$<$ \hyperlink{classg2o_1_1BlockSolver_a19ade5e432f32e46557192ae75074304}{Landmark\+Vector\+Type} $>$ $>$ \hyperlink{classg2o_1_1BlockSolver_a3bc5b19faa2c45e2c04a6743b3a083de}{\+\_\+diagonal\+Backup\+Landmark}
+\item 
+bool \hyperlink{classg2o_1_1BlockSolver_ab375a5fac964182442f38288bd8a103a}{\+\_\+do\+Schur}
+\item 
+double $\ast$ \hyperlink{classg2o_1_1BlockSolver_a416f480d4b27d7f8962ae7ae363f2e32}{\+\_\+coefficients}
+\item 
+double $\ast$ \hyperlink{classg2o_1_1BlockSolver_aafddeb1d0a4218fc9c3c77169e20f81a}{\+\_\+bschur}
+\item 
+int \hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\+\_\+num\+Poses}
+\item 
+int \hyperlink{classg2o_1_1BlockSolver_ab98231b7ca8e6d7f138c33d26c6f4326}{\+\_\+num\+Landmarks}
+\item 
+int \hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\+\_\+size\+Poses}
+\item 
+int \hyperlink{classg2o_1_1BlockSolver_a13a49b5aac8ae3b12ed0c349fc0788e7}{\+\_\+size\+Landmarks}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Traits$>$\\*
+class g2o\+::\+Block\+Solver$<$ Traits $>$}
+
+Implementation of a solver operating on the blocks of the Hessian. 
+
+Definition at line 97 of file block\+\_\+solver.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!Landmark\+Hessian\+Type@{Landmark\+Hessian\+Type}}
+\index{Landmark\+Hessian\+Type@{Landmark\+Hessian\+Type}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{Landmark\+Hessian\+Type}{LandmarkHessianType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ typedef Traits\+::\+Landmark\+Hessian\+Type {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::{\bf Landmark\+Hessian\+Type}}\hypertarget{classg2o_1_1BlockSolver_a465b1252905d90fd69b4243716620c45}{}\label{classg2o_1_1BlockSolver_a465b1252905d90fd69b4243716620c45}
+
+
+Definition at line 109 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!Landmark\+Matrix\+Type@{Landmark\+Matrix\+Type}}
+\index{Landmark\+Matrix\+Type@{Landmark\+Matrix\+Type}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{Landmark\+Matrix\+Type}{LandmarkMatrixType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ typedef Traits\+::\+Landmark\+Matrix\+Type {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::{\bf Landmark\+Matrix\+Type}}\hypertarget{classg2o_1_1BlockSolver_afd898a666343291129d37a979e23ded6}{}\label{classg2o_1_1BlockSolver_afd898a666343291129d37a979e23ded6}
+
+
+Definition at line 103 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!Landmark\+Vector\+Type@{Landmark\+Vector\+Type}}
+\index{Landmark\+Vector\+Type@{Landmark\+Vector\+Type}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{Landmark\+Vector\+Type}{LandmarkVectorType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ typedef Traits\+::\+Landmark\+Vector\+Type {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::{\bf Landmark\+Vector\+Type}}\hypertarget{classg2o_1_1BlockSolver_a19ade5e432f32e46557192ae75074304}{}\label{classg2o_1_1BlockSolver_a19ade5e432f32e46557192ae75074304}
+
+
+Definition at line 106 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!Linear\+Solver\+Type@{Linear\+Solver\+Type}}
+\index{Linear\+Solver\+Type@{Linear\+Solver\+Type}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{Linear\+Solver\+Type}{LinearSolverType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ typedef Traits\+::\+Linear\+Solver\+Type {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::{\bf Linear\+Solver\+Type}}\hypertarget{classg2o_1_1BlockSolver_a717fa8cb1dd5a212e41d8ebef67955e6}{}\label{classg2o_1_1BlockSolver_a717fa8cb1dd5a212e41d8ebef67955e6}
+
+
+Definition at line 111 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!Pose\+Hessian\+Type@{Pose\+Hessian\+Type}}
+\index{Pose\+Hessian\+Type@{Pose\+Hessian\+Type}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{Pose\+Hessian\+Type}{PoseHessianType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ typedef Traits\+::\+Pose\+Hessian\+Type {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::{\bf Pose\+Hessian\+Type}}\hypertarget{classg2o_1_1BlockSolver_a0e7f862860a1e3391cec3cfaf69c48be}{}\label{classg2o_1_1BlockSolver_a0e7f862860a1e3391cec3cfaf69c48be}
+
+
+Definition at line 108 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!Pose\+Landmark\+Hessian\+Type@{Pose\+Landmark\+Hessian\+Type}}
+\index{Pose\+Landmark\+Hessian\+Type@{Pose\+Landmark\+Hessian\+Type}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{Pose\+Landmark\+Hessian\+Type}{PoseLandmarkHessianType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ typedef Traits\+::\+Pose\+Landmark\+Hessian\+Type {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::{\bf Pose\+Landmark\+Hessian\+Type}}\hypertarget{classg2o_1_1BlockSolver_aed8b44e394d2f19ca03c87adf90cc97c}{}\label{classg2o_1_1BlockSolver_aed8b44e394d2f19ca03c87adf90cc97c}
+
+
+Definition at line 110 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!Pose\+Landmark\+Matrix\+Type@{Pose\+Landmark\+Matrix\+Type}}
+\index{Pose\+Landmark\+Matrix\+Type@{Pose\+Landmark\+Matrix\+Type}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{Pose\+Landmark\+Matrix\+Type}{PoseLandmarkMatrixType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ typedef Traits\+::\+Pose\+Landmark\+Matrix\+Type {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::{\bf Pose\+Landmark\+Matrix\+Type}}\hypertarget{classg2o_1_1BlockSolver_a96bf60b923f816086cd2f24de38736ec}{}\label{classg2o_1_1BlockSolver_a96bf60b923f816086cd2f24de38736ec}
+
+
+Definition at line 104 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!Pose\+Matrix\+Type@{Pose\+Matrix\+Type}}
+\index{Pose\+Matrix\+Type@{Pose\+Matrix\+Type}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{Pose\+Matrix\+Type}{PoseMatrixType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ typedef Traits\+::\+Pose\+Matrix\+Type {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::{\bf Pose\+Matrix\+Type}}\hypertarget{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{}\label{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}
+
+
+Definition at line 102 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!Pose\+Vector\+Type@{Pose\+Vector\+Type}}
+\index{Pose\+Vector\+Type@{Pose\+Vector\+Type}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{Pose\+Vector\+Type}{PoseVectorType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ typedef Traits\+::\+Pose\+Vector\+Type {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::{\bf Pose\+Vector\+Type}}\hypertarget{classg2o_1_1BlockSolver_a65d51b9281e2e2597df05eb00801ee76}{}\label{classg2o_1_1BlockSolver_a65d51b9281e2e2597df05eb00801ee76}
+
+
+Definition at line 105 of file block\+\_\+solver.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!Block\+Solver@{Block\+Solver}}
+\index{Block\+Solver@{Block\+Solver}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{Block\+Solver(\+Linear\+Solver\+Type $\ast$linear\+Solver)}{BlockSolver(LinearSolverType *linearSolver)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::{\bf Block\+Solver} (
+\begin{DoxyParamCaption}
+\item[{{\bf Linear\+Solver\+Type} $\ast$}]{linear\+Solver}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1BlockSolver_a04701a223a14708c9c84ce4d7e7af3f6}{}\label{classg2o_1_1BlockSolver_a04701a223a14708c9c84ce4d7e7af3f6}
+allocate a block solver ontop of the underlying linear solver. N\+O\+TE\+: The \hyperlink{classg2o_1_1BlockSolver}{Block\+Solver} assumes exclusive access to the linear solver and will therefore free the pointer in its destructor. 
+
+Definition at line 42 of file block\+\_\+solver.\+hpp.
+
+
+
+References g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+bschur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+coefficients, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+D\+Inv\+Schur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+do\+Schur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hll, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpl, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpl\+C\+CS, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpp, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hschur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hschur\+Transposed\+C\+CS, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+num\+Landmarks, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+num\+Poses, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+size\+Landmarks, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+size\+Poses, and g2o\+::\+Solver\+::\+\_\+x\+Size.
+
+
+\begin{DoxyCode}
+42                                                                :
+43   BlockSolverBase(),
+44   \hyperlink{classg2o_1_1BlockSolver_a676a4ef473ccaecb23050284e19659af}{\_linearSolver}(\hyperlink{classg2o_1_1BlockSolver_adb09637f5f87327d26928f672d6caadf}{linearSolver})
+45 \{
+46   \textcolor{comment}{// workspace}
+47   \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}=0;
+48   \hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}=0;
+49   \hyperlink{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}{\_Hpl}=0;
+50   \hyperlink{classg2o_1_1BlockSolver_ab54eb7bb13f8b3a8a5f135a98f2050ec}{\_HplCCS} = 0;
+51   \hyperlink{classg2o_1_1BlockSolver_acea4b8ea8db5a29b63bea4bc568b0b26}{\_HschurTransposedCCS} = 0;
+52   \hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur}=0;
+53   \hyperlink{classg2o_1_1BlockSolver_ad6a1a8f17c8fb854962a8204c79bc981}{\_DInvSchur}=0;
+54   \hyperlink{classg2o_1_1BlockSolver_a416f480d4b27d7f8962ae7ae363f2e32}{\_coefficients}=0;
+55   \hyperlink{classg2o_1_1BlockSolver_aafddeb1d0a4218fc9c3c77169e20f81a}{\_bschur} = 0;
+56   \hyperlink{classg2o_1_1Solver_abcf7731347f14915bd9ba963021ea830}{\_xSize}=0;
+57   \hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses}=0;
+58   \hyperlink{classg2o_1_1BlockSolver_ab98231b7ca8e6d7f138c33d26c6f4326}{\_numLandmarks}=0;
+59   \hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses}=0;
+60   \hyperlink{classg2o_1_1BlockSolver_a13a49b5aac8ae3b12ed0c349fc0788e7}{\_sizeLandmarks}=0;
+61   \hyperlink{classg2o_1_1BlockSolver_ab375a5fac964182442f38288bd8a103a}{\_doSchur}=\textcolor{keyword}{true};
+62 \}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!````~Block\+Solver@{$\sim$\+Block\+Solver}}
+\index{````~Block\+Solver@{$\sim$\+Block\+Solver}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{$\sim$\+Block\+Solver()}{~BlockSolver()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::$\sim${\bf Block\+Solver} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1BlockSolver_a7587b13ec3494c00ad95a3d0ce7fd9a9}{}\label{classg2o_1_1BlockSolver_a7587b13ec3494c00ad95a3d0ce7fd9a9}
+
+
+Definition at line 136 of file block\+\_\+solver.\+hpp.
+
+
+
+References g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+linear\+Solver, and g2o\+::\+Block\+Solver$<$ Traits $>$\+::deallocate().
+
+
+\begin{DoxyCode}
+137 \{
+138   \textcolor{keyword}{delete} \hyperlink{classg2o_1_1BlockSolver_a676a4ef473ccaecb23050284e19659af}{\_linearSolver};
+139   \hyperlink{classg2o_1_1BlockSolver_a1877467844b7b9ab51bd6600e3a93eb0}{deallocate}();
+140 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!build\+Structure@{build\+Structure}}
+\index{build\+Structure@{build\+Structure}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{build\+Structure(bool zero\+Blocks=false)}{buildStructure(bool zeroBlocks=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ bool {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::build\+Structure (
+\begin{DoxyParamCaption}
+\item[{bool}]{zero\+Blocks = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_a17e4392d3cca9a9d7cf38bb46d073b86}{}\label{classg2o_1_1BlockSolver_a17e4392d3cca9a9d7cf38bb46d073b86}
+build the structure of the system 
+
+Implements \hyperlink{classg2o_1_1Solver_a6c93ac0f528ffe05867d33150c54f46f}{g2o\+::\+Solver}.
+
+
+
+Definition at line 143 of file block\+\_\+solver.\+hpp.
+
+
+
+References g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+D\+Inv\+Schur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+do\+Schur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hll, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpl, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpl\+C\+CS, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpp, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hschur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hschur\+Transposed\+C\+CS, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+num\+Landmarks, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+num\+Poses, g2o\+::\+Solver\+::\+\_\+optimizer, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+size\+Landmarks, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+size\+Poses, g2o\+::\+Sparse\+Optimizer\+::active\+Edges(), g2o\+::\+Sparse\+Block\+Matrix\+Hash\+Map$<$ Matrix\+Type $>$\+::add\+Block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block\+Cols(), g2o\+::\+Sparse\+Block\+Matrix\+Hash\+Map$<$ Matrix\+Type $>$\+::block\+Cols(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::col\+Block\+Indices(), g2o\+::\+Sparse\+Block\+Matrix\+Diagonal$<$ Matrix\+Type $>$\+::diagonal(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::dimension(), g2o\+::\+Hyper\+Graph\+::\+Vertex\+::edges(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+Sparse\+Block\+Matrix\+C\+C\+S(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::hessian\+Index(), g2o\+::\+Sparse\+Optimizer\+::index\+Mapping(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::map\+Hessian\+Memory(), g2o\+::\+Optimizable\+Graph\+::\+Edge\+::map\+Hessian\+Memory(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::marginalized(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::row\+Block\+Indices(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Col\+In\+Hessian(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::take\+Pattern\+From\+Hash(), g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertex(), and g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertices().
+
+
+\begin{DoxyCode}
+144 \{
+145   assert(\hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer});
+146 
+147   \textcolor{keywordtype}{size\_t} sparseDim = 0;
+148   \hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses}=0;
+149   \hyperlink{classg2o_1_1BlockSolver_ab98231b7ca8e6d7f138c33d26c6f4326}{\_numLandmarks}=0;
+150   \hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses}=0;
+151   \hyperlink{classg2o_1_1BlockSolver_a13a49b5aac8ae3b12ed0c349fc0788e7}{\_sizeLandmarks}=0;
+152   \textcolor{keywordtype}{int}* blockPoseIndices = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[\hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}().size()];
+153   \textcolor{keywordtype}{int}* blockLandmarkIndices = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[\hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}().size()];
+154 
+155   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}().size(); ++i) \{
+156     OptimizableGraph::Vertex* v = \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}()[i];
+157     \textcolor{keywordtype}{int} dim = v->dimension();
+158     \textcolor{keywordflow}{if} (! v->marginalized())\{
+159       v->setColInHessian(\hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses});
+160       \hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses}+=dim;
+161       blockPoseIndices[\hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses}]=\hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses};
+162       ++\hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses};
+163     \} \textcolor{keywordflow}{else} \{
+164       v->setColInHessian(\hyperlink{classg2o_1_1BlockSolver_a13a49b5aac8ae3b12ed0c349fc0788e7}{\_sizeLandmarks});
+165       \hyperlink{classg2o_1_1BlockSolver_a13a49b5aac8ae3b12ed0c349fc0788e7}{\_sizeLandmarks}+=dim;
+166       blockLandmarkIndices[\hyperlink{classg2o_1_1BlockSolver_ab98231b7ca8e6d7f138c33d26c6f4326}{\_numLandmarks}]=\hyperlink{classg2o_1_1BlockSolver_a13a49b5aac8ae3b12ed0c349fc0788e7}{\_sizeLandmarks};
+167       ++\hyperlink{classg2o_1_1BlockSolver_ab98231b7ca8e6d7f138c33d26c6f4326}{\_numLandmarks};
+168     \}
+169     sparseDim += dim;
+170   \}
+171   \hyperlink{classg2o_1_1BlockSolver_a0075af2df18364cf99fd80f813b8ce4b}{resize}(blockPoseIndices, \hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses}, blockLandmarkIndices, 
+      \hyperlink{classg2o_1_1BlockSolver_ab98231b7ca8e6d7f138c33d26c6f4326}{\_numLandmarks}, sparseDim);
+172   \textcolor{keyword}{delete}[] blockLandmarkIndices;
+173   \textcolor{keyword}{delete}[] blockPoseIndices;
+174 
+175   \textcolor{comment}{// allocate the diagonal on Hpp and Hll}
+176   \textcolor{keywordtype}{int} poseIdx = 0;
+177   \textcolor{keywordtype}{int} landmarkIdx = 0;
+178   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}().size(); ++i) \{
+179     OptimizableGraph::Vertex* v = \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}()[i];
+180     \textcolor{keywordflow}{if} (! v->marginalized())\{
+181       \textcolor{comment}{//assert(poseIdx == v->hessianIndex());}
+182       \hyperlink{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{PoseMatrixType}* m = \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(poseIdx, poseIdx, \textcolor{keyword}{true});
+183       \textcolor{keywordflow}{if} (zeroBlocks)
+184         m->setZero();
+185       v->mapHessianMemory(m->data());
+186       ++poseIdx;
+187     \} \textcolor{keywordflow}{else} \{
+188       \hyperlink{classg2o_1_1BlockSolver_afd898a666343291129d37a979e23ded6}{LandmarkMatrixType}* m = \hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(landmarkIdx, landmarkIdx, \textcolor{keyword}{true});
+189       \textcolor{keywordflow}{if} (zeroBlocks)
+190         m->setZero();
+191       v->mapHessianMemory(m->data());
+192       ++landmarkIdx;
+193     \}
+194   \}
+195   assert(poseIdx == \hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses} && landmarkIdx == \hyperlink{classg2o_1_1BlockSolver_ab98231b7ca8e6d7f138c33d26c6f4326}{\_numLandmarks});
+196 
+197   \textcolor{comment}{// temporary structures for building the pattern of the Schur complement}
+198   SparseBlockMatrixHashMap<PoseMatrixType>* schurMatrixLookup = 0;
+199   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_ab375a5fac964182442f38288bd8a103a}{\_doSchur}) \{
+200     schurMatrixLookup = \textcolor{keyword}{new} SparseBlockMatrixHashMap<PoseMatrixType>(\hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur}->
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ab9f9e621c9bca7c660c61b3948b8ece3}{rowBlockIndices}(), \hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur}->\hyperlink{classg2o_1_1SparseBlockMatrix_adfaf13a5f3134205a58c8346a09a672a}{colBlockIndices}());
+201     schurMatrixLookup->blockCols().resize(\hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur}->\hyperlink{classg2o_1_1SparseBlockMatrix_a8e53797223fff106487d0b0080a3e36e}{blockCols}().size());
+202   \}
+203 
+204   \textcolor{comment}{// here we assume that the landmark indices start after the pose ones}
+205   \textcolor{comment}{// create the structure in Hpp, Hll and in Hpl}
+206   \textcolor{keywordflow}{for} (SparseOptimizer::EdgeContainer::const\_iterator it=\hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->
+      \hyperlink{classg2o_1_1SparseOptimizer_aef20b7dd401862d572a851349d1bc124}{activeEdges}().begin(); it!=\hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_aef20b7dd401862d572a851349d1bc124}{activeEdges}().end(); ++it)\{
+207     OptimizableGraph::Edge* e = *it;
+208 
+209     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} viIdx = 0; viIdx < e->vertices().size(); ++viIdx) \{
+210       OptimizableGraph::Vertex* v1 = (OptimizableGraph::Vertex*) e->vertex(viIdx);
+211       \textcolor{keywordtype}{int} ind1 = v1->hessianIndex();
+212       \textcolor{keywordflow}{if} (ind1 == -1)
+213         \textcolor{keywordflow}{continue};
+214       \textcolor{keywordtype}{int} indexV1Bak = ind1;
+215       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} vjIdx = viIdx + 1; vjIdx < e->vertices().size(); ++vjIdx) \{
+216         OptimizableGraph::Vertex* v2 = (OptimizableGraph::Vertex*) e->vertex(vjIdx);
+217         \textcolor{keywordtype}{int} ind2 = v2->hessianIndex();
+218         \textcolor{keywordflow}{if} (ind2 == -1)
+219           \textcolor{keywordflow}{continue};
+220         ind1 = indexV1Bak;
+221         \textcolor{keywordtype}{bool} transposedBlock = ind1 > ind2;
+222         \textcolor{keywordflow}{if} (transposedBlock)\{ \textcolor{comment}{// make sure, we allocate the upper triangle block}
+223           swap(ind1, ind2);
+224         \}
+225         \textcolor{keywordflow}{if} (! v1->marginalized() && !v2->marginalized())\{
+226           \hyperlink{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{PoseMatrixType}* m = \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(ind1, ind2, \textcolor{keyword}{true});
+227           \textcolor{keywordflow}{if} (zeroBlocks)
+228             m->setZero();
+229           e->mapHessianMemory(m->data(), viIdx, vjIdx, transposedBlock);
+230           \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur}) \{\textcolor{comment}{// assume this is only needed in case we solve with the schur complement}
+231             schurMatrixLookup->addBlock(ind1, ind2);
+232           \}
+233         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (v1->marginalized() && v2->marginalized())\{
+234           \textcolor{comment}{// RAINER hmm.... should we ever reach this here????}
+235           \hyperlink{classg2o_1_1BlockSolver_afd898a666343291129d37a979e23ded6}{LandmarkMatrixType}* m = \hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(ind1-
+      \hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses}, ind2-\hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses}, \textcolor{keyword}{true});
+236           \textcolor{keywordflow}{if} (zeroBlocks)
+237             m->setZero();
+238           e->mapHessianMemory(m->data(), viIdx, vjIdx, \textcolor{keyword}{false});
+239         \} \textcolor{keywordflow}{else} \{ 
+240           \textcolor{keywordflow}{if} (v1->marginalized())\{ 
+241             \hyperlink{classg2o_1_1BlockSolver_a96bf60b923f816086cd2f24de38736ec}{PoseLandmarkMatrixType}* m = \hyperlink{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}{\_Hpl}->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(v2->hessianIndex(),v1->
+      hessianIndex()-\hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses}, \textcolor{keyword}{true});
+242             \textcolor{keywordflow}{if} (zeroBlocks)
+243               m->setZero();
+244             e->mapHessianMemory(m->data(), viIdx, vjIdx, \textcolor{keyword}{true}); \textcolor{comment}{// transpose the block before writing to it}
+245           \} \textcolor{keywordflow}{else} \{
+246             \hyperlink{classg2o_1_1BlockSolver_a96bf60b923f816086cd2f24de38736ec}{PoseLandmarkMatrixType}* m = \hyperlink{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}{\_Hpl}->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(v1->hessianIndex(),v2->
+      hessianIndex()-\hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses}, \textcolor{keyword}{true});
+247             \textcolor{keywordflow}{if} (zeroBlocks)
+248               m->setZero();
+249             e->mapHessianMemory(m->data(), viIdx, vjIdx, \textcolor{keyword}{false}); \textcolor{comment}{// directly the block}
+250           \}
+251         \}
+252       \}
+253     \}
+254   \}
+255 
+256   \textcolor{keywordflow}{if} (! \hyperlink{classg2o_1_1BlockSolver_ab375a5fac964182442f38288bd8a103a}{\_doSchur})
+257     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+258 
+259   \hyperlink{classg2o_1_1BlockSolver_ad6a1a8f17c8fb854962a8204c79bc981}{\_DInvSchur}->\hyperlink{classg2o_1_1SparseBlockMatrixDiagonal_a762097ac116728fec0cc64cf05610a96}{diagonal}().resize(landmarkIdx);
+260   \hyperlink{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}{\_Hpl}->\hyperlink{classg2o_1_1SparseBlockMatrix_a1f596d1bd27de9f62282eee7e65a9f27}{fillSparseBlockMatrixCCS}(*\hyperlink{classg2o_1_1BlockSolver_ab54eb7bb13f8b3a8a5f135a98f2050ec}{\_HplCCS});
+261 
+262   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}().size(); ++i) \{
+263     OptimizableGraph::Vertex* v = \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}()[i];
+264     \textcolor{keywordflow}{if} (v->marginalized())\{
+265       \textcolor{keyword}{const} \hyperlink{classg2o_1_1HyperGraph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{HyperGraph::EdgeSet}& vedges=v->edges();
+266       \textcolor{keywordflow}{for} (HyperGraph::EdgeSet::const\_iterator it1=vedges.begin(); it1!=vedges.end(); ++it1)\{
+267         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<(*it1)->vertices().size(); ++i)
+268         \{
+269           OptimizableGraph::Vertex* v1= (OptimizableGraph::Vertex*) (*it1)->vertex(i);
+270           \textcolor{keywordflow}{if} (v1->hessianIndex()==-1 || v1==v)
+271             \textcolor{keywordflow}{continue};
+272           \textcolor{keywordflow}{for}  (HyperGraph::EdgeSet::const\_iterator it2=vedges.begin(); it2!=vedges.end(); ++it2)\{
+273             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j=0; j<(*it2)->vertices().size(); ++j)
+274             \{
+275               OptimizableGraph::Vertex* v2= (OptimizableGraph::Vertex*) (*it2)->vertex(j);
+276               \textcolor{keywordflow}{if} (v2->hessianIndex()==-1 || v2==v)
+277                 \textcolor{keywordflow}{continue};
+278               \textcolor{keywordtype}{int} i1=v1->hessianIndex();
+279               \textcolor{keywordtype}{int} i2=v2->hessianIndex();
+280               \textcolor{keywordflow}{if} (i1<=i2) \{
+281                 schurMatrixLookup->addBlock(i1, i2);
+282               \}
+283             \}
+284           \}
+285         \}
+286       \}
+287     \}
+288   \}
+289 
+290   \hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur}->\hyperlink{classg2o_1_1SparseBlockMatrix_a0b1e9dc3a24b0ab41d7002396a61c833}{takePatternFromHash}(*schurMatrixLookup);
+291   \textcolor{keyword}{delete} schurMatrixLookup;
+292   \hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur}->\hyperlink{classg2o_1_1SparseBlockMatrix_a0fbc51ac6aebfceed54a6eb75d2f3ab2}{fillSparseBlockMatrixCCSTransposed}(*
+      \hyperlink{classg2o_1_1BlockSolver_acea4b8ea8db5a29b63bea4bc568b0b26}{\_HschurTransposedCCS});
+293 
+294   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+295 \}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!build\+System@{build\+System}}
+\index{build\+System@{build\+System}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{build\+System()}{buildSystem()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ bool {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::build\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_a2654a8d52f38e5ce23720a8de302e2e7}{}\label{classg2o_1_1BlockSolver_a2654a8d52f38e5ce23720a8de302e2e7}
+build the current system 
+
+Implements \hyperlink{classg2o_1_1Solver_ac1565e85d5ca68a87ad7f06f8164a8c0}{g2o\+::\+Solver}.
+
+
+
+Definition at line 502 of file block\+\_\+solver.\+hpp.
+
+
+
+References g2o\+::\+Solver\+::\+\_\+b, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+do\+Schur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hll, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpl, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpp, g2o\+::\+Solver\+::\+\_\+optimizer, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+size\+Poses, g2o\+::\+Sparse\+Optimizer\+::active\+Edges(), g2o\+::array\+Has\+Na\+N(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::clear(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::clear\+Quadratic\+Form(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::col\+In\+Hessian(), g2o\+::\+Optimizable\+Graph\+::\+Edge\+::construct\+Quadratic\+Form(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::copy\+B(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::dimension(), g2o\+::\+Optimizable\+Graph\+::\+Edge\+::dimension(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::fixed(), g2o\+::\+Sparse\+Optimizer\+::index\+Mapping(), g2o\+::\+Optimizable\+Graph\+::jacobian\+Workspace(), g2o\+::\+Optimizable\+Graph\+::\+Edge\+::linearize\+Oplus(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::marginalized(), g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertex(), g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertices(), and g2o\+::\+Jacobian\+Workspace\+::workspace\+For\+Vertex().
+
+
+\begin{DoxyCode}
+503 \{
+504   \textcolor{comment}{// clear b vector}
+505 \textcolor{preprocessor}{# ifdef G2O\_OPENMP}
+506 \textcolor{preprocessor}{# pragma omp parallel for default (shared) if (\_optimizer->indexMapping().size() > 1000)}
+507 \textcolor{preprocessor}{# endif}
+508   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < static\_cast<int>(\hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}().size()); ++i) \{
+509     OptimizableGraph::Vertex* v=\hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}()[i];
+510     assert(v);
+511     v->clearQuadraticForm();
+512   \}
+513   \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_af14b7aaa588b339f2c06793fcc0d4e09}{clear}();
+514   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_ab375a5fac964182442f38288bd8a103a}{\_doSchur}) \{
+515     \hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}->\hyperlink{classg2o_1_1SparseBlockMatrix_af14b7aaa588b339f2c06793fcc0d4e09}{clear}();
+516     \hyperlink{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}{\_Hpl}->\hyperlink{classg2o_1_1SparseBlockMatrix_af14b7aaa588b339f2c06793fcc0d4e09}{clear}();
+517   \}
+518 
+519   \textcolor{comment}{// resetting the terms for the pairwise constraints}
+520   \textcolor{comment}{// built up the current system by storing the Hessian blocks in the edges and vertices}
+521 \textcolor{preprocessor}{# ifndef G2O\_OPENMP}
+522   \textcolor{comment}{// no threading, we do not need to copy the workspace}
+523   JacobianWorkspace& jacobianWorkspace = \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{structg2o_1_1OptimizableGraph_aa669dbd1d6e34e49fecda711ff1b78c6}{jacobianWorkspace}();
+524 \textcolor{preprocessor}{# else}
+525   \textcolor{comment}{// if running with threads need to produce copies of the workspace for each thread}
+526   JacobianWorkspace jacobianWorkspace = \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{structg2o_1_1OptimizableGraph_aa669dbd1d6e34e49fecda711ff1b78c6}{jacobianWorkspace}();
+527 \textcolor{preprocessor}{# pragma omp parallel for default (shared) firstprivate(jacobianWorkspace) if
+       (\_optimizer->activeEdges().size() > 100)}
+528 \textcolor{preprocessor}{# endif}
+529   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k < static\_cast<int>(\hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_aef20b7dd401862d572a851349d1bc124}{activeEdges}().size()); ++k) \{
+530     OptimizableGraph::Edge* e = \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_aef20b7dd401862d572a851349d1bc124}{activeEdges}()[k];
+531     e->linearizeOplus(jacobianWorkspace); \textcolor{comment}{// jacobian of the nodes' oplus (manifold)}
+532     e->constructQuadraticForm();
+533 \textcolor{preprocessor}{#  ifndef NDEBUG}
+534     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < e->vertices().size(); ++i) \{
+535       \textcolor{keyword}{const} OptimizableGraph::Vertex* v = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }OptimizableGraph::Vertex*\textcolor{keyword}{>}(e->vertex(i));
+536       \textcolor{keywordflow}{if} (! v->fixed()) \{
+537         \textcolor{keywordtype}{bool} hasANan = \hyperlink{namespaceg2o_a123840a60e0d1dde58088d15a1e1fffa}{arrayHasNaN}(jacobianWorkspace.workspaceForVertex(i), e->dimension() * v->
+      dimension());
+538         \textcolor{keywordflow}{if} (hasANan) \{
+539           cerr << \textcolor{stringliteral}{"buildSystem(): NaN within Jacobian for edge "} << e << \textcolor{stringliteral}{" for vertex "} << i << endl;
+540           \textcolor{keywordflow}{break};
+541         \}
+542       \}
+543     \}
+544 \textcolor{preprocessor}{#  endif}
+545   \}
+546 
+547   \textcolor{comment}{// flush the current system in a sparse block matrix}
+548 \textcolor{preprocessor}{# ifdef G2O\_OPENMP}
+549 \textcolor{preprocessor}{# pragma omp parallel for default (shared) if (\_optimizer->indexMapping().size() > 1000)}
+550 \textcolor{preprocessor}{# endif}
+551   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < static\_cast<int>(\hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}().size()); ++i) \{
+552     OptimizableGraph::Vertex* v=\hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}()[i];
+553     \textcolor{keywordtype}{int} iBase = v->colInHessian();
+554     \textcolor{keywordflow}{if} (v->marginalized())
+555       iBase+=\hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses};
+556     v->copyB(\hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b}+iBase);
+557   \}
+558 
+559   \textcolor{keywordflow}{return} 0;
+560 \}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!compute\+Marginals@{compute\+Marginals}}
+\index{compute\+Marginals@{compute\+Marginals}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{compute\+Marginals(\+Sparse\+Block\+Matrix$<$ Matrix\+Xd $>$ \&spinv, const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices)}{computeMarginals(SparseBlockMatrix< MatrixXd > &spinv, const std::vector< std::pair< int, int > > &blockIndices)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ bool {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::compute\+Marginals (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ \&}]{spinv, }
+\item[{const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&}]{block\+Indices}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_ac21cd7e2c9b8a1414f7a2dccb0d30a0e}{}\label{classg2o_1_1BlockSolver_ac21cd7e2c9b8a1414f7a2dccb0d30a0e}
+computes the block diagonal elements of the pattern specified in the input and stores them in given \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix} 
+
+Implements \hyperlink{classg2o_1_1Solver_afc33768e6c024e11d9e3c9d938b59b7f}{g2o\+::\+Solver}.
+
+
+
+Definition at line 490 of file block\+\_\+solver.\+hpp.
+
+
+
+References g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpp, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+linear\+Solver, g2o\+::get\+\_\+monotonic\+\_\+time(), g2o\+::\+G2\+O\+Batch\+Statistics\+::global\+Stats(), g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$\+::solve\+Pattern(), and g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Marginals.
+
+
+\begin{DoxyCode}
+491 \{
+492   \textcolor{keywordtype}{double} t = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+493   \textcolor{keywordtype}{bool} ok = \hyperlink{classg2o_1_1BlockSolver_a676a4ef473ccaecb23050284e19659af}{\_linearSolver}->\hyperlink{classg2o_1_1LinearSolver_adc74484f72bbe373622581fd597c1be3}{solvePattern}(spinv, blockIndices, *
+      \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp});
+494   G2OBatchStatistics* globalStats = \hyperlink{structg2o_1_1G2OBatchStatistics_a06f9c667d8b48b8f0023e27011818b64}{G2OBatchStatistics::globalStats}();
+495   \textcolor{keywordflow}{if} (globalStats) \{
+496     globalStats->timeMarginals = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}() - t;
+497   \}
+498   \textcolor{keywordflow}{return} ok;
+499 \}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{deallocate()}{deallocate()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ void {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::deallocate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_a1877467844b7b9ab51bd6600e3a93eb0}{}\label{classg2o_1_1BlockSolver_a1877467844b7b9ab51bd6600e3a93eb0}
+
+
+Definition at line 95 of file block\+\_\+solver.\+hpp.
+
+
+
+References g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+bschur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+coefficients, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+D\+Inv\+Schur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hll, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpl, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpl\+C\+CS, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpp, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hschur, and g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hschur\+Transposed\+C\+CS.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::$\sim$\+Block\+Solver().
+
+
+\begin{DoxyCode}
+96 \{
+97   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp})\{
+98     \textcolor{keyword}{delete} \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp};
+99     \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}=0;
+100   \}
+101   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll})\{
+102     \textcolor{keyword}{delete} \hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll};
+103     \hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}=0;
+104   \}
+105   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}{\_Hpl})\{
+106     \textcolor{keyword}{delete} \hyperlink{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}{\_Hpl};
+107     \hyperlink{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}{\_Hpl} = 0;
+108   \}
+109   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur})\{
+110     \textcolor{keyword}{delete} \hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur};
+111     \hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur}=0;
+112   \}
+113   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_ad6a1a8f17c8fb854962a8204c79bc981}{\_DInvSchur})\{
+114     \textcolor{keyword}{delete} \hyperlink{classg2o_1_1BlockSolver_ad6a1a8f17c8fb854962a8204c79bc981}{\_DInvSchur};
+115     \hyperlink{classg2o_1_1BlockSolver_ad6a1a8f17c8fb854962a8204c79bc981}{\_DInvSchur}=0;
+116   \}
+117   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_a416f480d4b27d7f8962ae7ae363f2e32}{\_coefficients}) \{
+118     \textcolor{keyword}{delete}[] \hyperlink{classg2o_1_1BlockSolver_a416f480d4b27d7f8962ae7ae363f2e32}{\_coefficients};
+119     \hyperlink{classg2o_1_1BlockSolver_a416f480d4b27d7f8962ae7ae363f2e32}{\_coefficients} = 0;
+120   \}
+121   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_aafddeb1d0a4218fc9c3c77169e20f81a}{\_bschur}) \{
+122     \textcolor{keyword}{delete}[] \hyperlink{classg2o_1_1BlockSolver_aafddeb1d0a4218fc9c3c77169e20f81a}{\_bschur};
+123     \hyperlink{classg2o_1_1BlockSolver_aafddeb1d0a4218fc9c3c77169e20f81a}{\_bschur} = 0;
+124   \}
+125   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_ab54eb7bb13f8b3a8a5f135a98f2050ec}{\_HplCCS}) \{
+126     \textcolor{keyword}{delete} \hyperlink{classg2o_1_1BlockSolver_ab54eb7bb13f8b3a8a5f135a98f2050ec}{\_HplCCS};
+127     \hyperlink{classg2o_1_1BlockSolver_ab54eb7bb13f8b3a8a5f135a98f2050ec}{\_HplCCS} = 0;
+128   \}
+129   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_acea4b8ea8db5a29b63bea4bc568b0b26}{\_HschurTransposedCCS}) \{
+130     \textcolor{keyword}{delete} \hyperlink{classg2o_1_1BlockSolver_acea4b8ea8db5a29b63bea4bc568b0b26}{\_HschurTransposedCCS};
+131     \hyperlink{classg2o_1_1BlockSolver_acea4b8ea8db5a29b63bea4bc568b0b26}{\_HschurTransposedCCS} = 0;
+132   \}
+133 \}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!init@{init}}
+\index{init@{init}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{init(\+Sparse\+Optimizer $\ast$optmizer, bool online=false)}{init(SparseOptimizer *optmizer, bool online=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ bool {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::init (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Optimizer} $\ast$}]{optimizer, }
+\item[{bool}]{online = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_a8bf01018abc3bfddfa3b29a380a1d6cb}{}\label{classg2o_1_1BlockSolver_a8bf01018abc3bfddfa3b29a380a1d6cb}
+initialize the solver, called once before the first iteration 
+
+Implements \hyperlink{classg2o_1_1Solver_a532174e1ee53642880d2d59c128b037b}{g2o\+::\+Solver}.
+
+
+
+Definition at line 607 of file block\+\_\+solver.\+hpp.
+
+
+
+References g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hll, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpl, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpp, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+linear\+Solver, g2o\+::\+Solver\+::\+\_\+optimizer, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::clear(), g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$\+::init(), and g2o\+::\+Solver\+::optimizer().
+
+
+\begin{DoxyCode}
+608 \{
+609   \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer} = \hyperlink{classg2o_1_1Solver_a9ea585f131ab02ae1e0c0192126f0b5f}{optimizer};
+610   \textcolor{keywordflow}{if} (! online) \{
+611     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp})
+612       \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_af14b7aaa588b339f2c06793fcc0d4e09}{clear}();
+613     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}{\_Hpl})
+614       \hyperlink{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}{\_Hpl}->\hyperlink{classg2o_1_1SparseBlockMatrix_af14b7aaa588b339f2c06793fcc0d4e09}{clear}();
+615     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll})
+616       \hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}->\hyperlink{classg2o_1_1SparseBlockMatrix_af14b7aaa588b339f2c06793fcc0d4e09}{clear}();
+617   \}
+618   \hyperlink{classg2o_1_1BlockSolver_a676a4ef473ccaecb23050284e19659af}{\_linearSolver}->\hyperlink{classg2o_1_1LinearSolver_aebd961a94ef6de1bc66d2ca41dd2b17b}{init}();
+619   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+620 \}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!linear\+Solver@{linear\+Solver}}
+\index{linear\+Solver@{linear\+Solver}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{linear\+Solver() const }{linearSolver() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ {\bf Linear\+Solver}$<${\bf Pose\+Matrix\+Type}$>$$\ast$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::linear\+Solver (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1BlockSolver_adb09637f5f87327d26928f672d6caadf}{}\label{classg2o_1_1BlockSolver_adb09637f5f87327d26928f672d6caadf}
+
+
+Definition at line 135 of file block\+\_\+solver.\+h.
+
+
+\begin{DoxyCode}
+135 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1BlockSolver_a676a4ef473ccaecb23050284e19659af}{\_linearSolver};\}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!multiply\+Hessian@{multiply\+Hessian}}
+\index{multiply\+Hessian@{multiply\+Hessian}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{multiply\+Hessian(double $\ast$dest, const double $\ast$src) const }{multiplyHessian(double *dest, const double *src) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ virtual void {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::multiply\+Hessian (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{dest, }
+\item[{const double $\ast$}]{src}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_a615892075357273ec8bb06e101d9155b}{}\label{classg2o_1_1BlockSolver_a615892075357273ec8bb06e101d9155b}
+compute dest = H $\ast$ src 
+
+Implements \hyperlink{classg2o_1_1BlockSolverBase_a4ff7072751bfa1b7fcf91f8219e18e13}{g2o\+::\+Block\+Solver\+Base}.
+
+
+
+Definition at line 142 of file block\+\_\+solver.\+h.
+
+
+\begin{DoxyCode}
+142 \{ \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_ab162724d457b342e675c535dd78165cd}{multiplySymmetricUpperTriangle}(dest, src);\}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!resize@{resize}}
+\index{resize@{resize}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{resize(int $\ast$block\+Pose\+Indices, int num\+Pose\+Blocks, int $\ast$block\+Landmark\+Indices, int num\+Landmark\+Blocks, int total\+Dim)}{resize(int *blockPoseIndices, int numPoseBlocks, int *blockLandmarkIndices, int numLandmarkBlocks, int totalDim)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ void {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::resize (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{block\+Pose\+Indices, }
+\item[{int}]{num\+Pose\+Blocks, }
+\item[{int $\ast$}]{block\+Landmark\+Indices, }
+\item[{int}]{num\+Landmark\+Blocks, }
+\item[{int}]{total\+Dim}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_a0075af2df18364cf99fd80f813b8ce4b}{}\label{classg2o_1_1BlockSolver_a0075af2df18364cf99fd80f813b8ce4b}
+
+
+Definition at line 65 of file block\+\_\+solver.\+hpp.
+
+
+
+References g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+bschur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+coefficients, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+D\+Inv\+Schur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+do\+Schur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hll, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpl, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpl\+C\+CS, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpp, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hschur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hschur\+Transposed\+C\+CS, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+size\+Poses, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::col\+Block\+Indices(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::deallocate(), g2o\+::\+Solver\+::resize\+Vector(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::row\+Block\+Indices().
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure().
+
+
+\begin{DoxyCode}
+68 \{
+69   \hyperlink{classg2o_1_1BlockSolver_a1877467844b7b9ab51bd6600e3a93eb0}{deallocate}();
+70 
+71   \hyperlink{classg2o_1_1Solver_ad1f85839e85f3e2c49112fb7e2b843ad}{resizeVector}(s);
+72 
+73   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_ab375a5fac964182442f38288bd8a103a}{\_doSchur}) \{
+74     \textcolor{comment}{// the following two are only used in schur}
+75     assert(\hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses} > 0 && \textcolor{stringliteral}{"allocating with wrong size"});
+76     \hyperlink{classg2o_1_1BlockSolver_a416f480d4b27d7f8962ae7ae363f2e32}{\_coefficients} = \textcolor{keyword}{new} \textcolor{keywordtype}{double} [s];
+77     \hyperlink{classg2o_1_1BlockSolver_aafddeb1d0a4218fc9c3c77169e20f81a}{\_bschur} = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[\hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses}];
+78   \}
+79 
+80   \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}=\textcolor{keyword}{new} \hyperlink{classg2o_1_1BlockSolver_a0e7f862860a1e3391cec3cfaf69c48be}{PoseHessianType}(blockPoseIndices, blockPoseIndices, numPoseBlocks, 
+      numPoseBlocks);
+81   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1BlockSolver_ab375a5fac964182442f38288bd8a103a}{\_doSchur}) \{
+82     \hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur}=\textcolor{keyword}{new} \hyperlink{classg2o_1_1BlockSolver_a0e7f862860a1e3391cec3cfaf69c48be}{PoseHessianType}(blockPoseIndices, blockPoseIndices, numPoseBlocks, 
+      numPoseBlocks);
+83     \hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}=\textcolor{keyword}{new} \hyperlink{classg2o_1_1BlockSolver_a465b1252905d90fd69b4243716620c45}{LandmarkHessianType}(blockLandmarkIndices, blockLandmarkIndices, 
+      numLandmarkBlocks, numLandmarkBlocks);
+84     \hyperlink{classg2o_1_1BlockSolver_ad6a1a8f17c8fb854962a8204c79bc981}{\_DInvSchur} = \textcolor{keyword}{new} SparseBlockMatrixDiagonal<LandmarkMatrixType>(
+      \hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}->\hyperlink{classg2o_1_1SparseBlockMatrix_adfaf13a5f3134205a58c8346a09a672a}{colBlockIndices}());
+85     \hyperlink{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}{\_Hpl}=\textcolor{keyword}{new} \hyperlink{classg2o_1_1BlockSolver_aed8b44e394d2f19ca03c87adf90cc97c}{PoseLandmarkHessianType}(blockPoseIndices, blockLandmarkIndices, 
+      numPoseBlocks, numLandmarkBlocks);
+86     \hyperlink{classg2o_1_1BlockSolver_ab54eb7bb13f8b3a8a5f135a98f2050ec}{\_HplCCS} = \textcolor{keyword}{new} SparseBlockMatrixCCS<PoseLandmarkMatrixType>(\_Hpl->rowBlockIndices(), \_Hpl->
+      colBlockIndices());
+87     \hyperlink{classg2o_1_1BlockSolver_acea4b8ea8db5a29b63bea4bc568b0b26}{\_HschurTransposedCCS} = \textcolor{keyword}{new} SparseBlockMatrixCCS<PoseMatrixType>(
+      \hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur}->\hyperlink{classg2o_1_1SparseBlockMatrix_adfaf13a5f3134205a58c8346a09a672a}{colBlockIndices}(), \hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur}->
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ab9f9e621c9bca7c660c61b3948b8ece3}{rowBlockIndices}());
+88 \textcolor{preprocessor}{#ifdef G2O\_OPENMP}
+89     \_coefficientsMutex.resize(numPoseBlocks);
+90 \textcolor{preprocessor}{#endif}
+91   \}
+92 \}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!restore\+Diagonal@{restore\+Diagonal}}
+\index{restore\+Diagonal@{restore\+Diagonal}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{restore\+Diagonal()}{restoreDiagonal()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ void {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::restore\+Diagonal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_a2136931d7aa2f54df5207556c4685809}{}\label{classg2o_1_1BlockSolver_a2136931d7aa2f54df5207556c4685809}
+restore a previosly made backup of the diagonal 
+
+Implements \hyperlink{classg2o_1_1Solver_a3c40dae9b999c4d18e57b02fd0e0ade2}{g2o\+::\+Solver}.
+
+
+
+Definition at line 592 of file block\+\_\+solver.\+hpp.
+
+
+
+References g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+diagonal\+Backup\+Landmark, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+diagonal\+Backup\+Pose, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hll, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpp, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+num\+Landmarks, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+num\+Poses, g2o\+::\+Solver\+::b(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block().
+
+
+\begin{DoxyCode}
+593 \{
+594   assert((\textcolor{keywordtype}{int}) \hyperlink{classg2o_1_1BlockSolver_a3cb6f86c522c2ea26478ad44b7c32f76}{\_diagonalBackupPose}.size() == \hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses} && \textcolor{stringliteral}{"Mismatch in
+       dimensions"});
+595   assert((\textcolor{keywordtype}{int}) \hyperlink{classg2o_1_1BlockSolver_a3bc5b19faa2c45e2c04a6743b3a083de}{\_diagonalBackupLandmark}.size() == 
+      \hyperlink{classg2o_1_1BlockSolver_ab98231b7ca8e6d7f138c33d26c6f4326}{\_numLandmarks} && \textcolor{stringliteral}{"Mismatch in dimensions"});
+596   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses}; ++i) \{
+597     \hyperlink{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{PoseMatrixType} *\hyperlink{classg2o_1_1Solver_a3212ad9d80f8f5ad15b72c2b55000095}{b}=\hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(i,i);
+598     b->diagonal() = \hyperlink{classg2o_1_1BlockSolver_a3cb6f86c522c2ea26478ad44b7c32f76}{\_diagonalBackupPose}[i];
+599   \}
+600   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classg2o_1_1BlockSolver_ab98231b7ca8e6d7f138c33d26c6f4326}{\_numLandmarks}; ++i) \{
+601     \hyperlink{classg2o_1_1BlockSolver_afd898a666343291129d37a979e23ded6}{LandmarkMatrixType} *b=\hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(i,i);
+602     b->diagonal() = \hyperlink{classg2o_1_1BlockSolver_a3bc5b19faa2c45e2c04a6743b3a083de}{\_diagonalBackupLandmark}[i];
+603   \}
+604 \}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!save\+Hessian@{save\+Hessian}}
+\index{save\+Hessian@{save\+Hessian}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{save\+Hessian(const std\+::string \&file\+Name) const }{saveHessian(const std::string &fileName) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ bool {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::save\+Hessian (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_a79adbc8926b11c564bdd8cf73a55b1ef}{}\label{classg2o_1_1BlockSolver_a79adbc8926b11c564bdd8cf73a55b1ef}
+
+
+write the hessian to disk using the specified file name 
+
+
+
+Implements \hyperlink{classg2o_1_1Solver_a14852543c4dc3f3e7088efe03aa135eb}{g2o\+::\+Solver}.
+
+
+
+Definition at line 629 of file block\+\_\+solver.\+hpp.
+
+
+
+References g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpp, and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::write\+Octave().
+
+
+\begin{DoxyCode}
+630 \{
+631   \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_a58a311fa5e66df880b29c8abb631474e}{writeOctave}(fileName.c\_str(), \textcolor{keyword}{true});
+632 \}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!schur@{schur}}
+\index{schur@{schur}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{schur()}{schur()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ virtual bool {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::schur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_a382173946f1dd929a625e3708c959883}{}\label{classg2o_1_1BlockSolver_a382173946f1dd929a625e3708c959883}
+
+
+should the solver perform the schur complement or not 
+
+
+
+Implements \hyperlink{classg2o_1_1Solver_acc8d6a8ae7847a157d4a2f44aea14c74}{g2o\+::\+Solver}.
+
+
+
+Definition at line 132 of file block\+\_\+solver.\+h.
+
+
+\begin{DoxyCode}
+132 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1BlockSolver_ab375a5fac964182442f38288bd8a103a}{\_doSchur};\}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!set\+Lambda@{set\+Lambda}}
+\index{set\+Lambda@{set\+Lambda}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Lambda(double lambda, bool backup=false)}{setLambda(double lambda, bool backup=false)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ bool {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::set\+Lambda (
+\begin{DoxyParamCaption}
+\item[{double}]{lambda, }
+\item[{bool}]{backup = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_acc63a23e5b35e4f72d46dc22719aa56f}{}\label{classg2o_1_1BlockSolver_acc63a23e5b35e4f72d46dc22719aa56f}
+update the system while performing Levenberg, i.\+e., modifying the diagonal components of A by doing += lambda along the main diagonal of the Matrix. Note that this function may be called with a positive and a negative lambda. The latter is used to undo a former modification. If backup is true, then the solver should store a backup of the diagonal, which can be restored by \hyperlink{classg2o_1_1BlockSolver_a2136931d7aa2f54df5207556c4685809}{restore\+Diagonal()} 
+
+Implements \hyperlink{classg2o_1_1Solver_a94a0d5196c7859c6c37fc2368ac56be3}{g2o\+::\+Solver}.
+
+
+
+Definition at line 564 of file block\+\_\+solver.\+hpp.
+
+
+
+References g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+diagonal\+Backup\+Landmark, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+diagonal\+Backup\+Pose, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hll, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpp, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+num\+Landmarks, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+num\+Poses, g2o\+::\+Solver\+::b(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block().
+
+
+\begin{DoxyCode}
+565 \{
+566   \textcolor{keywordflow}{if} (backup) \{
+567     \hyperlink{classg2o_1_1BlockSolver_a3cb6f86c522c2ea26478ad44b7c32f76}{\_diagonalBackupPose}.resize(\hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses});
+568     \hyperlink{classg2o_1_1BlockSolver_a3bc5b19faa2c45e2c04a6743b3a083de}{\_diagonalBackupLandmark}.resize(\hyperlink{classg2o_1_1BlockSolver_ab98231b7ca8e6d7f138c33d26c6f4326}{\_numLandmarks});
+569   \}
+570 \textcolor{preprocessor}{# ifdef G2O\_OPENMP}
+571 \textcolor{preprocessor}{# pragma omp parallel for default (shared) if (\_numPoses > 100)}
+572 \textcolor{preprocessor}{# endif}
+573   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses}; ++i) \{
+574     \hyperlink{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{PoseMatrixType} *\hyperlink{classg2o_1_1Solver_a3212ad9d80f8f5ad15b72c2b55000095}{b}=\hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(i,i);
+575     \textcolor{keywordflow}{if} (backup)
+576       \hyperlink{classg2o_1_1BlockSolver_a3cb6f86c522c2ea26478ad44b7c32f76}{\_diagonalBackupPose}[i] = b->diagonal();
+577     b->diagonal().array() += lambda;
+578   \}
+579 \textcolor{preprocessor}{# ifdef G2O\_OPENMP}
+580 \textcolor{preprocessor}{# pragma omp parallel for default (shared) if (\_numLandmarks > 100)}
+581 \textcolor{preprocessor}{# endif}
+582   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classg2o_1_1BlockSolver_ab98231b7ca8e6d7f138c33d26c6f4326}{\_numLandmarks}; ++i) \{
+583     \hyperlink{classg2o_1_1BlockSolver_afd898a666343291129d37a979e23ded6}{LandmarkMatrixType} *b=\hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(i,i);
+584     \textcolor{keywordflow}{if} (backup)
+585       \hyperlink{classg2o_1_1BlockSolver_a3bc5b19faa2c45e2c04a6743b3a083de}{\_diagonalBackupLandmark}[i] = b->diagonal();
+586     b->diagonal().array() += lambda;
+587   \}
+588   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+589 \}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!set\+Schur@{set\+Schur}}
+\index{set\+Schur@{set\+Schur}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Schur(bool s)}{setSchur(bool s)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ virtual void {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::set\+Schur (
+\begin{DoxyParamCaption}
+\item[{bool}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_a6dd8e7e7a099410005cb96ff874d8866}{}\label{classg2o_1_1BlockSolver_a6dd8e7e7a099410005cb96ff874d8866}
+
+
+Implements \hyperlink{classg2o_1_1Solver_a30134c828054375b1cc16ede2a879761}{g2o\+::\+Solver}.
+
+
+
+Definition at line 133 of file block\+\_\+solver.\+h.
+
+
+\begin{DoxyCode}
+133 \{ \hyperlink{classg2o_1_1BlockSolver_ab375a5fac964182442f38288bd8a103a}{\_doSchur} = s;\}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!set\+Write\+Debug@{set\+Write\+Debug}}
+\index{set\+Write\+Debug@{set\+Write\+Debug}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Write\+Debug(bool write\+Debug)}{setWriteDebug(bool writeDebug)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ void {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::set\+Write\+Debug (
+\begin{DoxyParamCaption}
+\item[{bool}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_a1bff5dc13e3408fa76c019347104acd0}{}\label{classg2o_1_1BlockSolver_a1bff5dc13e3408fa76c019347104acd0}
+write debug output of the Hessian if system is not positive definite 
+
+Implements \hyperlink{classg2o_1_1Solver_ad3ef2a487d991363ba86af2840b0d7cd}{g2o\+::\+Solver}.
+
+
+
+Definition at line 623 of file block\+\_\+solver.\+hpp.
+
+
+
+References g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+linear\+Solver, and g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$\+::set\+Write\+Debug().
+
+
+\begin{DoxyCode}
+624 \{
+625   \hyperlink{classg2o_1_1BlockSolver_a676a4ef473ccaecb23050284e19659af}{\_linearSolver}->\hyperlink{classg2o_1_1LinearSolver_a969c406ccacc38705b2a88f5ed23cb9a}{setWriteDebug}(\hyperlink{classg2o_1_1BlockSolver_a5a127b36e9f6ec45b2b1d39c22a9901f}{writeDebug});
+626 \}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!solve@{solve}}
+\index{solve@{solve}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{solve()}{solve()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ bool {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::solve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_a589a75a131cce100c1945ad2786214d7}{}\label{classg2o_1_1BlockSolver_a589a75a131cce100c1945ad2786214d7}
+solve Ax = b 
+
+Implements \hyperlink{classg2o_1_1Solver_a9c359a886db57f2f81e54a2113f3bd38}{g2o\+::\+Solver}.
+
+
+
+Definition at line 354 of file block\+\_\+solver.\+hpp.
+
+
+
+References g2o\+::\+Solver\+::\+\_\+b, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+bschur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+coefficients, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+D\+Inv\+Schur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+do\+Schur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hll, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpl\+C\+CS, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpp, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hschur, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hschur\+Transposed\+C\+CS, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+linear\+Solver, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+size\+Landmarks, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+size\+Poses, g2o\+::\+Solver\+::\+\_\+x, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::add(), g2o\+::\+Sparse\+Block\+Matrix\+C\+C\+S$<$ Matrix\+Type $>$\+::block\+Cols(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block\+Cols(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::clear(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols(), g2o\+::\+Sparse\+Block\+Matrix\+Diagonal$<$ Matrix\+Type $>$\+::diagonal(), g2o\+::get\+\_\+monotonic\+\_\+time(), g2o\+::\+G2\+O\+Batch\+Statistics\+::global\+Stats(), g2o\+::\+G2\+O\+Batch\+Statistics\+::hessian\+Dimension, g2o\+::\+G2\+O\+Batch\+Statistics\+::hessian\+Landmark\+Dimension, g2o\+::\+G2\+O\+Batch\+Statistics\+::hessian\+Pose\+Dimension, g2o\+::\+Sparse\+Block\+Matrix\+Diagonal$<$ Matrix\+Type $>$\+::multiply(), g2o\+::\+Sparse\+Block\+Matrix\+C\+C\+S$<$ Matrix\+Type $>$\+::right\+Multiply(), g2o\+::\+Sparse\+Block\+Matrix\+C\+C\+S$<$ Matrix\+Type $>$\+::row\+Base\+Of\+Block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::row\+Base\+Of\+Block(), g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$\+::solve(), g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Linear\+Solver, and g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Schur\+Complement.
+
+
+\begin{DoxyCode}
+354                                \{
+355   \textcolor{comment}{//cerr << \_\_PRETTY\_FUNCTION\_\_ << endl;}
+356   \textcolor{keywordflow}{if} (! \hyperlink{classg2o_1_1BlockSolver_ab375a5fac964182442f38288bd8a103a}{\_doSchur})\{
+357     \textcolor{keywordtype}{double} t=\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+358     \textcolor{keywordtype}{bool} ok = \hyperlink{classg2o_1_1BlockSolver_a676a4ef473ccaecb23050284e19659af}{\_linearSolver}->\hyperlink{classg2o_1_1LinearSolver_aa44b40826d50203c8ce2ff258c34e030}{solve}(*\hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}, \hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\_x}, \hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b});
+359     G2OBatchStatistics* globalStats = \hyperlink{structg2o_1_1G2OBatchStatistics_a06f9c667d8b48b8f0023e27011818b64}{G2OBatchStatistics::globalStats}();
+360     \textcolor{keywordflow}{if} (globalStats) \{
+361       globalStats->timeLinearSolver = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}() - t;
+362       globalStats->hessianDimension = globalStats->hessianPoseDimension = \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->
+      \hyperlink{classg2o_1_1SparseBlockMatrix_ab854ca59f370d93229852e32a7b49d3e}{cols}();
+363     \}
+364     \textcolor{keywordflow}{return} ok;
+365   \}
+366 
+367   \textcolor{comment}{// schur thing}
+368 
+369   \textcolor{comment}{// backup the coefficient matrix}
+370   \textcolor{keywordtype}{double} t=\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+371 
+372   \textcolor{comment}{// \_Hschur = \_Hpp, but keeping the pattern of \_Hschur}
+373   \hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur}->\hyperlink{classg2o_1_1SparseBlockMatrix_af14b7aaa588b339f2c06793fcc0d4e09}{clear}();
+374   \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_a47d026462af0a744cdba6cbf9caa0b3b}{add}(\hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur});
+375 
+376   \textcolor{comment}{//\_DInvSchur->clear();}
+377   memset (\hyperlink{classg2o_1_1BlockSolver_a416f480d4b27d7f8962ae7ae363f2e32}{\_coefficients}, 0, \hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+378 \textcolor{preprocessor}{# ifdef G2O\_OPENMP}
+379 \textcolor{preprocessor}{# pragma omp parallel for default (shared) schedule(dynamic, 10)}
+380 \textcolor{preprocessor}{# endif}
+381   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} landmarkIndex = 0; landmarkIndex < static\_cast<int>(\hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}->
+      \hyperlink{classg2o_1_1SparseBlockMatrix_a8e53797223fff106487d0b0080a3e36e}{blockCols}().size()); ++landmarkIndex) \{
+382     \textcolor{keyword}{const} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_aaa6ca1ae454ed70f62992b6401645f4e}{SparseBlockMatrix<LandmarkMatrixType>::IntBlockMap}
+      & marginalizeColumn = \hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}->\hyperlink{classg2o_1_1SparseBlockMatrix_a8e53797223fff106487d0b0080a3e36e}{blockCols}()[landmarkIndex];
+383     assert(marginalizeColumn.size() == 1 && \textcolor{stringliteral}{"more than one block in \_Hll column"});
+384 
+385     \textcolor{comment}{// calculate inverse block for the landmark}
+386     \textcolor{keyword}{const} \hyperlink{classg2o_1_1BlockSolver_afd898a666343291129d37a979e23ded6}{LandmarkMatrixType} * D = marginalizeColumn.begin()->second;
+387     assert (D && D->rows()==D->cols() && \textcolor{stringliteral}{"Error in landmark matrix"});
+388     \hyperlink{classg2o_1_1BlockSolver_afd898a666343291129d37a979e23ded6}{LandmarkMatrixType}& Dinv = \hyperlink{classg2o_1_1BlockSolver_ad6a1a8f17c8fb854962a8204c79bc981}{\_DInvSchur}->\hyperlink{classg2o_1_1SparseBlockMatrixDiagonal_a762097ac116728fec0cc64cf05610a96}{diagonal}()[landmarkIndex];
+389     Dinv = D->inverse();
+390 
+391     \hyperlink{classg2o_1_1BlockSolver_a19ade5e432f32e46557192ae75074304}{LandmarkVectorType}  db(D->rows());
+392     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<D->rows(); ++j) \{
+393       db[j]=\hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b}[\hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}->\hyperlink{classg2o_1_1SparseBlockMatrix_a176a2dbe00711e248ea25dc1995c6b4c}{rowBaseOfBlock}(landmarkIndex) + 
+      \hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses} + j];
+394     \}
+395     db=Dinv*db;
+396 
+397     assert((\textcolor{keywordtype}{size\_t})landmarkIndex < \_HplCCS->blockCols().size() && \textcolor{stringliteral}{"Index out of bounds"});
+398     \textcolor{keyword}{const} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrixCCS_a4fc5dfe0a9ff9bd62065ca4b17f25bc1}{SparseBlockMatrixCCS<PoseLandmarkMatrixType>::SparseColumn}
+      & landmarkColumn = \hyperlink{classg2o_1_1BlockSolver_ab54eb7bb13f8b3a8a5f135a98f2050ec}{\_HplCCS}->\hyperlink{classg2o_1_1SparseBlockMatrixCCS_ae43c6599984015bdc3d481266e1555ea}{blockCols}()[landmarkIndex];
+399 
+400     \textcolor{keywordflow}{for} (\textcolor{keyword}{typename} SparseBlockMatrixCCS<PoseLandmarkMatrixType>::SparseColumn::const\_iterator it\_outer = 
+      landmarkColumn.begin();
+401         it\_outer != landmarkColumn.end(); ++it\_outer) \{
+402       \textcolor{keywordtype}{int} i1 = it\_outer->row;
+403 
+404       \textcolor{keyword}{const} \hyperlink{classg2o_1_1BlockSolver_a96bf60b923f816086cd2f24de38736ec}{PoseLandmarkMatrixType}* Bi = it\_outer->block;
+405       assert(Bi);
+406 
+407       \hyperlink{classg2o_1_1BlockSolver_a96bf60b923f816086cd2f24de38736ec}{PoseLandmarkMatrixType} BDinv = (*Bi)*(Dinv);
+408       assert(\hyperlink{classg2o_1_1BlockSolver_ab54eb7bb13f8b3a8a5f135a98f2050ec}{\_HplCCS}->\hyperlink{classg2o_1_1SparseBlockMatrixCCS_a8b35a98d3343554699811f682042a647}{rowBaseOfBlock}(i1) < \hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses} && \textcolor{stringliteral}{"Index out of
+       bounds"});
+409       \textcolor{keyword}{typename} PoseVectorType::MapType Bb(&\hyperlink{classg2o_1_1BlockSolver_a416f480d4b27d7f8962ae7ae363f2e32}{\_coefficients}[\hyperlink{classg2o_1_1BlockSolver_ab54eb7bb13f8b3a8a5f135a98f2050ec}{\_HplCCS}->
+      \hyperlink{classg2o_1_1SparseBlockMatrixCCS_a8b35a98d3343554699811f682042a647}{rowBaseOfBlock}(i1)], Bi->rows());
+410 \textcolor{preprocessor}{#    ifdef G2O\_OPENMP}
+411       ScopedOpenMPMutex mutexLock(&\_coefficientsMutex[i1]);
+412 \textcolor{preprocessor}{#    endif}
+413       Bb.noalias() += (*Bi)*db;
+414 
+415       assert(i1 >= 0 && i1 < static\_cast<int>(\hyperlink{classg2o_1_1BlockSolver_acea4b8ea8db5a29b63bea4bc568b0b26}{\_HschurTransposedCCS}->
+      \hyperlink{classg2o_1_1SparseBlockMatrixCCS_ae43c6599984015bdc3d481266e1555ea}{blockCols}().size()) && \textcolor{stringliteral}{"Index out of bounds"});
+416       \textcolor{keyword}{typename} SparseBlockMatrixCCS<PoseMatrixType>::SparseColumn::iterator targetColumnIt = 
+      \hyperlink{classg2o_1_1BlockSolver_acea4b8ea8db5a29b63bea4bc568b0b26}{\_HschurTransposedCCS}->\hyperlink{classg2o_1_1SparseBlockMatrixCCS_ae43c6599984015bdc3d481266e1555ea}{blockCols}()[i1].begin();
+417 
+418       \textcolor{keyword}{typename} SparseBlockMatrixCCS<PoseLandmarkMatrixType>::RowBlock aux(i1, 0);
+419       \textcolor{keyword}{typename} SparseBlockMatrixCCS<PoseLandmarkMatrixType>::SparseColumn::const\_iterator it\_inner = 
+      lower\_bound(landmarkColumn.begin(), landmarkColumn.end(), aux);
+420       \textcolor{keywordflow}{for} (; it\_inner != landmarkColumn.end(); ++it\_inner) \{
+421         \textcolor{keywordtype}{int} i2 = it\_inner->row;
+422         \textcolor{keyword}{const} \hyperlink{classg2o_1_1BlockSolver_a96bf60b923f816086cd2f24de38736ec}{PoseLandmarkMatrixType}* Bj = it\_inner->block;
+423         assert(Bj); 
+424         \textcolor{keywordflow}{while} (targetColumnIt->row < i2 \textcolor{comment}{/*&& targetColumnIt != \_HschurTransposedCCS->blockCols()[i1].end()
+      */})
+425           ++targetColumnIt;
+426         assert(targetColumnIt != \hyperlink{classg2o_1_1BlockSolver_acea4b8ea8db5a29b63bea4bc568b0b26}{\_HschurTransposedCCS}->
+      \hyperlink{classg2o_1_1SparseBlockMatrixCCS_ae43c6599984015bdc3d481266e1555ea}{blockCols}()[i1].end() && targetColumnIt->row == i2 && \textcolor{stringliteral}{"invalid iterator, something wrong with the
+       matrix structure"});
+427         \hyperlink{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{PoseMatrixType}* Hi1i2 = targetColumnIt->block;\textcolor{comment}{//\_Hschur->block(i1,i2);}
+428         assert(Hi1i2);
+429         (*Hi1i2).noalias() -= BDinv*Bj->transpose();
+430       \}
+431     \}
+432   \}
+433   \textcolor{comment}{//cerr << "Solve [marginalize] = " <<  get\_monotonic\_time()-t << endl;}
+434 
+435   \textcolor{comment}{// \_bschur = \_b for calling solver, and not touching \_b}
+436   memcpy(\hyperlink{classg2o_1_1BlockSolver_aafddeb1d0a4218fc9c3c77169e20f81a}{\_bschur}, \hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b}, \hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses} * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+437   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses}; ++i)\{
+438     \hyperlink{classg2o_1_1BlockSolver_aafddeb1d0a4218fc9c3c77169e20f81a}{\_bschur}[i]-=\hyperlink{classg2o_1_1BlockSolver_a416f480d4b27d7f8962ae7ae363f2e32}{\_coefficients}[i];
+439   \}
+440 
+441   G2OBatchStatistics* globalStats = \hyperlink{structg2o_1_1G2OBatchStatistics_a06f9c667d8b48b8f0023e27011818b64}{G2OBatchStatistics::globalStats}();
+442   \textcolor{keywordflow}{if} (globalStats)\{
+443     globalStats->timeSchurComplement = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}() - t;
+444   \}
+445 
+446   t=\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+447   \textcolor{keywordtype}{bool} solvedPoses = \hyperlink{classg2o_1_1BlockSolver_a676a4ef473ccaecb23050284e19659af}{\_linearSolver}->\hyperlink{classg2o_1_1LinearSolver_aa44b40826d50203c8ce2ff258c34e030}{solve}(*\hyperlink{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{\_Hschur}, \hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\_x}, 
+      \hyperlink{classg2o_1_1BlockSolver_aafddeb1d0a4218fc9c3c77169e20f81a}{\_bschur});
+448   \textcolor{keywordflow}{if} (globalStats) \{
+449     globalStats->timeLinearSolver = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}() - t;
+450     globalStats->hessianPoseDimension = \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_ab854ca59f370d93229852e32a7b49d3e}{cols}();
+451     globalStats->hessianLandmarkDimension = \hyperlink{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{\_Hll}->\hyperlink{classg2o_1_1SparseBlockMatrix_ab854ca59f370d93229852e32a7b49d3e}{cols}();
+452     globalStats->hessianDimension = globalStats->hessianPoseDimension + globalStats->
+      hessianLandmarkDimension;
+453   \}
+454   \textcolor{comment}{//cerr << "Solve [decompose and solve] = " <<  get\_monotonic\_time()-t << endl;}
+455 
+456   \textcolor{keywordflow}{if} (! solvedPoses)
+457     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+458 
+459   \textcolor{comment}{// \_x contains the solution for the poses, now applying it to the landmarks to get the new part of the}
+460   \textcolor{comment}{// solution;}
+461   \textcolor{keywordtype}{double}* xp = \hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\_x};
+462   \textcolor{keywordtype}{double}* cp = \hyperlink{classg2o_1_1BlockSolver_a416f480d4b27d7f8962ae7ae363f2e32}{\_coefficients};
+463 
+464   \textcolor{keywordtype}{double}* xl=\hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\_x}+\hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses};
+465   \textcolor{keywordtype}{double}* cl=\hyperlink{classg2o_1_1BlockSolver_a416f480d4b27d7f8962ae7ae363f2e32}{\_coefficients} + \hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses};
+466   \textcolor{keywordtype}{double}* bl=\hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b}+\hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses};
+467 
+468   \textcolor{comment}{// cp = -xp}
+469   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses}; ++i)
+470     cp[i]=-xp[i];
+471 
+472   \textcolor{comment}{// cl = bl}
+473   memcpy(cl,bl,\hyperlink{classg2o_1_1BlockSolver_a13a49b5aac8ae3b12ed0c349fc0788e7}{\_sizeLandmarks}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+474 
+475   \textcolor{comment}{// cl = bl - Bt * xp}
+476   \textcolor{comment}{//Bt->multiply(cl, cp);}
+477   \hyperlink{classg2o_1_1BlockSolver_ab54eb7bb13f8b3a8a5f135a98f2050ec}{\_HplCCS}->\hyperlink{classg2o_1_1SparseBlockMatrixCCS_a6d9393fa3950a7cefc7f9ca58ccede64}{rightMultiply}(cl, cp);
+478 
+479   \textcolor{comment}{// xl = Dinv * cl}
+480   memset(xl,0, \hyperlink{classg2o_1_1BlockSolver_a13a49b5aac8ae3b12ed0c349fc0788e7}{\_sizeLandmarks}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+481   \hyperlink{classg2o_1_1BlockSolver_ad6a1a8f17c8fb854962a8204c79bc981}{\_DInvSchur}->\hyperlink{classg2o_1_1SparseBlockMatrixDiagonal_a3b6da3a28659e6b86410885ce7297ce2}{multiply}(xl,cl);
+482   \textcolor{comment}{//\_DInvSchur->rightMultiply(xl,cl);}
+483   \textcolor{comment}{//cerr << "Solve [landmark delta] = " <<  get\_monotonic\_time()-t << endl;}
+484 
+485   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+486 \}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!supports\+Schur@{supports\+Schur}}
+\index{supports\+Schur@{supports\+Schur}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{supports\+Schur()}{supportsSchur()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ virtual bool {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::supports\+Schur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_a68dc822ce48e80ceacce69c7bd029674}{}\label{classg2o_1_1BlockSolver_a68dc822ce48e80ceacce69c7bd029674}
+does this solver support the Schur complement for solving a system consisting of poses and landmarks. Re-\/implemement in a derived solver, if your solver supports it. 
+
+Reimplemented from \hyperlink{classg2o_1_1Solver_a36c68f7bc0b8864ee7722bc3c06de554}{g2o\+::\+Solver}.
+
+
+
+Definition at line 131 of file block\+\_\+solver.\+h.
+
+
+\begin{DoxyCode}
+131 \{\textcolor{keywordflow}{return} \textcolor{keyword}{true};\}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!update\+Structure@{update\+Structure}}
+\index{update\+Structure@{update\+Structure}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{update\+Structure(const std\+::vector$<$ Hyper\+Graph\+::\+Vertex $\ast$ $>$ \&vset, const Hyper\+Graph\+::\+Edge\+Set \&edges)}{updateStructure(const std::vector< HyperGraph::Vertex * > &vset, const HyperGraph::EdgeSet &edges)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ bool {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::update\+Structure (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Hyper\+Graph\+::\+Vertex} $\ast$ $>$ \&}]{vset, }
+\item[{const {\bf Hyper\+Graph\+::\+Edge\+Set} \&}]{edges}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_acc497239c5e681ddec2140e34dfc5938}{}\label{classg2o_1_1BlockSolver_acc497239c5e681ddec2140e34dfc5938}
+update the structures for online processing 
+
+Implements \hyperlink{classg2o_1_1Solver_a035b8effea7178eabfb35e1c78b25987}{g2o\+::\+Solver}.
+
+
+
+Definition at line 298 of file block\+\_\+solver.\+hpp.
+
+
+
+References \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+\+Hpp, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+num\+Poses, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+size\+Landmarks, g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+\_\+size\+Poses, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block\+Cols(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::col\+Block\+Indices(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::dimension(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::hessian\+Index(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::map\+Hessian\+Memory(), g2o\+::\+Optimizable\+Graph\+::\+Edge\+::map\+Hessian\+Memory(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::marginalized(), g2o\+::\+Solver\+::resize\+Vector(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::row\+Block\+Indices(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Col\+In\+Hessian(), g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertex(), and g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertices().
+
+
+\begin{DoxyCode}
+299 \{
+300   \textcolor{keywordflow}{for} (std::vector<HyperGraph::Vertex*>::const\_iterator vit = vset.begin(); vit != vset.end(); ++vit) \{
+301     OptimizableGraph::Vertex* v = \textcolor{keyword}{static\_cast<}OptimizableGraph::Vertex*\textcolor{keyword}{>}(*vit);
+302     \textcolor{keywordtype}{int} dim = v->dimension();
+303     \textcolor{keywordflow}{if} (! v->marginalized())\{
+304       v->setColInHessian(\hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses});
+305       \hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses}+=dim;
+306       \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_ab9f9e621c9bca7c660c61b3948b8ece3}{rowBlockIndices}().push\_back(\hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses});
+307       \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_adfaf13a5f3134205a58c8346a09a672a}{colBlockIndices}().push\_back(\hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses});
+308       \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_a8e53797223fff106487d0b0080a3e36e}{blockCols}().push\_back(\textcolor{keyword}{typename} 
+      \hyperlink{classg2o_1_1SparseBlockMatrix_aaa6ca1ae454ed70f62992b6401645f4e}{SparseBlockMatrix<PoseMatrixType>::IntBlockMap}());
+309       ++\hyperlink{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{\_numPoses};
+310       \textcolor{keywordtype}{int} ind = v->hessianIndex();
+311       \hyperlink{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{PoseMatrixType}* m = \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(ind, ind, \textcolor{keyword}{true});
+312       v->mapHessianMemory(m->data());
+313     \} \textcolor{keywordflow}{else} \{
+314       std::cerr << \textcolor{stringliteral}{"updateStructure(): Schur not supported"} << std::endl;
+315       abort();
+316     \}
+317   \}
+318   \hyperlink{classg2o_1_1Solver_ad1f85839e85f3e2c49112fb7e2b843ad}{resizeVector}(\hyperlink{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{\_sizePoses} + \hyperlink{classg2o_1_1BlockSolver_a13a49b5aac8ae3b12ed0c349fc0788e7}{\_sizeLandmarks});
+319 
+320   \textcolor{keywordflow}{for} (HyperGraph::EdgeSet::const\_iterator it = edges.begin(); it != edges.end(); ++it) \{
+321     OptimizableGraph::Edge* e = \textcolor{keyword}{static\_cast<}OptimizableGraph::Edge*\textcolor{keyword}{>}(*it);
+322 
+323     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} viIdx = 0; viIdx < e->vertices().size(); ++viIdx) \{
+324       OptimizableGraph::Vertex* v1 = (OptimizableGraph::Vertex*) e->vertex(viIdx);
+325       \textcolor{keywordtype}{int} ind1 = v1->hessianIndex();
+326       \textcolor{keywordtype}{int} indexV1Bak = ind1;
+327       \textcolor{keywordflow}{if} (ind1 == -1)
+328         \textcolor{keywordflow}{continue};
+329       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} vjIdx = viIdx + 1; vjIdx < e->vertices().size(); ++vjIdx) \{
+330         OptimizableGraph::Vertex* v2 = (OptimizableGraph::Vertex*) e->vertex(vjIdx);
+331         \textcolor{keywordtype}{int} ind2 = v2->hessianIndex();
+332         \textcolor{keywordflow}{if} (ind2 == -1)
+333           \textcolor{keywordflow}{continue};
+334         ind1 = indexV1Bak;
+335         \textcolor{keywordtype}{bool} transposedBlock = ind1 > ind2;
+336         \textcolor{keywordflow}{if} (transposedBlock) \textcolor{comment}{// make sure, we allocate the upper triangular block}
+337           swap(ind1, ind2);
+338 
+339         \textcolor{keywordflow}{if} (! v1->marginalized() && !v2->marginalized()) \{
+340           \hyperlink{classg2o_1_1BlockSolver_a8c7c43d361bd31e3e0353889ba703bc0}{PoseMatrixType}* m = \hyperlink{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{\_Hpp}->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(ind1, ind2, \textcolor{keyword}{true});
+341           e->mapHessianMemory(m->data(), viIdx, vjIdx, transposedBlock);
+342         \} \textcolor{keywordflow}{else} \{ 
+343           std::cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": not supported"} << std::endl;
+344         \}
+345       \}
+346     \}
+347 
+348   \}
+349 
+350   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+351 \}
+\end{DoxyCode}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!write\+Debug@{write\+Debug}}
+\index{write\+Debug@{write\+Debug}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{write\+Debug() const }{writeDebug() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ virtual bool {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::write\+Debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1BlockSolver_a5a127b36e9f6ec45b2b1d39c22a9901f}{}\label{classg2o_1_1BlockSolver_a5a127b36e9f6ec45b2b1d39c22a9901f}
+
+
+Implements \hyperlink{classg2o_1_1Solver_a0f6f14940eccea0f9bf9e2ea144c9b4d}{g2o\+::\+Solver}.
+
+
+
+Definition at line 138 of file block\+\_\+solver.\+h.
+
+
+\begin{DoxyCode}
+138 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1BlockSolver_a676a4ef473ccaecb23050284e19659af}{\_linearSolver}->\hyperlink{classg2o_1_1LinearSolver_a8b6a84bd88f1bbc13d2c80c3a14d4693}{writeDebug}();\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+bschur@{\+\_\+bschur}}
+\index{\+\_\+bschur@{\+\_\+bschur}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+bschur}{_bschur}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ double$\ast$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+bschur\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_aafddeb1d0a4218fc9c3c77169e20f81a}{}\label{classg2o_1_1BlockSolver_aafddeb1d0a4218fc9c3c77169e20f81a}
+
+
+Definition at line 172 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::deallocate(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+coefficients@{\+\_\+coefficients}}
+\index{\+\_\+coefficients@{\+\_\+coefficients}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+coefficients}{_coefficients}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ double$\ast$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+coefficients\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_a416f480d4b27d7f8962ae7ae363f2e32}{}\label{classg2o_1_1BlockSolver_a416f480d4b27d7f8962ae7ae363f2e32}
+
+
+Definition at line 171 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::deallocate(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+diagonal\+Backup\+Landmark@{\+\_\+diagonal\+Backup\+Landmark}}
+\index{\+\_\+diagonal\+Backup\+Landmark@{\+\_\+diagonal\+Backup\+Landmark}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+diagonal\+Backup\+Landmark}{_diagonalBackupLandmark}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ std\+::vector$<${\bf Landmark\+Vector\+Type}, Eigen\+::aligned\+\_\+allocator$<${\bf Landmark\+Vector\+Type}$>$ $>$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+diagonal\+Backup\+Landmark\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_a3bc5b19faa2c45e2c04a6743b3a083de}{}\label{classg2o_1_1BlockSolver_a3bc5b19faa2c45e2c04a6743b3a083de}
+
+
+Definition at line 163 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::restore\+Diagonal(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::set\+Lambda().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+diagonal\+Backup\+Pose@{\+\_\+diagonal\+Backup\+Pose}}
+\index{\+\_\+diagonal\+Backup\+Pose@{\+\_\+diagonal\+Backup\+Pose}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+diagonal\+Backup\+Pose}{_diagonalBackupPose}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ std\+::vector$<${\bf Pose\+Vector\+Type}, Eigen\+::aligned\+\_\+allocator$<${\bf Pose\+Vector\+Type}$>$ $>$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+diagonal\+Backup\+Pose\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_a3cb6f86c522c2ea26478ad44b7c32f76}{}\label{classg2o_1_1BlockSolver_a3cb6f86c522c2ea26478ad44b7c32f76}
+
+
+Definition at line 162 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::restore\+Diagonal(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::set\+Lambda().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+\+D\+Inv\+Schur@{\+\_\+\+D\+Inv\+Schur}}
+\index{\+\_\+\+D\+Inv\+Schur@{\+\_\+\+D\+Inv\+Schur}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+\+D\+Inv\+Schur}{_DInvSchur}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ {\bf Sparse\+Block\+Matrix\+Diagonal}$<${\bf Landmark\+Matrix\+Type}$>$$\ast$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+\+D\+Inv\+Schur\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_ad6a1a8f17c8fb854962a8204c79bc981}{}\label{classg2o_1_1BlockSolver_ad6a1a8f17c8fb854962a8204c79bc981}
+
+
+Definition at line 155 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::deallocate(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+do\+Schur@{\+\_\+do\+Schur}}
+\index{\+\_\+do\+Schur@{\+\_\+do\+Schur}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+do\+Schur}{_doSchur}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ bool {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+do\+Schur\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_ab375a5fac964182442f38288bd8a103a}{}\label{classg2o_1_1BlockSolver_ab375a5fac964182442f38288bd8a103a}
+
+
+Definition at line 169 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+System(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+\+Hll@{\+\_\+\+Hll}}
+\index{\+\_\+\+Hll@{\+\_\+\+Hll}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Hll}{_Hll}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ {\bf Sparse\+Block\+Matrix}$<${\bf Landmark\+Matrix\+Type}$>$$\ast$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+\+Hll\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}{}\label{classg2o_1_1BlockSolver_a88d4c24df24a8fb72be1a4e4cff03d71}
+
+
+Definition at line 151 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+System(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::deallocate(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::init(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::restore\+Diagonal(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::set\+Lambda(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+\+Hpl@{\+\_\+\+Hpl}}
+\index{\+\_\+\+Hpl@{\+\_\+\+Hpl}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Hpl}{_Hpl}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ {\bf Sparse\+Block\+Matrix}$<${\bf Pose\+Landmark\+Matrix\+Type}$>$$\ast$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+\+Hpl\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}{}\label{classg2o_1_1BlockSolver_a0f6051339990e95aa587145a8a6f4f5f}
+
+
+Definition at line 152 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+System(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::deallocate(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::init(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+\+Hpl\+C\+CS@{\+\_\+\+Hpl\+C\+CS}}
+\index{\+\_\+\+Hpl\+C\+CS@{\+\_\+\+Hpl\+C\+CS}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Hpl\+C\+CS}{_HplCCS}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ {\bf Sparse\+Block\+Matrix\+C\+CS}$<${\bf Pose\+Landmark\+Matrix\+Type}$>$$\ast$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+\+Hpl\+C\+CS\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_ab54eb7bb13f8b3a8a5f135a98f2050ec}{}\label{classg2o_1_1BlockSolver_ab54eb7bb13f8b3a8a5f135a98f2050ec}
+
+
+Definition at line 157 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::deallocate(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+\+Hpp@{\+\_\+\+Hpp}}
+\index{\+\_\+\+Hpp@{\+\_\+\+Hpp}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Hpp}{_Hpp}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ {\bf Sparse\+Block\+Matrix}$<${\bf Pose\+Matrix\+Type}$>$$\ast$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+\+Hpp\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}{}\label{classg2o_1_1BlockSolver_ac222d4342825ed8632a87b4f5be94618}
+
+
+Definition at line 150 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+System(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::compute\+Marginals(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::deallocate(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::init(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::restore\+Diagonal(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::save\+Hessian(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::set\+Lambda(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::update\+Structure().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+\+Hschur@{\+\_\+\+Hschur}}
+\index{\+\_\+\+Hschur@{\+\_\+\+Hschur}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Hschur}{_Hschur}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ {\bf Sparse\+Block\+Matrix}$<${\bf Pose\+Matrix\+Type}$>$$\ast$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+\+Hschur\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}{}\label{classg2o_1_1BlockSolver_a46977934a3e4fb0cd36bc4181ed3ec0e}
+
+
+Definition at line 154 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::deallocate(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+\+Hschur\+Transposed\+C\+CS@{\+\_\+\+Hschur\+Transposed\+C\+CS}}
+\index{\+\_\+\+Hschur\+Transposed\+C\+CS@{\+\_\+\+Hschur\+Transposed\+C\+CS}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+\+Hschur\+Transposed\+C\+CS}{_HschurTransposedCCS}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ {\bf Sparse\+Block\+Matrix\+C\+CS}$<${\bf Pose\+Matrix\+Type}$>$$\ast$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+\+Hschur\+Transposed\+C\+CS\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_acea4b8ea8db5a29b63bea4bc568b0b26}{}\label{classg2o_1_1BlockSolver_acea4b8ea8db5a29b63bea4bc568b0b26}
+
+
+Definition at line 158 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::deallocate(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+linear\+Solver@{\+\_\+linear\+Solver}}
+\index{\+\_\+linear\+Solver@{\+\_\+linear\+Solver}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+linear\+Solver}{_linearSolver}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ {\bf Linear\+Solver}$<${\bf Pose\+Matrix\+Type}$>$$\ast$ {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+linear\+Solver\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_a676a4ef473ccaecb23050284e19659af}{}\label{classg2o_1_1BlockSolver_a676a4ef473ccaecb23050284e19659af}
+
+
+Definition at line 160 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::compute\+Marginals(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::init(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::set\+Write\+Debug(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::$\sim$\+Block\+Solver().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+num\+Landmarks@{\+\_\+num\+Landmarks}}
+\index{\+\_\+num\+Landmarks@{\+\_\+num\+Landmarks}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+num\+Landmarks}{_numLandmarks}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ int {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+num\+Landmarks\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_ab98231b7ca8e6d7f138c33d26c6f4326}{}\label{classg2o_1_1BlockSolver_ab98231b7ca8e6d7f138c33d26c6f4326}
+
+
+Definition at line 174 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::restore\+Diagonal(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::set\+Lambda().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+num\+Poses@{\+\_\+num\+Poses}}
+\index{\+\_\+num\+Poses@{\+\_\+num\+Poses}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+num\+Poses}{_numPoses}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ int {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+num\+Poses\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}{}\label{classg2o_1_1BlockSolver_a709259fc290d746f4174d25410b7458a}
+
+
+Definition at line 174 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::restore\+Diagonal(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::set\+Lambda(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::update\+Structure().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+size\+Landmarks@{\+\_\+size\+Landmarks}}
+\index{\+\_\+size\+Landmarks@{\+\_\+size\+Landmarks}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+size\+Landmarks}{_sizeLandmarks}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ int {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+size\+Landmarks\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_a13a49b5aac8ae3b12ed0c349fc0788e7}{}\label{classg2o_1_1BlockSolver_a13a49b5aac8ae3b12ed0c349fc0788e7}
+
+
+Definition at line 175 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::update\+Structure().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!\+\_\+size\+Poses@{\+\_\+size\+Poses}}
+\index{\+\_\+size\+Poses@{\+\_\+size\+Poses}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+size\+Poses}{_sizePoses}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ int {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::\+\_\+size\+Poses\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}{}\label{classg2o_1_1BlockSolver_a39ec000379885ce09cdd8c23ab6d4567}
+
+
+Definition at line 175 of file block\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+System(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::update\+Structure().
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!Landmark\+Dim@{Landmark\+Dim}}
+\index{Landmark\+Dim@{Landmark\+Dim}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{Landmark\+Dim}{LandmarkDim}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ const int {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::Landmark\+Dim = Traits\+::\+Landmark\+Dim\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classg2o_1_1BlockSolver_a2d5e499f65a71985a8256e98c1608dd9}{}\label{classg2o_1_1BlockSolver_a2d5e499f65a71985a8256e98c1608dd9}
+
+
+Definition at line 101 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}!Pose\+Dim@{Pose\+Dim}}
+\index{Pose\+Dim@{Pose\+Dim}!g2o\+::\+Block\+Solver@{g2o\+::\+Block\+Solver}}
+\subsubsection[{\texorpdfstring{Pose\+Dim}{PoseDim}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Traits $>$ const int {\bf g2o\+::\+Block\+Solver}$<$ Traits $>$\+::Pose\+Dim = Traits\+::\+Pose\+Dim\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classg2o_1_1BlockSolver_a9a68f557c8e04cd76565fc45e1747e45}{}\label{classg2o_1_1BlockSolver_a9a68f557c8e04cd76565fc45e1747e45}
+
+
+Definition at line 100 of file block\+\_\+solver.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{block__solver_8h}{block\+\_\+solver.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{block__solver_8hpp}{block\+\_\+solver.\+hpp}\end{DoxyCompactItemize}

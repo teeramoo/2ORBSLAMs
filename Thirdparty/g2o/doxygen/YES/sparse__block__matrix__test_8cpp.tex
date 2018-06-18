@@ -1,0 +1,136 @@
+\hypertarget{sparse__block__matrix__test_8cpp}{}\section{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/sparse\+\_\+block\+\_\+matrix\+\_\+test.cpp File Reference}
+\label{sparse__block__matrix__test_8cpp}\index{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp@{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp}}
+{\ttfamily \#include \char`\"{}sparse\+\_\+block\+\_\+matrix.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp\+:
+% FIG 0
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ \hyperlink{sparse__block__matrix__test_8cpp_a6c0784265951cf0ebdee4c309e2d2167}{Sparse\+Block\+MatrixX}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{sparse__block__matrix__test_8cpp_a56570084a8db5a99e6d72fc249e24279}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{Sparse\+Block\+Matrix\+X\+::\+Sparse\+Matrix\+Block} \&m)
+\item 
+int \hyperlink{sparse__block__matrix__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp@{sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp}!Sparse\+Block\+MatrixX@{Sparse\+Block\+MatrixX}}
+\index{Sparse\+Block\+MatrixX@{Sparse\+Block\+MatrixX}!sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp@{sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{Sparse\+Block\+MatrixX}{SparseBlockMatrixX}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ {\bf Sparse\+Block\+MatrixX}}\hypertarget{sparse__block__matrix__test_8cpp_a6c0784265951cf0ebdee4c309e2d2167}{}\label{sparse__block__matrix__test_8cpp_a6c0784265951cf0ebdee4c309e2d2167}
+
+
+Definition at line 35 of file sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\index{sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp@{sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp}!main@{main}}
+\index{main@{main}!sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp@{sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse__block__matrix__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{sparse__block__matrix__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Definition at line 46 of file sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::add(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::clear(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::symm\+Permutation(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::transpose().
+
+
+\begin{DoxyCode}
+46                                 \{
+47   \textcolor{keywordtype}{int} rcol[] = \{3,6,8,12\};
+48   \textcolor{keywordtype}{int} ccol[] = \{2,4,13\};
+49   cerr << \textcolor{stringliteral}{"creation"} << endl;
+50   \hyperlink{classg2o_1_1SparseBlockMatrix}{SparseBlockMatrixX}* M=\textcolor{keyword}{new} \hyperlink{sparse__block__matrix__test_8cpp_a6c0784265951cf0ebdee4c309e2d2167}{SparseBlockMatrixX}(rcol, ccol, 4,3);
+51 
+52   cerr << \textcolor{stringliteral}{"block access"} << endl;
+53 
+54   \hyperlink{classg2o_1_1SparseBlockMatrix_ab2f7376cbf055803fda6527dcc43e3be}{SparseBlockMatrixX::SparseMatrixBlock}* b=M->
+      \hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(0,0, \textcolor{keyword}{true});
+55   cerr << b->rows() << \textcolor{stringliteral}{" "} << b->cols() << endl;
+56   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<b->rows(); ++i)
+57     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<b->cols(); ++j)\{
+58       (*b)(i,j)=i*b->cols()+j;
+59     \}
+60 
+61 
+62   cerr << \textcolor{stringliteral}{"block access 2"} << endl;
+63   b=M->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(0,2, \textcolor{keyword}{true});
+64   cerr << b->rows() << \textcolor{stringliteral}{" "} << b->cols() << endl;
+65   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<b->rows(); ++i)
+66     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<b->cols(); ++j)\{
+67       (*b)(i,j)=i*b->cols()+j;
+68     \}
+69 
+70   b=M->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(3,2, \textcolor{keyword}{true});
+71   cerr << b->rows() << \textcolor{stringliteral}{" "} << b->cols() << endl;
+72   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<b->rows(); ++i)
+73     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<b->cols(); ++j)\{
+74       (*b)(i,j)=i*b->cols()+j;
+75     \}
+76 
+77   cerr << *M << endl;
+78 
+79   cerr << \textcolor{stringliteral}{"SUM"} << endl;
+80 
+81   \hyperlink{classg2o_1_1SparseBlockMatrix}{SparseBlockMatrixX}* Ms=0;
+82   M->\hyperlink{classg2o_1_1SparseBlockMatrix_a47d026462af0a744cdba6cbf9caa0b3b}{add}(Ms);
+83   M->\hyperlink{classg2o_1_1SparseBlockMatrix_a47d026462af0a744cdba6cbf9caa0b3b}{add}(Ms);
+84   cerr << *Ms;
+85   
+86   \hyperlink{classg2o_1_1SparseBlockMatrix}{SparseBlockMatrixX}* Mt=0;
+87   M->\hyperlink{classg2o_1_1SparseBlockMatrix_a85d0915bc613dac1a46d372fc1cacde7}{transpose}(Mt);
+88   cerr << *Mt << endl;
+89 
+90   \hyperlink{classg2o_1_1SparseBlockMatrix}{SparseBlockMatrixX}* Mp=0;
+91   M->\hyperlink{classg2o_1_1SparseBlockMatrix_a7e37bb74f265c78174fbb5ac9f4df131}{multiply}(Mp, Mt);
+92   cerr << *Mp << endl;
+93   
+94   \textcolor{keywordtype}{int} iperm[]=\{3,2,1,0\};
+95   \hyperlink{classg2o_1_1SparseBlockMatrix}{SparseBlockMatrixX}* PMp=0;
+96 
+97   Mp->\hyperlink{classg2o_1_1SparseBlockMatrix_a19b0010ec521b275bc88fda5c66b1b48}{symmPermutation}(PMp,iperm, \textcolor{keyword}{false});
+98   cerr << *PMp << endl;
+99 
+100   PMp->\hyperlink{classg2o_1_1SparseBlockMatrix_af14b7aaa588b339f2c06793fcc0d4e09}{clear}(\textcolor{keyword}{true});
+101   Mp->\hyperlink{classg2o_1_1SparseBlockMatrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}(3,0)->fill(0.);
+102   Mp->\hyperlink{classg2o_1_1SparseBlockMatrix_a19b0010ec521b275bc88fda5c66b1b48}{symmPermutation}(PMp,iperm, \textcolor{keyword}{true});
+103   cerr << *PMp << endl;
+104   
+105   
+106   
+107 \}
+\end{DoxyCode}
+\index{sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp@{sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp@{sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const Sparse\+Block\+Matrix\+X\+::\+Sparse\+Matrix\+Block \&m)}{operator<<(std::ostream &os, const SparseBlockMatrixX::SparseMatrixBlock &m)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Sparse\+Block\+Matrix\+X\+::\+Sparse\+Matrix\+Block} \&}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse__block__matrix__test_8cpp_a56570084a8db5a99e6d72fc249e24279}{}\label{sparse__block__matrix__test_8cpp_a56570084a8db5a99e6d72fc249e24279}
+
+
+Definition at line 37 of file sparse\+\_\+block\+\_\+matrix\+\_\+test.\+cpp.
+
+
+\begin{DoxyCode}
+37                                                                                        \{
+38   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<m.rows(); ++i)\{
+39     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<m.cols(); ++j)
+40       cerr << m(i,j) << \textcolor{stringliteral}{" "};
+41     cerr << endl;
+42   \}
+43   \textcolor{keywordflow}{return} os;
+44 \}
+\end{DoxyCode}

@@ -1,0 +1,352 @@
+\hypertarget{classg2o_1_1BaseMultiEdge}{}\section{g2o\+:\+:Base\+Multi\+Edge$<$ D, E $>$ Class Template Reference}
+\label{classg2o_1_1BaseMultiEdge}\index{g2o\+::\+Base\+Multi\+Edge$<$ D, E $>$@{g2o\+::\+Base\+Multi\+Edge$<$ D, E $>$}}
+
+
+base class to represent an edge connecting an arbitrary number of nodes  
+
+
+
+
+{\ttfamily \#include $<$base\+\_\+multi\+\_\+edge.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Base\+Multi\+Edge$<$ D, E $>$\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Base\+Multi\+Edge$<$ D, E $>$\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structg2o_1_1BaseMultiEdge_1_1HessianHelper}{Hessian\+Helper}
+\begin{DoxyCompactList}\small\item\em helper for mapping the Hessian memory of the upper triangular block \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classg2o_1_1BaseEdge}{Base\+Edge}$<$ D, E $>$\+::\hyperlink{classg2o_1_1BaseEdge_a2c148abba650a20b8c7eed75d3e2211e}{Measurement} \hyperlink{classg2o_1_1BaseMultiEdge_acbaff4c018fb314db5c7852054ffb89d}{Measurement}
+\item 
+typedef Matrix\+Xd\+::\+Map\+Type \hyperlink{classg2o_1_1BaseMultiEdge_a43dfdf5b27df296a32ee5a11f0653d55}{Jacobian\+Type}
+\item 
+typedef \hyperlink{classg2o_1_1BaseEdge}{Base\+Edge}$<$ D, E $>$\+::\hyperlink{classg2o_1_1BaseEdge_af5b558dd24e4be2e437563cae4b3550d}{Error\+Vector} \hyperlink{classg2o_1_1BaseMultiEdge_ae17c6b5747bfed295214942207a6eb74}{Error\+Vector}
+\item 
+typedef \hyperlink{classg2o_1_1BaseEdge}{Base\+Edge}$<$ D, E $>$\+::\hyperlink{classg2o_1_1BaseEdge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type} \hyperlink{classg2o_1_1BaseMultiEdge_a368ab136a2cee049549cb479fb4c88fa}{Information\+Type}
+\item 
+typedef Eigen\+::\+Map$<$ Matrix\+Xd, Matrix\+Xd\+::\+Flags \&Aligned\+Bit?Aligned\+:\+Unaligned $>$ \hyperlink{classg2o_1_1BaseMultiEdge_af299cc8f77d917c1ad4a7d8004aec3a1}{Hessian\+Block\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1BaseMultiEdge_a761d6a3623ed2c4ce6c6535f78dac08d}{Base\+Multi\+Edge} ()
+\item 
+virtual void \hyperlink{classg2o_1_1BaseMultiEdge_a72176776797987b8ae79ea2e33971e9e}{linearize\+Oplus} (\hyperlink{classg2o_1_1JacobianWorkspace}{Jacobian\+Workspace} \&jacobian\+Workspace)
+\item 
+virtual void \hyperlink{classg2o_1_1BaseMultiEdge_a6196a4cd1ddc2ef27c1474252bb60e9f}{linearize\+Oplus} ()
+\item 
+virtual void \hyperlink{classg2o_1_1BaseMultiEdge_ae07ec9359cd515d0abc2100ee8aae93f}{resize} (size\+\_\+t size)
+\item 
+virtual bool \hyperlink{classg2o_1_1BaseMultiEdge_a0873441402f991c0cfbe92a6ab718daa}{all\+Vertices\+Fixed} () const 
+\item 
+virtual void \hyperlink{classg2o_1_1BaseMultiEdge_ae44ba0385d4dda4bc038d81e50cadd8c}{construct\+Quadratic\+Form} ()
+\item 
+virtual void \hyperlink{classg2o_1_1BaseMultiEdge_aecded66022b967fab0deb1c6a2d76445}{map\+Hessian\+Memory} (double $\ast$d, int i, int j, bool row\+Major)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classg2o_1_1BaseMultiEdge_a3c713fe8d1cd161f777625d8e2d5695d}{Dimension} = \hyperlink{classg2o_1_1BaseEdge}{Base\+Edge}$<$D,E$>$\+::Dimension
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classg2o_1_1BaseMultiEdge_ac260b65c12f6594165af680f815ac291}{compute\+Quadratic\+Form} (const \hyperlink{classg2o_1_1BaseEdge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type} \&omega, const \hyperlink{classg2o_1_1BaseEdge_af5b558dd24e4be2e437563cae4b3550d}{Error\+Vector} \&weighted\+Error)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{structg2o_1_1BaseMultiEdge_1_1HessianHelper}{Hessian\+Helper} $>$ \hyperlink{classg2o_1_1BaseMultiEdge_af927d6f41bf73fc3b928cae2d6219d9e}{\+\_\+hessian}
+\item 
+std\+::vector$<$ \hyperlink{classg2o_1_1BaseMultiEdge_a43dfdf5b27df296a32ee5a11f0653d55}{Jacobian\+Type}, aligned\+\_\+allocator$<$ \hyperlink{classg2o_1_1BaseMultiEdge_a43dfdf5b27df296a32ee5a11f0653d55}{Jacobian\+Type} $>$ $>$ \hyperlink{classg2o_1_1BaseMultiEdge_a00f8130e287bc945a8436375c4d07a02}{\+\_\+jacobian\+Oplus}
+\begin{DoxyCompactList}\small\item\em jacobians of the edge (w.\+r.\+t. oplus) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int D, typename E$>$\\*
+class g2o\+::\+Base\+Multi\+Edge$<$ D, E $>$}
+
+base class to represent an edge connecting an arbitrary number of nodes 
+
+D -\/ Dimension of the measurement E -\/ type to represent the measurement 
+
+Definition at line 51 of file base\+\_\+multi\+\_\+edge.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!Error\+Vector@{Error\+Vector}}
+\index{Error\+Vector@{Error\+Vector}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{Error\+Vector}{ErrorVector}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ typedef {\bf Base\+Edge}$<$D,E$>$\+::{\bf Error\+Vector} {\bf g2o\+::\+Base\+Multi\+Edge}$<$ D, E $>$\+::{\bf Error\+Vector}}\hypertarget{classg2o_1_1BaseMultiEdge_ae17c6b5747bfed295214942207a6eb74}{}\label{classg2o_1_1BaseMultiEdge_ae17c6b5747bfed295214942207a6eb74}
+
+
+Definition at line 67 of file base\+\_\+multi\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!Hessian\+Block\+Type@{Hessian\+Block\+Type}}
+\index{Hessian\+Block\+Type@{Hessian\+Block\+Type}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{Hessian\+Block\+Type}{HessianBlockType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ typedef Eigen\+::\+Map$<$Matrix\+Xd, Matrix\+Xd\+::\+Flags \& Aligned\+Bit ? Aligned \+: Unaligned $>$ {\bf g2o\+::\+Base\+Multi\+Edge}$<$ D, E $>$\+::{\bf Hessian\+Block\+Type}}\hypertarget{classg2o_1_1BaseMultiEdge_af299cc8f77d917c1ad4a7d8004aec3a1}{}\label{classg2o_1_1BaseMultiEdge_af299cc8f77d917c1ad4a7d8004aec3a1}
+
+
+Definition at line 69 of file base\+\_\+multi\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!Information\+Type@{Information\+Type}}
+\index{Information\+Type@{Information\+Type}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{Information\+Type}{InformationType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ typedef {\bf Base\+Edge}$<$D,E$>$\+::{\bf Information\+Type} {\bf g2o\+::\+Base\+Multi\+Edge}$<$ D, E $>$\+::{\bf Information\+Type}}\hypertarget{classg2o_1_1BaseMultiEdge_a368ab136a2cee049549cb479fb4c88fa}{}\label{classg2o_1_1BaseMultiEdge_a368ab136a2cee049549cb479fb4c88fa}
+
+
+Definition at line 68 of file base\+\_\+multi\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!Jacobian\+Type@{Jacobian\+Type}}
+\index{Jacobian\+Type@{Jacobian\+Type}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{Jacobian\+Type}{JacobianType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ typedef Matrix\+Xd\+::\+Map\+Type {\bf g2o\+::\+Base\+Multi\+Edge}$<$ D, E $>$\+::{\bf Jacobian\+Type}}\hypertarget{classg2o_1_1BaseMultiEdge_a43dfdf5b27df296a32ee5a11f0653d55}{}\label{classg2o_1_1BaseMultiEdge_a43dfdf5b27df296a32ee5a11f0653d55}
+
+
+Definition at line 66 of file base\+\_\+multi\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!Measurement@{Measurement}}
+\index{Measurement@{Measurement}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{Measurement}{Measurement}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ typedef {\bf Base\+Edge}$<$D,E$>$\+::{\bf Measurement} {\bf g2o\+::\+Base\+Multi\+Edge}$<$ D, E $>$\+::{\bf Measurement}}\hypertarget{classg2o_1_1BaseMultiEdge_acbaff4c018fb314db5c7852054ffb89d}{}\label{classg2o_1_1BaseMultiEdge_acbaff4c018fb314db5c7852054ffb89d}
+
+
+Definition at line 65 of file base\+\_\+multi\+\_\+edge.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!Base\+Multi\+Edge@{Base\+Multi\+Edge}}
+\index{Base\+Multi\+Edge@{Base\+Multi\+Edge}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{Base\+Multi\+Edge()}{BaseMultiEdge()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ {\bf g2o\+::\+Base\+Multi\+Edge}$<$ D, E $>$\+::{\bf Base\+Multi\+Edge} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1BaseMultiEdge_a761d6a3623ed2c4ce6c6535f78dac08d}{}\label{classg2o_1_1BaseMultiEdge_a761d6a3623ed2c4ce6c6535f78dac08d}
+
+
+Definition at line 71 of file base\+\_\+multi\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+71                       : BaseEdge<D,E>()
+72       \{
+73       \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!all\+Vertices\+Fixed@{all\+Vertices\+Fixed}}
+\index{all\+Vertices\+Fixed@{all\+Vertices\+Fixed}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{all\+Vertices\+Fixed() const }{allVerticesFixed() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ bool Base\+Multi\+Edge\+::all\+Vertices\+Fixed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseMultiEdge_a0873441402f991c0cfbe92a6ab718daa}{}\label{classg2o_1_1BaseMultiEdge_a0873441402f991c0cfbe92a6ab718daa}
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a414c69ca1617a4d3b620e39f2ffbcea7}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 161 of file base\+\_\+multi\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!compute\+Quadratic\+Form@{compute\+Quadratic\+Form}}
+\index{compute\+Quadratic\+Form@{compute\+Quadratic\+Form}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{compute\+Quadratic\+Form(const Information\+Type \&omega, const Error\+Vector \&weighted\+Error)}{computeQuadraticForm(const InformationType &omega, const ErrorVector &weightedError)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ void Base\+Multi\+Edge\+::compute\+Quadratic\+Form (
+\begin{DoxyParamCaption}
+\item[{const {\bf Information\+Type} \&}]{omega, }
+\item[{const {\bf Error\+Vector} \&}]{weighted\+Error}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BaseMultiEdge_ac260b65c12f6594165af680f815ac291}{}\label{classg2o_1_1BaseMultiEdge_ac260b65c12f6594165af680f815ac291}
+
+
+Definition at line 172 of file base\+\_\+multi\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!construct\+Quadratic\+Form@{construct\+Quadratic\+Form}}
+\index{construct\+Quadratic\+Form@{construct\+Quadratic\+Form}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{construct\+Quadratic\+Form()}{constructQuadraticForm()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ void Base\+Multi\+Edge\+::construct\+Quadratic\+Form (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseMultiEdge_ae44ba0385d4dda4bc038d81e50cadd8c}{}\label{classg2o_1_1BaseMultiEdge_ae44ba0385d4dda4bc038d81e50cadd8c}
+Linearizes the constraint in the edge. Makes side effect on the vertices of the graph by changing the parameter vector b and the hessian blocks ii and jj. The off diagoinal block is accesed via \+\_\+hessian. 
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a56fbf3430ddf591e3c619bdd1b7e4499}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 37 of file base\+\_\+multi\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+40               \{
+41 
+42   \textcolor{keyword}{using namespace }\hyperlink{namespaceEigen}{Eigen};
+43 
+\end{DoxyCode}
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!linearize\+Oplus@{linearize\+Oplus}}
+\index{linearize\+Oplus@{linearize\+Oplus}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{linearize\+Oplus(\+Jacobian\+Workspace \&jacobian\+Workspace)}{linearizeOplus(JacobianWorkspace &jacobianWorkspace)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ void Base\+Multi\+Edge\+::linearize\+Oplus (
+\begin{DoxyParamCaption}
+\item[{{\bf Jacobian\+Workspace} \&}]{jacobian\+Workspace}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseMultiEdge_a72176776797987b8ae79ea2e33971e9e}{}\label{classg2o_1_1BaseMultiEdge_a72176776797987b8ae79ea2e33971e9e}
+Linearizes the constraint in the edge in the manifold space, and store the result in the given workspace 
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a0fdad5ebfb4efec9f893b57f67e0fbe1}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 53 of file base\+\_\+multi\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+53           :
+57       \textcolor{keyword}{struct }HessianHelper \{
+58         Eigen::Map<MatrixXd> \hyperlink{structg2o_1_1BaseMultiEdge_1_1HessianHelper_ab9eab8a9c5bf6e7814173d1955d7a01c}{matrix};     
+59         \textcolor{keywordtype}{bool} \hyperlink{structg2o_1_1BaseMultiEdge_1_1HessianHelper_aeaff0227a982c30364d97ef9f0d9d60c}{transposed};          
+60         \hyperlink{structg2o_1_1BaseMultiEdge_1_1HessianHelper_a5a76a58b21ca39ea6ca1e274b588fad0}{HessianHelper}() : matrix(0, 0, 0), transposed(false) \{\}
+61       \};
+\end{DoxyCode}
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!linearize\+Oplus@{linearize\+Oplus}}
+\index{linearize\+Oplus@{linearize\+Oplus}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{linearize\+Oplus()}{linearizeOplus()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ void Base\+Multi\+Edge\+::linearize\+Oplus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseMultiEdge_a6196a4cd1ddc2ef27c1474252bb60e9f}{}\label{classg2o_1_1BaseMultiEdge_a6196a4cd1ddc2ef27c1474252bb60e9f}
+Linearizes the oplus operator in the vertex, and stores the result in temporary variable vector \+\_\+jacobian\+Oplus 
+
+Definition at line 64 of file base\+\_\+multi\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+69                                                                       : Unaligned > 
+      \hyperlink{classg2o_1_1BaseMultiEdge_af299cc8f77d917c1ad4a7d8004aec3a1}{HessianBlockType};
+70 
+71       \hyperlink{classg2o_1_1BaseMultiEdge_a761d6a3623ed2c4ce6c6535f78dac08d}{BaseMultiEdge}() : \hyperlink{classg2o_1_1BaseEdge_a5efd0eb7e76a7f1ad723e7a5896a54d5}{BaseEdge}<D,E>()
+72       \{
+73       \}
+74       
+75       \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classg2o_1_1BaseMultiEdge_a6196a4cd1ddc2ef27c1474252bb60e9f}{linearizeOplus}(JacobianWorkspace& jacobianWorkspace);
+76 
+81       \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classg2o_1_1BaseMultiEdge_a6196a4cd1ddc2ef27c1474252bb60e9f}{linearizeOplus}();
+82       
+83       \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classg2o_1_1BaseMultiEdge_ae07ec9359cd515d0abc2100ee8aae93f}{resize}(\textcolor{keywordtype}{size\_t} size);
+84 
+85       \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \hyperlink{classg2o_1_1BaseMultiEdge_a0873441402f991c0cfbe92a6ab718daa}{allVerticesFixed}() \textcolor{keyword}{const};
+86 
+87       \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classg2o_1_1BaseMultiEdge_ae44ba0385d4dda4bc038d81e50cadd8c}{constructQuadraticForm}() ;
+88 
+89       \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classg2o_1_1BaseMultiEdge_aecded66022b967fab0deb1c6a2d76445}{mapHessianMemory}(\textcolor{keywordtype}{double}* d, \textcolor{keywordtype}{int} i, \textcolor{keywordtype}{int} j, \textcolor{keywordtype}{bool} rowMajor);
+90 
+91       \textcolor{keyword}{using} \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a1e6d9f4128866982de5e11e03edd7775}{BaseEdge<D,E>::computeError};
+92 
+93     \textcolor{keyword}{protected}:
+94       \textcolor{keyword}{using} \hyperlink{classg2o_1_1BaseEdge_af2a6ab1df6e91601b4cab23e0e99e034}{BaseEdge<D,E>::\_measurement};
+95       \textcolor{keyword}{using} \hyperlink{classg2o_1_1BaseEdge_a49f11e3d1eaa8e666e1d4d3607279377}{BaseEdge<D,E>::\_information};
+96       \textcolor{keyword}{using} \hyperlink{classg2o_1_1BaseEdge_af31f4b0a67bb12b4de4a32dc42467836}{BaseEdge<D,E>::\_error};
+97       \textcolor{keyword}{using} \hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{BaseEdge<D,E>::\_vertices};
+98       \textcolor{keyword}{using} \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a4e651628f7657c81d0e4c1b26caaa6aa}{BaseEdge<D,E>::\_dimension};
+99 
+100       std::vector<HessianHelper> \hyperlink{classg2o_1_1BaseMultiEdge_af927d6f41bf73fc3b928cae2d6219d9e}{\_hessian};
+101       std::vector<JacobianType, aligned\_allocator<JacobianType> > \hyperlink{classg2o_1_1BaseMultiEdge_a00f8130e287bc945a8436375c4d07a02}{\_jacobianOplus}; 
+102 
+103       \textcolor{keywordtype}{void} \hyperlink{classg2o_1_1BaseMultiEdge_ac260b65c12f6594165af680f815ac291}{computeQuadraticForm}(\textcolor{keyword}{const} \hyperlink{classg2o_1_1BaseMultiEdge_a368ab136a2cee049549cb479fb4c88fa}{InformationType}& omega, \textcolor{keyword}{const} 
+      \hyperlink{classg2o_1_1BaseMultiEdge_ae17c6b5747bfed295214942207a6eb74}{ErrorVector}& weightedError);
+104 
+105     \textcolor{keyword}{public}:
+106       EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW
+107   \};
+108 
+109 \textcolor{preprocessor}{#include "\hyperlink{base__multi__edge_8hpp}{base\_multi\_edge.hpp}"}
+110 
+111 \} \textcolor{comment}{// end namespace g2o}
+112 
+113 \textcolor{preprocessor}{#endif}
+114 \textcolor{preprocessor}{\end{DoxyCode}
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!map\+Hessian\+Memory@{map\+Hessian\+Memory}}
+\index{map\+Hessian\+Memory@{map\+Hessian\+Memory}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{map\+Hessian\+Memory(double $\ast$d, int i, int j, bool row\+Major)}{mapHessianMemory(double *d, int i, int j, bool rowMajor)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ void Base\+Multi\+Edge\+::map\+Hessian\+Memory (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{d, }
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{bool}]{row\+Major}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseMultiEdge_aecded66022b967fab0deb1c6a2d76445}{}\label{classg2o_1_1BaseMultiEdge_aecded66022b967fab0deb1c6a2d76445}
+maps the internal matrix to some external memory location, you need to provide the memory before calling construct\+Quadratic\+Form 
+\begin{DoxyParams}{Parameters}
+{\em d} & the memory location to which we map \\
+\hline
+{\em i} & index of the vertex i \\
+\hline
+{\em j} & index of the vertex j (j $>$ i, upper triangular fashion) \\
+\hline
+{\em row\+Major} & if true, will write in row\+Major order to the block. Since E\+I\+G\+EN is column\+Major by default, this results in writing the transposed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a3bd233fd552daa166039acf47b69a5a7}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 130 of file base\+\_\+multi\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!resize@{resize}}
+\index{resize@{resize}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{resize(size\+\_\+t size)}{resize(size_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ void Base\+Multi\+Edge\+::resize (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseMultiEdge_ae07ec9359cd515d0abc2100ee8aae93f}{}\label{classg2o_1_1BaseMultiEdge_ae07ec9359cd515d0abc2100ee8aae93f}
+resizes the number of vertices connected by this edge 
+
+Reimplemented from \hyperlink{classg2o_1_1HyperGraph_1_1Edge_ad8913f1149a0fd5bb628f0f1c8a91a55}{g2o\+::\+Hyper\+Graph\+::\+Edge}.
+
+
+
+Definition at line 150 of file base\+\_\+multi\+\_\+edge.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!\+\_\+hessian@{\+\_\+hessian}}
+\index{\+\_\+hessian@{\+\_\+hessian}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{\+\_\+hessian}{_hessian}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ std\+::vector$<${\bf Hessian\+Helper}$>$ {\bf g2o\+::\+Base\+Multi\+Edge}$<$ D, E $>$\+::\+\_\+hessian\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BaseMultiEdge_af927d6f41bf73fc3b928cae2d6219d9e}{}\label{classg2o_1_1BaseMultiEdge_af927d6f41bf73fc3b928cae2d6219d9e}
+
+
+Definition at line 100 of file base\+\_\+multi\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!\+\_\+jacobian\+Oplus@{\+\_\+jacobian\+Oplus}}
+\index{\+\_\+jacobian\+Oplus@{\+\_\+jacobian\+Oplus}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{\+\_\+jacobian\+Oplus}{_jacobianOplus}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ std\+::vector$<${\bf Jacobian\+Type}, aligned\+\_\+allocator$<${\bf Jacobian\+Type}$>$ $>$ {\bf g2o\+::\+Base\+Multi\+Edge}$<$ D, E $>$\+::\+\_\+jacobian\+Oplus\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BaseMultiEdge_a00f8130e287bc945a8436375c4d07a02}{}\label{classg2o_1_1BaseMultiEdge_a00f8130e287bc945a8436375c4d07a02}
+
+
+jacobians of the edge (w.\+r.\+t. oplus) 
+
+
+
+Definition at line 101 of file base\+\_\+multi\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}!Dimension@{Dimension}}
+\index{Dimension@{Dimension}!g2o\+::\+Base\+Multi\+Edge@{g2o\+::\+Base\+Multi\+Edge}}
+\subsubsection[{\texorpdfstring{Dimension}{Dimension}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ const int {\bf g2o\+::\+Base\+Multi\+Edge}$<$ D, E $>$\+::Dimension = {\bf Base\+Edge}$<$D,E$>$\+::Dimension\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classg2o_1_1BaseMultiEdge_a3c713fe8d1cd161f777625d8e2d5695d}{}\label{classg2o_1_1BaseMultiEdge_a3c713fe8d1cd161f777625d8e2d5695d}
+
+
+Definition at line 64 of file base\+\_\+multi\+\_\+edge.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{base__multi__edge_8h}{base\+\_\+multi\+\_\+edge.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{base__multi__edge_8hpp}{base\+\_\+multi\+\_\+edge.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,171 @@
+\hypertarget{classg2o_1_1EdgeInverseSim3ProjectXYZ}{}\section{g2o\+:\+:Edge\+Inverse\+Sim3\+Project\+X\+YZ Class Reference}
+\label{classg2o_1_1EdgeInverseSim3ProjectXYZ}\index{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ@{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ}}
+
+
+{\ttfamily \#include $<$types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Edge\+Inverse\+Sim3\+Project\+X\+YZ\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Edge\+Inverse\+Sim3\+Project\+X\+YZ\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \hyperlink{classg2o_1_1EdgeInverseSim3ProjectXYZ_af4e344ee9f610b41eea60b5914a776bd}{Edge\+Inverse\+Sim3\+Project\+X\+YZ} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1EdgeInverseSim3ProjectXYZ_ac229f31599a4f08eebe8f9b239d883f6}{read} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em read the vertex from a stream, i.\+e., the internal state of the vertex \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classg2o_1_1EdgeInverseSim3ProjectXYZ_a9df647cceceabdecd26692647211e043}{write} (std\+::ostream \&os) const 
+\begin{DoxyCompactList}\small\item\em write the vertex to a stream \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1EdgeInverseSim3ProjectXYZ_a8fa376524e861ae8c4f1a360d217f02d}{compute\+Error} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 152 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ@{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ}!Edge\+Inverse\+Sim3\+Project\+X\+YZ@{Edge\+Inverse\+Sim3\+Project\+X\+YZ}}
+\index{Edge\+Inverse\+Sim3\+Project\+X\+YZ@{Edge\+Inverse\+Sim3\+Project\+X\+YZ}!g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ@{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{Edge\+Inverse\+Sim3\+Project\+X\+Y\+Z()}{EdgeInverseSim3ProjectXYZ()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+Y\+Z\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1EdgeInverseSim3ProjectXYZ_af4e344ee9f610b41eea60b5914a776bd}{}\label{classg2o_1_1EdgeInverseSim3ProjectXYZ_af4e344ee9f610b41eea60b5914a776bd}
+Inverse\+Sim3\+Project\+X\+YZ 
+
+Definition at line 161 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+\begin{DoxyCode}
+161                                                        :
+162   BaseBinaryEdge<2, Vector2d, VertexSBAPointXYZ, VertexSim3Expmap>()
+163   \{
+164   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ@{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ}!compute\+Error@{compute\+Error}}
+\index{compute\+Error@{compute\+Error}!g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ@{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{compute\+Error()}{computeError()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+Y\+Z\+::compute\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1EdgeInverseSim3ProjectXYZ_a8fa376524e861ae8c4f1a360d217f02d}{}\label{classg2o_1_1EdgeInverseSim3ProjectXYZ_a8fa376524e861ae8c4f1a360d217f02d}
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a1e6d9f4128866982de5e11e03edd7775}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 160 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+References g2o\+::\+Vertex\+Sim3\+Expmap\+::cam\+\_\+map2(), g2o\+::\+Base\+Vertex$<$ D, T $>$\+::estimate(), g2o\+::\+Sim3\+::inverse(), g2o\+::\+Sim3\+::map(), and g2o\+::project().
+
+
+\begin{DoxyCode}
+161     \{
+162       \textcolor{keyword}{const} VertexSim3Expmap* v1 = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }VertexSim3Expmap*\textcolor{keyword}{>}(
+      \hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}[1]);
+163       \textcolor{keyword}{const} VertexSBAPointXYZ* v2 = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }VertexSBAPointXYZ*\textcolor{keyword}{>}(
+      \hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}[0]);
+164 
+165       Vector2d obs(\hyperlink{classg2o_1_1BaseEdge_af2a6ab1df6e91601b4cab23e0e99e034}{\_measurement});
+166       \hyperlink{classg2o_1_1BaseEdge_af31f4b0a67bb12b4de4a32dc42467836}{\_error} = obs-v1->cam\_map2(\hyperlink{namespaceg2o_a45b89a0471d862c09167e7ce718df000}{project}(v1->estimate().inverse().map(v2->estimate())));
+167     \}
+\end{DoxyCode}
+\index{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ@{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ}!read@{read}}
+\index{read@{read}!g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ@{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{read(std\+::istream \&is)}{read(std::istream &is)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+Y\+Z\+::read (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1EdgeInverseSim3ProjectXYZ_ac229f31599a4f08eebe8f9b239d883f6}{}\label{classg2o_1_1EdgeInverseSim3ProjectXYZ_ac229f31599a4f08eebe8f9b239d883f6}
+
+
+read the vertex from a stream, i.\+e., the internal state of the vertex 
+
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a30cf69b762a06aa35e796d8af71632b0}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 166 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+
+References g2o\+::\+Base\+Edge$<$ D, Vector2d $>$\+::\+\_\+measurement, and g2o\+::\+Base\+Edge$<$ D, Vector2d $>$\+::information().
+
+
+\begin{DoxyCode}
+167   \{
+168     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<2; i++)
+169     \{
+170       is >> \hyperlink{classg2o_1_1BaseEdge_af2a6ab1df6e91601b4cab23e0e99e034}{\_measurement}[i];
+171     \}
+172 
+173     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<2; i++)
+174       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=i; j<2; j++) \{
+175   is >> \hyperlink{classg2o_1_1BaseEdge_ab682086df7223ce2b039d652416ddc23}{information}()(i,j);
+176       \textcolor{keywordflow}{if} (i!=j)
+177         \hyperlink{classg2o_1_1BaseEdge_ab682086df7223ce2b039d652416ddc23}{information}()(j,i)=\hyperlink{classg2o_1_1BaseEdge_ab682086df7223ce2b039d652416ddc23}{information}()(i,j);
+178     \}
+179     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+180   \}
+\end{DoxyCode}
+\index{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ@{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ}!write@{write}}
+\index{write@{write}!g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ@{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{write(std\+::ostream \&os) const }{write(std::ostream &os) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+Y\+Z\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1EdgeInverseSim3ProjectXYZ_a9df647cceceabdecd26692647211e043}{}\label{classg2o_1_1EdgeInverseSim3ProjectXYZ_a9df647cceceabdecd26692647211e043}
+
+
+write the vertex to a stream 
+
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a804b9a2178249b9297c55b8fbbeda56e}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 182 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+
+References g2o\+::\+Base\+Edge$<$ D, Vector2d $>$\+::\+\_\+measurement, and g2o\+::\+Base\+Edge$<$ D, Vector2d $>$\+::information().
+
+
+\begin{DoxyCode}
+183   \{
+184     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<2; i++)\{
+185       os  << \hyperlink{classg2o_1_1BaseEdge_af2a6ab1df6e91601b4cab23e0e99e034}{\_measurement}[i] << \textcolor{stringliteral}{" "};
+186     \}
+187 
+188     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<2; i++)
+189       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=i; j<2; j++)\{
+190   os << \textcolor{stringliteral}{" "} <<  \hyperlink{classg2o_1_1BaseEdge_ab682086df7223ce2b039d652416ddc23}{information}()(i,j);
+191     \}
+192     \textcolor{keywordflow}{return} os.good();
+193   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/\hyperlink{types__seven__dof__expmap_8h}{types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/\hyperlink{types__seven__dof__expmap_8cpp}{types\+\_\+seven\+\_\+dof\+\_\+expmap.\+cpp}\end{DoxyCompactItemize}

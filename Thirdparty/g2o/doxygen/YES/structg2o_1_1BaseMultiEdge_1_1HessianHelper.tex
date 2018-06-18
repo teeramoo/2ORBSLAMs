@@ -1,0 +1,81 @@
+\hypertarget{structg2o_1_1BaseMultiEdge_1_1HessianHelper}{}\section{g2o\+:\+:Base\+Multi\+Edge$<$ D, E $>$\+:\+:Hessian\+Helper Struct Reference}
+\label{structg2o_1_1BaseMultiEdge_1_1HessianHelper}\index{g2o\+::\+Base\+Multi\+Edge$<$ D, E $>$\+::\+Hessian\+Helper@{g2o\+::\+Base\+Multi\+Edge$<$ D, E $>$\+::\+Hessian\+Helper}}
+
+
+helper for mapping the Hessian memory of the upper triangular block  
+
+
+
+
+{\ttfamily \#include $<$base\+\_\+multi\+\_\+edge.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structg2o_1_1BaseMultiEdge_1_1HessianHelper_a5a76a58b21ca39ea6ca1e274b588fad0}{Hessian\+Helper} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Map$<$ Matrix\+Xd $>$ \hyperlink{structg2o_1_1BaseMultiEdge_1_1HessianHelper_ab9eab8a9c5bf6e7814173d1955d7a01c}{matrix}
+\begin{DoxyCompactList}\small\item\em the mapped memory \end{DoxyCompactList}\item 
+bool \hyperlink{structg2o_1_1BaseMultiEdge_1_1HessianHelper_aeaff0227a982c30364d97ef9f0d9d60c}{transposed}
+\begin{DoxyCompactList}\small\item\em the block has to be transposed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int D, typename E$>$\\*
+struct g2o\+::\+Base\+Multi\+Edge$<$ D, E $>$\+::\+Hessian\+Helper}
+
+helper for mapping the Hessian memory of the upper triangular block 
+
+Definition at line 57 of file base\+\_\+multi\+\_\+edge.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Base\+Multi\+Edge\+::\+Hessian\+Helper@{g2o\+::\+Base\+Multi\+Edge\+::\+Hessian\+Helper}!Hessian\+Helper@{Hessian\+Helper}}
+\index{Hessian\+Helper@{Hessian\+Helper}!g2o\+::\+Base\+Multi\+Edge\+::\+Hessian\+Helper@{g2o\+::\+Base\+Multi\+Edge\+::\+Hessian\+Helper}}
+\subsubsection[{\texorpdfstring{Hessian\+Helper()}{HessianHelper()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ {\bf g2o\+::\+Base\+Multi\+Edge}$<$ D, E $>$\+::Hessian\+Helper\+::\+Hessian\+Helper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1BaseMultiEdge_1_1HessianHelper_a5a76a58b21ca39ea6ca1e274b588fad0}{}\label{structg2o_1_1BaseMultiEdge_1_1HessianHelper_a5a76a58b21ca39ea6ca1e274b588fad0}
+
+
+Definition at line 60 of file base\+\_\+multi\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+60 : \hyperlink{structg2o_1_1BaseMultiEdge_1_1HessianHelper_ab9eab8a9c5bf6e7814173d1955d7a01c}{matrix}(0, 0, 0), \hyperlink{structg2o_1_1BaseMultiEdge_1_1HessianHelper_aeaff0227a982c30364d97ef9f0d9d60c}{transposed}(\textcolor{keyword}{false}) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Base\+Multi\+Edge\+::\+Hessian\+Helper@{g2o\+::\+Base\+Multi\+Edge\+::\+Hessian\+Helper}!matrix@{matrix}}
+\index{matrix@{matrix}!g2o\+::\+Base\+Multi\+Edge\+::\+Hessian\+Helper@{g2o\+::\+Base\+Multi\+Edge\+::\+Hessian\+Helper}}
+\subsubsection[{\texorpdfstring{matrix}{matrix}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ Eigen\+::\+Map$<$Matrix\+Xd$>$ {\bf g2o\+::\+Base\+Multi\+Edge}$<$ D, E $>$\+::Hessian\+Helper\+::matrix}\hypertarget{structg2o_1_1BaseMultiEdge_1_1HessianHelper_ab9eab8a9c5bf6e7814173d1955d7a01c}{}\label{structg2o_1_1BaseMultiEdge_1_1HessianHelper_ab9eab8a9c5bf6e7814173d1955d7a01c}
+
+
+the mapped memory 
+
+
+
+Definition at line 58 of file base\+\_\+multi\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Multi\+Edge\+::\+Hessian\+Helper@{g2o\+::\+Base\+Multi\+Edge\+::\+Hessian\+Helper}!transposed@{transposed}}
+\index{transposed@{transposed}!g2o\+::\+Base\+Multi\+Edge\+::\+Hessian\+Helper@{g2o\+::\+Base\+Multi\+Edge\+::\+Hessian\+Helper}}
+\subsubsection[{\texorpdfstring{transposed}{transposed}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E $>$ bool {\bf g2o\+::\+Base\+Multi\+Edge}$<$ D, E $>$\+::Hessian\+Helper\+::transposed}\hypertarget{structg2o_1_1BaseMultiEdge_1_1HessianHelper_aeaff0227a982c30364d97ef9f0d9d60c}{}\label{structg2o_1_1BaseMultiEdge_1_1HessianHelper_aeaff0227a982c30364d97ef9f0d9d60c}
+
+
+the block has to be transposed 
+
+
+
+Definition at line 59 of file base\+\_\+multi\+\_\+edge.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{base__multi__edge_8h}{base\+\_\+multi\+\_\+edge.\+h}\end{DoxyCompactItemize}

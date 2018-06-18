@@ -1,0 +1,75 @@
+\hypertarget{hyper__graph__action_8h}{}\section{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/hyper\+\_\+graph\+\_\+action.h File Reference}
+\label{hyper__graph__action_8h}\index{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/hyper\+\_\+graph\+\_\+action.\+h@{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/hyper\+\_\+graph\+\_\+action.\+h}}
+{\ttfamily \#include \char`\"{}hyper\+\_\+graph.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../stuff/property.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$typeinfo$>$}\\*
+{\ttfamily \#include $<$iosfwd$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for hyper\+\_\+graph\+\_\+action.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classg2o_1_1HyperGraphAction}{g2o\+::\+Hyper\+Graph\+Action}
+\begin{DoxyCompactList}\small\item\em Abstract action that operates on an entire graph. \end{DoxyCompactList}\item 
+class \hyperlink{classg2o_1_1HyperGraphAction_1_1Parameters}{g2o\+::\+Hyper\+Graph\+Action\+::\+Parameters}
+\item 
+class \hyperlink{classg2o_1_1HyperGraphAction_1_1ParametersIteration}{g2o\+::\+Hyper\+Graph\+Action\+::\+Parameters\+Iteration}
+\item 
+class \hyperlink{classg2o_1_1HyperGraphElementAction}{g2o\+::\+Hyper\+Graph\+Element\+Action}
+\begin{DoxyCompactList}\small\item\em Abstract action that operates on a graph entity. \end{DoxyCompactList}\item 
+struct \hyperlink{structg2o_1_1HyperGraphElementAction_1_1Parameters}{g2o\+::\+Hyper\+Graph\+Element\+Action\+::\+Parameters}
+\item 
+class \hyperlink{classg2o_1_1HyperGraphElementActionCollection}{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}
+\begin{DoxyCompactList}\small\item\em collection of actions \end{DoxyCompactList}\item 
+class \hyperlink{classg2o_1_1HyperGraphActionLibrary}{g2o\+::\+Hyper\+Graph\+Action\+Library}
+\begin{DoxyCompactList}\small\item\em library of actions, indexed by the action name; \end{DoxyCompactList}\item 
+class \hyperlink{classg2o_1_1WriteGnuplotAction}{g2o\+::\+Write\+Gnuplot\+Action}
+\item 
+struct \hyperlink{structg2o_1_1WriteGnuplotAction_1_1Parameters}{g2o\+::\+Write\+Gnuplot\+Action\+::\+Parameters}
+\item 
+class \hyperlink{classg2o_1_1DrawAction}{g2o\+::\+Draw\+Action}
+\begin{DoxyCompactList}\small\item\em draw actions \end{DoxyCompactList}\item 
+class \hyperlink{classg2o_1_1DrawAction_1_1Parameters}{g2o\+::\+Draw\+Action\+::\+Parameters}
+\item 
+class \hyperlink{classg2o_1_1RegisterActionProxy}{g2o\+::\+Register\+Action\+Proxy$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceg2o}{g2o}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hyper__graph__action_8h_a917c9372b6aeabdf00458df985464223}{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON}(classname)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceg2o_adfc887e1554f0b023669ac9de085e3ab}{g2o\+::apply\+Action} (Hyper\+Graph $\ast$graph, Hyper\+Graph\+Element\+Action $\ast$action, Hyper\+Graph\+Element\+Action\+::\+Parameters $\ast$params, const std\+::string \&type\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{hyper\+\_\+graph\+\_\+action.\+h@{hyper\+\_\+graph\+\_\+action.\+h}!G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON}}
+\index{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON}!hyper\+\_\+graph\+\_\+action.\+h@{hyper\+\_\+graph\+\_\+action.\+h}}
+\subsubsection[{\texorpdfstring{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON}{G2O_REGISTER_ACTION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON(
+\begin{DoxyParamCaption}
+\item[{}]{classname}
+\end{DoxyParamCaption}
+)}\hypertarget{hyper__graph__action_8h_a917c9372b6aeabdf00458df985464223}{}\label{hyper__graph__action_8h_a917c9372b6aeabdf00458df985464223}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \textcolor{keywordtype}{void} g2o\_action\_##classname(\textcolor{keywordtype}{void}) \{\} \(\backslash\)
+    static \hyperlink{classg2o_1_1RegisterActionProxy}{g2o::RegisterActionProxy<classname>} g\_action\_proxy\_##
+      classname;
+\end{DoxyCode}
+
+
+Definition at line 217 of file hyper\+\_\+graph\+\_\+action.\+h.
+

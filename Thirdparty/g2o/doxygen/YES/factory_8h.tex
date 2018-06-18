@@ -1,0 +1,121 @@
+\hypertarget{factory_8h}{}\section{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/factory.h File Reference}
+\label{factory_8h}\index{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/factory.\+h@{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/factory.\+h}}
+{\ttfamily \#include \char`\"{}../../config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../stuff/misc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hyper\+\_\+graph.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}creators.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for factory.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classg2o_1_1Factory}{g2o\+::\+Factory}
+\begin{DoxyCompactList}\small\item\em create vertices and edges based on T\+A\+Gs in, for example, a file \end{DoxyCompactList}\item 
+class \hyperlink{classg2o_1_1Factory_1_1CreatorInformation}{g2o\+::\+Factory\+::\+Creator\+Information}
+\item 
+class \hyperlink{classg2o_1_1RegisterTypeProxy}{g2o\+::\+Register\+Type\+Proxy$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceg2o}{g2o}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{factory_8h_a77ffc0f4450e80a6f6b00da03d8566d2}{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}
+\item 
+\#define \hyperlink{factory_8h_a931d6686e993e609f642e039e0bccb2f}{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}
+\item 
+\#define \hyperlink{factory_8h_a82a848072fa00a3cb536c5619d800940}{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE}(name,  classname)
+\item 
+\#define \hyperlink{factory_8h_a8a9dfe3b92e8018b8d19e0c512ee63d1}{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME}(classname)
+\item 
+\#define \hyperlink{factory_8h_a9f8975b0ea19f8c04d6ba983a5a3ca35}{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}(type\+Group\+Name)~extern \char`\"{}C\char`\"{} void \hyperlink{factory_8h_a77ffc0f4450e80a6f6b00da03d8566d2}{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT} g2o\+\_\+type\+\_\+group\+\_\+\#\#type\+Group\+Name(void) \{\}
+\item 
+\#define \hyperlink{factory_8h_af7ab0b7b31135f39038d4152ed3f8298}{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}(type\+Group\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{factory.\+h@{factory.\+h}!G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT@{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}}
+\index{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT@{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}!factory.\+h@{factory.\+h}}
+\subsubsection[{\texorpdfstring{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}{G2O_FACTORY_EXPORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}\hypertarget{factory_8h_a77ffc0f4450e80a6f6b00da03d8566d2}{}\label{factory_8h_a77ffc0f4450e80a6f6b00da03d8566d2}
+
+
+Definition at line 158 of file factory.\+h.
+
+\index{factory.\+h@{factory.\+h}!G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT@{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}}
+\index{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT@{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}!factory.\+h@{factory.\+h}}
+\subsubsection[{\texorpdfstring{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}{G2O_FACTORY_IMPORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}\hypertarget{factory_8h_a931d6686e993e609f642e039e0bccb2f}{}\label{factory_8h_a931d6686e993e609f642e039e0bccb2f}
+
+
+Definition at line 159 of file factory.\+h.
+
+\index{factory.\+h@{factory.\+h}!G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE}}
+\index{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE}!factory.\+h@{factory.\+h}}
+\subsubsection[{\texorpdfstring{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE}{G2O_REGISTER_TYPE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{classname}
+\end{DoxyParamCaption}
+)}\hypertarget{factory_8h_a82a848072fa00a3cb536c5619d800940}{}\label{factory_8h_a82a848072fa00a3cb536c5619d800940}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \textcolor{keywordtype}{void} \hyperlink{factory_8h_a77ffc0f4450e80a6f6b00da03d8566d2}{G2O\_FACTORY\_EXPORT} g2o\_type\_##classname(\textcolor{keywordtype}{void}) \{\} \(\backslash\)
+    static \hyperlink{classg2o_1_1RegisterTypeProxy}{g2o::RegisterTypeProxy<classname>} g\_type\_proxy\_##classname(#
+      name);
+\end{DoxyCode}
+
+
+Definition at line 163 of file factory.\+h.
+
+\index{factory.\+h@{factory.\+h}!G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}}
+\index{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}!factory.\+h@{factory.\+h}}
+\subsubsection[{\texorpdfstring{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}{G2O_REGISTER_TYPE_GROUP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP(
+\begin{DoxyParamCaption}
+\item[{}]{type\+Group\+Name}
+\end{DoxyParamCaption}
+)~extern \char`\"{}C\char`\"{} void {\bf G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT} g2o\+\_\+type\+\_\+group\+\_\+\#\#type\+Group\+Name(void) \{\}}\hypertarget{factory_8h_a9f8975b0ea19f8c04d6ba983a5a3ca35}{}\label{factory_8h_a9f8975b0ea19f8c04d6ba983a5a3ca35}
+
+
+Definition at line 171 of file factory.\+h.
+
+\index{factory.\+h@{factory.\+h}!G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME}}
+\index{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME}!factory.\+h@{factory.\+h}}
+\subsubsection[{\texorpdfstring{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME}{G2O_USE_TYPE_BY_CLASS_NAME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME(
+\begin{DoxyParamCaption}
+\item[{}]{classname}
+\end{DoxyParamCaption}
+)}\hypertarget{factory_8h_a8a9dfe3b92e8018b8d19e0c512ee63d1}{}\label{factory_8h_a8a9dfe3b92e8018b8d19e0c512ee63d1}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \textcolor{keywordtype}{void} \hyperlink{factory_8h_a931d6686e993e609f642e039e0bccb2f}{G2O\_FACTORY\_IMPORT} g2o\_type\_##classname(\textcolor{keywordtype}{void}); \(\backslash\)
+    static \hyperlink{structg2o_1_1ForceLinker}{g2o::ForceLinker} proxy\_##classname(g2o\_type\_##classname);
+\end{DoxyCode}
+
+
+Definition at line 167 of file factory.\+h.
+
+\index{factory.\+h@{factory.\+h}!G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}}
+\index{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}!factory.\+h@{factory.\+h}}
+\subsubsection[{\texorpdfstring{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}{G2O_USE_TYPE_GROUP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP(
+\begin{DoxyParamCaption}
+\item[{}]{type\+Group\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{factory_8h_af7ab0b7b31135f39038d4152ed3f8298}{}\label{factory_8h_af7ab0b7b31135f39038d4152ed3f8298}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \textcolor{keywordtype}{void} \hyperlink{factory_8h_a931d6686e993e609f642e039e0bccb2f}{G2O\_FACTORY\_IMPORT} g2o\_type\_group\_##typeGroupName(\textcolor{keywordtype}{void}); \(\backslash\)
+    static \hyperlink{structg2o_1_1ForceLinker}{g2o::ForceLinker} g2o\_force\_type\_link\_##typeGroupName(g2o\_type\_group\_##
+      typeGroupName);
+\end{DoxyCode}
+
+
+Definition at line 174 of file factory.\+h.
+

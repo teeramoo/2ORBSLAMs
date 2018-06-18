@@ -1,0 +1,153 @@
+\hypertarget{classg2o_1_1RobustKernelHuber}{}\section{g2o\+:\+:Robust\+Kernel\+Huber Class Reference}
+\label{classg2o_1_1RobustKernelHuber}\index{g2o\+::\+Robust\+Kernel\+Huber@{g2o\+::\+Robust\+Kernel\+Huber}}
+
+
+Huber Cost Function.  
+
+
+
+
+{\ttfamily \#include $<$robust\+\_\+kernel\+\_\+impl.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Robust\+Kernel\+Huber\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Robust\+Kernel\+Huber\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classg2o_1_1RobustKernelHuber_a7e9ee4bbc9483dcd3d10a4c1f506a4d2}{set\+Delta} (double \hyperlink{classg2o_1_1RobustKernel_a8c94f88f5c97f47c519a9adb44b4da36}{delta})
+\item 
+virtual void \hyperlink{classg2o_1_1RobustKernelHuber_ad243b5888d71a3573e9f9372abead870}{set\+Delta\+Sqr} (const double \&\hyperlink{classg2o_1_1RobustKernel_a8c94f88f5c97f47c519a9adb44b4da36}{delta}, const double \&delta\+Sqr)
+\item 
+virtual void \hyperlink{classg2o_1_1RobustKernelHuber_a702ac5453740284ba6addeb41157e45e}{robustify} (double e2, Eigen\+::\+Vector3d \&rho) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classg2o_1_1RobustKernelHuber_ada9d48b59d64f72c18b11905de8dca0d}{dsqr}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Huber Cost Function. 
+
+Loss function as described by Huber See \href{http://en.wikipedia.org/wiki/Huber_loss_function}{\tt http\+://en.\+wikipedia.\+org/wiki/\+Huber\+\_\+loss\+\_\+function}
+
+If e$^\wedge$(1/2) $<$ d rho(e) = e
+
+else \begin{DoxyVerb}          1/2    2
+\end{DoxyVerb}
+ rho(e) = 2 d e -\/ d 
+
+Definition at line 76 of file robust\+\_\+kernel\+\_\+impl.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Robust\+Kernel\+Huber@{g2o\+::\+Robust\+Kernel\+Huber}!robustify@{robustify}}
+\index{robustify@{robustify}!g2o\+::\+Robust\+Kernel\+Huber@{g2o\+::\+Robust\+Kernel\+Huber}}
+\subsubsection[{\texorpdfstring{robustify(double e2, Eigen\+::\+Vector3d \&rho) const }{robustify(double e2, Eigen::Vector3d &rho) const }}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Robust\+Kernel\+Huber\+::robustify (
+\begin{DoxyParamCaption}
+\item[{double}]{squared\+Error, }
+\item[{Eigen\+::\+Vector3d \&}]{rho}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1RobustKernelHuber_a702ac5453740284ba6addeb41157e45e}{}\label{classg2o_1_1RobustKernelHuber_a702ac5453740284ba6addeb41157e45e}
+compute the scaling factor for a error\+: The error is e$^\wedge$T Omega e The output rho is rho\mbox{[}0\mbox{]}\+: The actual scaled error value rho\mbox{[}1\mbox{]}\+: First derivative of the scaling function rho\mbox{[}2\mbox{]}\+: Second derivative of the scaling function 
+
+Implements \hyperlink{classg2o_1_1RobustKernel_ab47b071a0cfe466be063f0104bc41d0f}{g2o\+::\+Robust\+Kernel}.
+
+
+
+Definition at line 78 of file robust\+\_\+kernel\+\_\+impl.\+cpp.
+
+
+
+References g2o\+::\+Robust\+Kernel\+::\+\_\+delta.
+
+
+\begin{DoxyCode}
+79 \{
+80   \textcolor{comment}{//dsqr = \_delta * \_delta;}
+81   \textcolor{keywordflow}{if} (e <= \hyperlink{classg2o_1_1RobustKernelHuber_ada9d48b59d64f72c18b11905de8dca0d}{dsqr}) \{ \textcolor{comment}{// inlier}
+82     rho[0] = e;
+83     rho[1] = 1.;
+84     rho[2] = 0.;
+85   \} \textcolor{keywordflow}{else} \{ \textcolor{comment}{// outlier}
+86     \textcolor{keywordtype}{double} sqrte = sqrt(e); \textcolor{comment}{// absolut value of the error}
+87     rho[0] = 2*sqrte*\hyperlink{classg2o_1_1RobustKernel_a4b03953a6e7bfca64efea37fb98548aa}{\_delta} - \hyperlink{classg2o_1_1RobustKernelHuber_ada9d48b59d64f72c18b11905de8dca0d}{dsqr}; \textcolor{comment}{// rho(e)   = 2 * delta * e^(1/2) - delta^2}
+88     rho[1] = \hyperlink{classg2o_1_1RobustKernel_a4b03953a6e7bfca64efea37fb98548aa}{\_delta} / sqrte;        \textcolor{comment}{// rho'(e)  = delta / sqrt(e)}
+89     rho[2] = - 0.5 * rho[1] / e;    \textcolor{comment}{// rho''(e) = -1 / (2*e^(3/2)) = -1/2 * (delta/e) / e}
+90   \}
+91 \}
+\end{DoxyCode}
+\index{g2o\+::\+Robust\+Kernel\+Huber@{g2o\+::\+Robust\+Kernel\+Huber}!set\+Delta@{set\+Delta}}
+\index{set\+Delta@{set\+Delta}!g2o\+::\+Robust\+Kernel\+Huber@{g2o\+::\+Robust\+Kernel\+Huber}}
+\subsubsection[{\texorpdfstring{set\+Delta(double delta)}{setDelta(double delta)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Robust\+Kernel\+Huber\+::set\+Delta (
+\begin{DoxyParamCaption}
+\item[{double}]{delta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1RobustKernelHuber_a7e9ee4bbc9483dcd3d10a4c1f506a4d2}{}\label{classg2o_1_1RobustKernelHuber_a7e9ee4bbc9483dcd3d10a4c1f506a4d2}
+set the window size of the error. A squared error above delta$^\wedge$2 is considered as outlier in the data. 
+
+Reimplemented from \hyperlink{classg2o_1_1RobustKernel_a8d85269635c436fca51324d7cb16a798}{g2o\+::\+Robust\+Kernel}.
+
+
+
+Definition at line 65 of file robust\+\_\+kernel\+\_\+impl.\+cpp.
+
+
+
+References g2o\+::\+Robust\+Kernel\+::\+\_\+delta, and g2o\+::\+Robust\+Kernel\+::delta().
+
+
+\begin{DoxyCode}
+66 \{
+67         \hyperlink{classg2o_1_1RobustKernelHuber_ada9d48b59d64f72c18b11905de8dca0d}{dsqr} = \hyperlink{classg2o_1_1RobustKernel_a8c94f88f5c97f47c519a9adb44b4da36}{delta}*\hyperlink{classg2o_1_1RobustKernel_a8c94f88f5c97f47c519a9adb44b4da36}{delta};
+68         \hyperlink{classg2o_1_1RobustKernel_a4b03953a6e7bfca64efea37fb98548aa}{\_delta} = \hyperlink{classg2o_1_1RobustKernel_a8c94f88f5c97f47c519a9adb44b4da36}{delta};
+69 \}
+\end{DoxyCode}
+\index{g2o\+::\+Robust\+Kernel\+Huber@{g2o\+::\+Robust\+Kernel\+Huber}!set\+Delta\+Sqr@{set\+Delta\+Sqr}}
+\index{set\+Delta\+Sqr@{set\+Delta\+Sqr}!g2o\+::\+Robust\+Kernel\+Huber@{g2o\+::\+Robust\+Kernel\+Huber}}
+\subsubsection[{\texorpdfstring{set\+Delta\+Sqr(const double \&delta, const double \&delta\+Sqr)}{setDeltaSqr(const double &delta, const double &deltaSqr)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Robust\+Kernel\+Huber\+::set\+Delta\+Sqr (
+\begin{DoxyParamCaption}
+\item[{const double \&}]{delta, }
+\item[{const double \&}]{delta\+Sqr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1RobustKernelHuber_ad243b5888d71a3573e9f9372abead870}{}\label{classg2o_1_1RobustKernelHuber_ad243b5888d71a3573e9f9372abead870}
+
+
+Definition at line 72 of file robust\+\_\+kernel\+\_\+impl.\+cpp.
+
+
+
+References g2o\+::\+Robust\+Kernel\+::\+\_\+delta, and g2o\+::\+Robust\+Kernel\+::delta().
+
+
+\begin{DoxyCode}
+73 \{
+74         \hyperlink{classg2o_1_1RobustKernelHuber_ada9d48b59d64f72c18b11905de8dca0d}{dsqr} = deltaSqr;
+75         \hyperlink{classg2o_1_1RobustKernel_a4b03953a6e7bfca64efea37fb98548aa}{\_delta} = \hyperlink{classg2o_1_1RobustKernel_a8c94f88f5c97f47c519a9adb44b4da36}{delta};
+76 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Robust\+Kernel\+Huber@{g2o\+::\+Robust\+Kernel\+Huber}!dsqr@{dsqr}}
+\index{dsqr@{dsqr}!g2o\+::\+Robust\+Kernel\+Huber@{g2o\+::\+Robust\+Kernel\+Huber}}
+\subsubsection[{\texorpdfstring{dsqr}{dsqr}}]{\setlength{\rightskip}{0pt plus 5cm}float g2o\+::\+Robust\+Kernel\+Huber\+::dsqr\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classg2o_1_1RobustKernelHuber_ada9d48b59d64f72c18b11905de8dca0d}{}\label{classg2o_1_1RobustKernelHuber_ada9d48b59d64f72c18b11905de8dca0d}
+
+
+Definition at line 84 of file robust\+\_\+kernel\+\_\+impl.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{robust__kernel__impl_8h}{robust\+\_\+kernel\+\_\+impl.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{robust__kernel__impl_8cpp}{robust\+\_\+kernel\+\_\+impl.\+cpp}\end{DoxyCompactItemize}

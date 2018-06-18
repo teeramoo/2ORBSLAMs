@@ -1,0 +1,123 @@
+\hypertarget{classg2o_1_1EstimatePropagatorCostOdometry}{}\section{g2o\+:\+:Estimate\+Propagator\+Cost\+Odometry Class Reference}
+\label{classg2o_1_1EstimatePropagatorCostOdometry}\index{g2o\+::\+Estimate\+Propagator\+Cost\+Odometry@{g2o\+::\+Estimate\+Propagator\+Cost\+Odometry}}
+
+
+cost for traversing only odometry edges.  
+
+
+
+
+{\ttfamily \#include $<$estimate\+\_\+propagator.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Estimate\+Propagator\+Cost\+Odometry\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Estimate\+Propagator\+Cost\+Odometry\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1EstimatePropagatorCostOdometry_a426a53e3cce07b71a129cc53754e9f1a}{Estimate\+Propagator\+Cost\+Odometry} (\hyperlink{classg2o_1_1SparseOptimizer}{Sparse\+Optimizer} $\ast$graph)
+\item 
+virtual double \hyperlink{classg2o_1_1EstimatePropagatorCostOdometry_a5f479f6d87636d71913c2a390047ea71}{operator()} (\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge}{Optimizable\+Graph\+::\+Edge} $\ast$edge, const \hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set} \&from\+\_\+, \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex}{Optimizable\+Graph\+::\+Vertex} $\ast$to\+\_\+) const 
+\item 
+virtual const char $\ast$ \hyperlink{classg2o_1_1EstimatePropagatorCostOdometry_aca626795267c23c863940eddca62a029}{name} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+cost for traversing only odometry edges. 
+
+Initialize your graph along odometry edges. An odometry edge is assumed to connect vertices whose I\+Ds only differs by one. 
+
+Definition at line 65 of file estimate\+\_\+propagator.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Estimate\+Propagator\+Cost\+Odometry@{g2o\+::\+Estimate\+Propagator\+Cost\+Odometry}!Estimate\+Propagator\+Cost\+Odometry@{Estimate\+Propagator\+Cost\+Odometry}}
+\index{Estimate\+Propagator\+Cost\+Odometry@{Estimate\+Propagator\+Cost\+Odometry}!g2o\+::\+Estimate\+Propagator\+Cost\+Odometry@{g2o\+::\+Estimate\+Propagator\+Cost\+Odometry}}
+\subsubsection[{\texorpdfstring{Estimate\+Propagator\+Cost\+Odometry(\+Sparse\+Optimizer $\ast$graph)}{EstimatePropagatorCostOdometry(SparseOptimizer *graph)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Estimate\+Propagator\+Cost\+Odometry\+::\+Estimate\+Propagator\+Cost\+Odometry (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Optimizer} $\ast$}]{graph}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1EstimatePropagatorCostOdometry_a426a53e3cce07b71a129cc53754e9f1a}{}\label{classg2o_1_1EstimatePropagatorCostOdometry_a426a53e3cce07b71a129cc53754e9f1a}
+
+
+Definition at line 249 of file estimate\+\_\+propagator.\+cpp.
+
+
+\begin{DoxyCode}
+249                                                                                        :
+250     \hyperlink{classg2o_1_1EstimatePropagatorCost_aebd56e3597a99b225bc3799ec8145bc9}{EstimatePropagatorCost}(graph)
+251   \{
+252   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Estimate\+Propagator\+Cost\+Odometry@{g2o\+::\+Estimate\+Propagator\+Cost\+Odometry}!name@{name}}
+\index{name@{name}!g2o\+::\+Estimate\+Propagator\+Cost\+Odometry@{g2o\+::\+Estimate\+Propagator\+Cost\+Odometry}}
+\subsubsection[{\texorpdfstring{name() const }{name() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual const char$\ast$ g2o\+::\+Estimate\+Propagator\+Cost\+Odometry\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1EstimatePropagatorCostOdometry_aca626795267c23c863940eddca62a029}{}\label{classg2o_1_1EstimatePropagatorCostOdometry_aca626795267c23c863940eddca62a029}
+
+
+Reimplemented from \hyperlink{classg2o_1_1EstimatePropagatorCost_a302b70a2b5d83d4ae5863f4b88742589}{g2o\+::\+Estimate\+Propagator\+Cost}.
+
+
+
+Definition at line 69 of file estimate\+\_\+propagator.\+h.
+
+
+\begin{DoxyCode}
+69 \{ \textcolor{keywordflow}{return} \textcolor{stringliteral}{"odometry"};\}
+\end{DoxyCode}
+\index{g2o\+::\+Estimate\+Propagator\+Cost\+Odometry@{g2o\+::\+Estimate\+Propagator\+Cost\+Odometry}!operator()@{operator()}}
+\index{operator()@{operator()}!g2o\+::\+Estimate\+Propagator\+Cost\+Odometry@{g2o\+::\+Estimate\+Propagator\+Cost\+Odometry}}
+\subsubsection[{\texorpdfstring{operator()(\+Optimizable\+Graph\+::\+Edge $\ast$edge, const Optimizable\+Graph\+::\+Vertex\+Set \&from\+\_\+, Optimizable\+Graph\+::\+Vertex $\ast$to\+\_\+) const }{operator()(OptimizableGraph::Edge *edge, const OptimizableGraph::VertexSet &from_, OptimizableGraph::Vertex *to_) const }}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Estimate\+Propagator\+Cost\+Odometry\+::operator() (
+\begin{DoxyParamCaption}
+\item[{{\bf Optimizable\+Graph\+::\+Edge} $\ast$}]{edge, }
+\item[{const {\bf Optimizable\+Graph\+::\+Vertex\+Set} \&}]{from\+\_\+, }
+\item[{{\bf Optimizable\+Graph\+::\+Vertex} $\ast$}]{to\+\_\+}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1EstimatePropagatorCostOdometry_a5f479f6d87636d71913c2a390047ea71}{}\label{classg2o_1_1EstimatePropagatorCostOdometry_a5f479f6d87636d71913c2a390047ea71}
+
+
+Reimplemented from \hyperlink{classg2o_1_1EstimatePropagatorCost_abbff40e061153f9049a40514c44b4492}{g2o\+::\+Estimate\+Propagator\+Cost}.
+
+
+
+Definition at line 254 of file estimate\+\_\+propagator.\+cpp.
+
+
+
+References g2o\+::\+Estimate\+Propagator\+Cost\+::\+\_\+graph, g2o\+::\+Sparse\+Optimizer\+::active\+Edges(), g2o\+::\+Sparse\+Optimizer\+::find\+Active\+Edge(), g2o\+::\+Hyper\+Graph\+::\+Vertex\+::id(), and g2o\+::\+Optimizable\+Graph\+::\+Edge\+::initial\+Estimate\+Possible().
+
+
+\begin{DoxyCode}
+255   \{
+256     OptimizableGraph::Edge* e = \textcolor{keyword}{dynamic\_cast<}OptimizableGraph::Edge*\textcolor{keyword}{>}(edge);
+257     OptimizableGraph::Vertex* from = \textcolor{keyword}{dynamic\_cast<}OptimizableGraph::Vertex*\textcolor{keyword}{>}(*from\_.begin());
+258     OptimizableGraph::Vertex* to = \textcolor{keyword}{dynamic\_cast<}OptimizableGraph::Vertex*\textcolor{keyword}{>}(to\_);
+259     \textcolor{keywordflow}{if} (std::abs(from->id() - to->id()) != 1) \textcolor{comment}{// simple method to identify odometry edges in a pose graph}
+260       \textcolor{keywordflow}{return} std::numeric\_limits<double>::max();
+261     SparseOptimizer::EdgeContainer::const\_iterator it = \hyperlink{classg2o_1_1EstimatePropagatorCost_adf778ed8de5b54eb934e88107fe77980}{\_graph}->
+      \hyperlink{classg2o_1_1SparseOptimizer_a68b59bf6d56a390717b82b3ae009ccf0}{findActiveEdge}(e);
+262     \textcolor{keywordflow}{if} (it == \hyperlink{classg2o_1_1EstimatePropagatorCost_adf778ed8de5b54eb934e88107fe77980}{\_graph}->\hyperlink{classg2o_1_1SparseOptimizer_aef20b7dd401862d572a851349d1bc124}{activeEdges}().end()) \textcolor{comment}{// it has to be an active edge}
+263       \textcolor{keywordflow}{return} std::numeric\_limits<double>::max();
+264     \textcolor{keywordflow}{return} e->initialEstimatePossible(from\_, to);
+265   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{estimate__propagator_8h}{estimate\+\_\+propagator.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{estimate__propagator_8cpp}{estimate\+\_\+propagator.\+cpp}\end{DoxyCompactItemize}

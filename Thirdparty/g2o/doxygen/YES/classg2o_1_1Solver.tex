@@ -1,0 +1,826 @@
+\hypertarget{classg2o_1_1Solver}{}\section{g2o\+:\+:Solver Class Reference}
+\label{classg2o_1_1Solver}\index{g2o\+::\+Solver@{g2o\+::\+Solver}}
+
+
+Generic interface for a sparse solver operating on a graph which solves one iteration of the linearized objective function.  
+
+
+
+
+{\ttfamily \#include $<$solver.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Solver\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Solver\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1Solver_af097bdf5c8dc4bb017a2cec4038d5a56}{Solver} ()
+\item 
+virtual \hyperlink{classg2o_1_1Solver_a3b4a7c818ea0904772bc8bea6f1bbe86}{$\sim$\+Solver} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1Solver_a532174e1ee53642880d2d59c128b037b}{init} (\hyperlink{classg2o_1_1SparseOptimizer}{Sparse\+Optimizer} $\ast$\hyperlink{classg2o_1_1Solver_a9ea585f131ab02ae1e0c0192126f0b5f}{optimizer}, bool online=false)=0
+\item 
+virtual bool \hyperlink{classg2o_1_1Solver_a6c93ac0f528ffe05867d33150c54f46f}{build\+Structure} (bool zero\+Blocks=false)=0
+\item 
+virtual bool \hyperlink{classg2o_1_1Solver_a035b8effea7178eabfb35e1c78b25987}{update\+Structure} (const std\+::vector$<$ \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Hyper\+Graph\+::\+Vertex} $\ast$ $>$ \&vset, const \hyperlink{classg2o_1_1HyperGraph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Hyper\+Graph\+::\+Edge\+Set} \&edges)=0
+\item 
+virtual bool \hyperlink{classg2o_1_1Solver_ac1565e85d5ca68a87ad7f06f8164a8c0}{build\+System} ()=0
+\item 
+virtual bool \hyperlink{classg2o_1_1Solver_a9c359a886db57f2f81e54a2113f3bd38}{solve} ()=0
+\item 
+virtual bool \hyperlink{classg2o_1_1Solver_afc33768e6c024e11d9e3c9d938b59b7f}{compute\+Marginals} (\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ \&spinv, const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices)=0
+\item 
+virtual bool \hyperlink{classg2o_1_1Solver_a94a0d5196c7859c6c37fc2368ac56be3}{set\+Lambda} (double lambda, bool backup=false)=0
+\item 
+virtual void \hyperlink{classg2o_1_1Solver_a3c40dae9b999c4d18e57b02fd0e0ade2}{restore\+Diagonal} ()=0
+\item 
+double $\ast$ \hyperlink{classg2o_1_1Solver_acb097d8568624a1f3af4dba808e5593b}{x} ()
+\begin{DoxyCompactList}\small\item\em return x, the solution vector \end{DoxyCompactList}\item 
+const double $\ast$ \hyperlink{classg2o_1_1Solver_ad46ef97021dc9f694965adc613e37296}{x} () const 
+\item 
+double $\ast$ \hyperlink{classg2o_1_1Solver_a3212ad9d80f8f5ad15b72c2b55000095}{b} ()
+\begin{DoxyCompactList}\small\item\em return b, the right hand side of the system \end{DoxyCompactList}\item 
+const double $\ast$ \hyperlink{classg2o_1_1Solver_a9cae6286a8f4b8b93032097cee6cddf6}{b} () const 
+\item 
+size\+\_\+t \hyperlink{classg2o_1_1Solver_a739e1e7b0888d5f316f1d68cbd21bc2d}{vector\+Size} () const 
+\begin{DoxyCompactList}\small\item\em return the size of the solution vector (x) and b \end{DoxyCompactList}\item 
+\hyperlink{classg2o_1_1SparseOptimizer}{Sparse\+Optimizer} $\ast$ \hyperlink{classg2o_1_1Solver_a9ea585f131ab02ae1e0c0192126f0b5f}{optimizer} () const 
+\begin{DoxyCompactList}\small\item\em the optimizer (graph) on which the solver works \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1Solver_af27b647cdc19d99ea5378b443e118bb0}{set\+Optimizer} (\hyperlink{classg2o_1_1SparseOptimizer}{Sparse\+Optimizer} $\ast$\hyperlink{classg2o_1_1Solver_a9ea585f131ab02ae1e0c0192126f0b5f}{optimizer})
+\item 
+bool \hyperlink{classg2o_1_1Solver_a074069dacd2ac34c895c6f2f333e38d5}{levenberg} () const 
+\begin{DoxyCompactList}\small\item\em the system is Levenberg-\/\+Marquardt \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1Solver_a01e21c08d7ec8c8051de565b5c314fa1}{set\+Levenberg} (bool \hyperlink{classg2o_1_1Solver_a074069dacd2ac34c895c6f2f333e38d5}{levenberg})
+\item 
+virtual bool \hyperlink{classg2o_1_1Solver_a36c68f7bc0b8864ee7722bc3c06de554}{supports\+Schur} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1Solver_acc8d6a8ae7847a157d4a2f44aea14c74}{schur} ()=0
+\begin{DoxyCompactList}\small\item\em should the solver perform the schur complement or not \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1Solver_a30134c828054375b1cc16ede2a879761}{set\+Schur} (bool s)=0
+\item 
+size\+\_\+t \hyperlink{classg2o_1_1Solver_aeee599d4f7fbeba89c02569174c0c099}{additional\+Vector\+Space} () const 
+\item 
+void \hyperlink{classg2o_1_1Solver_ad35b33cee11586c8adea12cd6949f74a}{set\+Additional\+Vector\+Space} (size\+\_\+t s)
+\item 
+virtual void \hyperlink{classg2o_1_1Solver_ad3ef2a487d991363ba86af2840b0d7cd}{set\+Write\+Debug} (bool)=0
+\item 
+virtual bool \hyperlink{classg2o_1_1Solver_a0f6f14940eccea0f9bf9e2ea144c9b4d}{write\+Debug} () const =0
+\item 
+virtual bool \hyperlink{classg2o_1_1Solver_a14852543c4dc3f3e7088efe03aa135eb}{save\+Hessian} (const std\+::string \&) const =0
+\begin{DoxyCompactList}\small\item\em write the hessian to disk using the specified file name \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classg2o_1_1Solver_ad1f85839e85f3e2c49112fb7e2b843ad}{resize\+Vector} (size\+\_\+t sx)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1SparseOptimizer}{Sparse\+Optimizer} $\ast$ \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\+\_\+optimizer}
+\item 
+double $\ast$ \hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\+\_\+x}
+\item 
+double $\ast$ \hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\+\_\+b}
+\item 
+size\+\_\+t \hyperlink{classg2o_1_1Solver_abcf7731347f14915bd9ba963021ea830}{\+\_\+x\+Size}
+\item 
+size\+\_\+t \hyperlink{classg2o_1_1Solver_a263003f9053537f92d5d019ce5c53771}{\+\_\+max\+X\+Size}
+\item 
+bool \hyperlink{classg2o_1_1Solver_a8b7f6d4e00e3734f5ed9bd3dfac201a6}{\+\_\+is\+Levenberg}
+\begin{DoxyCompactList}\small\item\em the system we gonna solve is a Levenberg-\/\+Marquardt system \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classg2o_1_1Solver_a6a1492959487c279747a8f3097a5f04e}{\+\_\+additional\+Vector\+Space}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1Solver_a040c384f90e39504853a29648a71bc25}{Solver} (const \hyperlink{classg2o_1_1Solver}{Solver} \&)
+\item 
+\hyperlink{classg2o_1_1Solver}{Solver} \& \hyperlink{classg2o_1_1Solver_a19a6b5b126e7bef1c99dff89567f2eff}{operator=} (const \hyperlink{classg2o_1_1Solver}{Solver} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic interface for a sparse solver operating on a graph which solves one iteration of the linearized objective function. 
+
+Definition at line 43 of file solver.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!Solver@{Solver}}
+\index{Solver@{Solver}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{Solver()}{Solver()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Solver\+::\+Solver (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1Solver_af097bdf5c8dc4bb017a2cec4038d5a56}{}\label{classg2o_1_1Solver_af097bdf5c8dc4bb017a2cec4038d5a56}
+
+
+Definition at line 34 of file solver.\+cpp.
+
+
+\begin{DoxyCode}
+34                :
+35   \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer}(0), \hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\_x}(0), \hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b}(0), \hyperlink{classg2o_1_1Solver_abcf7731347f14915bd9ba963021ea830}{\_xSize}(0), \hyperlink{classg2o_1_1Solver_a263003f9053537f92d5d019ce5c53771}{\_maxXSize}(0),
+36   \hyperlink{classg2o_1_1Solver_a8b7f6d4e00e3734f5ed9bd3dfac201a6}{\_isLevenberg}(\textcolor{keyword}{false}), \hyperlink{classg2o_1_1Solver_a6a1492959487c279747a8f3097a5f04e}{\_additionalVectorSpace}(0)
+37 \{
+38 \}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!````~Solver@{$\sim$\+Solver}}
+\index{````~Solver@{$\sim$\+Solver}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{$\sim$\+Solver()}{~Solver()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Solver\+::$\sim$\+Solver (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1Solver_a3b4a7c818ea0904772bc8bea6f1bbe86}{}\label{classg2o_1_1Solver_a3b4a7c818ea0904772bc8bea6f1bbe86}
+
+
+Definition at line 40 of file solver.\+cpp.
+
+
+
+References \+\_\+b, and \+\_\+x.
+
+
+\begin{DoxyCode}
+41 \{
+42   \textcolor{keyword}{delete}[] \hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\_x};
+43   \textcolor{keyword}{delete}[] \hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b};
+44 \}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!Solver@{Solver}}
+\index{Solver@{Solver}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{Solver(const Solver \&)}{Solver(const Solver &)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Solver\+::\+Solver (
+\begin{DoxyParamCaption}
+\item[{const {\bf Solver} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classg2o_1_1Solver_a040c384f90e39504853a29648a71bc25}{}\label{classg2o_1_1Solver_a040c384f90e39504853a29648a71bc25}
+
+
+Definition at line 146 of file solver.\+h.
+
+
+\begin{DoxyCode}
+146 \{ \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!additional\+Vector\+Space@{additional\+Vector\+Space}}
+\index{additional\+Vector\+Space@{additional\+Vector\+Space}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{additional\+Vector\+Space() const }{additionalVectorSpace() const }}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t g2o\+::\+Solver\+::additional\+Vector\+Space (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1Solver_aeee599d4f7fbeba89c02569174c0c099}{}\label{classg2o_1_1Solver_aeee599d4f7fbeba89c02569174c0c099}
+
+
+Definition at line 122 of file solver.\+h.
+
+
+
+References \+\_\+additional\+Vector\+Space, save\+Hessian(), set\+Additional\+Vector\+Space(), set\+Write\+Debug(), and write\+Debug().
+
+
+\begin{DoxyCode}
+122 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1Solver_a6a1492959487c279747a8f3097a5f04e}{\_additionalVectorSpace};\}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!b@{b}}
+\index{b@{b}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{b()}{b()}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ g2o\+::\+Solver\+::b (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1Solver_a3212ad9d80f8f5ad15b72c2b55000095}{}\label{classg2o_1_1Solver_a3212ad9d80f8f5ad15b72c2b55000095}
+
+
+return b, the right hand side of the system 
+
+
+
+Definition at line 98 of file solver.\+h.
+
+
+
+References \+\_\+b.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Levenberg\+::compute\+Scale(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::restore\+Diagonal(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::set\+Lambda(), and g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve().
+
+
+\begin{DoxyCode}
+98 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b};\}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!b@{b}}
+\index{b@{b}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{b() const }{b() const }}]{\setlength{\rightskip}{0pt plus 5cm}const double$\ast$ g2o\+::\+Solver\+::b (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1Solver_a9cae6286a8f4b8b93032097cee6cddf6}{}\label{classg2o_1_1Solver_a9cae6286a8f4b8b93032097cee6cddf6}
+
+
+Definition at line 99 of file solver.\+h.
+
+
+
+References \+\_\+b.
+
+
+\begin{DoxyCode}
+99 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b};\}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!build\+Structure@{build\+Structure}}
+\index{build\+Structure@{build\+Structure}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{build\+Structure(bool zero\+Blocks=false)=0}{buildStructure(bool zeroBlocks=false)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Solver\+::build\+Structure (
+\begin{DoxyParamCaption}
+\item[{bool}]{zero\+Blocks = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Solver_a6c93ac0f528ffe05867d33150c54f46f}{}\label{classg2o_1_1Solver_a6c93ac0f528ffe05867d33150c54f46f}
+build the structure of the system 
+
+Implemented in \hyperlink{classg2o_1_1BlockSolver_a17e4392d3cca9a9d7cf38bb46d073b86}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::build\+Linear\+Structure(), g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::solve(), g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve(), and g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!build\+System@{build\+System}}
+\index{build\+System@{build\+System}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{build\+System()=0}{buildSystem()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Solver\+::build\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Solver_ac1565e85d5ca68a87ad7f06f8164a8c0}{}\label{classg2o_1_1Solver_ac1565e85d5ca68a87ad7f06f8164a8c0}
+build the current system 
+
+Implemented in \hyperlink{classg2o_1_1BlockSolver_a2654a8d52f38e5ce23720a8de302e2e7}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::solve(), g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve(), g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve(), and g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::update\+Linear\+System().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!compute\+Marginals@{compute\+Marginals}}
+\index{compute\+Marginals@{compute\+Marginals}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{compute\+Marginals(\+Sparse\+Block\+Matrix$<$ Matrix\+Xd $>$ \&spinv, const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices)=0}{computeMarginals(SparseBlockMatrix< MatrixXd > &spinv, const std::vector< std::pair< int, int > > &blockIndices)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Solver\+::compute\+Marginals (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ \&}]{spinv, }
+\item[{const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&}]{block\+Indices}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Solver_afc33768e6c024e11d9e3c9d938b59b7f}{}\label{classg2o_1_1Solver_afc33768e6c024e11d9e3c9d938b59b7f}
+computes the block diagonal elements of the pattern specified in the input and stores them in given \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix} 
+
+Implemented in \hyperlink{classg2o_1_1BlockSolver_ac21cd7e2c9b8a1414f7a2dccb0d30a0e}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::compute\+Marginals().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!init@{init}}
+\index{init@{init}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{init(\+Sparse\+Optimizer $\ast$optimizer, bool online=false)=0}{init(SparseOptimizer *optimizer, bool online=false)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Solver\+::init (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Optimizer} $\ast$}]{optimizer, }
+\item[{bool}]{online = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Solver_a532174e1ee53642880d2d59c128b037b}{}\label{classg2o_1_1Solver_a532174e1ee53642880d2d59c128b037b}
+initialize the solver, called once before the first iteration 
+
+Implemented in \hyperlink{classg2o_1_1BlockSolver_a8bf01018abc3bfddfa3b29a380a1d6cb}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::init().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!levenberg@{levenberg}}
+\index{levenberg@{levenberg}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{levenberg() const }{levenberg() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Solver\+::levenberg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1Solver_a074069dacd2ac34c895c6f2f333e38d5}{}\label{classg2o_1_1Solver_a074069dacd2ac34c895c6f2f333e38d5}
+
+
+the system is Levenberg-\/\+Marquardt 
+
+
+
+Definition at line 109 of file solver.\+h.
+
+
+
+References \+\_\+is\+Levenberg, and set\+Levenberg().
+
+
+
+Referenced by set\+Levenberg().
+
+
+\begin{DoxyCode}
+109 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1Solver_a8b7f6d4e00e3734f5ed9bd3dfac201a6}{\_isLevenberg};\}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!operator=@{operator=}}
+\index{operator=@{operator=}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{operator=(const Solver \&)}{operator=(const Solver &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Solver}\& g2o\+::\+Solver\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Solver} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classg2o_1_1Solver_a19a6b5b126e7bef1c99dff89567f2eff}{}\label{classg2o_1_1Solver_a19a6b5b126e7bef1c99dff89567f2eff}
+
+
+Definition at line 147 of file solver.\+h.
+
+
+\begin{DoxyCode}
+147 \{ \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!optimizer@{optimizer}}
+\index{optimizer@{optimizer}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{optimizer() const }{optimizer() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sparse\+Optimizer}$\ast$ g2o\+::\+Solver\+::optimizer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1Solver_a9ea585f131ab02ae1e0c0192126f0b5f}{}\label{classg2o_1_1Solver_a9ea585f131ab02ae1e0c0192126f0b5f}
+
+
+the optimizer (graph) on which the solver works 
+
+
+
+Definition at line 105 of file solver.\+h.
+
+
+
+References \+\_\+optimizer, and set\+Optimizer().
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::init(), set\+Optimizer(), g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve(), g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::solve(), and g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve().
+
+
+\begin{DoxyCode}
+105 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer};\}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!resize\+Vector@{resize\+Vector}}
+\index{resize\+Vector@{resize\+Vector}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{resize\+Vector(size\+\_\+t sx)}{resizeVector(size_t sx)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Solver\+::resize\+Vector (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{sx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Solver_ad1f85839e85f3e2c49112fb7e2b843ad}{}\label{classg2o_1_1Solver_ad1f85839e85f3e2c49112fb7e2b843ad}
+
+
+Definition at line 46 of file solver.\+cpp.
+
+
+
+References \+\_\+additional\+Vector\+Space, \+\_\+b, \+\_\+max\+X\+Size, \+\_\+x, and \+\_\+x\+Size.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::resize(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::update\+Structure().
+
+
+\begin{DoxyCode}
+47 \{
+48   \textcolor{keywordtype}{size\_t} oldSize = \hyperlink{classg2o_1_1Solver_abcf7731347f14915bd9ba963021ea830}{\_xSize};
+49   \hyperlink{classg2o_1_1Solver_abcf7731347f14915bd9ba963021ea830}{\_xSize} = sx;
+50   sx += \hyperlink{classg2o_1_1Solver_a6a1492959487c279747a8f3097a5f04e}{\_additionalVectorSpace}; \textcolor{comment}{// allocate some additional space if requested}
+51   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1Solver_a263003f9053537f92d5d019ce5c53771}{\_maxXSize} < sx) \{
+52     \hyperlink{classg2o_1_1Solver_a263003f9053537f92d5d019ce5c53771}{\_maxXSize} = 2*sx;
+53     \textcolor{keyword}{delete}[] \hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\_x};
+54     \hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\_x} = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[\hyperlink{classg2o_1_1Solver_a263003f9053537f92d5d019ce5c53771}{\_maxXSize}];
+55 \textcolor{preprocessor}{#ifndef NDEBUG}
+56     memset(\hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\_x}, 0, \hyperlink{classg2o_1_1Solver_a263003f9053537f92d5d019ce5c53771}{\_maxXSize} * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+57 \textcolor{preprocessor}{#endif}
+58     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b}) \{ \textcolor{comment}{// backup the former b, might still be needed for online processing}
+59       memcpy(\hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\_x}, \hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b}, oldSize * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+60       \textcolor{keyword}{delete}[] \hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b};
+61       \hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b} = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[\hyperlink{classg2o_1_1Solver_a263003f9053537f92d5d019ce5c53771}{\_maxXSize}];
+62       std::swap(\hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b}, \hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\_x});
+63     \} \textcolor{keywordflow}{else} \{
+64       \hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b} = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[\hyperlink{classg2o_1_1Solver_a263003f9053537f92d5d019ce5c53771}{\_maxXSize}];
+65 \textcolor{preprocessor}{#ifndef NDEBUG}
+66       memset(\hyperlink{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{\_b}, 0, \hyperlink{classg2o_1_1Solver_a263003f9053537f92d5d019ce5c53771}{\_maxXSize} * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+67 \textcolor{preprocessor}{#endif}
+68     \}
+69   \}
+70 \}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!restore\+Diagonal@{restore\+Diagonal}}
+\index{restore\+Diagonal@{restore\+Diagonal}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{restore\+Diagonal()=0}{restoreDiagonal()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Solver\+::restore\+Diagonal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Solver_a3c40dae9b999c4d18e57b02fd0e0ade2}{}\label{classg2o_1_1Solver_a3c40dae9b999c4d18e57b02fd0e0ade2}
+restore a previosly made backup of the diagonal 
+
+Implemented in \hyperlink{classg2o_1_1BlockSolver_a2136931d7aa2f54df5207556c4685809}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve(), and g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!save\+Hessian@{save\+Hessian}}
+\index{save\+Hessian@{save\+Hessian}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{save\+Hessian(const std\+::string \&) const =0}{saveHessian(const std::string &) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Solver\+::save\+Hessian (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Solver_a14852543c4dc3f3e7088efe03aa135eb}{}\label{classg2o_1_1Solver_a14852543c4dc3f3e7088efe03aa135eb}
+
+
+write the hessian to disk using the specified file name 
+
+
+
+Implemented in \hyperlink{classg2o_1_1BlockSolver_a79adbc8926b11c564bdd8cf73a55b1ef}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Referenced by additional\+Vector\+Space().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!schur@{schur}}
+\index{schur@{schur}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{schur()=0}{schur()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Solver\+::schur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Solver_acc8d6a8ae7847a157d4a2f44aea14c74}{}\label{classg2o_1_1Solver_acc8d6a8ae7847a157d4a2f44aea14c74}
+
+
+should the solver perform the schur complement or not 
+
+
+
+Implemented in \hyperlink{classg2o_1_1BlockSolver_a382173946f1dd929a625e3708c959883}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::print\+Verbose(), g2o\+::\+Optimization\+Algorithm\+Levenberg\+::print\+Verbose(), and supports\+Schur().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!set\+Additional\+Vector\+Space@{set\+Additional\+Vector\+Space}}
+\index{set\+Additional\+Vector\+Space@{set\+Additional\+Vector\+Space}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Additional\+Vector\+Space(size\+\_\+t s)}{setAdditionalVectorSpace(size_t s)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Solver\+::set\+Additional\+Vector\+Space (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1Solver_ad35b33cee11586c8adea12cd6949f74a}{}\label{classg2o_1_1Solver_ad35b33cee11586c8adea12cd6949f74a}
+
+
+Definition at line 82 of file solver.\+cpp.
+
+
+
+References \+\_\+additional\+Vector\+Space.
+
+
+
+Referenced by additional\+Vector\+Space().
+
+
+\begin{DoxyCode}
+83 \{
+84   \hyperlink{classg2o_1_1Solver_a6a1492959487c279747a8f3097a5f04e}{\_additionalVectorSpace} = s;
+85 \}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!set\+Lambda@{set\+Lambda}}
+\index{set\+Lambda@{set\+Lambda}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Lambda(double lambda, bool backup=false)=0}{setLambda(double lambda, bool backup=false)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Solver\+::set\+Lambda (
+\begin{DoxyParamCaption}
+\item[{double}]{lambda, }
+\item[{bool}]{backup = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Solver_a94a0d5196c7859c6c37fc2368ac56be3}{}\label{classg2o_1_1Solver_a94a0d5196c7859c6c37fc2368ac56be3}
+update the system while performing Levenberg, i.\+e., modifying the diagonal components of A by doing += lambda along the main diagonal of the Matrix. Note that this function may be called with a positive and a negative lambda. The latter is used to undo a former modification. If backup is true, then the solver should store a backup of the diagonal, which can be restored by \hyperlink{classg2o_1_1Solver_a3c40dae9b999c4d18e57b02fd0e0ade2}{restore\+Diagonal()} 
+
+Implemented in \hyperlink{classg2o_1_1BlockSolver_acc63a23e5b35e4f72d46dc22719aa56f}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve(), and g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!set\+Levenberg@{set\+Levenberg}}
+\index{set\+Levenberg@{set\+Levenberg}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Levenberg(bool levenberg)}{setLevenberg(bool levenberg)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Solver\+::set\+Levenberg (
+\begin{DoxyParamCaption}
+\item[{bool}]{levenberg}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1Solver_a01e21c08d7ec8c8051de565b5c314fa1}{}\label{classg2o_1_1Solver_a01e21c08d7ec8c8051de565b5c314fa1}
+
+
+Definition at line 77 of file solver.\+cpp.
+
+
+
+References \+\_\+is\+Levenberg, and levenberg().
+
+
+
+Referenced by levenberg().
+
+
+\begin{DoxyCode}
+78 \{
+79   \hyperlink{classg2o_1_1Solver_a8b7f6d4e00e3734f5ed9bd3dfac201a6}{\_isLevenberg} = \hyperlink{classg2o_1_1Solver_a074069dacd2ac34c895c6f2f333e38d5}{levenberg};
+80 \}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!set\+Optimizer@{set\+Optimizer}}
+\index{set\+Optimizer@{set\+Optimizer}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Optimizer(\+Sparse\+Optimizer $\ast$optimizer)}{setOptimizer(SparseOptimizer *optimizer)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Solver\+::set\+Optimizer (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Optimizer} $\ast$}]{optimizer}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1Solver_af27b647cdc19d99ea5378b443e118bb0}{}\label{classg2o_1_1Solver_af27b647cdc19d99ea5378b443e118bb0}
+
+
+Definition at line 72 of file solver.\+cpp.
+
+
+
+References \+\_\+optimizer, and optimizer().
+
+
+
+Referenced by optimizer().
+
+
+\begin{DoxyCode}
+73 \{
+74   \hyperlink{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{\_optimizer} = \hyperlink{classg2o_1_1Solver_a9ea585f131ab02ae1e0c0192126f0b5f}{optimizer};
+75 \}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!set\+Schur@{set\+Schur}}
+\index{set\+Schur@{set\+Schur}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Schur(bool s)=0}{setSchur(bool s)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Solver\+::set\+Schur (
+\begin{DoxyParamCaption}
+\item[{bool}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Solver_a30134c828054375b1cc16ede2a879761}{}\label{classg2o_1_1Solver_a30134c828054375b1cc16ede2a879761}
+
+
+Implemented in \hyperlink{classg2o_1_1BlockSolver_a6dd8e7e7a099410005cb96ff874d8866}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::init(), and supports\+Schur().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!set\+Write\+Debug@{set\+Write\+Debug}}
+\index{set\+Write\+Debug@{set\+Write\+Debug}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Write\+Debug(bool)=0}{setWriteDebug(bool)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Solver\+::set\+Write\+Debug (
+\begin{DoxyParamCaption}
+\item[{bool}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Solver_ad3ef2a487d991363ba86af2840b0d7cd}{}\label{classg2o_1_1Solver_ad3ef2a487d991363ba86af2840b0d7cd}
+write debug output of the Hessian if system is not positive definite 
+
+Implemented in \hyperlink{classg2o_1_1BlockSolver_a1bff5dc13e3408fa76c019347104acd0}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Referenced by additional\+Vector\+Space(), and g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::init().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!solve@{solve}}
+\index{solve@{solve}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{solve()=0}{solve()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Solver\+::solve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Solver_a9c359a886db57f2f81e54a2113f3bd38}{}\label{classg2o_1_1Solver_a9c359a886db57f2f81e54a2113f3bd38}
+solve Ax = b 
+
+Implemented in \hyperlink{classg2o_1_1BlockSolver_a589a75a131cce100c1945ad2786214d7}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::solve(), g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve(), and g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!supports\+Schur@{supports\+Schur}}
+\index{supports\+Schur@{supports\+Schur}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{supports\+Schur()}{supportsSchur()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Solver\+::supports\+Schur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1Solver_a36c68f7bc0b8864ee7722bc3c06de554}{}\label{classg2o_1_1Solver_a36c68f7bc0b8864ee7722bc3c06de554}
+does this solver support the Schur complement for solving a system consisting of poses and landmarks. Re-\/implemement in a derived solver, if your solver supports it. 
+
+Reimplemented in \hyperlink{classg2o_1_1BlockSolver_a68dc822ce48e80ceacce69c7bd029674}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Definition at line 116 of file solver.\+h.
+
+
+
+References schur(), and set\+Schur().
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::init().
+
+
+\begin{DoxyCode}
+116 \{\textcolor{keywordflow}{return} \textcolor{keyword}{false};\}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!update\+Structure@{update\+Structure}}
+\index{update\+Structure@{update\+Structure}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{update\+Structure(const std\+::vector$<$ Hyper\+Graph\+::\+Vertex $\ast$ $>$ \&vset, const Hyper\+Graph\+::\+Edge\+Set \&edges)=0}{updateStructure(const std::vector< HyperGraph::Vertex * > &vset, const HyperGraph::EdgeSet &edges)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Solver\+::update\+Structure (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Hyper\+Graph\+::\+Vertex} $\ast$ $>$ \&}]{vset, }
+\item[{const {\bf Hyper\+Graph\+::\+Edge\+Set} \&}]{edges}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Solver_a035b8effea7178eabfb35e1c78b25987}{}\label{classg2o_1_1Solver_a035b8effea7178eabfb35e1c78b25987}
+update the structures for online processing 
+
+Implemented in \hyperlink{classg2o_1_1BlockSolver_acc497239c5e681ddec2140e34dfc5938}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::update\+Structure().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!vector\+Size@{vector\+Size}}
+\index{vector\+Size@{vector\+Size}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{vector\+Size() const }{vectorSize() const }}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t g2o\+::\+Solver\+::vector\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1Solver_a739e1e7b0888d5f316f1d68cbd21bc2d}{}\label{classg2o_1_1Solver_a739e1e7b0888d5f316f1d68cbd21bc2d}
+
+
+return the size of the solution vector (x) and b 
+
+
+
+Definition at line 102 of file solver.\+h.
+
+
+
+References \+\_\+x\+Size.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Levenberg\+::compute\+Scale(), and g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve().
+
+
+\begin{DoxyCode}
+102 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1Solver_abcf7731347f14915bd9ba963021ea830}{\_xSize};\}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!write\+Debug@{write\+Debug}}
+\index{write\+Debug@{write\+Debug}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{write\+Debug() const =0}{writeDebug() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Solver\+::write\+Debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Solver_a0f6f14940eccea0f9bf9e2ea144c9b4d}{}\label{classg2o_1_1Solver_a0f6f14940eccea0f9bf9e2ea144c9b4d}
+
+
+Implemented in \hyperlink{classg2o_1_1BlockSolver_a5a127b36e9f6ec45b2b1d39c22a9901f}{g2o\+::\+Block\+Solver$<$ Traits $>$}.
+
+
+
+Referenced by additional\+Vector\+Space().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!x@{x}}
+\index{x@{x}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{x()}{x()}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ g2o\+::\+Solver\+::x (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1Solver_acb097d8568624a1f3af4dba808e5593b}{}\label{classg2o_1_1Solver_acb097d8568624a1f3af4dba808e5593b}
+
+
+return x, the solution vector 
+
+
+
+Definition at line 95 of file solver.\+h.
+
+
+
+References \+\_\+x.
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Levenberg\+::compute\+Scale(), g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::solve(), g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve(), and g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve().
+
+
+\begin{DoxyCode}
+95 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\_x};\}
+\end{DoxyCode}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!x@{x}}
+\index{x@{x}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{x() const }{x() const }}]{\setlength{\rightskip}{0pt plus 5cm}const double$\ast$ g2o\+::\+Solver\+::x (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1Solver_ad46ef97021dc9f694965adc613e37296}{}\label{classg2o_1_1Solver_ad46ef97021dc9f694965adc613e37296}
+
+
+Definition at line 96 of file solver.\+h.
+
+
+
+References \+\_\+x.
+
+
+\begin{DoxyCode}
+96 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{\_x};\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!\+\_\+additional\+Vector\+Space@{\+\_\+additional\+Vector\+Space}}
+\index{\+\_\+additional\+Vector\+Space@{\+\_\+additional\+Vector\+Space}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+additional\+Vector\+Space}{_additionalVectorSpace}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t g2o\+::\+Solver\+::\+\_\+additional\+Vector\+Space\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Solver_a6a1492959487c279747a8f3097a5f04e}{}\label{classg2o_1_1Solver_a6a1492959487c279747a8f3097a5f04e}
+
+
+Definition at line 140 of file solver.\+h.
+
+
+
+Referenced by additional\+Vector\+Space(), resize\+Vector(), and set\+Additional\+Vector\+Space().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!\+\_\+b@{\+\_\+b}}
+\index{\+\_\+b@{\+\_\+b}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+b}{_b}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ g2o\+::\+Solver\+::\+\_\+b\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}{}\label{classg2o_1_1Solver_a52c92c9bf5db0da3322da3a02dbeb245}
+
+
+Definition at line 137 of file solver.\+h.
+
+
+
+Referenced by b(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+System(), resize\+Vector(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve(), and $\sim$\+Solver().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!\+\_\+is\+Levenberg@{\+\_\+is\+Levenberg}}
+\index{\+\_\+is\+Levenberg@{\+\_\+is\+Levenberg}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+is\+Levenberg}{_isLevenberg}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Solver\+::\+\_\+is\+Levenberg\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Solver_a8b7f6d4e00e3734f5ed9bd3dfac201a6}{}\label{classg2o_1_1Solver_a8b7f6d4e00e3734f5ed9bd3dfac201a6}
+
+
+the system we gonna solve is a Levenberg-\/\+Marquardt system 
+
+
+
+Definition at line 139 of file solver.\+h.
+
+
+
+Referenced by levenberg(), and set\+Levenberg().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!\+\_\+max\+X\+Size@{\+\_\+max\+X\+Size}}
+\index{\+\_\+max\+X\+Size@{\+\_\+max\+X\+Size}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+max\+X\+Size}{_maxXSize}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t g2o\+::\+Solver\+::\+\_\+max\+X\+Size\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Solver_a263003f9053537f92d5d019ce5c53771}{}\label{classg2o_1_1Solver_a263003f9053537f92d5d019ce5c53771}
+
+
+Definition at line 138 of file solver.\+h.
+
+
+
+Referenced by resize\+Vector().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!\+\_\+optimizer@{\+\_\+optimizer}}
+\index{\+\_\+optimizer@{\+\_\+optimizer}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+optimizer}{_optimizer}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sparse\+Optimizer}$\ast$ g2o\+::\+Solver\+::\+\_\+optimizer\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Solver_aff3275985d996329df15070348c21292}{}\label{classg2o_1_1Solver_aff3275985d996329df15070348c21292}
+
+
+Definition at line 135 of file solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+System(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::init(), optimizer(), and set\+Optimizer().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!\+\_\+x@{\+\_\+x}}
+\index{\+\_\+x@{\+\_\+x}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+x}{_x}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ g2o\+::\+Solver\+::\+\_\+x\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}{}\label{classg2o_1_1Solver_a94ee5e303a754f4ff338a7b032c214ae}
+
+
+Definition at line 136 of file solver.\+h.
+
+
+
+Referenced by resize\+Vector(), g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve(), x(), and $\sim$\+Solver().
+
+\index{g2o\+::\+Solver@{g2o\+::\+Solver}!\+\_\+x\+Size@{\+\_\+x\+Size}}
+\index{\+\_\+x\+Size@{\+\_\+x\+Size}!g2o\+::\+Solver@{g2o\+::\+Solver}}
+\subsubsection[{\texorpdfstring{\+\_\+x\+Size}{_xSize}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t g2o\+::\+Solver\+::\+\_\+x\+Size\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Solver_abcf7731347f14915bd9ba963021ea830}{}\label{classg2o_1_1Solver_abcf7731347f14915bd9ba963021ea830}
+
+
+Definition at line 138 of file solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::\+Block\+Solver(), resize\+Vector(), and vector\+Size().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{solver_8h}{solver.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{solver_8cpp}{solver.\+cpp}\end{DoxyCompactItemize}

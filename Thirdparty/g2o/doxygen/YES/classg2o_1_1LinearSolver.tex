@@ -1,0 +1,218 @@
+\hypertarget{classg2o_1_1LinearSolver}{}\section{g2o\+:\+:Linear\+Solver$<$ Matrix\+Type $>$ Class Template Reference}
+\label{classg2o_1_1LinearSolver}\index{g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$@{g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$}}
+
+
+basic solver for Ax = b  
+
+
+
+
+{\ttfamily \#include $<$linear\+\_\+solver.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Linear\+Solver$<$ Matrix\+Type $>$\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1LinearSolver_a741928aa64f4b6416c9990892e3ede7a}{Linear\+Solver} ()
+\item 
+virtual \hyperlink{classg2o_1_1LinearSolver_a5157e1221534fae13989c8443adab1ec}{$\sim$\+Linear\+Solver} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1LinearSolver_aebd961a94ef6de1bc66d2ca41dd2b17b}{init} ()=0
+\item 
+virtual bool \hyperlink{classg2o_1_1LinearSolver_aa44b40826d50203c8ce2ff258c34e030}{solve} (const \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&A, double $\ast$\hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, double $\ast$b)=0
+\item 
+virtual bool \hyperlink{classg2o_1_1LinearSolver_a252e3658b3ba0c3577c33f846c514535}{solve\+Blocks} (double $\ast$$\ast$\&blocks, const \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&A)
+\item 
+virtual bool \hyperlink{classg2o_1_1LinearSolver_adc74484f72bbe373622581fd597c1be3}{solve\+Pattern} (\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ \&spinv, const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices, const \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&A)
+\item 
+virtual bool \hyperlink{classg2o_1_1LinearSolver_a8b6a84bd88f1bbc13d2c80c3a14d4693}{write\+Debug} () const 
+\begin{DoxyCompactList}\small\item\em write a debug dump of the system matrix if it is not P\+SD in solve \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1LinearSolver_a969c406ccacc38705b2a88f5ed23cb9a}{set\+Write\+Debug} (bool)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Matrix\+Type$>$\\*
+class g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$}
+
+basic solver for Ax = b 
+
+basic solver for Ax = b which has to reimplemented for different linear algebra libraries. A is assumed to be symmetric (only upper triangular block is stored) and positive-\/semi-\/definit. 
+
+Definition at line 41 of file linear\+\_\+solver.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}!Linear\+Solver@{Linear\+Solver}}
+\index{Linear\+Solver@{Linear\+Solver}!g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}}
+\subsubsection[{\texorpdfstring{Linear\+Solver()}{LinearSolver()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type$>$ {\bf g2o\+::\+Linear\+Solver}$<$ Matrix\+Type $>$\+::{\bf Linear\+Solver} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1LinearSolver_a741928aa64f4b6416c9990892e3ede7a}{}\label{classg2o_1_1LinearSolver_a741928aa64f4b6416c9990892e3ede7a}
+
+
+Definition at line 44 of file linear\+\_\+solver.\+h.
+
+
+\begin{DoxyCode}
+44 \{\};
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}!````~Linear\+Solver@{$\sim$\+Linear\+Solver}}
+\index{````~Linear\+Solver@{$\sim$\+Linear\+Solver}!g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}}
+\subsubsection[{\texorpdfstring{$\sim$\+Linear\+Solver()}{~LinearSolver()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type$>$ virtual {\bf g2o\+::\+Linear\+Solver}$<$ Matrix\+Type $>$\+::$\sim${\bf Linear\+Solver} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolver_a5157e1221534fae13989c8443adab1ec}{}\label{classg2o_1_1LinearSolver_a5157e1221534fae13989c8443adab1ec}
+
+
+Definition at line 45 of file linear\+\_\+solver.\+h.
+
+
+\begin{DoxyCode}
+45 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}!init@{init}}
+\index{init@{init}!g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}}
+\subsubsection[{\texorpdfstring{init()=0}{init()=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type$>$ virtual bool {\bf g2o\+::\+Linear\+Solver}$<$ Matrix\+Type $>$\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1LinearSolver_aebd961a94ef6de1bc66d2ca41dd2b17b}{}\label{classg2o_1_1LinearSolver_aebd961a94ef6de1bc66d2ca41dd2b17b}
+init for operating on matrices with a different non-\/zero pattern like before 
+
+Implemented in \hyperlink{classg2o_1_1LinearSolverCholmod_ad3957b891cebac9e0c7f821db84156b1}{g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$}, \hyperlink{classg2o_1_1LinearSolverEigen_a8fca4bb987dcbeb94a366b1532dee139}{g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$}, and \hyperlink{classg2o_1_1LinearSolverDense_a24f68ecd4b022269dbfc4d990eb5c57b}{g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$}.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::init(), and g2o\+::\+Linear\+Solver$<$ Pose\+Matrix\+Type $>$\+::$\sim$\+Linear\+Solver().
+
+\index{g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}!set\+Write\+Debug@{set\+Write\+Debug}}
+\index{set\+Write\+Debug@{set\+Write\+Debug}!g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}}
+\subsubsection[{\texorpdfstring{set\+Write\+Debug(bool)}{setWriteDebug(bool)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type$>$ virtual void {\bf g2o\+::\+Linear\+Solver}$<$ Matrix\+Type $>$\+::set\+Write\+Debug (
+\begin{DoxyParamCaption}
+\item[{bool}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolver_a969c406ccacc38705b2a88f5ed23cb9a}{}\label{classg2o_1_1LinearSolver_a969c406ccacc38705b2a88f5ed23cb9a}
+
+
+Reimplemented in \hyperlink{classg2o_1_1LinearSolverCholmod_a2fdd3d8f3fd88a50b836ee4730cde6e2}{g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$}, and \hyperlink{classg2o_1_1LinearSolverEigen_a5ceaab3ba944d327b21f7329c7e19c8c}{g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$}.
+
+
+
+Definition at line 80 of file linear\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::set\+Write\+Debug().
+
+
+\begin{DoxyCode}
+80 \{\}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}!solve@{solve}}
+\index{solve@{solve}!g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}}
+\subsubsection[{\texorpdfstring{solve(const Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ \&\+A, double $\ast$x, double $\ast$b)=0}{solve(const SparseBlockMatrix< MatrixType > &A, double *x, double *b)=0}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type$>$ virtual bool {\bf g2o\+::\+Linear\+Solver}$<$ Matrix\+Type $>$\+::solve (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&}]{A, }
+\item[{double $\ast$}]{x, }
+\item[{double $\ast$}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1LinearSolver_aa44b40826d50203c8ce2ff258c34e030}{}\label{classg2o_1_1LinearSolver_aa44b40826d50203c8ce2ff258c34e030}
+Assumes that A is the same matrix for several calls. Among other assumptions, the non-\/zero pattern does not change! If the matrix changes call \hyperlink{classg2o_1_1LinearSolver_aebd961a94ef6de1bc66d2ca41dd2b17b}{init()} before. solve system Ax = b, x and b have to allocated beforehand!! 
+
+Implemented in \hyperlink{classg2o_1_1LinearSolverCholmod_a86c8fcb2b24961139e14d57ce1b93805}{g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$}, \hyperlink{classg2o_1_1LinearSolverEigen_ae4ac566af324a238a31145c1e50b52e1}{g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$}, and \hyperlink{classg2o_1_1LinearSolverDense_a8b6eafa6e53b9f705a4e8eb436eeb403}{g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$}.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::solve(), and g2o\+::\+Linear\+Solver$<$ Pose\+Matrix\+Type $>$\+::$\sim$\+Linear\+Solver().
+
+\index{g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}!solve\+Blocks@{solve\+Blocks}}
+\index{solve\+Blocks@{solve\+Blocks}!g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}}
+\subsubsection[{\texorpdfstring{solve\+Blocks(double $\ast$$\ast$\&blocks, const Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ \&\+A)}{solveBlocks(double **&blocks, const SparseBlockMatrix< MatrixType > &A)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type$>$ virtual bool {\bf g2o\+::\+Linear\+Solver}$<$ Matrix\+Type $>$\+::solve\+Blocks (
+\begin{DoxyParamCaption}
+\item[{double $\ast$$\ast$\&}]{blocks, }
+\item[{const {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&}]{A}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolver_a252e3658b3ba0c3577c33f846c514535}{}\label{classg2o_1_1LinearSolver_a252e3658b3ba0c3577c33f846c514535}
+Inverts the diagonal blocks of A \begin{DoxyReturn}{Returns}
+false if not defined. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classg2o_1_1LinearSolverCholmod_aa329db9e0146831f0f07eef1ddd91c91}{g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$}.
+
+
+
+Definition at line 64 of file linear\+\_\+solver.\+h.
+
+
+\begin{DoxyCode}
+64 \{ (void)blocks; (void) A; \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}!solve\+Pattern@{solve\+Pattern}}
+\index{solve\+Pattern@{solve\+Pattern}!g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}}
+\subsubsection[{\texorpdfstring{solve\+Pattern(\+Sparse\+Block\+Matrix$<$ Matrix\+Xd $>$ \&spinv, const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices, const Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ \&\+A)}{solvePattern(SparseBlockMatrix< MatrixXd > &spinv, const std::vector< std::pair< int, int > > &blockIndices, const SparseBlockMatrix< MatrixType > &A)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type$>$ virtual bool {\bf g2o\+::\+Linear\+Solver}$<$ Matrix\+Type $>$\+::solve\+Pattern (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix}$<$ Matrix\+Xd $>$ \&}]{spinv, }
+\item[{const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&}]{block\+Indices, }
+\item[{const {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&}]{A}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolver_adc74484f72bbe373622581fd597c1be3}{}\label{classg2o_1_1LinearSolver_adc74484f72bbe373622581fd597c1be3}
+Inverts the a block pattern of A in spinv \begin{DoxyReturn}{Returns}
+false if not defined. 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file linear\+\_\+solver.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::compute\+Marginals().
+
+
+\begin{DoxyCode}
+71                                                                                                            
+                                                       \{
+72       (void) spinv;
+73       (void) blockIndices;
+74       (void) A;
+75       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+76     \}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}!write\+Debug@{write\+Debug}}
+\index{write\+Debug@{write\+Debug}!g2o\+::\+Linear\+Solver@{g2o\+::\+Linear\+Solver}}
+\subsubsection[{\texorpdfstring{write\+Debug() const }{writeDebug() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type$>$ virtual bool {\bf g2o\+::\+Linear\+Solver}$<$ Matrix\+Type $>$\+::write\+Debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolver_a8b6a84bd88f1bbc13d2c80c3a14d4693}{}\label{classg2o_1_1LinearSolver_a8b6a84bd88f1bbc13d2c80c3a14d4693}
+
+
+write a debug dump of the system matrix if it is not P\+SD in solve 
+
+
+
+Reimplemented in \hyperlink{classg2o_1_1LinearSolverCholmod_a84ac87445e40dc2af7fd78dda84eaf8d}{g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$}, and \hyperlink{classg2o_1_1LinearSolverEigen_a6b70f3c7b1c8c8105c05c7c560c670c2}{g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$}.
+
+
+
+Definition at line 79 of file linear\+\_\+solver.\+h.
+
+
+\begin{DoxyCode}
+79 \{ \textcolor{keywordflow}{return} \textcolor{keyword}{false};\}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{linear__solver_8h}{linear\+\_\+solver.\+h}\end{DoxyCompactItemize}

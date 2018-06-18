@@ -1,0 +1,21 @@
+digraph "g2o::RobustKernel"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="g2o::RobustKernel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="g2o::RobustKernelCauchy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1RobustKernelCauchy.html",tooltip="Cauchy cost function. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="g2o::RobustKernelDCS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1RobustKernelDCS.html",tooltip="Dynamic covariance scaling - DCS. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="g2o::RobustKernelHuber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1RobustKernelHuber.html",tooltip="Huber Cost Function. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="g2o::RobustKernelPseudoHuber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1RobustKernelPseudoHuber.html",tooltip="Pseudo Huber Cost Function. "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="g2o::RobustKernelSaturated",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1RobustKernelSaturated.html",tooltip="Saturated cost function. "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="g2o::RobustKernelScaleDelta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1RobustKernelScaleDelta.html",tooltip="scale a robust kernel to another delta (window size) "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="g2o::RobustKernelTukey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1RobustKernelTukey.html",tooltip="Tukey Cost Function. "];
+}

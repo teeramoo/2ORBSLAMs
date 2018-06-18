@@ -1,0 +1,11 @@
+digraph "/home/teeramoo/Desktop/ORB-slam-script/Using Opecv3.2/LearnVIORB-master/Thirdparty/g2o/g2o/core" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_500bd004daf7f26e6762afdbadeff5f2 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="g2o" fontname="Helvetica", fontsize="10", URL="dir_500bd004daf7f26e6762afdbadeff5f2.html"]
+  dir_db03534d5e719cc0f19b41405b4f8853 [shape=box, label="core", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_db03534d5e719cc0f19b41405b4f8853.html"];
+  }
+  dir_0059e0a887e7b415b333150e2a5decdd [shape=box label="stuff" URL="dir_0059e0a887e7b415b333150e2a5decdd.html"];
+  dir_db03534d5e719cc0f19b41405b4f8853->dir_0059e0a887e7b415b333150e2a5decdd [headlabel="28", labeldistance=1.5 headhref="dir_000006_000008.html"];
+}

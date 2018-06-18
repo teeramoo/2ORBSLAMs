@@ -1,0 +1,1078 @@
+\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge}{}\section{g2o\+:\+:Optimizable\+Graph\+:\+:Edge Class Reference}
+\label{classg2o_1_1OptimizableGraph_1_1Edge}\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+
+
+{\ttfamily \#include $<$optimizable\+\_\+graph.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Optimizable\+Graph\+:\+:Edge\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Optimizable\+Graph\+:\+:Edge\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a6568eb7f3b3e4299473ec3230199aa70}{Edge} ()
+\item 
+virtual \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a62de61a43d47cf223fe39265dac13ca5}{$\sim$\+Edge} ()
+\item 
+virtual \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge}{Edge} $\ast$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a4f274bac9939144dd6b30578c5424a45}{clone} () const 
+\item 
+virtual bool \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a414c69ca1617a4d3b620e39f2ffbcea7}{all\+Vertices\+Fixed} () const =0
+\item 
+virtual void \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a1e6d9f4128866982de5e11e03edd7775}{compute\+Error} ()=0
+\item 
+virtual bool \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_ae8d99a85921057eba87a2346ba9c6e0a}{set\+Measurement\+Data} (const double $\ast$m)
+\item 
+virtual bool \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a5f7c64421d33b7deb8fcfd5f4cf172b8}{get\+Measurement\+Data} (double $\ast$m) const 
+\item 
+virtual int \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a44bd732330859991d4fbc992129b2e79}{measurement\+Dimension} () const 
+\item 
+virtual bool \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a2f0b6465d6cd8b459ebc6494892c44f4}{set\+Measurement\+From\+State} ()
+\item 
+\hyperlink{classg2o_1_1RobustKernel}{Robust\+Kernel} $\ast$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_aeb6ce9f3bf7b896f58272ea0d3feb8ff}{robust\+Kernel} () const 
+\begin{DoxyCompactList}\small\item\em if N\+OT N\+U\+LL, error of this edge will be robustifed with the kernel \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a42955172c19f16e2cfbb30d611d1bd87}{set\+Robust\+Kernel} (\hyperlink{classg2o_1_1RobustKernel}{Robust\+Kernel} $\ast$ptr)
+\item 
+virtual const double $\ast$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a5f2a4b6efa2d0ae600f94a28a6ba58cf}{error\+Data} () const =0
+\begin{DoxyCompactList}\small\item\em returns the error vector cached after calling the compute\+Error; \end{DoxyCompactList}\item 
+virtual double $\ast$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a460a0cb0256b0a91edb131e25181f57b}{error\+Data} ()=0
+\item 
+virtual const double $\ast$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_ab5b315b3e0a6c4e29074b2c924460417}{information\+Data} () const =0
+\begin{DoxyCompactList}\small\item\em returns the memory of the information matrix, usable for example with a Eigen\+::\+Map$<$\+Matrix\+Xd$>$ \end{DoxyCompactList}\item 
+virtual double $\ast$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a99de4bbb57e3c5e7321f150a45d1cb12}{information\+Data} ()=0
+\item 
+virtual double \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a182bd2c109d50283c638d9b295f2f3d7}{chi2} () const =0
+\begin{DoxyCompactList}\small\item\em computes the chi2 based on the cached error value, only valid after compute\+Error has been called. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a56fbf3430ddf591e3c619bdd1b7e4499}{construct\+Quadratic\+Form} ()=0
+\item 
+virtual void \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a3bd233fd552daa166039acf47b69a5a7}{map\+Hessian\+Memory} (double $\ast$d, int i, int j, bool row\+Major)=0
+\item 
+virtual void \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a0fdad5ebfb4efec9f893b57f67e0fbe1}{linearize\+Oplus} (\hyperlink{classg2o_1_1JacobianWorkspace}{Jacobian\+Workspace} \&\hyperlink{structg2o_1_1OptimizableGraph_aa669dbd1d6e34e49fecda711ff1b78c6}{jacobian\+Workspace})=0
+\item 
+virtual void \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a9519f8892e97f03daacb44ea50ac7f4e}{initial\+Estimate} (const \hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set} \&from, \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex}{Optimizable\+Graph\+::\+Vertex} $\ast$to)=0
+\item 
+virtual double \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a1cef6ffa0f82f1ad3dd3d7a9f04425ee}{initial\+Estimate\+Possible} (const \hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set} \&from, \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex}{Optimizable\+Graph\+::\+Vertex} $\ast$to)
+\item 
+int \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_af92bd1589a99fa9732a5f2964cf38a6c}{level} () const 
+\begin{DoxyCompactList}\small\item\em returns the level of the edge \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_ab3e4290bc51d03ba294f36254048b15a}{set\+Level} (int l)
+\begin{DoxyCompactList}\small\item\em sets the level of the edge \end{DoxyCompactList}\item 
+int \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a90a86891adc47a179a7cd7ef31549916}{dimension} () const 
+\begin{DoxyCompactList}\small\item\em returns the dimensions of the error function \end{DoxyCompactList}\item 
+virtual \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex}{Vertex} $\ast$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_abd98d7a174df25bcc82cfdacba682fec}{create\+From} ()
+\item 
+virtual \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex}{Vertex} $\ast$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a39c22b396ab312059ea8fa4c2776be2e}{create\+To} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a30cf69b762a06aa35e796d8af71632b0}{read} (std\+::istream \&is)=0
+\begin{DoxyCompactList}\small\item\em read the vertex from a stream, i.\+e., the internal state of the vertex \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a804b9a2178249b9297c55b8fbbeda56e}{write} (std\+::ostream \&os) const =0
+\begin{DoxyCompactList}\small\item\em write the vertex to a stream \end{DoxyCompactList}\item 
+long long \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_ac4ab4bc451232a7ff4dca8484181fcad}{internal\+Id} () const 
+\begin{DoxyCompactList}\small\item\em the internal ID of the edge \end{DoxyCompactList}\item 
+\hyperlink{structg2o_1_1OptimizableGraph}{Optimizable\+Graph} $\ast$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a3684190bf8e99f39f58ffadd0dfa6b05}{graph} ()
+\item 
+const \hyperlink{structg2o_1_1OptimizableGraph}{Optimizable\+Graph} $\ast$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a08d9fca4079441e3aa07cc315cd77470}{graph} () const 
+\item 
+bool \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_ae535735e71365a547fd1a11fae5378f6}{set\+Parameter\+Id} (int arg\+Num, int param\+Id)
+\item 
+const \hyperlink{classg2o_1_1Parameter}{Parameter} $\ast$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a78b63b89b3964c30b96a3404b20e2a7f}{parameter} (int arg\+No) const 
+\item 
+size\+\_\+t \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a21c26247bdb33e6836d1f1c8536ad70c}{num\+Parameters} () const 
+\item 
+void \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_ac978364c99e36c7fced59ecb383ba171}{resize\+Parameters} (size\+\_\+t new\+Size)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Parameter\+Type $>$ }\\bool \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a237bea2f2fb7cc6a9cf4ee5ee6fe4d88}{install\+Parameter} (Parameter\+Type $\ast$\&p, size\+\_\+t arg\+No, int param\+Id=-\/1)
+\item 
+{\footnotesize template$<$typename Cache\+Type $>$ }\\void \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_ad95f2883af693de56e46a2b272dc1cdc}{resolve\+Cache} (Cache\+Type $\ast$\&cache, \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex}{Optimizable\+Graph\+::\+Vertex} $\ast$, const std\+::string \&\+\_\+type, const \hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{Parameter\+Vector} \&parameters)
+\item 
+bool \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_addadf494f3a1c8bf467a74454d771d0d}{resolve\+Parameters} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_aa93e3a4f976b467994f4eb7679a04bf3}{resolve\+Caches} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a4e651628f7657c81d0e4c1b26caaa6aa}{\+\_\+dimension}
+\item 
+int \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a57132078028dd0455aef141e62e07db9}{\+\_\+level}
+\item 
+\hyperlink{classg2o_1_1RobustKernel}{Robust\+Kernel} $\ast$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a6b942321f9e4e82051d529efb255af35}{\+\_\+robust\+Kernel}
+\item 
+long long \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_abdfc449ed57479d90d2e57a8bc0bea12}{\+\_\+internal\+Id}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a56bddaadd70570dbd96e8deed3d4b34c}{\+\_\+cache\+Ids}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a08666609850240956c64c95ae5ae0f2c}{\+\_\+parameter\+Types}
+\item 
+std\+::vector$<$ \hyperlink{classg2o_1_1Parameter}{Parameter} $\ast$$\ast$ $>$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\+\_\+parameters}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a33a35663ba5b096cb6e6078014bd6f17}{\+\_\+parameter\+Ids}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a45d35331ee3deca38c26d1efb6b961ae}{Optimizable\+Graph}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 382 of file optimizable\+\_\+graph.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{Edge()}{Edge()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Optimizable\+Graph\+::\+Edge\+::\+Edge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a6568eb7f3b3e4299473ec3230199aa70}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a6568eb7f3b3e4299473ec3230199aa70}
+
+
+Definition at line 132 of file optimizable\+\_\+graph.\+cpp.
+
+
+\begin{DoxyCode}
+132                              :
+133     HyperGraph::Edge(),
+134     \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a4e651628f7657c81d0e4c1b26caaa6aa}{\_dimension}(-1), \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a57132078028dd0455aef141e62e07db9}{\_level}(0), \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a6b942321f9e4e82051d529efb255af35}{\_robustKernel}(0)
+135   \{
+136   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!````~Edge@{$\sim$\+Edge}}
+\index{````~Edge@{$\sim$\+Edge}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{$\sim$\+Edge()}{~Edge()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Optimizable\+Graph\+::\+Edge\+::$\sim$\+Edge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a62de61a43d47cf223fe39265dac13ca5}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a62de61a43d47cf223fe39265dac13ca5}
+
+
+Reimplemented from \hyperlink{classg2o_1_1HyperGraph_1_1Edge_a202cb31558caef5a7bf18a49281173a3}{g2o\+::\+Hyper\+Graph\+::\+Edge}.
+
+
+
+Definition at line 138 of file optimizable\+\_\+graph.\+cpp.
+
+
+
+References \+\_\+robust\+Kernel.
+
+
+\begin{DoxyCode}
+139   \{
+140     \textcolor{keyword}{delete} \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a6b942321f9e4e82051d529efb255af35}{\_robustKernel};
+141   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!all\+Vertices\+Fixed@{all\+Vertices\+Fixed}}
+\index{all\+Vertices\+Fixed@{all\+Vertices\+Fixed}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{all\+Vertices\+Fixed() const =0}{allVerticesFixed() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Optimizable\+Graph\+::\+Edge\+::all\+Vertices\+Fixed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a414c69ca1617a4d3b620e39f2ffbcea7}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a414c69ca1617a4d3b620e39f2ffbcea7}
+
+
+Implemented in \hyperlink{classg2o_1_1BaseMultiEdge_a0873441402f991c0cfbe92a6ab718daa}{g2o\+::\+Base\+Multi\+Edge$<$ D, E $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_a1895c3b7141e93fd05bf271daeda7568}{g2o\+::\+Base\+Binary\+Edge$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_a1895c3b7141e93fd05bf271daeda7568}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+Sim3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_a1895c3b7141e93fd05bf271daeda7568}{g2o\+::\+Base\+Binary\+Edge$<$ 7, Sim3, Vertex\+Sim3\+Expmap, Vertex\+Sim3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_a1895c3b7141e93fd05bf271daeda7568}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_a1895c3b7141e93fd05bf271daeda7568}{g2o\+::\+Base\+Binary\+Edge$<$ 3, Vector3d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseUnaryEdge_ae3db6c719eac18fce051b40a8c8b86dd}{g2o\+::\+Base\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$}, \hyperlink{classg2o_1_1BaseUnaryEdge_ae3db6c719eac18fce051b40a8c8b86dd}{g2o\+::\+Base\+Unary\+Edge$<$ 2, Vector2d, Vertex\+S\+E3\+Expmap $>$}, and \hyperlink{classg2o_1_1BaseUnaryEdge_ae3db6c719eac18fce051b40a8c8b86dd}{g2o\+::\+Base\+Unary\+Edge$<$ 3, Vector3d, Vertex\+S\+E3\+Expmap $>$}.
+
+
+
+Referenced by g2o\+::\+Sparse\+Optimizer\+::initialize\+Optimization(), and g2o\+::\+Sparse\+Optimizer\+::update\+Initialization().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!chi2@{chi2}}
+\index{chi2@{chi2}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{chi2() const =0}{chi2() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double g2o\+::\+Optimizable\+Graph\+::\+Edge\+::chi2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a182bd2c109d50283c638d9b295f2f3d7}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a182bd2c109d50283c638d9b295f2f3d7}
+
+
+computes the chi2 based on the cached error value, only valid after compute\+Error has been called. 
+
+
+
+Implemented in \hyperlink{classg2o_1_1BaseEdge_a7ea9406b8cc06b44433569bbd4fcefac}{g2o\+::\+Base\+Edge$<$ D, E $>$}, \hyperlink{classg2o_1_1BaseEdge_a7ea9406b8cc06b44433569bbd4fcefac}{g2o\+::\+Base\+Edge$<$ D, Vector2d $>$}, \hyperlink{classg2o_1_1BaseEdge_a7ea9406b8cc06b44433569bbd4fcefac}{g2o\+::\+Base\+Edge$<$ D, Vector3d $>$}, and \hyperlink{classg2o_1_1BaseEdge_a7ea9406b8cc06b44433569bbd4fcefac}{g2o\+::\+Base\+Edge$<$ D, Sim3 $>$}.
+
+
+
+Referenced by g2o\+::\+Sparse\+Optimizer\+::active\+Chi2(), g2o\+::\+Sparse\+Optimizer\+::active\+Robust\+Chi2(), and g2o\+::\+Optimizable\+Graph\+::chi2().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!clone@{clone}}
+\index{clone@{clone}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Optimizable\+Graph\+::\+Edge} $\ast$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a4f274bac9939144dd6b30578c5424a45}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a4f274bac9939144dd6b30578c5424a45}
+
+
+Definition at line 224 of file optimizable\+\_\+graph.\+cpp.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::add\+Graph().
+
+
+\begin{DoxyCode}
+225   \{
+226     \textcolor{comment}{// TODO}
+227     \textcolor{keywordflow}{return} 0;
+228   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!compute\+Error@{compute\+Error}}
+\index{compute\+Error@{compute\+Error}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{compute\+Error()=0}{computeError()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Optimizable\+Graph\+::\+Edge\+::compute\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a1e6d9f4128866982de5e11e03edd7775}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a1e6d9f4128866982de5e11e03edd7775}
+
+
+Implemented in \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZOnlyPose_af6fd2fdbdc9b4a6bcf21303ff3b8ea83}{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}, \hyperlink{classg2o_1_1EdgeInverseSim3ProjectXYZ_a8fa376524e861ae8c4f1a360d217f02d}{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ}, \hyperlink{classg2o_1_1EdgeSE3ProjectXYZOnlyPose_a6752098d3322d30e43a6a3a668a3b009}{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}, \hyperlink{classg2o_1_1EdgeSim3ProjectXYZ_ae821156265db463d49b9ac2166186274}{g2o\+::\+Edge\+Sim3\+Project\+X\+YZ}, \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_ab60521439da10eabb13f23fe21fbe651}{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}, \hyperlink{classg2o_1_1EdgeSim3_a68f55d11f6b8b210318f167d04722a8b}{g2o\+::\+Edge\+Sim3}, and \hyperlink{classg2o_1_1EdgeSE3ProjectXYZ_a79a763e1d42fe9eb5732abe59c7723d9}{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}.
+
+
+
+Referenced by g2o\+::\+Sparse\+Optimizer\+::compute\+Active\+Errors().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!construct\+Quadratic\+Form@{construct\+Quadratic\+Form}}
+\index{construct\+Quadratic\+Form@{construct\+Quadratic\+Form}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{construct\+Quadratic\+Form()=0}{constructQuadraticForm()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Optimizable\+Graph\+::\+Edge\+::construct\+Quadratic\+Form (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a56fbf3430ddf591e3c619bdd1b7e4499}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a56fbf3430ddf591e3c619bdd1b7e4499}
+Linearizes the constraint in the edge. Makes side effect on the vertices of the graph by changing the parameter vector b and the hessian blocks ii and jj. The off diagoinal block is accesed via \+\_\+hessian. 
+
+Implemented in \hyperlink{classg2o_1_1BaseBinaryEdge_a06a18745d95017c6d3c841f838a65364}{g2o\+::\+Base\+Binary\+Edge$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_a06a18745d95017c6d3c841f838a65364}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+Sim3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_a06a18745d95017c6d3c841f838a65364}{g2o\+::\+Base\+Binary\+Edge$<$ 7, Sim3, Vertex\+Sim3\+Expmap, Vertex\+Sim3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_a06a18745d95017c6d3c841f838a65364}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_a06a18745d95017c6d3c841f838a65364}{g2o\+::\+Base\+Binary\+Edge$<$ 3, Vector3d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseMultiEdge_ae44ba0385d4dda4bc038d81e50cadd8c}{g2o\+::\+Base\+Multi\+Edge$<$ D, E $>$}, \hyperlink{classg2o_1_1BaseUnaryEdge_ad7e6dc44c571be159f066bdb961ade2b}{g2o\+::\+Base\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$}, \hyperlink{classg2o_1_1BaseUnaryEdge_ad7e6dc44c571be159f066bdb961ade2b}{g2o\+::\+Base\+Unary\+Edge$<$ 2, Vector2d, Vertex\+S\+E3\+Expmap $>$}, and \hyperlink{classg2o_1_1BaseUnaryEdge_ad7e6dc44c571be159f066bdb961ade2b}{g2o\+::\+Base\+Unary\+Edge$<$ 3, Vector3d, Vertex\+S\+E3\+Expmap $>$}.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+System().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!create\+From@{create\+From}}
+\index{create\+From@{create\+From}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{create\+From()}{createFrom()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Vertex}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::create\+From (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_abd98d7a174df25bcc82cfdacba682fec}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_abd98d7a174df25bcc82cfdacba682fec}
+
+
+Reimplemented in \hyperlink{classg2o_1_1BaseBinaryEdge_a32bfc93b6dede619c7d99db2fb60f80d}{g2o\+::\+Base\+Binary\+Edge$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_a32bfc93b6dede619c7d99db2fb60f80d}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+Sim3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_a32bfc93b6dede619c7d99db2fb60f80d}{g2o\+::\+Base\+Binary\+Edge$<$ 7, Sim3, Vertex\+Sim3\+Expmap, Vertex\+Sim3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_a32bfc93b6dede619c7d99db2fb60f80d}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}, and \hyperlink{classg2o_1_1BaseBinaryEdge_a32bfc93b6dede619c7d99db2fb60f80d}{g2o\+::\+Base\+Binary\+Edge$<$ 3, Vector3d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}.
+
+
+
+Definition at line 474 of file optimizable\+\_\+graph.\+h.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::set\+Fixed().
+
+
+\begin{DoxyCode}
+474 \{\textcolor{keywordflow}{return} 0;\}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!create\+To@{create\+To}}
+\index{create\+To@{create\+To}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{create\+To()}{createTo()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Vertex}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::create\+To (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a39c22b396ab312059ea8fa4c2776be2e}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a39c22b396ab312059ea8fa4c2776be2e}
+
+
+Reimplemented in \hyperlink{classg2o_1_1BaseBinaryEdge_ac7cce17e3229445e5a33c3cb8a569320}{g2o\+::\+Base\+Binary\+Edge$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_ac7cce17e3229445e5a33c3cb8a569320}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+Sim3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_ac7cce17e3229445e5a33c3cb8a569320}{g2o\+::\+Base\+Binary\+Edge$<$ 7, Sim3, Vertex\+Sim3\+Expmap, Vertex\+Sim3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_ac7cce17e3229445e5a33c3cb8a569320}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}, and \hyperlink{classg2o_1_1BaseBinaryEdge_ac7cce17e3229445e5a33c3cb8a569320}{g2o\+::\+Base\+Binary\+Edge$<$ 3, Vector3d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}.
+
+
+
+Definition at line 475 of file optimizable\+\_\+graph.\+h.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+Data\+::read(), and g2o\+::\+Optimizable\+Graph\+::\+Data\+::write().
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::set\+Fixed().
+
+
+\begin{DoxyCode}
+475 \{\textcolor{keywordflow}{return} 0;\}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!dimension@{dimension}}
+\index{dimension@{dimension}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{dimension() const }{dimension() const }}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Optimizable\+Graph\+::\+Edge\+::dimension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a90a86891adc47a179a7cd7ef31549916}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a90a86891adc47a179a7cd7ef31549916}
+
+
+returns the dimensions of the error function 
+
+
+
+Definition at line 472 of file optimizable\+\_\+graph.\+h.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+System(), g2o\+::\+Sparse\+Optimizer\+::compute\+Active\+Errors(), g2o\+::\+Sparse\+Optimizer\+::gauge\+Freedom(), g2o\+::\+Jacobian\+Workspace\+::update\+Size(), and g2o\+::\+Optimizable\+Graph\+::verify\+Information\+Matrices().
+
+
+\begin{DoxyCode}
+472 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a4e651628f7657c81d0e4c1b26caaa6aa}{\_dimension};\}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!error\+Data@{error\+Data}}
+\index{error\+Data@{error\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{error\+Data() const =0}{errorData() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const double$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::error\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a5f2a4b6efa2d0ae600f94a28a6ba58cf}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a5f2a4b6efa2d0ae600f94a28a6ba58cf}
+
+
+returns the error vector cached after calling the compute\+Error; 
+
+
+
+Implemented in \hyperlink{classg2o_1_1BaseEdge_a2483ee84ebe78e35e71db7dce703edae}{g2o\+::\+Base\+Edge$<$ D, E $>$}, \hyperlink{classg2o_1_1BaseEdge_a2483ee84ebe78e35e71db7dce703edae}{g2o\+::\+Base\+Edge$<$ D, Vector2d $>$}, \hyperlink{classg2o_1_1BaseEdge_a2483ee84ebe78e35e71db7dce703edae}{g2o\+::\+Base\+Edge$<$ D, Vector3d $>$}, and \hyperlink{classg2o_1_1BaseEdge_a2483ee84ebe78e35e71db7dce703edae}{g2o\+::\+Base\+Edge$<$ D, Sim3 $>$}.
+
+
+
+Referenced by g2o\+::\+Sparse\+Optimizer\+::compute\+Active\+Errors().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!error\+Data@{error\+Data}}
+\index{error\+Data@{error\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{error\+Data()=0}{errorData()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::error\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a460a0cb0256b0a91edb131e25181f57b}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a460a0cb0256b0a91edb131e25181f57b}
+
+
+Implemented in \hyperlink{classg2o_1_1BaseEdge_ab80452c1134036928a2af6303412a3c4}{g2o\+::\+Base\+Edge$<$ D, E $>$}, \hyperlink{classg2o_1_1BaseEdge_ab80452c1134036928a2af6303412a3c4}{g2o\+::\+Base\+Edge$<$ D, Vector2d $>$}, \hyperlink{classg2o_1_1BaseEdge_ab80452c1134036928a2af6303412a3c4}{g2o\+::\+Base\+Edge$<$ D, Vector3d $>$}, and \hyperlink{classg2o_1_1BaseEdge_ab80452c1134036928a2af6303412a3c4}{g2o\+::\+Base\+Edge$<$ D, Sim3 $>$}.
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!get\+Measurement\+Data@{get\+Measurement\+Data}}
+\index{get\+Measurement\+Data@{get\+Measurement\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{get\+Measurement\+Data(double $\ast$m) const }{getMeasurementData(double *m) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Optimizable\+Graph\+::\+Edge\+::get\+Measurement\+Data (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{m}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a5f7c64421d33b7deb8fcfd5f4cf172b8}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a5f7c64421d33b7deb8fcfd5f4cf172b8}
+writes the measurement to an array of double \begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+
+
+Definition at line 209 of file optimizable\+\_\+graph.\+cpp.
+
+
+\begin{DoxyCode}
+210   \{
+211     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+212   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!graph@{graph}}
+\index{graph@{graph}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{graph()}{graph()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Optimizable\+Graph} $\ast$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a3684190bf8e99f39f58ffadd0dfa6b05}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a3684190bf8e99f39f58ffadd0dfa6b05}
+
+
+Definition at line 143 of file optimizable\+\_\+graph.\+cpp.
+
+
+
+References g2o\+::\+Hyper\+Graph\+::\+Edge\+::\+\_\+vertices, and g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::graph().
+
+
+
+Referenced by resolve\+Parameters().
+
+
+\begin{DoxyCode}
+143                                                \{
+144     \textcolor{keywordflow}{if} (! \hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}.size())
+145       \textcolor{keywordflow}{return} 0;
+146     OptimizableGraph::Vertex* v=(OptimizableGraph::Vertex*)\hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}[0];
+147     \textcolor{keywordflow}{if} (!v)
+148       \textcolor{keywordflow}{return} 0;
+149     \textcolor{keywordflow}{return} v->graph();
+150   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!graph@{graph}}
+\index{graph@{graph}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{graph() const }{graph() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Optimizable\+Graph} $\ast$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a08d9fca4079441e3aa07cc315cd77470}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a08d9fca4079441e3aa07cc315cd77470}
+
+
+Definition at line 152 of file optimizable\+\_\+graph.\+cpp.
+
+
+
+References g2o\+::\+Hyper\+Graph\+::\+Edge\+::\+\_\+vertices, and g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::graph().
+
+
+\begin{DoxyCode}
+152                                                            \{
+153     \textcolor{keywordflow}{if} (! \hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}.size())
+154       \textcolor{keywordflow}{return} 0;
+155     \textcolor{keyword}{const} OptimizableGraph::Vertex* v=(\textcolor{keyword}{const} OptimizableGraph::Vertex*) 
+      \hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}[0];
+156     \textcolor{keywordflow}{if} (!v)
+157       \textcolor{keywordflow}{return} 0;
+158     \textcolor{keywordflow}{return} v->graph();
+159   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!information\+Data@{information\+Data}}
+\index{information\+Data@{information\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{information\+Data() const =0}{informationData() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const double$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::information\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_ab5b315b3e0a6c4e29074b2c924460417}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_ab5b315b3e0a6c4e29074b2c924460417}
+
+
+returns the memory of the information matrix, usable for example with a Eigen\+::\+Map$<$\+Matrix\+Xd$>$ 
+
+
+
+Implemented in \hyperlink{classg2o_1_1BaseEdge_a49791e1acda790a7819388e60d80ed50}{g2o\+::\+Base\+Edge$<$ D, E $>$}, \hyperlink{classg2o_1_1BaseEdge_a49791e1acda790a7819388e60d80ed50}{g2o\+::\+Base\+Edge$<$ D, Vector2d $>$}, \hyperlink{classg2o_1_1BaseEdge_a49791e1acda790a7819388e60d80ed50}{g2o\+::\+Base\+Edge$<$ D, Vector3d $>$}, and \hyperlink{classg2o_1_1BaseEdge_a49791e1acda790a7819388e60d80ed50}{g2o\+::\+Base\+Edge$<$ D, Sim3 $>$}.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::verify\+Information\+Matrices().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!information\+Data@{information\+Data}}
+\index{information\+Data@{information\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{information\+Data()=0}{informationData()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::information\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a99de4bbb57e3c5e7321f150a45d1cb12}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a99de4bbb57e3c5e7321f150a45d1cb12}
+
+
+Implemented in \hyperlink{classg2o_1_1BaseEdge_a72ae9d215d6abc892f735e3d3ab81a88}{g2o\+::\+Base\+Edge$<$ D, E $>$}, \hyperlink{classg2o_1_1BaseEdge_a72ae9d215d6abc892f735e3d3ab81a88}{g2o\+::\+Base\+Edge$<$ D, Vector2d $>$}, \hyperlink{classg2o_1_1BaseEdge_a72ae9d215d6abc892f735e3d3ab81a88}{g2o\+::\+Base\+Edge$<$ D, Vector3d $>$}, and \hyperlink{classg2o_1_1BaseEdge_a72ae9d215d6abc892f735e3d3ab81a88}{g2o\+::\+Base\+Edge$<$ D, Sim3 $>$}.
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!initial\+Estimate@{initial\+Estimate}}
+\index{initial\+Estimate@{initial\+Estimate}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{initial\+Estimate(const Optimizable\+Graph\+::\+Vertex\+Set \&from, Optimizable\+Graph\+::\+Vertex $\ast$to)=0}{initialEstimate(const OptimizableGraph::VertexSet &from, OptimizableGraph::Vertex *to)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Optimizable\+Graph\+::\+Edge\+::initial\+Estimate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Optimizable\+Graph\+::\+Vertex\+Set} \&}]{from, }
+\item[{{\bf Optimizable\+Graph\+::\+Vertex} $\ast$}]{to}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a9519f8892e97f03daacb44ea50ac7f4e}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a9519f8892e97f03daacb44ea50ac7f4e}
+set the estimate of the to vertex, based on the estimate of the from vertices in the edge. 
+
+Implemented in \hyperlink{classg2o_1_1EdgeSim3_afac4cc093af6f54adb278c142f33dcca}{g2o\+::\+Edge\+Sim3}, \hyperlink{classg2o_1_1BaseEdge_a0c3d9763f1dc504627df75e0f381ca70}{g2o\+::\+Base\+Edge$<$ D, E $>$}, \hyperlink{classg2o_1_1BaseEdge_a0c3d9763f1dc504627df75e0f381ca70}{g2o\+::\+Base\+Edge$<$ D, Vector2d $>$}, \hyperlink{classg2o_1_1BaseEdge_a0c3d9763f1dc504627df75e0f381ca70}{g2o\+::\+Base\+Edge$<$ D, Vector3d $>$}, \hyperlink{classg2o_1_1BaseEdge_a0c3d9763f1dc504627df75e0f381ca70}{g2o\+::\+Base\+Edge$<$ D, Sim3 $>$}, \hyperlink{classg2o_1_1BaseUnaryEdge_a3d3311901116092cf817b094f6a0b44b}{g2o\+::\+Base\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$}, \hyperlink{classg2o_1_1BaseUnaryEdge_a3d3311901116092cf817b094f6a0b44b}{g2o\+::\+Base\+Unary\+Edge$<$ 2, Vector2d, Vertex\+S\+E3\+Expmap $>$}, and \hyperlink{classg2o_1_1BaseUnaryEdge_a3d3311901116092cf817b094f6a0b44b}{g2o\+::\+Base\+Unary\+Edge$<$ 3, Vector3d, Vertex\+S\+E3\+Expmap $>$}.
+
+
+
+Referenced by g2o\+::\+Sparse\+Optimizer\+::compute\+Initial\+Guess(), g2o\+::\+Estimate\+Propagator\+::\+Propagate\+Action\+::operator()(), and g2o\+::\+Optimizable\+Graph\+::set\+Fixed().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!initial\+Estimate\+Possible@{initial\+Estimate\+Possible}}
+\index{initial\+Estimate\+Possible@{initial\+Estimate\+Possible}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{initial\+Estimate\+Possible(const Optimizable\+Graph\+::\+Vertex\+Set \&from, Optimizable\+Graph\+::\+Vertex $\ast$to)}{initialEstimatePossible(const OptimizableGraph::VertexSet &from, OptimizableGraph::Vertex *to)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double g2o\+::\+Optimizable\+Graph\+::\+Edge\+::initial\+Estimate\+Possible (
+\begin{DoxyParamCaption}
+\item[{const {\bf Optimizable\+Graph\+::\+Vertex\+Set} \&}]{from, }
+\item[{{\bf Optimizable\+Graph\+::\+Vertex} $\ast$}]{to}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a1cef6ffa0f82f1ad3dd3d7a9f04425ee}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a1cef6ffa0f82f1ad3dd3d7a9f04425ee}
+override in your class if it\textquotesingle{}s possible to initialize the vertices in certain combinations. The return value may correspond to the cost for initiliaizng the vertex but should be positive if the initialization is possible and negative if not possible. 
+
+Reimplemented in \hyperlink{classg2o_1_1EdgeSim3_a0fd73623327838b46abdf292582da6ae}{g2o\+::\+Edge\+Sim3}.
+
+
+
+Definition at line 464 of file optimizable\+\_\+graph.\+h.
+
+
+
+Referenced by g2o\+::\+Sparse\+Optimizer\+::compute\+Initial\+Guess(), g2o\+::\+Estimate\+Propagator\+Cost\+::operator()(), and g2o\+::\+Estimate\+Propagator\+Cost\+Odometry\+::operator()().
+
+
+\begin{DoxyCode}
+464 \{ (void) from; (void) to; \textcolor{keywordflow}{return} -1.;\}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!install\+Parameter@{install\+Parameter}}
+\index{install\+Parameter@{install\+Parameter}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{install\+Parameter(\+Parameter\+Type $\ast$\&p, size\+\_\+t arg\+No, int param\+Id=-\/1)}{installParameter(ParameterType *&p, size_t argNo, int paramId=-1)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Parameter\+Type $>$ bool g2o\+::\+Optimizable\+Graph\+::\+Edge\+::install\+Parameter (
+\begin{DoxyParamCaption}
+\item[{Parameter\+Type $\ast$\&}]{p, }
+\item[{size\+\_\+t}]{arg\+No, }
+\item[{int}]{param\+Id = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a237bea2f2fb7cc6a9cf4ee5ee6fe4d88}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a237bea2f2fb7cc6a9cf4ee5ee6fe4d88}
+
+
+Definition at line 505 of file optimizable\+\_\+graph.\+h.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+\_\+parameters.
+
+
+\begin{DoxyCode}
+505                                                                                 \{
+506             \textcolor{keywordflow}{if} (argNo>=\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\_parameters}.size())
+507               \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+508             \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a33a35663ba5b096cb6e6078014bd6f17}{\_parameterIds}[argNo] = paramId;
+509             \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\_parameters}[argNo] = (Parameter**)&p;
+510             \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a08666609850240956c64c95ae5ae0f2c}{\_parameterTypes}[argNo] = \textcolor{keyword}{typeid}(ParameterType).name();
+511             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+512           \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!internal\+Id@{internal\+Id}}
+\index{internal\+Id@{internal\+Id}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{internal\+Id() const }{internalId() const }}]{\setlength{\rightskip}{0pt plus 5cm}long long g2o\+::\+Optimizable\+Graph\+::\+Edge\+::internal\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_ac4ab4bc451232a7ff4dca8484181fcad}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_ac4ab4bc451232a7ff4dca8484181fcad}
+
+
+the internal ID of the edge 
+
+
+
+Definition at line 483 of file optimizable\+\_\+graph.\+h.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::\+Edge\+I\+D\+Compare\+::operator()().
+
+
+\begin{DoxyCode}
+483 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_abdfc449ed57479d90d2e57a8bc0bea12}{\_internalId};\}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!level@{level}}
+\index{level@{level}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{level() const }{level() const }}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Optimizable\+Graph\+::\+Edge\+::level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_af92bd1589a99fa9732a5f2964cf38a6c}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_af92bd1589a99fa9732a5f2964cf38a6c}
+
+
+returns the level of the edge 
+
+
+
+Definition at line 467 of file optimizable\+\_\+graph.\+h.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::save().
+
+
+\begin{DoxyCode}
+467 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a57132078028dd0455aef141e62e07db9}{\_level};\}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!linearize\+Oplus@{linearize\+Oplus}}
+\index{linearize\+Oplus@{linearize\+Oplus}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{linearize\+Oplus(\+Jacobian\+Workspace \&jacobian\+Workspace)=0}{linearizeOplus(JacobianWorkspace &jacobianWorkspace)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Optimizable\+Graph\+::\+Edge\+::linearize\+Oplus (
+\begin{DoxyParamCaption}
+\item[{{\bf Jacobian\+Workspace} \&}]{jacobian\+Workspace}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a0fdad5ebfb4efec9f893b57f67e0fbe1}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a0fdad5ebfb4efec9f893b57f67e0fbe1}
+Linearizes the constraint in the edge in the manifold space, and store the result in the given workspace 
+
+Implemented in \hyperlink{classg2o_1_1BaseBinaryEdge_afc3b6470e7679f027c2614484b394925}{g2o\+::\+Base\+Binary\+Edge$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_afc3b6470e7679f027c2614484b394925}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+Sim3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_afc3b6470e7679f027c2614484b394925}{g2o\+::\+Base\+Binary\+Edge$<$ 7, Sim3, Vertex\+Sim3\+Expmap, Vertex\+Sim3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_afc3b6470e7679f027c2614484b394925}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_afc3b6470e7679f027c2614484b394925}{g2o\+::\+Base\+Binary\+Edge$<$ 3, Vector3d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseMultiEdge_a72176776797987b8ae79ea2e33971e9e}{g2o\+::\+Base\+Multi\+Edge$<$ D, E $>$}, \hyperlink{classg2o_1_1BaseUnaryEdge_a8b396647b5b438d30a04758023baa595}{g2o\+::\+Base\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$}, \hyperlink{classg2o_1_1BaseUnaryEdge_a8b396647b5b438d30a04758023baa595}{g2o\+::\+Base\+Unary\+Edge$<$ 2, Vector2d, Vertex\+S\+E3\+Expmap $>$}, and \hyperlink{classg2o_1_1BaseUnaryEdge_a8b396647b5b438d30a04758023baa595}{g2o\+::\+Base\+Unary\+Edge$<$ 3, Vector3d, Vertex\+S\+E3\+Expmap $>$}.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+System().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!map\+Hessian\+Memory@{map\+Hessian\+Memory}}
+\index{map\+Hessian\+Memory@{map\+Hessian\+Memory}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{map\+Hessian\+Memory(double $\ast$d, int i, int j, bool row\+Major)=0}{mapHessianMemory(double *d, int i, int j, bool rowMajor)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Optimizable\+Graph\+::\+Edge\+::map\+Hessian\+Memory (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{d, }
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{bool}]{row\+Major}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a3bd233fd552daa166039acf47b69a5a7}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a3bd233fd552daa166039acf47b69a5a7}
+maps the internal matrix to some external memory location, you need to provide the memory before calling construct\+Quadratic\+Form 
+\begin{DoxyParams}{Parameters}
+{\em d} & the memory location to which we map \\
+\hline
+{\em i} & index of the vertex i \\
+\hline
+{\em j} & index of the vertex j (j $>$ i, upper triangular fashion) \\
+\hline
+{\em row\+Major} & if true, will write in row\+Major order to the block. Since E\+I\+G\+EN is column\+Major by default, this results in writing the transposed \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classg2o_1_1BaseBinaryEdge_ada358930854d386a4e8c32f64078e052}{g2o\+::\+Base\+Binary\+Edge$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_ada358930854d386a4e8c32f64078e052}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+Sim3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_ada358930854d386a4e8c32f64078e052}{g2o\+::\+Base\+Binary\+Edge$<$ 7, Sim3, Vertex\+Sim3\+Expmap, Vertex\+Sim3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_ada358930854d386a4e8c32f64078e052}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseBinaryEdge_ada358930854d386a4e8c32f64078e052}{g2o\+::\+Base\+Binary\+Edge$<$ 3, Vector3d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}, \hyperlink{classg2o_1_1BaseMultiEdge_aecded66022b967fab0deb1c6a2d76445}{g2o\+::\+Base\+Multi\+Edge$<$ D, E $>$}, \hyperlink{classg2o_1_1BaseUnaryEdge_a919dcb89130f6e7082e807530facdd78}{g2o\+::\+Base\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$}, \hyperlink{classg2o_1_1BaseUnaryEdge_a919dcb89130f6e7082e807530facdd78}{g2o\+::\+Base\+Unary\+Edge$<$ 2, Vector2d, Vertex\+S\+E3\+Expmap $>$}, and \hyperlink{classg2o_1_1BaseUnaryEdge_a919dcb89130f6e7082e807530facdd78}{g2o\+::\+Base\+Unary\+Edge$<$ 3, Vector3d, Vertex\+S\+E3\+Expmap $>$}.
+
+
+
+Referenced by g2o\+::\+Block\+Solver$<$ Traits $>$\+::build\+Structure(), and g2o\+::\+Block\+Solver$<$ Traits $>$\+::update\+Structure().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!measurement\+Dimension@{measurement\+Dimension}}
+\index{measurement\+Dimension@{measurement\+Dimension}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{measurement\+Dimension() const }{measurementDimension() const }}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Optimizable\+Graph\+::\+Edge\+::measurement\+Dimension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a44bd732330859991d4fbc992129b2e79}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a44bd732330859991d4fbc992129b2e79}
+returns the dimension of the measurement in the extended representation which is used by get/set\+Measurement; 
+
+Definition at line 214 of file optimizable\+\_\+graph.\+cpp.
+
+
+\begin{DoxyCode}
+215   \{
+216     \textcolor{keywordflow}{return} -1;
+217   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!num\+Parameters@{num\+Parameters}}
+\index{num\+Parameters@{num\+Parameters}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{num\+Parameters() const }{numParameters() const }}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t g2o\+::\+Optimizable\+Graph\+::\+Edge\+::num\+Parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a21c26247bdb33e6836d1f1c8536ad70c}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a21c26247bdb33e6836d1f1c8536ad70c}
+
+
+Definition at line 490 of file optimizable\+\_\+graph.\+h.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+\_\+parameters.
+
+
+\begin{DoxyCode}
+490 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\_parameters}.size();\}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!parameter@{parameter}}
+\index{parameter@{parameter}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{parameter(int arg\+No) const }{parameter(int argNo) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Parameter}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::parameter (
+\begin{DoxyParamCaption}
+\item[{int}]{arg\+No}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a78b63b89b3964c30b96a3404b20e2a7f}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a78b63b89b3964c30b96a3404b20e2a7f}
+
+
+Definition at line 489 of file optimizable\+\_\+graph.\+h.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+\_\+parameters.
+
+
+\begin{DoxyCode}
+489 \{\textcolor{keywordflow}{return} *\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\_parameters}.at(argNo);\}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!read@{read}}
+\index{read@{read}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{read(std\+::istream \&is)=0}{read(std::istream &is)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Optimizable\+Graph\+::\+Edge\+::read (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a30cf69b762a06aa35e796d8af71632b0}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a30cf69b762a06aa35e796d8af71632b0}
+
+
+read the vertex from a stream, i.\+e., the internal state of the vertex 
+
+
+
+Implemented in \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZOnlyPose_ae199c5428259a7d50e9897029ae9fd70}{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}, \hyperlink{classg2o_1_1EdgeInverseSim3ProjectXYZ_ac229f31599a4f08eebe8f9b239d883f6}{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ}, \hyperlink{classg2o_1_1EdgeSE3ProjectXYZOnlyPose_a28994ddf2cab7b61566ce55ad4b43388}{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}, \hyperlink{classg2o_1_1EdgeSim3ProjectXYZ_aaf72b3f12f99f131e6c3395baf796fe9}{g2o\+::\+Edge\+Sim3\+Project\+X\+YZ}, \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a59cdc820a694379a73a26d51d948db0e}{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}, \hyperlink{classg2o_1_1EdgeSim3_a6c7ad669fa04265475cbfdba3452fcbd}{g2o\+::\+Edge\+Sim3}, and \hyperlink{classg2o_1_1EdgeSE3ProjectXYZ_a04200f3d6b7fbd47961df696f1ee34ed}{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::set\+Fixed().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!resize\+Parameters@{resize\+Parameters}}
+\index{resize\+Parameters@{resize\+Parameters}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{resize\+Parameters(size\+\_\+t new\+Size)}{resizeParameters(size_t newSize)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Optimizable\+Graph\+::\+Edge\+::resize\+Parameters (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{new\+Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_ac978364c99e36c7fced59ecb383ba171}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_ac978364c99e36c7fced59ecb383ba171}
+
+
+Definition at line 491 of file optimizable\+\_\+graph.\+h.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+\_\+parameters.
+
+
+\begin{DoxyCode}
+491                                                      \{
+492           \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\_parameters}.resize(newSize, 0); 
+493           \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a33a35663ba5b096cb6e6078014bd6f17}{\_parameterIds}.resize(newSize, -1);
+494           \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a08666609850240956c64c95ae5ae0f2c}{\_parameterTypes}.resize(newSize, \textcolor{keyword}{typeid}(\textcolor{keywordtype}{void}*).name());
+495         \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!resolve\+Cache@{resolve\+Cache}}
+\index{resolve\+Cache@{resolve\+Cache}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{resolve\+Cache(\+Cache\+Type $\ast$\&cache, Optimizable\+Graph\+::\+Vertex $\ast$, const std\+::string \&\+\_\+type, const Parameter\+Vector \&parameters)}{resolveCache(CacheType *&cache, OptimizableGraph::Vertex *, const std::string &_type, const ParameterVector &parameters)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Cache\+Type $>$ void g2o\+::\+Optimizable\+Graph\+::\+Edge\+::resolve\+Cache (
+\begin{DoxyParamCaption}
+\item[{Cache\+Type $\ast$\&}]{cache, }
+\item[{{\bf Optimizable\+Graph\+::\+Vertex} $\ast$}]{v, }
+\item[{const std\+::string \&}]{\+\_\+type, }
+\item[{const {\bf Parameter\+Vector} \&}]{parameters}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_ad95f2883af693de56e46a2b272dc1cdc}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_ad95f2883af693de56e46a2b272dc1cdc}
+
+
+Definition at line 121 of file cache.\+h.
+
+
+
+References c, g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::cache\+Container(), g2o\+::\+Cache\+::container(), g2o\+::\+Cache\+Container\+::create\+Cache(), g2o\+::\+Cache\+Container\+::find\+Cache(), and g2o\+::\+Cache\+::key().
+
+
+\begin{DoxyCode}
+125   \{
+126     cache = 0;
+127     CacheContainer* container= v->cacheContainer();
+128     Cache::CacheKey key(type\_, parameters\_);
+129     Cache* \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c} = container->findCache(key);
+130     \textcolor{keywordflow}{if} (!c) \{
+131       c = container->createCache(key);
+132     \}
+133     \textcolor{keywordflow}{if} (c) \{
+134       cache = \textcolor{keyword}{dynamic\_cast<}CacheType*\textcolor{keyword}{>}(\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}); 
+135     \}
+136   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!resolve\+Caches@{resolve\+Caches}}
+\index{resolve\+Caches@{resolve\+Caches}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{resolve\+Caches()}{resolveCaches()}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Optimizable\+Graph\+::\+Edge\+::resolve\+Caches (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_aa93e3a4f976b467994f4eb7679a04bf3}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_aa93e3a4f976b467994f4eb7679a04bf3}
+
+
+Definition at line 200 of file optimizable\+\_\+graph.\+cpp.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::add\+Edge().
+
+
+\begin{DoxyCode}
+200                                            \{
+201     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+202   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!resolve\+Parameters@{resolve\+Parameters}}
+\index{resolve\+Parameters@{resolve\+Parameters}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{resolve\+Parameters()}{resolveParameters()}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Optimizable\+Graph\+::\+Edge\+::resolve\+Parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_addadf494f3a1c8bf467a74454d771d0d}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_addadf494f3a1c8bf467a74454d771d0d}
+
+
+Definition at line 171 of file optimizable\+\_\+graph.\+cpp.
+
+
+
+References \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, \+\_\+parameter\+Ids, \+\_\+parameters, \+\_\+parameter\+Types, graph(), and g2o\+::\+Optimizable\+Graph\+::parameter().
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::add\+Edge().
+
+
+\begin{DoxyCode}
+171                                                \{
+172     \textcolor{keywordflow}{if} (!\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a3684190bf8e99f39f58ffadd0dfa6b05}{graph}()) \{
+173       cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": edge not registered with a graph"} << endl;
+174       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+175     \}
+176     
+177     assert (\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\_parameters}.size() == \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a33a35663ba5b096cb6e6078014bd6f17}{\_parameterIds}.size());
+178     \textcolor{comment}{//cerr << \_\_PRETTY\_FUNCTION\_\_ << ": encountered " << \_parameters.size() << " parameters" << endl;}
+179     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0; i<\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\_parameters}.size(); i++)\{
+180       \textcolor{keywordtype}{int} index = \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a33a35663ba5b096cb6e6078014bd6f17}{\_parameterIds}[i];
+181       *\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\_parameters}[i] = \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a3684190bf8e99f39f58ffadd0dfa6b05}{graph}()->\hyperlink{structg2o_1_1OptimizableGraph_ad9506880a9289353ddd2277fafb76ffd}{parameter}(index);
+182       \textcolor{keywordflow}{if} (\textcolor{keyword}{typeid}(**\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\_parameters}[i]).name()!=\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a08666609850240956c64c95ae5ae0f2c}{\_parameterTypes}[i])\{
+183         cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": FATAL, parameter type mismatch - encountered "}
+       << \textcolor{keyword}{typeid}(**\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\_parameters}[i]).name() << \textcolor{stringliteral}{"; should be "} << 
+      \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a08666609850240956c64c95ae5ae0f2c}{\_parameterTypes}[i] << endl;
+184       \}
+185       \textcolor{keywordflow}{if} (!*\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\_parameters}[i]) \{
+186         cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": FATAL, *\_parameters[i] == 0"} << endl;
+187         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+188       \}
+189     \}
+190     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+191   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!robust\+Kernel@{robust\+Kernel}}
+\index{robust\+Kernel@{robust\+Kernel}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{robust\+Kernel() const }{robustKernel() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Robust\+Kernel}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::robust\+Kernel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_aeb6ce9f3bf7b896f58272ea0d3feb8ff}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_aeb6ce9f3bf7b896f58272ea0d3feb8ff}
+
+
+if N\+OT N\+U\+LL, error of this edge will be robustifed with the kernel 
+
+
+
+Definition at line 415 of file optimizable\+\_\+graph.\+h.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::chi2(), and g2o\+::\+Optimizable\+Graph\+::jacobian\+Workspace().
+
+
+
+Referenced by g2o\+::\+Sparse\+Optimizer\+::active\+Robust\+Chi2().
+
+
+\begin{DoxyCode}
+415 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a6b942321f9e4e82051d529efb255af35}{\_robustKernel};\}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!set\+Level@{set\+Level}}
+\index{set\+Level@{set\+Level}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{set\+Level(int l)}{setLevel(int l)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Optimizable\+Graph\+::\+Edge\+::set\+Level (
+\begin{DoxyParamCaption}
+\item[{int}]{l}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_ab3e4290bc51d03ba294f36254048b15a}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_ab3e4290bc51d03ba294f36254048b15a}
+
+
+sets the level of the edge 
+
+
+
+Definition at line 469 of file optimizable\+\_\+graph.\+h.
+
+
+\begin{DoxyCode}
+469 \{ \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a57132078028dd0455aef141e62e07db9}{\_level}=l;\}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!set\+Measurement\+Data@{set\+Measurement\+Data}}
+\index{set\+Measurement\+Data@{set\+Measurement\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{set\+Measurement\+Data(const double $\ast$m)}{setMeasurementData(const double *m)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Optimizable\+Graph\+::\+Edge\+::set\+Measurement\+Data (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_ae8d99a85921057eba87a2346ba9c6e0a}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_ae8d99a85921057eba87a2346ba9c6e0a}
+sets the measurement from an array of double \begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+
+
+Definition at line 204 of file optimizable\+\_\+graph.\+cpp.
+
+
+\begin{DoxyCode}
+205   \{
+206     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+207   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!set\+Measurement\+From\+State@{set\+Measurement\+From\+State}}
+\index{set\+Measurement\+From\+State@{set\+Measurement\+From\+State}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{set\+Measurement\+From\+State()}{setMeasurementFromState()}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Optimizable\+Graph\+::\+Edge\+::set\+Measurement\+From\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a2f0b6465d6cd8b459ebc6494892c44f4}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a2f0b6465d6cd8b459ebc6494892c44f4}
+sets the estimate to have a zero error, based on the current value of the state variables returns false if not supported. 
+
+Definition at line 219 of file optimizable\+\_\+graph.\+cpp.
+
+
+\begin{DoxyCode}
+219                                                     \{
+220     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+221   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!set\+Parameter\+Id@{set\+Parameter\+Id}}
+\index{set\+Parameter\+Id@{set\+Parameter\+Id}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{set\+Parameter\+Id(int arg\+Num, int param\+Id)}{setParameterId(int argNum, int paramId)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Optimizable\+Graph\+::\+Edge\+::set\+Parameter\+Id (
+\begin{DoxyParamCaption}
+\item[{int}]{arg\+Num, }
+\item[{int}]{param\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_ae535735e71365a547fd1a11fae5378f6}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_ae535735e71365a547fd1a11fae5378f6}
+
+
+Definition at line 161 of file optimizable\+\_\+graph.\+cpp.
+
+
+
+References \+\_\+parameter\+Ids, and \+\_\+parameters.
+
+
+\begin{DoxyCode}
+161                                                                   \{
+162     \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{int})\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\_parameters}.size()<=argNum)
+163       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+164     \textcolor{keywordflow}{if} (argNum<0)
+165       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+166     *\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{\_parameters}[argNum] = 0;
+167     \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a33a35663ba5b096cb6e6078014bd6f17}{\_parameterIds}[argNum] = paramId;
+168     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+169   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!set\+Robust\+Kernel@{set\+Robust\+Kernel}}
+\index{set\+Robust\+Kernel@{set\+Robust\+Kernel}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{set\+Robust\+Kernel(\+Robust\+Kernel $\ast$ptr)}{setRobustKernel(RobustKernel *ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Optimizable\+Graph\+::\+Edge\+::set\+Robust\+Kernel (
+\begin{DoxyParamCaption}
+\item[{{\bf Robust\+Kernel} $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a42955172c19f16e2cfbb30d611d1bd87}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a42955172c19f16e2cfbb30d611d1bd87}
+specify the robust kernel to be used in this edge 
+
+Definition at line 193 of file optimizable\+\_\+graph.\+cpp.
+
+
+
+References \+\_\+robust\+Kernel.
+
+
+\begin{DoxyCode}
+194   \{
+195     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a6b942321f9e4e82051d529efb255af35}{\_robustKernel})
+196       \textcolor{keyword}{delete} \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a6b942321f9e4e82051d529efb255af35}{\_robustKernel};
+197     \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a6b942321f9e4e82051d529efb255af35}{\_robustKernel} = ptr;
+198   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!write@{write}}
+\index{write@{write}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{write(std\+::ostream \&os) const =0}{write(std::ostream &os) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Optimizable\+Graph\+::\+Edge\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a804b9a2178249b9297c55b8fbbeda56e}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a804b9a2178249b9297c55b8fbbeda56e}
+
+
+write the vertex to a stream 
+
+
+
+Implemented in \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZOnlyPose_aa31f6c66016ec7f362ab3028a53e8cc6}{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}, \hyperlink{classg2o_1_1EdgeInverseSim3ProjectXYZ_a9df647cceceabdecd26692647211e043}{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+YZ}, \hyperlink{classg2o_1_1EdgeSE3ProjectXYZOnlyPose_a5bf685170d6b17908b2a70ccc7e40904}{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}, \hyperlink{classg2o_1_1EdgeSim3ProjectXYZ_ad29bc1412dd5141b9ff9b5bb7363db4c}{g2o\+::\+Edge\+Sim3\+Project\+X\+YZ}, \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_acda965a32bd3aeb156cbd5883d19e864}{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}, \hyperlink{classg2o_1_1EdgeSim3_a50f9e0b48bd9143eb516be36e0c25340}{g2o\+::\+Edge\+Sim3}, and \hyperlink{classg2o_1_1EdgeSE3ProjectXYZ_a3f09d0456f011dfa53b6f61b566e27fd}{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::save\+Edge().
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!Optimizable\+Graph@{Optimizable\+Graph}}
+\index{Optimizable\+Graph@{Optimizable\+Graph}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{Optimizable\+Graph}{OptimizableGraph}}]{\setlength{\rightskip}{0pt plus 5cm}friend struct {\bf Optimizable\+Graph}\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a45d35331ee3deca38c26d1efb6b961ae}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a45d35331ee3deca38c26d1efb6b961ae}
+
+
+Definition at line 384 of file optimizable\+\_\+graph.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!\+\_\+cache\+Ids@{\+\_\+cache\+Ids}}
+\index{\+\_\+cache\+Ids@{\+\_\+cache\+Ids}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{\+\_\+cache\+Ids}{_cacheIds}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::\+\_\+cache\+Ids\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a56bddaadd70570dbd96e8deed3d4b34c}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a56bddaadd70570dbd96e8deed3d4b34c}
+
+
+Definition at line 502 of file optimizable\+\_\+graph.\+h.
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!\+\_\+dimension@{\+\_\+dimension}}
+\index{\+\_\+dimension@{\+\_\+dimension}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{\+\_\+dimension}{_dimension}}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Optimizable\+Graph\+::\+Edge\+::\+\_\+dimension\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a4e651628f7657c81d0e4c1b26caaa6aa}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a4e651628f7657c81d0e4c1b26caaa6aa}
+
+
+Definition at line 497 of file optimizable\+\_\+graph.\+h.
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!\+\_\+internal\+Id@{\+\_\+internal\+Id}}
+\index{\+\_\+internal\+Id@{\+\_\+internal\+Id}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{\+\_\+internal\+Id}{_internalId}}]{\setlength{\rightskip}{0pt plus 5cm}long long g2o\+::\+Optimizable\+Graph\+::\+Edge\+::\+\_\+internal\+Id\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_abdfc449ed57479d90d2e57a8bc0bea12}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_abdfc449ed57479d90d2e57a8bc0bea12}
+
+
+Definition at line 500 of file optimizable\+\_\+graph.\+h.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::add\+Edge().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!\+\_\+level@{\+\_\+level}}
+\index{\+\_\+level@{\+\_\+level}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{\+\_\+level}{_level}}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Optimizable\+Graph\+::\+Edge\+::\+\_\+level\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a57132078028dd0455aef141e62e07db9}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a57132078028dd0455aef141e62e07db9}
+
+
+Definition at line 498 of file optimizable\+\_\+graph.\+h.
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!\+\_\+parameter\+Ids@{\+\_\+parameter\+Ids}}
+\index{\+\_\+parameter\+Ids@{\+\_\+parameter\+Ids}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{\+\_\+parameter\+Ids}{_parameterIds}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::\+\_\+parameter\+Ids\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a33a35663ba5b096cb6e6078014bd6f17}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a33a35663ba5b096cb6e6078014bd6f17}
+
+
+Definition at line 524 of file optimizable\+\_\+graph.\+h.
+
+
+
+Referenced by resolve\+Parameters(), and set\+Parameter\+Id().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!\+\_\+parameters@{\+\_\+parameters}}
+\index{\+\_\+parameters@{\+\_\+parameters}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{\+\_\+parameters}{_parameters}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Parameter}$\ast$$\ast$$>$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::\+\_\+parameters\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a41c4d6a404d0b057d37fac43edec40ed}
+
+
+Definition at line 523 of file optimizable\+\_\+graph.\+h.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::clear\+Parameters(), resolve\+Parameters(), g2o\+::\+Optimizable\+Graph\+::save(), g2o\+::\+Optimizable\+Graph\+::set\+Fixed(), and set\+Parameter\+Id().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!\+\_\+parameter\+Types@{\+\_\+parameter\+Types}}
+\index{\+\_\+parameter\+Types@{\+\_\+parameter\+Types}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{\+\_\+parameter\+Types}{_parameterTypes}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::\+\_\+parameter\+Types\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a08666609850240956c64c95ae5ae0f2c}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a08666609850240956c64c95ae5ae0f2c}
+
+
+Definition at line 522 of file optimizable\+\_\+graph.\+h.
+
+
+
+Referenced by resolve\+Parameters().
+
+\index{g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}!\+\_\+robust\+Kernel@{\+\_\+robust\+Kernel}}
+\index{\+\_\+robust\+Kernel@{\+\_\+robust\+Kernel}!g2o\+::\+Optimizable\+Graph\+::\+Edge@{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\subsubsection[{\texorpdfstring{\+\_\+robust\+Kernel}{_robustKernel}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Robust\+Kernel}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Edge\+::\+\_\+robust\+Kernel\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizableGraph_1_1Edge_a6b942321f9e4e82051d529efb255af35}{}\label{classg2o_1_1OptimizableGraph_1_1Edge_a6b942321f9e4e82051d529efb255af35}
+
+
+Definition at line 499 of file optimizable\+\_\+graph.\+h.
+
+
+
+Referenced by set\+Robust\+Kernel(), and $\sim$\+Edge().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{optimizable__graph_8h}{optimizable\+\_\+graph.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{cache_8h}{cache.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{optimizable__graph_8cpp}{optimizable\+\_\+graph.\+cpp}\end{DoxyCompactItemize}

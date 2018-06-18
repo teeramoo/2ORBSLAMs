@@ -1,0 +1,117 @@
+\hypertarget{classg2o_1_1HyperGraphElementCreator}{}\section{g2o\+:\+:Hyper\+Graph\+Element\+Creator$<$ T $>$ Class Template Reference}
+\label{classg2o_1_1HyperGraphElementCreator}\index{g2o\+::\+Hyper\+Graph\+Element\+Creator$<$ T $>$@{g2o\+::\+Hyper\+Graph\+Element\+Creator$<$ T $>$}}
+
+
+templatized creator class which creates graph elements  
+
+
+
+
+{\ttfamily \#include $<$creators.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Hyper\+Graph\+Element\+Creator$<$ T $>$\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Hyper\+Graph\+Element\+Creator$<$ T $>$\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1HyperGraphElementCreator_aacaa6cfc040649e5802bfe07240f242f}{Hyper\+Graph\+Element\+Creator} ()
+\item 
+\hyperlink{structg2o_1_1HyperGraph_1_1HyperGraphElement}{Hyper\+Graph\+::\+Hyper\+Graph\+Element} $\ast$ \hyperlink{classg2o_1_1HyperGraphElementCreator_af5e58366dd05b49700076e0c4ace31e3}{construct} ()
+\item 
+virtual const std\+::string \& \hyperlink{classg2o_1_1HyperGraphElementCreator_a48df4ada5c8540e65e6e4925b7a00a04}{name} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classg2o_1_1HyperGraphElementCreator_abbcc42de74a57d80b586dd843255ebae}{\+\_\+name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class g2o\+::\+Hyper\+Graph\+Element\+Creator$<$ T $>$}
+
+templatized creator class which creates graph elements 
+
+Definition at line 60 of file creators.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Hyper\+Graph\+Element\+Creator@{g2o\+::\+Hyper\+Graph\+Element\+Creator}!Hyper\+Graph\+Element\+Creator@{Hyper\+Graph\+Element\+Creator}}
+\index{Hyper\+Graph\+Element\+Creator@{Hyper\+Graph\+Element\+Creator}!g2o\+::\+Hyper\+Graph\+Element\+Creator@{g2o\+::\+Hyper\+Graph\+Element\+Creator}}
+\subsubsection[{\texorpdfstring{Hyper\+Graph\+Element\+Creator()}{HyperGraphElementCreator()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf g2o\+::\+Hyper\+Graph\+Element\+Creator}$<$ T $>$\+::{\bf Hyper\+Graph\+Element\+Creator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1HyperGraphElementCreator_aacaa6cfc040649e5802bfe07240f242f}{}\label{classg2o_1_1HyperGraphElementCreator_aacaa6cfc040649e5802bfe07240f242f}
+
+
+Definition at line 63 of file creators.\+h.
+
+
+\begin{DoxyCode}
+63 : \hyperlink{classg2o_1_1HyperGraphElementCreator_abbcc42de74a57d80b586dd843255ebae}{\_name}(\textcolor{keyword}{typeid}(T).\hyperlink{classg2o_1_1HyperGraphElementCreator_a48df4ada5c8540e65e6e4925b7a00a04}{name}()) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Hyper\+Graph\+Element\+Creator@{g2o\+::\+Hyper\+Graph\+Element\+Creator}!construct@{construct}}
+\index{construct@{construct}!g2o\+::\+Hyper\+Graph\+Element\+Creator@{g2o\+::\+Hyper\+Graph\+Element\+Creator}}
+\subsubsection[{\texorpdfstring{construct()}{construct()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Hyper\+Graph\+::\+Hyper\+Graph\+Element}$\ast$ {\bf g2o\+::\+Hyper\+Graph\+Element\+Creator}$<$ T $>$\+::construct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1HyperGraphElementCreator_af5e58366dd05b49700076e0c4ace31e3}{}\label{classg2o_1_1HyperGraphElementCreator_af5e58366dd05b49700076e0c4ace31e3}
+create a hyper graph element. Has to implemented in derived class. 
+
+Implements \hyperlink{classg2o_1_1AbstractHyperGraphElementCreator_a0b4722fa4b05465bf89d6e7fdc75b153}{g2o\+::\+Abstract\+Hyper\+Graph\+Element\+Creator}.
+
+
+
+Definition at line 67 of file creators.\+h.
+
+
+\begin{DoxyCode}
+67 \{ \textcolor{keywordflow}{return} \textcolor{keyword}{new} T;\}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph\+Element\+Creator@{g2o\+::\+Hyper\+Graph\+Element\+Creator}!name@{name}}
+\index{name@{name}!g2o\+::\+Hyper\+Graph\+Element\+Creator@{g2o\+::\+Hyper\+Graph\+Element\+Creator}}
+\subsubsection[{\texorpdfstring{name() const }{name() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ virtual const std\+::string\& {\bf g2o\+::\+Hyper\+Graph\+Element\+Creator}$<$ T $>$\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1HyperGraphElementCreator_a48df4ada5c8540e65e6e4925b7a00a04}{}\label{classg2o_1_1HyperGraphElementCreator_a48df4ada5c8540e65e6e4925b7a00a04}
+name of the class to be created. Has to implemented in derived class. 
+
+Implements \hyperlink{classg2o_1_1AbstractHyperGraphElementCreator_a238928fbbfd6e473b2c61002112e6f5f}{g2o\+::\+Abstract\+Hyper\+Graph\+Element\+Creator}.
+
+
+
+Definition at line 68 of file creators.\+h.
+
+
+\begin{DoxyCode}
+68 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1HyperGraphElementCreator_abbcc42de74a57d80b586dd843255ebae}{\_name};\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Hyper\+Graph\+Element\+Creator@{g2o\+::\+Hyper\+Graph\+Element\+Creator}!\+\_\+name@{\+\_\+name}}
+\index{\+\_\+name@{\+\_\+name}!g2o\+::\+Hyper\+Graph\+Element\+Creator@{g2o\+::\+Hyper\+Graph\+Element\+Creator}}
+\subsubsection[{\texorpdfstring{\+\_\+name}{_name}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::string {\bf g2o\+::\+Hyper\+Graph\+Element\+Creator}$<$ T $>$\+::\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1HyperGraphElementCreator_abbcc42de74a57d80b586dd843255ebae}{}\label{classg2o_1_1HyperGraphElementCreator_abbcc42de74a57d80b586dd843255ebae}
+
+
+Definition at line 70 of file creators.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{creators_8h}{creators.\+h}\end{DoxyCompactItemize}

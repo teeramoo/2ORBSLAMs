@@ -1,0 +1,14 @@
+#Round 1 Farm2
+
+#03:28:45
+./../Examples/Monocular/eutech_imu_2 ../Vocabulary/ORBvoc.bin ../config/Handheld_Platform/down_Pitch-25deg.yaml ../config/Handheld_Platform/up_Yaw0deg.yaml /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:28:45/vid1.avi /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:28:45/vid2.avi /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:28:45/video_timestamp.txt /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:28:45/IMU.txt ../SLAMoutput/Round1/Farm2/yaw10pitch-25/1/BotCamera/ ../SLAMoutput/Round1/Farm2/yaw10pitch-25/1/TopCamera/ true
+
+#03:32:34
+./../Examples/Monocular/eutech_imu_2 ../Vocabulary/ORBvoc.bin ../config/Handheld_Platform/down_Pitch-25deg.yaml ../config/Handheld_Platform/up_Yaw0deg.yaml /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:32:34/vid1.avi /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:32:34/vid2.avi /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:32:34/video_timestamp.txt /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:32:34/IMU.txt ../SLAMoutput/Round1/Farm2/yaw10pitch-25/2/BotCamera/ ../SLAMoutput/Round1/Farm2/yaw10pitch-25/2/TopCamera/ true
+
+#03:35:52
+./../Examples/Monocular/eutech_imu_2 ../Vocabulary/ORBvoc.bin ../config/Handheld_Platform/down_Pitch-45deg.yaml ../config/Handheld_Platform/up_Yaw0deg.yaml /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:35:52/vid1.avi /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:35:52/vid2.avi /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:35:52/video_timestamp.txt /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:35:52/IMU.txt ../SLAMoutput/Round1/Farm2/yaw10pitch-45/1/BotCamera/ ../SLAMoutput/Round1/Farm2/yaw10pitch-45/1/TopCamera/ true
+
+#03:42:47
+./../Examples/Monocular/eutech_imu_2 ../Vocabulary/ORBvoc.bin ../config/Handheld_Platform/down_Pitch-45deg.yaml ../config/Handheld_Platform/up_Yaw0deg.yaml /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:42:47/vid1.avi /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:42:47/vid2.avi /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:42:47/video_timestamp.txt /media/teeramoo/Seagate\ Backup\ Plus\ Drive/Thesis_Files/Collected_data/27Dec17/2017-Dec-27\ 03:42:47/IMU.txt ../SLAMoutput/Round1/Farm2/yaw10pitch-45/2/BotCamera/ ../SLAMoutput/Round1/Farm2/yaw10pitch-45/2/TopCamera/ true
+

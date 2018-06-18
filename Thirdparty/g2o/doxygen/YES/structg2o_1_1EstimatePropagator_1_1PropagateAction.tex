@@ -1,0 +1,57 @@
+\hypertarget{structg2o_1_1EstimatePropagator_1_1PropagateAction}{}\section{g2o\+:\+:Estimate\+Propagator\+:\+:Propagate\+Action Struct Reference}
+\label{structg2o_1_1EstimatePropagator_1_1PropagateAction}\index{g2o\+::\+Estimate\+Propagator\+::\+Propagate\+Action@{g2o\+::\+Estimate\+Propagator\+::\+Propagate\+Action}}
+
+
+Applying the action for propagating.  
+
+
+
+
+{\ttfamily \#include $<$estimate\+\_\+propagator.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{structg2o_1_1EstimatePropagator_1_1PropagateAction_a308da527eee4428cd15c2d6e2247e6ce}{operator()} (\hyperlink{classg2o_1_1OptimizableGraph_1_1Edge}{Optimizable\+Graph\+::\+Edge} $\ast$e, const \hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set} \&from, \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex}{Optimizable\+Graph\+::\+Vertex} $\ast$to) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Applying the action for propagating. 
+
+You may derive an own one, if necessary. The default is to call initial\+Estimate(from, to) for the edge. 
+
+Definition at line 83 of file estimate\+\_\+propagator.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Estimate\+Propagator\+::\+Propagate\+Action@{g2o\+::\+Estimate\+Propagator\+::\+Propagate\+Action}!operator()@{operator()}}
+\index{operator()@{operator()}!g2o\+::\+Estimate\+Propagator\+::\+Propagate\+Action@{g2o\+::\+Estimate\+Propagator\+::\+Propagate\+Action}}
+\subsubsection[{\texorpdfstring{operator()(\+Optimizable\+Graph\+::\+Edge $\ast$e, const Optimizable\+Graph\+::\+Vertex\+Set \&from, Optimizable\+Graph\+::\+Vertex $\ast$to) const }{operator()(OptimizableGraph::Edge *e, const OptimizableGraph::VertexSet &from, OptimizableGraph::Vertex *to) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Estimate\+Propagator\+::\+Propagate\+Action\+::operator() (
+\begin{DoxyParamCaption}
+\item[{{\bf Optimizable\+Graph\+::\+Edge} $\ast$}]{e, }
+\item[{const {\bf Optimizable\+Graph\+::\+Vertex\+Set} \&}]{from, }
+\item[{{\bf Optimizable\+Graph\+::\+Vertex} $\ast$}]{to}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{structg2o_1_1EstimatePropagator_1_1PropagateAction_a308da527eee4428cd15c2d6e2247e6ce}{}\label{structg2o_1_1EstimatePropagator_1_1PropagateAction_a308da527eee4428cd15c2d6e2247e6ce}
+
+
+Definition at line 84 of file estimate\+\_\+propagator.\+h.
+
+
+
+References g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::fixed(), and g2o\+::\+Optimizable\+Graph\+::\+Edge\+::initial\+Estimate().
+
+
+\begin{DoxyCode}
+85         \{
+86           \textcolor{keywordflow}{if} (! to->fixed())
+87             e->initialEstimate(from, to);
+88         \}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{estimate__propagator_8h}{estimate\+\_\+propagator.\+h}\end{DoxyCompactItemize}

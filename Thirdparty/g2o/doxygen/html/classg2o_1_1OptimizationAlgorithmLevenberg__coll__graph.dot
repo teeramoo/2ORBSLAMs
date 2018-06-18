@@ -1,0 +1,40 @@
+digraph "g2o::OptimizationAlgorithmLevenberg"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="g2o::OptimizationAlgorithm\lLevenberg",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="g2o::OptimizationAlgorithm\lWithHessian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1OptimizationAlgorithmWithHessian.html",tooltip="Base for solvers operating on the approximated Hessian, e.g., Gauss-Newton, Levenberg. "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="g2o::OptimizationAlgorithm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1OptimizationAlgorithm.html",tooltip="Generic interface for a non-linear solver operating on a graph. "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _properties" ,fontname="Helvetica"];
+  Node4 [label="g2o::PropertyMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1PropertyMap.html",tooltip="a collection of properties mapping from name to the property itself "];
+  Node5 -> Node4 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="std::map\< std::string,\l BaseProperty * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _optimizer" ,fontname="Helvetica"];
+  Node6 [label="g2o::SparseOptimizer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1SparseOptimizer.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="g2o::OptimizableGraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structg2o_1_1OptimizableGraph.html"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="g2o::HyperGraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1HyperGraph.html"];
+  Node9 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _jacobianWorkspace" ,fontname="Helvetica"];
+  Node9 [label="g2o::JacobianWorkspace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1JacobianWorkspace.html",tooltip="provide memory workspace for computing the Jacobians "];
+  Node10 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _parameters" ,fontname="Helvetica"];
+  Node10 [label="g2o::ParameterContainer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1ParameterContainer.html",tooltip="map id to parameters "];
+  Node11 -> Node10 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="std::map\< int, Parameter * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _algorithm" ,fontname="Helvetica"];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _solver" ,fontname="Helvetica"];
+  Node12 [label="g2o::Solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1Solver.html",tooltip="Generic interface for a sparse solver operating on a graph which solves one iteration of the lineariz..."];
+  Node6 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _optimizer" ,fontname="Helvetica"];
+  Node13 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _writeDebug" ,fontname="Helvetica"];
+  Node13 [label="g2o::Property\< bool \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1Property.html"];
+  Node14 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="g2o::BaseProperty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1BaseProperty.html"];
+  Node15 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _maxTrialsAfterFailure" ,fontname="Helvetica"];
+  Node15 [label="g2o::Property\< int \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1Property.html"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _userLambdaInit" ,fontname="Helvetica"];
+  Node16 [label="g2o::Property\< double \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1Property.html"];
+  Node14 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

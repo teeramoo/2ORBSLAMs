@@ -1,0 +1,106 @@
+\hypertarget{classg2o_1_1ScopedOpenMPMutex}{}\section{g2o\+:\+:Scoped\+Open\+M\+P\+Mutex Class Reference}
+\label{classg2o_1_1ScopedOpenMPMutex}\index{g2o\+::\+Scoped\+Open\+M\+P\+Mutex@{g2o\+::\+Scoped\+Open\+M\+P\+Mutex}}
+
+
+lock a mutex within a scope  
+
+
+
+
+{\ttfamily \#include $<$openmp\+\_\+mutex.\+h$>$}
+
+
+
+Collaboration diagram for g2o\+:\+:Scoped\+Open\+M\+P\+Mutex\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1ScopedOpenMPMutex_abb18bffae04b138447870b58ab158f56}{Scoped\+Open\+M\+P\+Mutex} (\hyperlink{classg2o_1_1OpenMPMutex}{Open\+M\+P\+Mutex} $\ast$mutex)
+\item 
+\hyperlink{classg2o_1_1ScopedOpenMPMutex_af3c190c5fba832ce48db9edf6ea10552}{$\sim$\+Scoped\+Open\+M\+P\+Mutex} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1ScopedOpenMPMutex_ab293e6a549bb2a546e53ebd9a1b7c2aa}{Scoped\+Open\+M\+P\+Mutex} (const \hyperlink{classg2o_1_1ScopedOpenMPMutex}{Scoped\+Open\+M\+P\+Mutex} \&)
+\item 
+void \hyperlink{classg2o_1_1ScopedOpenMPMutex_a9c41c4feafc825eae71097d2e6896fb5}{operator=} (const \hyperlink{classg2o_1_1ScopedOpenMPMutex}{Scoped\+Open\+M\+P\+Mutex} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1OpenMPMutex}{Open\+M\+P\+Mutex} $\ast$const \hyperlink{classg2o_1_1ScopedOpenMPMutex_a6fc0c5ebf1c40a7de6821f9ba78ea68f}{\+\_\+mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+lock a mutex within a scope 
+
+Definition at line 84 of file openmp\+\_\+mutex.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Scoped\+Open\+M\+P\+Mutex@{g2o\+::\+Scoped\+Open\+M\+P\+Mutex}!Scoped\+Open\+M\+P\+Mutex@{Scoped\+Open\+M\+P\+Mutex}}
+\index{Scoped\+Open\+M\+P\+Mutex@{Scoped\+Open\+M\+P\+Mutex}!g2o\+::\+Scoped\+Open\+M\+P\+Mutex@{g2o\+::\+Scoped\+Open\+M\+P\+Mutex}}
+\subsubsection[{\texorpdfstring{Scoped\+Open\+M\+P\+Mutex(\+Open\+M\+P\+Mutex $\ast$mutex)}{ScopedOpenMPMutex(OpenMPMutex *mutex)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Scoped\+Open\+M\+P\+Mutex\+::\+Scoped\+Open\+M\+P\+Mutex (
+\begin{DoxyParamCaption}
+\item[{{\bf Open\+M\+P\+Mutex} $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classg2o_1_1ScopedOpenMPMutex_abb18bffae04b138447870b58ab158f56}{}\label{classg2o_1_1ScopedOpenMPMutex_abb18bffae04b138447870b58ab158f56}
+
+
+Definition at line 87 of file openmp\+\_\+mutex.\+h.
+
+
+\begin{DoxyCode}
+87 : \hyperlink{classg2o_1_1ScopedOpenMPMutex_a6fc0c5ebf1c40a7de6821f9ba78ea68f}{\_mutex}(mutex) \{ \hyperlink{classg2o_1_1ScopedOpenMPMutex_a6fc0c5ebf1c40a7de6821f9ba78ea68f}{\_mutex}->\hyperlink{classg2o_1_1OpenMPMutex_aa79e59ebdd67ba8c2bac379a98dc6855}{lock}(); \}
+\end{DoxyCode}
+\index{g2o\+::\+Scoped\+Open\+M\+P\+Mutex@{g2o\+::\+Scoped\+Open\+M\+P\+Mutex}!````~Scoped\+Open\+M\+P\+Mutex@{$\sim$\+Scoped\+Open\+M\+P\+Mutex}}
+\index{````~Scoped\+Open\+M\+P\+Mutex@{$\sim$\+Scoped\+Open\+M\+P\+Mutex}!g2o\+::\+Scoped\+Open\+M\+P\+Mutex@{g2o\+::\+Scoped\+Open\+M\+P\+Mutex}}
+\subsubsection[{\texorpdfstring{$\sim$\+Scoped\+Open\+M\+P\+Mutex()}{~ScopedOpenMPMutex()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Scoped\+Open\+M\+P\+Mutex\+::$\sim$\+Scoped\+Open\+M\+P\+Mutex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1ScopedOpenMPMutex_af3c190c5fba832ce48db9edf6ea10552}{}\label{classg2o_1_1ScopedOpenMPMutex_af3c190c5fba832ce48db9edf6ea10552}
+
+
+Definition at line 88 of file openmp\+\_\+mutex.\+h.
+
+
+\begin{DoxyCode}
+88 \{ \hyperlink{classg2o_1_1ScopedOpenMPMutex_a6fc0c5ebf1c40a7de6821f9ba78ea68f}{\_mutex}->\hyperlink{classg2o_1_1OpenMPMutex_a63ec384d3012af5c42fe379df2e3901a}{unlock}(); \}
+\end{DoxyCode}
+\index{g2o\+::\+Scoped\+Open\+M\+P\+Mutex@{g2o\+::\+Scoped\+Open\+M\+P\+Mutex}!Scoped\+Open\+M\+P\+Mutex@{Scoped\+Open\+M\+P\+Mutex}}
+\index{Scoped\+Open\+M\+P\+Mutex@{Scoped\+Open\+M\+P\+Mutex}!g2o\+::\+Scoped\+Open\+M\+P\+Mutex@{g2o\+::\+Scoped\+Open\+M\+P\+Mutex}}
+\subsubsection[{\texorpdfstring{Scoped\+Open\+M\+P\+Mutex(const Scoped\+Open\+M\+P\+Mutex \&)}{ScopedOpenMPMutex(const ScopedOpenMPMutex &)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Scoped\+Open\+M\+P\+Mutex\+::\+Scoped\+Open\+M\+P\+Mutex (
+\begin{DoxyParamCaption}
+\item[{const {\bf Scoped\+Open\+M\+P\+Mutex} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classg2o_1_1ScopedOpenMPMutex_ab293e6a549bb2a546e53ebd9a1b7c2aa}{}\label{classg2o_1_1ScopedOpenMPMutex_ab293e6a549bb2a546e53ebd9a1b7c2aa}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Scoped\+Open\+M\+P\+Mutex@{g2o\+::\+Scoped\+Open\+M\+P\+Mutex}!operator=@{operator=}}
+\index{operator=@{operator=}!g2o\+::\+Scoped\+Open\+M\+P\+Mutex@{g2o\+::\+Scoped\+Open\+M\+P\+Mutex}}
+\subsubsection[{\texorpdfstring{operator=(const Scoped\+Open\+M\+P\+Mutex \&)}{operator=(const ScopedOpenMPMutex &)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Scoped\+Open\+M\+P\+Mutex\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Scoped\+Open\+M\+P\+Mutex} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classg2o_1_1ScopedOpenMPMutex_a9c41c4feafc825eae71097d2e6896fb5}{}\label{classg2o_1_1ScopedOpenMPMutex_a9c41c4feafc825eae71097d2e6896fb5}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Scoped\+Open\+M\+P\+Mutex@{g2o\+::\+Scoped\+Open\+M\+P\+Mutex}!\+\_\+mutex@{\+\_\+mutex}}
+\index{\+\_\+mutex@{\+\_\+mutex}!g2o\+::\+Scoped\+Open\+M\+P\+Mutex@{g2o\+::\+Scoped\+Open\+M\+P\+Mutex}}
+\subsubsection[{\texorpdfstring{\+\_\+mutex}{_mutex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Open\+M\+P\+Mutex}$\ast$ const g2o\+::\+Scoped\+Open\+M\+P\+Mutex\+::\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classg2o_1_1ScopedOpenMPMutex_a6fc0c5ebf1c40a7de6821f9ba78ea68f}{}\label{classg2o_1_1ScopedOpenMPMutex_a6fc0c5ebf1c40a7de6821f9ba78ea68f}
+
+
+Definition at line 90 of file openmp\+\_\+mutex.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{openmp__mutex_8h}{openmp\+\_\+mutex.\+h}\end{DoxyCompactItemize}

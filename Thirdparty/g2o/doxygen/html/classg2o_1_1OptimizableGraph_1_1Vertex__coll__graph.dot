@@ -1,0 +1,32 @@
+digraph "g2o::OptimizableGraph::Vertex"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="g2o::OptimizableGraph\l::Vertex",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="g2o::HyperGraph::Vertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1HyperGraph_1_1Vertex.html",tooltip="abstract Vertex, your types must derive from that one "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="g2o::HyperGraph::HyperGraph\lElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structg2o_1_1HyperGraph_1_1HyperGraphElement.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _cacheContainer" ,fontname="Helvetica"];
+  Node4 [label="g2o::CacheContainer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1CacheContainer.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="std::map\< Cache::CacheKey,\l Cache * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _vertex" ,fontname="Helvetica"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _graph" ,fontname="Helvetica"];
+  Node6 [label="g2o::OptimizableGraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structg2o_1_1OptimizableGraph.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="g2o::HyperGraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1HyperGraph.html"];
+  Node8 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _jacobianWorkspace" ,fontname="Helvetica"];
+  Node8 [label="g2o::JacobianWorkspace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1JacobianWorkspace.html",tooltip="provide memory workspace for computing the Jacobians "];
+  Node9 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _parameters" ,fontname="Helvetica"];
+  Node9 [label="g2o::ParameterContainer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1ParameterContainer.html",tooltip="map id to parameters "];
+  Node10 -> Node9 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="std::map\< int, Parameter * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _quadraticFormMutex" ,fontname="Helvetica"];
+  Node11 [label="g2o::OpenMPMutex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1OpenMPMutex.html"];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _userData" ,fontname="Helvetica"];
+  Node12 [label="g2o::OptimizableGraph\l::Data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1OptimizableGraph_1_1Data.html",tooltip="data packet for a vertex. Extend this class to store in the vertices the potential additional informa..."];
+  Node3 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _next" ,fontname="Helvetica"];
+}

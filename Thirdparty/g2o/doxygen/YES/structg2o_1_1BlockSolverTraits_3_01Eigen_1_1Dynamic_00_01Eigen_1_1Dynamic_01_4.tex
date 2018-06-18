@@ -1,0 +1,137 @@
+\hypertarget{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4}{}\section{g2o\+:\+:Block\+Solver\+Traits$<$ Eigen\+:\+:Dynamic, Eigen\+:\+:Dynamic $>$ Struct Template Reference}
+\label{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4}\index{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+
+
+traits to summarize the properties of the dynamic size optimization problem  
+
+
+
+
+{\ttfamily \#include $<$block\+\_\+solver.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Matrix\+Xd \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a11131d4b2d25cea90eef0d3687eb6dc1}{Pose\+Matrix\+Type}
+\item 
+typedef Matrix\+Xd \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a4409de5074b3458f33ba2015e2fa6891}{Landmark\+Matrix\+Type}
+\item 
+typedef Matrix\+Xd \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_ab81ac9673971ec5c896f4b431ae30f0b}{Pose\+Landmark\+Matrix\+Type}
+\item 
+typedef Vector\+Xd \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_ae8ae50131f5aeaf97c844e20960ebaf3}{Pose\+Vector\+Type}
+\item 
+typedef Vector\+Xd \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_aaff14917064b8670c918e571fcdc4666}{Landmark\+Vector\+Type}
+\item 
+typedef \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a11131d4b2d25cea90eef0d3687eb6dc1}{Pose\+Matrix\+Type} $>$ \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a380bde2a88f9b257142dd3419422e5a3}{Pose\+Hessian\+Type}
+\item 
+typedef \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a4409de5074b3458f33ba2015e2fa6891}{Landmark\+Matrix\+Type} $>$ \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a73a81a0aeabd1216ae3a8f5700666ac4}{Landmark\+Hessian\+Type}
+\item 
+typedef \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_ab81ac9673971ec5c896f4b431ae30f0b}{Pose\+Landmark\+Matrix\+Type} $>$ \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_aa6f67fd6ba29156f6d1069db0c3b5d11}{Pose\+Landmark\+Hessian\+Type}
+\item 
+typedef \hyperlink{classg2o_1_1LinearSolver}{Linear\+Solver}$<$ \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a11131d4b2d25cea90eef0d3687eb6dc1}{Pose\+Matrix\+Type} $>$ \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_ad062ca3c21bf3a3e08d5350174d93d6d}{Linear\+Solver\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a04a2cc2de80563b4b21f815150c3b0ec}{Pose\+Dim} = Eigen\+::\+Dynamic
+\item 
+static const int \hyperlink{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_aa8f7b7c3fc1ce4a7d61e925e3067e196}{Landmark\+Dim} = Eigen\+::\+Dynamic
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$$>$\\*
+struct g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}
+
+traits to summarize the properties of the dynamic size optimization problem 
+
+Definition at line 64 of file block\+\_\+solver.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}!Landmark\+Hessian\+Type@{Landmark\+Hessian\+Type}}
+\index{Landmark\+Hessian\+Type@{Landmark\+Hessian\+Type}!g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+\subsubsection[{\texorpdfstring{Landmark\+Hessian\+Type}{LandmarkHessianType}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Sparse\+Block\+Matrix}$<${\bf Landmark\+Matrix\+Type}$>$ {\bf g2o\+::\+Block\+Solver\+Traits}$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$\+::{\bf Landmark\+Hessian\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a73a81a0aeabd1216ae3a8f5700666ac4}{}\label{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a73a81a0aeabd1216ae3a8f5700666ac4}
+
+
+Definition at line 75 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}!Landmark\+Matrix\+Type@{Landmark\+Matrix\+Type}}
+\index{Landmark\+Matrix\+Type@{Landmark\+Matrix\+Type}!g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+\subsubsection[{\texorpdfstring{Landmark\+Matrix\+Type}{LandmarkMatrixType}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Matrix\+Xd {\bf g2o\+::\+Block\+Solver\+Traits}$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$\+::{\bf Landmark\+Matrix\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a4409de5074b3458f33ba2015e2fa6891}{}\label{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a4409de5074b3458f33ba2015e2fa6891}
+
+
+Definition at line 69 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}!Landmark\+Vector\+Type@{Landmark\+Vector\+Type}}
+\index{Landmark\+Vector\+Type@{Landmark\+Vector\+Type}!g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+\subsubsection[{\texorpdfstring{Landmark\+Vector\+Type}{LandmarkVectorType}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Vector\+Xd {\bf g2o\+::\+Block\+Solver\+Traits}$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$\+::{\bf Landmark\+Vector\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_aaff14917064b8670c918e571fcdc4666}{}\label{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_aaff14917064b8670c918e571fcdc4666}
+
+
+Definition at line 72 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}!Linear\+Solver\+Type@{Linear\+Solver\+Type}}
+\index{Linear\+Solver\+Type@{Linear\+Solver\+Type}!g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+\subsubsection[{\texorpdfstring{Linear\+Solver\+Type}{LinearSolverType}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Linear\+Solver}$<${\bf Pose\+Matrix\+Type}$>$ {\bf g2o\+::\+Block\+Solver\+Traits}$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$\+::{\bf Linear\+Solver\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_ad062ca3c21bf3a3e08d5350174d93d6d}{}\label{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_ad062ca3c21bf3a3e08d5350174d93d6d}
+
+
+Definition at line 77 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}!Pose\+Hessian\+Type@{Pose\+Hessian\+Type}}
+\index{Pose\+Hessian\+Type@{Pose\+Hessian\+Type}!g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+\subsubsection[{\texorpdfstring{Pose\+Hessian\+Type}{PoseHessianType}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Sparse\+Block\+Matrix}$<${\bf Pose\+Matrix\+Type}$>$ {\bf g2o\+::\+Block\+Solver\+Traits}$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$\+::{\bf Pose\+Hessian\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a380bde2a88f9b257142dd3419422e5a3}{}\label{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a380bde2a88f9b257142dd3419422e5a3}
+
+
+Definition at line 74 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}!Pose\+Landmark\+Hessian\+Type@{Pose\+Landmark\+Hessian\+Type}}
+\index{Pose\+Landmark\+Hessian\+Type@{Pose\+Landmark\+Hessian\+Type}!g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+\subsubsection[{\texorpdfstring{Pose\+Landmark\+Hessian\+Type}{PoseLandmarkHessianType}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Sparse\+Block\+Matrix}$<${\bf Pose\+Landmark\+Matrix\+Type}$>$ {\bf g2o\+::\+Block\+Solver\+Traits}$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$\+::{\bf Pose\+Landmark\+Hessian\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_aa6f67fd6ba29156f6d1069db0c3b5d11}{}\label{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_aa6f67fd6ba29156f6d1069db0c3b5d11}
+
+
+Definition at line 76 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}!Pose\+Landmark\+Matrix\+Type@{Pose\+Landmark\+Matrix\+Type}}
+\index{Pose\+Landmark\+Matrix\+Type@{Pose\+Landmark\+Matrix\+Type}!g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+\subsubsection[{\texorpdfstring{Pose\+Landmark\+Matrix\+Type}{PoseLandmarkMatrixType}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Matrix\+Xd {\bf g2o\+::\+Block\+Solver\+Traits}$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$\+::{\bf Pose\+Landmark\+Matrix\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_ab81ac9673971ec5c896f4b431ae30f0b}{}\label{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_ab81ac9673971ec5c896f4b431ae30f0b}
+
+
+Definition at line 70 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}!Pose\+Matrix\+Type@{Pose\+Matrix\+Type}}
+\index{Pose\+Matrix\+Type@{Pose\+Matrix\+Type}!g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+\subsubsection[{\texorpdfstring{Pose\+Matrix\+Type}{PoseMatrixType}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Matrix\+Xd {\bf g2o\+::\+Block\+Solver\+Traits}$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$\+::{\bf Pose\+Matrix\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a11131d4b2d25cea90eef0d3687eb6dc1}{}\label{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a11131d4b2d25cea90eef0d3687eb6dc1}
+
+
+Definition at line 68 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}!Pose\+Vector\+Type@{Pose\+Vector\+Type}}
+\index{Pose\+Vector\+Type@{Pose\+Vector\+Type}!g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+\subsubsection[{\texorpdfstring{Pose\+Vector\+Type}{PoseVectorType}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Vector\+Xd {\bf g2o\+::\+Block\+Solver\+Traits}$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$\+::{\bf Pose\+Vector\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_ae8ae50131f5aeaf97c844e20960ebaf3}{}\label{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_ae8ae50131f5aeaf97c844e20960ebaf3}
+
+
+Definition at line 71 of file block\+\_\+solver.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}!Landmark\+Dim@{Landmark\+Dim}}
+\index{Landmark\+Dim@{Landmark\+Dim}!g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+\subsubsection[{\texorpdfstring{Landmark\+Dim}{LandmarkDim}}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf g2o\+::\+Block\+Solver\+Traits}$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$\+::Landmark\+Dim = Eigen\+::\+Dynamic\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_aa8f7b7c3fc1ce4a7d61e925e3067e196}{}\label{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_aa8f7b7c3fc1ce4a7d61e925e3067e196}
+
+
+Definition at line 67 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}!Pose\+Dim@{Pose\+Dim}}
+\index{Pose\+Dim@{Pose\+Dim}!g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$@{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+\subsubsection[{\texorpdfstring{Pose\+Dim}{PoseDim}}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf g2o\+::\+Block\+Solver\+Traits}$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$\+::Pose\+Dim = Eigen\+::\+Dynamic\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a04a2cc2de80563b4b21f815150c3b0ec}{}\label{structg2o_1_1BlockSolverTraits_3_01Eigen_1_1Dynamic_00_01Eigen_1_1Dynamic_01_4_a04a2cc2de80563b4b21f815150c3b0ec}
+
+
+Definition at line 66 of file block\+\_\+solver.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{block__solver_8h}{block\+\_\+solver.\+h}\end{DoxyCompactItemize}

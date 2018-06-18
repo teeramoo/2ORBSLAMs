@@ -1,0 +1,317 @@
+\hypertarget{classg2o_1_1RobustKernelFactory}{}\section{g2o\+:\+:Robust\+Kernel\+Factory Class Reference}
+\label{classg2o_1_1RobustKernelFactory}\index{g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}}
+
+
+create robust kernels based on their human readable name  
+
+
+
+
+{\ttfamily \#include $<$robust\+\_\+kernel\+\_\+factory.\+h$>$}
+
+
+
+Collaboration diagram for g2o\+:\+:Robust\+Kernel\+Factory\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classg2o_1_1RobustKernelFactory_a71de3f228b58ae4a2dd965cc2cd8ff95}{register\+Robust\+Kernel} (const std\+::string \&tag, \hyperlink{classg2o_1_1AbstractRobustKernelCreator}{Abstract\+Robust\+Kernel\+Creator} $\ast$\hyperlink{sparse__helper_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c})
+\item 
+void \hyperlink{classg2o_1_1RobustKernelFactory_af3b0dac653627b5f87c68d4180b87475}{unregister\+Type} (const std\+::string \&tag)
+\item 
+\hyperlink{classg2o_1_1RobustKernel}{Robust\+Kernel} $\ast$ \hyperlink{classg2o_1_1RobustKernelFactory_a59a1221d3b434f116291ee3b2f810ccf}{construct} (const std\+::string \&tag) const 
+\item 
+\hyperlink{classg2o_1_1AbstractRobustKernelCreator}{Abstract\+Robust\+Kernel\+Creator} $\ast$ \hyperlink{classg2o_1_1RobustKernelFactory_ad98d044ff87a05c7ab2a62bb18af0417}{creator} (const std\+::string \&tag) const 
+\item 
+void \hyperlink{classg2o_1_1RobustKernelFactory_a31dd636c46847a9099a2c55f77f1b4bc}{fill\+Known\+Kernels} (std\+::vector$<$ std\+::string $>$ \&types) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classg2o_1_1RobustKernelFactory}{Robust\+Kernel\+Factory} $\ast$ \hyperlink{classg2o_1_1RobustKernelFactory_a9cc4361620f8d7269ad9774d3aba2fc0}{instance} ()
+\begin{DoxyCompactList}\small\item\em return the instance \end{DoxyCompactList}\item 
+static void \hyperlink{classg2o_1_1RobustKernelFactory_a6c96f77eb4a14e5e8f5b46eb734c0393}{destroy} ()
+\begin{DoxyCompactList}\small\item\em free the instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, \hyperlink{classg2o_1_1AbstractRobustKernelCreator}{Abstract\+Robust\+Kernel\+Creator} $\ast$ $>$ \hyperlink{classg2o_1_1RobustKernelFactory_aa143765542cbf4738e2137d61517b218}{Creator\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1RobustKernelFactory_af1df5179d6823881c9c3531640029eae}{Robust\+Kernel\+Factory} ()
+\item 
+\hyperlink{classg2o_1_1RobustKernelFactory_a4b644b5cbf7f9bec42b8c168e8416011}{$\sim$\+Robust\+Kernel\+Factory} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1RobustKernelFactory_aa143765542cbf4738e2137d61517b218}{Creator\+Map} \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\+\_\+creator}
+\begin{DoxyCompactList}\small\item\em look-\/up map for the existing creators \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classg2o_1_1RobustKernelFactory}{Robust\+Kernel\+Factory} $\ast$ \hyperlink{classg2o_1_1RobustKernelFactory_a598761493f11f50bee72b4799fab050e}{factory\+Instance} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+create robust kernels based on their human readable name 
+
+Definition at line 67 of file robust\+\_\+kernel\+\_\+factory.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}!Creator\+Map@{Creator\+Map}}
+\index{Creator\+Map@{Creator\+Map}!g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}}
+\subsubsection[{\texorpdfstring{Creator\+Map}{CreatorMap}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$std\+::string, {\bf Abstract\+Robust\+Kernel\+Creator}$\ast$$>$ {\bf g2o\+::\+Robust\+Kernel\+Factory\+::\+Creator\+Map}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1RobustKernelFactory_aa143765542cbf4738e2137d61517b218}{}\label{classg2o_1_1RobustKernelFactory_aa143765542cbf4738e2137d61517b218}
+
+
+Definition at line 104 of file robust\+\_\+kernel\+\_\+factory.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}!Robust\+Kernel\+Factory@{Robust\+Kernel\+Factory}}
+\index{Robust\+Kernel\+Factory@{Robust\+Kernel\+Factory}!g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}}
+\subsubsection[{\texorpdfstring{Robust\+Kernel\+Factory()}{RobustKernelFactory()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Robust\+Kernel\+Factory\+::\+Robust\+Kernel\+Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1RobustKernelFactory_af1df5179d6823881c9c3531640029eae}{}\label{classg2o_1_1RobustKernelFactory_af1df5179d6823881c9c3531640029eae}
+
+
+Definition at line 38 of file robust\+\_\+kernel\+\_\+factory.\+cpp.
+
+
+\begin{DoxyCode}
+39 \{
+40 \}
+\end{DoxyCode}
+\index{g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}!````~Robust\+Kernel\+Factory@{$\sim$\+Robust\+Kernel\+Factory}}
+\index{````~Robust\+Kernel\+Factory@{$\sim$\+Robust\+Kernel\+Factory}!g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}}
+\subsubsection[{\texorpdfstring{$\sim$\+Robust\+Kernel\+Factory()}{~RobustKernelFactory()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Robust\+Kernel\+Factory\+::$\sim$\+Robust\+Kernel\+Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1RobustKernelFactory_a4b644b5cbf7f9bec42b8c168e8416011}{}\label{classg2o_1_1RobustKernelFactory_a4b644b5cbf7f9bec42b8c168e8416011}
+
+
+Definition at line 42 of file robust\+\_\+kernel\+\_\+factory.\+cpp.
+
+
+\begin{DoxyCode}
+43 \{
+44   \textcolor{keywordflow}{for} (CreatorMap::iterator it = \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.begin(); it != \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.end(); ++it) \{
+45     \textcolor{keyword}{delete} it->second;
+46   \}
+47   \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.clear();
+48 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}!construct@{construct}}
+\index{construct@{construct}!g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}}
+\subsubsection[{\texorpdfstring{construct(const std\+::string \&tag) const }{construct(const std::string &tag) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Robust\+Kernel} $\ast$ g2o\+::\+Robust\+Kernel\+Factory\+::construct (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tag}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1RobustKernelFactory_a59a1221d3b434f116291ee3b2f810ccf}{}\label{classg2o_1_1RobustKernelFactory_a59a1221d3b434f116291ee3b2f810ccf}
+construct a robust kernel based on its tag 
+
+Definition at line 80 of file robust\+\_\+kernel\+\_\+factory.\+cpp.
+
+
+\begin{DoxyCode}
+81 \{
+82   CreatorMap::const\_iterator foundIt = \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.find(tag);
+83   \textcolor{keywordflow}{if} (foundIt != \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.end()) \{
+84     \textcolor{keywordflow}{return} foundIt->second->construct();
+85   \}
+86   \textcolor{keywordflow}{return} 0;
+87 \}
+\end{DoxyCode}
+\index{g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}!creator@{creator}}
+\index{creator@{creator}!g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}}
+\subsubsection[{\texorpdfstring{creator(const std\+::string \&tag) const }{creator(const std::string &tag) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Abstract\+Robust\+Kernel\+Creator} $\ast$ g2o\+::\+Robust\+Kernel\+Factory\+::creator (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tag}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1RobustKernelFactory_ad98d044ff87a05c7ab2a62bb18af0417}{}\label{classg2o_1_1RobustKernelFactory_ad98d044ff87a05c7ab2a62bb18af0417}
+return the creator for a specific tag 
+
+Definition at line 89 of file robust\+\_\+kernel\+\_\+factory.\+cpp.
+
+
+\begin{DoxyCode}
+90 \{
+91   CreatorMap::const\_iterator foundIt = \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.find(tag);
+92   \textcolor{keywordflow}{if} (foundIt != \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.end()) \{
+93     \textcolor{keywordflow}{return} foundIt->second;
+94   \}
+95   \textcolor{keywordflow}{return} 0;
+96 \}
+\end{DoxyCode}
+\index{g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}!destroy@{destroy}}
+\index{destroy@{destroy}!g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}}
+\subsubsection[{\texorpdfstring{destroy()}{destroy()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Robust\+Kernel\+Factory\+::destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classg2o_1_1RobustKernelFactory_a6c96f77eb4a14e5e8f5b46eb734c0393}{}\label{classg2o_1_1RobustKernelFactory_a6c96f77eb4a14e5e8f5b46eb734c0393}
+
+
+free the instance 
+
+
+
+Definition at line 105 of file robust\+\_\+kernel\+\_\+factory.\+cpp.
+
+
+\begin{DoxyCode}
+106 \{
+107   \textcolor{keyword}{delete} \hyperlink{classg2o_1_1RobustKernelFactory_a598761493f11f50bee72b4799fab050e}{factoryInstance};
+108   \hyperlink{classg2o_1_1RobustKernelFactory_a598761493f11f50bee72b4799fab050e}{factoryInstance} = 0;
+109 \}
+\end{DoxyCode}
+\index{g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}!fill\+Known\+Kernels@{fill\+Known\+Kernels}}
+\index{fill\+Known\+Kernels@{fill\+Known\+Kernels}!g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}}
+\subsubsection[{\texorpdfstring{fill\+Known\+Kernels(std\+::vector$<$ std\+::string $>$ \&types) const }{fillKnownKernels(std::vector< std::string > &types) const }}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Robust\+Kernel\+Factory\+::fill\+Known\+Kernels (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{types}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1RobustKernelFactory_a31dd636c46847a9099a2c55f77f1b4bc}{}\label{classg2o_1_1RobustKernelFactory_a31dd636c46847a9099a2c55f77f1b4bc}
+get a list of all known robust kernels 
+
+Definition at line 98 of file robust\+\_\+kernel\+\_\+factory.\+cpp.
+
+
+\begin{DoxyCode}
+99 \{
+100   types.clear();
+101   \textcolor{keywordflow}{for} (CreatorMap::const\_iterator it = \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.begin(); it != \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.end(); ++it)
+102     types.push\_back(it->first);
+103 \}
+\end{DoxyCode}
+\index{g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}!instance@{instance}}
+\index{instance@{instance}!g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}}
+\subsubsection[{\texorpdfstring{instance()}{instance()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Robust\+Kernel\+Factory} $\ast$ g2o\+::\+Robust\+Kernel\+Factory\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classg2o_1_1RobustKernelFactory_a9cc4361620f8d7269ad9774d3aba2fc0}{}\label{classg2o_1_1RobustKernelFactory_a9cc4361620f8d7269ad9774d3aba2fc0}
+
+
+return the instance 
+
+
+
+Definition at line 50 of file robust\+\_\+kernel\+\_\+factory.\+cpp.
+
+
+
+Referenced by g2o\+::\+Register\+Robust\+Kernel\+Proxy$<$ T $>$\+::\+Register\+Robust\+Kernel\+Proxy(), and g2o\+::\+Register\+Robust\+Kernel\+Proxy$<$ T $>$\+::$\sim$\+Register\+Robust\+Kernel\+Proxy().
+
+
+\begin{DoxyCode}
+51 \{
+52   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1RobustKernelFactory_a598761493f11f50bee72b4799fab050e}{factoryInstance} == 0) \{
+53     \hyperlink{classg2o_1_1RobustKernelFactory_a598761493f11f50bee72b4799fab050e}{factoryInstance} = \textcolor{keyword}{new} \hyperlink{classg2o_1_1RobustKernelFactory_af1df5179d6823881c9c3531640029eae}{RobustKernelFactory};
+54   \}
+55 
+56   \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1RobustKernelFactory_a598761493f11f50bee72b4799fab050e}{factoryInstance};
+57 \}
+\end{DoxyCode}
+\index{g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}!register\+Robust\+Kernel@{register\+Robust\+Kernel}}
+\index{register\+Robust\+Kernel@{register\+Robust\+Kernel}!g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}}
+\subsubsection[{\texorpdfstring{register\+Robust\+Kernel(const std\+::string \&tag, Abstract\+Robust\+Kernel\+Creator $\ast$c)}{registerRobustKernel(const std::string &tag, AbstractRobustKernelCreator *c)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Robust\+Kernel\+Factory\+::register\+Robust\+Kernel (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tag, }
+\item[{{\bf Abstract\+Robust\+Kernel\+Creator} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1RobustKernelFactory_a71de3f228b58ae4a2dd965cc2cd8ff95}{}\label{classg2o_1_1RobustKernelFactory_a71de3f228b58ae4a2dd965cc2cd8ff95}
+register a tag for a specific creator 
+
+Definition at line 59 of file robust\+\_\+kernel\+\_\+factory.\+cpp.
+
+
+
+References c.
+
+
+
+Referenced by g2o\+::\+Register\+Robust\+Kernel\+Proxy$<$ T $>$\+::\+Register\+Robust\+Kernel\+Proxy().
+
+
+\begin{DoxyCode}
+60 \{
+61   CreatorMap::const\_iterator foundIt = \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.find(tag);
+62   \textcolor{keywordflow}{if} (foundIt != \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.end()) \{
+63     cerr << \textcolor{stringliteral}{"RobustKernelFactory WARNING: Overwriting robust kernel tag "} << tag << endl;
+64     assert(0);
+65   \}
+66 
+67   \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}[tag] = \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c};
+68 \}
+\end{DoxyCode}
+\index{g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}!unregister\+Type@{unregister\+Type}}
+\index{unregister\+Type@{unregister\+Type}!g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}}
+\subsubsection[{\texorpdfstring{unregister\+Type(const std\+::string \&tag)}{unregisterType(const std::string &tag)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Robust\+Kernel\+Factory\+::unregister\+Type (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tag}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1RobustKernelFactory_af3b0dac653627b5f87c68d4180b87475}{}\label{classg2o_1_1RobustKernelFactory_af3b0dac653627b5f87c68d4180b87475}
+unregister a tag for a specific creator 
+
+Definition at line 70 of file robust\+\_\+kernel\+\_\+factory.\+cpp.
+
+
+
+References c.
+
+
+
+Referenced by g2o\+::\+Register\+Robust\+Kernel\+Proxy$<$ T $>$\+::$\sim$\+Register\+Robust\+Kernel\+Proxy().
+
+
+\begin{DoxyCode}
+71 \{
+72   CreatorMap::iterator tagPosition = \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.find(tag);
+73   \textcolor{keywordflow}{if} (tagPosition != \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.end()) \{
+74     AbstractRobustKernelCreator* \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c} = tagPosition->second;
+75     \textcolor{keyword}{delete} \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c};
+76     \hyperlink{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{\_creator}.erase(tagPosition);
+77   \}
+78 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}!\+\_\+creator@{\+\_\+creator}}
+\index{\+\_\+creator@{\+\_\+creator}!g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}}
+\subsubsection[{\texorpdfstring{\+\_\+creator}{_creator}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Creator\+Map} g2o\+::\+Robust\+Kernel\+Factory\+::\+\_\+creator\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}{}\label{classg2o_1_1RobustKernelFactory_af5f3cea409d3f18baa40da898d21424b}
+
+
+look-\/up map for the existing creators 
+
+
+
+Definition at line 108 of file robust\+\_\+kernel\+\_\+factory.\+h.
+
+\index{g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}!factory\+Instance@{factory\+Instance}}
+\index{factory\+Instance@{factory\+Instance}!g2o\+::\+Robust\+Kernel\+Factory@{g2o\+::\+Robust\+Kernel\+Factory}}
+\subsubsection[{\texorpdfstring{factory\+Instance}{factoryInstance}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Robust\+Kernel\+Factory} $\ast$ g2o\+::\+Robust\+Kernel\+Factory\+::factory\+Instance = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classg2o_1_1RobustKernelFactory_a598761493f11f50bee72b4799fab050e}{}\label{classg2o_1_1RobustKernelFactory_a598761493f11f50bee72b4799fab050e}
+
+
+Definition at line 111 of file robust\+\_\+kernel\+\_\+factory.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{robust__kernel__factory_8h}{robust\+\_\+kernel\+\_\+factory.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{robust__kernel__factory_8cpp}{robust\+\_\+kernel\+\_\+factory.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,137 @@
+\hypertarget{structg2o_1_1BlockSolverTraits}{}\section{g2o\+:\+:Block\+Solver\+Traits$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$ Struct Template Reference}
+\label{structg2o_1_1BlockSolverTraits}\index{g2o\+::\+Block\+Solver\+Traits$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$@{g2o\+::\+Block\+Solver\+Traits$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$}}
+
+
+traits to summarize the properties of the fixed size optimization problem  
+
+
+
+
+{\ttfamily \#include $<$block\+\_\+solver.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Matrix$<$ double, \hyperlink{structg2o_1_1BlockSolverTraits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim}, \hyperlink{structg2o_1_1BlockSolverTraits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim} $>$ \hyperlink{structg2o_1_1BlockSolverTraits_a35e6e4bad138dcfcaa3b1339e168bf30}{Pose\+Matrix\+Type}
+\item 
+typedef Matrix$<$ double, \hyperlink{structg2o_1_1BlockSolverTraits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim}, \hyperlink{structg2o_1_1BlockSolverTraits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim} $>$ \hyperlink{structg2o_1_1BlockSolverTraits_add9b9fbfef352b7654d41914d5eaa58c}{Landmark\+Matrix\+Type}
+\item 
+typedef Matrix$<$ double, \hyperlink{structg2o_1_1BlockSolverTraits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim}, \hyperlink{structg2o_1_1BlockSolverTraits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim} $>$ \hyperlink{structg2o_1_1BlockSolverTraits_a91e6510ad42179701d22c3ac312237cd}{Pose\+Landmark\+Matrix\+Type}
+\item 
+typedef Matrix$<$ double, \hyperlink{structg2o_1_1BlockSolverTraits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim}, 1 $>$ \hyperlink{structg2o_1_1BlockSolverTraits_a032ed57e9bc44c36093f97b32e1506f6}{Pose\+Vector\+Type}
+\item 
+typedef Matrix$<$ double, \hyperlink{structg2o_1_1BlockSolverTraits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim}, 1 $>$ \hyperlink{structg2o_1_1BlockSolverTraits_af5154a15abb566ff5bffc0adb9f0458d}{Landmark\+Vector\+Type}
+\item 
+typedef \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ \hyperlink{structg2o_1_1BlockSolverTraits_a35e6e4bad138dcfcaa3b1339e168bf30}{Pose\+Matrix\+Type} $>$ \hyperlink{structg2o_1_1BlockSolverTraits_a03351362339d8e6609c577123350bb2a}{Pose\+Hessian\+Type}
+\item 
+typedef \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ \hyperlink{structg2o_1_1BlockSolverTraits_add9b9fbfef352b7654d41914d5eaa58c}{Landmark\+Matrix\+Type} $>$ \hyperlink{structg2o_1_1BlockSolverTraits_ae761bb32d5267e4d74e5d9c2c7e7ad2f}{Landmark\+Hessian\+Type}
+\item 
+typedef \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ \hyperlink{structg2o_1_1BlockSolverTraits_a91e6510ad42179701d22c3ac312237cd}{Pose\+Landmark\+Matrix\+Type} $>$ \hyperlink{structg2o_1_1BlockSolverTraits_af8ef27915a056caae3b12a9ca609eba6}{Pose\+Landmark\+Hessian\+Type}
+\item 
+typedef \hyperlink{classg2o_1_1LinearSolver}{Linear\+Solver}$<$ \hyperlink{structg2o_1_1BlockSolverTraits_a35e6e4bad138dcfcaa3b1339e168bf30}{Pose\+Matrix\+Type} $>$ \hyperlink{structg2o_1_1BlockSolverTraits_add6edae08cb0665c2b1e7c641cdb4dc4}{Linear\+Solver\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{structg2o_1_1BlockSolverTraits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim} = \+\_\+\+Pose\+Dim
+\item 
+static const int \hyperlink{structg2o_1_1BlockSolverTraits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim} = \+\_\+\+Landmark\+Dim
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$\\*
+struct g2o\+::\+Block\+Solver\+Traits$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$}
+
+traits to summarize the properties of the fixed size optimization problem 
+
+Definition at line 44 of file block\+\_\+solver.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Landmark\+Hessian\+Type@{Landmark\+Hessian\+Type}}
+\index{Landmark\+Hessian\+Type@{Landmark\+Hessian\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection[{\texorpdfstring{Landmark\+Hessian\+Type}{LandmarkHessianType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ typedef {\bf Sparse\+Block\+Matrix}$<${\bf Landmark\+Matrix\+Type}$>$ {\bf g2o\+::\+Block\+Solver\+Traits}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::{\bf Landmark\+Hessian\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_ae761bb32d5267e4d74e5d9c2c7e7ad2f}{}\label{structg2o_1_1BlockSolverTraits_ae761bb32d5267e4d74e5d9c2c7e7ad2f}
+
+
+Definition at line 55 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Landmark\+Matrix\+Type@{Landmark\+Matrix\+Type}}
+\index{Landmark\+Matrix\+Type@{Landmark\+Matrix\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection[{\texorpdfstring{Landmark\+Matrix\+Type}{LandmarkMatrixType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ typedef Matrix$<$double, {\bf Landmark\+Dim}, {\bf Landmark\+Dim}$>$ {\bf g2o\+::\+Block\+Solver\+Traits}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::{\bf Landmark\+Matrix\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_add9b9fbfef352b7654d41914d5eaa58c}{}\label{structg2o_1_1BlockSolverTraits_add9b9fbfef352b7654d41914d5eaa58c}
+
+
+Definition at line 49 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Landmark\+Vector\+Type@{Landmark\+Vector\+Type}}
+\index{Landmark\+Vector\+Type@{Landmark\+Vector\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection[{\texorpdfstring{Landmark\+Vector\+Type}{LandmarkVectorType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ typedef Matrix$<$double, {\bf Landmark\+Dim}, 1$>$ {\bf g2o\+::\+Block\+Solver\+Traits}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::{\bf Landmark\+Vector\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_af5154a15abb566ff5bffc0adb9f0458d}{}\label{structg2o_1_1BlockSolverTraits_af5154a15abb566ff5bffc0adb9f0458d}
+
+
+Definition at line 52 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Linear\+Solver\+Type@{Linear\+Solver\+Type}}
+\index{Linear\+Solver\+Type@{Linear\+Solver\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection[{\texorpdfstring{Linear\+Solver\+Type}{LinearSolverType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ typedef {\bf Linear\+Solver}$<${\bf Pose\+Matrix\+Type}$>$ {\bf g2o\+::\+Block\+Solver\+Traits}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::{\bf Linear\+Solver\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_add6edae08cb0665c2b1e7c641cdb4dc4}{}\label{structg2o_1_1BlockSolverTraits_add6edae08cb0665c2b1e7c641cdb4dc4}
+
+
+Definition at line 57 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Pose\+Hessian\+Type@{Pose\+Hessian\+Type}}
+\index{Pose\+Hessian\+Type@{Pose\+Hessian\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection[{\texorpdfstring{Pose\+Hessian\+Type}{PoseHessianType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ typedef {\bf Sparse\+Block\+Matrix}$<${\bf Pose\+Matrix\+Type}$>$ {\bf g2o\+::\+Block\+Solver\+Traits}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::{\bf Pose\+Hessian\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_a03351362339d8e6609c577123350bb2a}{}\label{structg2o_1_1BlockSolverTraits_a03351362339d8e6609c577123350bb2a}
+
+
+Definition at line 54 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Pose\+Landmark\+Hessian\+Type@{Pose\+Landmark\+Hessian\+Type}}
+\index{Pose\+Landmark\+Hessian\+Type@{Pose\+Landmark\+Hessian\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection[{\texorpdfstring{Pose\+Landmark\+Hessian\+Type}{PoseLandmarkHessianType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ typedef {\bf Sparse\+Block\+Matrix}$<${\bf Pose\+Landmark\+Matrix\+Type}$>$ {\bf g2o\+::\+Block\+Solver\+Traits}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::{\bf Pose\+Landmark\+Hessian\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_af8ef27915a056caae3b12a9ca609eba6}{}\label{structg2o_1_1BlockSolverTraits_af8ef27915a056caae3b12a9ca609eba6}
+
+
+Definition at line 56 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Pose\+Landmark\+Matrix\+Type@{Pose\+Landmark\+Matrix\+Type}}
+\index{Pose\+Landmark\+Matrix\+Type@{Pose\+Landmark\+Matrix\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection[{\texorpdfstring{Pose\+Landmark\+Matrix\+Type}{PoseLandmarkMatrixType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ typedef Matrix$<$double, {\bf Pose\+Dim}, {\bf Landmark\+Dim}$>$ {\bf g2o\+::\+Block\+Solver\+Traits}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::{\bf Pose\+Landmark\+Matrix\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_a91e6510ad42179701d22c3ac312237cd}{}\label{structg2o_1_1BlockSolverTraits_a91e6510ad42179701d22c3ac312237cd}
+
+
+Definition at line 50 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Pose\+Matrix\+Type@{Pose\+Matrix\+Type}}
+\index{Pose\+Matrix\+Type@{Pose\+Matrix\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection[{\texorpdfstring{Pose\+Matrix\+Type}{PoseMatrixType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ typedef Matrix$<$double, {\bf Pose\+Dim}, {\bf Pose\+Dim}$>$ {\bf g2o\+::\+Block\+Solver\+Traits}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::{\bf Pose\+Matrix\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_a35e6e4bad138dcfcaa3b1339e168bf30}{}\label{structg2o_1_1BlockSolverTraits_a35e6e4bad138dcfcaa3b1339e168bf30}
+
+
+Definition at line 48 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Pose\+Vector\+Type@{Pose\+Vector\+Type}}
+\index{Pose\+Vector\+Type@{Pose\+Vector\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection[{\texorpdfstring{Pose\+Vector\+Type}{PoseVectorType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ typedef Matrix$<$double, {\bf Pose\+Dim}, 1$>$ {\bf g2o\+::\+Block\+Solver\+Traits}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::{\bf Pose\+Vector\+Type}}\hypertarget{structg2o_1_1BlockSolverTraits_a032ed57e9bc44c36093f97b32e1506f6}{}\label{structg2o_1_1BlockSolverTraits_a032ed57e9bc44c36093f97b32e1506f6}
+
+
+Definition at line 51 of file block\+\_\+solver.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Landmark\+Dim@{Landmark\+Dim}}
+\index{Landmark\+Dim@{Landmark\+Dim}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection[{\texorpdfstring{Landmark\+Dim}{LandmarkDim}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ const int {\bf g2o\+::\+Block\+Solver\+Traits}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::Landmark\+Dim = \+\_\+\+Landmark\+Dim\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structg2o_1_1BlockSolverTraits_a7e6e33971e5243e020a9f41cd3182218}{}\label{structg2o_1_1BlockSolverTraits_a7e6e33971e5243e020a9f41cd3182218}
+
+
+Definition at line 47 of file block\+\_\+solver.\+h.
+
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Pose\+Dim@{Pose\+Dim}}
+\index{Pose\+Dim@{Pose\+Dim}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection[{\texorpdfstring{Pose\+Dim}{PoseDim}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ const int {\bf g2o\+::\+Block\+Solver\+Traits}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::Pose\+Dim = \+\_\+\+Pose\+Dim\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structg2o_1_1BlockSolverTraits_a90a03bcfc60b629da5601f6df9514297}{}\label{structg2o_1_1BlockSolverTraits_a90a03bcfc60b629da5601f6df9514297}
+
+
+Definition at line 46 of file block\+\_\+solver.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{block__solver_8h}{block\+\_\+solver.\+h}\end{DoxyCompactItemize}

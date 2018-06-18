@@ -1,0 +1,206 @@
+\hypertarget{classg2o_1_1Parameter}{}\section{g2o\+:\+:Parameter Class Reference}
+\label{classg2o_1_1Parameter}\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+
+
+{\ttfamily \#include $<$parameter.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Parameter\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Parameter\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1Parameter_a34ef4c50461a0ab0ae9bd26944fac4de}{Parameter} ()
+\item 
+virtual \hyperlink{classg2o_1_1Parameter_a03a4d78df10d25ddf14a52872f872913}{$\sim$\+Parameter} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1Parameter_a77d9d88d8bde52198631fcd0fc4c9d0e}{read} (std\+::istream \&is)=0
+\begin{DoxyCompactList}\small\item\em read the data from a stream \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classg2o_1_1Parameter_a18e66a40cd71a4da2ab9be5ba318abb7}{write} (std\+::ostream \&os) const =0
+\begin{DoxyCompactList}\small\item\em write the data to a stream \end{DoxyCompactList}\item 
+int \hyperlink{classg2o_1_1Parameter_a73cfeeee19f22b56391c995108cd89eb}{id} () const 
+\item 
+void \hyperlink{classg2o_1_1Parameter_a2872398ab7d8c95d0a1b5ca5bbfae461}{set\+Id} (int id\+\_\+)
+\item 
+virtual \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69e}{Hyper\+Graph\+::\+Hyper\+Graph\+Element\+Type} \hyperlink{classg2o_1_1Parameter_aff546d31d4c558df761a3cec06a91bf8}{element\+Type} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classg2o_1_1Parameter_a602d08079c6a3a5f868e41a102e1db0b}{\+\_\+id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 36 of file parameter.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection[{\texorpdfstring{Parameter()}{Parameter()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Parameter\+::\+Parameter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1Parameter_a34ef4c50461a0ab0ae9bd26944fac4de}{}\label{classg2o_1_1Parameter_a34ef4c50461a0ab0ae9bd26944fac4de}
+
+
+Definition at line 31 of file parameter.\+cpp.
+
+
+\begin{DoxyCode}
+31                        : \hyperlink{classg2o_1_1Parameter_a602d08079c6a3a5f868e41a102e1db0b}{\_id}(-1)
+32   \{
+33   \}
+\end{DoxyCode}
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!````~Parameter@{$\sim$\+Parameter}}
+\index{````~Parameter@{$\sim$\+Parameter}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection[{\texorpdfstring{$\sim$\+Parameter()}{~Parameter()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual g2o\+::\+Parameter\+::$\sim$\+Parameter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1Parameter_a03a4d78df10d25ddf14a52872f872913}{}\label{classg2o_1_1Parameter_a03a4d78df10d25ddf14a52872f872913}
+
+
+Definition at line 40 of file parameter.\+h.
+
+
+
+References read(), and write().
+
+
+\begin{DoxyCode}
+40 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!element\+Type@{element\+Type}}
+\index{element\+Type@{element\+Type}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection[{\texorpdfstring{element\+Type() const }{elementType() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Hyper\+Graph\+::\+Hyper\+Graph\+Element\+Type} g2o\+::\+Parameter\+::element\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1Parameter_aff546d31d4c558df761a3cec06a91bf8}{}\label{classg2o_1_1Parameter_aff546d31d4c558df761a3cec06a91bf8}
+returns the type of the graph element, see Hyper\+Graph\+Element\+Type 
+
+Implements \hyperlink{structg2o_1_1HyperGraph_1_1HyperGraphElement_a1a9d7b748698c09d202373e06e413ef2}{g2o\+::\+Hyper\+Graph\+::\+Hyper\+Graph\+Element}.
+
+
+
+Definition at line 47 of file parameter.\+h.
+
+
+
+References g2o\+::\+Hyper\+Graph\+::\+H\+G\+E\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER.
+
+
+\begin{DoxyCode}
+47 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eaec8dd0de424ff24a18d3ba5ed3864f79}{HyperGraph::HGET\_PARAMETER};\}
+\end{DoxyCode}
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!id@{id}}
+\index{id@{id}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection[{\texorpdfstring{id() const }{id() const }}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Parameter\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1Parameter_a73cfeeee19f22b56391c995108cd89eb}{}\label{classg2o_1_1Parameter_a73cfeeee19f22b56391c995108cd89eb}
+
+
+Definition at line 45 of file parameter.\+h.
+
+
+
+References \+\_\+id, and set\+Id().
+
+
+
+Referenced by g2o\+::\+Parameter\+Container\+::add\+Parameter().
+
+
+\begin{DoxyCode}
+45 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1Parameter_a602d08079c6a3a5f868e41a102e1db0b}{\_id};\}
+\end{DoxyCode}
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!read@{read}}
+\index{read@{read}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection[{\texorpdfstring{read(std\+::istream \&is)=0}{read(std::istream &is)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Parameter\+::read (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Parameter_a77d9d88d8bde52198631fcd0fc4c9d0e}{}\label{classg2o_1_1Parameter_a77d9d88d8bde52198631fcd0fc4c9d0e}
+
+
+read the data from a stream 
+
+
+
+Referenced by $\sim$\+Parameter().
+
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection[{\texorpdfstring{set\+Id(int id\+\_\+)}{setId(int id_)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Parameter\+::set\+Id (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1Parameter_a2872398ab7d8c95d0a1b5ca5bbfae461}{}\label{classg2o_1_1Parameter_a2872398ab7d8c95d0a1b5ca5bbfae461}
+
+
+Definition at line 35 of file parameter.\+cpp.
+
+
+
+References \+\_\+id.
+
+
+
+Referenced by id(), and g2o\+::\+Parameter\+Container\+::read().
+
+
+\begin{DoxyCode}
+36   \{
+37     \hyperlink{classg2o_1_1Parameter_a602d08079c6a3a5f868e41a102e1db0b}{\_id} = id\_;
+38   \}
+\end{DoxyCode}
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!write@{write}}
+\index{write@{write}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection[{\texorpdfstring{write(std\+::ostream \&os) const =0}{write(std::ostream &os) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Parameter\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1Parameter_a18e66a40cd71a4da2ab9be5ba318abb7}{}\label{classg2o_1_1Parameter_a18e66a40cd71a4da2ab9be5ba318abb7}
+
+
+write the data to a stream 
+
+
+
+Referenced by $\sim$\+Parameter().
+
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!\+\_\+id@{\+\_\+id}}
+\index{\+\_\+id@{\+\_\+id}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection[{\texorpdfstring{\+\_\+id}{_id}}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Parameter\+::\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Parameter_a602d08079c6a3a5f868e41a102e1db0b}{}\label{classg2o_1_1Parameter_a602d08079c6a3a5f868e41a102e1db0b}
+
+
+Definition at line 49 of file parameter.\+h.
+
+
+
+Referenced by id(), and set\+Id().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{parameter_8h}{parameter.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{parameter_8cpp}{parameter.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\hypertarget{classg2o_1_1RegisterTypeProxy}{}\section{g2o\+:\+:Register\+Type\+Proxy$<$ T $>$ Class Template Reference}
+\label{classg2o_1_1RegisterTypeProxy}\index{g2o\+::\+Register\+Type\+Proxy$<$ T $>$@{g2o\+::\+Register\+Type\+Proxy$<$ T $>$}}
+
+
+{\ttfamily \#include $<$factory.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1RegisterTypeProxy_a179d0d498d8a53f9432d1635019705f5}{Register\+Type\+Proxy} (const std\+::string \&name)
+\item 
+\hyperlink{classg2o_1_1RegisterTypeProxy_ab8469d11a8e3548e74b1de4b3a332d4e}{$\sim$\+Register\+Type\+Proxy} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classg2o_1_1RegisterTypeProxy_a34c9e807a21fc0dbafd8980c17bf77f9}{\+\_\+name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class g2o\+::\+Register\+Type\+Proxy$<$ T $>$}
+
+
+
+Definition at line 131 of file factory.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Register\+Type\+Proxy@{g2o\+::\+Register\+Type\+Proxy}!Register\+Type\+Proxy@{Register\+Type\+Proxy}}
+\index{Register\+Type\+Proxy@{Register\+Type\+Proxy}!g2o\+::\+Register\+Type\+Proxy@{g2o\+::\+Register\+Type\+Proxy}}
+\subsubsection[{\texorpdfstring{Register\+Type\+Proxy(const std\+::string \&name)}{RegisterTypeProxy(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf g2o\+::\+Register\+Type\+Proxy}$<$ T $>$\+::{\bf Register\+Type\+Proxy} (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1RegisterTypeProxy_a179d0d498d8a53f9432d1635019705f5}{}\label{classg2o_1_1RegisterTypeProxy_a179d0d498d8a53f9432d1635019705f5}
+
+
+Definition at line 134 of file factory.\+h.
+
+
+
+References g2o\+::\+Factory\+::instance(), and g2o\+::\+Factory\+::register\+Type().
+
+
+\begin{DoxyCode}
+134                                                : \hyperlink{classg2o_1_1RegisterTypeProxy_a34c9e807a21fc0dbafd8980c17bf77f9}{\_name}(name)
+135       \{
+136 \textcolor{preprocessor}{#ifdef G2O\_DEBUG\_FACTORY}
+137         std::cout << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{": Registering "} << \hyperlink{classg2o_1_1RegisterTypeProxy_a34c9e807a21fc0dbafd8980c17bf77f9}{\_name} << \textcolor{stringliteral}{" of type "} << \textcolor{keyword}{typeid}(T).name() << 
+      std::endl;
+138 \textcolor{preprocessor}{#endif}
+139         \hyperlink{classg2o_1_1Factory_a8a1f33e017c5ad59399cef48972578ae}{Factory::instance}()->\hyperlink{classg2o_1_1Factory_aba2f2e40635fd1b996981cefdb65c346}{registerType}(\hyperlink{classg2o_1_1RegisterTypeProxy_a34c9e807a21fc0dbafd8980c17bf77f9}{\_name}, \textcolor{keyword}{new} 
+      HyperGraphElementCreator<T>());
+140       \}
+\end{DoxyCode}
+\index{g2o\+::\+Register\+Type\+Proxy@{g2o\+::\+Register\+Type\+Proxy}!````~Register\+Type\+Proxy@{$\sim$\+Register\+Type\+Proxy}}
+\index{````~Register\+Type\+Proxy@{$\sim$\+Register\+Type\+Proxy}!g2o\+::\+Register\+Type\+Proxy@{g2o\+::\+Register\+Type\+Proxy}}
+\subsubsection[{\texorpdfstring{$\sim$\+Register\+Type\+Proxy()}{~RegisterTypeProxy()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf g2o\+::\+Register\+Type\+Proxy}$<$ T $>$\+::$\sim${\bf Register\+Type\+Proxy} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1RegisterTypeProxy_ab8469d11a8e3548e74b1de4b3a332d4e}{}\label{classg2o_1_1RegisterTypeProxy_ab8469d11a8e3548e74b1de4b3a332d4e}
+
+
+Definition at line 142 of file factory.\+h.
+
+
+
+References g2o\+::\+Factory\+::instance(), and g2o\+::\+Factory\+::unregister\+Type().
+
+
+\begin{DoxyCode}
+143       \{
+144 \textcolor{preprocessor}{#ifdef G2O\_DEBUG\_FACTORY}
+145         std::cout << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{": Unregistering "} << \hyperlink{classg2o_1_1RegisterTypeProxy_a34c9e807a21fc0dbafd8980c17bf77f9}{\_name} << \textcolor{stringliteral}{" of type "} << \textcolor{keyword}{typeid}(T).name() <<
+       std::endl;
+146 \textcolor{preprocessor}{#endif}
+147         \hyperlink{classg2o_1_1Factory_a8a1f33e017c5ad59399cef48972578ae}{Factory::instance}()->\hyperlink{classg2o_1_1Factory_a01b16c7d5a49ddab5ccd5980f76900b7}{unregisterType}(\hyperlink{classg2o_1_1RegisterTypeProxy_a34c9e807a21fc0dbafd8980c17bf77f9}{\_name});
+148       \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Register\+Type\+Proxy@{g2o\+::\+Register\+Type\+Proxy}!\+\_\+name@{\+\_\+name}}
+\index{\+\_\+name@{\+\_\+name}!g2o\+::\+Register\+Type\+Proxy@{g2o\+::\+Register\+Type\+Proxy}}
+\subsubsection[{\texorpdfstring{\+\_\+name}{_name}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::string {\bf g2o\+::\+Register\+Type\+Proxy}$<$ T $>$\+::\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classg2o_1_1RegisterTypeProxy_a34c9e807a21fc0dbafd8980c17bf77f9}{}\label{classg2o_1_1RegisterTypeProxy_a34c9e807a21fc0dbafd8980c17bf77f9}
+
+
+Definition at line 151 of file factory.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{factory_8h}{factory.\+h}\end{DoxyCompactItemize}

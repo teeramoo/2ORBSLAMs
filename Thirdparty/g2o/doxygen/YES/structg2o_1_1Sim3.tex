@@ -1,0 +1,604 @@
+\hypertarget{structg2o_1_1Sim3}{}\section{g2o\+:\+:Sim3 Struct Reference}
+\label{structg2o_1_1Sim3}\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+
+
+{\ttfamily \#include $<$sim3.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structg2o_1_1Sim3_adf1277575fc039d1ae643ae018e464fe}{Sim3} ()
+\item 
+\hyperlink{structg2o_1_1Sim3_a3f7bc6953078a87865575192221def7e}{Sim3} (const Quaterniond \&\hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}, const Vector3d \&\hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}, double \hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s})
+\item 
+\hyperlink{structg2o_1_1Sim3_a8163b7b417a91a758b10593929bae6c5}{Sim3} (const Matrix3d \&R, const Vector3d \&\hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}, double \hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s})
+\item 
+\hyperlink{structg2o_1_1Sim3_a252f62d72e8449ecc929a6ca0320fcbc}{Sim3} (const \hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d} \&update)
+\item 
+Vector3d \hyperlink{structg2o_1_1Sim3_a99390dd73f03245fa9f762328c07697f}{map} (const Vector3d \&xyz) const 
+\item 
+\hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d} \hyperlink{structg2o_1_1Sim3_a97e81fe7bee63edc34db9b174fecf30d}{log} () const 
+\item 
+\hyperlink{structg2o_1_1Sim3}{Sim3} \hyperlink{structg2o_1_1Sim3_a799f94914303ea87578ea7ab8e14bea9}{inverse} () const 
+\item 
+double \hyperlink{structg2o_1_1Sim3_a024871a45dba00e199276b90f37e41bd}{operator\mbox{[}$\,$\mbox{]}} (int i) const 
+\item 
+double \& \hyperlink{structg2o_1_1Sim3_ac48ebd09209c2484896f2dfe8bc673bf}{operator\mbox{[}$\,$\mbox{]}} (int i)
+\item 
+\hyperlink{structg2o_1_1Sim3}{Sim3} \hyperlink{structg2o_1_1Sim3_adbdfd018f974d1c270450f22a79196de}{operator$\ast$} (const \hyperlink{structg2o_1_1Sim3}{Sim3} \&other) const 
+\item 
+\hyperlink{structg2o_1_1Sim3}{Sim3} \& \hyperlink{structg2o_1_1Sim3_aaad597f4a82aef284896be4c6a79aeb9}{operator$\ast$=} (const \hyperlink{structg2o_1_1Sim3}{Sim3} \&other)
+\item 
+const Vector3d \& \hyperlink{structg2o_1_1Sim3_a0cb517ea637a193e5930f1256a658676}{translation} () const 
+\item 
+Vector3d \& \hyperlink{structg2o_1_1Sim3_a1429af2d97c44cd364d748ef07998593}{translation} ()
+\item 
+const Quaterniond \& \hyperlink{structg2o_1_1Sim3_aceefdc87928f521ee0e5bb3f8dc6fb63}{rotation} () const 
+\item 
+Quaterniond \& \hyperlink{structg2o_1_1Sim3_a4528a501c958cd71fcc6fdef74db99cc}{rotation} ()
+\item 
+const double \& \hyperlink{structg2o_1_1Sim3_a9988b37acf83f5b6f97fd31024774446}{scale} () const 
+\item 
+double \& \hyperlink{structg2o_1_1Sim3_a062649c3de81c514518e1095c0e49eeb}{scale} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Quaterniond \hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}
+\item 
+Vector3d \hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}
+\item 
+double \hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 41 of file sim3.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!Sim3@{Sim3}}
+\index{Sim3@{Sim3}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{Sim3()}{Sim3()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Sim3\+::\+Sim3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_adf1277575fc039d1ae643ae018e464fe}{}\label{structg2o_1_1Sim3_adf1277575fc039d1ae643ae018e464fe}
+
+
+Definition at line 52 of file sim3.\+h.
+
+
+\begin{DoxyCode}
+53     \{
+54       \hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}.setIdentity();
+55       \hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}.fill(0.);
+56       \hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}=1.;
+57     \}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!Sim3@{Sim3}}
+\index{Sim3@{Sim3}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{Sim3(const Quaterniond \&r, const Vector3d \&t, double s)}{Sim3(const Quaterniond &r, const Vector3d &t, double s)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Sim3\+::\+Sim3 (
+\begin{DoxyParamCaption}
+\item[{const Quaterniond \&}]{r, }
+\item[{const Vector3d \&}]{t, }
+\item[{double}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_a3f7bc6953078a87865575192221def7e}{}\label{structg2o_1_1Sim3_a3f7bc6953078a87865575192221def7e}
+
+
+Definition at line 59 of file sim3.\+h.
+
+
+\begin{DoxyCode}
+60       : \hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}(\hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}),\hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}(\hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}),\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}(\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s})
+61     \{
+62     \}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!Sim3@{Sim3}}
+\index{Sim3@{Sim3}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{Sim3(const Matrix3d \&\+R, const Vector3d \&t, double s)}{Sim3(const Matrix3d &R, const Vector3d &t, double s)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Sim3\+::\+Sim3 (
+\begin{DoxyParamCaption}
+\item[{const Matrix3d \&}]{R, }
+\item[{const Vector3d \&}]{t, }
+\item[{double}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_a8163b7b417a91a758b10593929bae6c5}{}\label{structg2o_1_1Sim3_a8163b7b417a91a758b10593929bae6c5}
+
+
+Definition at line 64 of file sim3.\+h.
+
+
+\begin{DoxyCode}
+65       : \hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}(Quaterniond(R)),\hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}(\hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}),\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}(\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s})
+66     \{
+67     \}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!Sim3@{Sim3}}
+\index{Sim3@{Sim3}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{Sim3(const Vector7d \&update)}{Sim3(const Vector7d &update)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Sim3\+::\+Sim3 (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector7d} \&}]{update}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_a252f62d72e8449ecc929a6ca0320fcbc}{}\label{structg2o_1_1Sim3_a252f62d72e8449ecc929a6ca0320fcbc}
+
+
+Definition at line 70 of file sim3.\+h.
+
+
+
+References c, and g2o\+::skew().
+
+
+\begin{DoxyCode}
+71     \{
+72 
+73       Vector3d omega;
+74       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<3; i++)
+75         omega[i]=update[i];
+76 
+77       Vector3d upsilon;
+78       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<3; i++)
+79         upsilon[i]=update[i+3];
+80 
+81       \textcolor{keywordtype}{double} sigma = update[6];
+82       \textcolor{keywordtype}{double} theta = omega.norm();
+83       Matrix3d Omega = \hyperlink{namespaceg2o_adb3143a37b9bc002f4f7b6423061ef81}{skew}(omega);
+84       \hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s} = std::exp(sigma);
+85       Matrix3d Omega2 = Omega*Omega;
+86       Matrix3d I;
+87       I.setIdentity();
+88       Matrix3d R;
+89 
+90       \textcolor{keywordtype}{double} eps = 0.00001;
+91       \textcolor{keywordtype}{double} A,B,C;
+92       \textcolor{keywordflow}{if} (fabs(sigma)<eps)
+93       \{
+94         C = 1;
+95         \textcolor{keywordflow}{if} (theta<eps)
+96         \{
+97           A = 1./2.;
+98           B = 1./6.;
+99           R = (I + Omega + Omega*Omega);
+100         \}
+101         \textcolor{keywordflow}{else}
+102         \{
+103           \textcolor{keywordtype}{double} theta2= theta*theta;
+104           A = (1-cos(theta))/(theta2);
+105           B = (theta-sin(theta))/(theta2*theta);
+106           R = I + sin(theta)/theta *Omega + (1-cos(theta))/(theta*theta)*Omega2;
+107         \}
+108       \}
+109       \textcolor{keywordflow}{else}
+110       \{
+111         C=(\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}-1)/sigma;
+112         \textcolor{keywordflow}{if} (theta<eps)
+113         \{
+114           \textcolor{keywordtype}{double} sigma2= sigma*sigma;
+115           A = ((sigma-1)*\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}+1)/sigma2;
+116           B= ((0.5*sigma2-sigma+1)*\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s})/(sigma2*sigma);
+117           R = (I + Omega + Omega2);
+118         \}
+119         \textcolor{keywordflow}{else}
+120         \{
+121           R = I + sin(theta)/theta *Omega + (1-cos(theta))/(theta*theta)*Omega2;
+122 
+123 
+124 
+125           \textcolor{keywordtype}{double} a=\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}*sin(theta);
+126           \textcolor{keywordtype}{double} b=\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}*cos(theta);
+127           \textcolor{keywordtype}{double} theta2= theta*theta;
+128           \textcolor{keywordtype}{double} sigma2= sigma*sigma;
+129 
+130           \textcolor{keywordtype}{double} \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}=theta2+sigma2;
+131           A = (a*sigma+ (1-b)*theta)/(theta*\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c});
+132           B = (C-((b-1)*sigma+a*theta)/(\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}))*1./(theta2);
+133 
+134         \}
+135       \}
+136       \hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r} = Quaterniond(R);
+137 
+138 
+139 
+140       Matrix3d W = A*Omega + B*Omega2 + C*I;
+141       \hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t} = W*upsilon;
+142     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!inverse@{inverse}}
+\index{inverse@{inverse}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{inverse() const }{inverse() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sim3} g2o\+::\+Sim3\+::inverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_a799f94914303ea87578ea7ab8e14bea9}{}\label{structg2o_1_1Sim3_a799f94914303ea87578ea7ab8e14bea9}
+
+
+Definition at line 233 of file sim3.\+h.
+
+
+
+Referenced by g2o\+::\+Edge\+Sim3\+::compute\+Error(), g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+Y\+Z\+::compute\+Error(), and g2o\+::\+Edge\+Sim3\+::read().
+
+
+\begin{DoxyCode}
+234     \{
+235       \textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_adf1277575fc039d1ae643ae018e464fe}{Sim3}(\hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}.conjugate(), \hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}.conjugate()*((-1./\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s})*\hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}), 1./\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s});
+236     \}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!log@{log}}
+\index{log@{log}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{log() const }{log() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector7d} g2o\+::\+Sim3\+::log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_a97e81fe7bee63edc34db9b174fecf30d}{}\label{structg2o_1_1Sim3_a97e81fe7bee63edc34db9b174fecf30d}
+
+
+Definition at line 148 of file sim3.\+h.
+
+
+
+References c, g2o\+::delta\+R(), and g2o\+::skew().
+
+
+
+Referenced by g2o\+::\+Edge\+Sim3\+::compute\+Error(), g2o\+::\+Vertex\+Sim3\+Expmap\+::write(), and g2o\+::\+Edge\+Sim3\+::write().
+
+
+\begin{DoxyCode}
+149     \{
+150       \hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d} res;
+151       \textcolor{keywordtype}{double} sigma = std::log(\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s});
+152 
+153       
+154 
+155    
+156       Vector3d omega;
+157       Vector3d upsilon;
+158 
+159 
+160       Matrix3d R = \hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}.toRotationMatrix();
+161       \textcolor{keywordtype}{double} d =  0.5*(R(0,0)+R(1,1)+R(2,2)-1);
+162 
+163       Matrix3d Omega;
+164 
+165       \textcolor{keywordtype}{double} eps = 0.00001;
+166       Matrix3d I = Matrix3d::Identity();
+167 
+168       \textcolor{keywordtype}{double} A,B,C;
+169       \textcolor{keywordflow}{if} (fabs(sigma)<eps)
+170       \{
+171         C = 1;
+172         \textcolor{keywordflow}{if} (d>1-eps)
+173         \{
+174           omega=0.5*\hyperlink{namespaceg2o_a2e39915fb420fd7dc2d3802435e4a6a9}{deltaR}(R);
+175           Omega = \hyperlink{namespaceg2o_adb3143a37b9bc002f4f7b6423061ef81}{skew}(omega);
+176           A = 1./2.;
+177           B = 1./6.;
+178         \}
+179         \textcolor{keywordflow}{else}
+180         \{
+181           \textcolor{keywordtype}{double} theta = acos(d);
+182           \textcolor{keywordtype}{double} theta2 = theta*theta;
+183           omega = theta/(2*sqrt(1-d*d))*\hyperlink{namespaceg2o_a2e39915fb420fd7dc2d3802435e4a6a9}{deltaR}(R);
+184           Omega = \hyperlink{namespaceg2o_adb3143a37b9bc002f4f7b6423061ef81}{skew}(omega);
+185           A = (1-cos(theta))/(theta2);
+186           B = (theta-sin(theta))/(theta2*theta);
+187         \}
+188       \}
+189       \textcolor{keywordflow}{else}
+190       \{
+191         C=(\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}-1)/sigma;
+192         \textcolor{keywordflow}{if} (d>1-eps)
+193         \{
+194 
+195           \textcolor{keywordtype}{double} sigma2 = sigma*sigma;
+196           omega=0.5*\hyperlink{namespaceg2o_a2e39915fb420fd7dc2d3802435e4a6a9}{deltaR}(R);
+197           Omega = \hyperlink{namespaceg2o_adb3143a37b9bc002f4f7b6423061ef81}{skew}(omega);
+198           A = ((sigma-1)*\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}+1)/(sigma2);
+199           B = ((0.5*sigma2-sigma+1)*\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s})/(sigma2*sigma);
+200         \}
+201         \textcolor{keywordflow}{else}
+202         \{
+203           \textcolor{keywordtype}{double} theta = acos(d);
+204           omega = theta/(2*sqrt(1-d*d))*\hyperlink{namespaceg2o_a2e39915fb420fd7dc2d3802435e4a6a9}{deltaR}(R);
+205           Omega = \hyperlink{namespaceg2o_adb3143a37b9bc002f4f7b6423061ef81}{skew}(omega);
+206           \textcolor{keywordtype}{double} theta2 = theta*theta;
+207           \textcolor{keywordtype}{double} a=\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}*sin(theta);
+208           \textcolor{keywordtype}{double} b=\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}*cos(theta);
+209           \textcolor{keywordtype}{double} \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}=theta2 + sigma*sigma;
+210           A = (a*sigma+ (1-b)*theta)/(theta*\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c});
+211           B = (C-((b-1)*sigma+a*theta)/(\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}))*1./(theta2);
+212         \}
+213       \}
+214 
+215       Matrix3d W = A*Omega + B*Omega*Omega + C*I;
+216 
+217       upsilon = W.lu().solve(\hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t});
+218 
+219 
+220       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<3; i++)
+221         res[i] = omega[i];
+222 
+223        \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<3; i++)
+224         res[i+3] = upsilon[i];
+225 
+226       res[6] = sigma;
+227 
+228       \textcolor{keywordflow}{return} res;
+229       
+230     \}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!map@{map}}
+\index{map@{map}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{map(const Vector3d \&xyz) const }{map(const Vector3d &xyz) const }}]{\setlength{\rightskip}{0pt plus 5cm}Vector3d g2o\+::\+Sim3\+::map (
+\begin{DoxyParamCaption}
+\item[{const Vector3d \&}]{xyz}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_a99390dd73f03245fa9f762328c07697f}{}\label{structg2o_1_1Sim3_a99390dd73f03245fa9f762328c07697f}
+
+
+Definition at line 144 of file sim3.\+h.
+
+
+
+Referenced by g2o\+::\+Edge\+Sim3\+Project\+X\+Y\+Z\+::compute\+Error(), and g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+Y\+Z\+::compute\+Error().
+
+
+\begin{DoxyCode}
+144                                               \{
+145       \textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}*(\hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}*xyz) + \hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t};
+146     \}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const Sim3 \&other) const }{operator*(const Sim3 &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sim3} g2o\+::\+Sim3\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sim3} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_adbdfd018f974d1c270450f22a79196de}{}\label{structg2o_1_1Sim3_adbdfd018f974d1c270450f22a79196de}
+
+
+Definition at line 266 of file sim3.\+h.
+
+
+
+References r, s, and t.
+
+
+\begin{DoxyCode}
+266                                              \{
+267       \hyperlink{structg2o_1_1Sim3_adf1277575fc039d1ae643ae018e464fe}{Sim3} ret;
+268       ret.r = \hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}*other.r;
+269       ret.t=\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}*(\hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}*other.t)+\hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t};
+270       ret.s=\hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}*other.s;
+271       \textcolor{keywordflow}{return} ret;
+272     \}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{operator$\ast$=(const Sim3 \&other)}{operator*=(const Sim3 &other)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sim3}\& g2o\+::\+Sim3\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sim3} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_aaad597f4a82aef284896be4c6a79aeb9}{}\label{structg2o_1_1Sim3_aaad597f4a82aef284896be4c6a79aeb9}
+
+
+Definition at line 274 of file sim3.\+h.
+
+
+\begin{DoxyCode}
+274                                         \{
+275       \hyperlink{structg2o_1_1Sim3_adf1277575fc039d1ae643ae018e464fe}{Sim3} ret=(*this)*other;
+276       *\textcolor{keyword}{this}=ret;
+277       \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+278     \}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{operator[](int i) const }{operator[](int i) const }}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Sim3\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_a024871a45dba00e199276b90f37e41bd}{}\label{structg2o_1_1Sim3_a024871a45dba00e199276b90f37e41bd}
+
+
+Definition at line 239 of file sim3.\+h.
+
+
+\begin{DoxyCode}
+240     \{
+241       assert(i<8);
+242       \textcolor{keywordflow}{if} (i<4)\{
+243 
+244         \textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}.coeffs()[i];
+245       \}
+246       \textcolor{keywordflow}{if} (i<7)\{
+247         \textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}[i-4];
+248       \}
+249       \textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s};
+250     \}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{operator[](int i)}{operator[](int i)}}]{\setlength{\rightskip}{0pt plus 5cm}double\& g2o\+::\+Sim3\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_ac48ebd09209c2484896f2dfe8bc673bf}{}\label{structg2o_1_1Sim3_ac48ebd09209c2484896f2dfe8bc673bf}
+
+
+Definition at line 252 of file sim3.\+h.
+
+
+\begin{DoxyCode}
+253     \{
+254       assert(i<8);
+255       \textcolor{keywordflow}{if} (i<4)\{
+256 
+257         \textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}.coeffs()[i];
+258       \}
+259       \textcolor{keywordflow}{if} (i<7)
+260       \{
+261         \textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}[i-4];
+262       \}
+263       \textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s};
+264     \}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!rotation@{rotation}}
+\index{rotation@{rotation}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{rotation() const }{rotation() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Quaterniond\& g2o\+::\+Sim3\+::rotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_aceefdc87928f521ee0e5bb3f8dc6fb63}{}\label{structg2o_1_1Sim3_aceefdc87928f521ee0e5bb3f8dc6fb63}
+
+
+Definition at line 284 of file sim3.\+h.
+
+
+
+References r.
+
+
+
+Referenced by g2o\+::operator$<$$<$().
+
+
+\begin{DoxyCode}
+284 \{\textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!rotation@{rotation}}
+\index{rotation@{rotation}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{rotation()}{rotation()}}]{\setlength{\rightskip}{0pt plus 5cm}Quaterniond\& g2o\+::\+Sim3\+::rotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_a4528a501c958cd71fcc6fdef74db99cc}{}\label{structg2o_1_1Sim3_a4528a501c958cd71fcc6fdef74db99cc}
+
+
+Definition at line 286 of file sim3.\+h.
+
+
+
+References r.
+
+
+\begin{DoxyCode}
+286 \{\textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!scale@{scale}}
+\index{scale@{scale}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{scale() const }{scale() const }}]{\setlength{\rightskip}{0pt plus 5cm}const double\& g2o\+::\+Sim3\+::scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_a9988b37acf83f5b6f97fd31024774446}{}\label{structg2o_1_1Sim3_a9988b37acf83f5b6f97fd31024774446}
+
+
+Definition at line 288 of file sim3.\+h.
+
+
+
+Referenced by g2o\+::operator$<$$<$().
+
+
+\begin{DoxyCode}
+288 \{\textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!scale@{scale}}
+\index{scale@{scale}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{scale()}{scale()}}]{\setlength{\rightskip}{0pt plus 5cm}double\& g2o\+::\+Sim3\+::scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_a062649c3de81c514518e1095c0e49eeb}{}\label{structg2o_1_1Sim3_a062649c3de81c514518e1095c0e49eeb}
+
+
+Definition at line 290 of file sim3.\+h.
+
+
+\begin{DoxyCode}
+290 \{\textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{s};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!translation@{translation}}
+\index{translation@{translation}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{translation() const }{translation() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Vector3d\& g2o\+::\+Sim3\+::translation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_a0cb517ea637a193e5930f1256a658676}{}\label{structg2o_1_1Sim3_a0cb517ea637a193e5930f1256a658676}
+
+
+Definition at line 280 of file sim3.\+h.
+
+
+
+Referenced by g2o\+::operator$<$$<$().
+
+
+\begin{DoxyCode}
+280 \{\textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t};\}
+\end{DoxyCode}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!translation@{translation}}
+\index{translation@{translation}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{translation()}{translation()}}]{\setlength{\rightskip}{0pt plus 5cm}Vector3d\& g2o\+::\+Sim3\+::translation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1Sim3_a1429af2d97c44cd364d748ef07998593}{}\label{structg2o_1_1Sim3_a1429af2d97c44cd364d748ef07998593}
+
+
+Definition at line 282 of file sim3.\+h.
+
+
+\begin{DoxyCode}
+282 \{\textcolor{keywordflow}{return} \hyperlink{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{t};\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!r@{r}}
+\index{r@{r}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{r}{r}}]{\setlength{\rightskip}{0pt plus 5cm}Quaterniond g2o\+::\+Sim3\+::r\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{}\label{structg2o_1_1Sim3_a55dbe5c6ffe22526f20e05f0c23aa832}
+
+
+Definition at line 46 of file sim3.\+h.
+
+
+
+Referenced by operator$\ast$().
+
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!s@{s}}
+\index{s@{s}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{s}{s}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Sim3\+::s\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}{}\label{structg2o_1_1Sim3_a2cad7c49340494d4bdd28a497e4cb486}
+
+
+Definition at line 48 of file sim3.\+h.
+
+
+
+Referenced by operator$\ast$().
+
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!t@{t}}
+\index{t@{t}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection[{\texorpdfstring{t}{t}}]{\setlength{\rightskip}{0pt plus 5cm}Vector3d g2o\+::\+Sim3\+::t\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}{}\label{structg2o_1_1Sim3_a3ef879fb13b88732428bd2f2a558d11c}
+
+
+Definition at line 47 of file sim3.\+h.
+
+
+
+Referenced by operator$\ast$().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/\hyperlink{sim3_8h}{sim3.\+h}\end{DoxyCompactItemize}

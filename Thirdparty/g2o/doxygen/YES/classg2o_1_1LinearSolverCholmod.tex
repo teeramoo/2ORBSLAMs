@@ -1,0 +1,692 @@
+\hypertarget{classg2o_1_1LinearSolverCholmod}{}\section{g2o\+:\+:Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$ Class Template Reference}
+\label{classg2o_1_1LinearSolverCholmod}\index{g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$@{g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$}}
+
+
+basic solver for Ax = b which has to reimplemented for different linear algebra libraries  
+
+
+
+
+{\ttfamily \#include $<$linear\+\_\+solver\+\_\+cholmod.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1LinearSolverCholmod_a7137027913fef850037d07a11c0cc1b2}{Linear\+Solver\+Cholmod} ()
+\item 
+virtual \hyperlink{classg2o_1_1LinearSolverCholmod_a6a75af51fa7a46e1ee8906582e311fff}{$\sim$\+Linear\+Solver\+Cholmod} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1LinearSolverCholmod_ad3957b891cebac9e0c7f821db84156b1}{init} ()
+\item 
+bool \hyperlink{classg2o_1_1LinearSolverCholmod_a86c8fcb2b24961139e14d57ce1b93805}{solve} (const \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&A, double $\ast$\hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, double $\ast$b)
+\item 
+bool \hyperlink{classg2o_1_1LinearSolverCholmod_aa329db9e0146831f0f07eef1ddd91c91}{solve\+Blocks} (double $\ast$$\ast$\&blocks, const \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&A)
+\item 
+virtual bool \hyperlink{classg2o_1_1LinearSolverCholmod_a26b03e93525b164b7842cc8b2f0ad000}{solve\+Pattern} (\hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ \hyperlink{namespaceg2o_a8a808fe01b0b4e0afe637fe680853d0a}{Matrix\+XD} $>$ \&spinv, const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices, const \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&A)
+\item 
+bool \hyperlink{classg2o_1_1LinearSolverCholmod_a52b390fe9979ee9f2d3130775f550c9b}{block\+Ordering} () const 
+\begin{DoxyCompactList}\small\item\em do the A\+MD ordering on the blocks or on the scalar matrix \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1LinearSolverCholmod_a7095e7086f148f0c3bf18073bd47488a}{set\+Block\+Ordering} (bool \hyperlink{classg2o_1_1LinearSolverCholmod_a52b390fe9979ee9f2d3130775f550c9b}{block\+Ordering})
+\item 
+virtual bool \hyperlink{classg2o_1_1LinearSolverCholmod_a84ac87445e40dc2af7fd78dda84eaf8d}{write\+Debug} () const 
+\begin{DoxyCompactList}\small\item\em write a debug dump of the system matrix if it is not S\+PD in solve \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1LinearSolverCholmod_a2fdd3d8f3fd88a50b836ee4730cde6e2}{set\+Write\+Debug} (bool b)
+\item 
+virtual bool \hyperlink{classg2o_1_1LinearSolverCholmod_a93f03e43f45ed73cc2becd4c8d77f5f4}{save\+Matrix} (const std\+::string \&file\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classg2o_1_1LinearSolverCholmod_a40a0f991ae3bb914f2313b55c514640d}{compute\+Symbolic\+Decomposition} (const \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&A)
+\item 
+void \hyperlink{classg2o_1_1LinearSolverCholmod_a4b1e18e870b5663f45900dea3bba9155}{fill\+Cholmod\+Ext} (const \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&A, bool only\+Values)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cholmod\+\_\+common \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\+\_\+cholmod\+Common}
+\item 
+\hyperlink{structg2o_1_1CholmodExt}{Cholmod\+Ext} $\ast$ \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\+\_\+cholmod\+Sparse}
+\item 
+cholmod\+\_\+factor $\ast$ \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\+\_\+cholmod\+Factor}
+\item 
+bool \hyperlink{classg2o_1_1LinearSolverCholmod_a1451c262710d169b6a21e06ca1165337}{\+\_\+block\+Ordering}
+\item 
+\hyperlink{classg2o_1_1MatrixStructure}{Matrix\+Structure} \hyperlink{classg2o_1_1LinearSolverCholmod_af939e0478ab4fddb708729a8ab3b6560}{\+\_\+matrix\+Structure}
+\item 
+\hyperlink{namespaceg2o_a2797ddaf7a7a6dc22843a38d34754e55}{Vector\+XI} \hyperlink{classg2o_1_1LinearSolverCholmod_aa195d0f2a09641240e8ab7da8b516460}{\+\_\+scalar\+Permutation}
+\item 
+\hyperlink{namespaceg2o_a2797ddaf7a7a6dc22843a38d34754e55}{Vector\+XI} \hyperlink{classg2o_1_1LinearSolverCholmod_a6dc3dd0af697846996d6ca72da72ffbd}{\+\_\+block\+Permutation}
+\item 
+bool \hyperlink{classg2o_1_1LinearSolverCholmod_ab13b752d37f43b2d8e1e4b2c7002b054}{\+\_\+write\+Debug}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Matrix\+Type$>$\\*
+class g2o\+::\+Linear\+Solver\+Cholmod$<$ Matrix\+Type $>$}
+
+basic solver for Ax = b which has to reimplemented for different linear algebra libraries 
+
+Definition at line 76 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!Linear\+Solver\+Cholmod@{Linear\+Solver\+Cholmod}}
+\index{Linear\+Solver\+Cholmod@{Linear\+Solver\+Cholmod}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{Linear\+Solver\+Cholmod()}{LinearSolverCholmod()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::{\bf Linear\+Solver\+Cholmod} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a7137027913fef850037d07a11c0cc1b2}{}\label{classg2o_1_1LinearSolverCholmod_a7137027913fef850037d07a11c0cc1b2}
+
+
+Definition at line 79 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+
+References g2o\+::\+Cholmod\+Ext\+::\+Cholmod\+Ext().
+
+
+\begin{DoxyCode}
+79                           :
+80       LinearSolverCCS<MatrixType>()
+81     \{
+82       \hyperlink{classg2o_1_1LinearSolverCholmod_ab13b752d37f43b2d8e1e4b2c7002b054}{\_writeDebug} = \textcolor{keyword}{true};
+83       \hyperlink{classg2o_1_1LinearSolverCholmod_a1451c262710d169b6a21e06ca1165337}{\_blockOrdering} = \textcolor{keyword}{false};
+84       \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse} = \textcolor{keyword}{new} CholmodExt();
+85       \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} = 0;
+86       cholmod\_start(&\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon});
+87 
+88       \textcolor{comment}{// setup ordering strategy}
+89       \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.nmethods = 1 ;
+90       \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.method[0].ordering = CHOLMOD\_AMD; \textcolor{comment}{//CHOLMOD\_COLAMD}
+91       \textcolor{comment}{//\_cholmodCommon.postorder = 0;}
+92 
+93       \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.supernodal = CHOLMOD\_AUTO; \textcolor{comment}{//CHOLMOD\_SUPERNODAL; //CHOLMOD\_SIMPLICIAL;}
+94     \}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!````~Linear\+Solver\+Cholmod@{$\sim$\+Linear\+Solver\+Cholmod}}
+\index{````~Linear\+Solver\+Cholmod@{$\sim$\+Linear\+Solver\+Cholmod}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{$\sim$\+Linear\+Solver\+Cholmod()}{~LinearSolverCholmod()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ virtual {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::$\sim${\bf Linear\+Solver\+Cholmod} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a6a75af51fa7a46e1ee8906582e311fff}{}\label{classg2o_1_1LinearSolverCholmod_a6a75af51fa7a46e1ee8906582e311fff}
+
+
+Definition at line 96 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+\begin{DoxyCode}
+97     \{
+98       \textcolor{keyword}{delete} \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse};
+99       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} != 0) \{
+100         cholmod\_free\_factor(&\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}, &\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon});
+101         \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} = 0;
+102       \}
+103       cholmod\_finish(&\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon});
+104     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!block\+Ordering@{block\+Ordering}}
+\index{block\+Ordering@{block\+Ordering}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{block\+Ordering() const }{blockOrdering() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ bool {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::block\+Ordering (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a52b390fe9979ee9f2d3130775f550c9b}{}\label{classg2o_1_1LinearSolverCholmod_a52b390fe9979ee9f2d3130775f550c9b}
+
+
+do the A\+MD ordering on the blocks or on the scalar matrix 
+
+
+
+Definition at line 249 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+\begin{DoxyCode}
+249 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1LinearSolverCholmod_a1451c262710d169b6a21e06ca1165337}{\_blockOrdering};\}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!compute\+Symbolic\+Decomposition@{compute\+Symbolic\+Decomposition}}
+\index{compute\+Symbolic\+Decomposition@{compute\+Symbolic\+Decomposition}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{compute\+Symbolic\+Decomposition(const Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ \&\+A)}{computeSymbolicDecomposition(const SparseBlockMatrix< MatrixType > &A)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ void {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::compute\+Symbolic\+Decomposition (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&}]{A}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a40a0f991ae3bb914f2313b55c514640d}{}\label{classg2o_1_1LinearSolverCholmod_a40a0f991ae3bb914f2313b55c514640d}
+
+
+Definition at line 271 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+
+References g2o\+::\+Matrix\+Structure\+::\+Aii, g2o\+::\+Matrix\+Structure\+::\+Ap, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::col\+Base\+Of\+Block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols\+Of\+Block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::fill\+Block\+Structure(), g2o\+::get\+\_\+monotonic\+\_\+time(), g2o\+::\+G2\+O\+Batch\+Statistics\+::global\+Stats(), g2o\+::\+Matrix\+Structure\+::n, and g2o\+::\+Matrix\+Structure\+::nz\+Max().
+
+
+\begin{DoxyCode}
+272     \{
+273       \textcolor{keywordtype}{double} t = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+274       \textcolor{keywordflow}{if} (! \hyperlink{classg2o_1_1LinearSolverCholmod_a1451c262710d169b6a21e06ca1165337}{\_blockOrdering}) \{
+275         \textcolor{comment}{// setup ordering strategy}
+276         \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.nmethods = 1;
+277         \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.method[0].ordering = CHOLMOD\_AMD; \textcolor{comment}{//CHOLMOD\_COLAMD}
+278         \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} = cholmod\_analyze(\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}, &
+      \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}); \textcolor{comment}{// symbolic factorization}
+279       \} \textcolor{keywordflow}{else} \{
+280 
+281         A.fillBlockStructure(\hyperlink{classg2o_1_1LinearSolverCholmod_af939e0478ab4fddb708729a8ab3b6560}{\_matrixStructure});
+282 
+283         \textcolor{comment}{// get the ordering for the block matrix}
+284         \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_a6dc3dd0af697846996d6ca72da72ffbd}{\_blockPermutation}.size() == 0)
+285           \hyperlink{classg2o_1_1LinearSolverCholmod_a6dc3dd0af697846996d6ca72da72ffbd}{\_blockPermutation}.resize(\hyperlink{classg2o_1_1LinearSolverCholmod_af939e0478ab4fddb708729a8ab3b6560}{\_matrixStructure}.
+      \hyperlink{classg2o_1_1MatrixStructure_aa91f296406c17ab3a826d03bf75cfea7}{n});
+286         \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_a6dc3dd0af697846996d6ca72da72ffbd}{\_blockPermutation}.size() < \hyperlink{classg2o_1_1LinearSolverCholmod_af939e0478ab4fddb708729a8ab3b6560}{\_matrixStructure}.
+      \hyperlink{classg2o_1_1MatrixStructure_aa91f296406c17ab3a826d03bf75cfea7}{n}) \textcolor{comment}{// double space if resizing}
+287           \hyperlink{classg2o_1_1LinearSolverCholmod_a6dc3dd0af697846996d6ca72da72ffbd}{\_blockPermutation}.resize(2*\hyperlink{classg2o_1_1LinearSolverCholmod_af939e0478ab4fddb708729a8ab3b6560}{\_matrixStructure}.
+      \hyperlink{classg2o_1_1MatrixStructure_aa91f296406c17ab3a826d03bf75cfea7}{n});
+288  
+289         \textcolor{comment}{// prepare AMD call via CHOLMOD}
+290         cholmod\_sparse auxCholmodSparse;
+291         auxCholmodSparse.nzmax = \hyperlink{classg2o_1_1LinearSolverCholmod_af939e0478ab4fddb708729a8ab3b6560}{\_matrixStructure}.\hyperlink{classg2o_1_1MatrixStructure_a358efab55a4eee51f7dfaab21d7d9c11}{nzMax}();
+292         auxCholmodSparse.nrow = auxCholmodSparse.ncol = \hyperlink{classg2o_1_1LinearSolverCholmod_af939e0478ab4fddb708729a8ab3b6560}{\_matrixStructure}.
+      \hyperlink{classg2o_1_1MatrixStructure_aa91f296406c17ab3a826d03bf75cfea7}{n};
+293         auxCholmodSparse.p = \hyperlink{classg2o_1_1LinearSolverCholmod_af939e0478ab4fddb708729a8ab3b6560}{\_matrixStructure}.\hyperlink{classg2o_1_1MatrixStructure_aeeff8e78fb766a433aecbfda4a2e3ffc}{Ap};
+294         auxCholmodSparse.i = \hyperlink{classg2o_1_1LinearSolverCholmod_af939e0478ab4fddb708729a8ab3b6560}{\_matrixStructure}.\hyperlink{classg2o_1_1MatrixStructure_a7984bf429b8694070ab8db5f5852d8bb}{Aii};
+295         auxCholmodSparse.nz = 0;
+296         auxCholmodSparse.x = 0;
+297         auxCholmodSparse.z = 0;
+298         auxCholmodSparse.stype = 1;
+299         auxCholmodSparse.xtype = CHOLMOD\_PATTERN;
+300         auxCholmodSparse.itype = CHOLMOD\_INT;
+301         auxCholmodSparse.dtype = CHOLMOD\_DOUBLE;
+302         auxCholmodSparse.sorted = 1;
+303         auxCholmodSparse.packed = 1;
+304         \textcolor{keywordtype}{int} amdStatus = cholmod\_amd(&auxCholmodSparse, NULL, 0, 
+      \hyperlink{classg2o_1_1LinearSolverCholmod_a6dc3dd0af697846996d6ca72da72ffbd}{\_blockPermutation}.data(), &\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon});
+305         \textcolor{keywordflow}{if} (! amdStatus) \{
+306           \textcolor{keywordflow}{return};
+307         \}
+308 
+309         \textcolor{comment}{// blow up the permutation to the scalar matrix}
+310         \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_aa195d0f2a09641240e8ab7da8b516460}{\_scalarPermutation}.size() == 0)
+311           \hyperlink{classg2o_1_1LinearSolverCholmod_aa195d0f2a09641240e8ab7da8b516460}{\_scalarPermutation}.resize(\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->ncol);
+312         \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_aa195d0f2a09641240e8ab7da8b516460}{\_scalarPermutation}.size() < (int)\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->ncol)
+313           \hyperlink{classg2o_1_1LinearSolverCholmod_aa195d0f2a09641240e8ab7da8b516460}{\_scalarPermutation}.resize(2*\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->ncol);
+314         \textcolor{keywordtype}{size\_t} scalarIdx = 0;
+315         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classg2o_1_1LinearSolverCholmod_af939e0478ab4fddb708729a8ab3b6560}{\_matrixStructure}.\hyperlink{classg2o_1_1MatrixStructure_aa91f296406c17ab3a826d03bf75cfea7}{n}; ++i) \{
+316           \textcolor{keyword}{const} \textcolor{keywordtype}{int}& p = \hyperlink{classg2o_1_1LinearSolverCholmod_a6dc3dd0af697846996d6ca72da72ffbd}{\_blockPermutation}(i);
+317           \textcolor{keywordtype}{int} base  = A.colBaseOfBlock(p);
+318           \textcolor{keywordtype}{int} nCols = A.colsOfBlock(p);
+319           \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < nCols; ++j)
+320             \hyperlink{classg2o_1_1LinearSolverCholmod_aa195d0f2a09641240e8ab7da8b516460}{\_scalarPermutation}(scalarIdx++) = base++;
+321         \}
+322         assert(scalarIdx == \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->ncol);
+323 
+324         \textcolor{comment}{// apply the ordering}
+325         \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.nmethods = 1 ;
+326         \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.method[0].ordering = CHOLMOD\_GIVEN;
+327         \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} = cholmod\_analyze\_p(\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}, 
+      \hyperlink{classg2o_1_1LinearSolverCholmod_aa195d0f2a09641240e8ab7da8b516460}{\_scalarPermutation}.data(), NULL, 0, &\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon});
+328 
+329       \}
+330       G2OBatchStatistics* globalStats = \hyperlink{structg2o_1_1G2OBatchStatistics_a06f9c667d8b48b8f0023e27011818b64}{G2OBatchStatistics::globalStats}();
+331       \textcolor{keywordflow}{if} (globalStats)
+332         globalStats->timeSymbolicDecomposition = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}() - t;
+333 
+334       \textcolor{comment}{//const int& bestIdx = \_cholmodCommon.selected;}
+335       \textcolor{comment}{//cerr << "# Number of nonzeros in L: " << (int)\_cholmodCommon.method[bestIdx].lnz << " by "}
+336         \textcolor{comment}{//<< (\_cholmodCommon.method[bestIdx].ordering == CHOLMOD\_GIVEN ? "block" : "scalar") << " AMD
+       ordering " << endl;}
+337 
+338     \}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!fill\+Cholmod\+Ext@{fill\+Cholmod\+Ext}}
+\index{fill\+Cholmod\+Ext@{fill\+Cholmod\+Ext}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{fill\+Cholmod\+Ext(const Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ \&\+A, bool only\+Values)}{fillCholmodExt(const SparseBlockMatrix< MatrixType > &A, bool onlyValues)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ void {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::fill\+Cholmod\+Ext (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&}]{A, }
+\item[{bool}]{only\+Values}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a4b1e18e870b5663f45900dea3bba9155}{}\label{classg2o_1_1LinearSolverCholmod_a4b1e18e870b5663f45900dea3bba9155}
+
+
+Definition at line 340 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+
+References g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols(), g2o\+::\+Cholmod\+Ext\+::columns\+Allocated, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::non\+Zeros(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows().
+
+
+\begin{DoxyCode}
+341     \{
+342       \textcolor{keywordflow}{if} (! onlyValues)
+343         this->\hyperlink{classg2o_1_1LinearSolverCCS_a070138d7e2a68a576e015f5073a4a464}{initMatrixStructure}(A);
+344       \textcolor{keywordtype}{size\_t} m = A.rows();
+345       \textcolor{keywordtype}{size\_t} n = A.cols();
+346       assert(m > 0 && n > 0 && \textcolor{stringliteral}{"Hessian has 0 rows/cols"});
+347 
+348       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->\hyperlink{structg2o_1_1CholmodExt_a17fb33389283164f05225ed9670cb8c1}{columnsAllocated} < n) \{
+349         \textcolor{comment}{//std::cerr << \_\_PRETTY\_FUNCTION\_\_ << ": reallocating columns" << std::endl;}
+350         \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->\hyperlink{structg2o_1_1CholmodExt_a17fb33389283164f05225ed9670cb8c1}{columnsAllocated} = 
+      \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->\hyperlink{structg2o_1_1CholmodExt_a17fb33389283164f05225ed9670cb8c1}{columnsAllocated} == 0 ? n : 2 * n; \textcolor{comment}{// pre-allocate more space
+       if re-allocating}
+351         \textcolor{keyword}{delete}[] (\textcolor{keywordtype}{int}*)\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->p;
+352         \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->p = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->
+      \hyperlink{structg2o_1_1CholmodExt_a17fb33389283164f05225ed9670cb8c1}{columnsAllocated}+1];
+353       \}
+354       \textcolor{keywordflow}{if} (! onlyValues) \{
+355         \textcolor{keywordtype}{size\_t} nzmax = A.nonZeros();
+356         \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->nzmax < nzmax) \{
+357           \textcolor{comment}{//std::cerr << \_\_PRETTY\_FUNCTION\_\_ << ": reallocating row + values" << std::endl;}
+358           \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->nzmax = \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->nzmax == 0 ? nzmax : 2 * 
+      nzmax; \textcolor{comment}{// pre-allocate more space if re-allocating}
+359           \textcolor{keyword}{delete}[] (\textcolor{keywordtype}{double}*)\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->x;
+360           \textcolor{keyword}{delete}[] (\textcolor{keywordtype}{int}*)\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->i;
+361           \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->i = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->nzmax];
+362           \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->x = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->nzmax];
+363         \}
+364       \}
+365       \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->ncol = n;
+366       \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->nrow = m;
+367 
+368       \textcolor{keywordflow}{if} (onlyValues)
+369         this->\hyperlink{classg2o_1_1LinearSolverCCS_a07f0df9a6012d567e26a89063c53aa12}{\_ccsMatrix}->fillCCS((\textcolor{keywordtype}{double}*)\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->x, \textcolor{keyword}{true});
+370       \textcolor{keywordflow}{else}
+371         this->\hyperlink{classg2o_1_1LinearSolverCCS_a07f0df9a6012d567e26a89063c53aa12}{\_ccsMatrix}->fillCCS((\textcolor{keywordtype}{int}*)\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->p, (\textcolor{keywordtype}{int}*)
+      \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->i, (\textcolor{keywordtype}{double}*)\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->x, \textcolor{keyword}{true});
+372     \}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!init@{init}}
+\index{init@{init}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{init()}{init()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ virtual bool {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolverCholmod_ad3957b891cebac9e0c7f821db84156b1}{}\label{classg2o_1_1LinearSolverCholmod_ad3957b891cebac9e0c7f821db84156b1}
+init for operating on matrices with a different non-\/zero pattern like before 
+
+Implements \hyperlink{classg2o_1_1LinearSolver_aebd961a94ef6de1bc66d2ca41dd2b17b}{g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$}.
+
+
+
+Definition at line 106 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+\begin{DoxyCode}
+107     \{
+108       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} != 0) \{
+109         cholmod\_free\_factor(&\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}, &\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon});
+110         \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} = 0;
+111       \}
+112       \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+113     \}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!save\+Matrix@{save\+Matrix}}
+\index{save\+Matrix@{save\+Matrix}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{save\+Matrix(const std\+::string \&file\+Name)}{saveMatrix(const std::string &fileName)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ virtual bool {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::save\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a93f03e43f45ed73cc2becd4c8d77f5f4}{}\label{classg2o_1_1LinearSolverCholmod_a93f03e43f45ed73cc2becd4c8d77f5f4}
+
+
+Definition at line 256 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+
+References g2o\+::write\+C\+C\+S\+Matrix().
+
+
+\begin{DoxyCode}
+256                                                        \{
+257       \hyperlink{namespaceg2o_a40901721245dfa679e304f0231acb0f6}{writeCCSMatrix}(fileName, \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->nrow, 
+      \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->ncol, (\textcolor{keywordtype}{int}*)\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->p, (\textcolor{keywordtype}{int}*)
+      \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->i, (\textcolor{keywordtype}{double}*)\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->x, \textcolor{keyword}{true});
+258       \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+259     \}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!set\+Block\+Ordering@{set\+Block\+Ordering}}
+\index{set\+Block\+Ordering@{set\+Block\+Ordering}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{set\+Block\+Ordering(bool block\+Ordering)}{setBlockOrdering(bool blockOrdering)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ void {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::set\+Block\+Ordering (
+\begin{DoxyParamCaption}
+\item[{bool}]{block\+Ordering}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a7095e7086f148f0c3bf18073bd47488a}{}\label{classg2o_1_1LinearSolverCholmod_a7095e7086f148f0c3bf18073bd47488a}
+
+
+Definition at line 250 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+\begin{DoxyCode}
+250 \{ \hyperlink{classg2o_1_1LinearSolverCholmod_a1451c262710d169b6a21e06ca1165337}{\_blockOrdering} = \hyperlink{classg2o_1_1LinearSolverCholmod_a52b390fe9979ee9f2d3130775f550c9b}{blockOrdering};\}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!set\+Write\+Debug@{set\+Write\+Debug}}
+\index{set\+Write\+Debug@{set\+Write\+Debug}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{set\+Write\+Debug(bool b)}{setWriteDebug(bool b)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ virtual void {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::set\+Write\+Debug (
+\begin{DoxyParamCaption}
+\item[{bool}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a2fdd3d8f3fd88a50b836ee4730cde6e2}{}\label{classg2o_1_1LinearSolverCholmod_a2fdd3d8f3fd88a50b836ee4730cde6e2}
+
+
+Reimplemented from \hyperlink{classg2o_1_1LinearSolver_a969c406ccacc38705b2a88f5ed23cb9a}{g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$}.
+
+
+
+Definition at line 254 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+\begin{DoxyCode}
+254 \{ \hyperlink{classg2o_1_1LinearSolverCholmod_ab13b752d37f43b2d8e1e4b2c7002b054}{\_writeDebug} = b;\}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!solve@{solve}}
+\index{solve@{solve}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{solve(const Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ \&\+A, double $\ast$x, double $\ast$b)}{solve(const SparseBlockMatrix< MatrixType > &A, double *x, double *b)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ bool {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::solve (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&}]{A, }
+\item[{double $\ast$}]{x, }
+\item[{double $\ast$}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a86c8fcb2b24961139e14d57ce1b93805}{}\label{classg2o_1_1LinearSolverCholmod_a86c8fcb2b24961139e14d57ce1b93805}
+Assumes that A is the same matrix for several calls. Among other assumptions, the non-\/zero pattern does not change! If the matrix changes call \hyperlink{classg2o_1_1LinearSolverCholmod_ad3957b891cebac9e0c7f821db84156b1}{init()} before. solve system Ax = b, x and b have to allocated beforehand!! 
+
+Implements \hyperlink{classg2o_1_1LinearSolver_aa44b40826d50203c8ce2ff258c34e030}{g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$}.
+
+
+
+Definition at line 115 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+
+References g2o\+::\+G2\+O\+Batch\+Statistics\+::cholesky\+N\+NZ, g2o\+::get\+\_\+monotonic\+\_\+time(), g2o\+::\+G2\+O\+Batch\+Statistics\+::global\+Stats(), and g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Numeric\+Decomposition.
+
+
+\begin{DoxyCode}
+116     \{
+117       \textcolor{comment}{//cerr << \_\_PRETTY\_FUNCTION\_\_ << " using cholmod" << endl;}
+118       \hyperlink{classg2o_1_1LinearSolverCholmod_a4b1e18e870b5663f45900dea3bba9155}{fillCholmodExt}(A, \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} != 0); \textcolor{comment}{// \_cholmodFactor used as bool,
+       if not existing will copy the whole structure, otherwise only the values}
+119 
+120       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} == 0) \{
+121         \hyperlink{classg2o_1_1LinearSolverCholmod_a40a0f991ae3bb914f2313b55c514640d}{computeSymbolicDecomposition}(A);
+122         assert(\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} != 0 && \textcolor{stringliteral}{"Symbolic cholesky failed"});
+123       \}
+124       \textcolor{keywordtype}{double} t=\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+125 
+126       \textcolor{comment}{// setting up b for calling cholmod}
+127       cholmod\_dense bcholmod;
+128       bcholmod.nrow  = bcholmod.d = \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->nrow;
+129       bcholmod.ncol  = 1;
+130       bcholmod.x     = b;
+131       bcholmod.xtype = CHOLMOD\_REAL;
+132       bcholmod.dtype = CHOLMOD\_DOUBLE;
+133 
+134       cholmod\_factorize(\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}, \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}, &
+      \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon});
+135       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.status == CHOLMOD\_NOT\_POSDEF) \{
+136         \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_ab13b752d37f43b2d8e1e4b2c7002b054}{\_writeDebug}) \{
+137           std::cerr << \textcolor{stringliteral}{"Cholesky failure, writing debug.txt (Hessian loadable by Octave)"} << std::endl;
+138           \hyperlink{classg2o_1_1LinearSolverCholmod_a93f03e43f45ed73cc2becd4c8d77f5f4}{saveMatrix}(\textcolor{stringliteral}{"debug.txt"});
+139         \}
+140         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+141       \}
+142 
+143       cholmod\_dense* xcholmod = cholmod\_solve(CHOLMOD\_A, \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}, &bcholmod, &
+      \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon});
+144       memcpy(\hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, xcholmod->x, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}) * bcholmod.nrow); \textcolor{comment}{// copy back to our array}
+145       cholmod\_free\_dense(&xcholmod, &\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon});
+146 
+147       G2OBatchStatistics* globalStats = \hyperlink{structg2o_1_1G2OBatchStatistics_a06f9c667d8b48b8f0023e27011818b64}{G2OBatchStatistics::globalStats}();
+148       \textcolor{keywordflow}{if} (globalStats)\{
+149         globalStats->timeNumericDecomposition = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}() - t;
+150         globalStats->choleskyNNZ = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.method[0].lnz);
+151       \}
+152 
+153       \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+154     \}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!solve\+Blocks@{solve\+Blocks}}
+\index{solve\+Blocks@{solve\+Blocks}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{solve\+Blocks(double $\ast$$\ast$\&blocks, const Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ \&\+A)}{solveBlocks(double **&blocks, const SparseBlockMatrix< MatrixType > &A)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ bool {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::solve\+Blocks (
+\begin{DoxyParamCaption}
+\item[{double $\ast$$\ast$\&}]{blocks, }
+\item[{const {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&}]{A}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolverCholmod_aa329db9e0146831f0f07eef1ddd91c91}{}\label{classg2o_1_1LinearSolverCholmod_aa329db9e0146831f0f07eef1ddd91c91}
+Inverts the diagonal blocks of A \begin{DoxyReturn}{Returns}
+false if not defined. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classg2o_1_1LinearSolver_a252e3658b3ba0c3577c33f846c514535}{g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$}.
+
+
+
+Definition at line 156 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+
+References g2o\+::\+G2\+O\+Batch\+Statistics\+::cholesky\+N\+NZ, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols\+Of\+Block(), g2o\+::\+Marginal\+Covariance\+Cholesky\+::compute\+Covariance(), g2o\+::\+G2\+O\+Batch\+Statistics\+::global\+Stats(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::row\+Block\+Indices(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows\+Of\+Block(), and g2o\+::\+Marginal\+Covariance\+Cholesky\+::set\+Cholesky\+Factor().
+
+
+\begin{DoxyCode}
+157     \{
+158       \textcolor{comment}{//cerr << \_\_PRETTY\_FUNCTION\_\_ << " using cholmod" << endl;}
+159       \hyperlink{classg2o_1_1LinearSolverCholmod_a4b1e18e870b5663f45900dea3bba9155}{fillCholmodExt}(A, \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} != 0); \textcolor{comment}{// \_cholmodFactor used as bool,
+       if not existing will copy the whole structure, otherwise only the values}
+160 
+161       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} == 0) \{
+162         \hyperlink{classg2o_1_1LinearSolverCholmod_a40a0f991ae3bb914f2313b55c514640d}{computeSymbolicDecomposition}(A);
+163         assert(\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} && \textcolor{stringliteral}{"Symbolic cholesky failed"});
+164       \}
+165 
+166       \textcolor{keywordflow}{if} (! blocks)\{
+167         blocks=\textcolor{keyword}{new} \textcolor{keywordtype}{double}*[A.rows()];
+168         \textcolor{keywordtype}{double} **block=blocks;
+169         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < A.rowBlockIndices().size(); ++i)\{
+170           \textcolor{keywordtype}{int} dim=A.rowsOfBlock(i)*A.colsOfBlock(i);
+171           *block = \textcolor{keyword}{new} \textcolor{keywordtype}{double} [dim];
+172           block++;
+173         \}
+174       \}
+175 
+176       cholmod\_factorize(\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}, \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}, &
+      \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon});
+177       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.status == CHOLMOD\_NOT\_POSDEF)
+178         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+179 
+180       \textcolor{comment}{// convert the factorization to LL, simplical, packed, monotonic}
+181       \textcolor{keywordtype}{int} change\_status = cholmod\_change\_factor(CHOLMOD\_REAL, 1, 0, 1, 1, 
+      \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}, &\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon});
+182       \textcolor{keywordflow}{if} (! change\_status) \{
+183         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+184       \}
+185       assert(\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->is\_ll && !\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->is\_super && 
+      \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->is\_monotonic && \textcolor{stringliteral}{"Cholesky factor has wrong format"});
+186 
+187       \textcolor{comment}{// invert the permutation}
+188       \textcolor{keywordtype}{int}* p = (\textcolor{keywordtype}{int}*)\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->Perm;
+189       \hyperlink{namespaceg2o_a2797ddaf7a7a6dc22843a38d34754e55}{VectorXI} pinv; pinv.resize(\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->ncol);
+190       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->ncol; ++i)
+191         pinv(p[i]) = i;
+192 
+193       \textcolor{comment}{// compute the marginal covariance}
+194       MarginalCovarianceCholesky mcc;
+195       mcc.setCholeskyFactor(\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->ncol, (\textcolor{keywordtype}{int}*)
+      \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->p, (\textcolor{keywordtype}{int}*)\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->i,
+196           (\textcolor{keywordtype}{double}*)\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->x, pinv.data());
+197       mcc.computeCovariance(blocks, A.rowBlockIndices());
+198 
+199       G2OBatchStatistics* globalStats = \hyperlink{structg2o_1_1G2OBatchStatistics_a06f9c667d8b48b8f0023e27011818b64}{G2OBatchStatistics::globalStats}();
+200       \textcolor{keywordflow}{if} (globalStats) \{
+201         globalStats->choleskyNNZ = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.method[
+      \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.selected].lnz);
+202       \}
+203 
+204       \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+205     \}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!solve\+Pattern@{solve\+Pattern}}
+\index{solve\+Pattern@{solve\+Pattern}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{solve\+Pattern(\+Sparse\+Block\+Matrix$<$ Matrix\+X\+D $>$ \&spinv, const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices, const Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ \&\+A)}{solvePattern(SparseBlockMatrix< MatrixXD > &spinv, const std::vector< std::pair< int, int > > &blockIndices, const SparseBlockMatrix< MatrixType > &A)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ virtual bool {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::solve\+Pattern (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Block\+Matrix}$<$ {\bf Matrix\+XD} $>$ \&}]{spinv, }
+\item[{const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&}]{block\+Indices, }
+\item[{const {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&}]{A}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a26b03e93525b164b7842cc8b2f0ad000}{}\label{classg2o_1_1LinearSolverCholmod_a26b03e93525b164b7842cc8b2f0ad000}
+
+
+Definition at line 207 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+
+References g2o\+::\+G2\+O\+Batch\+Statistics\+::cholesky\+N\+NZ, g2o\+::\+Marginal\+Covariance\+Cholesky\+::compute\+Covariance(), g2o\+::\+G2\+O\+Batch\+Statistics\+::global\+Stats(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::row\+Block\+Indices(), and g2o\+::\+Marginal\+Covariance\+Cholesky\+::set\+Cholesky\+Factor().
+
+
+\begin{DoxyCode}
+208     \{
+209       \textcolor{comment}{//cerr << \_\_PRETTY\_FUNCTION\_\_ << " using cholmod" << endl;}
+210       \hyperlink{classg2o_1_1LinearSolverCholmod_a4b1e18e870b5663f45900dea3bba9155}{fillCholmodExt}(A, \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} != 0); \textcolor{comment}{// \_cholmodFactor used as bool,
+       if not existing will copy the whole structure, otherwise only the values}
+211 
+212       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} == 0) \{
+213         \hyperlink{classg2o_1_1LinearSolverCholmod_a40a0f991ae3bb914f2313b55c514640d}{computeSymbolicDecomposition}(A);
+214         assert(\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor} && \textcolor{stringliteral}{"Symbolic cholesky failed"});
+215       \}
+216 
+217       cholmod\_factorize(\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}, \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}, &
+      \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon});
+218       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.status == CHOLMOD\_NOT\_POSDEF)
+219         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+220 
+221       \textcolor{comment}{// convert the factorization to LL, simplical, packed, monotonic}
+222       \textcolor{keywordtype}{int} change\_status = cholmod\_change\_factor(CHOLMOD\_REAL, 1, 0, 1, 1, 
+      \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}, &\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon});
+223       \textcolor{keywordflow}{if} (! change\_status) \{
+224         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+225       \}
+226       assert(\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->is\_ll && !\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->is\_super && 
+      \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->is\_monotonic && \textcolor{stringliteral}{"Cholesky factor has wrong format"});
+227 
+228       \textcolor{comment}{// invert the permutation}
+229       \textcolor{keywordtype}{int}* p = (\textcolor{keywordtype}{int}*)\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->Perm;
+230       \hyperlink{namespaceg2o_a2797ddaf7a7a6dc22843a38d34754e55}{VectorXI} pinv; pinv.resize(\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->ncol);
+231       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->ncol; ++i)
+232         pinv(p[i]) = i;
+233 
+234       \textcolor{comment}{// compute the marginal covariance}
+235       MarginalCovarianceCholesky mcc;
+236       mcc.setCholeskyFactor(\hyperlink{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{\_cholmodSparse}->ncol, (\textcolor{keywordtype}{int}*)
+      \hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->p, (\textcolor{keywordtype}{int}*)\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->i,
+237           (\textcolor{keywordtype}{double}*)\hyperlink{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{\_cholmodFactor}->x, pinv.data());
+238       mcc.computeCovariance(spinv, A.rowBlockIndices(), blockIndices);
+239 
+240       G2OBatchStatistics* globalStats = \hyperlink{structg2o_1_1G2OBatchStatistics_a06f9c667d8b48b8f0023e27011818b64}{G2OBatchStatistics::globalStats}();
+241       \textcolor{keywordflow}{if} (globalStats) \{
+242         globalStats->choleskyNNZ = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(\hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.method[
+      \hyperlink{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{\_cholmodCommon}.selected].lnz);
+243       \}
+244 
+245       \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+246     \}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!write\+Debug@{write\+Debug}}
+\index{write\+Debug@{write\+Debug}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{write\+Debug() const }{writeDebug() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ virtual bool {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::write\+Debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a84ac87445e40dc2af7fd78dda84eaf8d}{}\label{classg2o_1_1LinearSolverCholmod_a84ac87445e40dc2af7fd78dda84eaf8d}
+
+
+write a debug dump of the system matrix if it is not S\+PD in solve 
+
+
+
+Reimplemented from \hyperlink{classg2o_1_1LinearSolver_a8b6a84bd88f1bbc13d2c80c3a14d4693}{g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$}.
+
+
+
+Definition at line 253 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+\begin{DoxyCode}
+253 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1LinearSolverCholmod_ab13b752d37f43b2d8e1e4b2c7002b054}{\_writeDebug};\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!\+\_\+block\+Ordering@{\+\_\+block\+Ordering}}
+\index{\+\_\+block\+Ordering@{\+\_\+block\+Ordering}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{\+\_\+block\+Ordering}{_blockOrdering}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ bool {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::\+\_\+block\+Ordering\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a1451c262710d169b6a21e06ca1165337}{}\label{classg2o_1_1LinearSolverCholmod_a1451c262710d169b6a21e06ca1165337}
+
+
+Definition at line 266 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!\+\_\+block\+Permutation@{\+\_\+block\+Permutation}}
+\index{\+\_\+block\+Permutation@{\+\_\+block\+Permutation}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{\+\_\+block\+Permutation}{_blockPermutation}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ {\bf Vector\+XI} {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::\+\_\+block\+Permutation\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a6dc3dd0af697846996d6ca72da72ffbd}{}\label{classg2o_1_1LinearSolverCholmod_a6dc3dd0af697846996d6ca72da72ffbd}
+
+
+Definition at line 268 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!\+\_\+cholmod\+Common@{\+\_\+cholmod\+Common}}
+\index{\+\_\+cholmod\+Common@{\+\_\+cholmod\+Common}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{\+\_\+cholmod\+Common}{_cholmodCommon}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ cholmod\+\_\+common {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::\+\_\+cholmod\+Common\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}{}\label{classg2o_1_1LinearSolverCholmod_ae7def9c6bf341e0d2f3a3936121fefa1}
+
+
+Definition at line 263 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!\+\_\+cholmod\+Factor@{\+\_\+cholmod\+Factor}}
+\index{\+\_\+cholmod\+Factor@{\+\_\+cholmod\+Factor}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{\+\_\+cholmod\+Factor}{_cholmodFactor}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ cholmod\+\_\+factor$\ast$ {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::\+\_\+cholmod\+Factor\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}{}\label{classg2o_1_1LinearSolverCholmod_a674a54287f98130c4aab303508ab945b}
+
+
+Definition at line 265 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!\+\_\+cholmod\+Sparse@{\+\_\+cholmod\+Sparse}}
+\index{\+\_\+cholmod\+Sparse@{\+\_\+cholmod\+Sparse}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{\+\_\+cholmod\+Sparse}{_cholmodSparse}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ {\bf Cholmod\+Ext}$\ast$ {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::\+\_\+cholmod\+Sparse\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}{}\label{classg2o_1_1LinearSolverCholmod_aefbdba58c18dc9eac831eb3d7c24fa18}
+
+
+Definition at line 264 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!\+\_\+matrix\+Structure@{\+\_\+matrix\+Structure}}
+\index{\+\_\+matrix\+Structure@{\+\_\+matrix\+Structure}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{\+\_\+matrix\+Structure}{_matrixStructure}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ {\bf Matrix\+Structure} {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::\+\_\+matrix\+Structure\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverCholmod_af939e0478ab4fddb708729a8ab3b6560}{}\label{classg2o_1_1LinearSolverCholmod_af939e0478ab4fddb708729a8ab3b6560}
+
+
+Definition at line 267 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!\+\_\+scalar\+Permutation@{\+\_\+scalar\+Permutation}}
+\index{\+\_\+scalar\+Permutation@{\+\_\+scalar\+Permutation}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{\+\_\+scalar\+Permutation}{_scalarPermutation}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ {\bf Vector\+XI} {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::\+\_\+scalar\+Permutation\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverCholmod_aa195d0f2a09641240e8ab7da8b516460}{}\label{classg2o_1_1LinearSolverCholmod_aa195d0f2a09641240e8ab7da8b516460}
+
+
+Definition at line 268 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+\index{g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}!\+\_\+write\+Debug@{\+\_\+write\+Debug}}
+\index{\+\_\+write\+Debug@{\+\_\+write\+Debug}!g2o\+::\+Linear\+Solver\+Cholmod@{g2o\+::\+Linear\+Solver\+Cholmod}}
+\subsubsection[{\texorpdfstring{\+\_\+write\+Debug}{_writeDebug}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ bool {\bf g2o\+::\+Linear\+Solver\+Cholmod}$<$ Matrix\+Type $>$\+::\+\_\+write\+Debug\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverCholmod_ab13b752d37f43b2d8e1e4b2c7002b054}{}\label{classg2o_1_1LinearSolverCholmod_ab13b752d37f43b2d8e1e4b2c7002b054}
+
+
+Definition at line 269 of file linear\+\_\+solver\+\_\+cholmod.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/solvers/\hyperlink{linear__solver__cholmod_8h}{linear\+\_\+solver\+\_\+cholmod.\+h}\end{DoxyCompactItemize}

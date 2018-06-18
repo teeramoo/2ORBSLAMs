@@ -1,0 +1,53 @@
+\hypertarget{structg2o_1_1OptimizableGraph_1_1VertexIDCompare}{}\section{g2o\+:\+:Optimizable\+Graph\+:\+:Vertex\+I\+D\+Compare Struct Reference}
+\label{structg2o_1_1OptimizableGraph_1_1VertexIDCompare}\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex\+I\+D\+Compare@{g2o\+::\+Optimizable\+Graph\+::\+Vertex\+I\+D\+Compare}}
+
+
+order vertices based on their ID  
+
+
+
+
+{\ttfamily \#include $<$optimizable\+\_\+graph.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structg2o_1_1OptimizableGraph_1_1VertexIDCompare_a68baebda754c0ce40a550351f95976bc}{operator()} (const \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex}{Vertex} $\ast$v1, const \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex}{Vertex} $\ast$v2) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+order vertices based on their ID 
+
+Definition at line 102 of file optimizable\+\_\+graph.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex\+I\+D\+Compare@{g2o\+::\+Optimizable\+Graph\+::\+Vertex\+I\+D\+Compare}!operator()@{operator()}}
+\index{operator()@{operator()}!g2o\+::\+Optimizable\+Graph\+::\+Vertex\+I\+D\+Compare@{g2o\+::\+Optimizable\+Graph\+::\+Vertex\+I\+D\+Compare}}
+\subsubsection[{\texorpdfstring{operator()(const Vertex $\ast$v1, const Vertex $\ast$v2) const }{operator()(const Vertex *v1, const Vertex *v2) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+I\+D\+Compare\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} $\ast$}]{v1, }
+\item[{const {\bf Vertex} $\ast$}]{v2}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1OptimizableGraph_1_1VertexIDCompare_a68baebda754c0ce40a550351f95976bc}{}\label{structg2o_1_1OptimizableGraph_1_1VertexIDCompare_a68baebda754c0ce40a550351f95976bc}
+
+
+Definition at line 103 of file optimizable\+\_\+graph.\+h.
+
+
+
+References g2o\+::\+Hyper\+Graph\+::\+Vertex\+::id().
+
+
+\begin{DoxyCode}
+104       \{
+105         \textcolor{keywordflow}{return} v1->id() < v2->id();
+106       \}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{optimizable__graph_8h}{optimizable\+\_\+graph.\+h}\end{DoxyCompactItemize}

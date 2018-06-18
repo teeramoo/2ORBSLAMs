@@ -1,0 +1,505 @@
+\hypertarget{classg2o_1_1Factory}{}\section{g2o\+:\+:Factory Class Reference}
+\label{classg2o_1_1Factory}\index{g2o\+::\+Factory@{g2o\+::\+Factory}}
+
+
+create vertices and edges based on T\+A\+Gs in, for example, a file  
+
+
+
+
+{\ttfamily \#include $<$factory.\+h$>$}
+
+
+
+Collaboration diagram for g2o\+:\+:Factory\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classg2o_1_1Factory_1_1CreatorInformation}{Creator\+Information}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classg2o_1_1Factory_aba2f2e40635fd1b996981cefdb65c346}{register\+Type} (const std\+::string \&\hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag}, \hyperlink{classg2o_1_1AbstractHyperGraphElementCreator}{Abstract\+Hyper\+Graph\+Element\+Creator} $\ast$\hyperlink{sparse__helper_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c})
+\item 
+void \hyperlink{classg2o_1_1Factory_a01b16c7d5a49ddab5ccd5980f76900b7}{unregister\+Type} (const std\+::string \&\hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag})
+\item 
+\hyperlink{structg2o_1_1HyperGraph_1_1HyperGraphElement}{Hyper\+Graph\+::\+Hyper\+Graph\+Element} $\ast$ \hyperlink{classg2o_1_1Factory_afd0e0c7021e344087a09ade1c11bc15c}{construct} (const std\+::string \&\hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag}) const 
+\item 
+\hyperlink{structg2o_1_1HyperGraph_1_1HyperGraphElement}{Hyper\+Graph\+::\+Hyper\+Graph\+Element} $\ast$ \hyperlink{classg2o_1_1Factory_adb39d806299cacf7e1d4f982bc22a45f}{construct} (const std\+::string \&\hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag}, const \hyperlink{classg2o_1_1HyperGraph_a7b8fda20e1b03e92aeceeac6e8218b73}{Hyper\+Graph\+::\+Graph\+Elem\+Bitset} \&elems\+To\+Construct) const 
+\item 
+bool \hyperlink{classg2o_1_1Factory_a57d370d8b31c214215cd6df31e5eb472}{knows\+Tag} (const std\+::string \&\hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag}, int $\ast$element\+Type=0) const 
+\item 
+const std\+::string \& \hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag} (const \hyperlink{structg2o_1_1HyperGraph_1_1HyperGraphElement}{Hyper\+Graph\+::\+Hyper\+Graph\+Element} $\ast$v) const 
+\begin{DoxyCompactList}\small\item\em return the T\+AG given a vertex \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1Factory_ae7c0f4e892d3c5af8cd198ceb144476f}{fill\+Known\+Types} (std\+::vector$<$ std\+::string $>$ \&types) const 
+\item 
+void \hyperlink{classg2o_1_1Factory_a0a9e898c4025151062856f4aa5ab6092}{print\+Registered\+Types} (std\+::ostream \&os, bool comment=false) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classg2o_1_1Factory}{Factory} $\ast$ \hyperlink{classg2o_1_1Factory_a8a1f33e017c5ad59399cef48972578ae}{instance} ()
+\begin{DoxyCompactList}\small\item\em return the instance \end{DoxyCompactList}\item 
+static void \hyperlink{classg2o_1_1Factory_ab40f0aa18dabb91a35de7186ede9355a}{destroy} ()
+\begin{DoxyCompactList}\small\item\em free the instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, \hyperlink{classg2o_1_1Factory_1_1CreatorInformation}{Creator\+Information} $\ast$ $>$ \hyperlink{classg2o_1_1Factory_a639c8d850892dddc20098e9aa97ef9e8}{Creator\+Map}
+\item 
+typedef std\+::map$<$ std\+::string, std\+::string $>$ \hyperlink{classg2o_1_1Factory_aba274179c053b3b71dcef6a20c898496}{Tag\+Lookup}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1Factory_af8b5afc514363e6f00c61e8acd67b495}{Factory} ()
+\item 
+\hyperlink{classg2o_1_1Factory_a4b7c6970f55045ee632e6276387d0223}{$\sim$\+Factory} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1Factory_a639c8d850892dddc20098e9aa97ef9e8}{Creator\+Map} \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\+\_\+creator}
+\begin{DoxyCompactList}\small\item\em look-\/up map for the existing creators \end{DoxyCompactList}\item 
+\hyperlink{classg2o_1_1Factory_aba274179c053b3b71dcef6a20c898496}{Tag\+Lookup} \hyperlink{classg2o_1_1Factory_a93fbd79ea000ed88101c1f23b19e6e2a}{\+\_\+tag\+Lookup}
+\begin{DoxyCompactList}\small\item\em reverse look-\/up, class name to tag \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classg2o_1_1Factory}{Factory} $\ast$ \hyperlink{classg2o_1_1Factory_a4eab3a865dee18a71bb73246dc3e9f4b}{factory\+Instance} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+create vertices and edges based on T\+A\+Gs in, for example, a file 
+
+Definition at line 49 of file factory.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!Creator\+Map@{Creator\+Map}}
+\index{Creator\+Map@{Creator\+Map}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{Creator\+Map}{CreatorMap}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$std\+::string, {\bf Creator\+Information}$\ast$$>$ {\bf g2o\+::\+Factory\+::\+Creator\+Map}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Factory_a639c8d850892dddc20098e9aa97ef9e8}{}\label{classg2o_1_1Factory_a639c8d850892dddc20098e9aa97ef9e8}
+
+
+Definition at line 118 of file factory.\+h.
+
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!Tag\+Lookup@{Tag\+Lookup}}
+\index{Tag\+Lookup@{Tag\+Lookup}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{Tag\+Lookup}{TagLookup}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$std\+::string, std\+::string$>$ {\bf g2o\+::\+Factory\+::\+Tag\+Lookup}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Factory_aba274179c053b3b71dcef6a20c898496}{}\label{classg2o_1_1Factory_aba274179c053b3b71dcef6a20c898496}
+
+
+Definition at line 119 of file factory.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!Factory@{Factory}}
+\index{Factory@{Factory}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{Factory()}{Factory()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Factory\+::\+Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Factory_af8b5afc514363e6f00c61e8acd67b495}{}\label{classg2o_1_1Factory_af8b5afc514363e6f00c61e8acd67b495}
+
+
+Definition at line 45 of file factory.\+cpp.
+
+
+\begin{DoxyCode}
+46 \{
+47 \}
+\end{DoxyCode}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!````~Factory@{$\sim$\+Factory}}
+\index{````~Factory@{$\sim$\+Factory}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{$\sim$\+Factory()}{~Factory()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Factory\+::$\sim$\+Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Factory_a4b7c6970f55045ee632e6276387d0223}{}\label{classg2o_1_1Factory_a4b7c6970f55045ee632e6276387d0223}
+
+
+Definition at line 49 of file factory.\+cpp.
+
+
+\begin{DoxyCode}
+50 \{
+51 \textcolor{preprocessor}{# ifdef G2O\_DEBUG\_FACTORY}
+52   cerr << \textcolor{stringliteral}{"# Factory destroying "} << (\textcolor{keywordtype}{void}*)\textcolor{keyword}{this} << endl;
+53 \textcolor{preprocessor}{# endif}
+54   \textcolor{keywordflow}{for} (CreatorMap::iterator it = \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.begin(); it != \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.end(); ++it) \{
+55     \textcolor{keyword}{delete} it->second->creator;
+56   \}
+57   \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.clear();
+58   \hyperlink{classg2o_1_1Factory_a93fbd79ea000ed88101c1f23b19e6e2a}{\_tagLookup}.clear();
+59 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!construct@{construct}}
+\index{construct@{construct}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{construct(const std\+::string \&tag) const }{construct(const std::string &tag) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph\+::\+Hyper\+Graph\+Element} $\ast$ g2o\+::\+Factory\+::construct (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tag}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1Factory_afd0e0c7021e344087a09ade1c11bc15c}{}\label{classg2o_1_1Factory_afd0e0c7021e344087a09ade1c11bc15c}
+construct a graph element based on its tag 
+
+Definition at line 147 of file factory.\+cpp.
+
+
+
+Referenced by g2o\+::\+Cache\+Container\+::create\+Cache(), g2o\+::\+Parameter\+Container\+::read(), and g2o\+::\+Optimizable\+Graph\+::set\+Fixed().
+
+
+\begin{DoxyCode}
+148 \{
+149   CreatorMap::const\_iterator foundIt = \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.find(\hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag});
+150   \textcolor{keywordflow}{if} (foundIt != \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.end()) \{
+151     \textcolor{comment}{//cerr << "tag " << tag << " -> " << (void*) foundIt->second->creator << " " <<
+       foundIt->second->creator->name() << endl;}
+152     \textcolor{keywordflow}{return} foundIt->second->creator->construct();
+153   \}
+154   \textcolor{keywordflow}{return} 0;
+155 \}
+\end{DoxyCode}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!construct@{construct}}
+\index{construct@{construct}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{construct(const std\+::string \&tag, const Hyper\+Graph\+::\+Graph\+Elem\+Bitset \&elems\+To\+Construct) const }{construct(const std::string &tag, const HyperGraph::GraphElemBitset &elemsToConstruct) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph\+::\+Hyper\+Graph\+Element} $\ast$ g2o\+::\+Factory\+::construct (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tag, }
+\item[{const {\bf Hyper\+Graph\+::\+Graph\+Elem\+Bitset} \&}]{elems\+To\+Construct}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1Factory_adb39d806299cacf7e1d4f982bc22a45f}{}\label{classg2o_1_1Factory_adb39d806299cacf7e1d4f982bc22a45f}
+construct a graph element based on its tag, but only if it\textquotesingle{}s type (a bitmask) matches. A bitmask without any bit set will construct any item. Otherwise a bit has to be set to allow construction of a graph element. 
+
+Definition at line 204 of file factory.\+cpp.
+
+
+\begin{DoxyCode}
+205 \{
+206   \textcolor{keywordflow}{if} (elemsToConstruct.none()) \{
+207     \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1Factory_afd0e0c7021e344087a09ade1c11bc15c}{construct}(\hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag});
+208   \}
+209   CreatorMap::const\_iterator foundIt = \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.find(\hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag});
+210   \textcolor{keywordflow}{if} (foundIt != \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.end() && foundIt->second->elementTypeBit >= 0 && elemsToConstruct.test(
+      foundIt->second->elementTypeBit)) \{
+211     \textcolor{keywordflow}{return} foundIt->second->creator->construct();
+212   \}
+213   \textcolor{keywordflow}{return} 0;
+214 \}
+\end{DoxyCode}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!destroy@{destroy}}
+\index{destroy@{destroy}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{destroy()}{destroy()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Factory\+::destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classg2o_1_1Factory_ab40f0aa18dabb91a35de7186ede9355a}{}\label{classg2o_1_1Factory_ab40f0aa18dabb91a35de7186ede9355a}
+
+
+free the instance 
+
+
+
+Definition at line 186 of file factory.\+cpp.
+
+
+\begin{DoxyCode}
+187 \{
+188   \textcolor{keyword}{delete} \hyperlink{classg2o_1_1Factory_a4eab3a865dee18a71bb73246dc3e9f4b}{factoryInstance};
+189   \hyperlink{classg2o_1_1Factory_a4eab3a865dee18a71bb73246dc3e9f4b}{factoryInstance} = 0;
+190 \}
+\end{DoxyCode}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!fill\+Known\+Types@{fill\+Known\+Types}}
+\index{fill\+Known\+Types@{fill\+Known\+Types}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{fill\+Known\+Types(std\+::vector$<$ std\+::string $>$ \&types) const }{fillKnownTypes(std::vector< std::string > &types) const }}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Factory\+::fill\+Known\+Types (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{types}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1Factory_ae7c0f4e892d3c5af8cd198ceb144476f}{}\label{classg2o_1_1Factory_ae7c0f4e892d3c5af8cd198ceb144476f}
+get a list of all known types 
+
+Definition at line 166 of file factory.\+cpp.
+
+
+\begin{DoxyCode}
+167 \{
+168   types.clear();
+169   \textcolor{keywordflow}{for} (CreatorMap::const\_iterator it = \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.begin(); it != \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.end(); ++it)
+170     types.push\_back(it->first);
+171 \}
+\end{DoxyCode}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!instance@{instance}}
+\index{instance@{instance}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{instance()}{instance()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Factory} $\ast$ g2o\+::\+Factory\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classg2o_1_1Factory_a8a1f33e017c5ad59399cef48972578ae}{}\label{classg2o_1_1Factory_a8a1f33e017c5ad59399cef48972578ae}
+
+
+return the instance 
+
+
+
+Definition at line 61 of file factory.\+cpp.
+
+
+
+Referenced by g2o\+::\+Cache\+Container\+::create\+Cache(), g2o\+::\+Cache\+::key(), g2o\+::\+Parameter\+Container\+::read(), g2o\+::\+Register\+Type\+Proxy$<$ T $>$\+::\+Register\+Type\+Proxy(), g2o\+::\+Optimizable\+Graph\+::save\+Edge(), g2o\+::\+Optimizable\+Graph\+::save\+Vertex(), g2o\+::\+Optimizable\+Graph\+::set\+Fixed(), g2o\+::\+Optimizable\+Graph\+::set\+Renamed\+Types\+From\+String(), g2o\+::\+Parameter\+Container\+::write(), and g2o\+::\+Register\+Type\+Proxy$<$ T $>$\+::$\sim$\+Register\+Type\+Proxy().
+
+
+\begin{DoxyCode}
+62 \{
+63   \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1Factory_a4eab3a865dee18a71bb73246dc3e9f4b}{factoryInstance} == 0) \{
+64     \hyperlink{classg2o_1_1Factory_a4eab3a865dee18a71bb73246dc3e9f4b}{factoryInstance} = \textcolor{keyword}{new} \hyperlink{classg2o_1_1Factory_af8b5afc514363e6f00c61e8acd67b495}{Factory};
+65 \textcolor{preprocessor}{#  ifdef G2O\_DEBUG\_FACTORY}
+66     cerr << \textcolor{stringliteral}{"# Factory allocated "} << (\textcolor{keywordtype}{void}*)\hyperlink{classg2o_1_1Factory_a4eab3a865dee18a71bb73246dc3e9f4b}{factoryInstance} << endl;
+67 \textcolor{preprocessor}{#  endif}
+68   \}
+69 
+70   \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1Factory_a4eab3a865dee18a71bb73246dc3e9f4b}{factoryInstance};
+71 \}
+\end{DoxyCode}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!knows\+Tag@{knows\+Tag}}
+\index{knows\+Tag@{knows\+Tag}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{knows\+Tag(const std\+::string \&tag, int $\ast$element\+Type=0) const }{knowsTag(const std::string &tag, int *elementType=0) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Factory\+::knows\+Tag (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tag, }
+\item[{int $\ast$}]{element\+Type = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1Factory_a57d370d8b31c214215cd6df31e5eb472}{}\label{classg2o_1_1Factory_a57d370d8b31c214215cd6df31e5eb472}
+return whether the factory knows this tag or not 
+
+Definition at line 173 of file factory.\+cpp.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::set\+Fixed(), and g2o\+::\+Optimizable\+Graph\+::set\+Renamed\+Types\+From\+String().
+
+
+\begin{DoxyCode}
+174 \{
+175   CreatorMap::const\_iterator foundIt = \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.find(\hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag});
+176   \textcolor{keywordflow}{if} (foundIt == \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.end()) \{
+177     \textcolor{keywordflow}{if} (elementType)
+178       *elementType = -1;
+179     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+180   \}
+181   \textcolor{keywordflow}{if} (elementType)
+182     *elementType = foundIt->second->elementTypeBit;
+183   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+184 \}
+\end{DoxyCode}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!print\+Registered\+Types@{print\+Registered\+Types}}
+\index{print\+Registered\+Types@{print\+Registered\+Types}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{print\+Registered\+Types(std\+::ostream \&os, bool comment=false) const }{printRegisteredTypes(std::ostream &os, bool comment=false) const }}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Factory\+::print\+Registered\+Types (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{bool}]{comment = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1Factory_a0a9e898c4025151062856f4aa5ab6092}{}\label{classg2o_1_1Factory_a0a9e898c4025151062856f4aa5ab6092}
+print a list of the known registered types to the given stream 
+
+Definition at line 192 of file factory.\+cpp.
+
+
+\begin{DoxyCode}
+193 \{
+194   \textcolor{keywordflow}{if} (comment)
+195     os << \textcolor{stringliteral}{"# "};
+196   os << \textcolor{stringliteral}{"types:"} << endl;
+197   \textcolor{keywordflow}{for} (CreatorMap::const\_iterator it = \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.begin(); it != \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.end(); ++it) \{
+198     \textcolor{keywordflow}{if} (comment)
+199       os << \textcolor{stringliteral}{"#"};
+200     cerr << \textcolor{stringliteral}{"\(\backslash\)t"} << it->first << endl;
+201   \}
+202 \}
+\end{DoxyCode}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!register\+Type@{register\+Type}}
+\index{register\+Type@{register\+Type}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{register\+Type(const std\+::string \&tag, Abstract\+Hyper\+Graph\+Element\+Creator $\ast$c)}{registerType(const std::string &tag, AbstractHyperGraphElementCreator *c)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Factory\+::register\+Type (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tag, }
+\item[{{\bf Abstract\+Hyper\+Graph\+Element\+Creator} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1Factory_aba2f2e40635fd1b996981cefdb65c346}{}\label{classg2o_1_1Factory_aba2f2e40635fd1b996981cefdb65c346}
+register a tag for a specific creator 
+
+Definition at line 73 of file factory.\+cpp.
+
+
+
+References c, g2o\+::\+Abstract\+Hyper\+Graph\+Element\+Creator\+::construct(), g2o\+::\+Factory\+::\+Creator\+Information\+::creator, g2o\+::\+Factory\+::\+Creator\+Information\+::element\+Type\+Bit, and g2o\+::\+Abstract\+Hyper\+Graph\+Element\+Creator\+::name().
+
+
+
+Referenced by g2o\+::\+Register\+Type\+Proxy$<$ T $>$\+::\+Register\+Type\+Proxy().
+
+
+\begin{DoxyCode}
+74 \{
+75   CreatorMap::const\_iterator foundIt = \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.find(\hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag});
+76   \textcolor{keywordflow}{if} (foundIt != \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.end()) \{
+77     cerr << \textcolor{stringliteral}{"FACTORY WARNING: Overwriting Vertex tag "} << \hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag} << endl;
+78     assert(0);
+79   \}
+80   TagLookup::const\_iterator tagIt = \hyperlink{classg2o_1_1Factory_a93fbd79ea000ed88101c1f23b19e6e2a}{\_tagLookup}.find(\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}->name());
+81   \textcolor{keywordflow}{if} (tagIt != \hyperlink{classg2o_1_1Factory_a93fbd79ea000ed88101c1f23b19e6e2a}{\_tagLookup}.end()) \{
+82     cerr << \textcolor{stringliteral}{"FACTORY WARNING: Registering same class for two tags "} << \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}->name() << endl;
+83     assert(0);
+84   \}
+85 
+86   CreatorInformation* ci = \textcolor{keyword}{new} CreatorInformation();
+87   ci->creator = \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c};
+88 
+89 \textcolor{preprocessor}{#ifdef G2O\_DEBUG\_FACTORY}
+90   cerr << \textcolor{stringliteral}{"# Factory "} << (\textcolor{keywordtype}{void}*)\textcolor{keyword}{this} << \textcolor{stringliteral}{" constructing type "} << \hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag} << \textcolor{stringliteral}{" "};
+91 \textcolor{preprocessor}{#endif}
+92   \textcolor{comment}{// construct an element once to figure out its type}
+93   HyperGraph::HyperGraphElement* element = \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}->construct();
+94   ci->elementTypeBit = element->elementType();
+95 
+96 \textcolor{preprocessor}{#ifdef G2O\_DEBUG\_FACTORY}
+97   cerr << \textcolor{stringliteral}{"done."} << endl;
+98   cerr << \textcolor{stringliteral}{"# Factory "} << (\textcolor{keywordtype}{void}*)\textcolor{keyword}{this} << \textcolor{stringliteral}{" registering "} << \hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag};
+99   cerr << \textcolor{stringliteral}{" "} << (\textcolor{keywordtype}{void}*) \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c} << \textcolor{stringliteral}{" "};
+100   \textcolor{keywordflow}{switch} (element->elementType()) \{
+101     \textcolor{keywordflow}{case} \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69ea4a278c79154a0d4c381a7e265d7048f5}{HyperGraph::HGET\_VERTEX}:
+102       cerr << \textcolor{stringliteral}{" -> Vertex"};
+103       \textcolor{keywordflow}{break};
+104     \textcolor{keywordflow}{case} \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69ea32ab1204ad3640d91c59ce6fffe2e580}{HyperGraph::HGET\_EDGE}:
+105       cerr << \textcolor{stringliteral}{" -> Edge"};
+106       \textcolor{keywordflow}{break};
+107     \textcolor{keywordflow}{case} \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eaec8dd0de424ff24a18d3ba5ed3864f79}{HyperGraph::HGET\_PARAMETER}:
+108       cerr << \textcolor{stringliteral}{" -> Parameter"};
+109       \textcolor{keywordflow}{break};
+110     \textcolor{keywordflow}{case} \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eafdb05add70f035dced2b173de8431408}{HyperGraph::HGET\_CACHE}:
+111       cerr << \textcolor{stringliteral}{" -> Cache"};
+112       \textcolor{keywordflow}{break};
+113     \textcolor{keywordflow}{case} \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eac780d65b4de763d230e9cad4378c46fa}{HyperGraph::HGET\_DATA}:
+114       cerr << \textcolor{stringliteral}{" -> Data"};
+115       \textcolor{keywordflow}{break};
+116     \textcolor{keywordflow}{default}:
+117       assert(0 && \textcolor{stringliteral}{"Unknown element type occured, fix elementTypes"});
+118       \textcolor{keywordflow}{break};
+119   \}
+120   cerr << endl;
+121 \textcolor{preprocessor}{#endif}
+122 
+123   \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}[\hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag}] = ci;
+124   \hyperlink{classg2o_1_1Factory_a93fbd79ea000ed88101c1f23b19e6e2a}{\_tagLookup}[\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}->name()] = \hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag};
+125   \textcolor{keyword}{delete} element;
+126 \}
+\end{DoxyCode}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!tag@{tag}}
+\index{tag@{tag}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{tag(const Hyper\+Graph\+::\+Hyper\+Graph\+Element $\ast$v) const }{tag(const HyperGraph::HyperGraphElement *v) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& g2o\+::\+Factory\+::tag (
+\begin{DoxyParamCaption}
+\item[{const {\bf Hyper\+Graph\+::\+Hyper\+Graph\+Element} $\ast$}]{v}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{}\label{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}
+
+
+return the T\+AG given a vertex 
+
+
+
+Definition at line 157 of file factory.\+cpp.
+
+
+
+Referenced by g2o\+::\+Cache\+::key(), g2o\+::\+Optimizable\+Graph\+::save\+Edge(), g2o\+::\+Optimizable\+Graph\+::save\+Vertex(), and g2o\+::\+Parameter\+Container\+::write().
+
+
+\begin{DoxyCode}
+158 \{
+159   \textcolor{keyword}{static} std::string emptyStr(\textcolor{stringliteral}{""});
+160   TagLookup::const\_iterator foundIt = \hyperlink{classg2o_1_1Factory_a93fbd79ea000ed88101c1f23b19e6e2a}{\_tagLookup}.find(\textcolor{keyword}{typeid}(*e).name());
+161   \textcolor{keywordflow}{if} (foundIt != \hyperlink{classg2o_1_1Factory_a93fbd79ea000ed88101c1f23b19e6e2a}{\_tagLookup}.end())
+162     \textcolor{keywordflow}{return} foundIt->second;
+163   \textcolor{keywordflow}{return} emptyStr;
+164 \}
+\end{DoxyCode}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!unregister\+Type@{unregister\+Type}}
+\index{unregister\+Type@{unregister\+Type}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{unregister\+Type(const std\+::string \&tag)}{unregisterType(const std::string &tag)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Factory\+::unregister\+Type (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tag}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1Factory_a01b16c7d5a49ddab5ccd5980f76900b7}{}\label{classg2o_1_1Factory_a01b16c7d5a49ddab5ccd5980f76900b7}
+unregister a tag for a specific creator 
+
+Definition at line 128 of file factory.\+cpp.
+
+
+
+References c, and g2o\+::\+Abstract\+Hyper\+Graph\+Element\+Creator\+::name().
+
+
+
+Referenced by g2o\+::\+Register\+Type\+Proxy$<$ T $>$\+::$\sim$\+Register\+Type\+Proxy().
+
+
+\begin{DoxyCode}
+129   \{
+130     \textcolor{comment}{// Look for the tag}
+131     CreatorMap::iterator tagPosition = \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.find(\hyperlink{classg2o_1_1Factory_a337d1377ea4e47c31dd04e85e51a2516}{tag});
+132 
+133     \textcolor{keywordflow}{if} (tagPosition != \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.end()) \{
+134 
+135       AbstractHyperGraphElementCreator* \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c} = tagPosition->second->creator;
+136 
+137       \textcolor{comment}{// If we found it, remove the creator from the tag lookup map}
+138       TagLookup::iterator classPosition = \hyperlink{classg2o_1_1Factory_a93fbd79ea000ed88101c1f23b19e6e2a}{\_tagLookup}.find(c->name());
+139       \textcolor{keywordflow}{if} (classPosition != \hyperlink{classg2o_1_1Factory_a93fbd79ea000ed88101c1f23b19e6e2a}{\_tagLookup}.end())
+140         \{
+141           \hyperlink{classg2o_1_1Factory_a93fbd79ea000ed88101c1f23b19e6e2a}{\_tagLookup}.erase(classPosition);
+142         \}
+143       \hyperlink{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{\_creator}.erase(tagPosition);
+144     \}
+145   \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!\+\_\+creator@{\+\_\+creator}}
+\index{\+\_\+creator@{\+\_\+creator}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{\+\_\+creator}{_creator}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Creator\+Map} g2o\+::\+Factory\+::\+\_\+creator\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}{}\label{classg2o_1_1Factory_a38e27fb1014dfb8691f4df045ebb5130}
+
+
+look-\/up map for the existing creators 
+
+
+
+Definition at line 123 of file factory.\+h.
+
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!\+\_\+tag\+Lookup@{\+\_\+tag\+Lookup}}
+\index{\+\_\+tag\+Lookup@{\+\_\+tag\+Lookup}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{\+\_\+tag\+Lookup}{_tagLookup}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tag\+Lookup} g2o\+::\+Factory\+::\+\_\+tag\+Lookup\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Factory_a93fbd79ea000ed88101c1f23b19e6e2a}{}\label{classg2o_1_1Factory_a93fbd79ea000ed88101c1f23b19e6e2a}
+
+
+reverse look-\/up, class name to tag 
+
+
+
+Definition at line 124 of file factory.\+h.
+
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!factory\+Instance@{factory\+Instance}}
+\index{factory\+Instance@{factory\+Instance}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection[{\texorpdfstring{factory\+Instance}{factoryInstance}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Factory} $\ast$ g2o\+::\+Factory\+::factory\+Instance = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classg2o_1_1Factory_a4eab3a865dee18a71bb73246dc3e9f4b}{}\label{classg2o_1_1Factory_a4eab3a865dee18a71bb73246dc3e9f4b}
+
+
+Definition at line 127 of file factory.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{factory_8h}{factory.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{factory_8cpp}{factory.\+cpp}\end{DoxyCompactItemize}

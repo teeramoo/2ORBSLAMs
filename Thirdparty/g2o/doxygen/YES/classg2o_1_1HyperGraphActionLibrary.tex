@@ -1,0 +1,301 @@
+\hypertarget{classg2o_1_1HyperGraphActionLibrary}{}\section{g2o\+:\+:Hyper\+Graph\+Action\+Library Class Reference}
+\label{classg2o_1_1HyperGraphActionLibrary}\index{g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}}
+
+
+library of actions, indexed by the action name;  
+
+
+
+
+{\ttfamily \#include $<$hyper\+\_\+graph\+\_\+action.\+h$>$}
+
+
+
+Collaboration diagram for g2o\+:\+:Hyper\+Graph\+Action\+Library\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1HyperGraphElementAction}{Hyper\+Graph\+Element\+Action} $\ast$ \hyperlink{classg2o_1_1HyperGraphActionLibrary_abef8ce416dd53f2d4e8d8566abf4a00f}{action\+By\+Name} (const std\+::string \&name)
+\item 
+bool \hyperlink{classg2o_1_1HyperGraphActionLibrary_a8ff09559af9efdf636ad14a011ef73ae}{register\+Action} (\hyperlink{classg2o_1_1HyperGraphElementAction}{Hyper\+Graph\+Element\+Action} $\ast$action)
+\item 
+bool \hyperlink{classg2o_1_1HyperGraphActionLibrary_abe4c076e6734ffa79f6d2bff07f9fad5}{unregister\+Action} (\hyperlink{classg2o_1_1HyperGraphElementAction}{Hyper\+Graph\+Element\+Action} $\ast$action)
+\item 
+\hyperlink{classg2o_1_1HyperGraphElementAction_abc889fc90ae1bbb63d90c7993777417a}{Hyper\+Graph\+Element\+Action\+::\+Action\+Map} \& \hyperlink{classg2o_1_1HyperGraphActionLibrary_a99d123d19dda08f30ab0088d361fc640}{action\+Map} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classg2o_1_1HyperGraphActionLibrary}{Hyper\+Graph\+Action\+Library} $\ast$ \hyperlink{classg2o_1_1HyperGraphActionLibrary_a12074e3f4d9bcb3da20a4fe23d18b745}{instance} ()
+\begin{DoxyCompactList}\small\item\em return the single instance of the \hyperlink{classg2o_1_1HyperGraphActionLibrary}{Hyper\+Graph\+Action\+Library} \end{DoxyCompactList}\item 
+static void \hyperlink{classg2o_1_1HyperGraphActionLibrary_aa235ae7c242c522518b07d019dbf8a51}{destroy} ()
+\begin{DoxyCompactList}\small\item\em free the instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1HyperGraphActionLibrary_a68fe0eee5bdda62e6929c3ee2b4b38f1}{Hyper\+Graph\+Action\+Library} ()
+\item 
+\hyperlink{classg2o_1_1HyperGraphActionLibrary_af0d04ecf012d498c09d68725aaf939e5}{$\sim$\+Hyper\+Graph\+Action\+Library} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1HyperGraphElementAction_abc889fc90ae1bbb63d90c7993777417a}{Hyper\+Graph\+Element\+Action\+::\+Action\+Map} \hyperlink{classg2o_1_1HyperGraphActionLibrary_afc9e9b39a743700dcfc896b50d176b3b}{\+\_\+action\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classg2o_1_1HyperGraphActionLibrary}{Hyper\+Graph\+Action\+Library} $\ast$ \hyperlink{classg2o_1_1HyperGraphActionLibrary_a65d1811736d86ff9f6453a728cac160f}{action\+Lib\+Instance} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+library of actions, indexed by the action name; 
+
+library of actions, indexed by the action name; one can use ti to register a collection of actions 
+
+Definition at line 136 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}!Hyper\+Graph\+Action\+Library@{Hyper\+Graph\+Action\+Library}}
+\index{Hyper\+Graph\+Action\+Library@{Hyper\+Graph\+Action\+Library}!g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}}
+\subsubsection[{\texorpdfstring{Hyper\+Graph\+Action\+Library()}{HyperGraphActionLibrary()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Hyper\+Graph\+Action\+Library\+::\+Hyper\+Graph\+Action\+Library (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1HyperGraphActionLibrary_a68fe0eee5bdda62e6929c3ee2b4b38f1}{}\label{classg2o_1_1HyperGraphActionLibrary_a68fe0eee5bdda62e6929c3ee2b4b38f1}
+
+
+Definition at line 141 of file hyper\+\_\+graph\+\_\+action.\+cpp.
+
+
+\begin{DoxyCode}
+142   \{
+143   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}!````~Hyper\+Graph\+Action\+Library@{$\sim$\+Hyper\+Graph\+Action\+Library}}
+\index{````~Hyper\+Graph\+Action\+Library@{$\sim$\+Hyper\+Graph\+Action\+Library}!g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}}
+\subsubsection[{\texorpdfstring{$\sim$\+Hyper\+Graph\+Action\+Library()}{~HyperGraphActionLibrary()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Hyper\+Graph\+Action\+Library\+::$\sim$\+Hyper\+Graph\+Action\+Library (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1HyperGraphActionLibrary_af0d04ecf012d498c09d68725aaf939e5}{}\label{classg2o_1_1HyperGraphActionLibrary_af0d04ecf012d498c09d68725aaf939e5}
+
+
+Definition at line 159 of file hyper\+\_\+graph\+\_\+action.\+cpp.
+
+
+\begin{DoxyCode}
+160   \{
+161     \textcolor{keywordflow}{for} (HyperGraphElementAction::ActionMap::iterator it = \hyperlink{classg2o_1_1HyperGraphActionLibrary_afc9e9b39a743700dcfc896b50d176b3b}{\_actionMap}.begin(); it != 
+      \hyperlink{classg2o_1_1HyperGraphActionLibrary_afc9e9b39a743700dcfc896b50d176b3b}{\_actionMap}.end(); ++it) \{
+162       \textcolor{keyword}{delete} it->second;
+163     \}
+164   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}!action\+By\+Name@{action\+By\+Name}}
+\index{action\+By\+Name@{action\+By\+Name}!g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}}
+\subsubsection[{\texorpdfstring{action\+By\+Name(const std\+::string \&name)}{actionByName(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph\+Element\+Action} $\ast$ g2o\+::\+Hyper\+Graph\+Action\+Library\+::action\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1HyperGraphActionLibrary_abef8ce416dd53f2d4e8d8566abf4a00f}{}\label{classg2o_1_1HyperGraphActionLibrary_abef8ce416dd53f2d4e8d8566abf4a00f}
+
+
+Definition at line 166 of file hyper\+\_\+graph\+\_\+action.\+cpp.
+
+
+\begin{DoxyCode}
+167   \{
+168     HyperGraphElementAction::ActionMap::iterator it=\hyperlink{classg2o_1_1HyperGraphActionLibrary_afc9e9b39a743700dcfc896b50d176b3b}{\_actionMap}.find(name);
+169     \textcolor{keywordflow}{if} (it!=\hyperlink{classg2o_1_1HyperGraphActionLibrary_afc9e9b39a743700dcfc896b50d176b3b}{\_actionMap}.end())
+170       \textcolor{keywordflow}{return} it->second;
+171     \textcolor{keywordflow}{return} 0;
+172   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}!action\+Map@{action\+Map}}
+\index{action\+Map@{action\+Map}!g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}}
+\subsubsection[{\texorpdfstring{action\+Map()}{actionMap()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph\+Element\+Action\+::\+Action\+Map}\& g2o\+::\+Hyper\+Graph\+Action\+Library\+::action\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1HyperGraphActionLibrary_a99d123d19dda08f30ab0088d361fc640}{}\label{classg2o_1_1HyperGraphActionLibrary_a99d123d19dda08f30ab0088d361fc640}
+
+
+Definition at line 149 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+
+\begin{DoxyCode}
+149 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1HyperGraphActionLibrary_afc9e9b39a743700dcfc896b50d176b3b}{\_actionMap};\}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}!destroy@{destroy}}
+\index{destroy@{destroy}!g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}}
+\subsubsection[{\texorpdfstring{destroy()}{destroy()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Hyper\+Graph\+Action\+Library\+::destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classg2o_1_1HyperGraphActionLibrary_aa235ae7c242c522518b07d019dbf8a51}{}\label{classg2o_1_1HyperGraphActionLibrary_aa235ae7c242c522518b07d019dbf8a51}
+
+
+free the instance 
+
+
+
+Definition at line 153 of file hyper\+\_\+graph\+\_\+action.\+cpp.
+
+
+\begin{DoxyCode}
+154   \{
+155     \textcolor{keyword}{delete} \hyperlink{classg2o_1_1HyperGraphActionLibrary_a65d1811736d86ff9f6453a728cac160f}{actionLibInstance};
+156     \hyperlink{classg2o_1_1HyperGraphActionLibrary_a65d1811736d86ff9f6453a728cac160f}{actionLibInstance} = 0;
+157   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}!instance@{instance}}
+\index{instance@{instance}!g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}}
+\subsubsection[{\texorpdfstring{instance()}{instance()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph\+Action\+Library} $\ast$ g2o\+::\+Hyper\+Graph\+Action\+Library\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classg2o_1_1HyperGraphActionLibrary_a12074e3f4d9bcb3da20a4fe23d18b745}{}\label{classg2o_1_1HyperGraphActionLibrary_a12074e3f4d9bcb3da20a4fe23d18b745}
+
+
+return the single instance of the \hyperlink{classg2o_1_1HyperGraphActionLibrary}{Hyper\+Graph\+Action\+Library} 
+
+
+
+Definition at line 145 of file hyper\+\_\+graph\+\_\+action.\+cpp.
+
+
+
+Referenced by g2o\+::\+Register\+Action\+Proxy$<$ T $>$\+::\+Register\+Action\+Proxy(), and g2o\+::\+Register\+Action\+Proxy$<$ T $>$\+::$\sim$\+Register\+Action\+Proxy().
+
+
+\begin{DoxyCode}
+146   \{
+147     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1HyperGraphActionLibrary_a65d1811736d86ff9f6453a728cac160f}{actionLibInstance} == 0) \{
+148       \hyperlink{classg2o_1_1HyperGraphActionLibrary_a65d1811736d86ff9f6453a728cac160f}{actionLibInstance} = \textcolor{keyword}{new} \hyperlink{classg2o_1_1HyperGraphActionLibrary_a68fe0eee5bdda62e6929c3ee2b4b38f1}{HyperGraphActionLibrary};
+149     \}
+150     \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1HyperGraphActionLibrary_a65d1811736d86ff9f6453a728cac160f}{actionLibInstance};
+151   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}!register\+Action@{register\+Action}}
+\index{register\+Action@{register\+Action}!g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}}
+\subsubsection[{\texorpdfstring{register\+Action(\+Hyper\+Graph\+Element\+Action $\ast$action)}{registerAction(HyperGraphElementAction *action)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Hyper\+Graph\+Action\+Library\+::register\+Action (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+Element\+Action} $\ast$}]{action}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1HyperGraphActionLibrary_a8ff09559af9efdf636ad14a011ef73ae}{}\label{classg2o_1_1HyperGraphActionLibrary_a8ff09559af9efdf636ad14a011ef73ae}
+
+
+Definition at line 174 of file hyper\+\_\+graph\+\_\+action.\+cpp.
+
+
+
+References \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, g2o\+::\+Hyper\+Graph\+Element\+Action\+::name(), and g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection\+::register\+Action().
+
+
+
+Referenced by g2o\+::\+Register\+Action\+Proxy$<$ T $>$\+::\+Register\+Action\+Proxy().
+
+
+\begin{DoxyCode}
+175   \{
+176     HyperGraphElementAction* oldAction = \hyperlink{classg2o_1_1HyperGraphActionLibrary_abef8ce416dd53f2d4e8d8566abf4a00f}{actionByName}(action->name());
+177     HyperGraphElementActionCollection* collection = 0;
+178     \textcolor{keywordflow}{if} (oldAction) \{
+179       collection = \textcolor{keyword}{dynamic\_cast<}HyperGraphElementActionCollection*\textcolor{keyword}{>}(oldAction);
+180       \textcolor{keywordflow}{if} (! collection) \{
+181         cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": fatal error, a collection is not at the first
+       level in the library"} << endl;
+182         \textcolor{keywordflow}{return} 0;
+183       \}
+184     \}
+185     \textcolor{keywordflow}{if} (! collection) \{
+186 \textcolor{preprocessor}{#ifdef G2O\_DEBUG\_ACTIONLIB}
+187       cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": creating collection for \(\backslash\)""} << action->name() <<
+       \textcolor{stringliteral}{"\(\backslash\)""} << endl;
+188 \textcolor{preprocessor}{#endif}
+189       collection = \textcolor{keyword}{new} HyperGraphElementActionCollection(action->name());
+190       \hyperlink{classg2o_1_1HyperGraphActionLibrary_afc9e9b39a743700dcfc896b50d176b3b}{\_actionMap}.insert(make\_pair(action->name(), collection));
+191     \}
+192     \textcolor{keywordflow}{return} collection->registerAction(action);
+193   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}!unregister\+Action@{unregister\+Action}}
+\index{unregister\+Action@{unregister\+Action}!g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}}
+\subsubsection[{\texorpdfstring{unregister\+Action(\+Hyper\+Graph\+Element\+Action $\ast$action)}{unregisterAction(HyperGraphElementAction *action)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Hyper\+Graph\+Action\+Library\+::unregister\+Action (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+Element\+Action} $\ast$}]{action}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1HyperGraphActionLibrary_abe4c076e6734ffa79f6d2bff07f9fad5}{}\label{classg2o_1_1HyperGraphActionLibrary_abe4c076e6734ffa79f6d2bff07f9fad5}
+
+
+Definition at line 195 of file hyper\+\_\+graph\+\_\+action.\+cpp.
+
+
+
+References g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection\+::action\+Map(), and g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection\+::unregister\+Action().
+
+
+
+Referenced by g2o\+::\+Register\+Action\+Proxy$<$ T $>$\+::$\sim$\+Register\+Action\+Proxy().
+
+
+\begin{DoxyCode}
+196   \{
+197     list<HyperGraphElementActionCollection*> collectionDeleteList;
+198 
+199     \textcolor{comment}{// Search all the collections and delete the registered actions; if a collection becomes empty,
+       schedule it for deletion; note that we can't delete the collections as we go because this will screw up the state
+       of the iterators}
+200     \textcolor{keywordflow}{for} (HyperGraphElementAction::ActionMap::iterator it=\hyperlink{classg2o_1_1HyperGraphActionLibrary_afc9e9b39a743700dcfc896b50d176b3b}{\_actionMap}.begin(); it != 
+      \hyperlink{classg2o_1_1HyperGraphActionLibrary_afc9e9b39a743700dcfc896b50d176b3b}{\_actionMap}.end(); ++it) \{
+201       HyperGraphElementActionCollection* collection = \textcolor{keyword}{dynamic\_cast<}HyperGraphElementActionCollection*\textcolor{keyword}{>} (it
+      ->second);
+202       \textcolor{keywordflow}{if} (collection != 0) \{
+203         collection->unregisterAction(action);
+204         \textcolor{keywordflow}{if} (collection->actionMap().size() == 0) \{
+205           collectionDeleteList.push\_back(collection);
+206         \}
+207       \}
+208     \}
+209 
+210     \textcolor{comment}{// Delete any empty action collections}
+211     \textcolor{keywordflow}{for} (list<HyperGraphElementActionCollection*>::iterator itc = collectionDeleteList.begin(); itc != 
+      collectionDeleteList.end(); ++itc) \{
+212       \textcolor{comment}{//cout << "Deleting collection " << (*itc)->name() << endl;}
+213       \hyperlink{classg2o_1_1HyperGraphActionLibrary_afc9e9b39a743700dcfc896b50d176b3b}{\_actionMap}.erase((*itc)->name());
+214     \}
+215 
+216     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+217   \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}!\+\_\+action\+Map@{\+\_\+action\+Map}}
+\index{\+\_\+action\+Map@{\+\_\+action\+Map}!g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}}
+\subsubsection[{\texorpdfstring{\+\_\+action\+Map}{_actionMap}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph\+Element\+Action\+::\+Action\+Map} g2o\+::\+Hyper\+Graph\+Action\+Library\+::\+\_\+action\+Map\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1HyperGraphActionLibrary_afc9e9b39a743700dcfc896b50d176b3b}{}\label{classg2o_1_1HyperGraphActionLibrary_afc9e9b39a743700dcfc896b50d176b3b}
+
+
+Definition at line 153 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+\index{g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}!action\+Lib\+Instance@{action\+Lib\+Instance}}
+\index{action\+Lib\+Instance@{action\+Lib\+Instance}!g2o\+::\+Hyper\+Graph\+Action\+Library@{g2o\+::\+Hyper\+Graph\+Action\+Library}}
+\subsubsection[{\texorpdfstring{action\+Lib\+Instance}{actionLibInstance}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph\+Action\+Library} $\ast$ g2o\+::\+Hyper\+Graph\+Action\+Library\+::action\+Lib\+Instance = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classg2o_1_1HyperGraphActionLibrary_a65d1811736d86ff9f6453a728cac160f}{}\label{classg2o_1_1HyperGraphActionLibrary_a65d1811736d86ff9f6453a728cac160f}
+
+
+Definition at line 155 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{hyper__graph__action_8h}{hyper\+\_\+graph\+\_\+action.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{hyper__graph__action_8cpp}{hyper\+\_\+graph\+\_\+action.\+cpp}\end{DoxyCompactItemize}

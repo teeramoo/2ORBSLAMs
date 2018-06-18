@@ -1,0 +1,259 @@
+\hypertarget{classg2o_1_1HyperGraphElementAction}{}\section{g2o\+:\+:Hyper\+Graph\+Element\+Action Class Reference}
+\label{classg2o_1_1HyperGraphElementAction}\index{g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}}
+
+
+Abstract action that operates on a graph entity.  
+
+
+
+
+{\ttfamily \#include $<$hyper\+\_\+graph\+\_\+action.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Hyper\+Graph\+Element\+Action\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structg2o_1_1HyperGraphElementAction_1_1Parameters}{Parameters}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, \hyperlink{classg2o_1_1HyperGraphElementAction}{Hyper\+Graph\+Element\+Action} $\ast$ $>$ \hyperlink{classg2o_1_1HyperGraphElementAction_abc889fc90ae1bbb63d90c7993777417a}{Action\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1HyperGraphElementAction_a1230bdd21f7c2b2c71e7206b59d81fd5}{Hyper\+Graph\+Element\+Action} (const std\+::string \&type\+Name\+\_\+=\char`\"{}\char`\"{})
+\item 
+virtual \hyperlink{classg2o_1_1HyperGraphElementAction}{Hyper\+Graph\+Element\+Action} $\ast$ \hyperlink{classg2o_1_1HyperGraphElementAction_a2faab4a1cdaf5fc010cb9c8627b7d361}{operator()} (\hyperlink{structg2o_1_1HyperGraph_1_1HyperGraphElement}{Hyper\+Graph\+::\+Hyper\+Graph\+Element} $\ast$element, \hyperlink{structg2o_1_1HyperGraphElementAction_1_1Parameters}{Parameters} $\ast$parameters)
+\begin{DoxyCompactList}\small\item\em redefine this to do the action stuff. If successful, the action returns a pointer to itself \end{DoxyCompactList}\item 
+virtual \hyperlink{classg2o_1_1HyperGraphElementAction}{Hyper\+Graph\+Element\+Action} $\ast$ \hyperlink{classg2o_1_1HyperGraphElementAction_a0dc2ff77e22791e32810d2c43b7154ad}{operator()} (const \hyperlink{structg2o_1_1HyperGraph_1_1HyperGraphElement}{Hyper\+Graph\+::\+Hyper\+Graph\+Element} $\ast$element, \hyperlink{structg2o_1_1HyperGraphElementAction_1_1Parameters}{Parameters} $\ast$parameters)
+\begin{DoxyCompactList}\small\item\em redefine this to do the action stuff. If successful, the action returns a pointer to itself \end{DoxyCompactList}\item 
+virtual \hyperlink{classg2o_1_1HyperGraphElementAction_a01f7f7f2fb00018f2d0163a611f2f5da}{$\sim$\+Hyper\+Graph\+Element\+Action} ()
+\begin{DoxyCompactList}\small\item\em destroyed actions release the memory \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classg2o_1_1HyperGraphElementAction_a0bc89d3bf6b1114dfb0e7df874b087d2}{type\+Name} () const 
+\begin{DoxyCompactList}\small\item\em returns the typeid name of the action \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classg2o_1_1HyperGraphElementAction_ad585ae95767ee74789a18c758f750cfb}{name} () const 
+\begin{DoxyCompactList}\small\item\em returns the name of an action, e.\+g \char`\"{}draw\char`\"{} \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1HyperGraphElementAction_ae7ed5834d50fb0ff0fef8ec45caaaa3f}{set\+Type\+Name} (const std\+::string \&type\+Name\+\_\+)
+\begin{DoxyCompactList}\small\item\em sets the type on which an action has to operate \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classg2o_1_1HyperGraphElementAction_ae05082e218d213f8db5de7a79769f97c}{\+\_\+type\+Name}
+\item 
+std\+::string \hyperlink{classg2o_1_1HyperGraphElementAction_a31245b0a79dfb357e3b345ff57b7b491}{\+\_\+name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract action that operates on a graph entity. 
+
+Definition at line 72 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}!Action\+Map@{Action\+Map}}
+\index{Action\+Map@{Action\+Map}!g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}}
+\subsubsection[{\texorpdfstring{Action\+Map}{ActionMap}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$std\+::string, {\bf Hyper\+Graph\+Element\+Action}$\ast$$>$ {\bf g2o\+::\+Hyper\+Graph\+Element\+Action\+::\+Action\+Map}}\hypertarget{classg2o_1_1HyperGraphElementAction_abc889fc90ae1bbb63d90c7993777417a}{}\label{classg2o_1_1HyperGraphElementAction_abc889fc90ae1bbb63d90c7993777417a}
+
+
+Definition at line 77 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}!Hyper\+Graph\+Element\+Action@{Hyper\+Graph\+Element\+Action}}
+\index{Hyper\+Graph\+Element\+Action@{Hyper\+Graph\+Element\+Action}!g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}}
+\subsubsection[{\texorpdfstring{Hyper\+Graph\+Element\+Action(const std\+::string \&type\+Name\+\_\+="""")}{HyperGraphElementAction(const std::string &typeName_="")}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Hyper\+Graph\+Element\+Action\+::\+Hyper\+Graph\+Element\+Action (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{type\+Name\+\_\+ = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1HyperGraphElementAction_a1230bdd21f7c2b2c71e7206b59d81fd5}{}\label{classg2o_1_1HyperGraphElementAction_a1230bdd21f7c2b2c71e7206b59d81fd5}
+an action should be instantiated with the typeid.\+name of the graph element on which it operates 
+
+Definition at line 62 of file hyper\+\_\+graph\+\_\+action.\+cpp.
+
+
+\begin{DoxyCode}
+63   \{
+64     \hyperlink{classg2o_1_1HyperGraphElementAction_ae05082e218d213f8db5de7a79769f97c}{\_typeName} = typeName\_;
+65   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}!````~Hyper\+Graph\+Element\+Action@{$\sim$\+Hyper\+Graph\+Element\+Action}}
+\index{````~Hyper\+Graph\+Element\+Action@{$\sim$\+Hyper\+Graph\+Element\+Action}!g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}}
+\subsubsection[{\texorpdfstring{$\sim$\+Hyper\+Graph\+Element\+Action()}{~HyperGraphElementAction()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Hyper\+Graph\+Element\+Action\+::$\sim$\+Hyper\+Graph\+Element\+Action (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1HyperGraphElementAction_a01f7f7f2fb00018f2d0163a611f2f5da}{}\label{classg2o_1_1HyperGraphElementAction_a01f7f7f2fb00018f2d0163a611f2f5da}
+
+
+destroyed actions release the memory 
+
+
+
+Definition at line 83 of file hyper\+\_\+graph\+\_\+action.\+cpp.
+
+
+\begin{DoxyCode}
+84   \{
+85   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}!name@{name}}
+\index{name@{name}!g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}}
+\subsubsection[{\texorpdfstring{name() const }{name() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string\& g2o\+::\+Hyper\+Graph\+Element\+Action\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1HyperGraphElementAction_ad585ae95767ee74789a18c758f750cfb}{}\label{classg2o_1_1HyperGraphElementAction_ad585ae95767ee74789a18c758f750cfb}
+
+
+returns the name of an action, e.\+g \char`\"{}draw\char`\"{} 
+
+
+
+Definition at line 95 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+
+
+Referenced by g2o\+::apply\+Action(), g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection\+::register\+Action(), and g2o\+::\+Hyper\+Graph\+Action\+Library\+::register\+Action().
+
+
+\begin{DoxyCode}
+95 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1HyperGraphElementAction_a31245b0a79dfb357e3b345ff57b7b491}{\_name};\}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}!operator()@{operator()}}
+\index{operator()@{operator()}!g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}}
+\subsubsection[{\texorpdfstring{operator()(\+Hyper\+Graph\+::\+Hyper\+Graph\+Element $\ast$element, Parameters $\ast$parameters)}{operator()(HyperGraph::HyperGraphElement *element, Parameters *parameters)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph\+Element\+Action} $\ast$ g2o\+::\+Hyper\+Graph\+Element\+Action\+::operator() (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+::\+Hyper\+Graph\+Element} $\ast$}]{element, }
+\item[{{\bf Hyper\+Graph\+Element\+Action\+::\+Parameters} $\ast$}]{parameters}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1HyperGraphElementAction_a2faab4a1cdaf5fc010cb9c8627b7d361}{}\label{classg2o_1_1HyperGraphElementAction_a2faab4a1cdaf5fc010cb9c8627b7d361}
+
+
+redefine this to do the action stuff. If successful, the action returns a pointer to itself 
+
+
+
+Reimplemented in \hyperlink{classg2o_1_1HyperGraphElementActionCollection_a1388f0d6629501c1b80035f80c56efbe}{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}.
+
+
+
+Definition at line 73 of file hyper\+\_\+graph\+\_\+action.\+cpp.
+
+
+\begin{DoxyCode}
+74   \{
+75     \textcolor{keywordflow}{return} 0;
+76   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}!operator()@{operator()}}
+\index{operator()@{operator()}!g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}}
+\subsubsection[{\texorpdfstring{operator()(const Hyper\+Graph\+::\+Hyper\+Graph\+Element $\ast$element, Parameters $\ast$parameters)}{operator()(const HyperGraph::HyperGraphElement *element, Parameters *parameters)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph\+Element\+Action} $\ast$ g2o\+::\+Hyper\+Graph\+Element\+Action\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf Hyper\+Graph\+::\+Hyper\+Graph\+Element} $\ast$}]{element, }
+\item[{{\bf Hyper\+Graph\+Element\+Action\+::\+Parameters} $\ast$}]{parameters}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1HyperGraphElementAction_a0dc2ff77e22791e32810d2c43b7154ad}{}\label{classg2o_1_1HyperGraphElementAction_a0dc2ff77e22791e32810d2c43b7154ad}
+
+
+redefine this to do the action stuff. If successful, the action returns a pointer to itself 
+
+
+
+Reimplemented in \hyperlink{classg2o_1_1HyperGraphElementActionCollection_a4cb9b20a8b1aac8eb018ef6fc4ec0dfc}{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}.
+
+
+
+Definition at line 78 of file hyper\+\_\+graph\+\_\+action.\+cpp.
+
+
+\begin{DoxyCode}
+79   \{
+80     \textcolor{keywordflow}{return} 0;
+81   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}!set\+Type\+Name@{set\+Type\+Name}}
+\index{set\+Type\+Name@{set\+Type\+Name}!g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}}
+\subsubsection[{\texorpdfstring{set\+Type\+Name(const std\+::string \&type\+Name\+\_\+)}{setTypeName(const std::string &typeName_)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Hyper\+Graph\+Element\+Action\+::set\+Type\+Name (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{type\+Name\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1HyperGraphElementAction_ae7ed5834d50fb0ff0fef8ec45caaaa3f}{}\label{classg2o_1_1HyperGraphElementAction_ae7ed5834d50fb0ff0fef8ec45caaaa3f}
+
+
+sets the type on which an action has to operate 
+
+
+
+Definition at line 67 of file hyper\+\_\+graph\+\_\+action.\+cpp.
+
+
+\begin{DoxyCode}
+68   \{
+69     \hyperlink{classg2o_1_1HyperGraphElementAction_ae05082e218d213f8db5de7a79769f97c}{\_typeName} = typeName\_;
+70   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}!type\+Name@{type\+Name}}
+\index{type\+Name@{type\+Name}!g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}}
+\subsubsection[{\texorpdfstring{type\+Name() const }{typeName() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string\& g2o\+::\+Hyper\+Graph\+Element\+Action\+::type\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1HyperGraphElementAction_a0bc89d3bf6b1114dfb0e7df874b087d2}{}\label{classg2o_1_1HyperGraphElementAction_a0bc89d3bf6b1114dfb0e7df874b087d2}
+
+
+returns the typeid name of the action 
+
+
+
+Definition at line 92 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+
+
+Referenced by g2o\+::apply\+Action(), and g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection\+::register\+Action().
+
+
+\begin{DoxyCode}
+92 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1HyperGraphElementAction_ae05082e218d213f8db5de7a79769f97c}{\_typeName};\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}!\+\_\+name@{\+\_\+name}}
+\index{\+\_\+name@{\+\_\+name}!g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}}
+\subsubsection[{\texorpdfstring{\+\_\+name}{_name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::\+Hyper\+Graph\+Element\+Action\+::\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1HyperGraphElementAction_a31245b0a79dfb357e3b345ff57b7b491}{}\label{classg2o_1_1HyperGraphElementAction_a31245b0a79dfb357e3b345ff57b7b491}
+
+
+Definition at line 102 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+
+
+Referenced by g2o\+::\+Draw\+Action\+::\+Draw\+Action(), and g2o\+::\+Write\+Gnuplot\+Action\+::\+Write\+Gnuplot\+Action().
+
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}!\+\_\+type\+Name@{\+\_\+type\+Name}}
+\index{\+\_\+type\+Name@{\+\_\+type\+Name}!g2o\+::\+Hyper\+Graph\+Element\+Action@{g2o\+::\+Hyper\+Graph\+Element\+Action}}
+\subsubsection[{\texorpdfstring{\+\_\+type\+Name}{_typeName}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::\+Hyper\+Graph\+Element\+Action\+::\+\_\+type\+Name\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1HyperGraphElementAction_ae05082e218d213f8db5de7a79769f97c}{}\label{classg2o_1_1HyperGraphElementAction_ae05082e218d213f8db5de7a79769f97c}
+
+
+Definition at line 101 of file hyper\+\_\+graph\+\_\+action.\+h.
+
+
+
+Referenced by g2o\+::\+Draw\+Action\+::refresh\+Property\+Ptrs().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{hyper__graph__action_8h}{hyper\+\_\+graph\+\_\+action.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{hyper__graph__action_8cpp}{hyper\+\_\+graph\+\_\+action.\+cpp}\end{DoxyCompactItemize}

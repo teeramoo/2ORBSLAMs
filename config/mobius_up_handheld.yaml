@@ -1,0 +1,116 @@
+%YAML:1.0
+
+# Path to save tmp files/results
+test.InitVIOTmpPath: "/home/teeramoo/Desktop/ORB-slam-script/Using Opecv3.2/LearnVIORB-master/SLAMoutput/Sequence1/TempFiles/TopCamera/"
+
+test.DiscardTime: 0
+
+#######################################
+
+imutopic: "/imu0"
+imagetopic: "/cam0/image_raw"
+
+# Timestamp shift. Timage = Timu + image_delay
+Camera.delaytoimu: 0
+
+# acc=acc*9.8, if below is 1
+IMU.multiplyG: 0
+
+# camera-imu frame transformation, Pi = Tic * Pc
+Camera.Tbc:
+ [-0.024682356, 0.99087548, -0.13250136, 0.041862302,
+  -0.084068544, 0.13001493, 0.98794162, -0.15906197,
+  0.99615425, 0.035523925, 0.080092385, -0.15419175,
+  0.0, 0.0, 0.0, 1.0]
+
+# Local Window size
+LocalMapping.LocalWindowSize: 20
+
+#OutputFolder: "/home/aayush/workspace/sandbox/VIROB/tmp/"
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 640x480 pixel^2
+# As of 13 November 2017
+Camera.fx: 308.1648
+Camera.fy: 427.2118
+Camera.cx: 320.40885
+Camera.cy: 226.6652
+
+Camera.k1: -0.3267
+Camera.k2: 0.1078
+Camera.p1: 0.0006
+Camera.p2:  0.0016
+Camera.k3: -0.0164
+
+Camera.width: 640
+Camera.height: 480
+
+# Camera calibration and distortion parameters (OpenCV)  1280x720
+# As of 13 November 2017
+#Camera.fx: 616.3296
+#Camera.fy: 697.0888
+#Camera.cx: 640.8177
+#Camera.cy: 339.9978
+
+#Camera.k1: -0.3267
+#Camera.k2: 0.1078
+#Camera.p1: 0.0006
+#Camera.p2:  0.0016
+#Camera.k3: -0.0164
+
+#Camera.width: 1280
+#Camera.height: 720
+
+
+# Camera frames per second 
+Camera.fps: 10.0
+
+# IR projector baseline times fx (aprox.)
+Camera.bf: 10.0
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Close/Far threshold. Baseline times.
+ThDepth: 40.0
+
+# Deptmap values factor
+DepthMapFactor: 1.0
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 4000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid 
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast   
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize:2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500
+

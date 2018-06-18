@@ -1,0 +1,370 @@
+\hypertarget{classg2o_1_1BaseUnaryEdge}{}\section{g2o\+:\+:Base\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$ Class Template Reference}
+\label{classg2o_1_1BaseUnaryEdge}\index{g2o\+::\+Base\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$@{g2o\+::\+Base\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$}}
+
+
+{\ttfamily \#include $<$base\+\_\+unary\+\_\+edge.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Base\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Base\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classg2o_1_1BaseEdge}{Base\+Edge}$<$ D, E $>$\+::\hyperlink{classg2o_1_1BaseEdge_a2c148abba650a20b8c7eed75d3e2211e}{Measurement} \hyperlink{classg2o_1_1BaseUnaryEdge_ab953b076b4c35fcf99de02bd0bfcc1ae}{Measurement}
+\item 
+typedef Vertex\+Xi \hyperlink{classg2o_1_1BaseUnaryEdge_a503e62e74775172c008135650850d511}{Vertex\+Xi\+Type}
+\item 
+typedef Matrix$<$ double, D, Vertex\+Xi\+Type\+::\+Dimension $>$\+::Aligned\+Map\+Type \hyperlink{classg2o_1_1BaseUnaryEdge_a24bcabd661223e15b7337f2835310f5e}{Jacobian\+Xi\+Oplus\+Type}
+\item 
+typedef \hyperlink{classg2o_1_1BaseEdge}{Base\+Edge}$<$ D, E $>$\+::\hyperlink{classg2o_1_1BaseEdge_af5b558dd24e4be2e437563cae4b3550d}{Error\+Vector} \hyperlink{classg2o_1_1BaseUnaryEdge_abc04cfacb65fc72825156f1b3346dd48}{Error\+Vector}
+\item 
+typedef \hyperlink{classg2o_1_1BaseEdge}{Base\+Edge}$<$ D, E $>$\+::\hyperlink{classg2o_1_1BaseEdge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type} \hyperlink{classg2o_1_1BaseUnaryEdge_a6753caa95c30fa5bb3887e2a30892ff3}{Information\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1BaseUnaryEdge_a7375d1ebfb57ba0308f863739b817b15}{Base\+Unary\+Edge} ()
+\item 
+virtual void \hyperlink{classg2o_1_1BaseUnaryEdge_a01fcdfd2d3ed0325655bb99db95c0b10}{resize} (size\+\_\+t size)
+\item 
+virtual bool \hyperlink{classg2o_1_1BaseUnaryEdge_ae3db6c719eac18fce051b40a8c8b86dd}{all\+Vertices\+Fixed} () const 
+\item 
+virtual void \hyperlink{classg2o_1_1BaseUnaryEdge_a8b396647b5b438d30a04758023baa595}{linearize\+Oplus} (\hyperlink{classg2o_1_1JacobianWorkspace}{Jacobian\+Workspace} \&jacobian\+Workspace)
+\item 
+virtual void \hyperlink{classg2o_1_1BaseUnaryEdge_a367f19b903938faf6e89dd1b0e4e722b}{linearize\+Oplus} ()
+\item 
+const \hyperlink{classg2o_1_1BaseUnaryEdge_a24bcabd661223e15b7337f2835310f5e}{Jacobian\+Xi\+Oplus\+Type} \& \hyperlink{classg2o_1_1BaseUnaryEdge_a39a254035af4f53fc3a6b5a77cd5a0ca}{jacobian\+Oplus\+Xi} () const 
+\begin{DoxyCompactList}\small\item\em returns the result of the linearization in the manifold space for the node xi \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1BaseUnaryEdge_ad7e6dc44c571be159f066bdb961ade2b}{construct\+Quadratic\+Form} ()
+\item 
+virtual void \hyperlink{classg2o_1_1BaseUnaryEdge_a3d3311901116092cf817b094f6a0b44b}{initial\+Estimate} (const \hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set} \&from, \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex}{Optimizable\+Graph\+::\+Vertex} $\ast$to)
+\item 
+virtual void \hyperlink{classg2o_1_1BaseUnaryEdge_a919dcb89130f6e7082e807530facdd78}{map\+Hessian\+Memory} (double $\ast$, int, int, bool)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classg2o_1_1BaseUnaryEdge_a4e584cf552998a34948d8d5b484f7fd3}{Dimension} = \hyperlink{classg2o_1_1BaseEdge}{Base\+Edge}$<$D, E$>$\+::Dimension
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1BaseUnaryEdge_a24bcabd661223e15b7337f2835310f5e}{Jacobian\+Xi\+Oplus\+Type} \hyperlink{classg2o_1_1BaseUnaryEdge_af7d022a6c6c9c29dfd9147fce0dc13d8}{\+\_\+jacobian\+Oplus\+Xi}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int D, typename E, typename Vertex\+Xi$>$\\*
+class g2o\+::\+Base\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$}
+
+
+
+Definition at line 43 of file base\+\_\+unary\+\_\+edge.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!Error\+Vector@{Error\+Vector}}
+\index{Error\+Vector@{Error\+Vector}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{Error\+Vector}{ErrorVector}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E, typename Vertex\+Xi$>$ typedef {\bf Base\+Edge}$<$D,E$>$\+::{\bf Error\+Vector} {\bf g2o\+::\+Base\+Unary\+Edge}$<$ D, E, Vertex\+Xi $>$\+::{\bf Error\+Vector}}\hypertarget{classg2o_1_1BaseUnaryEdge_abc04cfacb65fc72825156f1b3346dd48}{}\label{classg2o_1_1BaseUnaryEdge_abc04cfacb65fc72825156f1b3346dd48}
+
+
+Definition at line 50 of file base\+\_\+unary\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!Information\+Type@{Information\+Type}}
+\index{Information\+Type@{Information\+Type}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{Information\+Type}{InformationType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E, typename Vertex\+Xi$>$ typedef {\bf Base\+Edge}$<$D,E$>$\+::{\bf Information\+Type} {\bf g2o\+::\+Base\+Unary\+Edge}$<$ D, E, Vertex\+Xi $>$\+::{\bf Information\+Type}}\hypertarget{classg2o_1_1BaseUnaryEdge_a6753caa95c30fa5bb3887e2a30892ff3}{}\label{classg2o_1_1BaseUnaryEdge_a6753caa95c30fa5bb3887e2a30892ff3}
+
+
+Definition at line 51 of file base\+\_\+unary\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!Jacobian\+Xi\+Oplus\+Type@{Jacobian\+Xi\+Oplus\+Type}}
+\index{Jacobian\+Xi\+Oplus\+Type@{Jacobian\+Xi\+Oplus\+Type}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{Jacobian\+Xi\+Oplus\+Type}{JacobianXiOplusType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E, typename Vertex\+Xi$>$ typedef Matrix$<$double, D, Vertex\+Xi\+Type\+::\+Dimension$>$\+::Aligned\+Map\+Type {\bf g2o\+::\+Base\+Unary\+Edge}$<$ D, E, Vertex\+Xi $>$\+::{\bf Jacobian\+Xi\+Oplus\+Type}}\hypertarget{classg2o_1_1BaseUnaryEdge_a24bcabd661223e15b7337f2835310f5e}{}\label{classg2o_1_1BaseUnaryEdge_a24bcabd661223e15b7337f2835310f5e}
+
+
+Definition at line 49 of file base\+\_\+unary\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!Measurement@{Measurement}}
+\index{Measurement@{Measurement}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{Measurement}{Measurement}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E, typename Vertex\+Xi$>$ typedef {\bf Base\+Edge}$<$D,E$>$\+::{\bf Measurement} {\bf g2o\+::\+Base\+Unary\+Edge}$<$ D, E, Vertex\+Xi $>$\+::{\bf Measurement}}\hypertarget{classg2o_1_1BaseUnaryEdge_ab953b076b4c35fcf99de02bd0bfcc1ae}{}\label{classg2o_1_1BaseUnaryEdge_ab953b076b4c35fcf99de02bd0bfcc1ae}
+
+
+Definition at line 47 of file base\+\_\+unary\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!Vertex\+Xi\+Type@{Vertex\+Xi\+Type}}
+\index{Vertex\+Xi\+Type@{Vertex\+Xi\+Type}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{Vertex\+Xi\+Type}{VertexXiType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E, typename Vertex\+Xi$>$ typedef Vertex\+Xi {\bf g2o\+::\+Base\+Unary\+Edge}$<$ D, E, Vertex\+Xi $>$\+::{\bf Vertex\+Xi\+Type}}\hypertarget{classg2o_1_1BaseUnaryEdge_a503e62e74775172c008135650850d511}{}\label{classg2o_1_1BaseUnaryEdge_a503e62e74775172c008135650850d511}
+
+
+Definition at line 48 of file base\+\_\+unary\+\_\+edge.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!Base\+Unary\+Edge@{Base\+Unary\+Edge}}
+\index{Base\+Unary\+Edge@{Base\+Unary\+Edge}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{Base\+Unary\+Edge()}{BaseUnaryEdge()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E, typename Vertex\+Xi$>$ {\bf g2o\+::\+Base\+Unary\+Edge}$<$ D, E, Vertex\+Xi $>$\+::{\bf Base\+Unary\+Edge} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1BaseUnaryEdge_a7375d1ebfb57ba0308f863739b817b15}{}\label{classg2o_1_1BaseUnaryEdge_a7375d1ebfb57ba0308f863739b817b15}
+
+
+Definition at line 53 of file base\+\_\+unary\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+53                       : BaseEdge<D,E>(),
+54         \hyperlink{classg2o_1_1BaseUnaryEdge_af7d022a6c6c9c29dfd9147fce0dc13d8}{\_jacobianOplusXi}(0, D, VertexXiType::Dimension)
+55       \{
+56         \hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}.resize(1);
+57       \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!all\+Vertices\+Fixed@{all\+Vertices\+Fixed}}
+\index{all\+Vertices\+Fixed@{all\+Vertices\+Fixed}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{all\+Vertices\+Fixed() const }{allVerticesFixed() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E , typename Vertex\+Xi\+Type $>$ bool Base\+Unary\+Edge\+::all\+Vertices\+Fixed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseUnaryEdge_ae3db6c719eac18fce051b40a8c8b86dd}{}\label{classg2o_1_1BaseUnaryEdge_ae3db6c719eac18fce051b40a8c8b86dd}
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a414c69ca1617a4d3b620e39f2ffbcea7}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 38 of file base\+\_\+unary\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+38               \{
+39 
+40   \textcolor{keyword}{using namespace }\hyperlink{namespaceEigen}{Eigen};
+41 
+\end{DoxyCode}
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!construct\+Quadratic\+Form@{construct\+Quadratic\+Form}}
+\index{construct\+Quadratic\+Form@{construct\+Quadratic\+Form}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{construct\+Quadratic\+Form()}{constructQuadraticForm()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E , typename Vertex\+Xi\+Type $>$ void Base\+Unary\+Edge\+::construct\+Quadratic\+Form (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseUnaryEdge_ad7e6dc44c571be159f066bdb961ade2b}{}\label{classg2o_1_1BaseUnaryEdge_ad7e6dc44c571be159f066bdb961ade2b}
+Linearizes the constraint in the edge. Makes side effect on the vertices of the graph by changing the parameter vector b and the hessian blocks ii and jj. The off diagoinal block is accesed via \+\_\+hessian. 
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a56fbf3430ddf591e3c619bdd1b7e4499}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 44 of file base\+\_\+unary\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+44   \{
+45     \textcolor{keyword}{public}:
+46       \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \hyperlink{classg2o_1_1BaseUnaryEdge_a4e584cf552998a34948d8d5b484f7fd3}{Dimension} = \hyperlink{classg2o_1_1BaseEdge_ab4812acb21e0b9de80dc6d676e71cb70}{BaseEdge<D, E>::Dimension};
+47       \textcolor{keyword}{typedef} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1BaseEdge_a2c148abba650a20b8c7eed75d3e2211e}{BaseEdge<D,E>::Measurement} 
+      \hyperlink{classg2o_1_1BaseUnaryEdge_ab953b076b4c35fcf99de02bd0bfcc1ae}{Measurement};
+48       \textcolor{keyword}{typedef} VertexXi \hyperlink{classg2o_1_1BaseUnaryEdge_a503e62e74775172c008135650850d511}{VertexXiType};
+49       \textcolor{keyword}{typedef} \textcolor{keyword}{typename} Matrix<double, D, VertexXiType::Dimension>::AlignedMapType 
+      \hyperlink{classg2o_1_1BaseUnaryEdge_a24bcabd661223e15b7337f2835310f5e}{JacobianXiOplusType};
+50       \textcolor{keyword}{typedef} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1BaseEdge_af5b558dd24e4be2e437563cae4b3550d}{BaseEdge<D,E>::ErrorVector} 
+      \hyperlink{classg2o_1_1BaseUnaryEdge_abc04cfacb65fc72825156f1b3346dd48}{ErrorVector};
+51       \textcolor{keyword}{typedef} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1BaseEdge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{BaseEdge<D,E>::InformationType} 
+      \hyperlink{classg2o_1_1BaseUnaryEdge_a6753caa95c30fa5bb3887e2a30892ff3}{InformationType};
+52 
+53       \hyperlink{classg2o_1_1BaseUnaryEdge_a7375d1ebfb57ba0308f863739b817b15}{BaseUnaryEdge}() : \hyperlink{classg2o_1_1BaseEdge_a5efd0eb7e76a7f1ad723e7a5896a54d5}{BaseEdge}<D,E>(),
+54         \hyperlink{classg2o_1_1BaseUnaryEdge_af7d022a6c6c9c29dfd9147fce0dc13d8}{\_jacobianOplusXi}(0, D, VertexXiType::Dimension)
+55       \{
+56         \hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}.resize(1);
+57       \}
+58 
+59       \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classg2o_1_1BaseUnaryEdge_a01fcdfd2d3ed0325655bb99db95c0b10}{resize}(\textcolor{keywordtype}{size\_t} size);
+60 
+61       \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \hyperlink{classg2o_1_1BaseUnaryEdge_ae3db6c719eac18fce051b40a8c8b86dd}{allVerticesFixed}() \textcolor{keyword}{const};
+62 
+63       \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classg2o_1_1BaseUnaryEdge_a367f19b903938faf6e89dd1b0e4e722b}{linearizeOplus}(JacobianWorkspace& jacobianWorkspace);
+64 
+69       \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \hyperlink{classg2o_1_1BaseUnaryEdge_a367f19b903938faf6e89dd1b0e4e722b}{linearizeOplus}();
+70 
+72       \textcolor{keyword}{const} JacobianXiOplusType& \hyperlink{classg2o_1_1BaseUnaryEdge_a39a254035af4f53fc3a6b5a77cd5a0ca}{jacobianOplusXi}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} 
+      \hyperlink{classg2o_1_1BaseUnaryEdge_af7d022a6c6c9c29dfd9147fce0dc13d8}{\_jacobianOplusXi};\}
+73 
+\end{DoxyCode}
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!initial\+Estimate@{initial\+Estimate}}
+\index{initial\+Estimate@{initial\+Estimate}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{initial\+Estimate(const Optimizable\+Graph\+::\+Vertex\+Set \&from, Optimizable\+Graph\+::\+Vertex $\ast$to)}{initialEstimate(const OptimizableGraph::VertexSet &from, OptimizableGraph::Vertex *to)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E , typename Vertex\+Xi\+Type $>$ void Base\+Unary\+Edge\+::initial\+Estimate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Optimizable\+Graph\+::\+Vertex\+Set} \&}]{from, }
+\item[{{\bf Optimizable\+Graph\+::\+Vertex} $\ast$}]{to}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseUnaryEdge_a3d3311901116092cf817b094f6a0b44b}{}\label{classg2o_1_1BaseUnaryEdge_a3d3311901116092cf817b094f6a0b44b}
+set the estimate of the to vertex, based on the estimate of the from vertices in the edge. 
+
+Reimplemented from \hyperlink{classg2o_1_1BaseEdge_a0c3d9763f1dc504627df75e0f381ca70}{g2o\+::\+Base\+Edge$<$ D, E $>$}.
+
+
+
+Definition at line 127 of file base\+\_\+unary\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!jacobian\+Oplus\+Xi@{jacobian\+Oplus\+Xi}}
+\index{jacobian\+Oplus\+Xi@{jacobian\+Oplus\+Xi}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{jacobian\+Oplus\+Xi() const }{jacobianOplusXi() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E, typename Vertex\+Xi$>$ const {\bf Jacobian\+Xi\+Oplus\+Type}\& {\bf g2o\+::\+Base\+Unary\+Edge}$<$ D, E, Vertex\+Xi $>$\+::jacobian\+Oplus\+Xi (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1BaseUnaryEdge_a39a254035af4f53fc3a6b5a77cd5a0ca}{}\label{classg2o_1_1BaseUnaryEdge_a39a254035af4f53fc3a6b5a77cd5a0ca}
+
+
+returns the result of the linearization in the manifold space for the node xi 
+
+
+
+Definition at line 72 of file base\+\_\+unary\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+72 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1BaseUnaryEdge_af7d022a6c6c9c29dfd9147fce0dc13d8}{\_jacobianOplusXi};\}
+\end{DoxyCode}
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!linearize\+Oplus@{linearize\+Oplus}}
+\index{linearize\+Oplus@{linearize\+Oplus}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{linearize\+Oplus(\+Jacobian\+Workspace \&jacobian\+Workspace)}{linearizeOplus(JacobianWorkspace &jacobianWorkspace)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E , typename Vertex\+Xi\+Type $>$ void Base\+Unary\+Edge\+::linearize\+Oplus (
+\begin{DoxyParamCaption}
+\item[{{\bf Jacobian\+Workspace} \&}]{jacobian\+Workspace}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseUnaryEdge_a8b396647b5b438d30a04758023baa595}{}\label{classg2o_1_1BaseUnaryEdge_a8b396647b5b438d30a04758023baa595}
+Linearizes the constraint in the edge in the manifold space, and store the result in the given workspace 
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a0fdad5ebfb4efec9f893b57f67e0fbe1}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 76 of file base\+\_\+unary\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+78                                                              \{assert(0 && \textcolor{stringliteral}{"BaseUnaryEdge does not map
+       memory of the Hessian"});\}
+79 
+80       \textcolor{keyword}{using} \hyperlink{classg2o_1_1HyperGraph_1_1Edge_ad8913f1149a0fd5bb628f0f1c8a91a55}{BaseEdge<D,E>::resize};
+\end{DoxyCode}
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!linearize\+Oplus@{linearize\+Oplus}}
+\index{linearize\+Oplus@{linearize\+Oplus}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{linearize\+Oplus()}{linearizeOplus()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E , typename Vertex\+Xi\+Type $>$ void Base\+Unary\+Edge\+::linearize\+Oplus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseUnaryEdge_a367f19b903938faf6e89dd1b0e4e722b}{}\label{classg2o_1_1BaseUnaryEdge_a367f19b903938faf6e89dd1b0e4e722b}
+Linearizes the oplus operator in the vertex, and stores the result in temporary variables \+\_\+jacobian\+Oplus\+Xi and \+\_\+jacobian\+Oplus\+Xj 
+
+Reimplemented in \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZOnlyPose_a0b2b815e8ae331276f33be374dcc1897}{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}, and \hyperlink{classg2o_1_1EdgeSE3ProjectXYZOnlyPose_abe6d775aade1277786274c328aa2c38b}{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}.
+
+
+
+Definition at line 83 of file base\+\_\+unary\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+83              :
+84       \textcolor{keyword}{using} \hyperlink{classg2o_1_1BaseEdge_af2a6ab1df6e91601b4cab23e0e99e034}{BaseEdge<D,E>::\_measurement};
+85       \textcolor{keyword}{using} \hyperlink{classg2o_1_1BaseEdge_a49f11e3d1eaa8e666e1d4d3607279377}{BaseEdge<D,E>::\_information};
+86       \textcolor{keyword}{using} \hyperlink{classg2o_1_1BaseEdge_af31f4b0a67bb12b4de4a32dc42467836}{BaseEdge<D,E>::\_error};
+87       \textcolor{keyword}{using} \hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{BaseEdge<D,E>::\_vertices};
+88       \textcolor{keyword}{using} \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a4e651628f7657c81d0e4c1b26caaa6aa}{BaseEdge<D,E>::\_dimension};
+89 
+90       \hyperlink{classg2o_1_1BaseUnaryEdge_a24bcabd661223e15b7337f2835310f5e}{JacobianXiOplusType} \hyperlink{classg2o_1_1BaseUnaryEdge_af7d022a6c6c9c29dfd9147fce0dc13d8}{\_jacobianOplusXi};
+91 
+92     \textcolor{keyword}{public}:
+93       EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW
+94   \};
+95 
+96 \textcolor{preprocessor}{#include "\hyperlink{base__unary__edge_8hpp}{base\_unary\_edge.hpp}"}
+97 
+98 \} \textcolor{comment}{// end namespace g2o}
+99 
+100 \textcolor{preprocessor}{#endif}
+101 \textcolor{preprocessor}{\end{DoxyCode}
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!map\+Hessian\+Memory@{map\+Hessian\+Memory}}
+\index{map\+Hessian\+Memory@{map\+Hessian\+Memory}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{map\+Hessian\+Memory(double $\ast$, int, int, bool)}{mapHessianMemory(double *, int, int, bool)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E, typename Vertex\+Xi$>$ virtual void {\bf g2o\+::\+Base\+Unary\+Edge}$<$ D, E, Vertex\+Xi $>$\+::map\+Hessian\+Memory (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{d, }
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{bool}]{row\+Major}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseUnaryEdge_a919dcb89130f6e7082e807530facdd78}{}\label{classg2o_1_1BaseUnaryEdge_a919dcb89130f6e7082e807530facdd78}
+maps the internal matrix to some external memory location, you need to provide the memory before calling construct\+Quadratic\+Form 
+\begin{DoxyParams}{Parameters}
+{\em d} & the memory location to which we map \\
+\hline
+{\em i} & index of the vertex i \\
+\hline
+{\em j} & index of the vertex j (j $>$ i, upper triangular fashion) \\
+\hline
+{\em row\+Major} & if true, will write in row\+Major order to the block. Since E\+I\+G\+EN is column\+Major by default, this results in writing the transposed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a3bd233fd552daa166039acf47b69a5a7}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 78 of file base\+\_\+unary\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+78 \{assert(0 && \textcolor{stringliteral}{"BaseUnaryEdge does not map memory of the Hessian"});\}
+\end{DoxyCode}
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!resize@{resize}}
+\index{resize@{resize}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{resize(size\+\_\+t size)}{resize(size_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E , typename Vertex\+Xi\+Type $>$ void Base\+Unary\+Edge\+::resize (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseUnaryEdge_a01fcdfd2d3ed0325655bb99db95c0b10}{}\label{classg2o_1_1BaseUnaryEdge_a01fcdfd2d3ed0325655bb99db95c0b10}
+resizes the number of vertices connected by this edge 
+
+Reimplemented from \hyperlink{classg2o_1_1HyperGraph_1_1Edge_ad8913f1149a0fd5bb628f0f1c8a91a55}{g2o\+::\+Hyper\+Graph\+::\+Edge}.
+
+
+
+Definition at line 29 of file base\+\_\+unary\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+38               \{
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!\+\_\+jacobian\+Oplus\+Xi@{\+\_\+jacobian\+Oplus\+Xi}}
+\index{\+\_\+jacobian\+Oplus\+Xi@{\+\_\+jacobian\+Oplus\+Xi}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{\+\_\+jacobian\+Oplus\+Xi}{_jacobianOplusXi}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E, typename Vertex\+Xi$>$ {\bf Jacobian\+Xi\+Oplus\+Type} {\bf g2o\+::\+Base\+Unary\+Edge}$<$ D, E, Vertex\+Xi $>$\+::\+\_\+jacobian\+Oplus\+Xi\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BaseUnaryEdge_af7d022a6c6c9c29dfd9147fce0dc13d8}{}\label{classg2o_1_1BaseUnaryEdge_af7d022a6c6c9c29dfd9147fce0dc13d8}
+
+
+Definition at line 90 of file base\+\_\+unary\+\_\+edge.\+h.
+
+\index{g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}!Dimension@{Dimension}}
+\index{Dimension@{Dimension}!g2o\+::\+Base\+Unary\+Edge@{g2o\+::\+Base\+Unary\+Edge}}
+\subsubsection[{\texorpdfstring{Dimension}{Dimension}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int D, typename E, typename Vertex\+Xi$>$ const int {\bf g2o\+::\+Base\+Unary\+Edge}$<$ D, E, Vertex\+Xi $>$\+::Dimension = {\bf Base\+Edge}$<$D, E$>$\+::Dimension\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classg2o_1_1BaseUnaryEdge_a4e584cf552998a34948d8d5b484f7fd3}{}\label{classg2o_1_1BaseUnaryEdge_a4e584cf552998a34948d8d5b484f7fd3}
+
+
+Definition at line 46 of file base\+\_\+unary\+\_\+edge.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{base__unary__edge_8h}{base\+\_\+unary\+\_\+edge.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{base__unary__edge_8hpp}{base\+\_\+unary\+\_\+edge.\+hpp}\end{DoxyCompactItemize}

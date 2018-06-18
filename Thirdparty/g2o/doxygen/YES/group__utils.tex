@@ -1,0 +1,586 @@
+\hypertarget{group__utils}{}\section{Utils}
+\label{group__utils}\index{Utils@{Utils}}
+Collaboration diagram for Utils\+:
+% FIG 0
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{misc_8h}{misc.\+h}
+\begin{DoxyCompactList}\small\item\em some general case utility functions \end{DoxyCompactList}\item 
+file \hyperlink{timeutil_8h}{timeutil.\+h}
+\begin{DoxyCompactList}\small\item\em utility functions for handling time related stuff \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceg2o}{g2o}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__utils_ga9b9f34c01b03b47644c2762bf256be32}{D\+O\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+TS}(secs,  current\+Time,  code)
+\item 
+\#define \hyperlink{group__utils_gabfe958da8833edbe74250507adc61635}{D\+O\+\_\+\+E\+V\+E\+RY}(secs,  code)~\hyperlink{group__utils_ga9b9f34c01b03b47644c2762bf256be32}{D\+O\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+TS}(secs, \hyperlink{namespaceg2o_a6baa8fdfd973b5b970df14f14fd5d844}{g2o\+::get\+\_\+time}(), code)
+\begin{DoxyCompactList}\small\item\em Executes code, only if secs are gone since last exec. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__utils_gaafc27d8d00ac925dce6e52a013cc2b32}{M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+I\+ME}(text,  code)
+\item 
+\#define \hyperlink{group__utils_gae79acf8eb730f80c029d60e19332b4b9}{M\+E\+A\+S\+U\+R\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+I\+ME}~\hyperlink{classg2o_1_1ScopeTime}{g2o\+::\+Scope\+Time} scope\+Time(\hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{group__utils_ga5c3812993227cfbec772c7477928c1fc}{g2o\+::trim} (const std\+::string \&s)
+\item 
+std\+::string \hyperlink{group__utils_ga1e3dc946d073cacb02cf458d67471ad5}{g2o\+::trim\+Left} (const std\+::string \&s)
+\item 
+std\+::string \hyperlink{group__utils_ga3e3eb912f0f9e272e81127f1653edf38}{g2o\+::trim\+Right} (const std\+::string \&s)
+\item 
+std\+::string \hyperlink{group__utils_ga98a43706466c9618576a0f23e9021457}{g2o\+::str\+To\+Lower} (const std\+::string \&s)
+\item 
+std\+::string \hyperlink{group__utils_gac5545be3a953651c68fe8c81313f2564}{g2o\+::str\+To\+Upper} (const std\+::string \&s)
+\item 
+{\footnotesize template$<$typename Output\+Iterator $>$ }\\Output\+Iterator \hyperlink{group__utils_gae501003a8f6b60afb846857fdb82174d}{g2o\+::read\+Ints} (const char $\ast$str, Output\+Iterator out)
+\item 
+{\footnotesize template$<$typename Output\+Iterator $>$ }\\Output\+Iterator \hyperlink{group__utils_ga88353c6cfc2e519df07814ca577e71ec}{g2o\+::read\+Floats} (const char $\ast$str, Output\+Iterator out)
+\item 
+std\+::string \hyperlink{group__utils_ga948eee11520b4508727e2020b36faa48}{g2o\+::format\+String} (const char $\ast$fmt,...)
+\item 
+int \hyperlink{group__utils_gad6042db9246017195692a73ec62abc5f}{g2o\+::str\+Printf} (std\+::string \&str, const char $\ast$fmt,...)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{group__utils_ga599c46f6984e9a2147fac39324e9fadc}{g2o\+::convert\+String} (const std\+::string \&s, T \&\hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, bool fail\+If\+Leftover\+Chars=true)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{group__utils_ga9dac39a213d269b8d68fb698bf82873a}{g2o\+::string\+To\+Type} (const std\+::string \&s, bool fail\+If\+Leftover\+Chars=true)
+\item 
+bool \hyperlink{group__utils_gac8a541b33cded5c67d9cab7ada51c13d}{g2o\+::str\+Starts\+With} (const std\+::string \&s, const std\+::string \&start)
+\item 
+bool \hyperlink{group__utils_ga46ed3632c02c1e103629e7114c715880}{g2o\+::str\+Ends\+With} (const std\+::string \&s, const std\+::string \&end)
+\item 
+std\+::string \hyperlink{group__utils_ga198d4ceebba5de14cd7e40be2a06c277}{g2o\+::str\+Expand\+Filename} (const std\+::string \&filename)
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{group__utils_ga8e1ffa60787d006502c7c94f5646c598}{g2o\+::str\+Split} (const std\+::string \&str, const std\+::string \&delimiters)
+\item 
+int \hyperlink{group__utils_ga07aa1d8e5a4e25d0170010df66908611}{g2o\+::read\+Line} (std\+::istream \&is, std\+::stringstream \&current\+Line)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{Utils@{Utils}!D\+O\+\_\+\+E\+V\+E\+RY@{D\+O\+\_\+\+E\+V\+E\+RY}}
+\index{D\+O\+\_\+\+E\+V\+E\+RY@{D\+O\+\_\+\+E\+V\+E\+RY}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{D\+O\+\_\+\+E\+V\+E\+RY}{DO_EVERY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+\_\+\+E\+V\+E\+RY(
+\begin{DoxyParamCaption}
+\item[{}]{secs, }
+\item[{}]{code}
+\end{DoxyParamCaption}
+)~{\bf D\+O\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+TS}(secs, {\bf g2o\+::get\+\_\+time}(), code)}\hypertarget{group__utils_gabfe958da8833edbe74250507adc61635}{}\label{group__utils_gabfe958da8833edbe74250507adc61635}
+
+
+Executes code, only if secs are gone since last exec. 
+
+
+
+Definition at line 65 of file timeutil.\+h.
+
+\index{Utils@{Utils}!D\+O\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+TS@{D\+O\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+TS}}
+\index{D\+O\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+TS@{D\+O\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+TS}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{D\+O\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+TS}{DO_EVERY_TS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+O\+\_\+\+E\+V\+E\+R\+Y\+\_\+\+TS(
+\begin{DoxyParamCaption}
+\item[{}]{secs, }
+\item[{}]{current\+Time, }
+\item[{}]{code}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_ga9b9f34c01b03b47644c2762bf256be32}{}\label{group__utils_ga9b9f34c01b03b47644c2762bf256be32}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (1) \{\(\backslash\)
+  static \textcolor{keywordtype}{double} s\_lastDone\_ = (currentTime); \(\backslash\)
+  double s\_now\_ = (currentTime); \(\backslash\)
+  if (s\_lastDone\_ > s\_now\_) \(\backslash\)
+    s\_lastDone\_ = s\_now\_; \(\backslash\)
+  if (s\_now\_ - s\_lastDone\_ > (secs)) \{ \(\backslash\)
+    code; \(\backslash\)
+    s\_lastDone\_ = s\_now\_; \(\backslash\)
+  \}\(\backslash\)
+\} \textcolor{keywordflow}{else} \(\backslash\)
+  (void)0
+\end{DoxyCode}
+Executes code, only if secs are gone since last exec. extended version, in which the current time is given, e.\+g., timestamp of I\+PC message 
+
+Definition at line 49 of file timeutil.\+h.
+
+\index{Utils@{Utils}!M\+E\+A\+S\+U\+R\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+I\+ME@{M\+E\+A\+S\+U\+R\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+I\+ME}}
+\index{M\+E\+A\+S\+U\+R\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+I\+ME@{M\+E\+A\+S\+U\+R\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+I\+ME}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{M\+E\+A\+S\+U\+R\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+I\+ME}{MEASURE_FUNCTION_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+E\+A\+S\+U\+R\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+I\+ME~{\bf g2o\+::\+Scope\+Time} scope\+Time({\bf \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+})}\hypertarget{group__utils_gae79acf8eb730f80c029d60e19332b4b9}{}\label{group__utils_gae79acf8eb730f80c029d60e19332b4b9}
+
+
+Definition at line 126 of file timeutil.\+h.
+
+\index{Utils@{Utils}!M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+I\+ME@{M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+I\+ME}}
+\index{M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+I\+ME@{M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+I\+ME}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+I\+ME}{MEASURE_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+I\+ME(
+\begin{DoxyParamCaption}
+\item[{}]{text, }
+\item[{}]{code}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_gaafc27d8d00ac925dce6e52a013cc2b32}{}\label{group__utils_gaafc27d8d00ac925dce6e52a013cc2b32}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}(1) \{ \(\backslash\)
+    double \_start\_time\_ = \hyperlink{namespaceg2o_a6baa8fdfd973b5b970df14f14fd5d844}{g2o::get\_time}(); \(\backslash\)
+    code; \(\backslash\)
+    fprintf(stderr, \textcolor{stringliteral}{"%s took %f sec\(\backslash\)n"}, text, \hyperlink{namespaceg2o_a6baa8fdfd973b5b970df14f14fd5d844}{g2o::get\_time}() - \_start\_time\_); \(\backslash\)
+  \} \textcolor{keywordflow}{else} \(\backslash\)
+    (void) 0
+\end{DoxyCode}
+
+
+Definition at line 69 of file timeutil.\+h.
+
+
+
+\subsection{Function Documentation}
+\index{Utils@{Utils}!convert\+String@{convert\+String}}
+\index{convert\+String@{convert\+String}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{convert\+String(const std\+::string \&s, T \&x, bool fail\+If\+Leftover\+Chars=true)}{convertString(const std::string &s, T &x, bool failIfLeftoverChars=true)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool g2o\+::convert\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{s, }
+\item[{T \&}]{x, }
+\item[{bool}]{fail\+If\+Leftover\+Chars = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_ga599c46f6984e9a2147fac39324e9fadc}{}\label{group__utils_ga599c46f6984e9a2147fac39324e9fadc}
+convert a string into an other type. 
+
+Definition at line 124 of file string\+\_\+tools.\+h.
+
+
+
+References c.
+
+
+
+Referenced by g2o\+::\+Property$<$ bool $>$\+::from\+String(), and g2o\+::string\+To\+Type().
+
+
+\begin{DoxyCode}
+125 \{
+126   std::istringstream i(s);
+127   \textcolor{keywordtype}{char} \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c};
+128   \textcolor{keywordflow}{if} (!(i >> \hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x}) || (failIfLeftoverChars && i.get(c)))
+129     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+130   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+131 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!format\+String@{format\+String}}
+\index{format\+String@{format\+String}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{format\+String(const char $\ast$fmt,...)}{formatString(const char *fmt,...)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::format\+String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_ga948eee11520b4508727e2020b36faa48}{}\label{group__utils_ga948eee11520b4508727e2020b36faa48}
+format a string and return a std\+::string. Format is just like printf, see man 3 printf 
+
+Definition at line 95 of file string\+\_\+tools.\+cpp.
+
+
+
+References \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+.
+
+
+
+Referenced by g2o\+::read\+Floats().
+
+
+\begin{DoxyCode}
+96 \{
+97   \textcolor{keywordtype}{char}* auxPtr = NULL;
+98   va\_list arg\_list;
+99   va\_start(arg\_list, fmt);
+100   \textcolor{keywordtype}{int} numChar = vasprintf(&auxPtr, fmt, arg\_list);
+101   va\_end(arg\_list);
+102   \textcolor{keywordtype}{string} retString;
+103   \textcolor{keywordflow}{if} (numChar != -1)
+104     retString = auxPtr;
+105   \textcolor{keywordflow}{else} \{
+106     cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": Error while allocating memory"} << endl;
+107   \}
+108   free(auxPtr);
+109   \textcolor{keywordflow}{return} retString;
+110 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!read\+Floats@{read\+Floats}}
+\index{read\+Floats@{read\+Floats}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{read\+Floats(const char $\ast$str, Output\+Iterator out)}{readFloats(const char *str, OutputIterator out)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Output\+Iterator $>$ Output\+Iterator g2o\+::read\+Floats (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{Output\+Iterator}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_ga88353c6cfc2e519df07814ca577e71ec}{}\label{group__utils_ga88353c6cfc2e519df07814ca577e71ec}
+read float values (seperated by spaces) from a string and store them in the given Output\+Iterator. 
+
+Definition at line 95 of file string\+\_\+tools.\+h.
+
+
+
+References g2o\+::format\+String(), G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+F\+O\+R\+M\+A\+T12, G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+F\+O\+R\+M\+A\+T23, and g2o\+::str\+Printf().
+
+
+\begin{DoxyCode}
+96 \{
+97   \textcolor{keywordtype}{char}* cl  = (\textcolor{keywordtype}{char}*)str;
+98   \textcolor{keywordtype}{char}* cle = cl;
+99   \textcolor{keywordflow}{while} (1) \{
+100     \textcolor{keywordtype}{double} val = strtod(cl, &cle);
+101     \textcolor{keywordflow}{if} (cl == cle)
+102       \textcolor{keywordflow}{break};
+103     *out++ = val;
+104     cl = cle;
+105   \}
+106   \textcolor{keywordflow}{return} out;
+107 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!read\+Ints@{read\+Ints}}
+\index{read\+Ints@{read\+Ints}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{read\+Ints(const char $\ast$str, Output\+Iterator out)}{readInts(const char *str, OutputIterator out)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Output\+Iterator $>$ Output\+Iterator g2o\+::read\+Ints (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{Output\+Iterator}]{out}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_gae501003a8f6b60afb846857fdb82174d}{}\label{group__utils_gae501003a8f6b60afb846857fdb82174d}
+read integer values (seperated by spaces) from a string and store them in the given Output\+Iterator. 
+
+Definition at line 76 of file string\+\_\+tools.\+h.
+
+
+\begin{DoxyCode}
+77 \{
+78   \textcolor{keywordtype}{char}* cl  = (\textcolor{keywordtype}{char}*)str;
+79   \textcolor{keywordtype}{char}* cle = cl;
+80   \textcolor{keywordflow}{while} (1) \{
+81     \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = strtol(cl, &cle, 10);
+82     \textcolor{keywordflow}{if} (cl == cle)
+83       \textcolor{keywordflow}{break};
+84     *out++ = id;
+85     cl = cle;
+86   \}
+87   \textcolor{keywordflow}{return} out;
+88 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!read\+Line@{read\+Line}}
+\index{read\+Line@{read\+Line}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{read\+Line(std\+::istream \&is, std\+::stringstream \&current\+Line)}{readLine(std::istream &is, std::stringstream &currentLine)}}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::read\+Line (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is, }
+\item[{std\+::stringstream \&}]{current\+Line}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_ga07aa1d8e5a4e25d0170010df66908611}{}\label{group__utils_ga07aa1d8e5a4e25d0170010df66908611}
+read a line from is into current\+Line. \begin{DoxyReturn}{Returns}
+the number of characters read into current\+Line (excluding newline), -\/1 on eof() 
+\end{DoxyReturn}
+
+
+Definition at line 172 of file string\+\_\+tools.\+cpp.
+
+
+
+Referenced by g2o\+::\+Parameter\+Container\+::read(), g2o\+::\+Optimizable\+Graph\+::set\+Fixed(), and g2o\+::string\+To\+Type().
+
+
+\begin{DoxyCode}
+173 \{
+174   \textcolor{keywordflow}{if} (is.eof())
+175     \textcolor{keywordflow}{return} -1;
+176   currentLine.str(\textcolor{stringliteral}{""});
+177   currentLine.clear();
+178   is.get(*currentLine.rdbuf());
+179   \textcolor{keywordflow}{if} (is.fail()) \textcolor{comment}{// fail is set on empty lines}
+180     is.clear();
+181   G2O\_FSKIP\_LINE(is); \textcolor{comment}{// read \(\backslash\)n not read by get()}
+182   \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(currentLine.str().size());
+183 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!str\+Ends\+With@{str\+Ends\+With}}
+\index{str\+Ends\+With@{str\+Ends\+With}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{str\+Ends\+With(const std\+::string \&s, const std\+::string \&end)}{strEndsWith(const std::string &s, const std::string &end)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::str\+Ends\+With (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str, }
+\item[{const std\+::string \&}]{substr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_ga46ed3632c02c1e103629e7114c715880}{}\label{group__utils_ga46ed3632c02c1e103629e7114c715880}
+return true, if str ends with substr 
+
+Definition at line 165 of file string\+\_\+tools.\+cpp.
+
+
+
+Referenced by g2o\+::string\+To\+Type().
+
+
+\begin{DoxyCode}
+166 \{
+167   \textcolor{keywordflow}{if} (s.size() < end.size())
+168     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+169   \textcolor{keywordflow}{return} equal(end.rbegin(), end.rend(), s.rbegin());
+170 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!str\+Expand\+Filename@{str\+Expand\+Filename}}
+\index{str\+Expand\+Filename@{str\+Expand\+Filename}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{str\+Expand\+Filename(const std\+::string \&filename)}{strExpandFilename(const std::string &filename)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::str\+Expand\+Filename (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_ga198d4ceebba5de14cd7e40be2a06c277}{}\label{group__utils_ga198d4ceebba5de14cd7e40be2a06c277}
+expand the given filename like a posix shell, e.\+g., $\sim$ \$\+C\+A\+R\+M\+E\+N\+\_\+\+H\+O\+ME and other will get expanded. Also command substitution, e.\+g. {\ttfamily pwd} will give the current directory. 
+
+Definition at line 124 of file string\+\_\+tools.\+cpp.
+
+
+
+References \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+.
+
+
+
+Referenced by g2o\+::string\+To\+Type().
+
+
+\begin{DoxyCode}
+125 \{
+126 \textcolor{preprocessor}{#if (defined (UNIX) || defined(CYGWIN)) && !defined(ANDROID)}
+127   \textcolor{keywordtype}{string} result = filename;
+128   wordexp\_t p;
+129 
+130   wordexp(filename.c\_str(), &p, 0);
+131   \textcolor{keywordflow}{if}(p.we\_wordc > 0) \{
+132     result = p.we\_wordv[0];
+133   \}
+134   wordfree(&p);
+135   \textcolor{keywordflow}{return} result;
+136 \textcolor{preprocessor}{#else}
+137   (void) filename;
+138   std::cerr << \textcolor{stringliteral}{"WARNING: "} << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{" not implemented"} << std::endl;
+139   \textcolor{keywordflow}{return} std::string();
+140 \textcolor{preprocessor}{#endif}
+141 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!string\+To\+Type@{string\+To\+Type}}
+\index{string\+To\+Type@{string\+To\+Type}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{string\+To\+Type(const std\+::string \&s, bool fail\+If\+Leftover\+Chars=true)}{stringToType(const std::string &s, bool failIfLeftoverChars=true)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T g2o\+::string\+To\+Type (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{s, }
+\item[{bool}]{fail\+If\+Leftover\+Chars = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_ga9dac39a213d269b8d68fb698bf82873a}{}\label{group__utils_ga9dac39a213d269b8d68fb698bf82873a}
+convert a string into an other type. Return the converted value. Throw error if parsing is wrong. 
+
+Definition at line 138 of file string\+\_\+tools.\+h.
+
+
+
+References g2o\+::convert\+String(), g2o\+::read\+Line(), g2o\+::str\+Ends\+With(), g2o\+::str\+Expand\+Filename(), g2o\+::str\+Split(), g2o\+::str\+Starts\+With(), and x.
+
+
+\begin{DoxyCode}
+139 \{
+140   T \hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x};
+141   \hyperlink{group__utils_ga599c46f6984e9a2147fac39324e9fadc}{convertString}(s, x, failIfLeftoverChars);
+142   \textcolor{keywordflow}{return} \hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x};
+143 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!str\+Printf@{str\+Printf}}
+\index{str\+Printf@{str\+Printf}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{str\+Printf(std\+::string \&str, const char $\ast$fmt,...)}{strPrintf(std::string &str, const char *fmt,...)}}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::str\+Printf (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{str, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_gad6042db9246017195692a73ec62abc5f}{}\label{group__utils_gad6042db9246017195692a73ec62abc5f}
+replacement function for sprintf which fills a std\+::string instead of a char$\ast$ 
+
+Definition at line 112 of file string\+\_\+tools.\+cpp.
+
+
+
+Referenced by g2o\+::read\+Floats().
+
+
+\begin{DoxyCode}
+113 \{
+114   \textcolor{keywordtype}{char}* auxPtr = NULL;
+115   va\_list arg\_list;
+116   va\_start(arg\_list, fmt);
+117   \textcolor{keywordtype}{int} numChars = vasprintf(&auxPtr, fmt, arg\_list);
+118   va\_end(arg\_list);
+119   str = auxPtr;
+120   free(auxPtr);
+121   \textcolor{keywordflow}{return} numChars;
+122 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!str\+Split@{str\+Split}}
+\index{str\+Split@{str\+Split}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{str\+Split(const std\+::string \&str, const std\+::string \&delimiters)}{strSplit(const std::string &str, const std::string &delimiters)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::string $>$ g2o\+::str\+Split (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{s, }
+\item[{const std\+::string \&}]{delim}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_ga8e1ffa60787d006502c7c94f5646c598}{}\label{group__utils_ga8e1ffa60787d006502c7c94f5646c598}
+split a string into token based on the characters given in delim 
+
+Definition at line 143 of file string\+\_\+tools.\+cpp.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::set\+Renamed\+Types\+From\+String(), g2o\+::string\+To\+Type(), and g2o\+::\+Property\+Map\+::update\+Map\+From\+String().
+
+
+\begin{DoxyCode}
+144 \{
+145   std::vector<std::string> tokens;
+146   string::size\_type lastPos = 0;
+147   string::size\_type pos     = 0;
+148 
+149   \textcolor{keywordflow}{do} \{
+150     pos = str.find\_first\_of(delimiters, lastPos);
+151     tokens.push\_back(str.substr(lastPos, pos - lastPos));
+152     lastPos = pos + 1;
+153   \}  \textcolor{keywordflow}{while} (string::npos != pos);
+154 
+155   \textcolor{keywordflow}{return} tokens;
+156 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!str\+Starts\+With@{str\+Starts\+With}}
+\index{str\+Starts\+With@{str\+Starts\+With}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{str\+Starts\+With(const std\+::string \&s, const std\+::string \&start)}{strStartsWith(const std::string &s, const std::string &start)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::str\+Starts\+With (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str, }
+\item[{const std\+::string \&}]{substr}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_gac8a541b33cded5c67d9cab7ada51c13d}{}\label{group__utils_gac8a541b33cded5c67d9cab7ada51c13d}
+return true, if str starts with substr 
+
+Definition at line 158 of file string\+\_\+tools.\+cpp.
+
+
+
+Referenced by g2o\+::string\+To\+Type().
+
+
+\begin{DoxyCode}
+159 \{
+160   \textcolor{keywordflow}{if} (s.size() < start.size())
+161     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+162   \textcolor{keywordflow}{return} equal(start.begin(), start.end(), s.begin());
+163 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!str\+To\+Lower@{str\+To\+Lower}}
+\index{str\+To\+Lower@{str\+To\+Lower}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{str\+To\+Lower(const std\+::string \&s)}{strToLower(const std::string &s)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::str\+To\+Lower (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_ga98a43706466c9618576a0f23e9021457}{}\label{group__utils_ga98a43706466c9618576a0f23e9021457}
+convert the string to lower case 
+
+Definition at line 81 of file string\+\_\+tools.\+cpp.
+
+
+\begin{DoxyCode}
+82 \{
+83   \textcolor{keywordtype}{string} ret;
+84   std::transform(s.begin(), s.end(), back\_inserter(ret), (int(*)(int)) std::tolower);
+85   \textcolor{keywordflow}{return} ret;
+86 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!str\+To\+Upper@{str\+To\+Upper}}
+\index{str\+To\+Upper@{str\+To\+Upper}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{str\+To\+Upper(const std\+::string \&s)}{strToUpper(const std::string &s)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::str\+To\+Upper (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_gac5545be3a953651c68fe8c81313f2564}{}\label{group__utils_gac5545be3a953651c68fe8c81313f2564}
+convert a string to upper case 
+
+Definition at line 88 of file string\+\_\+tools.\+cpp.
+
+
+\begin{DoxyCode}
+89 \{
+90   \textcolor{keywordtype}{string} ret;
+91   std::transform(s.begin(), s.end(), back\_inserter(ret), (int(*)(int)) std::toupper);
+92   \textcolor{keywordflow}{return} ret;
+93 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!trim@{trim}}
+\index{trim@{trim}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{trim(const std\+::string \&s)}{trim(const std::string &s)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::trim (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_ga5c3812993227cfbec772c7477928c1fc}{}\label{group__utils_ga5c3812993227cfbec772c7477928c1fc}
+remove whitespaces from the start/end of a string 
+
+Definition at line 48 of file string\+\_\+tools.\+cpp.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::set\+Renamed\+Types\+From\+String(), and g2o\+::\+Property\+Map\+::update\+Map\+From\+String().
+
+
+\begin{DoxyCode}
+49 \{
+50   \textcolor{keywordflow}{if}(s.length() == 0)
+51     \textcolor{keywordflow}{return} s;
+52   string::size\_type b = s.find\_first\_not\_of(\textcolor{stringliteral}{" \(\backslash\)t\(\backslash\)n"});
+53   string::size\_type e = s.find\_last\_not\_of(\textcolor{stringliteral}{" \(\backslash\)t\(\backslash\)n"});
+54   \textcolor{keywordflow}{if}(b == string::npos)
+55     \textcolor{keywordflow}{return} \textcolor{stringliteral}{""};
+56   \textcolor{keywordflow}{return} std::string(s, b, e - b + 1);
+57 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!trim\+Left@{trim\+Left}}
+\index{trim\+Left@{trim\+Left}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{trim\+Left(const std\+::string \&s)}{trimLeft(const std::string &s)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::trim\+Left (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_ga1e3dc946d073cacb02cf458d67471ad5}{}\label{group__utils_ga1e3dc946d073cacb02cf458d67471ad5}
+remove whitespaces from the left side of the string 
+
+Definition at line 59 of file string\+\_\+tools.\+cpp.
+
+
+\begin{DoxyCode}
+60 \{
+61   \textcolor{keywordflow}{if}(s.length() == 0)
+62     \textcolor{keywordflow}{return} s;
+63   string::size\_type b = s.find\_first\_not\_of(\textcolor{stringliteral}{" \(\backslash\)t\(\backslash\)n"});
+64   string::size\_type e = s.length() - 1;
+65   \textcolor{keywordflow}{if}(b == string::npos)
+66     \textcolor{keywordflow}{return} \textcolor{stringliteral}{""};
+67   \textcolor{keywordflow}{return} std::string(s, b, e - b + 1);
+68 \}
+\end{DoxyCode}
+\index{Utils@{Utils}!trim\+Right@{trim\+Right}}
+\index{trim\+Right@{trim\+Right}!Utils@{Utils}}
+\subsubsection[{\texorpdfstring{trim\+Right(const std\+::string \&s)}{trimRight(const std::string &s)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::trim\+Right (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{group__utils_ga3e3eb912f0f9e272e81127f1653edf38}{}\label{group__utils_ga3e3eb912f0f9e272e81127f1653edf38}
+remove whitespaced from the right side of the string 
+
+Definition at line 70 of file string\+\_\+tools.\+cpp.
+
+
+\begin{DoxyCode}
+71 \{
+72   \textcolor{keywordflow}{if}(s.length() == 0)
+73     \textcolor{keywordflow}{return} s;
+74   string::size\_type b = 0;
+75   string::size\_type e = s.find\_last\_not\_of(\textcolor{stringliteral}{" \(\backslash\)t\(\backslash\)n"});
+76   \textcolor{keywordflow}{if}(b == string::npos)
+77     \textcolor{keywordflow}{return} \textcolor{stringliteral}{""};
+78   \textcolor{keywordflow}{return} std::string(s, b, e - b + 1);
+79 \}
+\end{DoxyCode}

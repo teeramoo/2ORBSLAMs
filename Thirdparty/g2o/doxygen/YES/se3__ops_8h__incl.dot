@@ -1,0 +1,12 @@
+digraph "/home/teeramoo/Desktop/ORB-slam-script/Using Opecv3.2/LearnVIORB-master/Thirdparty/g2o/g2o/types/se3_ops.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/home/teeramoo/Desktop\l/ORB-slam-script/Using\l Opecv3.2/LearnVIORB-master\l/Thirdparty/g2o/g2o/types\l/se3_ops.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Eigen/Core",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Eigen/Geometry",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="se3_ops.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$se3__ops_8hpp.html"];
+}

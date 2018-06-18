@@ -1,0 +1,322 @@
+\hypertarget{classg2o_1_1VertexSim3Expmap}{}\section{g2o\+:\+:Vertex\+Sim3\+Expmap Class Reference}
+\label{classg2o_1_1VertexSim3Expmap}\index{g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}}
+
+
+\hyperlink{structg2o_1_1Sim3}{Sim3} Vertex, (x,y,z,qw,qx,qy,qz) the parameterization for the increments constructed is a 7d vector (x,y,z,qx,qy,qz) (note that we leave out the w part of the quaternion.  
+
+
+
+
+{\ttfamily \#include $<$types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Vertex\+Sim3\+Expmap\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Vertex\+Sim3\+Expmap\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \hyperlink{classg2o_1_1VertexSim3Expmap_ac1f5a851bf896518998d8186723af365}{Vertex\+Sim3\+Expmap} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1VertexSim3Expmap_a16b4ef216ad1c4709a6fc6aa452d8e61}{read} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em read the vertex from a stream, i.\+e., the internal state of the vertex \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classg2o_1_1VertexSim3Expmap_afdc6079061312466de17b7493e4c491a}{write} (std\+::ostream \&os) const 
+\begin{DoxyCompactList}\small\item\em write the vertex to a stream \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1VertexSim3Expmap_ab076d5964ab55f95251a75bcf341ce05}{set\+To\+Origin\+Impl} ()
+\begin{DoxyCompactList}\small\item\em sets the node to the origin (used in the multilevel stuff) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1VertexSim3Expmap_abef7e4d10825caa129984f69251508c2}{oplus\+Impl} (const double $\ast$update\+\_\+)
+\item 
+Vector2d \hyperlink{classg2o_1_1VertexSim3Expmap_a6ca0c90f25fcde9ab38881b100bab6bc}{cam\+\_\+map1} (const Vector2d \&v) const 
+\item 
+Vector2d \hyperlink{classg2o_1_1VertexSim3Expmap_a4841c2bbe7b883be30f74b50e078b42e}{cam\+\_\+map2} (const Vector2d \&v) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector2d \hyperlink{classg2o_1_1VertexSim3Expmap_a0bf270a1f6d9f45e5b1ee683d4877e1d}{\+\_\+principle\+\_\+point1}
+\item 
+Vector2d \hyperlink{classg2o_1_1VertexSim3Expmap_aae09e8dc5707e524901e49af4d022edb}{\+\_\+principle\+\_\+point2}
+\item 
+Vector2d \hyperlink{classg2o_1_1VertexSim3Expmap_a05a79614b17cc700acaeb86039c2e181}{\+\_\+focal\+\_\+length1}
+\item 
+Vector2d \hyperlink{classg2o_1_1VertexSim3Expmap_a05c121f708922185d7b0823251c28290}{\+\_\+focal\+\_\+length2}
+\item 
+bool \hyperlink{classg2o_1_1VertexSim3Expmap_a63854235b605e45825798d327890930e}{\+\_\+fix\+\_\+scale}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{structg2o_1_1Sim3}{Sim3} Vertex, (x,y,z,qw,qx,qy,qz) the parameterization for the increments constructed is a 7d vector (x,y,z,qx,qy,qz) (note that we leave out the w part of the quaternion. 
+
+Definition at line 48 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}!Vertex\+Sim3\+Expmap@{Vertex\+Sim3\+Expmap}}
+\index{Vertex\+Sim3\+Expmap@{Vertex\+Sim3\+Expmap}!g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}}
+\subsubsection[{\texorpdfstring{Vertex\+Sim3\+Expmap()}{VertexSim3Expmap()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Vertex\+Sim3\+Expmap\+::\+Vertex\+Sim3\+Expmap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1VertexSim3Expmap_ac1f5a851bf896518998d8186723af365}{}\label{classg2o_1_1VertexSim3Expmap_ac1f5a851bf896518998d8186723af365}
+
+
+Definition at line 31 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+
+References \+\_\+fix\+\_\+scale, and g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::\+\_\+marginalized.
+
+
+\begin{DoxyCode}
+31                                      : BaseVertex<7, Sim3>()
+32   \{
+33     \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex_a5e9b3906c8ff800b9a0b16b10ed9fff0}{\_marginalized}=\textcolor{keyword}{false};
+34     \hyperlink{classg2o_1_1VertexSim3Expmap_a63854235b605e45825798d327890930e}{\_fix\_scale} = \textcolor{keyword}{false};
+35   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}!cam\+\_\+map1@{cam\+\_\+map1}}
+\index{cam\+\_\+map1@{cam\+\_\+map1}!g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}}
+\subsubsection[{\texorpdfstring{cam\+\_\+map1(const Vector2d \&v) const }{cam_map1(const Vector2d &v) const }}]{\setlength{\rightskip}{0pt plus 5cm}Vector2d g2o\+::\+Vertex\+Sim3\+Expmap\+::cam\+\_\+map1 (
+\begin{DoxyParamCaption}
+\item[{const Vector2d \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1VertexSim3Expmap_a6ca0c90f25fcde9ab38881b100bab6bc}{}\label{classg2o_1_1VertexSim3Expmap_a6ca0c90f25fcde9ab38881b100bab6bc}
+
+
+Definition at line 74 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+Referenced by g2o\+::\+Edge\+Sim3\+Project\+X\+Y\+Z\+::compute\+Error().
+
+
+\begin{DoxyCode}
+75     \{
+76       Vector2d res;
+77       res[0] = v[0]*\hyperlink{classg2o_1_1VertexSim3Expmap_a05a79614b17cc700acaeb86039c2e181}{\_focal\_length1}[0] + \hyperlink{classg2o_1_1VertexSim3Expmap_a0bf270a1f6d9f45e5b1ee683d4877e1d}{\_principle\_point1}[0];
+78       res[1] = v[1]*\hyperlink{classg2o_1_1VertexSim3Expmap_a05a79614b17cc700acaeb86039c2e181}{\_focal\_length1}[1] + \_principle\_point1[1];
+79       \textcolor{keywordflow}{return} res;
+80     \}
+\end{DoxyCode}
+\index{g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}!cam\+\_\+map2@{cam\+\_\+map2}}
+\index{cam\+\_\+map2@{cam\+\_\+map2}!g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}}
+\subsubsection[{\texorpdfstring{cam\+\_\+map2(const Vector2d \&v) const }{cam_map2(const Vector2d &v) const }}]{\setlength{\rightskip}{0pt plus 5cm}Vector2d g2o\+::\+Vertex\+Sim3\+Expmap\+::cam\+\_\+map2 (
+\begin{DoxyParamCaption}
+\item[{const Vector2d \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1VertexSim3Expmap_a4841c2bbe7b883be30f74b50e078b42e}{}\label{classg2o_1_1VertexSim3Expmap_a4841c2bbe7b883be30f74b50e078b42e}
+
+
+Definition at line 82 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+Referenced by g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+Y\+Z\+::compute\+Error().
+
+
+\begin{DoxyCode}
+83     \{
+84       Vector2d res;
+85       res[0] = v[0]*\hyperlink{classg2o_1_1VertexSim3Expmap_a05c121f708922185d7b0823251c28290}{\_focal\_length2}[0] + \hyperlink{classg2o_1_1VertexSim3Expmap_aae09e8dc5707e524901e49af4d022edb}{\_principle\_point2}[0];
+86       res[1] = v[1]*\hyperlink{classg2o_1_1VertexSim3Expmap_a05c121f708922185d7b0823251c28290}{\_focal\_length2}[1] + \_principle\_point2[1];
+87       \textcolor{keywordflow}{return} res;
+88     \}
+\end{DoxyCode}
+\index{g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}!oplus\+Impl@{oplus\+Impl}}
+\index{oplus\+Impl@{oplus\+Impl}!g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}}
+\subsubsection[{\texorpdfstring{oplus\+Impl(const double $\ast$update\+\_\+)}{oplusImpl(const double *update_)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Vertex\+Sim3\+Expmap\+::oplus\+Impl (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1VertexSim3Expmap_abef7e4d10825caa129984f69251508c2}{}\label{classg2o_1_1VertexSim3Expmap_abef7e4d10825caa129984f69251508c2}
+update the position of the node from the parameters in v. Implement in your class! 
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex_a4537a46afb8d12c3f18c88ba9601c625}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}.
+
+
+
+Definition at line 60 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h.
+
+
+\begin{DoxyCode}
+61     \{
+62       Eigen::Map<Vector7d> update(const\_cast<double*>(update\_));
+63 
+64       \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1VertexSim3Expmap_a63854235b605e45825798d327890930e}{\_fix\_scale})
+65         update[6] = 0;
+66 
+67       Sim3 s(update);
+68       \hyperlink{classg2o_1_1BaseVertex_acb6e8e8f39caa04f62dd93a3dd400e06}{setEstimate}(s*\hyperlink{classg2o_1_1BaseVertex_abb9caa0d2d00af70e95963a11ee9660a}{estimate}());
+69     \}
+\end{DoxyCode}
+\index{g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}!read@{read}}
+\index{read@{read}!g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}}
+\subsubsection[{\texorpdfstring{read(std\+::istream \&is)}{read(std::istream &is)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Vertex\+Sim3\+Expmap\+::read (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1VertexSim3Expmap_a16b4ef216ad1c4709a6fc6aa452d8e61}{}\label{classg2o_1_1VertexSim3Expmap_a16b4ef216ad1c4709a6fc6aa452d8e61}
+
+
+read the vertex from a stream, i.\+e., the internal state of the vertex 
+
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex_a356c40d33c3f1e07afa938dfb4870230}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}.
+
+
+
+Definition at line 44 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+\begin{DoxyCode}
+45   \{
+46     \hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d} cam2world;
+47     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<6; i++)\{
+48       is >> cam2world[i];
+49     \}
+50     is >> cam2world[6];
+51 \textcolor{comment}{//    if (! is) \{}
+52 \textcolor{comment}{//      // if the scale is not specified we set it to 1;}
+53 \textcolor{comment}{//      std::cerr << "!s";}
+54 \textcolor{comment}{//      cam2world[6]=0.;}
+55 \textcolor{comment}{//    \}}
+56 
+57     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<2; i++)
+58     \{
+59       is >> \hyperlink{classg2o_1_1VertexSim3Expmap_a05a79614b17cc700acaeb86039c2e181}{\_focal\_length1}[i];
+60     \}
+61     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<2; i++)
+62     \{
+63       is >> \hyperlink{classg2o_1_1VertexSim3Expmap_a0bf270a1f6d9f45e5b1ee683d4877e1d}{\_principle\_point1}[i];
+64     \}
+65 
+66     \hyperlink{classg2o_1_1BaseVertex_acb6e8e8f39caa04f62dd93a3dd400e06}{setEstimate}(Sim3(cam2world).inverse());
+67     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+68   \}
+\end{DoxyCode}
+\index{g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}!set\+To\+Origin\+Impl@{set\+To\+Origin\+Impl}}
+\index{set\+To\+Origin\+Impl@{set\+To\+Origin\+Impl}!g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}}
+\subsubsection[{\texorpdfstring{set\+To\+Origin\+Impl()}{setToOriginImpl()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Vertex\+Sim3\+Expmap\+::set\+To\+Origin\+Impl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1VertexSim3Expmap_ab076d5964ab55f95251a75bcf341ce05}{}\label{classg2o_1_1VertexSim3Expmap_ab076d5964ab55f95251a75bcf341ce05}
+
+
+sets the node to the origin (used in the multilevel stuff) 
+
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex_abd5fe36815f27a9c174ad41c2070c247}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}.
+
+
+
+Definition at line 56 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h.
+
+
+\begin{DoxyCode}
+56                                    \{
+57       \hyperlink{classg2o_1_1BaseVertex_ab188c92c3e906c6e06507ae624c0e7ac}{\_estimate} = Sim3();
+58     \}
+\end{DoxyCode}
+\index{g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}!write@{write}}
+\index{write@{write}!g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}}
+\subsubsection[{\texorpdfstring{write(std\+::ostream \&os) const }{write(std::ostream &os) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Vertex\+Sim3\+Expmap\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1VertexSim3Expmap_afdc6079061312466de17b7493e4c491a}{}\label{classg2o_1_1VertexSim3Expmap_afdc6079061312466de17b7493e4c491a}
+
+
+write the vertex to a stream 
+
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex_a4cac277db656fddb5f844d9009d601eb}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}.
+
+
+
+Definition at line 70 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+
+References g2o\+::\+Sim3\+::log().
+
+
+\begin{DoxyCode}
+71   \{
+72     Sim3 cam2world(\hyperlink{classg2o_1_1BaseVertex_abb9caa0d2d00af70e95963a11ee9660a}{estimate}().inverse());
+73     \hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d} lv=cam2world.log();
+74     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<7; i++)\{
+75       os << lv[i] << \textcolor{stringliteral}{" "};
+76     \}
+77     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<2; i++)
+78     \{
+79       os << \hyperlink{classg2o_1_1VertexSim3Expmap_a05a79614b17cc700acaeb86039c2e181}{\_focal\_length1}[i] << \textcolor{stringliteral}{" "};
+80     \}
+81     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<2; i++)
+82     \{
+83       os << \hyperlink{classg2o_1_1VertexSim3Expmap_a0bf270a1f6d9f45e5b1ee683d4877e1d}{\_principle\_point1}[i] << \textcolor{stringliteral}{" "};
+84     \}
+85     \textcolor{keywordflow}{return} os.good();
+86   \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}!\+\_\+fix\+\_\+scale@{\+\_\+fix\+\_\+scale}}
+\index{\+\_\+fix\+\_\+scale@{\+\_\+fix\+\_\+scale}!g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}}
+\subsubsection[{\texorpdfstring{\+\_\+fix\+\_\+scale}{_fix_scale}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Vertex\+Sim3\+Expmap\+::\+\_\+fix\+\_\+scale}\hypertarget{classg2o_1_1VertexSim3Expmap_a63854235b605e45825798d327890930e}{}\label{classg2o_1_1VertexSim3Expmap_a63854235b605e45825798d327890930e}
+
+
+Definition at line 90 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+Referenced by Vertex\+Sim3\+Expmap().
+
+\index{g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}!\+\_\+focal\+\_\+length1@{\+\_\+focal\+\_\+length1}}
+\index{\+\_\+focal\+\_\+length1@{\+\_\+focal\+\_\+length1}!g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}}
+\subsubsection[{\texorpdfstring{\+\_\+focal\+\_\+length1}{_focal_length1}}]{\setlength{\rightskip}{0pt plus 5cm}Vector2d g2o\+::\+Vertex\+Sim3\+Expmap\+::\+\_\+focal\+\_\+length1}\hypertarget{classg2o_1_1VertexSim3Expmap_a05a79614b17cc700acaeb86039c2e181}{}\label{classg2o_1_1VertexSim3Expmap_a05a79614b17cc700acaeb86039c2e181}
+
+
+Definition at line 72 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h.
+
+\index{g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}!\+\_\+focal\+\_\+length2@{\+\_\+focal\+\_\+length2}}
+\index{\+\_\+focal\+\_\+length2@{\+\_\+focal\+\_\+length2}!g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}}
+\subsubsection[{\texorpdfstring{\+\_\+focal\+\_\+length2}{_focal_length2}}]{\setlength{\rightskip}{0pt plus 5cm}Vector2d g2o\+::\+Vertex\+Sim3\+Expmap\+::\+\_\+focal\+\_\+length2}\hypertarget{classg2o_1_1VertexSim3Expmap_a05c121f708922185d7b0823251c28290}{}\label{classg2o_1_1VertexSim3Expmap_a05c121f708922185d7b0823251c28290}
+
+
+Definition at line 72 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h.
+
+\index{g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}!\+\_\+principle\+\_\+point1@{\+\_\+principle\+\_\+point1}}
+\index{\+\_\+principle\+\_\+point1@{\+\_\+principle\+\_\+point1}!g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}}
+\subsubsection[{\texorpdfstring{\+\_\+principle\+\_\+point1}{_principle_point1}}]{\setlength{\rightskip}{0pt plus 5cm}Vector2d g2o\+::\+Vertex\+Sim3\+Expmap\+::\+\_\+principle\+\_\+point1}\hypertarget{classg2o_1_1VertexSim3Expmap_a0bf270a1f6d9f45e5b1ee683d4877e1d}{}\label{classg2o_1_1VertexSim3Expmap_a0bf270a1f6d9f45e5b1ee683d4877e1d}
+
+
+Definition at line 71 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h.
+
+\index{g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}!\+\_\+principle\+\_\+point2@{\+\_\+principle\+\_\+point2}}
+\index{\+\_\+principle\+\_\+point2@{\+\_\+principle\+\_\+point2}!g2o\+::\+Vertex\+Sim3\+Expmap@{g2o\+::\+Vertex\+Sim3\+Expmap}}
+\subsubsection[{\texorpdfstring{\+\_\+principle\+\_\+point2}{_principle_point2}}]{\setlength{\rightskip}{0pt plus 5cm}Vector2d g2o\+::\+Vertex\+Sim3\+Expmap\+::\+\_\+principle\+\_\+point2}\hypertarget{classg2o_1_1VertexSim3Expmap_aae09e8dc5707e524901e49af4d022edb}{}\label{classg2o_1_1VertexSim3Expmap_aae09e8dc5707e524901e49af4d022edb}
+
+
+Definition at line 71 of file types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/\hyperlink{types__seven__dof__expmap_8h}{types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/\hyperlink{types__seven__dof__expmap_8cpp}{types\+\_\+seven\+\_\+dof\+\_\+expmap.\+cpp}\end{DoxyCompactItemize}

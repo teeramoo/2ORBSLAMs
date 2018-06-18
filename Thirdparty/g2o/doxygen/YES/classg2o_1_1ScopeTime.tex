@@ -1,0 +1,105 @@
+\hypertarget{classg2o_1_1ScopeTime}{}\section{g2o\+:\+:Scope\+Time Class Reference}
+\label{classg2o_1_1ScopeTime}\index{g2o\+::\+Scope\+Time@{g2o\+::\+Scope\+Time}}
+
+
+Class to measure the time spent in a scope.  
+
+
+
+
+{\ttfamily \#include $<$timeutil.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1ScopeTime_ae9178f069977b767d21e314aab0c3bf2}{Scope\+Time} (const char $\ast$title)
+\item 
+\hyperlink{classg2o_1_1ScopeTime_afec269ec984e05313a28dda5eed02abc}{$\sim$\+Scope\+Time} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classg2o_1_1ScopeTime_a6ee3cc8fa420b9963ad5198212c4a8b9}{\+\_\+title}
+\item 
+double \hyperlink{classg2o_1_1ScopeTime_ac9bcaa9a2dfbe09b98de1e7dd664433f}{\+\_\+start\+Time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to measure the time spent in a scope. 
+
+To use this class, e.\+g. to measure the time spent in a function, just create and instance at the beginning of the function. 
+
+Definition at line 114 of file timeutil.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Scope\+Time@{g2o\+::\+Scope\+Time}!Scope\+Time@{Scope\+Time}}
+\index{Scope\+Time@{Scope\+Time}!g2o\+::\+Scope\+Time@{g2o\+::\+Scope\+Time}}
+\subsubsection[{\texorpdfstring{Scope\+Time(const char $\ast$title)}{ScopeTime(const char *title)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Scope\+Time\+::\+Scope\+Time (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{title}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1ScopeTime_ae9178f069977b767d21e314aab0c3bf2}{}\label{classg2o_1_1ScopeTime_ae9178f069977b767d21e314aab0c3bf2}
+
+
+Definition at line 107 of file timeutil.\+cpp.
+
+
+\begin{DoxyCode}
+107 : \hyperlink{classg2o_1_1ScopeTime_a6ee3cc8fa420b9963ad5198212c4a8b9}{\_title}(title), \hyperlink{classg2o_1_1ScopeTime_ac9bcaa9a2dfbe09b98de1e7dd664433f}{\_startTime}(\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}()) \{\}
+\end{DoxyCode}
+\index{g2o\+::\+Scope\+Time@{g2o\+::\+Scope\+Time}!````~Scope\+Time@{$\sim$\+Scope\+Time}}
+\index{````~Scope\+Time@{$\sim$\+Scope\+Time}!g2o\+::\+Scope\+Time@{g2o\+::\+Scope\+Time}}
+\subsubsection[{\texorpdfstring{$\sim$\+Scope\+Time()}{~ScopeTime()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Scope\+Time\+::$\sim$\+Scope\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1ScopeTime_afec269ec984e05313a28dda5eed02abc}{}\label{classg2o_1_1ScopeTime_afec269ec984e05313a28dda5eed02abc}
+
+
+Definition at line 109 of file timeutil.\+cpp.
+
+
+
+References \+\_\+start\+Time, \+\_\+title, and g2o\+::get\+\_\+monotonic\+\_\+time().
+
+
+\begin{DoxyCode}
+109                       \{
+110   std::cerr << \hyperlink{classg2o_1_1ScopeTime_a6ee3cc8fa420b9963ad5198212c4a8b9}{\_title}<<\textcolor{stringliteral}{" took "}<<1000*(\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}()-
+      \hyperlink{classg2o_1_1ScopeTime_ac9bcaa9a2dfbe09b98de1e7dd664433f}{\_startTime})<<\textcolor{stringliteral}{"ms.\(\backslash\)n"};
+111 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Scope\+Time@{g2o\+::\+Scope\+Time}!\+\_\+start\+Time@{\+\_\+start\+Time}}
+\index{\+\_\+start\+Time@{\+\_\+start\+Time}!g2o\+::\+Scope\+Time@{g2o\+::\+Scope\+Time}}
+\subsubsection[{\texorpdfstring{\+\_\+start\+Time}{_startTime}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Scope\+Time\+::\+\_\+start\+Time\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classg2o_1_1ScopeTime_ac9bcaa9a2dfbe09b98de1e7dd664433f}{}\label{classg2o_1_1ScopeTime_ac9bcaa9a2dfbe09b98de1e7dd664433f}
+
+
+Definition at line 120 of file timeutil.\+h.
+
+
+
+Referenced by $\sim$\+Scope\+Time().
+
+\index{g2o\+::\+Scope\+Time@{g2o\+::\+Scope\+Time}!\+\_\+title@{\+\_\+title}}
+\index{\+\_\+title@{\+\_\+title}!g2o\+::\+Scope\+Time@{g2o\+::\+Scope\+Time}}
+\subsubsection[{\texorpdfstring{\+\_\+title}{_title}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::\+Scope\+Time\+::\+\_\+title\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classg2o_1_1ScopeTime_a6ee3cc8fa420b9963ad5198212c4a8b9}{}\label{classg2o_1_1ScopeTime_a6ee3cc8fa420b9963ad5198212c4a8b9}
+
+
+Definition at line 119 of file timeutil.\+h.
+
+
+
+Referenced by $\sim$\+Scope\+Time().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/stuff/\hyperlink{timeutil_8h}{timeutil.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/stuff/\hyperlink{timeutil_8cpp}{timeutil.\+cpp}\end{DoxyCompactItemize}

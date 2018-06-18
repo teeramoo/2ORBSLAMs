@@ -1,0 +1,176 @@
+\hypertarget{namespaceg2o_1_1internal}{}\section{g2o\+:\+:internal Namespace Reference}
+\label{namespaceg2o_1_1internal}\index{g2o\+::internal@{g2o\+::internal}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespaceg2o_1_1internal_abf695a74f7aced7ee804a58607ae434c}{compute\+Upper\+Triangle\+Index} (int i, int j)
+\item 
+{\footnotesize template$<$typename Matrix\+Type $>$ }\\void \hyperlink{namespaceg2o_1_1internal_a3beb413c2d04c629c60a8ce5e05ddf8f}{axpy} (const Matrix\+Type \&A, const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&\hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, int xoff, Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&y, int yoff)
+\item 
+{\footnotesize template$<$int t$>$ }\\void \hyperlink{namespaceg2o_1_1internal_a0656fb61cd6302ea0e3bf5f99890c05a}{axpy} (const Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, t $>$ \&A, const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&\hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, int xoff, Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&y, int yoff)
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{namespaceg2o_1_1internal_a6a7cd8c5afe2488e8deb0cbbfa878198}{axpy} (const Eigen\+::\+Matrix\+Xd \&A, const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&\hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, int xoff, Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&y, int yoff)
+\item 
+{\footnotesize template$<$typename Matrix\+Type $>$ }\\void \hyperlink{namespaceg2o_1_1internal_ad176878dff85b91f1dbabed52cbf696e}{atxpy} (const Matrix\+Type \&A, const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&\hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, int xoff, Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&y, int yoff)
+\item 
+{\footnotesize template$<$int t$>$ }\\void \hyperlink{namespaceg2o_1_1internal_a00b6a24b76a3fadc09136fe6232578ec}{atxpy} (const Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, t $>$ \&A, const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&\hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, int xoff, Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&y, int yoff)
+\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{namespaceg2o_1_1internal_ac0b95f6585d99b71683a370d5957d3d2}{atxpy} (const Eigen\+::\+Matrix\+Xd \&A, const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&\hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, int xoff, Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&y, int yoff)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{g2o\+::internal@{g2o\+::internal}!atxpy@{atxpy}}
+\index{atxpy@{atxpy}!g2o\+::internal@{g2o\+::internal}}
+\subsubsection[{\texorpdfstring{atxpy(const Matrix\+Type \&\+A, const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&x, int xoff, Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&y, int yoff)}{atxpy(const MatrixType &A, const Eigen::Map< const Eigen::VectorXd > &x, int xoff, Eigen::Map< Eigen::VectorXd > &y, int yoff)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ void g2o\+::internal\+::atxpy (
+\begin{DoxyParamCaption}
+\item[{const Matrix\+Type \&}]{A, }
+\item[{const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{x, }
+\item[{int}]{xoff, }
+\item[{Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{y, }
+\item[{int}]{yoff}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceg2o_1_1internal_ad176878dff85b91f1dbabed52cbf696e}{}\label{namespaceg2o_1_1internal_ad176878dff85b91f1dbabed52cbf696e}
+
+
+Definition at line 54 of file matrix\+\_\+operations.\+h.
+
+
+
+Referenced by g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply\+Symmetric\+Upper\+Triangle(), g2o\+::\+Sparse\+Block\+Matrix\+C\+C\+S$<$ Pose\+Matrix\+Type $>$\+::right\+Multiply(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::right\+Multiply().
+
+
+\begin{DoxyCode}
+55     \{
+56       y.segment<MatrixType::ColsAtCompileTime>(yoff) += A.transpose() * \hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x}.segment<
+      MatrixType::RowsAtCompileTime>(xoff);
+57     \}
+\end{DoxyCode}
+\index{g2o\+::internal@{g2o\+::internal}!atxpy@{atxpy}}
+\index{atxpy@{atxpy}!g2o\+::internal@{g2o\+::internal}}
+\subsubsection[{\texorpdfstring{atxpy(const Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, t $>$ \&\+A, const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&x, int xoff, Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&y, int yoff)}{atxpy(const Eigen::Matrix< double, Eigen::Dynamic, t > &A, const Eigen::Map< const Eigen::VectorXd > &x, int xoff, Eigen::Map< Eigen::VectorXd > &y, int yoff)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int t$>$ void g2o\+::internal\+::atxpy (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, t $>$ \&}]{A, }
+\item[{const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{x, }
+\item[{int}]{xoff, }
+\item[{Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{y, }
+\item[{int}]{yoff}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceg2o_1_1internal_a00b6a24b76a3fadc09136fe6232578ec}{}\label{namespaceg2o_1_1internal_a00b6a24b76a3fadc09136fe6232578ec}
+
+
+Definition at line 60 of file matrix\+\_\+operations.\+h.
+
+
+\begin{DoxyCode}
+61     \{
+62       y.segment<Eigen::Matrix<double, Eigen::Dynamic, t>::ColsAtCompileTime>(yoff) += A.transpose() * 
+      \hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x}.segment(xoff, A.rows());
+63     \}
+\end{DoxyCode}
+\index{g2o\+::internal@{g2o\+::internal}!atxpy@{atxpy}}
+\index{atxpy@{atxpy}!g2o\+::internal@{g2o\+::internal}}
+\subsubsection[{\texorpdfstring{atxpy(const Eigen\+::\+Matrix\+Xd \&\+A, const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&x, int xoff, Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&y, int yoff)}{atxpy(const Eigen::MatrixXd &A, const Eigen::Map< const Eigen::VectorXd > &x, int xoff, Eigen::Map< Eigen::VectorXd > &y, int yoff)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void g2o\+::internal\+::atxpy (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{A, }
+\item[{const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{x, }
+\item[{int}]{xoff, }
+\item[{Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{y, }
+\item[{int}]{yoff}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceg2o_1_1internal_ac0b95f6585d99b71683a370d5957d3d2}{}\label{namespaceg2o_1_1internal_ac0b95f6585d99b71683a370d5957d3d2}
+
+
+Definition at line 66 of file matrix\+\_\+operations.\+h.
+
+
+\begin{DoxyCode}
+67     \{
+68       y.segment(yoff, A.cols()) += A.transpose() * \hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x}.segment(xoff, A.rows());
+69     \}
+\end{DoxyCode}
+\index{g2o\+::internal@{g2o\+::internal}!axpy@{axpy}}
+\index{axpy@{axpy}!g2o\+::internal@{g2o\+::internal}}
+\subsubsection[{\texorpdfstring{axpy(const Matrix\+Type \&\+A, const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&x, int xoff, Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&y, int yoff)}{axpy(const MatrixType &A, const Eigen::Map< const Eigen::VectorXd > &x, int xoff, Eigen::Map< Eigen::VectorXd > &y, int yoff)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ void g2o\+::internal\+::axpy (
+\begin{DoxyParamCaption}
+\item[{const Matrix\+Type \&}]{A, }
+\item[{const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{x, }
+\item[{int}]{xoff, }
+\item[{Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{y, }
+\item[{int}]{yoff}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceg2o_1_1internal_a3beb413c2d04c629c60a8ce5e05ddf8f}{}\label{namespaceg2o_1_1internal_a3beb413c2d04c629c60a8ce5e05ddf8f}
+
+
+Definition at line 36 of file matrix\+\_\+operations.\+h.
+
+
+
+Referenced by g2o\+::\+Sparse\+Block\+Matrix\+Diagonal$<$ Landmark\+Matrix\+Type $>$\+::multiply(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::multiply\+Symmetric\+Upper\+Triangle().
+
+
+\begin{DoxyCode}
+37     \{
+38       y.segment<MatrixType::RowsAtCompileTime>(yoff) += A * \hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x}.segment<MatrixType::ColsAtCompileTime>(xoff)
+      ;
+39     \}
+\end{DoxyCode}
+\index{g2o\+::internal@{g2o\+::internal}!axpy@{axpy}}
+\index{axpy@{axpy}!g2o\+::internal@{g2o\+::internal}}
+\subsubsection[{\texorpdfstring{axpy(const Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, t $>$ \&\+A, const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&x, int xoff, Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&y, int yoff)}{axpy(const Eigen::Matrix< double, Eigen::Dynamic, t > &A, const Eigen::Map< const Eigen::VectorXd > &x, int xoff, Eigen::Map< Eigen::VectorXd > &y, int yoff)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$int t$>$ void g2o\+::internal\+::axpy (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, t $>$ \&}]{A, }
+\item[{const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{x, }
+\item[{int}]{xoff, }
+\item[{Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{y, }
+\item[{int}]{yoff}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceg2o_1_1internal_a0656fb61cd6302ea0e3bf5f99890c05a}{}\label{namespaceg2o_1_1internal_a0656fb61cd6302ea0e3bf5f99890c05a}
+
+
+Definition at line 42 of file matrix\+\_\+operations.\+h.
+
+
+\begin{DoxyCode}
+43     \{
+44       y.segment(yoff, A.rows()) += A * \hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x}.segment<Eigen::Matrix<double, Eigen::Dynamic,
+       t>::ColsAtCompileTime>(xoff);
+45     \}
+\end{DoxyCode}
+\index{g2o\+::internal@{g2o\+::internal}!axpy@{axpy}}
+\index{axpy@{axpy}!g2o\+::internal@{g2o\+::internal}}
+\subsubsection[{\texorpdfstring{axpy(const Eigen\+::\+Matrix\+Xd \&\+A, const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&x, int xoff, Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&y, int yoff)}{axpy(const Eigen::MatrixXd &A, const Eigen::Map< const Eigen::VectorXd > &x, int xoff, Eigen::Map< Eigen::VectorXd > &y, int yoff)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void g2o\+::internal\+::axpy (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{A, }
+\item[{const Eigen\+::\+Map$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{x, }
+\item[{int}]{xoff, }
+\item[{Eigen\+::\+Map$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{y, }
+\item[{int}]{yoff}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceg2o_1_1internal_a6a7cd8c5afe2488e8deb0cbbfa878198}{}\label{namespaceg2o_1_1internal_a6a7cd8c5afe2488e8deb0cbbfa878198}
+
+
+Definition at line 48 of file matrix\+\_\+operations.\+h.
+
+
+\begin{DoxyCode}
+49     \{
+50       y.segment(yoff, A.rows()) += A * \hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x}.segment(xoff, A.cols());
+51     \}
+\end{DoxyCode}
+\index{g2o\+::internal@{g2o\+::internal}!compute\+Upper\+Triangle\+Index@{compute\+Upper\+Triangle\+Index}}
+\index{compute\+Upper\+Triangle\+Index@{compute\+Upper\+Triangle\+Index}!g2o\+::internal@{g2o\+::internal}}
+\subsubsection[{\texorpdfstring{compute\+Upper\+Triangle\+Index(int i, int j)}{computeUpperTriangleIndex(int i, int j)}}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::internal\+::compute\+Upper\+Triangle\+Index (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespaceg2o_1_1internal_abf695a74f7aced7ee804a58607ae434c}{}\label{namespaceg2o_1_1internal_abf695a74f7aced7ee804a58607ae434c}
+
+
+Definition at line 29 of file base\+\_\+multi\+\_\+edge.\+h.
+
+
+\begin{DoxyCode}
+40               \{
+\end{DoxyCode}

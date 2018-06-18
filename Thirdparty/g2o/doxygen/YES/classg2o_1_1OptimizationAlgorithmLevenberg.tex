@@ -1,0 +1,630 @@
+\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg}{}\section{g2o\+:\+:Optimization\+Algorithm\+Levenberg Class Reference}
+\label{classg2o_1_1OptimizationAlgorithmLevenberg}\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+
+
+Implementation of the Levenberg Algorithm.  
+
+
+
+
+{\ttfamily \#include $<$optimization\+\_\+algorithm\+\_\+levenberg.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Optimization\+Algorithm\+Levenberg\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Optimization\+Algorithm\+Levenberg\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_aecdac695d6406eb2234bbd8a0c4d53a3}{Optimization\+Algorithm\+Levenberg} (\hyperlink{classg2o_1_1Solver}{Solver} $\ast$\hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a85473a4073c76b1a52cf9cf175e31c45}{solver})
+\item 
+virtual \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a926c821217c53b10fec9275b6fa5e548}{$\sim$\+Optimization\+Algorithm\+Levenberg} ()
+\item 
+virtual \hyperlink{classg2o_1_1OptimizationAlgorithm_a705d58d7bc19528a8ab718570d090cdf}{Solver\+Result} \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a7140fa989b54eac4e09ba17829dcada0}{solve} (int iteration, bool online=false)
+\item 
+virtual void \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_aed32286a2e441240f34dd5d1dbcd6d56}{print\+Verbose} (std\+::ostream \&os) const 
+\item 
+double \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_aa1b7ffe63dbeae410128c5cc6c95a7ab}{current\+Lambda} () const 
+\begin{DoxyCompactList}\small\item\em return the currently used damping factor \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a0fd2212e456428e44ddac693f6d27ac8}{set\+Max\+Trials\+After\+Failure} (int max\+\_\+trials)
+\begin{DoxyCompactList}\small\item\em the number of internal iteration if an update step increases chi$^\wedge$2 within Levenberg-\/\+Marquardt \end{DoxyCompactList}\item 
+int \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a76d1c53e6a7e9061c1a8f59f96726e82}{max\+Trials\+After\+Failure} () const 
+\begin{DoxyCompactList}\small\item\em get the number of inner iterations for Levenberg-\/\+Marquardt \end{DoxyCompactList}\item 
+double \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a4a4d18c98361a1288db724136d353596}{user\+Lambda\+Init} ()
+\begin{DoxyCompactList}\small\item\em return the lambda set by the user, if $<$ 0 the \hyperlink{classg2o_1_1SparseOptimizer}{Sparse\+Optimizer} will compute the initial lambda \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a9388e5e7800b18acb0db0a9a7be031a6}{set\+User\+Lambda\+Init} (double lambda)
+\begin{DoxyCompactList}\small\item\em specify the initial lambda used for the first iteraion, if not given the \hyperlink{classg2o_1_1SparseOptimizer}{Sparse\+Optimizer} tries to compute a suitable value \end{DoxyCompactList}\item 
+int \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a6d458d8a89069fab92fab75c1255a523}{levenberg\+Iteration} ()
+\begin{DoxyCompactList}\small\item\em return the number of levenberg iterations performed in the last round \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a84d860857af44977ab5358527475ce54}{compute\+Lambda\+Init} () const 
+\item 
+double \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a3938bf95baa0088f9cd4b56a19540c90}{compute\+Scale} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1Property}{Property}$<$ int $>$ $\ast$ \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a1f3b03bbcb2dbeed686069bed8783b80}{\+\_\+max\+Trials\+After\+Failure}
+\item 
+\hyperlink{classg2o_1_1Property}{Property}$<$ double $>$ $\ast$ \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a021c97d3f8205ec2ae7fde147f98b452}{\+\_\+user\+Lambda\+Init}
+\item 
+double \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_aec7bba815e20361aa7ccc4661f90a034}{\+\_\+current\+Lambda}
+\item 
+double \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_ac09602f23e52c5dbc6be1bf77e9f9d5f}{\+\_\+tau}
+\item 
+double \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a4951bc2e2fcca2c4eae4864690a4c087}{\+\_\+good\+Step\+Lower\+Scale}
+\begin{DoxyCompactList}\small\item\em lower bound for lambda decrease if a good LM step \end{DoxyCompactList}\item 
+double \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a16d8b5540cd7ae0c132a565e3f49c021}{\+\_\+good\+Step\+Upper\+Scale}
+\begin{DoxyCompactList}\small\item\em upper bound for lambda decrease if a good LM step \end{DoxyCompactList}\item 
+double \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a8bcb1a957056cba788072992c5a8a7a1}{\+\_\+ni}
+\item 
+int \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a2319771c8d3ee0f773bdb86d5416bab7}{\+\_\+levenberg\+Iterations}
+\begin{DoxyCompactList}\small\item\em the numer of levenberg iterations performed to accept the last step \end{DoxyCompactList}\item 
+int \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a7f0b375c45a9f91f2676548591273c8d}{\+\_\+n\+Bad}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of the Levenberg Algorithm. 
+
+Definition at line 37 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!Optimization\+Algorithm\+Levenberg@{Optimization\+Algorithm\+Levenberg}}
+\index{Optimization\+Algorithm\+Levenberg@{Optimization\+Algorithm\+Levenberg}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{Optimization\+Algorithm\+Levenberg(\+Solver $\ast$solver)}{OptimizationAlgorithmLevenberg(Solver *solver)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Optimization\+Algorithm\+Levenberg\+::\+Optimization\+Algorithm\+Levenberg (
+\begin{DoxyParamCaption}
+\item[{{\bf Solver} $\ast$}]{solver}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_aecdac695d6406eb2234bbd8a0c4d53a3}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_aecdac695d6406eb2234bbd8a0c4d53a3}
+construct the Levenberg algorithm, which will use the given \hyperlink{classg2o_1_1Solver}{Solver} for solving the linearized system. 
+
+Definition at line 43 of file optimization\+\_\+algorithm\+\_\+levenberg.\+cpp.
+
+
+
+References \+\_\+current\+Lambda, \+\_\+good\+Step\+Lower\+Scale, \+\_\+good\+Step\+Upper\+Scale, \+\_\+levenberg\+Iterations, \+\_\+max\+Trials\+After\+Failure, \+\_\+n\+Bad, \+\_\+ni, g2o\+::\+Optimization\+Algorithm\+::\+\_\+properties, \+\_\+tau, \+\_\+user\+Lambda\+Init, and g2o\+::\+Property\+Map\+::make\+Property().
+
+
+\begin{DoxyCode}
+43                                                                                :
+44     \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a1358f3500efe8b95a5af4a1b0edecdf0}{OptimizationAlgorithmWithHessian}(\hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a85473a4073c76b1a52cf9cf175e31c45}{solver})
+45   \{
+46     \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_aec7bba815e20361aa7ccc4661f90a034}{\_currentLambda} = -1.;
+47     \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_ac09602f23e52c5dbc6be1bf77e9f9d5f}{\_tau} = 1e-5;
+48     \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a16d8b5540cd7ae0c132a565e3f49c021}{\_goodStepUpperScale} = 2./3.;
+49     \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a4951bc2e2fcca2c4eae4864690a4c087}{\_goodStepLowerScale} = 1./3.;
+50     \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a021c97d3f8205ec2ae7fde147f98b452}{\_userLambdaInit} = \hyperlink{classg2o_1_1OptimizationAlgorithm_ae37b494f69b483a3fcafa944e987e325}{\_properties}.\hyperlink{classg2o_1_1PropertyMap_add6e602dcd651b8883c30c350d23692f}{makeProperty}<Property<double> >(\textcolor{stringliteral}{"
+      initialLambda"}, 0.);
+51     \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a1f3b03bbcb2dbeed686069bed8783b80}{\_maxTrialsAfterFailure} = \hyperlink{classg2o_1_1OptimizationAlgorithm_ae37b494f69b483a3fcafa944e987e325}{\_properties}.
+      \hyperlink{classg2o_1_1PropertyMap_add6e602dcd651b8883c30c350d23692f}{makeProperty}<Property<int> >(\textcolor{stringliteral}{"maxTrialsAfterFailure"}, 10);
+52     \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a8bcb1a957056cba788072992c5a8a7a1}{\_ni}=2.;
+53     \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a2319771c8d3ee0f773bdb86d5416bab7}{\_levenbergIterations} = 0;
+54     \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a7f0b375c45a9f91f2676548591273c8d}{\_nBad} = 0;
+55   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!````~Optimization\+Algorithm\+Levenberg@{$\sim$\+Optimization\+Algorithm\+Levenberg}}
+\index{````~Optimization\+Algorithm\+Levenberg@{$\sim$\+Optimization\+Algorithm\+Levenberg}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{$\sim$\+Optimization\+Algorithm\+Levenberg()}{~OptimizationAlgorithmLevenberg()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Optimization\+Algorithm\+Levenberg\+::$\sim$\+Optimization\+Algorithm\+Levenberg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a926c821217c53b10fec9275b6fa5e548}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a926c821217c53b10fec9275b6fa5e548}
+
+
+Definition at line 57 of file optimization\+\_\+algorithm\+\_\+levenberg.\+cpp.
+
+
+\begin{DoxyCode}
+58   \{
+59   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!compute\+Lambda\+Init@{compute\+Lambda\+Init}}
+\index{compute\+Lambda\+Init@{compute\+Lambda\+Init}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{compute\+Lambda\+Init() const }{computeLambdaInit() const }}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Optimization\+Algorithm\+Levenberg\+::compute\+Lambda\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a84d860857af44977ab5358527475ce54}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a84d860857af44977ab5358527475ce54}
+helper for Levenberg, this function computes the initial damping factor, if the user did not specify an own value, see \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a9388e5e7800b18acb0db0a9a7be031a6}{set\+User\+Lambda\+Init()} 
+
+Definition at line 166 of file optimization\+\_\+algorithm\+\_\+levenberg.\+cpp.
+
+
+
+References g2o\+::\+Optimization\+Algorithm\+::\+\_\+optimizer, \+\_\+tau, \+\_\+user\+Lambda\+Init, g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::dimension(), g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::hessian(), g2o\+::\+Sparse\+Optimizer\+::index\+Mapping(), and g2o\+::\+Property$<$ T $>$\+::value().
+
+
+
+Referenced by solve().
+
+
+\begin{DoxyCode}
+167   \{
+168     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a021c97d3f8205ec2ae7fde147f98b452}{\_userLambdaInit}->\hyperlink{classg2o_1_1Property_aefa3e7a5fcb2c8e061ecb07485f1371c}{value}() > 0)
+169       \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a021c97d3f8205ec2ae7fde147f98b452}{\_userLambdaInit}->\hyperlink{classg2o_1_1Property_aefa3e7a5fcb2c8e061ecb07485f1371c}{value}();
+170     \textcolor{keywordtype}{double} maxDiagonal=0.;
+171     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} k = 0; k < \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}().size(); k++) \{
+172       OptimizableGraph::Vertex* v = \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a5e98a5f879f04c013b20f9c39a9057da}{indexMapping}()[k];
+173       assert(v);
+174       \textcolor{keywordtype}{int} dim = v->dimension();
+175       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < dim; ++j)\{
+176         maxDiagonal = std::max(fabs(v->hessian(j,j)),maxDiagonal);
+177       \}
+178     \}
+179     \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_ac09602f23e52c5dbc6be1bf77e9f9d5f}{\_tau}*maxDiagonal;
+180   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!compute\+Scale@{compute\+Scale}}
+\index{compute\+Scale@{compute\+Scale}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{compute\+Scale() const }{computeScale() const }}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Optimization\+Algorithm\+Levenberg\+::compute\+Scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a3938bf95baa0088f9cd4b56a19540c90}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a3938bf95baa0088f9cd4b56a19540c90}
+
+
+Definition at line 182 of file optimization\+\_\+algorithm\+\_\+levenberg.\+cpp.
+
+
+
+References \+\_\+current\+Lambda, g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::\+\_\+solver, g2o\+::\+Solver\+::b(), g2o\+::\+Solver\+::vector\+Size(), and g2o\+::\+Solver\+::x().
+
+
+
+Referenced by solve().
+
+
+\begin{DoxyCode}
+183   \{
+184     \textcolor{keywordtype}{double} scale = 0.;
+185     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} j=0; j < \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_a739e1e7b0888d5f316f1d68cbd21bc2d}{vectorSize}(); j++)\{
+186       scale += \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_acb097d8568624a1f3af4dba808e5593b}{x}()[j] * (\hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_aec7bba815e20361aa7ccc4661f90a034}{\_currentLambda} * \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->
+      \hyperlink{classg2o_1_1Solver_acb097d8568624a1f3af4dba808e5593b}{x}()[j] + \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_a3212ad9d80f8f5ad15b72c2b55000095}{b}()[j]);
+187     \}
+188     \textcolor{keywordflow}{return} scale;
+189   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!current\+Lambda@{current\+Lambda}}
+\index{current\+Lambda@{current\+Lambda}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{current\+Lambda() const }{currentLambda() const }}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Optimization\+Algorithm\+Levenberg\+::current\+Lambda (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_aa1b7ffe63dbeae410128c5cc6c95a7ab}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_aa1b7ffe63dbeae410128c5cc6c95a7ab}
+
+
+return the currently used damping factor 
+
+
+
+Definition at line 52 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+References \+\_\+current\+Lambda, and set\+Max\+Trials\+After\+Failure().
+
+
+\begin{DoxyCode}
+52 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_aec7bba815e20361aa7ccc4661f90a034}{\_currentLambda};\}
+\end{DoxyCode}
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!levenberg\+Iteration@{levenberg\+Iteration}}
+\index{levenberg\+Iteration@{levenberg\+Iteration}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{levenberg\+Iteration()}{levenbergIteration()}}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Optimization\+Algorithm\+Levenberg\+::levenberg\+Iteration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a6d458d8a89069fab92fab75c1255a523}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a6d458d8a89069fab92fab75c1255a523}
+
+
+return the number of levenberg iterations performed in the last round 
+
+
+
+Definition at line 66 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+References \+\_\+levenberg\+Iterations.
+
+
+\begin{DoxyCode}
+66 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a2319771c8d3ee0f773bdb86d5416bab7}{\_levenbergIterations};\}
+\end{DoxyCode}
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!max\+Trials\+After\+Failure@{max\+Trials\+After\+Failure}}
+\index{max\+Trials\+After\+Failure@{max\+Trials\+After\+Failure}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{max\+Trials\+After\+Failure() const }{maxTrialsAfterFailure() const }}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Optimization\+Algorithm\+Levenberg\+::max\+Trials\+After\+Failure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a76d1c53e6a7e9061c1a8f59f96726e82}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a76d1c53e6a7e9061c1a8f59f96726e82}
+
+
+get the number of inner iterations for Levenberg-\/\+Marquardt 
+
+
+
+Definition at line 58 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+References \+\_\+max\+Trials\+After\+Failure, and g2o\+::\+Property$<$ T $>$\+::value().
+
+
+\begin{DoxyCode}
+58 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a1f3b03bbcb2dbeed686069bed8783b80}{\_maxTrialsAfterFailure}->\hyperlink{classg2o_1_1Property_aefa3e7a5fcb2c8e061ecb07485f1371c}{value}();\}
+\end{DoxyCode}
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!print\+Verbose@{print\+Verbose}}
+\index{print\+Verbose@{print\+Verbose}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{print\+Verbose(std\+::ostream \&os) const }{printVerbose(std::ostream &os) const }}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Optimization\+Algorithm\+Levenberg\+::print\+Verbose (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_aed32286a2e441240f34dd5d1dbcd6d56}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_aed32286a2e441240f34dd5d1dbcd6d56}
+called by the optimizer if verbose. re-\/implement, if you want to print something 
+
+Reimplemented from \hyperlink{classg2o_1_1OptimizationAlgorithm_a61fe205d498ed3b0ac1f812a78c4b0f0}{g2o\+::\+Optimization\+Algorithm}.
+
+
+
+Definition at line 201 of file optimization\+\_\+algorithm\+\_\+levenberg.\+cpp.
+
+
+
+References \+\_\+current\+Lambda, \+\_\+levenberg\+Iterations, g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::\+\_\+solver, and g2o\+::\+Solver\+::schur().
+
+
+\begin{DoxyCode}
+202   \{
+203     os
+204       << \textcolor{stringliteral}{"\(\backslash\)t schur= "} << \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_acc8d6a8ae7847a157d4a2f44aea14c74}{schur}()
+205       << \textcolor{stringliteral}{"\(\backslash\)t lambda= "} << FIXED(\hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_aec7bba815e20361aa7ccc4661f90a034}{\_currentLambda})
+206       << \textcolor{stringliteral}{"\(\backslash\)t levenbergIter= "} << \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a2319771c8d3ee0f773bdb86d5416bab7}{\_levenbergIterations};
+207   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!set\+Max\+Trials\+After\+Failure@{set\+Max\+Trials\+After\+Failure}}
+\index{set\+Max\+Trials\+After\+Failure@{set\+Max\+Trials\+After\+Failure}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{set\+Max\+Trials\+After\+Failure(int max\+\_\+trials)}{setMaxTrialsAfterFailure(int max_trials)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Optimization\+Algorithm\+Levenberg\+::set\+Max\+Trials\+After\+Failure (
+\begin{DoxyParamCaption}
+\item[{int}]{max\+\_\+trials}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a0fd2212e456428e44ddac693f6d27ac8}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a0fd2212e456428e44ddac693f6d27ac8}
+
+
+the number of internal iteration if an update step increases chi$^\wedge$2 within Levenberg-\/\+Marquardt 
+
+
+
+Definition at line 191 of file optimization\+\_\+algorithm\+\_\+levenberg.\+cpp.
+
+
+
+References \+\_\+max\+Trials\+After\+Failure, and g2o\+::\+Property$<$ T $>$\+::set\+Value().
+
+
+
+Referenced by current\+Lambda().
+
+
+\begin{DoxyCode}
+192   \{
+193     \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a1f3b03bbcb2dbeed686069bed8783b80}{\_maxTrialsAfterFailure}->\hyperlink{classg2o_1_1Property_a438d1ca338ce8c3a371654023200068d}{setValue}(max\_trials);
+194   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!set\+User\+Lambda\+Init@{set\+User\+Lambda\+Init}}
+\index{set\+User\+Lambda\+Init@{set\+User\+Lambda\+Init}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{set\+User\+Lambda\+Init(double lambda)}{setUserLambdaInit(double lambda)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Optimization\+Algorithm\+Levenberg\+::set\+User\+Lambda\+Init (
+\begin{DoxyParamCaption}
+\item[{double}]{lambda}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a9388e5e7800b18acb0db0a9a7be031a6}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a9388e5e7800b18acb0db0a9a7be031a6}
+
+
+specify the initial lambda used for the first iteraion, if not given the \hyperlink{classg2o_1_1SparseOptimizer}{Sparse\+Optimizer} tries to compute a suitable value 
+
+
+
+Definition at line 196 of file optimization\+\_\+algorithm\+\_\+levenberg.\+cpp.
+
+
+
+References \+\_\+user\+Lambda\+Init, and g2o\+::\+Property$<$ T $>$\+::set\+Value().
+
+
+
+Referenced by user\+Lambda\+Init().
+
+
+\begin{DoxyCode}
+197   \{
+198     \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a021c97d3f8205ec2ae7fde147f98b452}{\_userLambdaInit}->\hyperlink{classg2o_1_1Property_a438d1ca338ce8c3a371654023200068d}{setValue}(lambda);
+199   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!solve@{solve}}
+\index{solve@{solve}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{solve(int iteration, bool online=false)}{solve(int iteration, bool online=false)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Optimization\+Algorithm\+::\+Solver\+Result} g2o\+::\+Optimization\+Algorithm\+Levenberg\+::solve (
+\begin{DoxyParamCaption}
+\item[{int}]{iteration, }
+\item[{bool}]{online = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a7140fa989b54eac4e09ba17829dcada0}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a7140fa989b54eac4e09ba17829dcada0}
+Solve one iteration. The \hyperlink{classg2o_1_1SparseOptimizer}{Sparse\+Optimizer} running on-\/top will call this for the given number of iterations. 
+\begin{DoxyParams}{Parameters}
+{\em iteration} & indicates the current iteration \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classg2o_1_1OptimizationAlgorithm_ab174deeeb2551ceaf715ea09f0f9c077}{g2o\+::\+Optimization\+Algorithm}.
+
+
+
+Definition at line 61 of file optimization\+\_\+algorithm\+\_\+levenberg.\+cpp.
+
+
+
+References \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, \+\_\+current\+Lambda, \+\_\+good\+Step\+Lower\+Scale, \+\_\+good\+Step\+Upper\+Scale, \+\_\+levenberg\+Iterations, \+\_\+max\+Trials\+After\+Failure, \+\_\+n\+Bad, \+\_\+ni, g2o\+::\+Optimization\+Algorithm\+::\+\_\+optimizer, g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::\+\_\+solver, g2o\+::\+Sparse\+Optimizer\+::active\+Robust\+Chi2(), g2o\+::\+Solver\+::build\+Structure(), g2o\+::\+Solver\+::build\+System(), g2o\+::\+Sparse\+Optimizer\+::compute\+Active\+Errors(), compute\+Lambda\+Init(), compute\+Scale(), g2o\+::\+Sparse\+Optimizer\+::discard\+Top(), g2o\+::\+Optimization\+Algorithm\+::\+Fail, g2o\+\_\+isfinite, g2o\+::get\+\_\+monotonic\+\_\+time(), g2o\+::\+G2\+O\+Batch\+Statistics\+::global\+Stats(), g2o\+::\+G2\+O\+Batch\+Statistics\+::levenberg\+Iterations, g2o\+::\+Optimization\+Algorithm\+::\+OK, g2o\+::\+Solver\+::optimizer(), g2o\+::\+Sparse\+Optimizer\+::pop(), g2o\+::\+Sparse\+Optimizer\+::push(), g2o\+::\+Solver\+::restore\+Diagonal(), g2o\+::\+Solver\+::set\+Lambda(), g2o\+::\+Solver\+::solve(), g2o\+::\+Optimization\+Algorithm\+::\+Terminate, g2o\+::\+Sparse\+Optimizer\+::terminate(), g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Linear\+Solution, g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Quadratic\+Form, g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Residuals, g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Update, g2o\+::\+Property$<$ T $>$\+::value(), and g2o\+::\+Solver\+::x().
+
+
+\begin{DoxyCode}
+62   \{
+63     assert(\hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer} && \textcolor{stringliteral}{"\_optimizer not set"});
+64     assert(\hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_a9ea585f131ab02ae1e0c0192126f0b5f}{optimizer}() == \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer} && \textcolor{stringliteral}{"underlying linear solver
+       operates on different graph"});
+65 
+66     \textcolor{keywordflow}{if} (iteration == 0 && !online) \{ \textcolor{comment}{// built up the CCS structure, here due to easy time measure}
+67       \textcolor{keywordtype}{bool} ok = \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_a6c93ac0f528ffe05867d33150c54f46f}{buildStructure}();
+68       \textcolor{keywordflow}{if} (! ok) \{
+69         cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": Failure while building CCS structure"} << endl;
+70         \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizationAlgorithm_a705d58d7bc19528a8ab718570d090cdfa375598c3a146bb5116b5d19bb1a88f84}{OptimizationAlgorithm::Fail};
+71       \}
+72     \}
+73 
+74     \textcolor{keywordtype}{double} t=\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+75     \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a09572668aa85b75a5bebf7b66401ce8f}{computeActiveErrors}();
+76     G2OBatchStatistics* globalStats = \hyperlink{structg2o_1_1G2OBatchStatistics_a06f9c667d8b48b8f0023e27011818b64}{G2OBatchStatistics::globalStats}();
+77     \textcolor{keywordflow}{if} (globalStats) \{
+78       globalStats->timeResiduals = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}()-t;
+79       t=\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+80     \}
+81 
+82     \textcolor{keywordtype}{double} currentChi = \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_ae47c5023e53685523499fc00d6057d14}{activeRobustChi2}();
+83     \textcolor{keywordtype}{double} tempChi=currentChi;
+84 
+85     \textcolor{keywordtype}{double} iniChi = currentChi;
+86 
+87     \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_ac1565e85d5ca68a87ad7f06f8164a8c0}{buildSystem}();
+88     \textcolor{keywordflow}{if} (globalStats) \{
+89       globalStats->timeQuadraticForm = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}()-t;
+90     \}
+91 
+92     \textcolor{comment}{// core part of the Levenbarg algorithm}
+93     \textcolor{keywordflow}{if} (iteration == 0) \{       
+94       \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_aec7bba815e20361aa7ccc4661f90a034}{\_currentLambda} = \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a84d860857af44977ab5358527475ce54}{computeLambdaInit}();
+95       \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a8bcb1a957056cba788072992c5a8a7a1}{\_ni} = 2;
+96       \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a7f0b375c45a9f91f2676548591273c8d}{\_nBad} = 0;
+97     \}
+98 
+99     \textcolor{keywordtype}{double} rho=0;
+100     \textcolor{keywordtype}{int}& qmax = \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a2319771c8d3ee0f773bdb86d5416bab7}{\_levenbergIterations};
+101     qmax = 0;
+102     \textcolor{keywordflow}{do} \{
+103       \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a08833d6f9ae487f5608f6113f3635b6b}{push}();
+104       \textcolor{keywordflow}{if} (globalStats) \{
+105         globalStats->levenbergIterations++;
+106         t=\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+107       \}
+108       \textcolor{comment}{// update the diagonal of the system matrix}
+109       \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_a94a0d5196c7859c6c37fc2368ac56be3}{setLambda}(\hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_aec7bba815e20361aa7ccc4661f90a034}{\_currentLambda}, \textcolor{keyword}{true});
+110       \textcolor{keywordtype}{bool} ok2 = \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_a9c359a886db57f2f81e54a2113f3bd38}{solve}();
+111       \textcolor{keywordflow}{if} (globalStats) \{
+112         globalStats->timeLinearSolution+=\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}()-t;
+113         t=\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+114       \}
+115       \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer}->update(\hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_acb097d8568624a1f3af4dba808e5593b}{x}());
+116       \textcolor{keywordflow}{if} (globalStats) \{
+117         globalStats->timeUpdate = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}()-t;
+118       \}
+119 
+120       \textcolor{comment}{// restore the diagonal}
+121       \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_a3c40dae9b999c4d18e57b02fd0e0ade2}{restoreDiagonal}();
+122 
+123       \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a09572668aa85b75a5bebf7b66401ce8f}{computeActiveErrors}();
+124       tempChi = \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_ae47c5023e53685523499fc00d6057d14}{activeRobustChi2}();
+125 
+126       \textcolor{keywordflow}{if} (! ok2)
+127         tempChi=std::numeric\_limits<double>::max();
+128 
+129       rho = (currentChi-tempChi);
+130       \textcolor{keywordtype}{double} scale = \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a3938bf95baa0088f9cd4b56a19540c90}{computeScale}();
+131       scale += 1e-3; \textcolor{comment}{// make sure it's non-zero :)}
+132       rho /=  scale;
+133 
+134       \textcolor{keywordflow}{if} (rho>0 && \hyperlink{macros_8h_a13ed8e2673f6ab9bf2fc6a9678dfc196}{g2o\_isfinite}(tempChi))\{ \textcolor{comment}{// last step was good}
+135         \textcolor{keywordtype}{double} alpha = 1.-pow((2*rho-1),3);
+136         \textcolor{comment}{// crop lambda between minimum and maximum factors}
+137         alpha = (std::min)(alpha, \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a16d8b5540cd7ae0c132a565e3f49c021}{\_goodStepUpperScale});
+138         \textcolor{keywordtype}{double} scaleFactor = (std::max)(\hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a4951bc2e2fcca2c4eae4864690a4c087}{\_goodStepLowerScale}, alpha);
+139         \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_aec7bba815e20361aa7ccc4661f90a034}{\_currentLambda} *= scaleFactor;
+140         \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a8bcb1a957056cba788072992c5a8a7a1}{\_ni} = 2;
+141         currentChi=tempChi;
+142         \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_ac6344493dc9f66d5443759ff9f2abf6c}{discardTop}();
+143       \} \textcolor{keywordflow}{else} \{
+144         \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_aec7bba815e20361aa7ccc4661f90a034}{\_currentLambda}*=\hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a8bcb1a957056cba788072992c5a8a7a1}{\_ni};
+145         \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a8bcb1a957056cba788072992c5a8a7a1}{\_ni}*=2;
+146         \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a57dbbb584122c6cfa292bb79d8fcd7ad}{pop}(); \textcolor{comment}{// restore the last state before trying to optimize}
+147       \}
+148       qmax++;
+149     \} \textcolor{keywordflow}{while} (rho<0 && qmax < \_maxTrialsAfterFailure->value() && ! \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer}->
+      \hyperlink{classg2o_1_1SparseOptimizer_ae592f525151d0cfb5bde3e7213f7ab11}{terminate}());
+150 
+151     \textcolor{keywordflow}{if} (qmax == \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a1f3b03bbcb2dbeed686069bed8783b80}{\_maxTrialsAfterFailure}->\hyperlink{classg2o_1_1Property_aefa3e7a5fcb2c8e061ecb07485f1371c}{value}() || rho==0)
+152       \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizationAlgorithm_a705d58d7bc19528a8ab718570d090cdfa3c3d3db3bae371ad18611e0ec5aa99ef}{Terminate};
+153 
+154     \textcolor{comment}{//Stop criterium (Raul)}
+155     \textcolor{keywordflow}{if}((iniChi-currentChi)*1e3<iniChi)
+156         \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a7f0b375c45a9f91f2676548591273c8d}{\_nBad}++;
+157     \textcolor{keywordflow}{else}
+158         \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a7f0b375c45a9f91f2676548591273c8d}{\_nBad}=0;
+159 
+160     \textcolor{keywordflow}{if}(\hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a7f0b375c45a9f91f2676548591273c8d}{\_nBad}>=3)
+161         \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizationAlgorithm_a705d58d7bc19528a8ab718570d090cdfa3c3d3db3bae371ad18611e0ec5aa99ef}{Terminate};
+162 
+163     \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizationAlgorithm_a705d58d7bc19528a8ab718570d090cdfa5e94b8ee7748cc4c1a5c86de2e8cc962}{OK};
+164   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!user\+Lambda\+Init@{user\+Lambda\+Init}}
+\index{user\+Lambda\+Init@{user\+Lambda\+Init}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{user\+Lambda\+Init()}{userLambdaInit()}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Optimization\+Algorithm\+Levenberg\+::user\+Lambda\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a4a4d18c98361a1288db724136d353596}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a4a4d18c98361a1288db724136d353596}
+
+
+return the lambda set by the user, if $<$ 0 the \hyperlink{classg2o_1_1SparseOptimizer}{Sparse\+Optimizer} will compute the initial lambda 
+
+
+
+Definition at line 61 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+References \+\_\+user\+Lambda\+Init, set\+User\+Lambda\+Init(), and g2o\+::\+Property$<$ T $>$\+::value().
+
+
+\begin{DoxyCode}
+61 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizationAlgorithmLevenberg_a021c97d3f8205ec2ae7fde147f98b452}{\_userLambdaInit}->\hyperlink{classg2o_1_1Property_aefa3e7a5fcb2c8e061ecb07485f1371c}{value}();\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!\+\_\+current\+Lambda@{\+\_\+current\+Lambda}}
+\index{\+\_\+current\+Lambda@{\+\_\+current\+Lambda}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{\+\_\+current\+Lambda}{_currentLambda}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Optimization\+Algorithm\+Levenberg\+::\+\_\+current\+Lambda\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_aec7bba815e20361aa7ccc4661f90a034}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_aec7bba815e20361aa7ccc4661f90a034}
+
+
+Definition at line 72 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+Referenced by compute\+Scale(), current\+Lambda(), Optimization\+Algorithm\+Levenberg(), print\+Verbose(), and solve().
+
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!\+\_\+good\+Step\+Lower\+Scale@{\+\_\+good\+Step\+Lower\+Scale}}
+\index{\+\_\+good\+Step\+Lower\+Scale@{\+\_\+good\+Step\+Lower\+Scale}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{\+\_\+good\+Step\+Lower\+Scale}{_goodStepLowerScale}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Optimization\+Algorithm\+Levenberg\+::\+\_\+good\+Step\+Lower\+Scale\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a4951bc2e2fcca2c4eae4864690a4c087}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a4951bc2e2fcca2c4eae4864690a4c087}
+
+
+lower bound for lambda decrease if a good LM step 
+
+
+
+Definition at line 74 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+Referenced by Optimization\+Algorithm\+Levenberg(), and solve().
+
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!\+\_\+good\+Step\+Upper\+Scale@{\+\_\+good\+Step\+Upper\+Scale}}
+\index{\+\_\+good\+Step\+Upper\+Scale@{\+\_\+good\+Step\+Upper\+Scale}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{\+\_\+good\+Step\+Upper\+Scale}{_goodStepUpperScale}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Optimization\+Algorithm\+Levenberg\+::\+\_\+good\+Step\+Upper\+Scale\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a16d8b5540cd7ae0c132a565e3f49c021}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a16d8b5540cd7ae0c132a565e3f49c021}
+
+
+upper bound for lambda decrease if a good LM step 
+
+
+
+Definition at line 75 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+Referenced by Optimization\+Algorithm\+Levenberg(), and solve().
+
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!\+\_\+levenberg\+Iterations@{\+\_\+levenberg\+Iterations}}
+\index{\+\_\+levenberg\+Iterations@{\+\_\+levenberg\+Iterations}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{\+\_\+levenberg\+Iterations}{_levenbergIterations}}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Optimization\+Algorithm\+Levenberg\+::\+\_\+levenberg\+Iterations\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a2319771c8d3ee0f773bdb86d5416bab7}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a2319771c8d3ee0f773bdb86d5416bab7}
+
+
+the numer of levenberg iterations performed to accept the last step 
+
+
+
+Definition at line 77 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+Referenced by levenberg\+Iteration(), Optimization\+Algorithm\+Levenberg(), print\+Verbose(), and solve().
+
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!\+\_\+max\+Trials\+After\+Failure@{\+\_\+max\+Trials\+After\+Failure}}
+\index{\+\_\+max\+Trials\+After\+Failure@{\+\_\+max\+Trials\+After\+Failure}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{\+\_\+max\+Trials\+After\+Failure}{_maxTrialsAfterFailure}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Property}$<$int$>$$\ast$ g2o\+::\+Optimization\+Algorithm\+Levenberg\+::\+\_\+max\+Trials\+After\+Failure\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a1f3b03bbcb2dbeed686069bed8783b80}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a1f3b03bbcb2dbeed686069bed8783b80}
+
+
+Definition at line 70 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+Referenced by max\+Trials\+After\+Failure(), Optimization\+Algorithm\+Levenberg(), set\+Max\+Trials\+After\+Failure(), and solve().
+
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!\+\_\+n\+Bad@{\+\_\+n\+Bad}}
+\index{\+\_\+n\+Bad@{\+\_\+n\+Bad}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{\+\_\+n\+Bad}{_nBad}}]{\setlength{\rightskip}{0pt plus 5cm}int g2o\+::\+Optimization\+Algorithm\+Levenberg\+::\+\_\+n\+Bad\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a7f0b375c45a9f91f2676548591273c8d}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a7f0b375c45a9f91f2676548591273c8d}
+
+
+Definition at line 79 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+Referenced by Optimization\+Algorithm\+Levenberg(), and solve().
+
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!\+\_\+ni@{\+\_\+ni}}
+\index{\+\_\+ni@{\+\_\+ni}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{\+\_\+ni}{_ni}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Optimization\+Algorithm\+Levenberg\+::\+\_\+ni\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a8bcb1a957056cba788072992c5a8a7a1}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a8bcb1a957056cba788072992c5a8a7a1}
+
+
+Definition at line 76 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+Referenced by Optimization\+Algorithm\+Levenberg(), and solve().
+
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!\+\_\+tau@{\+\_\+tau}}
+\index{\+\_\+tau@{\+\_\+tau}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{\+\_\+tau}{_tau}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Optimization\+Algorithm\+Levenberg\+::\+\_\+tau\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_ac09602f23e52c5dbc6be1bf77e9f9d5f}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_ac09602f23e52c5dbc6be1bf77e9f9d5f}
+
+
+Definition at line 73 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+Referenced by compute\+Lambda\+Init(), and Optimization\+Algorithm\+Levenberg().
+
+\index{g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}!\+\_\+user\+Lambda\+Init@{\+\_\+user\+Lambda\+Init}}
+\index{\+\_\+user\+Lambda\+Init@{\+\_\+user\+Lambda\+Init}!g2o\+::\+Optimization\+Algorithm\+Levenberg@{g2o\+::\+Optimization\+Algorithm\+Levenberg}}
+\subsubsection[{\texorpdfstring{\+\_\+user\+Lambda\+Init}{_userLambdaInit}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Property}$<$double$>$$\ast$ g2o\+::\+Optimization\+Algorithm\+Levenberg\+::\+\_\+user\+Lambda\+Init\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1OptimizationAlgorithmLevenberg_a021c97d3f8205ec2ae7fde147f98b452}{}\label{classg2o_1_1OptimizationAlgorithmLevenberg_a021c97d3f8205ec2ae7fde147f98b452}
+
+
+Definition at line 71 of file optimization\+\_\+algorithm\+\_\+levenberg.\+h.
+
+
+
+Referenced by compute\+Lambda\+Init(), Optimization\+Algorithm\+Levenberg(), set\+User\+Lambda\+Init(), and user\+Lambda\+Init().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{optimization__algorithm__levenberg_8h}{optimization\+\_\+algorithm\+\_\+levenberg.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{optimization__algorithm__levenberg_8cpp}{optimization\+\_\+algorithm\+\_\+levenberg.\+cpp}\end{DoxyCompactItemize}

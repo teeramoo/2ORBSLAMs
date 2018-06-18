@@ -1,0 +1,77 @@
+\hypertarget{classg2o_1_1RobustKernelPseudoHuber}{}\section{g2o\+:\+:Robust\+Kernel\+Pseudo\+Huber Class Reference}
+\label{classg2o_1_1RobustKernelPseudoHuber}\index{g2o\+::\+Robust\+Kernel\+Pseudo\+Huber@{g2o\+::\+Robust\+Kernel\+Pseudo\+Huber}}
+
+
+Pseudo Huber Cost Function.  
+
+
+
+
+{\ttfamily \#include $<$robust\+\_\+kernel\+\_\+impl.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Robust\+Kernel\+Pseudo\+Huber\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Robust\+Kernel\+Pseudo\+Huber\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classg2o_1_1RobustKernelPseudoHuber_a297dce8c836d499bd4c2818628574933}{robustify} (double e2, Eigen\+::\+Vector3d \&rho) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Pseudo Huber Cost Function. 
+
+The smooth pseudo huber cost function\+: See \href{http://en.wikipedia.org/wiki/Huber_loss_function}{\tt http\+://en.\+wikipedia.\+org/wiki/\+Huber\+\_\+loss\+\_\+function}
+
+2 e 2 d (sqrt(-- + 1) -\/ 1) 2 d 
+
+Definition at line 121 of file robust\+\_\+kernel\+\_\+impl.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Robust\+Kernel\+Pseudo\+Huber@{g2o\+::\+Robust\+Kernel\+Pseudo\+Huber}!robustify@{robustify}}
+\index{robustify@{robustify}!g2o\+::\+Robust\+Kernel\+Pseudo\+Huber@{g2o\+::\+Robust\+Kernel\+Pseudo\+Huber}}
+\subsubsection[{\texorpdfstring{robustify(double e2, Eigen\+::\+Vector3d \&rho) const }{robustify(double e2, Eigen::Vector3d &rho) const }}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Robust\+Kernel\+Pseudo\+Huber\+::robustify (
+\begin{DoxyParamCaption}
+\item[{double}]{squared\+Error, }
+\item[{Eigen\+::\+Vector3d \&}]{rho}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1RobustKernelPseudoHuber_a297dce8c836d499bd4c2818628574933}{}\label{classg2o_1_1RobustKernelPseudoHuber_a297dce8c836d499bd4c2818628574933}
+compute the scaling factor for a error\+: The error is e$^\wedge$T Omega e The output rho is rho\mbox{[}0\mbox{]}\+: The actual scaled error value rho\mbox{[}1\mbox{]}\+: First derivative of the scaling function rho\mbox{[}2\mbox{]}\+: Second derivative of the scaling function 
+
+Implements \hyperlink{classg2o_1_1RobustKernel_ab47b071a0cfe466be063f0104bc41d0f}{g2o\+::\+Robust\+Kernel}.
+
+
+
+Definition at line 116 of file robust\+\_\+kernel\+\_\+impl.\+cpp.
+
+
+
+References g2o\+::\+Robust\+Kernel\+::\+\_\+delta.
+
+
+\begin{DoxyCode}
+117 \{
+118   \textcolor{keywordtype}{double} dsqr = \hyperlink{classg2o_1_1RobustKernel_a4b03953a6e7bfca64efea37fb98548aa}{\_delta} * \hyperlink{classg2o_1_1RobustKernel_a4b03953a6e7bfca64efea37fb98548aa}{\_delta};
+119   \textcolor{keywordtype}{double} dsqrReci = 1. / dsqr;
+120   \textcolor{keywordtype}{double} aux1 = dsqrReci * e2 + 1.0;
+121   \textcolor{keywordtype}{double} aux2 = sqrt(aux1);
+122   rho[0] = 2 * dsqr * (aux2 - 1);
+123   rho[1] = 1. / aux2;
+124   rho[2] = -0.5 * dsqrReci * rho[1] / aux1;
+125 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{robust__kernel__impl_8h}{robust\+\_\+kernel\+\_\+impl.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{robust__kernel__impl_8cpp}{robust\+\_\+kernel\+\_\+impl.\+cpp}\end{DoxyCompactItemize}

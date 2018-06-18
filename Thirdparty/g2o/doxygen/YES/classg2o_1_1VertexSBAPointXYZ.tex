@@ -1,0 +1,189 @@
+\hypertarget{classg2o_1_1VertexSBAPointXYZ}{}\section{g2o\+:\+:Vertex\+S\+B\+A\+Point\+X\+YZ Class Reference}
+\label{classg2o_1_1VertexSBAPointXYZ}\index{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ@{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}}
+
+
+Point vertex, X\+YZ.  
+
+
+
+
+{\ttfamily \#include $<$types\+\_\+sba.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Vertex\+S\+B\+A\+Point\+X\+YZ\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Vertex\+S\+B\+A\+Point\+X\+YZ\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \hyperlink{classg2o_1_1VertexSBAPointXYZ_ad2b835ac63c1bbe22975a409151036d8}{Vertex\+S\+B\+A\+Point\+X\+YZ} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1VertexSBAPointXYZ_a3668aa23ed3fc7e2c3e6bddda7ddcd1a}{read} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em read the vertex from a stream, i.\+e., the internal state of the vertex \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classg2o_1_1VertexSBAPointXYZ_aa600a1190e1760b5616de4f4e26ca5f8}{write} (std\+::ostream \&os) const 
+\begin{DoxyCompactList}\small\item\em write the vertex to a stream \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1VertexSBAPointXYZ_a787b72465f35a3f30fcbb6b8056b47c4}{set\+To\+Origin\+Impl} ()
+\begin{DoxyCompactList}\small\item\em sets the node to the origin (used in the multilevel stuff) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1VertexSBAPointXYZ_aa2a13838edc46ed5395fee5c07c4c8ea}{oplus\+Impl} (const double $\ast$update)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Point vertex, X\+YZ. 
+
+Definition at line 40 of file types\+\_\+sba.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ@{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}!Vertex\+S\+B\+A\+Point\+X\+YZ@{Vertex\+S\+B\+A\+Point\+X\+YZ}}
+\index{Vertex\+S\+B\+A\+Point\+X\+YZ@{Vertex\+S\+B\+A\+Point\+X\+YZ}!g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ@{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}}
+\subsubsection[{\texorpdfstring{Vertex\+S\+B\+A\+Point\+X\+Y\+Z()}{VertexSBAPointXYZ()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+Y\+Z\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1VertexSBAPointXYZ_ad2b835ac63c1bbe22975a409151036d8}{}\label{classg2o_1_1VertexSBAPointXYZ_ad2b835ac63c1bbe22975a409151036d8}
+
+
+Definition at line 35 of file types\+\_\+sba.\+cpp.
+
+
+\begin{DoxyCode}
+35                                        : BaseVertex<3, Vector3d>()
+36   \{
+37   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ@{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}!oplus\+Impl@{oplus\+Impl}}
+\index{oplus\+Impl@{oplus\+Impl}!g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ@{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}}
+\subsubsection[{\texorpdfstring{oplus\+Impl(const double $\ast$update)}{oplusImpl(const double *update)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+Y\+Z\+::oplus\+Impl (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1VertexSBAPointXYZ_aa2a13838edc46ed5395fee5c07c4c8ea}{}\label{classg2o_1_1VertexSBAPointXYZ_aa2a13838edc46ed5395fee5c07c4c8ea}
+update the position of the node from the parameters in v. Implement in your class! 
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex_a4537a46afb8d12c3f18c88ba9601c625}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}.
+
+
+
+Definition at line 52 of file types\+\_\+sba.\+h.
+
+
+
+References g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$\+::\+\_\+estimate.
+
+
+\begin{DoxyCode}
+53     \{
+54       Eigen::Map<const Vector3d> v(update);
+55       \hyperlink{classg2o_1_1BaseVertex_ab188c92c3e906c6e06507ae624c0e7ac}{\_estimate} += v;
+56     \}
+\end{DoxyCode}
+\index{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ@{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}!read@{read}}
+\index{read@{read}!g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ@{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}}
+\subsubsection[{\texorpdfstring{read(std\+::istream \&is)}{read(std::istream &is)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+Y\+Z\+::read (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1VertexSBAPointXYZ_a3668aa23ed3fc7e2c3e6bddda7ddcd1a}{}\label{classg2o_1_1VertexSBAPointXYZ_a3668aa23ed3fc7e2c3e6bddda7ddcd1a}
+
+
+read the vertex from a stream, i.\+e., the internal state of the vertex 
+
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex_a356c40d33c3f1e07afa938dfb4870230}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}.
+
+
+
+Definition at line 39 of file types\+\_\+sba.\+cpp.
+
+
+
+References g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$\+::\+\_\+estimate.
+
+
+\begin{DoxyCode}
+40   \{
+41     Vector3d lv;
+42     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<3; i++)
+43       is >> \hyperlink{classg2o_1_1BaseVertex_ab188c92c3e906c6e06507ae624c0e7ac}{\_estimate}[i];
+44     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+45   \}
+\end{DoxyCode}
+\index{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ@{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}!set\+To\+Origin\+Impl@{set\+To\+Origin\+Impl}}
+\index{set\+To\+Origin\+Impl@{set\+To\+Origin\+Impl}!g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ@{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}}
+\subsubsection[{\texorpdfstring{set\+To\+Origin\+Impl()}{setToOriginImpl()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+Y\+Z\+::set\+To\+Origin\+Impl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1VertexSBAPointXYZ_a787b72465f35a3f30fcbb6b8056b47c4}{}\label{classg2o_1_1VertexSBAPointXYZ_a787b72465f35a3f30fcbb6b8056b47c4}
+
+
+sets the node to the origin (used in the multilevel stuff) 
+
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex_abd5fe36815f27a9c174ad41c2070c247}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}.
+
+
+
+Definition at line 48 of file types\+\_\+sba.\+h.
+
+
+
+References g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$\+::\+\_\+estimate.
+
+
+\begin{DoxyCode}
+48                                    \{
+49       \hyperlink{classg2o_1_1BaseVertex_ab188c92c3e906c6e06507ae624c0e7ac}{\_estimate}.fill(0.);
+50     \}
+\end{DoxyCode}
+\index{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ@{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}!write@{write}}
+\index{write@{write}!g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ@{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}}
+\subsubsection[{\texorpdfstring{write(std\+::ostream \&os) const }{write(std::ostream &os) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+Y\+Z\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1VertexSBAPointXYZ_aa600a1190e1760b5616de4f4e26ca5f8}{}\label{classg2o_1_1VertexSBAPointXYZ_aa600a1190e1760b5616de4f4e26ca5f8}
+
+
+write the vertex to a stream 
+
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex_a4cac277db656fddb5f844d9009d601eb}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}.
+
+
+
+Definition at line 47 of file types\+\_\+sba.\+cpp.
+
+
+
+References g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$\+::estimate().
+
+
+\begin{DoxyCode}
+48   \{
+49     Vector3d lv=\hyperlink{classg2o_1_1BaseVertex_abb9caa0d2d00af70e95963a11ee9660a}{estimate}();
+50     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<3; i++)\{
+51       os << lv[i] << \textcolor{stringliteral}{" "};
+52     \}
+53     \textcolor{keywordflow}{return} os.good();
+54   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/\hyperlink{types__sba_8h}{types\+\_\+sba.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/\hyperlink{types__sba_8cpp}{types\+\_\+sba.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,377 @@
+\hypertarget{classg2o_1_1ParameterContainer}{}\section{g2o\+:\+:Parameter\+Container Class Reference}
+\label{classg2o_1_1ParameterContainer}\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+
+
+map id to parameters  
+
+
+
+
+{\ttfamily \#include $<$parameter\+\_\+container.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Parameter\+Container\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Parameter\+Container\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ int, \hyperlink{classg2o_1_1Parameter}{Parameter} $\ast$ $>$ \hyperlink{classg2o_1_1ParameterContainer_a200fdfdce01f7fb5f96e02a8ddf666ac}{Base\+Class}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1ParameterContainer_a6047d0206008b5cbb366be0fe03246b4}{Parameter\+Container} (bool is\+Main\+Storage\+\_\+=true)
+\item 
+virtual \hyperlink{classg2o_1_1ParameterContainer_a186660e1ef0350798a549b247365b295}{$\sim$\+Parameter\+Container} ()
+\item 
+bool \hyperlink{classg2o_1_1ParameterContainer_a9c0b1376e780b177f2d36c4ee4f873d7}{add\+Parameter} (\hyperlink{classg2o_1_1Parameter}{Parameter} $\ast$p)
+\begin{DoxyCompactList}\small\item\em add parameter to the container \end{DoxyCompactList}\item 
+\hyperlink{classg2o_1_1Parameter}{Parameter} $\ast$ \hyperlink{classg2o_1_1ParameterContainer_ad55d9e6d2adaa4680f74be98e2ae3784}{get\+Parameter} (int id)
+\begin{DoxyCompactList}\small\item\em return a parameter based on its ID \end{DoxyCompactList}\item 
+\hyperlink{classg2o_1_1Parameter}{Parameter} $\ast$ \hyperlink{classg2o_1_1ParameterContainer_a6e57cf684d92f0ceeba8b4923fa41864}{detach\+Parameter} (int id)
+\begin{DoxyCompactList}\small\item\em remove a parameter from the container, i.\+e., the user now owns the pointer \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classg2o_1_1ParameterContainer_ae5883ac8e2313cab310cf067b0ba12bf}{read} (std\+::istream \&is, const std\+::map$<$ std\+::string, std\+::string $>$ $\ast$renamed\+Map=0)
+\begin{DoxyCompactList}\small\item\em read parameters from a stream \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classg2o_1_1ParameterContainer_addceeb97b3d737610e79142657c54851}{write} (std\+::ostream \&os) const 
+\begin{DoxyCompactList}\small\item\em write the data to a stream \end{DoxyCompactList}\item 
+bool \hyperlink{classg2o_1_1ParameterContainer_abfea723a17d417e6411bbd0c9fa50294}{is\+Main\+Storage} () const 
+\item 
+void \hyperlink{classg2o_1_1ParameterContainer_aff4d3792e2ebd022ebd4a1534b88b773}{clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classg2o_1_1ParameterContainer_a2ff1e92bc6a486d48043e2191807bd47}{\+\_\+is\+Main\+Storage}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+map id to parameters 
+
+Definition at line 41 of file parameter\+\_\+container.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!Base\+Class@{Base\+Class}}
+\index{Base\+Class@{Base\+Class}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection[{\texorpdfstring{Base\+Class}{BaseClass}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$int, {\bf Parameter}$\ast$$>$ {\bf g2o\+::\+Parameter\+Container\+::\+Base\+Class}}\hypertarget{classg2o_1_1ParameterContainer_a200fdfdce01f7fb5f96e02a8ddf666ac}{}\label{classg2o_1_1ParameterContainer_a200fdfdce01f7fb5f96e02a8ddf666ac}
+
+
+Definition at line 44 of file parameter\+\_\+container.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!Parameter\+Container@{Parameter\+Container}}
+\index{Parameter\+Container@{Parameter\+Container}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection[{\texorpdfstring{Parameter\+Container(bool is\+Main\+Storage\+\_\+=true)}{ParameterContainer(bool isMainStorage_=true)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Parameter\+Container\+::\+Parameter\+Container (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\+Main\+Storage\+\_\+ = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1ParameterContainer_a6047d0206008b5cbb366be0fe03246b4}{}\label{classg2o_1_1ParameterContainer_a6047d0206008b5cbb366be0fe03246b4}
+create a container for the parameters. 
+\begin{DoxyParams}{Parameters}
+{\em is\+Main\+Storage\+\_\+} & pointers to the parameters are owned by this container, i.\+e., freed in its constructor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file parameter\+\_\+container.\+cpp.
+
+
+\begin{DoxyCode}
+42                                                             :
+43     \hyperlink{classg2o_1_1ParameterContainer_a2ff1e92bc6a486d48043e2191807bd47}{\_isMainStorage}(isMainStorage\_)
+44   \{
+45   \}
+\end{DoxyCode}
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!````~Parameter\+Container@{$\sim$\+Parameter\+Container}}
+\index{````~Parameter\+Container@{$\sim$\+Parameter\+Container}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection[{\texorpdfstring{$\sim$\+Parameter\+Container()}{~ParameterContainer()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Parameter\+Container\+::$\sim$\+Parameter\+Container (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1ParameterContainer_a186660e1ef0350798a549b247365b295}{}\label{classg2o_1_1ParameterContainer_a186660e1ef0350798a549b247365b295}
+
+
+Definition at line 56 of file parameter\+\_\+container.\+cpp.
+
+
+
+References clear().
+
+
+\begin{DoxyCode}
+56                                          \{
+57     \hyperlink{classg2o_1_1ParameterContainer_aff4d3792e2ebd022ebd4a1534b88b773}{clear}();
+58   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!add\+Parameter@{add\+Parameter}}
+\index{add\+Parameter@{add\+Parameter}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection[{\texorpdfstring{add\+Parameter(\+Parameter $\ast$p)}{addParameter(Parameter *p)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Parameter\+Container\+::add\+Parameter (
+\begin{DoxyParamCaption}
+\item[{{\bf Parameter} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1ParameterContainer_a9c0b1376e780b177f2d36c4ee4f873d7}{}\label{classg2o_1_1ParameterContainer_a9c0b1376e780b177f2d36c4ee4f873d7}
+
+
+add parameter to the container 
+
+
+
+Definition at line 60 of file parameter\+\_\+container.\+cpp.
+
+
+
+References g2o\+::\+Parameter\+::id().
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::add\+Parameter(), and read().
+
+
+\begin{DoxyCode}
+60                                                    \{
+61     \textcolor{keywordflow}{if} (p->id()<0)
+62       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+63     iterator it=find(p->id());
+64     \textcolor{keywordflow}{if} (it!=end())
+65       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+66     insert(make\_pair(p->id(), p));
+67     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+68   \}
+\end{DoxyCode}
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!clear@{clear}}
+\index{clear@{clear}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection[{\texorpdfstring{clear()}{clear()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Parameter\+Container\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1ParameterContainer_aff4d3792e2ebd022ebd4a1534b88b773}{}\label{classg2o_1_1ParameterContainer_aff4d3792e2ebd022ebd4a1534b88b773}
+
+
+Definition at line 47 of file parameter\+\_\+container.\+cpp.
+
+
+
+References \+\_\+is\+Main\+Storage.
+
+
+
+Referenced by is\+Main\+Storage(), and $\sim$\+Parameter\+Container().
+
+
+\begin{DoxyCode}
+47                                  \{
+48     \textcolor{keywordflow}{if} (!\hyperlink{classg2o_1_1ParameterContainer_a2ff1e92bc6a486d48043e2191807bd47}{\_isMainStorage})
+49       \textcolor{keywordflow}{return};
+50     \textcolor{keywordflow}{for} (iterator it = begin(); it!=end(); it++)\{
+51       \textcolor{keyword}{delete} it->second;
+52     \}
+53     BaseClass::clear();
+54   \}
+\end{DoxyCode}
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!detach\+Parameter@{detach\+Parameter}}
+\index{detach\+Parameter@{detach\+Parameter}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection[{\texorpdfstring{detach\+Parameter(int id)}{detachParameter(int id)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parameter} $\ast$ g2o\+::\+Parameter\+Container\+::detach\+Parameter (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1ParameterContainer_a6e57cf684d92f0ceeba8b4923fa41864}{}\label{classg2o_1_1ParameterContainer_a6e57cf684d92f0ceeba8b4923fa41864}
+
+
+remove a parameter from the container, i.\+e., the user now owns the pointer 
+
+
+
+Definition at line 77 of file parameter\+\_\+container.\+cpp.
+
+
+\begin{DoxyCode}
+77                                                       \{
+78     iterator it=find(\textcolor{keywordtype}{id});
+79     \textcolor{keywordflow}{if} (it==end())
+80       \textcolor{keywordflow}{return} 0;
+81     Parameter* p=it->second;
+82     erase(it);
+83     \textcolor{keywordflow}{return} p;
+84   \}
+\end{DoxyCode}
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!get\+Parameter@{get\+Parameter}}
+\index{get\+Parameter@{get\+Parameter}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection[{\texorpdfstring{get\+Parameter(int id)}{getParameter(int id)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parameter} $\ast$ g2o\+::\+Parameter\+Container\+::get\+Parameter (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1ParameterContainer_ad55d9e6d2adaa4680f74be98e2ae3784}{}\label{classg2o_1_1ParameterContainer_ad55d9e6d2adaa4680f74be98e2ae3784}
+
+
+return a parameter based on its ID 
+
+
+
+Definition at line 70 of file parameter\+\_\+container.\+cpp.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::parameter().
+
+
+\begin{DoxyCode}
+70                                                     \{
+71     iterator it=find(\textcolor{keywordtype}{id});
+72     \textcolor{keywordflow}{if} (it==end())
+73       \textcolor{keywordflow}{return} 0;
+74     \textcolor{keywordflow}{return} it->second;
+75   \}
+\end{DoxyCode}
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!is\+Main\+Storage@{is\+Main\+Storage}}
+\index{is\+Main\+Storage@{is\+Main\+Storage}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection[{\texorpdfstring{is\+Main\+Storage() const }{isMainStorage() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Parameter\+Container\+::is\+Main\+Storage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1ParameterContainer_abfea723a17d417e6411bbd0c9fa50294}{}\label{classg2o_1_1ParameterContainer_abfea723a17d417e6411bbd0c9fa50294}
+
+
+Definition at line 62 of file parameter\+\_\+container.\+h.
+
+
+
+References \+\_\+is\+Main\+Storage, and clear().
+
+
+\begin{DoxyCode}
+62 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1ParameterContainer_a2ff1e92bc6a486d48043e2191807bd47}{\_isMainStorage};\}
+\end{DoxyCode}
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!read@{read}}
+\index{read@{read}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection[{\texorpdfstring{read(std\+::istream \&is, const std\+::map$<$ std\+::string, std\+::string $>$ $\ast$renamed\+Map=0)}{read(std::istream &is, const std::map< std::string, std::string > *renamedMap=0)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Parameter\+Container\+::read (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is, }
+\item[{const std\+::map$<$ std\+::string, std\+::string $>$ $\ast$}]{renamed\+Map = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1ParameterContainer_ae5883ac8e2313cab310cf067b0ba12bf}{}\label{classg2o_1_1ParameterContainer_ae5883ac8e2313cab310cf067b0ba12bf}
+
+
+read parameters from a stream 
+
+
+
+Definition at line 97 of file parameter\+\_\+container.\+cpp.
+
+
+
+References \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, add\+Parameter(), g2o\+::\+Factory\+::construct(), g2o\+::\+Hyper\+Graph\+::\+Hyper\+Graph\+Element\+::element\+Type(), g2o\+::\+Hyper\+Graph\+::\+H\+G\+E\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER, g2o\+::\+Factory\+::instance(), r, g2o\+::read\+Line(), and g2o\+::\+Parameter\+::set\+Id().
+
+
+\begin{DoxyCode}
+97                                                                                                       \{
+98     stringstream currentLine;
+99     \textcolor{keywordtype}{string} token;
+100 
+101     Factory* factory = \hyperlink{classg2o_1_1Factory_a8a1f33e017c5ad59399cef48972578ae}{Factory::instance}();
+102     \hyperlink{classg2o_1_1HyperGraph_a7b8fda20e1b03e92aeceeac6e8218b73}{HyperGraph::GraphElemBitset} elemBitset;
+103     elemBitset[\hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eaec8dd0de424ff24a18d3ba5ed3864f79}{HyperGraph::HGET\_PARAMETER}] = 1;
+104     
+105     \textcolor{keywordflow}{while} (1) \{
+106       \textcolor{keywordtype}{int} bytesRead = \hyperlink{group__utils_ga07aa1d8e5a4e25d0170010df66908611}{readLine}(is, currentLine);
+107       \textcolor{keywordflow}{if} (bytesRead == -1)
+108         \textcolor{keywordflow}{break};
+109       currentLine >> token;
+110       \textcolor{keywordflow}{if} (bytesRead == 0 || token.size() == 0 || token[0] == \textcolor{charliteral}{'#'})
+111         \textcolor{keywordflow}{continue};
+112       \textcolor{keywordflow}{if} (\_renamedTypesLookup && \_renamedTypesLookup->size()>0)\{
+113         map<string, string>::const\_iterator foundIt = \_renamedTypesLookup->find(token);
+114         \textcolor{keywordflow}{if} (foundIt != \_renamedTypesLookup->end()) \{
+115           token = foundIt->second;
+116         \}
+117       \}
+118 
+119       HyperGraph::HyperGraphElement* element = factory->construct(token, elemBitset);
+120       \textcolor{keywordflow}{if} (! element) \textcolor{comment}{// not a parameter or otherwise unknown tag}
+121         \textcolor{keywordflow}{continue};
+122       assert(element->elementType() == \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eaec8dd0de424ff24a18d3ba5ed3864f79}{HyperGraph::HGET\_PARAMETER} && \textcolor{stringliteral}{"Should be a
+       param"});
+123 
+124       Parameter* p = \textcolor{keyword}{static\_cast<}Parameter*\textcolor{keyword}{>}(element);
+125       \textcolor{keywordtype}{int} pid;
+126       currentLine >> pid;
+127       p->setId(pid);
+128       \textcolor{keywordtype}{bool} \hyperlink{sparse__block__matrix_8hpp_acab531abaa74a7e664e3986f2522b33a}{r} = p->read(currentLine);
+129       \textcolor{keywordflow}{if} (! r) \{
+130         cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": Error reading data "} << token << \textcolor{stringliteral}{" for
+       parameter "} << pid << endl;
+131         \textcolor{keyword}{delete} p;
+132       \} \textcolor{keywordflow}{else} \{
+133         \textcolor{keywordflow}{if} (! \hyperlink{classg2o_1_1ParameterContainer_a9c0b1376e780b177f2d36c4ee4f873d7}{addParameter}(p) )\{
+134           cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": Parameter of type:"} << token << \textcolor{stringliteral}{" id:"} << 
+      pid << \textcolor{stringliteral}{" already defined"} << endl;
+135         \}
+136       \}
+137     \} \textcolor{comment}{// while read line}
+138     
+139     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+140   \}
+\end{DoxyCode}
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!write@{write}}
+\index{write@{write}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection[{\texorpdfstring{write(std\+::ostream \&os) const }{write(std::ostream &os) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Parameter\+Container\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1ParameterContainer_addceeb97b3d737610e79142657c54851}{}\label{classg2o_1_1ParameterContainer_addceeb97b3d737610e79142657c54851}
+
+
+write the data to a stream 
+
+
+
+Definition at line 86 of file parameter\+\_\+container.\+cpp.
+
+
+
+References g2o\+::\+Factory\+::instance(), and g2o\+::\+Factory\+::tag().
+
+
+\begin{DoxyCode}
+86                                                     \{
+87     Factory* factory = \hyperlink{classg2o_1_1Factory_a8a1f33e017c5ad59399cef48972578ae}{Factory::instance}();
+88     \textcolor{keywordflow}{for} (const\_iterator it=begin(); it!=end(); it++)\{
+89       os << factory->tag(it->second) << \textcolor{stringliteral}{" "};
+90       os << it->second->id() << \textcolor{stringliteral}{" "};
+91       it->second->write(os);
+92       os << endl;
+93     \}
+94     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+95   \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!\+\_\+is\+Main\+Storage@{\+\_\+is\+Main\+Storage}}
+\index{\+\_\+is\+Main\+Storage@{\+\_\+is\+Main\+Storage}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection[{\texorpdfstring{\+\_\+is\+Main\+Storage}{_isMainStorage}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Parameter\+Container\+::\+\_\+is\+Main\+Storage\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1ParameterContainer_a2ff1e92bc6a486d48043e2191807bd47}{}\label{classg2o_1_1ParameterContainer_a2ff1e92bc6a486d48043e2191807bd47}
+
+
+Definition at line 69 of file parameter\+\_\+container.\+h.
+
+
+
+Referenced by clear(), and is\+Main\+Storage().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{parameter__container_8h}{parameter\+\_\+container.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{parameter__container_8cpp}{parameter\+\_\+container.\+cpp}\end{DoxyCompactItemize}

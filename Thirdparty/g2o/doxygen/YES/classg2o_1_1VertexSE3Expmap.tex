@@ -1,0 +1,186 @@
+\hypertarget{classg2o_1_1VertexSE3Expmap}{}\section{g2o\+:\+:Vertex\+S\+E3\+Expmap Class Reference}
+\label{classg2o_1_1VertexSE3Expmap}\index{g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}}
+
+
+S\+E3 Vertex parameterized internally with a transformation matrix and externally with its exponential map.  
+
+
+
+
+{\ttfamily \#include $<$types\+\_\+six\+\_\+dof\+\_\+expmap.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Vertex\+S\+E3\+Expmap\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Vertex\+S\+E3\+Expmap\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \hyperlink{classg2o_1_1VertexSE3Expmap_a15fc8c37a0d056a562d4df12c872f62a}{Vertex\+S\+E3\+Expmap} ()
+\item 
+bool \hyperlink{classg2o_1_1VertexSE3Expmap_a4f5913373d24ea5963fffc6830406a52}{read} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em read the vertex from a stream, i.\+e., the internal state of the vertex \end{DoxyCompactList}\item 
+bool \hyperlink{classg2o_1_1VertexSE3Expmap_a0a4a06afd69669c50cf5f66c5a013e83}{write} (std\+::ostream \&os) const 
+\begin{DoxyCompactList}\small\item\em write the vertex to a stream \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1VertexSE3Expmap_a0d12948c1fb058698bc58177db3806b1}{set\+To\+Origin\+Impl} ()
+\begin{DoxyCompactList}\small\item\em sets the node to the origin (used in the multilevel stuff) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1VertexSE3Expmap_a52592993e7ab5de6fe4bb0f9e00c4d39}{oplus\+Impl} (const double $\ast$update\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+S\+E3 Vertex parameterized internally with a transformation matrix and externally with its exponential map. 
+
+Definition at line 59 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}!Vertex\+S\+E3\+Expmap@{Vertex\+S\+E3\+Expmap}}
+\index{Vertex\+S\+E3\+Expmap@{Vertex\+S\+E3\+Expmap}!g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}}
+\subsubsection[{\texorpdfstring{Vertex\+S\+E3\+Expmap()}{VertexSE3Expmap()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Vertex\+S\+E3\+Expmap\+::\+Vertex\+S\+E3\+Expmap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1VertexSE3Expmap_a15fc8c37a0d056a562d4df12c872f62a}{}\label{classg2o_1_1VertexSE3Expmap_a15fc8c37a0d056a562d4df12c872f62a}
+
+
+Definition at line 52 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+\begin{DoxyCode}
+52                                  : BaseVertex<6, SE3Quat>() \{
+53 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}!oplus\+Impl@{oplus\+Impl}}
+\index{oplus\+Impl@{oplus\+Impl}!g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}}
+\subsubsection[{\texorpdfstring{oplus\+Impl(const double $\ast$update\+\_\+)}{oplusImpl(const double *update_)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Vertex\+S\+E3\+Expmap\+::oplus\+Impl (
+\begin{DoxyParamCaption}
+\item[{const double $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1VertexSE3Expmap_a52592993e7ab5de6fe4bb0f9e00c4d39}{}\label{classg2o_1_1VertexSE3Expmap_a52592993e7ab5de6fe4bb0f9e00c4d39}
+update the position of the node from the parameters in v. Implement in your class! 
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex_a4537a46afb8d12c3f18c88ba9601c625}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}.
+
+
+
+Definition at line 73 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+References g2o\+::\+S\+E3\+Quat\+::exp().
+
+
+\begin{DoxyCode}
+73                                                  \{
+74     Eigen::Map<const Vector6d> update(update\_);
+75     \hyperlink{classg2o_1_1BaseVertex_acb6e8e8f39caa04f62dd93a3dd400e06}{setEstimate}(\hyperlink{classg2o_1_1SE3Quat_a374a05b202889d09d5a3a25e0fb6c103}{SE3Quat::exp}(update)*\hyperlink{classg2o_1_1BaseVertex_abb9caa0d2d00af70e95963a11ee9660a}{estimate}());
+76   \}
+\end{DoxyCode}
+\index{g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}!read@{read}}
+\index{read@{read}!g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}}
+\subsubsection[{\texorpdfstring{read(std\+::istream \&is)}{read(std::istream &is)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Vertex\+S\+E3\+Expmap\+::read (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1VertexSE3Expmap_a4f5913373d24ea5963fffc6830406a52}{}\label{classg2o_1_1VertexSE3Expmap_a4f5913373d24ea5963fffc6830406a52}
+
+
+read the vertex from a stream, i.\+e., the internal state of the vertex 
+
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex_a356c40d33c3f1e07afa938dfb4870230}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}.
+
+
+
+Definition at line 55 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+
+References g2o\+::\+S\+E3\+Quat\+::from\+Vector(), g2o\+::\+S\+E3\+Quat\+::inverse(), and g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$\+::set\+Estimate().
+
+
+\begin{DoxyCode}
+55                                          \{
+56   \hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d} est;
+57   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<7; i++)
+58     is  >> est[i];
+59   SE3Quat cam2world;
+60   cam2world.fromVector(est);
+61   \hyperlink{classg2o_1_1BaseVertex_acb6e8e8f39caa04f62dd93a3dd400e06}{setEstimate}(cam2world.inverse());
+62   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+63 \}
+\end{DoxyCode}
+\index{g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}!set\+To\+Origin\+Impl@{set\+To\+Origin\+Impl}}
+\index{set\+To\+Origin\+Impl@{set\+To\+Origin\+Impl}!g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}}
+\subsubsection[{\texorpdfstring{set\+To\+Origin\+Impl()}{setToOriginImpl()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void g2o\+::\+Vertex\+S\+E3\+Expmap\+::set\+To\+Origin\+Impl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1VertexSE3Expmap_a0d12948c1fb058698bc58177db3806b1}{}\label{classg2o_1_1VertexSE3Expmap_a0d12948c1fb058698bc58177db3806b1}
+
+
+sets the node to the origin (used in the multilevel stuff) 
+
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex_abd5fe36815f27a9c174ad41c2070c247}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}.
+
+
+
+Definition at line 69 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+h.
+
+
+\begin{DoxyCode}
+69                                  \{
+70     \hyperlink{classg2o_1_1BaseVertex_ab188c92c3e906c6e06507ae624c0e7ac}{\_estimate} = SE3Quat();
+71   \}
+\end{DoxyCode}
+\index{g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}!write@{write}}
+\index{write@{write}!g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}}
+\subsubsection[{\texorpdfstring{write(std\+::ostream \&os) const }{write(std::ostream &os) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Vertex\+S\+E3\+Expmap\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1VertexSE3Expmap_a0a4a06afd69669c50cf5f66c5a013e83}{}\label{classg2o_1_1VertexSE3Expmap_a0a4a06afd69669c50cf5f66c5a013e83}
+
+
+write the vertex to a stream 
+
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Vertex_a4cac277db656fddb5f844d9009d601eb}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}.
+
+
+
+Definition at line 65 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+
+References g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$\+::estimate().
+
+
+\begin{DoxyCode}
+65                                                 \{
+66   SE3Quat cam2world(\hyperlink{classg2o_1_1BaseVertex_abb9caa0d2d00af70e95963a11ee9660a}{estimate}().inverse());
+67   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<7; i++)
+68     os << cam2world[i] << \textcolor{stringliteral}{" "};
+69   \textcolor{keywordflow}{return} os.good();
+70 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/\hyperlink{types__six__dof__expmap_8h}{types\+\_\+six\+\_\+dof\+\_\+expmap.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/\hyperlink{types__six__dof__expmap_8cpp}{types\+\_\+six\+\_\+dof\+\_\+expmap.\+cpp}\end{DoxyCompactItemize}

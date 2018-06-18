@@ -1,0 +1,79 @@
+\hypertarget{misc_8h}{}\section{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/stuff/misc.h File Reference}
+\label{misc_8h}\index{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/stuff/misc.\+h@{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/stuff/misc.\+h}}
+
+
+some general case utility functions  
+
+
+{\ttfamily \#include \char`\"{}macros.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+Include dependency graph for misc.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structg2o_1_1ForceLinker}{g2o\+::\+Force\+Linker}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceg2o}{g2o}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{misc_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}~3.\+14159265358979323846
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{namespaceg2o_a3be76fea59d320255e89425439f18f48}{g2o\+::\+Force\+Link\+Function}) (void)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespaceg2o_ada3127f4fe72b228407fabe23b72a50b}{g2o\+::square} (T \hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x})
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespaceg2o_a586ee8937cdc8de49303abd1611da387}{g2o\+::hypot} (T \hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, T y)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespaceg2o_ac2989135761e62b40066193a11950d21}{g2o\+::hypot\+\_\+sqr} (T \hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, T y)
+\item 
+double \hyperlink{namespaceg2o_a8f29adce7d7b9855e1d0ba43835c34b3}{g2o\+::deg2rad} (double degree)
+\item 
+double \hyperlink{namespaceg2o_a3965702cbb6051fa2bdb0c75c0358126}{g2o\+::rad2deg} (double rad)
+\item 
+double \hyperlink{namespaceg2o_a9f036eb4c147ddf174aa56fa031f3867}{g2o\+::normalize\+\_\+theta} (double theta)
+\item 
+double \hyperlink{namespaceg2o_a9ae48fc8caba4b009642ca53d69a3b98}{g2o\+::inverse\+\_\+theta} (double th)
+\item 
+double \hyperlink{namespaceg2o_a25f6d3c7415a89f7a5bc1875a7fa5009}{g2o\+::average\+\_\+angle} (double theta1, double theta2)
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \hyperlink{namespaceg2o_a821ae3df8a97b37daf8804ef3a26ef1d}{g2o\+::sign} (T \hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x})
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespaceg2o_a50939862674314724dd800c41f82e7fe}{g2o\+::clamp} (T l, T \hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, T u)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespaceg2o_a207912b4849eaff934f6384bc79d07ce}{g2o\+::wrap} (T l, T \hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, T u)
+\item 
+bool \hyperlink{namespaceg2o_a123840a60e0d1dde58088d15a1e1fffa}{g2o\+::array\+Has\+NaN} (const double $\ast$array, int size, int $\ast$nan\+Index=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+some general case utility functions 
+
+This file specifies some general case utility functions 
+
+\subsection{Macro Definition Documentation}
+\index{misc.\+h@{misc.\+h}!M\+\_\+\+PI@{M\+\_\+\+PI}}
+\index{M\+\_\+\+PI@{M\+\_\+\+PI}!misc.\+h@{misc.\+h}}
+\subsubsection[{\texorpdfstring{M\+\_\+\+PI}{M_PI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+PI~3.\+14159265358979323846}\hypertarget{misc_8h_ae71449b1cc6e6250b91f539153a7a0d3}{}\label{misc_8h_ae71449b1cc6e6250b91f539153a7a0d3}
+
+
+Definition at line 34 of file misc.\+h.
+
+
+
+Referenced by g2o\+::inverse\+\_\+theta(), and g2o\+::normalize\+\_\+theta().
+

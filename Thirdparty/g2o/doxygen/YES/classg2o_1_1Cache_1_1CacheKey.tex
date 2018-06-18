@@ -1,0 +1,189 @@
+\hypertarget{classg2o_1_1Cache_1_1CacheKey}{}\section{g2o\+:\+:Cache\+:\+:Cache\+Key Class Reference}
+\label{classg2o_1_1Cache_1_1CacheKey}\index{g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}}
+
+
+{\ttfamily \#include $<$cache.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1Cache_1_1CacheKey_a44405e660e962a9d39cfaf97f103b139}{Cache\+Key} ()
+\item 
+\hyperlink{classg2o_1_1Cache_1_1CacheKey_a363ba06fe3b3f17acd664b0706ba3270}{Cache\+Key} (const std\+::string \&type\+\_\+, const \hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{Parameter\+Vector} \&parameters\+\_\+)
+\item 
+bool \hyperlink{classg2o_1_1Cache_1_1CacheKey_a4a6e782eeee8c5300abe0fd5a89ed6a8}{operator$<$} (const \hyperlink{classg2o_1_1Cache_1_1CacheKey}{Cache\+Key} \&\hyperlink{sparse__helper_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}) const 
+\item 
+const std\+::string \& \hyperlink{classg2o_1_1Cache_1_1CacheKey_aea8a503e67d00d2376a5435c1d05be99}{type} () const 
+\item 
+const \hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{Parameter\+Vector} \& \hyperlink{classg2o_1_1Cache_1_1CacheKey_ac872928298c0b413e152efd04e22cda6}{parameters} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classg2o_1_1Cache_1_1CacheKey_a886ec6cf583561cb791cbaff902c673d}{\+\_\+type}
+\item 
+\hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{Parameter\+Vector} \hyperlink{classg2o_1_1Cache_1_1CacheKey_a3f8dc2307bd1d174a30bdc8443a8d152}{\+\_\+parameters}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classg2o_1_1Cache_1_1CacheKey_a86dec1e0424aa4ae4e6867c69efd7868}{Cache\+Container}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 42 of file cache.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}!Cache\+Key@{Cache\+Key}}
+\index{Cache\+Key@{Cache\+Key}!g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}}
+\subsubsection[{\texorpdfstring{Cache\+Key()}{CacheKey()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Cache\+::\+Cache\+Key\+::\+Cache\+Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1Cache_1_1CacheKey_a44405e660e962a9d39cfaf97f103b139}{}\label{classg2o_1_1Cache_1_1CacheKey_a44405e660e962a9d39cfaf97f103b139}
+
+
+Definition at line 36 of file cache.\+cpp.
+
+
+\begin{DoxyCode}
+36                           :
+37     \hyperlink{classg2o_1_1Cache_1_1CacheKey_a886ec6cf583561cb791cbaff902c673d}{\_type}(), \hyperlink{classg2o_1_1Cache_1_1CacheKey_a3f8dc2307bd1d174a30bdc8443a8d152}{\_parameters}()
+38   \{
+39   \}
+\end{DoxyCode}
+\index{g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}!Cache\+Key@{Cache\+Key}}
+\index{Cache\+Key@{Cache\+Key}!g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}}
+\subsubsection[{\texorpdfstring{Cache\+Key(const std\+::string \&type\+\_\+, const Parameter\+Vector \&parameters\+\_\+)}{CacheKey(const std::string &type_, const ParameterVector &parameters_)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Cache\+::\+Cache\+Key\+::\+Cache\+Key (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{type\+\_\+, }
+\item[{const {\bf Parameter\+Vector} \&}]{parameters\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1Cache_1_1CacheKey_a363ba06fe3b3f17acd664b0706ba3270}{}\label{classg2o_1_1Cache_1_1CacheKey_a363ba06fe3b3f17acd664b0706ba3270}
+
+
+Definition at line 41 of file cache.\+cpp.
+
+
+\begin{DoxyCode}
+41                                                                                     :
+42     \hyperlink{classg2o_1_1Cache_1_1CacheKey_a886ec6cf583561cb791cbaff902c673d}{\_type}(type\_), \hyperlink{classg2o_1_1Cache_1_1CacheKey_a3f8dc2307bd1d174a30bdc8443a8d152}{\_parameters}(parameters\_)
+43   \{
+44   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}}
+\subsubsection[{\texorpdfstring{operator$<$(const Cache\+Key \&c) const }{operator<(const CacheKey &c) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Cache\+::\+Cache\+Key\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cache\+Key} \&}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1Cache_1_1CacheKey_a4a6e782eeee8c5300abe0fd5a89ed6a8}{}\label{classg2o_1_1Cache_1_1CacheKey_a4a6e782eeee8c5300abe0fd5a89ed6a8}
+
+
+Definition at line 51 of file cache.\+cpp.
+
+
+
+References \+\_\+parameters, g2o\+::\+Cache\+::\+\_\+parameters, and \+\_\+type.
+
+
+\begin{DoxyCode}
+51                                                            \{
+52     \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1Cache_1_1CacheKey_a886ec6cf583561cb791cbaff902c673d}{\_type} < \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}.\_type)
+53       \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+54     \textcolor{keywordflow}{return} std::lexicographical\_compare (\hyperlink{classg2o_1_1Cache_1_1CacheKey_a3f8dc2307bd1d174a30bdc8443a8d152}{\_parameters}.begin( ), 
+      \hyperlink{classg2o_1_1Cache_1_1CacheKey_a3f8dc2307bd1d174a30bdc8443a8d152}{\_parameters}.end( ),
+55            \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}.\_parameters.begin( ), \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}.\_parameters.end( ) );
+56   \}
+\end{DoxyCode}
+\index{g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}!parameters@{parameters}}
+\index{parameters@{parameters}!g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}}
+\subsubsection[{\texorpdfstring{parameters() const }{parameters() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Parameter\+Vector}\& g2o\+::\+Cache\+::\+Cache\+Key\+::parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1Cache_1_1CacheKey_ac872928298c0b413e152efd04e22cda6}{}\label{classg2o_1_1Cache_1_1CacheKey_ac872928298c0b413e152efd04e22cda6}
+
+
+Definition at line 52 of file cache.\+h.
+
+
+
+References \+\_\+parameters.
+
+
+\begin{DoxyCode}
+52 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1Cache_1_1CacheKey_a3f8dc2307bd1d174a30bdc8443a8d152}{\_parameters};\}
+\end{DoxyCode}
+\index{g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}!type@{type}}
+\index{type@{type}!g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}}
+\subsubsection[{\texorpdfstring{type() const }{type() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string\& g2o\+::\+Cache\+::\+Cache\+Key\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1Cache_1_1CacheKey_aea8a503e67d00d2376a5435c1d05be99}{}\label{classg2o_1_1Cache_1_1CacheKey_aea8a503e67d00d2376a5435c1d05be99}
+
+
+Definition at line 51 of file cache.\+h.
+
+
+
+References \+\_\+type.
+
+
+
+Referenced by g2o\+::\+Cache\+Container\+::create\+Cache().
+
+
+\begin{DoxyCode}
+51 \{ \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1Cache_1_1CacheKey_a886ec6cf583561cb791cbaff902c673d}{\_type};\}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}!Cache\+Container@{Cache\+Container}}
+\index{Cache\+Container@{Cache\+Container}!g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}}
+\subsubsection[{\texorpdfstring{Cache\+Container}{CacheContainer}}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Cache\+Container}\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classg2o_1_1Cache_1_1CacheKey_a86dec1e0424aa4ae4e6867c69efd7868}{}\label{classg2o_1_1Cache_1_1CacheKey_a86dec1e0424aa4ae4e6867c69efd7868}
+
+
+Definition at line 45 of file cache.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}!\+\_\+parameters@{\+\_\+parameters}}
+\index{\+\_\+parameters@{\+\_\+parameters}!g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}}
+\subsubsection[{\texorpdfstring{\+\_\+parameters}{_parameters}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parameter\+Vector} g2o\+::\+Cache\+::\+Cache\+Key\+::\+\_\+parameters\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Cache_1_1CacheKey_a3f8dc2307bd1d174a30bdc8443a8d152}{}\label{classg2o_1_1Cache_1_1CacheKey_a3f8dc2307bd1d174a30bdc8443a8d152}
+
+
+Definition at line 56 of file cache.\+h.
+
+
+
+Referenced by g2o\+::\+Cache\+Container\+::create\+Cache(), operator$<$(), and parameters().
+
+\index{g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}!\+\_\+type@{\+\_\+type}}
+\index{\+\_\+type@{\+\_\+type}!g2o\+::\+Cache\+::\+Cache\+Key@{g2o\+::\+Cache\+::\+Cache\+Key}}
+\subsubsection[{\texorpdfstring{\+\_\+type}{_type}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::\+Cache\+::\+Cache\+Key\+::\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1Cache_1_1CacheKey_a886ec6cf583561cb791cbaff902c673d}{}\label{classg2o_1_1Cache_1_1CacheKey_a886ec6cf583561cb791cbaff902c673d}
+
+
+Definition at line 55 of file cache.\+h.
+
+
+
+Referenced by operator$<$(), and type().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{cache_8h}{cache.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{cache_8cpp}{cache.\+cpp}\end{DoxyCompactItemize}

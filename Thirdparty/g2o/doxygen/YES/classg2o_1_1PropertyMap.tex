@@ -1,0 +1,324 @@
+\hypertarget{classg2o_1_1PropertyMap}{}\section{g2o\+:\+:Property\+Map Class Reference}
+\label{classg2o_1_1PropertyMap}\index{g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}}
+
+
+a collection of properties mapping from name to the property itself  
+
+
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Property\+Map\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Property\+Map\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, \hyperlink{classg2o_1_1BaseProperty}{Base\+Property} $\ast$ $>$ \hyperlink{classg2o_1_1PropertyMap_ac57ddbe51d16070e697fe314889fee03}{Base\+Class}
+\item 
+typedef Base\+Class\+::iterator \hyperlink{classg2o_1_1PropertyMap_af5dd0defe4a5096f0d5602b38e837a78}{Property\+Map\+Iterator}
+\item 
+typedef Base\+Class\+::const\+\_\+iterator \hyperlink{classg2o_1_1PropertyMap_af09ea140ab099b1762e9634b7fdcaf52}{Property\+Map\+Const\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1PropertyMap_a0b7213999ad4ea636ffeda176cb92b52}{$\sim$\+Property\+Map} ()
+\item 
+bool \hyperlink{classg2o_1_1PropertyMap_a6b90b5cfd16125c174e140af6e40dad9}{add\+Property} (\hyperlink{classg2o_1_1BaseProperty}{Base\+Property} $\ast$p)
+\item 
+bool \hyperlink{classg2o_1_1PropertyMap_a8f96ea923fe711a0ffa6e4c6479945d9}{erase\+Property} (const std\+::string \&name\+\_\+)
+\item 
+{\footnotesize template$<$typename P $>$ }\\P $\ast$ \hyperlink{classg2o_1_1PropertyMap_ab3a37fb6f8358f3c63a13678349f1f82}{get\+Property} (const std\+::string \&name\+\_\+)
+\item 
+{\footnotesize template$<$typename P $>$ }\\const P $\ast$ \hyperlink{classg2o_1_1PropertyMap_a4681e164dc742b78b74684bfad09d47c}{get\+Property} (const std\+::string \&name\+\_\+) const 
+\item 
+{\footnotesize template$<$typename P $>$ }\\P $\ast$ \hyperlink{classg2o_1_1PropertyMap_add6e602dcd651b8883c30c350d23692f}{make\+Property} (const std\+::string \&name\+\_\+, const typename P\+::\+Value\+Type \&v)
+\item 
+bool \hyperlink{classg2o_1_1PropertyMap_a43df66ba15f9425abbd0e888a7b67251}{update\+Property\+From\+String} (const std\+::string \&name, const std\+::string \&value)
+\item 
+bool \hyperlink{classg2o_1_1PropertyMap_a0407e6a72afafd608f13cfdffc6ffc06}{update\+Map\+From\+String} (const std\+::string \&values)
+\item 
+void \hyperlink{classg2o_1_1PropertyMap_a02712d41356082bb724812927b1eef89}{write\+To\+C\+SV} (std\+::ostream \&os) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a collection of properties mapping from name to the property itself 
+
+Definition at line 75 of file property.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}!Base\+Class@{Base\+Class}}
+\index{Base\+Class@{Base\+Class}!g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}}
+\subsubsection[{\texorpdfstring{Base\+Class}{BaseClass}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$std\+::string, {\bf Base\+Property}$\ast$$>$ {\bf g2o\+::\+Property\+Map\+::\+Base\+Class}}\hypertarget{classg2o_1_1PropertyMap_ac57ddbe51d16070e697fe314889fee03}{}\label{classg2o_1_1PropertyMap_ac57ddbe51d16070e697fe314889fee03}
+
+
+Definition at line 78 of file property.\+h.
+
+\index{g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}!Property\+Map\+Const\+Iterator@{Property\+Map\+Const\+Iterator}}
+\index{Property\+Map\+Const\+Iterator@{Property\+Map\+Const\+Iterator}!g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}}
+\subsubsection[{\texorpdfstring{Property\+Map\+Const\+Iterator}{PropertyMapConstIterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Base\+Class\+::const\+\_\+iterator {\bf g2o\+::\+Property\+Map\+::\+Property\+Map\+Const\+Iterator}}\hypertarget{classg2o_1_1PropertyMap_af09ea140ab099b1762e9634b7fdcaf52}{}\label{classg2o_1_1PropertyMap_af09ea140ab099b1762e9634b7fdcaf52}
+
+
+Definition at line 80 of file property.\+h.
+
+\index{g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}!Property\+Map\+Iterator@{Property\+Map\+Iterator}}
+\index{Property\+Map\+Iterator@{Property\+Map\+Iterator}!g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}}
+\subsubsection[{\texorpdfstring{Property\+Map\+Iterator}{PropertyMapIterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Base\+Class\+::iterator {\bf g2o\+::\+Property\+Map\+::\+Property\+Map\+Iterator}}\hypertarget{classg2o_1_1PropertyMap_af5dd0defe4a5096f0d5602b38e837a78}{}\label{classg2o_1_1PropertyMap_af5dd0defe4a5096f0d5602b38e837a78}
+
+
+Definition at line 79 of file property.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}!````~Property\+Map@{$\sim$\+Property\+Map}}
+\index{````~Property\+Map@{$\sim$\+Property\+Map}!g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}}
+\subsubsection[{\texorpdfstring{$\sim$\+Property\+Map()}{~PropertyMap()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Property\+Map\+::$\sim$\+Property\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1PropertyMap_a0b7213999ad4ea636ffeda176cb92b52}{}\label{classg2o_1_1PropertyMap_a0b7213999ad4ea636ffeda176cb92b52}
+
+
+Definition at line 58 of file property.\+cpp.
+
+
+\begin{DoxyCode}
+58                             \{
+59     \textcolor{keywordflow}{for} (\hyperlink{classg2o_1_1PropertyMap_af5dd0defe4a5096f0d5602b38e837a78}{PropertyMapIterator} it=begin(); it!=end(); it++)\{
+60       \textcolor{keywordflow}{if} (it->second)
+61         \textcolor{keyword}{delete} it->second;
+62     \}
+63   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}!add\+Property@{add\+Property}}
+\index{add\+Property@{add\+Property}!g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}}
+\subsubsection[{\texorpdfstring{add\+Property(\+Base\+Property $\ast$p)}{addProperty(BaseProperty *p)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Property\+Map\+::add\+Property (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\+Property} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1PropertyMap_a6b90b5cfd16125c174e140af6e40dad9}{}\label{classg2o_1_1PropertyMap_a6b90b5cfd16125c174e140af6e40dad9}
+add a property to the map 
+
+Definition at line 44 of file property.\+cpp.
+
+
+
+References g2o\+::\+Base\+Property\+::name().
+
+
+\begin{DoxyCode}
+44                                                \{
+45     std::pair<PropertyMapIterator,bool> result = insert(make\_pair(p->name(), p));
+46     \textcolor{keywordflow}{return} result.second;
+47   \}
+\end{DoxyCode}
+\index{g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}!erase\+Property@{erase\+Property}}
+\index{erase\+Property@{erase\+Property}!g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}}
+\subsubsection[{\texorpdfstring{erase\+Property(const std\+::string \&name\+\_\+)}{eraseProperty(const std::string &name_)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Property\+Map\+::erase\+Property (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1PropertyMap_a8f96ea923fe711a0ffa6e4c6479945d9}{}\label{classg2o_1_1PropertyMap_a8f96ea923fe711a0ffa6e4c6479945d9}
+remove a property from the map 
+
+Definition at line 49 of file property.\+cpp.
+
+
+\begin{DoxyCode}
+49                                                        \{
+50     \hyperlink{classg2o_1_1PropertyMap_af5dd0defe4a5096f0d5602b38e837a78}{PropertyMapIterator} it=find(name);
+51     \textcolor{keywordflow}{if} (it==end())
+52       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+53     \textcolor{keyword}{delete} it->second;
+54     erase(it);
+55     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+56   \}
+\end{DoxyCode}
+\index{g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}!get\+Property@{get\+Property}}
+\index{get\+Property@{get\+Property}!g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}}
+\subsubsection[{\texorpdfstring{get\+Property(const std\+::string \&name\+\_\+)}{getProperty(const std::string &name_)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename P $>$ P$\ast$ g2o\+::\+Property\+Map\+::get\+Property (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name\+\_\+}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1PropertyMap_ab3a37fb6f8358f3c63a13678349f1f82}{}\label{classg2o_1_1PropertyMap_ab3a37fb6f8358f3c63a13678349f1f82}
+return a property by its name 
+
+Definition at line 98 of file property.\+h.
+
+
+\begin{DoxyCode}
+99       \{
+100         \hyperlink{classg2o_1_1PropertyMap_af5dd0defe4a5096f0d5602b38e837a78}{PropertyMapIterator} it=find(name\_);
+101         \textcolor{keywordflow}{if} (it==end())
+102           \textcolor{keywordflow}{return} 0;
+103         \textcolor{keywordflow}{return} \textcolor{keyword}{dynamic\_cast<}P*\textcolor{keyword}{>}(it->second);
+104       \}
+\end{DoxyCode}
+\index{g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}!get\+Property@{get\+Property}}
+\index{get\+Property@{get\+Property}!g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}}
+\subsubsection[{\texorpdfstring{get\+Property(const std\+::string \&name\+\_\+) const }{getProperty(const std::string &name_) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename P $>$ const P$\ast$ g2o\+::\+Property\+Map\+::get\+Property (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name\+\_\+}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1PropertyMap_a4681e164dc742b78b74684bfad09d47c}{}\label{classg2o_1_1PropertyMap_a4681e164dc742b78b74684bfad09d47c}
+
+
+Definition at line 106 of file property.\+h.
+
+
+\begin{DoxyCode}
+107       \{
+108         \hyperlink{classg2o_1_1PropertyMap_af09ea140ab099b1762e9634b7fdcaf52}{PropertyMapConstIterator} it=find(name\_);
+109         \textcolor{keywordflow}{if} (it==end())
+110           \textcolor{keywordflow}{return} 0;
+111         \textcolor{keywordflow}{return} \textcolor{keyword}{dynamic\_cast<}P*\textcolor{keyword}{>}(it->second);
+112       \}
+\end{DoxyCode}
+\index{g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}!make\+Property@{make\+Property}}
+\index{make\+Property@{make\+Property}!g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}}
+\subsubsection[{\texorpdfstring{make\+Property(const std\+::string \&name\+\_\+, const typename P\+::\+Value\+Type \&v)}{makeProperty(const std::string &name_, const typename P::ValueType &v)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename P $>$ P$\ast$ g2o\+::\+Property\+Map\+::make\+Property (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name\+\_\+, }
+\item[{const typename P\+::\+Value\+Type \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1PropertyMap_add6e602dcd651b8883c30c350d23692f}{}\label{classg2o_1_1PropertyMap_add6e602dcd651b8883c30c350d23692f}
+create a property and insert it 
+
+Definition at line 118 of file property.\+h.
+
+
+
+References g2o\+::\+Base\+Property\+::name().
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+Optimization\+Algorithm\+Dogleg(), g2o\+::\+Optimization\+Algorithm\+Levenberg\+::\+Optimization\+Algorithm\+Levenberg(), g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::\+Optimization\+Algorithm\+With\+Hessian(), and g2o\+::\+Draw\+Action\+::refresh\+Property\+Ptrs().
+
+
+\begin{DoxyCode}
+119       \{
+120         \hyperlink{classg2o_1_1PropertyMap_af5dd0defe4a5096f0d5602b38e837a78}{PropertyMapIterator} it=find(name\_);
+121         \textcolor{keywordflow}{if} (it==end())\{
+122           P* p=\textcolor{keyword}{new} P(name\_, v);
+123           \hyperlink{classg2o_1_1PropertyMap_a6b90b5cfd16125c174e140af6e40dad9}{addProperty}(p);
+124           \textcolor{keywordflow}{return} p;
+125         \} \textcolor{keywordflow}{else} 
+126           \textcolor{keywordflow}{return} \textcolor{keyword}{dynamic\_cast<}P*\textcolor{keyword}{>}(it->second);
+127       \}
+\end{DoxyCode}
+\index{g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}!update\+Map\+From\+String@{update\+Map\+From\+String}}
+\index{update\+Map\+From\+String@{update\+Map\+From\+String}!g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}}
+\subsubsection[{\texorpdfstring{update\+Map\+From\+String(const std\+::string \&values)}{updateMapFromString(const std::string &values)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Property\+Map\+::update\+Map\+From\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{values}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1PropertyMap_a0407e6a72afafd608f13cfdffc6ffc06}{}\label{classg2o_1_1PropertyMap_a0407e6a72afafd608f13cfdffc6ffc06}
+update the map based on a name=value string, e.\+g., name1=val1,name2=val2 \begin{DoxyReturn}{Returns}
+true, if it was possible to update all parameters 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file property.\+cpp.
+
+
+
+References \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, g2o\+::\+Base\+Property\+::name(), g2o\+::str\+Split(), and g2o\+::trim().
+
+
+
+Referenced by g2o\+::\+Optimization\+Algorithm\+::update\+Properties\+From\+String().
+
+
+\begin{DoxyCode}
+89   \{
+90     \textcolor{keywordtype}{bool} status = \textcolor{keyword}{true};
+91     vector<string> valuesMap = \hyperlink{group__utils_ga8e1ffa60787d006502c7c94f5646c598}{strSplit}(values, \textcolor{stringliteral}{","});
+92     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < valuesMap.size(); ++i) \{
+93       vector<string> m = \hyperlink{group__utils_ga8e1ffa60787d006502c7c94f5646c598}{strSplit}(valuesMap[i], \textcolor{stringliteral}{"="});
+94       \textcolor{keywordflow}{if} (m.size() != 2) \{
+95         cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": unable to extract name=value pair from "} << 
+      valuesMap[i] << endl;
+96         \textcolor{keywordflow}{continue};
+97       \}
+98       \textcolor{keywordtype}{string} name = \hyperlink{group__utils_ga5c3812993227cfbec772c7477928c1fc}{trim}(m[0]);
+99       \textcolor{keywordtype}{string} value = \hyperlink{group__utils_ga5c3812993227cfbec772c7477928c1fc}{trim}(m[1]);
+100       status = status && \hyperlink{classg2o_1_1PropertyMap_a43df66ba15f9425abbd0e888a7b67251}{updatePropertyFromString}(name, value);
+101     \}
+102     \textcolor{keywordflow}{return} status;
+103   \}
+\end{DoxyCode}
+\index{g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}!update\+Property\+From\+String@{update\+Property\+From\+String}}
+\index{update\+Property\+From\+String@{update\+Property\+From\+String}!g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}}
+\subsubsection[{\texorpdfstring{update\+Property\+From\+String(const std\+::string \&name, const std\+::string \&value)}{updatePropertyFromString(const std::string &name, const std::string &value)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Property\+Map\+::update\+Property\+From\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{const std\+::string \&}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1PropertyMap_a43df66ba15f9425abbd0e888a7b67251}{}\label{classg2o_1_1PropertyMap_a43df66ba15f9425abbd0e888a7b67251}
+update a specfic property with a new value \begin{DoxyReturn}{Returns}
+true if the params is stored and update was carried out 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file property.\+cpp.
+
+
+\begin{DoxyCode}
+66   \{
+67     \hyperlink{classg2o_1_1PropertyMap_af5dd0defe4a5096f0d5602b38e837a78}{PropertyMapIterator} it = find(name);
+68     \textcolor{keywordflow}{if} (it == end())
+69       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+70     it->second->fromString(value);
+71     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+72   \}
+\end{DoxyCode}
+\index{g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}!write\+To\+C\+SV@{write\+To\+C\+SV}}
+\index{write\+To\+C\+SV@{write\+To\+C\+SV}!g2o\+::\+Property\+Map@{g2o\+::\+Property\+Map}}
+\subsubsection[{\texorpdfstring{write\+To\+C\+S\+V(std\+::ostream \&os) const }{writeToCSV(std::ostream &os) const }}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Property\+Map\+::write\+To\+C\+SV (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1PropertyMap_a02712d41356082bb724812927b1eef89}{}\label{classg2o_1_1PropertyMap_a02712d41356082bb724812927b1eef89}
+
+
+Definition at line 74 of file property.\+cpp.
+
+
+
+References g2o\+::\+Base\+Property\+::name(), and g2o\+::\+Base\+Property\+::to\+String().
+
+
+\begin{DoxyCode}
+75   \{
+76     \textcolor{keywordflow}{for} (\hyperlink{classg2o_1_1PropertyMap_af09ea140ab099b1762e9634b7fdcaf52}{PropertyMapConstIterator} it=begin(); it!=end(); it++)\{
+77       BaseProperty* p =it->second;
+78       os << p->name() << \textcolor{stringliteral}{", "};
+79     \}
+80     os << std::endl;
+81     \textcolor{keywordflow}{for} (\hyperlink{classg2o_1_1PropertyMap_af09ea140ab099b1762e9634b7fdcaf52}{PropertyMapConstIterator} it=begin(); it!=end(); it++)\{
+82       BaseProperty* p =it->second;
+83       os << p->toString() << \textcolor{stringliteral}{", "};
+84     \}
+85     os << std::endl;
+86   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/stuff/\hyperlink{property_8h}{property.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/stuff/\hyperlink{property_8cpp}{property.\+cpp}\end{DoxyCompactItemize}

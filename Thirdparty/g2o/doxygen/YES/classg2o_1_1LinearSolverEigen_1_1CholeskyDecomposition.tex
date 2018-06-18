@@ -1,0 +1,89 @@
+\hypertarget{classg2o_1_1LinearSolverEigen_1_1CholeskyDecomposition}{}\section{g2o\+:\+:Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+:\+:Cholesky\+Decomposition Class Reference}
+\label{classg2o_1_1LinearSolverEigen_1_1CholeskyDecomposition}\index{g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::\+Cholesky\+Decomposition@{g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::\+Cholesky\+Decomposition}}
+
+
+Sub-\/classing Eigen\textquotesingle{}s Simplicial\+L\+D\+LT to perform ordering with a given ordering.  
+
+
+
+
+{\ttfamily \#include $<$linear\+\_\+solver\+\_\+eigen.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+:\+:Cholesky\+Decomposition\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+:\+:Cholesky\+Decomposition\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1LinearSolverEigen_1_1CholeskyDecomposition_a4c82911542773cdcd66b470edb21831e}{Cholesky\+Decomposition} ()
+\item 
+void \hyperlink{classg2o_1_1LinearSolverEigen_1_1CholeskyDecomposition_a3aa432f9aec0b7230c733df9a4d80558}{analyze\+Pattern\+With\+Permutation} (\hyperlink{classg2o_1_1LinearSolverEigen_aeb7e2400bed3a249b5f29ce7cc00cd33}{Sparse\+Matrix} \&a, const \hyperlink{classg2o_1_1LinearSolverEigen_a86afb924e2b1d3ebd9b9d4a318eded44}{Permutation\+Matrix} \&permutation)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Matrix\+Type$>$\\*
+class g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::\+Cholesky\+Decomposition}
+
+Sub-\/classing Eigen\textquotesingle{}s Simplicial\+L\+D\+LT to perform ordering with a given ordering. 
+
+Definition at line 60 of file linear\+\_\+solver\+\_\+eigen.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Linear\+Solver\+Eigen\+::\+Cholesky\+Decomposition@{g2o\+::\+Linear\+Solver\+Eigen\+::\+Cholesky\+Decomposition}!Cholesky\+Decomposition@{Cholesky\+Decomposition}}
+\index{Cholesky\+Decomposition@{Cholesky\+Decomposition}!g2o\+::\+Linear\+Solver\+Eigen\+::\+Cholesky\+Decomposition@{g2o\+::\+Linear\+Solver\+Eigen\+::\+Cholesky\+Decomposition}}
+\subsubsection[{\texorpdfstring{Cholesky\+Decomposition()}{CholeskyDecomposition()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ {\bf g2o\+::\+Linear\+Solver\+Eigen}$<$ Matrix\+Type $>$\+::Cholesky\+Decomposition\+::\+Cholesky\+Decomposition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1LinearSolverEigen_1_1CholeskyDecomposition_a4c82911542773cdcd66b470edb21831e}{}\label{classg2o_1_1LinearSolverEigen_1_1CholeskyDecomposition_a4c82911542773cdcd66b470edb21831e}
+
+
+Definition at line 63 of file linear\+\_\+solver\+\_\+eigen.\+h.
+
+
+\begin{DoxyCode}
+63 : Eigen::SimplicialLDLT<SparseMatrix, Eigen::Upper>() \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Linear\+Solver\+Eigen\+::\+Cholesky\+Decomposition@{g2o\+::\+Linear\+Solver\+Eigen\+::\+Cholesky\+Decomposition}!analyze\+Pattern\+With\+Permutation@{analyze\+Pattern\+With\+Permutation}}
+\index{analyze\+Pattern\+With\+Permutation@{analyze\+Pattern\+With\+Permutation}!g2o\+::\+Linear\+Solver\+Eigen\+::\+Cholesky\+Decomposition@{g2o\+::\+Linear\+Solver\+Eigen\+::\+Cholesky\+Decomposition}}
+\subsubsection[{\texorpdfstring{analyze\+Pattern\+With\+Permutation(\+Sparse\+Matrix \&a, const Permutation\+Matrix \&permutation)}{analyzePatternWithPermutation(SparseMatrix &a, const PermutationMatrix &permutation)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ void {\bf g2o\+::\+Linear\+Solver\+Eigen}$<$ Matrix\+Type $>$\+::Cholesky\+Decomposition\+::analyze\+Pattern\+With\+Permutation (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Matrix} \&}]{a, }
+\item[{const {\bf Permutation\+Matrix} \&}]{permutation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1LinearSolverEigen_1_1CholeskyDecomposition_a3aa432f9aec0b7230c733df9a4d80558}{}\label{classg2o_1_1LinearSolverEigen_1_1CholeskyDecomposition_a3aa432f9aec0b7230c733df9a4d80558}
+
+
+Definition at line 66 of file linear\+\_\+solver\+\_\+eigen.\+h.
+
+
+
+Referenced by g2o\+::\+Linear\+Solver\+Eigen$<$ Matrix\+Type $>$\+::compute\+Symbolic\+Decomposition().
+
+
+\begin{DoxyCode}
+67         \{
+68           m\_Pinv = permutation;
+69           m\_P = permutation.inverse();
+70           \textcolor{keywordtype}{int} size = a.cols();
+71           \hyperlink{classg2o_1_1LinearSolverEigen_aeb7e2400bed3a249b5f29ce7cc00cd33}{SparseMatrix} ap(size, size);
+72           ap.selfadjointView<Eigen::Upper>() = a.selfadjointView<UpLo>().twistedBy(m\_P);
+73           analyzePattern\_preordered(ap, \textcolor{keyword}{true});
+74         \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/solvers/\hyperlink{linear__solver__eigen_8h}{linear\+\_\+solver\+\_\+eigen.\+h}\end{DoxyCompactItemize}

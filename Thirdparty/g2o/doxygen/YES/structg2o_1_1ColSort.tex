@@ -1,0 +1,40 @@
+\hypertarget{structg2o_1_1ColSort}{}\section{g2o\+:\+:Col\+Sort Struct Reference}
+\label{structg2o_1_1ColSort}\index{g2o\+::\+Col\+Sort@{g2o\+::\+Col\+Sort}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structg2o_1_1ColSort_a228d871d0007190ef880d303e56af609}{operator()} (const pair$<$ int, int $>$ \&e1, const pair$<$ int, int $>$ \&e2) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 37 of file matrix\+\_\+structure.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Col\+Sort@{g2o\+::\+Col\+Sort}!operator()@{operator()}}
+\index{operator()@{operator()}!g2o\+::\+Col\+Sort@{g2o\+::\+Col\+Sort}}
+\subsubsection[{\texorpdfstring{operator()(const pair$<$ int, int $>$ \&e1, const pair$<$ int, int $>$ \&e2) const }{operator()(const pair< int, int > &e1, const pair< int, int > &e2) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Col\+Sort\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const pair$<$ int, int $>$ \&}]{e1, }
+\item[{const pair$<$ int, int $>$ \&}]{e2}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1ColSort_a228d871d0007190ef880d303e56af609}{}\label{structg2o_1_1ColSort_a228d871d0007190ef880d303e56af609}
+
+
+Definition at line 39 of file matrix\+\_\+structure.\+cpp.
+
+
+\begin{DoxyCode}
+40   \{
+41     \textcolor{keywordflow}{return} e1.second < e2.second || (e1.second == e2.second && e1.first < e2.first);
+42   \}
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{matrix__structure_8cpp}{matrix\+\_\+structure.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,371 @@
+\hypertarget{classg2o_1_1EdgeStereoSE3ProjectXYZ}{}\section{g2o\+:\+:Edge\+Stereo\+S\+E3\+Project\+X\+YZ Class Reference}
+\label{classg2o_1_1EdgeStereoSE3ProjectXYZ}\index{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+
+
+{\ttfamily \#include $<$types\+\_\+six\+\_\+dof\+\_\+expmap.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Edge\+Stereo\+S\+E3\+Project\+X\+YZ\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Edge\+Stereo\+S\+E3\+Project\+X\+YZ\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a3a9c1b7c0b165f8c1c0690373481fea5}{Edge\+Stereo\+S\+E3\+Project\+X\+YZ} ()
+\item 
+bool \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a59cdc820a694379a73a26d51d948db0e}{read} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em read the vertex from a stream, i.\+e., the internal state of the vertex \end{DoxyCompactList}\item 
+bool \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_acda965a32bd3aeb156cbd5883d19e864}{write} (std\+::ostream \&os) const 
+\begin{DoxyCompactList}\small\item\em write the vertex to a stream \end{DoxyCompactList}\item 
+void \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_ab60521439da10eabb13f23fe21fbe651}{compute\+Error} ()
+\item 
+bool \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_ac176aff8aa08a73f52d7a0f5c3080d4d}{is\+Depth\+Positive} ()
+\item 
+virtual void \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_aea04d86a304c6cb4e2a3f34b35166f30}{linearize\+Oplus} ()
+\item 
+Vector3d \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_ae5fdd198e102b905c66f0b18c7660767}{cam\+\_\+project} (const Vector3d \&trans\+\_\+xyz, const float \&\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_afc94291834aa40d18205e61ac802cbfc}{bf}) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{fx}
+\item 
+double \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{fy}
+\item 
+double \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a0d786d2f349f8d4991be5303ad2b3c5d}{cx}
+\item 
+double \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a220dd625eb7479cc1dabb92a96a6664c}{cy}
+\item 
+double \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_afc94291834aa40d18205e61ac802cbfc}{bf}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 112 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}!Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\index{Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{Edge\+Stereo\+S\+E3\+Project\+X\+YZ}!g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z()}{EdgeStereoSE3ProjectXYZ()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1EdgeStereoSE3ProjectXYZ_a3a9c1b7c0b165f8c1c0690373481fea5}{}\label{classg2o_1_1EdgeStereoSE3ProjectXYZ_a3a9c1b7c0b165f8c1c0690373481fea5}
+
+
+Definition at line 159 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+\begin{DoxyCode}
+159                                                  : BaseBinaryEdge<3, Vector3d, VertexSBAPointXYZ,
+       VertexSE3Expmap>() \{
+160 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}!cam\+\_\+project@{cam\+\_\+project}}
+\index{cam\+\_\+project@{cam\+\_\+project}!g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{cam\+\_\+project(const Vector3d \&trans\+\_\+xyz, const float \&bf) const }{cam_project(const Vector3d &trans_xyz, const float &bf) const }}]{\setlength{\rightskip}{0pt plus 5cm}Vector3d g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::cam\+\_\+project (
+\begin{DoxyParamCaption}
+\item[{const Vector3d \&}]{trans\+\_\+xyz, }
+\item[{const float \&}]{bf}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1EdgeStereoSE3ProjectXYZ_ae5fdd198e102b905c66f0b18c7660767}{}\label{classg2o_1_1EdgeStereoSE3ProjectXYZ_ae5fdd198e102b905c66f0b18c7660767}
+
+
+Definition at line 150 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+
+References g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::cx, g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::cy, g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::fx, and g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::fy.
+
+
+\begin{DoxyCode}
+150                                                                                               \{
+151   \textcolor{keyword}{const} \textcolor{keywordtype}{float} invz = 1.0f/trans\_xyz[2];
+152   Vector3d res;
+153   res[0] = trans\_xyz[0]*invz*\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{fx} + \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a0d786d2f349f8d4991be5303ad2b3c5d}{cx};
+154   res[1] = trans\_xyz[1]*invz*\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{fy} + \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a220dd625eb7479cc1dabb92a96a6664c}{cy};
+155   res[2] = res[0] - \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_afc94291834aa40d18205e61ac802cbfc}{bf}*invz;
+156   \textcolor{keywordflow}{return} res;
+157 \}
+\end{DoxyCode}
+\index{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}!compute\+Error@{compute\+Error}}
+\index{compute\+Error@{compute\+Error}!g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{compute\+Error()}{computeError()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::compute\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1EdgeStereoSE3ProjectXYZ_ab60521439da10eabb13f23fe21fbe651}{}\label{classg2o_1_1EdgeStereoSE3ProjectXYZ_ab60521439da10eabb13f23fe21fbe651}
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a1e6d9f4128866982de5e11e03edd7775}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 122 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+References g2o\+::\+Base\+Vertex$<$ D, T $>$\+::estimate(), and g2o\+::\+S\+E3\+Quat\+::map().
+
+
+\begin{DoxyCode}
+122                        \{
+123     \textcolor{keyword}{const} VertexSE3Expmap* v1 = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }VertexSE3Expmap*\textcolor{keyword}{>}(\hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}[1]);
+124     \textcolor{keyword}{const} VertexSBAPointXYZ* v2 = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }VertexSBAPointXYZ*\textcolor{keyword}{>}(
+      \hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}[0]);
+125     Vector3d obs(\hyperlink{classg2o_1_1BaseEdge_af2a6ab1df6e91601b4cab23e0e99e034}{\_measurement});
+126     \hyperlink{classg2o_1_1BaseEdge_af31f4b0a67bb12b4de4a32dc42467836}{\_error} = obs - \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_ae5fdd198e102b905c66f0b18c7660767}{cam\_project}(v1->estimate().map(v2->estimate()),
+      \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_afc94291834aa40d18205e61ac802cbfc}{bf});
+127   \}
+\end{DoxyCode}
+\index{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}!is\+Depth\+Positive@{is\+Depth\+Positive}}
+\index{is\+Depth\+Positive@{is\+Depth\+Positive}!g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{is\+Depth\+Positive()}{isDepthPositive()}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::is\+Depth\+Positive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1EdgeStereoSE3ProjectXYZ_ac176aff8aa08a73f52d7a0f5c3080d4d}{}\label{classg2o_1_1EdgeStereoSE3ProjectXYZ_ac176aff8aa08a73f52d7a0f5c3080d4d}
+
+
+Definition at line 129 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+References g2o\+::\+Base\+Vertex$<$ D, T $>$\+::estimate(), and g2o\+::\+S\+E3\+Quat\+::map().
+
+
+\begin{DoxyCode}
+129                          \{
+130     \textcolor{keyword}{const} VertexSE3Expmap* v1 = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }VertexSE3Expmap*\textcolor{keyword}{>}(\hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}[1]);
+131     \textcolor{keyword}{const} VertexSBAPointXYZ* v2 = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }VertexSBAPointXYZ*\textcolor{keyword}{>}(
+      \hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}[0]);
+132     \textcolor{keywordflow}{return} (v1->estimate().map(v2->estimate()))(2)>0.0;
+133   \}
+\end{DoxyCode}
+\index{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}!linearize\+Oplus@{linearize\+Oplus}}
+\index{linearize\+Oplus@{linearize\+Oplus}!g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{linearize\+Oplus()}{linearizeOplus()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::linearize\+Oplus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1EdgeStereoSE3ProjectXYZ_aea04d86a304c6cb4e2a3f34b35166f30}{}\label{classg2o_1_1EdgeStereoSE3ProjectXYZ_aea04d86a304c6cb4e2a3f34b35166f30}
+Linearizes the oplus operator in the vertex, and stores the result in temporary variables \+\_\+jacobian\+Oplus\+Xi and \+\_\+jacobian\+Oplus\+Xj 
+
+Reimplemented from \hyperlink{classg2o_1_1BaseBinaryEdge_af0fb8a693c8c7996fa65566e7263fbc4}{g2o\+::\+Base\+Binary\+Edge$<$ 3, Vector3d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}.
+
+
+
+Definition at line 188 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+
+References g2o\+::\+Base\+Binary\+Edge$<$ 3, Vector3d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$\+::\+\_\+jacobian\+Oplus\+Xi, g2o\+::\+Base\+Binary\+Edge$<$ 3, Vector3d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$\+::\+\_\+jacobian\+Oplus\+Xj, g2o\+::\+Hyper\+Graph\+::\+Edge\+::\+\_\+vertices, bf, g2o\+::\+Base\+Vertex$<$ D, T $>$\+::estimate(), fx, fy, and x.
+
+
+\begin{DoxyCode}
+188                                              \{
+189   VertexSE3Expmap * vj = \textcolor{keyword}{static\_cast<}VertexSE3Expmap *\textcolor{keyword}{>}(\hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}[1]);
+190   SE3Quat T(vj->estimate());
+191   VertexSBAPointXYZ* vi = \textcolor{keyword}{static\_cast<}VertexSBAPointXYZ*\textcolor{keyword}{>}(\hyperlink{classg2o_1_1HyperGraph_1_1Edge_aabb036d331fc7f2524ec8611b638de92}{\_vertices}[0]);
+192   Vector3d xyz = vi->estimate();
+193   Vector3d xyz\_trans = T.map(xyz);
+194 
+195   \textcolor{keyword}{const} Matrix3d R =  T.rotation().toRotationMatrix();
+196 
+197   \textcolor{keywordtype}{double} \hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x} = xyz\_trans[0];
+198   \textcolor{keywordtype}{double} y = xyz\_trans[1];
+199   \textcolor{keywordtype}{double} z = xyz\_trans[2];
+200   \textcolor{keywordtype}{double} z\_2 = z*z;
+201 
+202   \hyperlink{classg2o_1_1BaseBinaryEdge_aa21b9d84924ec93192374761ee0adfa7}{\_jacobianOplusXi}(0,0) = -\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{fx}*R(0,0)/z+\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{fx}*x*R(2,0)/z\_2;
+203   \hyperlink{classg2o_1_1BaseBinaryEdge_aa21b9d84924ec93192374761ee0adfa7}{\_jacobianOplusXi}(0,1) = -\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{fx}*R(0,1)/z+\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{fx}*x*R(2,1)/z\_2;
+204   \hyperlink{classg2o_1_1BaseBinaryEdge_aa21b9d84924ec93192374761ee0adfa7}{\_jacobianOplusXi}(0,2) = -\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{fx}*R(0,2)/z+\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{fx}*x*R(2,2)/z\_2;
+205 
+206   \hyperlink{classg2o_1_1BaseBinaryEdge_aa21b9d84924ec93192374761ee0adfa7}{\_jacobianOplusXi}(1,0) = -\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{fy}*R(1,0)/z+\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{fy}*y*R(2,0)/z\_2;
+207   \hyperlink{classg2o_1_1BaseBinaryEdge_aa21b9d84924ec93192374761ee0adfa7}{\_jacobianOplusXi}(1,1) = -\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{fy}*R(1,1)/z+\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{fy}*y*R(2,1)/z\_2;
+208   \hyperlink{classg2o_1_1BaseBinaryEdge_aa21b9d84924ec93192374761ee0adfa7}{\_jacobianOplusXi}(1,2) = -\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{fy}*R(1,2)/z+\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{fy}*y*R(2,2)/z\_2;
+209 
+210   \hyperlink{classg2o_1_1BaseBinaryEdge_aa21b9d84924ec93192374761ee0adfa7}{\_jacobianOplusXi}(2,0) = \hyperlink{classg2o_1_1BaseBinaryEdge_aa21b9d84924ec93192374761ee0adfa7}{\_jacobianOplusXi}(0,0)-
+      \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_afc94291834aa40d18205e61ac802cbfc}{bf}*R(2,0)/z\_2;
+211   \hyperlink{classg2o_1_1BaseBinaryEdge_aa21b9d84924ec93192374761ee0adfa7}{\_jacobianOplusXi}(2,1) = \hyperlink{classg2o_1_1BaseBinaryEdge_aa21b9d84924ec93192374761ee0adfa7}{\_jacobianOplusXi}(0,1)-
+      \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_afc94291834aa40d18205e61ac802cbfc}{bf}*R(2,1)/z\_2;
+212   \hyperlink{classg2o_1_1BaseBinaryEdge_aa21b9d84924ec93192374761ee0adfa7}{\_jacobianOplusXi}(2,2) = \hyperlink{classg2o_1_1BaseBinaryEdge_aa21b9d84924ec93192374761ee0adfa7}{\_jacobianOplusXi}(0,2)-
+      \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_afc94291834aa40d18205e61ac802cbfc}{bf}*R(2,2)/z\_2;
+213 
+214   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(0,0) =  x*y/z\_2 *\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{fx};
+215   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(0,1) = -(1+(x*x/z\_2)) *\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{fx};
+216   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(0,2) = y/z *\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{fx};
+217   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(0,3) = -1./z *\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{fx};
+218   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(0,4) = 0;
+219   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(0,5) = x/z\_2 *\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{fx};
+220 
+221   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(1,0) = (1+y*y/z\_2) *\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{fy};
+222   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(1,1) = -x*y/z\_2 *\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{fy};
+223   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(1,2) = -x/z *\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{fy};
+224   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(1,3) = 0;
+225   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(1,4) = -1./z *\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{fy};
+226   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(1,5) = y/z\_2 *\hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{fy};
+227 
+228   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(2,0) = \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(0,0)-
+      \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_afc94291834aa40d18205e61ac802cbfc}{bf}*y/z\_2;
+229   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(2,1) = \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(0,1)+
+      \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_afc94291834aa40d18205e61ac802cbfc}{bf}*x/z\_2;
+230   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(2,2) = \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(0,2);
+231   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(2,3) = \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(0,3);
+232   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(2,4) = 0;
+233   \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(2,5) = \hyperlink{classg2o_1_1BaseBinaryEdge_ad448518247044496cb99c9d70bd1a363}{\_jacobianOplusXj}(0,5)-
+      \hyperlink{classg2o_1_1EdgeStereoSE3ProjectXYZ_afc94291834aa40d18205e61ac802cbfc}{bf}/z\_2;
+234 \}
+\end{DoxyCode}
+\index{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}!read@{read}}
+\index{read@{read}!g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{read(std\+::istream \&is)}{read(std::istream &is)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::read (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1EdgeStereoSE3ProjectXYZ_a59cdc820a694379a73a26d51d948db0e}{}\label{classg2o_1_1EdgeStereoSE3ProjectXYZ_a59cdc820a694379a73a26d51d948db0e}
+
+
+read the vertex from a stream, i.\+e., the internal state of the vertex 
+
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a30cf69b762a06aa35e796d8af71632b0}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 162 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+
+References g2o\+::\+Base\+Edge$<$ D, Vector3d $>$\+::\+\_\+measurement, and g2o\+::\+Base\+Edge$<$ D, Vector3d $>$\+::information().
+
+
+\begin{DoxyCode}
+162                                                 \{
+163   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<=3; i++)\{
+164     is >> \hyperlink{classg2o_1_1BaseEdge_af2a6ab1df6e91601b4cab23e0e99e034}{\_measurement}[i];
+165   \}
+166   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<=2; i++)
+167     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=i; j<=2; j++) \{
+168       is >> \hyperlink{classg2o_1_1BaseEdge_ab682086df7223ce2b039d652416ddc23}{information}()(i,j);
+169       \textcolor{keywordflow}{if} (i!=j)
+170         \hyperlink{classg2o_1_1BaseEdge_ab682086df7223ce2b039d652416ddc23}{information}()(j,i)=\hyperlink{classg2o_1_1BaseEdge_ab682086df7223ce2b039d652416ddc23}{information}()(i,j);
+171     \}
+172   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+173 \}
+\end{DoxyCode}
+\index{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}!write@{write}}
+\index{write@{write}!g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{write(std\+::ostream \&os) const }{write(std::ostream &os) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::write (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1EdgeStereoSE3ProjectXYZ_acda965a32bd3aeb156cbd5883d19e864}{}\label{classg2o_1_1EdgeStereoSE3ProjectXYZ_acda965a32bd3aeb156cbd5883d19e864}
+
+
+write the vertex to a stream 
+
+
+
+Implements \hyperlink{classg2o_1_1OptimizableGraph_1_1Edge_a804b9a2178249b9297c55b8fbbeda56e}{g2o\+::\+Optimizable\+Graph\+::\+Edge}.
+
+
+
+Definition at line 175 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+cpp.
+
+
+
+References g2o\+::\+Base\+Edge$<$ D, Vector3d $>$\+::information(), and g2o\+::\+Base\+Edge$<$ D, Vector3d $>$\+::measurement().
+
+
+\begin{DoxyCode}
+175                                                         \{
+176 
+177   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<=3; i++)\{
+178     os << \hyperlink{classg2o_1_1BaseEdge_a8c20e7ffa66bb7a4a02c8cee82e89c8b}{measurement}()[i] << \textcolor{stringliteral}{" "};
+179   \}
+180 
+181   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<=2; i++)
+182     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=i; j<=2; j++)\{
+183       os << \textcolor{stringliteral}{" "} <<  \hyperlink{classg2o_1_1BaseEdge_ab682086df7223ce2b039d652416ddc23}{information}()(i,j);
+184     \}
+185   \textcolor{keywordflow}{return} os.good();
+186 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}!bf@{bf}}
+\index{bf@{bf}!g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{bf}{bf}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::bf}\hypertarget{classg2o_1_1EdgeStereoSE3ProjectXYZ_afc94291834aa40d18205e61ac802cbfc}{}\label{classg2o_1_1EdgeStereoSE3ProjectXYZ_afc94291834aa40d18205e61ac802cbfc}
+
+
+Definition at line 140 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+Referenced by g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::cam\+\_\+project(), linearize\+Oplus(), and g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::linearize\+Oplus().
+
+\index{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}!cx@{cx}}
+\index{cx@{cx}!g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{cx}{cx}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::cx}\hypertarget{classg2o_1_1EdgeStereoSE3ProjectXYZ_a0d786d2f349f8d4991be5303ad2b3c5d}{}\label{classg2o_1_1EdgeStereoSE3ProjectXYZ_a0d786d2f349f8d4991be5303ad2b3c5d}
+
+
+Definition at line 140 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+Referenced by g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::cam\+\_\+project(), and g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::cam\+\_\+project().
+
+\index{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}!cy@{cy}}
+\index{cy@{cy}!g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{cy}{cy}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::cy}\hypertarget{classg2o_1_1EdgeStereoSE3ProjectXYZ_a220dd625eb7479cc1dabb92a96a6664c}{}\label{classg2o_1_1EdgeStereoSE3ProjectXYZ_a220dd625eb7479cc1dabb92a96a6664c}
+
+
+Definition at line 140 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+Referenced by g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::cam\+\_\+project(), and g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::cam\+\_\+project().
+
+\index{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}!fx@{fx}}
+\index{fx@{fx}!g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{fx}{fx}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::fx}\hypertarget{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}{}\label{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4fe9f6810d2cc1b4489f84853445e85f}
+
+
+Definition at line 140 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+Referenced by g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::cam\+\_\+project(), g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::cam\+\_\+project(), linearize\+Oplus(), g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::linearize\+Oplus(), and g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::linearize\+Oplus().
+
+\index{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}!fy@{fy}}
+\index{fy@{fy}!g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\subsubsection[{\texorpdfstring{fy}{fy}}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::fy}\hypertarget{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}{}\label{classg2o_1_1EdgeStereoSE3ProjectXYZ_a4e5b984e84437680b1f589822b4c0700}
+
+
+Definition at line 140 of file types\+\_\+six\+\_\+dof\+\_\+expmap.\+h.
+
+
+
+Referenced by g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::cam\+\_\+project(), g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::cam\+\_\+project(), linearize\+Oplus(), g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::linearize\+Oplus(), and g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::linearize\+Oplus().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/\hyperlink{types__six__dof__expmap_8h}{types\+\_\+six\+\_\+dof\+\_\+expmap.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/\hyperlink{types__six__dof__expmap_8cpp}{types\+\_\+six\+\_\+dof\+\_\+expmap.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,671 @@
+\hypertarget{classg2o_1_1HyperGraph}{}\section{g2o\+:\+:Hyper\+Graph Class Reference}
+\label{classg2o_1_1HyperGraph}\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+
+
+{\ttfamily \#include $<$hyper\+\_\+graph.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Hyper\+Graph\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classg2o_1_1HyperGraph_1_1Edge}{Edge}
+\item 
+struct \hyperlink{structg2o_1_1HyperGraph_1_1HyperGraphElement}{Hyper\+Graph\+Element}
+\item 
+class \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Vertex}
+\begin{DoxyCompactList}\small\item\em abstract \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Vertex}, your types must derive from that one \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69e}{Hyper\+Graph\+Element\+Type} \{ \\*
+\hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69ea4a278c79154a0d4c381a7e265d7048f5}{H\+G\+E\+T\+\_\+\+V\+E\+R\+T\+EX}, 
+\hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69ea32ab1204ad3640d91c59ce6fffe2e580}{H\+G\+E\+T\+\_\+\+E\+D\+GE}, 
+\hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eaec8dd0de424ff24a18d3ba5ed3864f79}{H\+G\+E\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}, 
+\hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eafdb05add70f035dced2b173de8431408}{H\+G\+E\+T\+\_\+\+C\+A\+C\+HE}, 
+\\*
+\hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eac780d65b4de763d230e9cad4378c46fa}{H\+G\+E\+T\+\_\+\+D\+A\+TA}, 
+\hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eafe77ef3192f9be61982957b0a3e2f6a6}{H\+G\+E\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+MS}
+ \}\begin{DoxyCompactList}\small\item\em enum of all the types we have in our graphs \end{DoxyCompactList}
+\item 
+typedef std\+::bitset$<$ \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eafe77ef3192f9be61982957b0a3e2f6a6}{Hyper\+Graph\+::\+H\+G\+E\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+MS} $>$ \hyperlink{classg2o_1_1HyperGraph_a7b8fda20e1b03e92aeceeac6e8218b73}{Graph\+Elem\+Bitset}
+\item 
+typedef std\+::set$<$ \hyperlink{classg2o_1_1HyperGraph_1_1Edge}{Edge} $\ast$ $>$ \hyperlink{classg2o_1_1HyperGraph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Edge\+Set}
+\item 
+typedef std\+::set$<$ \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Vertex} $\ast$ $>$ \hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Vertex\+Set}
+\item 
+typedef std\+::tr1\+::unordered\+\_\+map$<$ int, \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Vertex} $\ast$ $>$ \hyperlink{classg2o_1_1HyperGraph_a97307eac064ebf4b3e2cfbf0718035b5}{Vertex\+I\+D\+Map}
+\item 
+typedef std\+::vector$<$ \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Vertex} $\ast$ $>$ \hyperlink{classg2o_1_1HyperGraph_a9339534c99300a0ddac87ba976ef188c}{Vertex\+Container}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1HyperGraph_a833632b111cfc7cf08b842ae3cb43d41}{Hyper\+Graph} ()
+\begin{DoxyCompactList}\small\item\em constructs an empty hyper graph \end{DoxyCompactList}\item 
+virtual \hyperlink{classg2o_1_1HyperGraph_a0ef6e1d65e0f9171a518bce3fc559693}{$\sim$\+Hyper\+Graph} ()
+\begin{DoxyCompactList}\small\item\em destroys the hyper-\/graph and all the vertices of the graph \end{DoxyCompactList}\item 
+\hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Vertex} $\ast$ \hyperlink{classg2o_1_1HyperGraph_ab07fe8bd9982a66ba34e83dff8317ea2}{vertex} (int id)
+\begin{DoxyCompactList}\small\item\em returns a vertex {\itshape id} in the hyper-\/graph, or 0 if the vertex id is not present \end{DoxyCompactList}\item 
+const \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Vertex} $\ast$ \hyperlink{classg2o_1_1HyperGraph_a685a30debc0c540cc10c1bfc669ad2f1}{vertex} (int id) const 
+\begin{DoxyCompactList}\small\item\em returns a vertex {\itshape id} in the hyper-\/graph, or 0 if the vertex id is not present \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classg2o_1_1HyperGraph_a97ab8302aa027d513253387bba9e0dd5}{remove\+Vertex} (\hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Vertex} $\ast$v)
+\begin{DoxyCompactList}\small\item\em removes a vertex from the graph. Returns true on success (vertex was present) \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classg2o_1_1HyperGraph_a33e5a60705ce673d647aa1613da9d99b}{remove\+Edge} (\hyperlink{classg2o_1_1HyperGraph_1_1Edge}{Edge} $\ast$e)
+\begin{DoxyCompactList}\small\item\em removes a vertex from the graph. Returns true on success (edge was present) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classg2o_1_1HyperGraph_a6b629dff2928dbd704ca81f24858e72f}{clear} ()
+\begin{DoxyCompactList}\small\item\em clears the graph and empties all structures. \end{DoxyCompactList}\item 
+const \hyperlink{classg2o_1_1HyperGraph_a97307eac064ebf4b3e2cfbf0718035b5}{Vertex\+I\+D\+Map} \& \hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices} () const 
+\item 
+\hyperlink{classg2o_1_1HyperGraph_a97307eac064ebf4b3e2cfbf0718035b5}{Vertex\+I\+D\+Map} \& \hyperlink{classg2o_1_1HyperGraph_a650107c875ef6f43d438d7d3e2ddf797}{vertices} ()
+\item 
+const \hyperlink{classg2o_1_1HyperGraph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Edge\+Set} \& \hyperlink{classg2o_1_1HyperGraph_acb3391945ed7c3f09243101d9ef0aaf0}{edges} () const 
+\item 
+\hyperlink{classg2o_1_1HyperGraph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Edge\+Set} \& \hyperlink{classg2o_1_1HyperGraph_a2f9f023fe2fb491ef9af873b9e683006}{edges} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1HyperGraph_a7ef87ba3479827b24c6fc29c5fc3aa21}{add\+Vertex} (\hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Vertex} $\ast$v)
+\item 
+virtual bool \hyperlink{classg2o_1_1HyperGraph_a0f1d35009a2879b238c8148c33485c89}{add\+Edge} (\hyperlink{classg2o_1_1HyperGraph_1_1Edge}{Edge} $\ast$e)
+\item 
+virtual bool \hyperlink{classg2o_1_1HyperGraph_a74f0d7392e67762a85799db72a58a94c}{change\+Id} (\hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Vertex} $\ast$v, int new\+Id)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1HyperGraph_a97307eac064ebf4b3e2cfbf0718035b5}{Vertex\+I\+D\+Map} \hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\+\_\+vertices}
+\item 
+\hyperlink{classg2o_1_1HyperGraph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Edge\+Set} \hyperlink{classg2o_1_1HyperGraph_afe4ae6e9ef05c8bded2b1b30e1886b36}{\+\_\+edges}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1HyperGraph_ab19a6e0681e2b30d48740cebf553c7eb}{Hyper\+Graph} (const \hyperlink{classg2o_1_1HyperGraph}{Hyper\+Graph} \&)
+\item 
+\hyperlink{classg2o_1_1HyperGraph}{Hyper\+Graph} \& \hyperlink{classg2o_1_1HyperGraph_aace0adc6b03e56bf6b554368d49dcf88}{operator=} (const \hyperlink{classg2o_1_1HyperGraph}{Hyper\+Graph} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that models a directed Hyper-\/\+Graph. An hyper graph is a graph where an edge can connect one or more nodes. Both Vertices and Edges of an hyoper graph derive from the same class \hyperlink{structg2o_1_1HyperGraph_1_1HyperGraphElement}{Hyper\+Graph\+Element}, thus one can implement generic algorithms that operate transparently on edges or vertices (see \hyperlink{classg2o_1_1HyperGraphAction}{Hyper\+Graph\+Action}).
+
+The vertices are uniquely identified by an int id, while the edges are identfied by their pointers. 
+
+Definition at line 58 of file hyper\+\_\+graph.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!Edge\+Set@{Edge\+Set}}
+\index{Edge\+Set@{Edge\+Set}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{Edge\+Set}{EdgeSet}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::set$<${\bf Edge}$\ast$$>$ {\bf g2o\+::\+Hyper\+Graph\+::\+Edge\+Set}}\hypertarget{classg2o_1_1HyperGraph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{}\label{classg2o_1_1HyperGraph_a5e2970e236c0dcb4eff7c205d7b6b4ae}
+
+
+Definition at line 90 of file hyper\+\_\+graph.\+h.
+
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!Graph\+Elem\+Bitset@{Graph\+Elem\+Bitset}}
+\index{Graph\+Elem\+Bitset@{Graph\+Elem\+Bitset}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{Graph\+Elem\+Bitset}{GraphElemBitset}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::bitset$<${\bf Hyper\+Graph\+::\+H\+G\+E\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+MS}$>$ {\bf g2o\+::\+Hyper\+Graph\+::\+Graph\+Elem\+Bitset}}\hypertarget{classg2o_1_1HyperGraph_a7b8fda20e1b03e92aeceeac6e8218b73}{}\label{classg2o_1_1HyperGraph_a7b8fda20e1b03e92aeceeac6e8218b73}
+
+
+Definition at line 74 of file hyper\+\_\+graph.\+h.
+
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!Vertex\+Container@{Vertex\+Container}}
+\index{Vertex\+Container@{Vertex\+Container}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{Vertex\+Container}{VertexContainer}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<${\bf Vertex}$\ast$$>$ {\bf g2o\+::\+Hyper\+Graph\+::\+Vertex\+Container}}\hypertarget{classg2o_1_1HyperGraph_a9339534c99300a0ddac87ba976ef188c}{}\label{classg2o_1_1HyperGraph_a9339534c99300a0ddac87ba976ef188c}
+
+
+Definition at line 94 of file hyper\+\_\+graph.\+h.
+
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!Vertex\+I\+D\+Map@{Vertex\+I\+D\+Map}}
+\index{Vertex\+I\+D\+Map@{Vertex\+I\+D\+Map}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{Vertex\+I\+D\+Map}{VertexIDMap}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::tr1\+::unordered\+\_\+map$<$int, {\bf Vertex}$\ast$$>$ {\bf g2o\+::\+Hyper\+Graph\+::\+Vertex\+I\+D\+Map}}\hypertarget{classg2o_1_1HyperGraph_a97307eac064ebf4b3e2cfbf0718035b5}{}\label{classg2o_1_1HyperGraph_a97307eac064ebf4b3e2cfbf0718035b5}
+
+
+Definition at line 93 of file hyper\+\_\+graph.\+h.
+
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!Vertex\+Set@{Vertex\+Set}}
+\index{Vertex\+Set@{Vertex\+Set}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{Vertex\+Set}{VertexSet}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::set$<${\bf Vertex}$\ast$$>$ {\bf g2o\+::\+Hyper\+Graph\+::\+Vertex\+Set}}\hypertarget{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{}\label{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}
+
+
+Definition at line 91 of file hyper\+\_\+graph.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!Hyper\+Graph\+Element\+Type@{Hyper\+Graph\+Element\+Type}}
+\index{Hyper\+Graph\+Element\+Type@{Hyper\+Graph\+Element\+Type}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{Hyper\+Graph\+Element\+Type}{HyperGraphElementType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf g2o\+::\+Hyper\+Graph\+::\+Hyper\+Graph\+Element\+Type}}\hypertarget{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69e}{}\label{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69e}
+
+
+enum of all the types we have in our graphs 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{H\+G\+E\+T\+\_\+\+V\+E\+R\+T\+EX@{H\+G\+E\+T\+\_\+\+V\+E\+R\+T\+EX}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!H\+G\+E\+T\+\_\+\+V\+E\+R\+T\+EX@{H\+G\+E\+T\+\_\+\+V\+E\+R\+T\+EX}}\item[{\em 
+H\+G\+E\+T\+\_\+\+V\+E\+R\+T\+EX\hypertarget{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69ea4a278c79154a0d4c381a7e265d7048f5}{}\label{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69ea4a278c79154a0d4c381a7e265d7048f5}
+}]\index{H\+G\+E\+T\+\_\+\+E\+D\+GE@{H\+G\+E\+T\+\_\+\+E\+D\+GE}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!H\+G\+E\+T\+\_\+\+E\+D\+GE@{H\+G\+E\+T\+\_\+\+E\+D\+GE}}\item[{\em 
+H\+G\+E\+T\+\_\+\+E\+D\+GE\hypertarget{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69ea32ab1204ad3640d91c59ce6fffe2e580}{}\label{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69ea32ab1204ad3640d91c59ce6fffe2e580}
+}]\index{H\+G\+E\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{H\+G\+E\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!H\+G\+E\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER@{H\+G\+E\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER}}\item[{\em 
+H\+G\+E\+T\+\_\+\+P\+A\+R\+A\+M\+E\+T\+ER\hypertarget{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eaec8dd0de424ff24a18d3ba5ed3864f79}{}\label{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eaec8dd0de424ff24a18d3ba5ed3864f79}
+}]\index{H\+G\+E\+T\+\_\+\+C\+A\+C\+HE@{H\+G\+E\+T\+\_\+\+C\+A\+C\+HE}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!H\+G\+E\+T\+\_\+\+C\+A\+C\+HE@{H\+G\+E\+T\+\_\+\+C\+A\+C\+HE}}\item[{\em 
+H\+G\+E\+T\+\_\+\+C\+A\+C\+HE\hypertarget{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eafdb05add70f035dced2b173de8431408}{}\label{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eafdb05add70f035dced2b173de8431408}
+}]\index{H\+G\+E\+T\+\_\+\+D\+A\+TA@{H\+G\+E\+T\+\_\+\+D\+A\+TA}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!H\+G\+E\+T\+\_\+\+D\+A\+TA@{H\+G\+E\+T\+\_\+\+D\+A\+TA}}\item[{\em 
+H\+G\+E\+T\+\_\+\+D\+A\+TA\hypertarget{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eac780d65b4de763d230e9cad4378c46fa}{}\label{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eac780d65b4de763d230e9cad4378c46fa}
+}]\index{H\+G\+E\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+MS@{H\+G\+E\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+MS}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!H\+G\+E\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+MS@{H\+G\+E\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+MS}}\item[{\em 
+H\+G\+E\+T\+\_\+\+N\+U\+M\+\_\+\+E\+L\+E\+MS\hypertarget{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eafe77ef3192f9be61982957b0a3e2f6a6}{}\label{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eafe77ef3192f9be61982957b0a3e2f6a6}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 65 of file hyper\+\_\+graph.\+h.
+
+
+\begin{DoxyCode}
+65                                   \{
+66         \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69ea4a278c79154a0d4c381a7e265d7048f5}{HGET\_VERTEX},
+67         \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69ea32ab1204ad3640d91c59ce6fffe2e580}{HGET\_EDGE},
+68         \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eaec8dd0de424ff24a18d3ba5ed3864f79}{HGET\_PARAMETER},
+69         \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eafdb05add70f035dced2b173de8431408}{HGET\_CACHE},
+70         \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eac780d65b4de763d230e9cad4378c46fa}{HGET\_DATA},
+71         \hyperlink{classg2o_1_1HyperGraph_af603119d5d3475aed6e34ee9d701b69eafe77ef3192f9be61982957b0a3e2f6a6}{HGET\_NUM\_ELEMS} \textcolor{comment}{// keep as last elem}
+72       \};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!Hyper\+Graph@{Hyper\+Graph}}
+\index{Hyper\+Graph@{Hyper\+Graph}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{Hyper\+Graph()}{HyperGraph()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Hyper\+Graph\+::\+Hyper\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1HyperGraph_a833632b111cfc7cf08b842ae3cb43d41}{}\label{classg2o_1_1HyperGraph_a833632b111cfc7cf08b842ae3cb43d41}
+
+
+constructs an empty hyper graph 
+
+
+
+Definition at line 147 of file hyper\+\_\+graph.\+cpp.
+
+
+\begin{DoxyCode}
+148   \{
+149   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!````~Hyper\+Graph@{$\sim$\+Hyper\+Graph}}
+\index{````~Hyper\+Graph@{$\sim$\+Hyper\+Graph}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{$\sim$\+Hyper\+Graph()}{~HyperGraph()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Hyper\+Graph\+::$\sim$\+Hyper\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1HyperGraph_a0ef6e1d65e0f9171a518bce3fc559693}{}\label{classg2o_1_1HyperGraph_a0ef6e1d65e0f9171a518bce3fc559693}
+
+
+destroys the hyper-\/graph and all the vertices of the graph 
+
+
+
+Definition at line 161 of file hyper\+\_\+graph.\+cpp.
+
+
+
+References clear().
+
+
+\begin{DoxyCode}
+162   \{
+163     \hyperlink{classg2o_1_1HyperGraph_a6b629dff2928dbd704ca81f24858e72f}{clear}();
+164   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!Hyper\+Graph@{Hyper\+Graph}}
+\index{Hyper\+Graph@{Hyper\+Graph}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{Hyper\+Graph(const Hyper\+Graph \&)}{HyperGraph(const HyperGraph &)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Hyper\+Graph\+::\+Hyper\+Graph (
+\begin{DoxyParamCaption}
+\item[{const {\bf Hyper\+Graph} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classg2o_1_1HyperGraph_ab19a6e0681e2b30d48740cebf553c7eb}{}\label{classg2o_1_1HyperGraph_ab19a6e0681e2b30d48740cebf553c7eb}
+
+
+Definition at line 212 of file hyper\+\_\+graph.\+h.
+
+
+\begin{DoxyCode}
+212 \{ \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!add\+Edge@{add\+Edge}}
+\index{add\+Edge@{add\+Edge}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{add\+Edge(\+Edge $\ast$e)}{addEdge(Edge *e)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Hyper\+Graph\+::add\+Edge (
+\begin{DoxyParamCaption}
+\item[{{\bf Edge} $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1HyperGraph_a0f1d35009a2879b238c8148c33485c89}{}\label{classg2o_1_1HyperGraph_a0f1d35009a2879b238c8148c33485c89}
+Adds an edge to the graph. If the edge is already in the graph, it does nothing and returns false. Otherwise it returns true. 
+
+Reimplemented in \hyperlink{structg2o_1_1OptimizableGraph_a6831ed69fce3dba691f53302a2813070}{g2o\+::\+Optimizable\+Graph}.
+
+
+
+Definition at line 99 of file hyper\+\_\+graph.\+cpp.
+
+
+
+References \+\_\+edges, g2o\+::\+Hyper\+Graph\+::\+Vertex\+::edges(), and g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertices().
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::add\+Edge(), and edges().
+
+
+\begin{DoxyCode}
+100   \{
+101     std::pair<EdgeSet::iterator, bool> result = \hyperlink{classg2o_1_1HyperGraph_afe4ae6e9ef05c8bded2b1b30e1886b36}{\_edges}.insert(e);
+102     \textcolor{keywordflow}{if} (! result.second)
+103       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+104     \textcolor{keywordflow}{for} (std::vector<Vertex*>::iterator it = e->vertices().begin(); it != e->vertices().end(); ++it) \{
+105       Vertex* v = *it;
+106       v->edges().insert(e);
+107     \}
+108     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+109   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!add\+Vertex@{add\+Vertex}}
+\index{add\+Vertex@{add\+Vertex}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{add\+Vertex(\+Vertex $\ast$v)}{addVertex(Vertex *v)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Hyper\+Graph\+::add\+Vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf Vertex} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1HyperGraph_a7ef87ba3479827b24c6fc29c5fc3aa21}{}\label{classg2o_1_1HyperGraph_a7ef87ba3479827b24c6fc29c5fc3aa21}
+adds a vertex to the graph. The id of the vertex should be set before invoking this function. the function fails if another vertex with the same id is already in the graph. returns true, on success, or false on failure. 
+
+Reimplemented in \hyperlink{structg2o_1_1OptimizableGraph_ac6f41f49fe6148fbe17133d10bf29b4c}{g2o\+::\+Optimizable\+Graph}.
+
+
+
+Definition at line 76 of file hyper\+\_\+graph.\+cpp.
+
+
+
+References g2o\+::\+Hyper\+Graph\+::\+Edge\+::\+\_\+vertices, g2o\+::\+Hyper\+Graph\+::\+Vertex\+::id(), and g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertex().
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::add\+Vertex(), and edges().
+
+
+\begin{DoxyCode}
+77   \{
+78     Vertex* vn=\hyperlink{classg2o_1_1HyperGraph_ab07fe8bd9982a66ba34e83dff8317ea2}{vertex}(v->id());
+79     \textcolor{keywordflow}{if} (vn)
+80       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+81     \hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices}.insert( std::make\_pair(v->id(),v) );
+82     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+83   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!change\+Id@{change\+Id}}
+\index{change\+Id@{change\+Id}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{change\+Id(\+Vertex $\ast$v, int new\+Id)}{changeId(Vertex *v, int newId)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Hyper\+Graph\+::change\+Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Vertex} $\ast$}]{v, }
+\item[{int}]{new\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1HyperGraph_a74f0d7392e67762a85799db72a58a94c}{}\label{classg2o_1_1HyperGraph_a74f0d7392e67762a85799db72a58a94c}
+changes the id of a vertex already in the graph, and updates the bookkeeping @ returns false if the vertex is not in the graph; 
+
+Definition at line 89 of file hyper\+\_\+graph.\+cpp.
+
+
+
+References g2o\+::\+Hyper\+Graph\+::\+Edge\+::\+\_\+vertices, g2o\+::\+Hyper\+Graph\+::\+Vertex\+::id(), g2o\+::\+Hyper\+Graph\+::\+Vertex\+::set\+Id(), and g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertex().
+
+
+
+Referenced by edges().
+
+
+\begin{DoxyCode}
+89                                                \{
+90     Vertex* v2 = \hyperlink{classg2o_1_1HyperGraph_ab07fe8bd9982a66ba34e83dff8317ea2}{vertex}(v->id());
+91     \textcolor{keywordflow}{if} (v != v2)
+92       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+93     \hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices}.erase(v->id());
+94     v->setId(newId);
+95     \hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices}.insert(std::make\_pair(v->id(), v));
+96     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+97   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!clear@{clear}}
+\index{clear@{clear}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{clear()}{clear()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Hyper\+Graph\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1HyperGraph_a6b629dff2928dbd704ca81f24858e72f}{}\label{classg2o_1_1HyperGraph_a6b629dff2928dbd704ca81f24858e72f}
+
+
+clears the graph and empties all structures. 
+
+
+
+Reimplemented in \hyperlink{classg2o_1_1SparseOptimizer_a4881e4ac9ba9a58d4e249dc03ef9683d}{g2o\+::\+Sparse\+Optimizer}.
+
+
+
+Definition at line 151 of file hyper\+\_\+graph.\+cpp.
+
+
+
+References \+\_\+edges, and g2o\+::\+Hyper\+Graph\+::\+Edge\+::\+\_\+vertices.
+
+
+
+Referenced by g2o\+::\+Sparse\+Optimizer\+::clear(), $\sim$\+Hyper\+Graph(), and g2o\+::\+Optimizable\+Graph\+::$\sim$\+Optimizable\+Graph().
+
+
+\begin{DoxyCode}
+152   \{
+153     \textcolor{keywordflow}{for} (VertexIDMap::iterator it=\hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices}.begin(); it!=\hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices}.end(); ++it)
+154       \textcolor{keyword}{delete} (it->second);
+155     \textcolor{keywordflow}{for} (EdgeSet::iterator it=\hyperlink{classg2o_1_1HyperGraph_afe4ae6e9ef05c8bded2b1b30e1886b36}{\_edges}.begin(); it!=\hyperlink{classg2o_1_1HyperGraph_afe4ae6e9ef05c8bded2b1b30e1886b36}{\_edges}.end(); ++it)
+156       \textcolor{keyword}{delete} (*it);
+157     \hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices}.clear();
+158     \hyperlink{classg2o_1_1HyperGraph_afe4ae6e9ef05c8bded2b1b30e1886b36}{\_edges}.clear();
+159   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!edges@{edges}}
+\index{edges@{edges}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{edges() const }{edges() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Edge\+Set}\& g2o\+::\+Hyper\+Graph\+::edges (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1HyperGraph_acb3391945ed7c3f09243101d9ef0aaf0}{}\label{classg2o_1_1HyperGraph_acb3391945ed7c3f09243101d9ef0aaf0}
+\begin{DoxyReturn}{Returns}
+the set of edges of the hyper graph 
+\end{DoxyReturn}
+
+
+Definition at line 182 of file hyper\+\_\+graph.\+h.
+
+
+
+References \+\_\+edges.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::add\+Graph(), g2o\+::apply\+Action(), g2o\+::\+Optimizable\+Graph\+::chi2(), g2o\+::\+Sparse\+Optimizer\+::initialize\+Optimization(), g2o\+::\+Optimizable\+Graph\+::save(), g2o\+::\+Jacobian\+Workspace\+::update\+Size(), and g2o\+::\+Optimizable\+Graph\+::verify\+Information\+Matrices().
+
+
+\begin{DoxyCode}
+182 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1HyperGraph_afe4ae6e9ef05c8bded2b1b30e1886b36}{\_edges};\}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!edges@{edges}}
+\index{edges@{edges}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{edges()}{edges()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Edge\+Set}\& g2o\+::\+Hyper\+Graph\+::edges (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1HyperGraph_a2f9f023fe2fb491ef9af873b9e683006}{}\label{classg2o_1_1HyperGraph_a2f9f023fe2fb491ef9af873b9e683006}
+\begin{DoxyReturn}{Returns}
+the set of edges of the hyper graph 
+\end{DoxyReturn}
+
+
+Definition at line 184 of file hyper\+\_\+graph.\+h.
+
+
+
+References \+\_\+edges, add\+Edge(), add\+Vertex(), and change\+Id().
+
+
+\begin{DoxyCode}
+184 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1HyperGraph_afe4ae6e9ef05c8bded2b1b30e1886b36}{\_edges};\}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!operator=@{operator=}}
+\index{operator=@{operator=}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{operator=(const Hyper\+Graph \&)}{operator=(const HyperGraph &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph}\& g2o\+::\+Hyper\+Graph\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Hyper\+Graph} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classg2o_1_1HyperGraph_aace0adc6b03e56bf6b554368d49dcf88}{}\label{classg2o_1_1HyperGraph_aace0adc6b03e56bf6b554368d49dcf88}
+
+
+Definition at line 213 of file hyper\+\_\+graph.\+h.
+
+
+\begin{DoxyCode}
+213 \{ \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!remove\+Edge@{remove\+Edge}}
+\index{remove\+Edge@{remove\+Edge}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{remove\+Edge(\+Edge $\ast$e)}{removeEdge(Edge *e)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Hyper\+Graph\+::remove\+Edge (
+\begin{DoxyParamCaption}
+\item[{{\bf Edge} $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1HyperGraph_a33e5a60705ce673d647aa1613da9d99b}{}\label{classg2o_1_1HyperGraph_a33e5a60705ce673d647aa1613da9d99b}
+
+
+removes a vertex from the graph. Returns true on success (edge was present) 
+
+
+
+Definition at line 129 of file hyper\+\_\+graph.\+cpp.
+
+
+
+References \+\_\+edges, g2o\+::\+Hyper\+Graph\+::\+Vertex\+::edges(), and g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertices().
+
+
+
+Referenced by remove\+Vertex().
+
+
+\begin{DoxyCode}
+130   \{
+131     EdgeSet::iterator it = \hyperlink{classg2o_1_1HyperGraph_afe4ae6e9ef05c8bded2b1b30e1886b36}{\_edges}.find(e);
+132     \textcolor{keywordflow}{if} (it == \hyperlink{classg2o_1_1HyperGraph_afe4ae6e9ef05c8bded2b1b30e1886b36}{\_edges}.end())
+133       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+134     \hyperlink{classg2o_1_1HyperGraph_afe4ae6e9ef05c8bded2b1b30e1886b36}{\_edges}.erase(it);
+135 
+136     \textcolor{keywordflow}{for} (std::vector<Vertex*>::iterator vit = e->vertices().begin(); vit != e->vertices().end(); ++vit) \{
+137       Vertex* v = *vit;
+138       it = v->edges().find(e);
+139       assert(it!=v->edges().end());
+140       v->edges().erase(it);
+141     \}
+142 
+143     \textcolor{keyword}{delete} e;
+144     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+145   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!remove\+Vertex@{remove\+Vertex}}
+\index{remove\+Vertex@{remove\+Vertex}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{remove\+Vertex(\+Vertex $\ast$v)}{removeVertex(Vertex *v)}}]{\setlength{\rightskip}{0pt plus 5cm}bool g2o\+::\+Hyper\+Graph\+::remove\+Vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf Vertex} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1HyperGraph_a97ab8302aa027d513253387bba9e0dd5}{}\label{classg2o_1_1HyperGraph_a97ab8302aa027d513253387bba9e0dd5}
+
+
+removes a vertex from the graph. Returns true on success (vertex was present) 
+
+
+
+Reimplemented in \hyperlink{classg2o_1_1SparseOptimizer_a0fb2a5e2b250bf2530a600f6dcaad03f}{g2o\+::\+Sparse\+Optimizer}.
+
+
+
+Definition at line 111 of file hyper\+\_\+graph.\+cpp.
+
+
+
+References g2o\+::\+Hyper\+Graph\+::\+Edge\+::\+\_\+vertices, g2o\+::\+Hyper\+Graph\+::\+Vertex\+::edges(), g2o\+::\+Hyper\+Graph\+::\+Vertex\+::id(), and remove\+Edge().
+
+
+
+Referenced by g2o\+::\+Sparse\+Optimizer\+::remove\+Vertex().
+
+
+\begin{DoxyCode}
+112   \{
+113     VertexIDMap::iterator it=\hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices}.find(v->id());
+114     \textcolor{keywordflow}{if} (it==\hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices}.end())
+115       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+116     assert(it->second==v);
+117     \textcolor{comment}{//remove all edges which are entering or leaving v;}
+118     \hyperlink{classg2o_1_1HyperGraph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{EdgeSet} tmp(v->edges());
+119     \textcolor{keywordflow}{for} (EdgeSet::iterator it=tmp.begin(); it!=tmp.end(); ++it)\{
+120       \textcolor{keywordflow}{if} (!\hyperlink{classg2o_1_1HyperGraph_a33e5a60705ce673d647aa1613da9d99b}{removeEdge}(*it))\{
+121         assert(0);
+122       \}
+123     \}
+124     \hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices}.erase(it);
+125     \textcolor{keyword}{delete} v;
+126     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+127   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!vertex@{vertex}}
+\index{vertex@{vertex}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{vertex(int id)}{vertex(int id)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph\+::\+Vertex} $\ast$ g2o\+::\+Hyper\+Graph\+::vertex (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1HyperGraph_ab07fe8bd9982a66ba34e83dff8317ea2}{}\label{classg2o_1_1HyperGraph_ab07fe8bd9982a66ba34e83dff8317ea2}
+
+
+returns a vertex {\itshape id} in the hyper-\/graph, or 0 if the vertex id is not present 
+
+
+
+Definition at line 60 of file hyper\+\_\+graph.\+cpp.
+
+
+
+References g2o\+::\+Hyper\+Graph\+::\+Edge\+::\+\_\+vertices.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::vertex().
+
+
+\begin{DoxyCode}
+61   \{
+62     VertexIDMap::iterator it=\hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices}.find(\textcolor{keywordtype}{id});
+63     \textcolor{keywordflow}{if} (it==\hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices}.end())
+64       \textcolor{keywordflow}{return} 0;
+65     \textcolor{keywordflow}{return} it->second;
+66   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!vertex@{vertex}}
+\index{vertex@{vertex}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{vertex(int id) const }{vertex(int id) const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Hyper\+Graph\+::\+Vertex} $\ast$ g2o\+::\+Hyper\+Graph\+::vertex (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+) const}\hypertarget{classg2o_1_1HyperGraph_a685a30debc0c540cc10c1bfc669ad2f1}{}\label{classg2o_1_1HyperGraph_a685a30debc0c540cc10c1bfc669ad2f1}
+
+
+returns a vertex {\itshape id} in the hyper-\/graph, or 0 if the vertex id is not present 
+
+
+
+Definition at line 68 of file hyper\+\_\+graph.\+cpp.
+
+
+
+References g2o\+::\+Hyper\+Graph\+::\+Edge\+::\+\_\+vertices.
+
+
+\begin{DoxyCode}
+69   \{
+70     VertexIDMap::const\_iterator it=\hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices}.find(\textcolor{keywordtype}{id});
+71     \textcolor{keywordflow}{if} (it==\hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices}.end())
+72       \textcolor{keywordflow}{return} 0;
+73     \textcolor{keywordflow}{return} it->second;
+74   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!vertices@{vertices}}
+\index{vertices@{vertices}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{vertices() const }{vertices() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Vertex\+I\+D\+Map}\& g2o\+::\+Hyper\+Graph\+::vertices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{}\label{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}
+\begin{DoxyReturn}{Returns}
+the map {\itshape id -\/$>$ vertex} where the vertices are stored 
+\end{DoxyReturn}
+
+
+Definition at line 177 of file hyper\+\_\+graph.\+h.
+
+
+
+References \+\_\+vertices.
+
+
+
+Referenced by g2o\+::\+Optimizable\+Graph\+::add\+Graph(), g2o\+::apply\+Action(), g2o\+::\+Estimate\+Propagator\+::\+Estimate\+Propagator(), g2o\+::\+Sparse\+Optimizer\+::find\+Gauge(), g2o\+::\+Sparse\+Optimizer\+::gauge\+Freedom(), g2o\+::\+Hyper\+Dijkstra\+::\+Hyper\+Dijkstra(), g2o\+::\+Sparse\+Optimizer\+::initialize\+Optimization(), and g2o\+::\+Sparse\+Optimizer\+::set\+To\+Origin().
+
+
+\begin{DoxyCode}
+177 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices};\}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!vertices@{vertices}}
+\index{vertices@{vertices}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{vertices()}{vertices()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertex\+I\+D\+Map}\& g2o\+::\+Hyper\+Graph\+::vertices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1HyperGraph_a650107c875ef6f43d438d7d3e2ddf797}{}\label{classg2o_1_1HyperGraph_a650107c875ef6f43d438d7d3e2ddf797}
+\begin{DoxyReturn}{Returns}
+the map {\itshape id -\/$>$ vertex} where the vertices are stored 
+\end{DoxyReturn}
+
+
+Definition at line 179 of file hyper\+\_\+graph.\+h.
+
+
+
+References \+\_\+vertices.
+
+
+\begin{DoxyCode}
+179 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{\_vertices};\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!\+\_\+edges@{\+\_\+edges}}
+\index{\+\_\+edges@{\+\_\+edges}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{\+\_\+edges}{_edges}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Edge\+Set} g2o\+::\+Hyper\+Graph\+::\+\_\+edges\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1HyperGraph_afe4ae6e9ef05c8bded2b1b30e1886b36}{}\label{classg2o_1_1HyperGraph_afe4ae6e9ef05c8bded2b1b30e1886b36}
+
+
+Definition at line 208 of file hyper\+\_\+graph.\+h.
+
+
+
+Referenced by add\+Edge(), clear(), g2o\+::\+Hyper\+Graph\+::\+Vertex\+::edges(), edges(), and remove\+Edge().
+
+\index{g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}!\+\_\+vertices@{\+\_\+vertices}}
+\index{\+\_\+vertices@{\+\_\+vertices}!g2o\+::\+Hyper\+Graph@{g2o\+::\+Hyper\+Graph}}
+\subsubsection[{\texorpdfstring{\+\_\+vertices}{_vertices}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertex\+I\+D\+Map} g2o\+::\+Hyper\+Graph\+::\+\_\+vertices\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}{}\label{classg2o_1_1HyperGraph_a83132c77c8d0896581d168cbc72f673a}
+
+
+Definition at line 207 of file hyper\+\_\+graph.\+h.
+
+
+
+Referenced by g2o\+::\+Hyper\+Graph\+::\+Edge\+::set\+Vertex(), g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertex(), g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertices(), and vertices().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{hyper__graph_8h}{hyper\+\_\+graph.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{hyper__graph_8cpp}{hyper\+\_\+graph.\+cpp}\end{DoxyCompactItemize}

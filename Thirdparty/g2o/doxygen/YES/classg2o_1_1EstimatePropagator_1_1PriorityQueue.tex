@@ -1,0 +1,108 @@
+\hypertarget{classg2o_1_1EstimatePropagator_1_1PriorityQueue}{}\section{g2o\+:\+:Estimate\+Propagator\+:\+:Priority\+Queue Class Reference}
+\label{classg2o_1_1EstimatePropagator_1_1PriorityQueue}\index{g2o\+::\+Estimate\+Propagator\+::\+Priority\+Queue@{g2o\+::\+Estimate\+Propagator\+::\+Priority\+Queue}}
+
+
+priority queue for \hyperlink{classg2o_1_1EstimatePropagator_1_1AdjacencyMapEntry}{Adjacency\+Map\+Entry}  
+
+
+
+
+{\ttfamily \#include $<$estimate\+\_\+propagator.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Estimate\+Propagator\+:\+:Priority\+Queue\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Estimate\+Propagator\+:\+:Priority\+Queue\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classg2o_1_1EstimatePropagator_1_1PriorityQueue_ac89681b92b921412ff432f14028f481e}{push} (\hyperlink{classg2o_1_1EstimatePropagator_1_1AdjacencyMapEntry}{Adjacency\+Map\+Entry} $\ast$entry)
+\item 
+\hyperlink{classg2o_1_1EstimatePropagator_1_1AdjacencyMapEntry}{Adjacency\+Map\+Entry} $\ast$ \hyperlink{classg2o_1_1EstimatePropagator_1_1PriorityQueue_a82a20f1ebc44dfe305f65ceae7860a85}{pop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+priority queue for \hyperlink{classg2o_1_1EstimatePropagator_1_1AdjacencyMapEntry}{Adjacency\+Map\+Entry} 
+
+Definition at line 98 of file estimate\+\_\+propagator.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Estimate\+Propagator\+::\+Priority\+Queue@{g2o\+::\+Estimate\+Propagator\+::\+Priority\+Queue}!pop@{pop}}
+\index{pop@{pop}!g2o\+::\+Estimate\+Propagator\+::\+Priority\+Queue@{g2o\+::\+Estimate\+Propagator\+::\+Priority\+Queue}}
+\subsubsection[{\texorpdfstring{pop()}{pop()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Estimate\+Propagator\+::\+Adjacency\+Map\+Entry} $\ast$ g2o\+::\+Estimate\+Propagator\+::\+Priority\+Queue\+::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1EstimatePropagator_1_1PriorityQueue_a82a20f1ebc44dfe305f65ceae7860a85}{}\label{classg2o_1_1EstimatePropagator_1_1PriorityQueue_a82a20f1ebc44dfe305f65ceae7860a85}
+
+
+Definition at line 221 of file estimate\+\_\+propagator.\+cpp.
+
+
+
+References g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::in\+Queue, and g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::queue\+It.
+
+
+
+Referenced by g2o\+::\+Estimate\+Propagator\+::propagate().
+
+
+\begin{DoxyCode}
+222   \{
+223     assert(!empty());
+224     iterator it = begin();
+225     AdjacencyMapEntry* entry = it->second;
+226     erase(it);
+227 
+228     assert(entry != NULL);
+229     entry->queueIt = end();
+230     entry->inQueue = \textcolor{keyword}{false};
+231     \textcolor{keywordflow}{return} entry;
+232   \}
+\end{DoxyCode}
+\index{g2o\+::\+Estimate\+Propagator\+::\+Priority\+Queue@{g2o\+::\+Estimate\+Propagator\+::\+Priority\+Queue}!push@{push}}
+\index{push@{push}!g2o\+::\+Estimate\+Propagator\+::\+Priority\+Queue@{g2o\+::\+Estimate\+Propagator\+::\+Priority\+Queue}}
+\subsubsection[{\texorpdfstring{push(\+Adjacency\+Map\+Entry $\ast$entry)}{push(AdjacencyMapEntry *entry)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Estimate\+Propagator\+::\+Priority\+Queue\+::push (
+\begin{DoxyParamCaption}
+\item[{{\bf Adjacency\+Map\+Entry} $\ast$}]{entry}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1EstimatePropagator_1_1PriorityQueue_ac89681b92b921412ff432f14028f481e}{}\label{classg2o_1_1EstimatePropagator_1_1PriorityQueue_ac89681b92b921412ff432f14028f481e}
+
+
+Definition at line 208 of file estimate\+\_\+propagator.\+cpp.
+
+
+
+References g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::distance(), g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::in\+Queue, and g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::queue\+It.
+
+
+
+Referenced by g2o\+::\+Estimate\+Propagator\+::propagate().
+
+
+\begin{DoxyCode}
+209   \{
+210     assert(entry != NULL);
+211     \textcolor{keywordflow}{if} (entry->inQueue) \{
+212       assert(entry->queueIt->second == entry);
+213       erase(entry->queueIt);
+214     \}
+215 
+216     entry->queueIt = insert(std::make\_pair(entry->distance(), entry));
+217     assert(entry->queueIt != end());
+218     entry->inQueue = \textcolor{keyword}{true};
+219   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{estimate__propagator_8h}{estimate\+\_\+propagator.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{estimate__propagator_8cpp}{estimate\+\_\+propagator.\+cpp}\end{DoxyCompactItemize}

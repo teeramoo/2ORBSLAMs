@@ -1,0 +1,152 @@
+\hypertarget{se3__ops_8hpp}{}\section{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/se3\+\_\+ops.hpp File Reference}
+\label{se3__ops_8hpp}\index{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/se3\+\_\+ops.\+hpp@{/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/se3\+\_\+ops.\+hpp}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Matrix3d \hyperlink{se3__ops_8hpp_a3c5bcbab070f57ad4172726b8433fa44}{skew} (const Vector3d \&v)
+\item 
+Vector3d \hyperlink{se3__ops_8hpp_ab5f76ec521211d5bba92430d1cd86e4e}{deltaR} (const Matrix3d \&R)
+\item 
+Vector2d \hyperlink{se3__ops_8hpp_a6034cd57d868d5c3f8af31041cd4001c}{project} (const Vector3d \&v)
+\item 
+Vector3d \hyperlink{se3__ops_8hpp_af298f2d44702b6d6d08294893202c690}{project} (const Vector4d \&v)
+\item 
+Vector3d \hyperlink{se3__ops_8hpp_a5852da03157f63bf003abbf9ab7405eb}{unproject} (const Vector2d \&v)
+\item 
+Vector4d \hyperlink{se3__ops_8hpp_aaefef2f30db992eb7708e0acd4eb99ec}{unproject} (const Vector3d \&v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{se3\+\_\+ops.\+hpp@{se3\+\_\+ops.\+hpp}!deltaR@{deltaR}}
+\index{deltaR@{deltaR}!se3\+\_\+ops.\+hpp@{se3\+\_\+ops.\+hpp}}
+\subsubsection[{\texorpdfstring{delta\+R(const Matrix3d \&\+R)}{deltaR(const Matrix3d &R)}}]{\setlength{\rightskip}{0pt plus 5cm}Vector3d deltaR (
+\begin{DoxyParamCaption}
+\item[{const Matrix3d \&}]{R}
+\end{DoxyParamCaption}
+)}\hypertarget{se3__ops_8hpp_ab5f76ec521211d5bba92430d1cd86e4e}{}\label{se3__ops_8hpp_ab5f76ec521211d5bba92430d1cd86e4e}
+
+
+Definition at line 40 of file se3\+\_\+ops.\+hpp.
+
+
+\begin{DoxyCode}
+41   \{
+42     Vector3d v;
+43     v(0)=R(2,1)-R(1,2);
+44     v(1)=R(0,2)-R(2,0);
+45     v(2)=R(1,0)-R(0,1);
+46     \textcolor{keywordflow}{return} v;
+47   \}
+\end{DoxyCode}
+\index{se3\+\_\+ops.\+hpp@{se3\+\_\+ops.\+hpp}!project@{project}}
+\index{project@{project}!se3\+\_\+ops.\+hpp@{se3\+\_\+ops.\+hpp}}
+\subsubsection[{\texorpdfstring{project(const Vector3d \&v)}{project(const Vector3d &v)}}]{\setlength{\rightskip}{0pt plus 5cm}Vector2d project (
+\begin{DoxyParamCaption}
+\item[{const Vector3d \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{se3__ops_8hpp_a6034cd57d868d5c3f8af31041cd4001c}{}\label{se3__ops_8hpp_a6034cd57d868d5c3f8af31041cd4001c}
+
+
+Definition at line 49 of file se3\+\_\+ops.\+hpp.
+
+
+\begin{DoxyCode}
+50   \{
+51     Vector2d res;
+52     res(0) = v(0)/v(2);
+53     res(1) = v(1)/v(2);
+54     \textcolor{keywordflow}{return} res;
+55   \}
+\end{DoxyCode}
+\index{se3\+\_\+ops.\+hpp@{se3\+\_\+ops.\+hpp}!project@{project}}
+\index{project@{project}!se3\+\_\+ops.\+hpp@{se3\+\_\+ops.\+hpp}}
+\subsubsection[{\texorpdfstring{project(const Vector4d \&v)}{project(const Vector4d &v)}}]{\setlength{\rightskip}{0pt plus 5cm}Vector3d project (
+\begin{DoxyParamCaption}
+\item[{const Vector4d \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{se3__ops_8hpp_af298f2d44702b6d6d08294893202c690}{}\label{se3__ops_8hpp_af298f2d44702b6d6d08294893202c690}
+
+
+Definition at line 57 of file se3\+\_\+ops.\+hpp.
+
+
+\begin{DoxyCode}
+58   \{
+59     Vector3d res;
+60     res(0) = v(0)/v(3);
+61     res(1) = v(1)/v(3);
+62     res(2) = v(2)/v(3);
+63     \textcolor{keywordflow}{return} res;
+64   \}
+\end{DoxyCode}
+\index{se3\+\_\+ops.\+hpp@{se3\+\_\+ops.\+hpp}!skew@{skew}}
+\index{skew@{skew}!se3\+\_\+ops.\+hpp@{se3\+\_\+ops.\+hpp}}
+\subsubsection[{\texorpdfstring{skew(const Vector3d \&v)}{skew(const Vector3d &v)}}]{\setlength{\rightskip}{0pt plus 5cm}Matrix3d skew (
+\begin{DoxyParamCaption}
+\item[{const Vector3d \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{se3__ops_8hpp_a3c5bcbab070f57ad4172726b8433fa44}{}\label{se3__ops_8hpp_a3c5bcbab070f57ad4172726b8433fa44}
+
+
+Definition at line 27 of file se3\+\_\+ops.\+hpp.
+
+
+\begin{DoxyCode}
+28   \{
+29     Matrix3d m;
+30     m.fill(0.);
+31     m(0,1)  = -v(2);
+32     m(0,2)  =  v(1);
+33     m(1,2)  = -v(0);
+34     m(1,0)  =  v(2);
+35     m(2,0) = -v(1);
+36     m(2,1) = v(0);
+37     \textcolor{keywordflow}{return} m;
+38   \}
+\end{DoxyCode}
+\index{se3\+\_\+ops.\+hpp@{se3\+\_\+ops.\+hpp}!unproject@{unproject}}
+\index{unproject@{unproject}!se3\+\_\+ops.\+hpp@{se3\+\_\+ops.\+hpp}}
+\subsubsection[{\texorpdfstring{unproject(const Vector2d \&v)}{unproject(const Vector2d &v)}}]{\setlength{\rightskip}{0pt plus 5cm}Vector3d unproject (
+\begin{DoxyParamCaption}
+\item[{const Vector2d \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{se3__ops_8hpp_a5852da03157f63bf003abbf9ab7405eb}{}\label{se3__ops_8hpp_a5852da03157f63bf003abbf9ab7405eb}
+
+
+Definition at line 66 of file se3\+\_\+ops.\+hpp.
+
+
+\begin{DoxyCode}
+67   \{
+68     Vector3d res;
+69     res(0) = v(0);
+70     res(1) = v(1);
+71     res(2) = 1;
+72     \textcolor{keywordflow}{return} res;
+73   \}
+\end{DoxyCode}
+\index{se3\+\_\+ops.\+hpp@{se3\+\_\+ops.\+hpp}!unproject@{unproject}}
+\index{unproject@{unproject}!se3\+\_\+ops.\+hpp@{se3\+\_\+ops.\+hpp}}
+\subsubsection[{\texorpdfstring{unproject(const Vector3d \&v)}{unproject(const Vector3d &v)}}]{\setlength{\rightskip}{0pt plus 5cm}Vector4d unproject (
+\begin{DoxyParamCaption}
+\item[{const Vector3d \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{se3__ops_8hpp_aaefef2f30db992eb7708e0acd4eb99ec}{}\label{se3__ops_8hpp_aaefef2f30db992eb7708e0acd4eb99ec}
+
+
+Definition at line 75 of file se3\+\_\+ops.\+hpp.
+
+
+\begin{DoxyCode}
+76   \{
+77     Vector4d res;
+78     res(0) = v(0);
+79     res(1) = v(1);
+80     res(2) = v(2);
+81     res(3) = 1;
+82     \textcolor{keywordflow}{return} res;
+83   \}
+\end{DoxyCode}

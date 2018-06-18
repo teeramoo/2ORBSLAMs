@@ -1,0 +1,145 @@
+\hypertarget{classg2o_1_1BaseProperty}{}\section{g2o\+:\+:Base\+Property Class Reference}
+\label{classg2o_1_1BaseProperty}\index{g2o\+::\+Base\+Property@{g2o\+::\+Base\+Property}}
+
+
+{\ttfamily \#include $<$property.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Base\+Property\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1BaseProperty_a00444ab7926d86beb9e66550e40e5d97}{Base\+Property} (const std\+::string name\+\_\+)
+\item 
+virtual \hyperlink{classg2o_1_1BaseProperty_acf2a5de9ce5781187fbf6be447918f39}{$\sim$\+Base\+Property} ()
+\item 
+const std\+::string \& \hyperlink{classg2o_1_1BaseProperty_aae91313b0eb376dd9460cd712ecbb86d}{name} ()
+\item 
+virtual std\+::string \hyperlink{classg2o_1_1BaseProperty_a7a4191088468c2f03dab52107d130833}{to\+String} () const =0
+\item 
+virtual bool \hyperlink{classg2o_1_1BaseProperty_aeabc313d9f66a403738aece884c85e1d}{from\+String} (const std\+::string \&s)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classg2o_1_1BaseProperty_a74e4bbf35ddf26022cb39be2ea7abd2b}{\+\_\+name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 38 of file property.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Base\+Property@{g2o\+::\+Base\+Property}!Base\+Property@{Base\+Property}}
+\index{Base\+Property@{Base\+Property}!g2o\+::\+Base\+Property@{g2o\+::\+Base\+Property}}
+\subsubsection[{\texorpdfstring{Base\+Property(const std\+::string name\+\_\+)}{BaseProperty(const std::string name_)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Base\+Property\+::\+Base\+Property (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{name\+\_\+}
+\end{DoxyParamCaption}
+)}\hypertarget{classg2o_1_1BaseProperty_a00444ab7926d86beb9e66550e40e5d97}{}\label{classg2o_1_1BaseProperty_a00444ab7926d86beb9e66550e40e5d97}
+
+
+Definition at line 39 of file property.\+cpp.
+
+
+\begin{DoxyCode}
+39                                                   :\hyperlink{classg2o_1_1BaseProperty_a74e4bbf35ddf26022cb39be2ea7abd2b}{\_name}(name\_)\{
+40   \}
+\end{DoxyCode}
+\index{g2o\+::\+Base\+Property@{g2o\+::\+Base\+Property}!````~Base\+Property@{$\sim$\+Base\+Property}}
+\index{````~Base\+Property@{$\sim$\+Base\+Property}!g2o\+::\+Base\+Property@{g2o\+::\+Base\+Property}}
+\subsubsection[{\texorpdfstring{$\sim$\+Base\+Property()}{~BaseProperty()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Base\+Property\+::$\sim$\+Base\+Property (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1BaseProperty_acf2a5de9ce5781187fbf6be447918f39}{}\label{classg2o_1_1BaseProperty_acf2a5de9ce5781187fbf6be447918f39}
+
+
+Definition at line 42 of file property.\+cpp.
+
+
+\begin{DoxyCode}
+42 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Base\+Property@{g2o\+::\+Base\+Property}!from\+String@{from\+String}}
+\index{from\+String@{from\+String}!g2o\+::\+Base\+Property@{g2o\+::\+Base\+Property}}
+\subsubsection[{\texorpdfstring{from\+String(const std\+::string \&s)=0}{fromString(const std::string &s)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool g2o\+::\+Base\+Property\+::from\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1BaseProperty_aeabc313d9f66a403738aece884c85e1d}{}\label{classg2o_1_1BaseProperty_aeabc313d9f66a403738aece884c85e1d}
+
+
+Implemented in \hyperlink{classg2o_1_1Property_a5c0a6eacc67e98d4f0b3fd9fe856dbbe}{g2o\+::\+Property$<$ T $>$}, \hyperlink{classg2o_1_1Property_a5c0a6eacc67e98d4f0b3fd9fe856dbbe}{g2o\+::\+Property$<$ double $>$}, \hyperlink{classg2o_1_1Property_a5c0a6eacc67e98d4f0b3fd9fe856dbbe}{g2o\+::\+Property$<$ int $>$}, and \hyperlink{classg2o_1_1Property_a5c0a6eacc67e98d4f0b3fd9fe856dbbe}{g2o\+::\+Property$<$ bool $>$}.
+
+
+
+Referenced by name().
+
+\index{g2o\+::\+Base\+Property@{g2o\+::\+Base\+Property}!name@{name}}
+\index{name@{name}!g2o\+::\+Base\+Property@{g2o\+::\+Base\+Property}}
+\subsubsection[{\texorpdfstring{name()}{name()}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string\& g2o\+::\+Base\+Property\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1BaseProperty_aae91313b0eb376dd9460cd712ecbb86d}{}\label{classg2o_1_1BaseProperty_aae91313b0eb376dd9460cd712ecbb86d}
+
+
+Definition at line 42 of file property.\+h.
+
+
+
+References \+\_\+name, from\+String(), and to\+String().
+
+
+
+Referenced by g2o\+::\+Property\+Map\+::add\+Property(), g2o\+::\+Property\+Map\+::make\+Property(), g2o\+::\+Property\+Map\+::update\+Map\+From\+String(), and g2o\+::\+Property\+Map\+::write\+To\+C\+S\+V().
+
+
+\begin{DoxyCode}
+42 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1BaseProperty_a74e4bbf35ddf26022cb39be2ea7abd2b}{\_name};\}
+\end{DoxyCode}
+\index{g2o\+::\+Base\+Property@{g2o\+::\+Base\+Property}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!g2o\+::\+Base\+Property@{g2o\+::\+Base\+Property}}
+\subsubsection[{\texorpdfstring{to\+String() const =0}{toString() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string g2o\+::\+Base\+Property\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classg2o_1_1BaseProperty_a7a4191088468c2f03dab52107d130833}{}\label{classg2o_1_1BaseProperty_a7a4191088468c2f03dab52107d130833}
+
+
+Implemented in \hyperlink{classg2o_1_1Property_aaa5c2e380ceca424de92d16f1d92fad6}{g2o\+::\+Property$<$ T $>$}, \hyperlink{classg2o_1_1Property_aaa5c2e380ceca424de92d16f1d92fad6}{g2o\+::\+Property$<$ double $>$}, \hyperlink{classg2o_1_1Property_aaa5c2e380ceca424de92d16f1d92fad6}{g2o\+::\+Property$<$ int $>$}, and \hyperlink{classg2o_1_1Property_aaa5c2e380ceca424de92d16f1d92fad6}{g2o\+::\+Property$<$ bool $>$}.
+
+
+
+Referenced by name(), g2o\+::\+Optimization\+Algorithm\+::print\+Properties(), and g2o\+::\+Property\+Map\+::write\+To\+C\+S\+V().
+
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Base\+Property@{g2o\+::\+Base\+Property}!\+\_\+name@{\+\_\+name}}
+\index{\+\_\+name@{\+\_\+name}!g2o\+::\+Base\+Property@{g2o\+::\+Base\+Property}}
+\subsubsection[{\texorpdfstring{\+\_\+name}{_name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string g2o\+::\+Base\+Property\+::\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1BaseProperty_a74e4bbf35ddf26022cb39be2ea7abd2b}{}\label{classg2o_1_1BaseProperty_a74e4bbf35ddf26022cb39be2ea7abd2b}
+
+
+Definition at line 46 of file property.\+h.
+
+
+
+Referenced by name().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/stuff/\hyperlink{property_8h}{property.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/stuff/\hyperlink{property_8cpp}{property.\+cpp}\end{DoxyCompactItemize}

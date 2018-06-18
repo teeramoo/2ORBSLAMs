@@ -1,0 +1,230 @@
+\hypertarget{classg2o_1_1LinearSolverDense}{}\section{g2o\+:\+:Linear\+Solver\+Dense$<$ Matrix\+Type $>$ Class Template Reference}
+\label{classg2o_1_1LinearSolverDense}\index{g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$@{g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$}}
+
+
+linear solver using dense cholesky decomposition  
+
+
+
+
+{\ttfamily \#include $<$linear\+\_\+solver\+\_\+dense.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1LinearSolverDense_a25d8767ad60e944d8518348a136830da}{Linear\+Solver\+Dense} ()
+\item 
+virtual \hyperlink{classg2o_1_1LinearSolverDense_a2b3cbb77fa958bf322b98e38ec3e29c2}{$\sim$\+Linear\+Solver\+Dense} ()
+\item 
+virtual bool \hyperlink{classg2o_1_1LinearSolverDense_a24f68ecd4b022269dbfc4d990eb5c57b}{init} ()
+\item 
+bool \hyperlink{classg2o_1_1LinearSolverDense_a8b6eafa6e53b9f705a4e8eb436eeb403}{solve} (const \hyperlink{classg2o_1_1SparseBlockMatrix}{Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&A, double $\ast$\hyperlink{sparse__helper_8cpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, double $\ast$b)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classg2o_1_1LinearSolverDense_a2d82ac52c9c24501cccee3ef3cb575fe}{\+\_\+reset}
+\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classg2o_1_1LinearSolverDense_a5ca6a1f2358ce0620dbdbae3fdc9fc99}{\+\_\+H}
+\item 
+Eigen\+::\+L\+D\+LT$<$ Eigen\+::\+Matrix\+Xd $>$ \hyperlink{classg2o_1_1LinearSolverDense_a20fc35e2f25107a6e36211861034aae0}{\+\_\+cholesky}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Matrix\+Type$>$\\*
+class g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$}
+
+linear solver using dense cholesky decomposition 
+
+Definition at line 46 of file linear\+\_\+solver\+\_\+dense.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!Linear\+Solver\+Dense@{Linear\+Solver\+Dense}}
+\index{Linear\+Solver\+Dense@{Linear\+Solver\+Dense}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
+\subsubsection[{\texorpdfstring{Linear\+Solver\+Dense()}{LinearSolverDense()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ {\bf g2o\+::\+Linear\+Solver\+Dense}$<$ Matrix\+Type $>$\+::{\bf Linear\+Solver\+Dense} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1LinearSolverDense_a25d8767ad60e944d8518348a136830da}{}\label{classg2o_1_1LinearSolverDense_a25d8767ad60e944d8518348a136830da}
+
+
+Definition at line 49 of file linear\+\_\+solver\+\_\+dense.\+h.
+
+
+\begin{DoxyCode}
+49                           :
+50         LinearSolver<MatrixType>(),
+51         \hyperlink{classg2o_1_1LinearSolverDense_a2d82ac52c9c24501cccee3ef3cb575fe}{\_reset}(\textcolor{keyword}{true})
+52       \{
+53       \}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!````~Linear\+Solver\+Dense@{$\sim$\+Linear\+Solver\+Dense}}
+\index{````~Linear\+Solver\+Dense@{$\sim$\+Linear\+Solver\+Dense}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
+\subsubsection[{\texorpdfstring{$\sim$\+Linear\+Solver\+Dense()}{~LinearSolverDense()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ virtual {\bf g2o\+::\+Linear\+Solver\+Dense}$<$ Matrix\+Type $>$\+::$\sim${\bf Linear\+Solver\+Dense} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolverDense_a2b3cbb77fa958bf322b98e38ec3e29c2}{}\label{classg2o_1_1LinearSolverDense_a2b3cbb77fa958bf322b98e38ec3e29c2}
+
+
+Definition at line 55 of file linear\+\_\+solver\+\_\+dense.\+h.
+
+
+\begin{DoxyCode}
+56       \{
+57       \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!init@{init}}
+\index{init@{init}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
+\subsubsection[{\texorpdfstring{init()}{init()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ virtual bool {\bf g2o\+::\+Linear\+Solver\+Dense}$<$ Matrix\+Type $>$\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolverDense_a24f68ecd4b022269dbfc4d990eb5c57b}{}\label{classg2o_1_1LinearSolverDense_a24f68ecd4b022269dbfc4d990eb5c57b}
+init for operating on matrices with a different non-\/zero pattern like before 
+
+Implements \hyperlink{classg2o_1_1LinearSolver_aebd961a94ef6de1bc66d2ca41dd2b17b}{g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$}.
+
+
+
+Definition at line 59 of file linear\+\_\+solver\+\_\+dense.\+h.
+
+
+
+References g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::\+\_\+reset.
+
+
+\begin{DoxyCode}
+60       \{
+61         \hyperlink{classg2o_1_1LinearSolverDense_a2d82ac52c9c24501cccee3ef3cb575fe}{\_reset} = \textcolor{keyword}{true};
+62         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+63       \}
+\end{DoxyCode}
+\index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!solve@{solve}}
+\index{solve@{solve}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
+\subsubsection[{\texorpdfstring{solve(const Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ \&\+A, double $\ast$x, double $\ast$b)}{solve(const SparseBlockMatrix< MatrixType > &A, double *x, double *b)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ bool {\bf g2o\+::\+Linear\+Solver\+Dense}$<$ Matrix\+Type $>$\+::solve (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sparse\+Block\+Matrix}$<$ Matrix\+Type $>$ \&}]{A, }
+\item[{double $\ast$}]{x, }
+\item[{double $\ast$}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classg2o_1_1LinearSolverDense_a8b6eafa6e53b9f705a4e8eb436eeb403}{}\label{classg2o_1_1LinearSolverDense_a8b6eafa6e53b9f705a4e8eb436eeb403}
+Assumes that A is the same matrix for several calls. Among other assumptions, the non-\/zero pattern does not change! If the matrix changes call \hyperlink{classg2o_1_1LinearSolverDense_a24f68ecd4b022269dbfc4d990eb5c57b}{init()} before. solve system Ax = b, x and b have to allocated beforehand!! 
+
+Implements \hyperlink{classg2o_1_1LinearSolver_aa44b40826d50203c8ce2ff258c34e030}{g2o\+::\+Linear\+Solver$<$ Matrix\+Type $>$}.
+
+
+
+Definition at line 65 of file linear\+\_\+solver\+\_\+dense.\+h.
+
+
+
+References g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::\+\_\+cholesky, g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::\+\_\+H, g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::\+\_\+reset, g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::block\+Cols(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::col\+Base\+Of\+Block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::cols\+Of\+Block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::row\+Base\+Of\+Block(), g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::rows\+Of\+Block(), and g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$\+::transpose().
+
+
+\begin{DoxyCode}
+66       \{
+67         \textcolor{keywordtype}{int} n = A.cols();
+68         \textcolor{keywordtype}{int} m = A.cols();
+69 
+70         Eigen::MatrixXd& H = \hyperlink{classg2o_1_1LinearSolverDense_a5ca6a1f2358ce0620dbdbae3fdc9fc99}{\_H};
+71         \textcolor{keywordflow}{if} (H.cols() != n) \{
+72           H.resize(n, m);
+73           \hyperlink{classg2o_1_1LinearSolverDense_a2d82ac52c9c24501cccee3ef3cb575fe}{\_reset} = \textcolor{keyword}{true};
+74         \}
+75         \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverDense_a2d82ac52c9c24501cccee3ef3cb575fe}{\_reset}) \{
+76           \hyperlink{classg2o_1_1LinearSolverDense_a2d82ac52c9c24501cccee3ef3cb575fe}{\_reset} = \textcolor{keyword}{false};
+77           H.setZero();
+78         \}
+79 
+80         \textcolor{comment}{// copy the sparse block matrix into a dense matrix}
+81         \textcolor{keywordtype}{int} c\_idx = 0;
+82         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < A.blockCols().size(); ++i) \{
+83           \textcolor{keywordtype}{int} c\_size = A.colsOfBlock(i);
+84           assert(c\_idx == A.colBaseOfBlock(i) && \textcolor{stringliteral}{"mismatch in block indices"});
+85 
+86           \textcolor{keyword}{const} \textcolor{keyword}{typename} \hyperlink{classg2o_1_1SparseBlockMatrix_aaa6ca1ae454ed70f62992b6401645f4e}{SparseBlockMatrix<MatrixType>::IntBlockMap}
+      & col = A.blockCols()[i];
+87           \textcolor{keywordflow}{if} (col.size() > 0) \{
+88             \textcolor{keyword}{typename} SparseBlockMatrix<MatrixType>::IntBlockMap::const\_iterator it;
+89             \textcolor{keywordflow}{for} (it = col.begin(); it != col.end(); ++it) \{
+90               \textcolor{keywordtype}{int} r\_idx = A.rowBaseOfBlock(it->first);
+91               \textcolor{comment}{// only the upper triangular block is processed}
+92               \textcolor{keywordflow}{if} (it->first <= (\textcolor{keywordtype}{int})i) \{
+93                 \textcolor{keywordtype}{int} r\_size = A.rowsOfBlock(it->first);
+94                 H.block(r\_idx, c\_idx, r\_size, c\_size) = *(it->second);
+95                 \textcolor{keywordflow}{if} (r\_idx != c\_idx) \textcolor{comment}{// write the lower triangular block}
+96                   H.block(c\_idx, r\_idx, c\_size, r\_size) = it->second->transpose();
+97               \}
+98             \}
+99           \}
+100 
+101           c\_idx += c\_size;
+102         \}
+103 
+104         \textcolor{comment}{// solving via Cholesky decomposition}
+105         Eigen::VectorXd::MapType xvec(\hyperlink{sparse__block__matrix_8hpp_af88b946fb90d5f08b5fb740c70e98c10}{x}, m);
+106         Eigen::VectorXd::ConstMapType bvec(b, n);
+107         \hyperlink{classg2o_1_1LinearSolverDense_a20fc35e2f25107a6e36211861034aae0}{\_cholesky}.compute(H);
+108         \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1LinearSolverDense_a20fc35e2f25107a6e36211861034aae0}{\_cholesky}.isPositive()) \{
+109           xvec = \hyperlink{classg2o_1_1LinearSolverDense_a20fc35e2f25107a6e36211861034aae0}{\_cholesky}.solve(bvec);
+110           \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+111         \}
+112         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+113       \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!\+\_\+cholesky@{\+\_\+cholesky}}
+\index{\+\_\+cholesky@{\+\_\+cholesky}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
+\subsubsection[{\texorpdfstring{\+\_\+cholesky}{_cholesky}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ Eigen\+::\+L\+D\+LT$<$Eigen\+::\+Matrix\+Xd$>$ {\bf g2o\+::\+Linear\+Solver\+Dense}$<$ Matrix\+Type $>$\+::\+\_\+cholesky\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverDense_a20fc35e2f25107a6e36211861034aae0}{}\label{classg2o_1_1LinearSolverDense_a20fc35e2f25107a6e36211861034aae0}
+
+
+Definition at line 118 of file linear\+\_\+solver\+\_\+dense.\+h.
+
+
+
+Referenced by g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::solve().
+
+\index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!\+\_\+H@{\+\_\+H}}
+\index{\+\_\+H@{\+\_\+H}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
+\subsubsection[{\texorpdfstring{\+\_\+H}{_H}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ Eigen\+::\+Matrix\+Xd {\bf g2o\+::\+Linear\+Solver\+Dense}$<$ Matrix\+Type $>$\+::\+\_\+H\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverDense_a5ca6a1f2358ce0620dbdbae3fdc9fc99}{}\label{classg2o_1_1LinearSolverDense_a5ca6a1f2358ce0620dbdbae3fdc9fc99}
+
+
+Definition at line 117 of file linear\+\_\+solver\+\_\+dense.\+h.
+
+
+
+Referenced by g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::solve().
+
+\index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!\+\_\+reset@{\+\_\+reset}}
+\index{\+\_\+reset@{\+\_\+reset}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
+\subsubsection[{\texorpdfstring{\+\_\+reset}{_reset}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ bool {\bf g2o\+::\+Linear\+Solver\+Dense}$<$ Matrix\+Type $>$\+::\+\_\+reset\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1LinearSolverDense_a2d82ac52c9c24501cccee3ef3cb575fe}{}\label{classg2o_1_1LinearSolverDense_a2d82ac52c9c24501cccee3ef3cb575fe}
+
+
+Definition at line 116 of file linear\+\_\+solver\+\_\+dense.\+h.
+
+
+
+Referenced by g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::init(), and g2o\+::\+Linear\+Solver\+Dense$<$ Matrix\+Type $>$\+::solve().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/solvers/\hyperlink{linear__solver__dense_8h}{linear\+\_\+solver\+\_\+dense.\+h}\end{DoxyCompactItemize}

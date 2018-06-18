@@ -1,0 +1,524 @@
+\hypertarget{structg2o_1_1HyperDijkstra}{}\section{g2o\+:\+:Hyper\+Dijkstra Struct Reference}
+\label{structg2o_1_1HyperDijkstra}\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+
+
+{\ttfamily \#include $<$hyper\+\_\+dijkstra.\+h$>$}
+
+
+
+Collaboration diagram for g2o\+:\+:Hyper\+Dijkstra\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structg2o_1_1HyperDijkstra_1_1AdjacencyMapEntry}{Adjacency\+Map\+Entry}
+\item 
+struct \hyperlink{structg2o_1_1HyperDijkstra_1_1CostFunction}{Cost\+Function}
+\item 
+struct \hyperlink{structg2o_1_1HyperDijkstra_1_1TreeAction}{Tree\+Action}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Hyper\+Graph\+::\+Vertex} $\ast$, \hyperlink{structg2o_1_1HyperDijkstra_1_1AdjacencyMapEntry}{Adjacency\+Map\+Entry} $>$ \hyperlink{structg2o_1_1HyperDijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structg2o_1_1HyperDijkstra_a55e844f4b596290cb36a0d9fe4140966}{Hyper\+Dijkstra} (\hyperlink{classg2o_1_1HyperGraph}{Hyper\+Graph} $\ast$g)
+\item 
+\hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set} \& \hyperlink{structg2o_1_1HyperDijkstra_a2cb453ed6f1bf6069186bd269a6464da}{visited} ()
+\item 
+\hyperlink{structg2o_1_1HyperDijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map} \& \hyperlink{structg2o_1_1HyperDijkstra_ace002e09514a2eeb76a7b569f9e30f6c}{adjacency\+Map} ()
+\item 
+\hyperlink{classg2o_1_1HyperGraph}{Hyper\+Graph} $\ast$ \hyperlink{structg2o_1_1HyperDijkstra_a578a9eb1874d9802dbd37a2f1681c196}{graph} ()
+\item 
+void \hyperlink{structg2o_1_1HyperDijkstra_ad88b79c73c8eaa5f1afbe27b778b542e}{shortest\+Paths} (\hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Hyper\+Graph\+::\+Vertex} $\ast$v, \hyperlink{structg2o_1_1HyperDijkstra_1_1CostFunction}{Hyper\+Dijkstra\+::\+Cost\+Function} $\ast$cost, double max\+Distance=std\+::numeric\+\_\+limits$<$ double $>$\+::max(), double comparison\+Conditioner=1e-\/3, bool directed=false, double max\+Edge\+Cost=std\+::numeric\+\_\+limits$<$ double $>$\+::max())
+\item 
+void \hyperlink{structg2o_1_1HyperDijkstra_a00d978615ff1bbb9917351e9cba0b4ba}{shortest\+Paths} (\hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set} \&vset, \hyperlink{structg2o_1_1HyperDijkstra_1_1CostFunction}{Hyper\+Dijkstra\+::\+Cost\+Function} $\ast$cost, double max\+Distance=std\+::numeric\+\_\+limits$<$ double $>$\+::max(), double comparison\+Conditioner=1e-\/3, bool directed=false, double max\+Edge\+Cost=std\+::numeric\+\_\+limits$<$ double $>$\+::max())
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{structg2o_1_1HyperDijkstra_a84a1d7288e1d76369442f89604c5d6de}{compute\+Tree} (\hyperlink{structg2o_1_1HyperDijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map} \&amap)
+\item 
+static void \hyperlink{structg2o_1_1HyperDijkstra_aa73ae495f10f81823b16f26715f32c58}{visit\+Adjacency\+Map} (\hyperlink{structg2o_1_1HyperDijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map} \&amap, \hyperlink{structg2o_1_1HyperDijkstra_1_1TreeAction}{Tree\+Action} $\ast$action, bool use\+Distance=false)
+\item 
+static void \hyperlink{structg2o_1_1HyperDijkstra_a846232e98c8175ec2fff784fc3271ad7}{connected\+Subset} (\hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set} \&connected, \hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set} \&\hyperlink{structg2o_1_1HyperDijkstra_a2cb453ed6f1bf6069186bd269a6464da}{visited}, \hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set} \&starting\+Set, \hyperlink{classg2o_1_1HyperGraph}{Hyper\+Graph} $\ast$g, \hyperlink{classg2o_1_1HyperGraph_1_1Vertex}{Hyper\+Graph\+::\+Vertex} $\ast$v, \hyperlink{structg2o_1_1HyperDijkstra_1_1CostFunction}{Hyper\+Dijkstra\+::\+Cost\+Function} $\ast$cost, double distance, double comparison\+Conditioner, double max\+Edge\+Cost=std\+::numeric\+\_\+limits$<$ double $>$\+::max())
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{structg2o_1_1HyperDijkstra_ad9c39fd01a0740f2beff98c927aaebbd}{reset} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structg2o_1_1HyperDijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map} \hyperlink{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\+\_\+adjacency\+Map}
+\item 
+\hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set} \hyperlink{structg2o_1_1HyperDijkstra_ad43cae6d9e1df2cf7db839f504ba6cc5}{\+\_\+visited}
+\item 
+\hyperlink{classg2o_1_1HyperGraph}{Hyper\+Graph} $\ast$ \hyperlink{structg2o_1_1HyperDijkstra_a1bf21d65ddd6e0feeb6a76f58d7f2c6e}{\+\_\+graph}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 38 of file hyper\+\_\+dijkstra.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!Adjacency\+Map@{Adjacency\+Map}}
+\index{Adjacency\+Map@{Adjacency\+Map}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{Adjacency\+Map}{AdjacencyMap}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<${\bf Hyper\+Graph\+::\+Vertex}$\ast$, {\bf Adjacency\+Map\+Entry}$>$ {\bf g2o\+::\+Hyper\+Dijkstra\+::\+Adjacency\+Map}}\hypertarget{structg2o_1_1HyperDijkstra_af12ff8eef95094815a3fa1da0514bda2}{}\label{structg2o_1_1HyperDijkstra_af12ff8eef95094815a3fa1da0514bda2}
+
+
+Definition at line 70 of file hyper\+\_\+dijkstra.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!Hyper\+Dijkstra@{Hyper\+Dijkstra}}
+\index{Hyper\+Dijkstra@{Hyper\+Dijkstra}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{Hyper\+Dijkstra(\+Hyper\+Graph $\ast$g)}{HyperDijkstra(HyperGraph *g)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Hyper\+Dijkstra\+::\+Hyper\+Dijkstra (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph} $\ast$}]{g}
+\end{DoxyParamCaption}
+)}\hypertarget{structg2o_1_1HyperDijkstra_a55e844f4b596290cb36a0d9fe4140966}{}\label{structg2o_1_1HyperDijkstra_a55e844f4b596290cb36a0d9fe4140966}
+
+
+Definition at line 61 of file hyper\+\_\+dijkstra.\+cpp.
+
+
+
+References \+\_\+adjacency\+Map, \+\_\+graph, g2o\+::\+Hyper\+Dijkstra\+::\+Adjacency\+Map\+Entry\+::child(), and g2o\+::\+Hyper\+Graph\+::vertices().
+
+
+\begin{DoxyCode}
+61                                            : \hyperlink{structg2o_1_1HyperDijkstra_a1bf21d65ddd6e0feeb6a76f58d7f2c6e}{\_graph}(g)
+62   \{
+63     \textcolor{keywordflow}{for} (HyperGraph::VertexIDMap::const\_iterator it=\hyperlink{structg2o_1_1HyperDijkstra_a1bf21d65ddd6e0feeb6a76f58d7f2c6e}{\_graph}->\hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().begin(); it!=
+      \hyperlink{structg2o_1_1HyperDijkstra_a1bf21d65ddd6e0feeb6a76f58d7f2c6e}{\_graph}->\hyperlink{classg2o_1_1HyperGraph_a3e713e7ee84eecad3876651737af6cfc}{vertices}().end(); it++)\{
+64       AdjacencyMapEntry entry(it->second, 0,0,std::numeric\_limits< double >::max());
+65       \hyperlink{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\_adjacencyMap}.insert(make\_pair(entry.child(), entry));
+66     \}
+67   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!adjacency\+Map@{adjacency\+Map}}
+\index{adjacency\+Map@{adjacency\+Map}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{adjacency\+Map()}{adjacencyMap()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Adjacency\+Map}\& g2o\+::\+Hyper\+Dijkstra\+::adjacency\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1HyperDijkstra_ace002e09514a2eeb76a7b569f9e30f6c}{}\label{structg2o_1_1HyperDijkstra_ace002e09514a2eeb76a7b569f9e30f6c}
+
+
+Definition at line 73 of file hyper\+\_\+dijkstra.\+h.
+
+
+
+References \+\_\+adjacency\+Map.
+
+
+\begin{DoxyCode}
+73 \{\textcolor{keywordflow}{return} \hyperlink{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\_adjacencyMap}; \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!compute\+Tree@{compute\+Tree}}
+\index{compute\+Tree@{compute\+Tree}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{compute\+Tree(\+Adjacency\+Map \&amap)}{computeTree(AdjacencyMap &amap)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Hyper\+Dijkstra\+::compute\+Tree (
+\begin{DoxyParamCaption}
+\item[{{\bf Adjacency\+Map} \&}]{amap}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structg2o_1_1HyperDijkstra_a84a1d7288e1d76369442f89604c5d6de}{}\label{structg2o_1_1HyperDijkstra_a84a1d7288e1d76369442f89604c5d6de}
+
+
+Definition at line 157 of file hyper\+\_\+dijkstra.\+cpp.
+
+
+
+References g2o\+::\+Hyper\+Dijkstra\+::\+Adjacency\+Map\+Entry\+::\+\_\+children, g2o\+::\+Hyper\+Dijkstra\+::\+Adjacency\+Map\+Entry\+::child(), and g2o\+::\+Hyper\+Dijkstra\+::\+Adjacency\+Map\+Entry\+::parent().
+
+
+
+Referenced by graph().
+
+
+\begin{DoxyCode}
+158   \{
+159     \textcolor{keywordflow}{for} (AdjacencyMap::iterator it=amap.begin(); it!=amap.end(); ++it)\{
+160       AdjacencyMapEntry& entry(it->second);
+161       entry.\_children.clear();
+162     \}
+163     \textcolor{keywordflow}{for} (AdjacencyMap::iterator it=amap.begin(); it!=amap.end(); ++it)\{
+164       AdjacencyMapEntry& entry(it->second);
+165       HyperGraph::Vertex* parent=entry.parent();
+166       \textcolor{keywordflow}{if} (!parent)\{
+167         \textcolor{keywordflow}{continue};
+168       \}
+169       HyperGraph::Vertex* v=entry.child();
+170       assert (v==it->first);
+171 
+172       AdjacencyMap::iterator pt=amap.find(parent);
+173       assert(pt!=amap.end());
+174       pt->second.\_children.insert(v);
+175     \}
+176   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!connected\+Subset@{connected\+Subset}}
+\index{connected\+Subset@{connected\+Subset}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{connected\+Subset(\+Hyper\+Graph\+::\+Vertex\+Set \&connected, Hyper\+Graph\+::\+Vertex\+Set \&visited, Hyper\+Graph\+::\+Vertex\+Set \&starting\+Set, Hyper\+Graph $\ast$g, Hyper\+Graph\+::\+Vertex $\ast$v, Hyper\+Dijkstra\+::\+Cost\+Function $\ast$cost, double distance, double comparison\+Conditioner, double max\+Edge\+Cost=std\+::numeric\+\_\+limits$<$ double $>$\+::max())}{connectedSubset(HyperGraph::VertexSet &connected, HyperGraph::VertexSet &visited, HyperGraph::VertexSet &startingSet, HyperGraph *g, HyperGraph::Vertex *v, HyperDijkstra::CostFunction *cost, double distance, double comparisonConditioner, double maxEdgeCost=std::numeric_limits< double >::max())}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Hyper\+Dijkstra\+::connected\+Subset (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+::\+Vertex\+Set} \&}]{connected, }
+\item[{{\bf Hyper\+Graph\+::\+Vertex\+Set} \&}]{visited, }
+\item[{{\bf Hyper\+Graph\+::\+Vertex\+Set} \&}]{starting\+Set, }
+\item[{{\bf Hyper\+Graph} $\ast$}]{g, }
+\item[{{\bf Hyper\+Graph\+::\+Vertex} $\ast$}]{v, }
+\item[{{\bf Hyper\+Dijkstra\+::\+Cost\+Function} $\ast$}]{cost, }
+\item[{double}]{distance, }
+\item[{double}]{comparison\+Conditioner, }
+\item[{double}]{max\+Edge\+Cost = {\ttfamily std\+:\+:numeric\+\_\+limits$<$~double~$>$\+:\+:max()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structg2o_1_1HyperDijkstra_a846232e98c8175ec2fff784fc3271ad7}{}\label{structg2o_1_1HyperDijkstra_a846232e98c8175ec2fff784fc3271ad7}
+
+
+Definition at line 227 of file hyper\+\_\+dijkstra.\+cpp.
+
+
+
+References shortest\+Paths(), and visited().
+
+
+
+Referenced by graph().
+
+
+\begin{DoxyCode}
+232   \{
+233     \textcolor{keyword}{typedef} std::queue<HyperGraph::Vertex*> VertexDeque;
+234     \hyperlink{structg2o_1_1HyperDijkstra_a2cb453ed6f1bf6069186bd269a6464da}{visited}.clear();
+235     connected.clear();
+236     VertexDeque frontier;
+237     \hyperlink{structg2o_1_1HyperDijkstra_a55e844f4b596290cb36a0d9fe4140966}{HyperDijkstra} dv(g);
+238     connected.insert(v);
+239     frontier.push(v);
+240     \textcolor{keywordflow}{while} (! frontier.empty())\{
+241       HyperGraph::Vertex* v0=frontier.front();
+242       frontier.pop();
+243       dv.shortestPaths(v0, cost, distance, comparisonConditioner, \textcolor{keyword}{false}, maxEdgeCost);
+244       \textcolor{keywordflow}{for} (HyperGraph::VertexSet::iterator it=dv.visited().begin(); it!=dv.visited().end(); ++it)\{
+245         \hyperlink{structg2o_1_1HyperDijkstra_a2cb453ed6f1bf6069186bd269a6464da}{visited}.insert(*it);
+246         \textcolor{keywordflow}{if} (startingSet.find(*it)==startingSet.end())
+247           \textcolor{keywordflow}{continue};
+248         std::pair<HyperGraph::VertexSet::iterator, bool> insertOutcome=connected.insert(*it);
+249         \textcolor{keywordflow}{if} (insertOutcome.second)\{ \textcolor{comment}{// the node was not in the connectedSet;}
+250           frontier.push(dynamic\_cast<HyperGraph::Vertex*>(*it));
+251         \}
+252       \}
+253     \}
+254   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!graph@{graph}}
+\index{graph@{graph}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{graph()}{graph()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph}$\ast$ g2o\+::\+Hyper\+Dijkstra\+::graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1HyperDijkstra_a578a9eb1874d9802dbd37a2f1681c196}{}\label{structg2o_1_1HyperDijkstra_a578a9eb1874d9802dbd37a2f1681c196}
+
+
+Definition at line 74 of file hyper\+\_\+dijkstra.\+h.
+
+
+
+References \+\_\+graph, compute\+Tree(), connected\+Subset(), reset(), shortest\+Paths(), visit\+Adjacency\+Map(), and visited().
+
+
+\begin{DoxyCode}
+74 \{\textcolor{keywordflow}{return} \hyperlink{structg2o_1_1HyperDijkstra_a1bf21d65ddd6e0feeb6a76f58d7f2c6e}{\_graph};\} 
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!reset@{reset}}
+\index{reset@{reset}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{reset()}{reset()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Hyper\+Dijkstra\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{structg2o_1_1HyperDijkstra_ad9c39fd01a0740f2beff98c927aaebbd}{}\label{structg2o_1_1HyperDijkstra_ad9c39fd01a0740f2beff98c927aaebbd}
+
+
+Definition at line 69 of file hyper\+\_\+dijkstra.\+cpp.
+
+
+
+References \+\_\+adjacency\+Map, and \+\_\+visited.
+
+
+
+Referenced by graph(), and shortest\+Paths().
+
+
+\begin{DoxyCode}
+70   \{
+71     \textcolor{keywordflow}{for} (HyperGraph::VertexSet::iterator it=\hyperlink{structg2o_1_1HyperDijkstra_ad43cae6d9e1df2cf7db839f504ba6cc5}{\_visited}.begin(); it!=
+      \hyperlink{structg2o_1_1HyperDijkstra_ad43cae6d9e1df2cf7db839f504ba6cc5}{\_visited}.end(); it++)\{
+72       AdjacencyMap::iterator at=\hyperlink{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\_adjacencyMap}.find(*it);
+73       assert(at!=\hyperlink{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\_adjacencyMap}.end());
+74       at->second=AdjacencyMapEntry(at->first,0,0,std::numeric\_limits< double >::max());
+75     \}
+76     \hyperlink{structg2o_1_1HyperDijkstra_ad43cae6d9e1df2cf7db839f504ba6cc5}{\_visited}.clear();
+77   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!shortest\+Paths@{shortest\+Paths}}
+\index{shortest\+Paths@{shortest\+Paths}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{shortest\+Paths(\+Hyper\+Graph\+::\+Vertex $\ast$v, Hyper\+Dijkstra\+::\+Cost\+Function $\ast$cost, double max\+Distance=std\+::numeric\+\_\+limits$<$ double $>$\+::max(), double comparison\+Conditioner=1e-\/3, bool directed=false, double max\+Edge\+Cost=std\+::numeric\+\_\+limits$<$ double $>$\+::max())}{shortestPaths(HyperGraph::Vertex *v, HyperDijkstra::CostFunction *cost, double maxDistance=std::numeric_limits< double >::max(), double comparisonConditioner=1e-3, bool directed=false, double maxEdgeCost=std::numeric_limits< double >::max())}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Hyper\+Dijkstra\+::shortest\+Paths (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+::\+Vertex} $\ast$}]{v, }
+\item[{{\bf Hyper\+Dijkstra\+::\+Cost\+Function} $\ast$}]{cost, }
+\item[{double}]{max\+Distance = {\ttfamily std\+:\+:numeric\+\_\+limits$<$~double~$>$\+:\+:max()}, }
+\item[{double}]{comparison\+Conditioner = {\ttfamily 1e-\/3}, }
+\item[{bool}]{directed = {\ttfamily false}, }
+\item[{double}]{max\+Edge\+Cost = {\ttfamily std\+:\+:numeric\+\_\+limits$<$~double~$>$\+:\+:max()}}
+\end{DoxyParamCaption}
+)}\hypertarget{structg2o_1_1HyperDijkstra_ad88b79c73c8eaa5f1afbe27b778b542e}{}\label{structg2o_1_1HyperDijkstra_ad88b79c73c8eaa5f1afbe27b778b542e}
+
+
+Definition at line 149 of file hyper\+\_\+dijkstra.\+cpp.
+
+
+
+Referenced by connected\+Subset(), and graph().
+
+
+\begin{DoxyCode}
+151   \{
+152     \hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{HyperGraph::VertexSet} vset;
+153     vset.insert(v);
+154     \hyperlink{structg2o_1_1HyperDijkstra_ad88b79c73c8eaa5f1afbe27b778b542e}{shortestPaths}(vset, cost, maxDistance, comparisonConditioner, directed, maxEdgeCost);
+155   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!shortest\+Paths@{shortest\+Paths}}
+\index{shortest\+Paths@{shortest\+Paths}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{shortest\+Paths(\+Hyper\+Graph\+::\+Vertex\+Set \&vset, Hyper\+Dijkstra\+::\+Cost\+Function $\ast$cost, double max\+Distance=std\+::numeric\+\_\+limits$<$ double $>$\+::max(), double comparison\+Conditioner=1e-\/3, bool directed=false, double max\+Edge\+Cost=std\+::numeric\+\_\+limits$<$ double $>$\+::max())}{shortestPaths(HyperGraph::VertexSet &vset, HyperDijkstra::CostFunction *cost, double maxDistance=std::numeric_limits< double >::max(), double comparisonConditioner=1e-3, bool directed=false, double maxEdgeCost=std::numeric_limits< double >::max())}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Hyper\+Dijkstra\+::shortest\+Paths (
+\begin{DoxyParamCaption}
+\item[{{\bf Hyper\+Graph\+::\+Vertex\+Set} \&}]{vset, }
+\item[{{\bf Hyper\+Dijkstra\+::\+Cost\+Function} $\ast$}]{cost, }
+\item[{double}]{max\+Distance = {\ttfamily std\+:\+:numeric\+\_\+limits$<$~double~$>$\+:\+:max()}, }
+\item[{double}]{comparison\+Conditioner = {\ttfamily 1e-\/3}, }
+\item[{bool}]{directed = {\ttfamily false}, }
+\item[{double}]{max\+Edge\+Cost = {\ttfamily std\+:\+:numeric\+\_\+limits$<$~double~$>$\+:\+:max()}}
+\end{DoxyParamCaption}
+)}\hypertarget{structg2o_1_1HyperDijkstra_a00d978615ff1bbb9917351e9cba0b4ba}{}\label{structg2o_1_1HyperDijkstra_a00d978615ff1bbb9917351e9cba0b4ba}
+
+
+Definition at line 86 of file hyper\+\_\+dijkstra.\+cpp.
+
+
+
+References \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, \+\_\+adjacency\+Map, \+\_\+visited, g2o\+::\+Hyper\+Dijkstra\+::\+Adjacency\+Map\+Entry\+::child(), g2o\+::\+Hyper\+Graph\+::\+Vertex\+::edges(), g2o\+::\+Hyper\+Graph\+::\+Vertex\+::id(), reset(), g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertex(), and g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertices().
+
+
+\begin{DoxyCode}
+88   \{
+89     \hyperlink{structg2o_1_1HyperDijkstra_ad9c39fd01a0740f2beff98c927aaebbd}{reset}();
+90     std::priority\_queue< AdjacencyMapEntry > frontier;
+91     \textcolor{keywordflow}{for} (HyperGraph::VertexSet::iterator vit=vset.begin(); vit!=vset.end(); ++vit)\{
+92       HyperGraph::Vertex* v=*vit;
+93       assert(v!=0);
+94       AdjacencyMap::iterator it=\hyperlink{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\_adjacencyMap}.find(v);
+95       \textcolor{keywordflow}{if} (it == \hyperlink{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\_adjacencyMap}.end()) \{
+96         cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{"Vertex "} << v->id() << \textcolor{stringliteral}{" is not in the adjacency
+       map"} << endl;
+97       \}
+98       assert(it!=\hyperlink{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\_adjacencyMap}.end());
+99       it->second.\_distance=0.;
+100       it->second.\_parent=0;
+101       frontier.push(it->second);
+102     \}
+103 
+104     \textcolor{keywordflow}{while}(! frontier.empty())\{
+105       AdjacencyMapEntry entry=frontier.top();
+106       frontier.pop();
+107       HyperGraph::Vertex* u=entry.child();
+108       AdjacencyMap::iterator ut=\hyperlink{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\_adjacencyMap}.find(u);
+109       \textcolor{keywordflow}{if} (ut == \hyperlink{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\_adjacencyMap}.end()) \{
+110         cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{"Vertex "} << u->id() << \textcolor{stringliteral}{" is not in the adjacency
+       map"} << endl;
+111       \}
+112       assert(ut!=\hyperlink{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\_adjacencyMap}.end());
+113       \textcolor{keywordtype}{double} uDistance=ut->second.distance();
+114 
+115       std::pair< HyperGraph::VertexSet::iterator, bool> insertResult=\hyperlink{structg2o_1_1HyperDijkstra_ad43cae6d9e1df2cf7db839f504ba6cc5}{\_visited}.insert(u); (void) 
+      insertResult;
+116       HyperGraph::EdgeSet::iterator et=u->edges().begin();
+117       \textcolor{keywordflow}{while} (et != u->edges().end())\{
+118         HyperGraph::Edge* edge=*et;
+119         ++et;
+120 
+121         \textcolor{keywordflow}{if} (directed && edge->vertex(0) != u)
+122           \textcolor{keywordflow}{continue};
+123 
+124         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < edge->vertices().size(); ++i) \{
+125           HyperGraph::Vertex* z = edge->vertex(i);
+126           \textcolor{keywordflow}{if} (z == u)
+127             \textcolor{keywordflow}{continue};
+128 
+129           \textcolor{keywordtype}{double} edgeDistance=(*cost)(edge, u, z);
+130           \textcolor{keywordflow}{if} (edgeDistance==std::numeric\_limits< double >::max() || edgeDistance > maxEdgeCost)
+131             \textcolor{keywordflow}{continue};
+132           \textcolor{keywordtype}{double} zDistance=uDistance+edgeDistance;
+133           \textcolor{comment}{//cerr << z->id() << " " << zDistance << endl;}
+134 
+135           AdjacencyMap::iterator ot=\hyperlink{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\_adjacencyMap}.find(z);
+136           assert(ot!=\hyperlink{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\_adjacencyMap}.end());
+137 
+138           \textcolor{keywordflow}{if} (zDistance+comparisonConditioner<ot->second.distance() && zDistance<maxDistance)\{
+139             ot->second.\_distance=zDistance;
+140             ot->second.\_parent=u;
+141             ot->second.\_edge=edge;
+142             frontier.push(ot->second);
+143           \}
+144         \}
+145       \}
+146     \}
+147   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!visit\+Adjacency\+Map@{visit\+Adjacency\+Map}}
+\index{visit\+Adjacency\+Map@{visit\+Adjacency\+Map}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{visit\+Adjacency\+Map(\+Adjacency\+Map \&amap, Tree\+Action $\ast$action, bool use\+Distance=false)}{visitAdjacencyMap(AdjacencyMap &amap, TreeAction *action, bool useDistance=false)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Hyper\+Dijkstra\+::visit\+Adjacency\+Map (
+\begin{DoxyParamCaption}
+\item[{{\bf Adjacency\+Map} \&}]{amap, }
+\item[{{\bf Tree\+Action} $\ast$}]{action, }
+\item[{bool}]{use\+Distance = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{structg2o_1_1HyperDijkstra_aa73ae495f10f81823b16f26715f32c58}{}\label{structg2o_1_1HyperDijkstra_aa73ae495f10f81823b16f26715f32c58}
+
+
+Definition at line 179 of file hyper\+\_\+dijkstra.\+cpp.
+
+
+
+References g2o\+::\+Hyper\+Dijkstra\+::\+Adjacency\+Map\+Entry\+::parent(), and g2o\+::\+Hyper\+Dijkstra\+::\+Tree\+Action\+::perform().
+
+
+
+Referenced by graph().
+
+
+\begin{DoxyCode}
+180   \{
+181     
+182     \textcolor{keyword}{typedef} std::deque<HyperGraph::Vertex*> Deque;
+183     Deque q;
+184     \textcolor{comment}{// scans for the vertices without the parent (whcih are the roots of the trees) and applies the action
+       to them.}
+185     \textcolor{keywordflow}{for} (AdjacencyMap::iterator it=amap.begin(); it!=amap.end(); ++it)\{
+186       AdjacencyMapEntry& entry(it->second);
+187       \textcolor{keywordflow}{if} (! entry.parent()) \{
+188         action->perform(it->first,0,0);
+189         q.push\_back(it->first);
+190       \}
+191     \}
+192 
+193     \textcolor{comment}{//std::cerr << "q.size()" << q.size() << endl;}
+194     \textcolor{keywordtype}{int} count=0;
+195     \textcolor{keywordflow}{while} (! q.empty())\{
+196       HyperGraph::Vertex* parent=q.front();
+197       q.pop\_front();
+198       ++count;
+199       AdjacencyMap::iterator parentIt=amap.find(parent);
+200       \textcolor{keywordflow}{if} (parentIt==amap.end()) \{
+201         \textcolor{keywordflow}{continue};
+202       \}
+203       \textcolor{comment}{//cerr << "parent= " << parent << " parent id= " << parent->id() << "\(\backslash\)t children id =";}
+204       \hyperlink{classg2o_1_1HyperGraph_a703938cdb4bb636860eed55a2489d70c}{HyperGraph::VertexSet}& childs(parentIt->second.children());
+205       \textcolor{keywordflow}{for} (HyperGraph::VertexSet::iterator childsIt=childs.begin(); childsIt!=childs.end(); ++childsIt)\{
+206         HyperGraph::Vertex* child=*childsIt;
+207         \textcolor{comment}{//cerr << child->id();}
+208         AdjacencyMap::iterator adjacencyIt=amap.find(child);
+209         assert (adjacencyIt!=amap.end());
+210         HyperGraph::Edge* edge=adjacencyIt->second.edge();  
+211 
+212         assert(adjacencyIt->first==child);
+213         assert(adjacencyIt->second.child()==child);
+214         assert(adjacencyIt->second.parent()==parent);
+215         \textcolor{keywordflow}{if} (! useDistance) \{
+216           action->perform(child, parent, edge);
+217         \} \textcolor{keywordflow}{else} \{
+218           action->perform(child, parent, edge, adjacencyIt->second.distance());
+219         \}
+220         q.push\_back(child);
+221       \}
+222       \textcolor{comment}{//cerr << endl;}
+223     \}
+224 
+225   \}
+\end{DoxyCode}
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!visited@{visited}}
+\index{visited@{visited}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{visited()}{visited()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph\+::\+Vertex\+Set}\& g2o\+::\+Hyper\+Dijkstra\+::visited (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structg2o_1_1HyperDijkstra_a2cb453ed6f1bf6069186bd269a6464da}{}\label{structg2o_1_1HyperDijkstra_a2cb453ed6f1bf6069186bd269a6464da}
+
+
+Definition at line 72 of file hyper\+\_\+dijkstra.\+h.
+
+
+
+References \+\_\+visited.
+
+
+
+Referenced by connected\+Subset(), and graph().
+
+
+\begin{DoxyCode}
+72 \{\textcolor{keywordflow}{return} \hyperlink{structg2o_1_1HyperDijkstra_ad43cae6d9e1df2cf7db839f504ba6cc5}{\_visited}; \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!\+\_\+adjacency\+Map@{\+\_\+adjacency\+Map}}
+\index{\+\_\+adjacency\+Map@{\+\_\+adjacency\+Map}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{\+\_\+adjacency\+Map}{_adjacencyMap}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Adjacency\+Map} g2o\+::\+Hyper\+Dijkstra\+::\+\_\+adjacency\+Map\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{}\label{structg2o_1_1HyperDijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}
+
+
+Definition at line 102 of file hyper\+\_\+dijkstra.\+h.
+
+
+
+Referenced by adjacency\+Map(), Hyper\+Dijkstra(), reset(), and shortest\+Paths().
+
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!\+\_\+graph@{\+\_\+graph}}
+\index{\+\_\+graph@{\+\_\+graph}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{\+\_\+graph}{_graph}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph}$\ast$ g2o\+::\+Hyper\+Dijkstra\+::\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{structg2o_1_1HyperDijkstra_a1bf21d65ddd6e0feeb6a76f58d7f2c6e}{}\label{structg2o_1_1HyperDijkstra_a1bf21d65ddd6e0feeb6a76f58d7f2c6e}
+
+
+Definition at line 104 of file hyper\+\_\+dijkstra.\+h.
+
+
+
+Referenced by graph(), and Hyper\+Dijkstra().
+
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!\+\_\+visited@{\+\_\+visited}}
+\index{\+\_\+visited@{\+\_\+visited}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection[{\texorpdfstring{\+\_\+visited}{_visited}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hyper\+Graph\+::\+Vertex\+Set} g2o\+::\+Hyper\+Dijkstra\+::\+\_\+visited\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{structg2o_1_1HyperDijkstra_ad43cae6d9e1df2cf7db839f504ba6cc5}{}\label{structg2o_1_1HyperDijkstra_ad43cae6d9e1df2cf7db839f504ba6cc5}
+
+
+Definition at line 103 of file hyper\+\_\+dijkstra.\+h.
+
+
+
+Referenced by reset(), shortest\+Paths(), and visited().
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{hyper__dijkstra_8h}{hyper\+\_\+dijkstra.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{hyper__dijkstra_8cpp}{hyper\+\_\+dijkstra.\+cpp}\end{DoxyCompactItemize}

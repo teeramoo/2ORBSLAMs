@@ -1,0 +1,711 @@
+\hypertarget{classg2o_1_1SE3Quat}{}\section{g2o\+:\+:S\+E3\+Quat Class Reference}
+\label{classg2o_1_1SE3Quat}\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+
+
+{\ttfamily \#include $<$se3quat.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1SE3Quat_a685de01e417e01f84d5b8389e5f5f333}{S\+E3\+Quat} ()
+\item 
+\hyperlink{classg2o_1_1SE3Quat_abb3e9184aa02bf6ced3f6d4cd0825f33}{S\+E3\+Quat} (const Matrix3d \&R, const Vector3d \&t)
+\item 
+\hyperlink{classg2o_1_1SE3Quat_ab22b3fde9b7e0a833b74b3453041c040}{S\+E3\+Quat} (const Quaterniond \&q, const Vector3d \&t)
+\item 
+{\footnotesize template$<$typename Derived $>$ }\\\hyperlink{classg2o_1_1SE3Quat_ada36ff00a7a238cef3fe958ff9f7f9cd}{S\+E3\+Quat} (const Matrix\+Base$<$ Derived $>$ \&v)
+\item 
+const Vector3d \& \hyperlink{classg2o_1_1SE3Quat_aefb19225648d06b536e143f7d037a65b}{translation} () const 
+\item 
+void \hyperlink{classg2o_1_1SE3Quat_aaf12f03b09b2a3a4c9185edcc8b141cb}{set\+Translation} (const Vector3d \&t\+\_\+)
+\item 
+const Quaterniond \& \hyperlink{classg2o_1_1SE3Quat_a99a34e88f3425dee3d6a9b57c8d265d9}{rotation} () const 
+\item 
+void \hyperlink{classg2o_1_1SE3Quat_a1f55879ec2e4801d5de4b12b301ff59c}{set\+Rotation} (const Quaterniond \&r\+\_\+)
+\item 
+\hyperlink{classg2o_1_1SE3Quat}{S\+E3\+Quat} \hyperlink{classg2o_1_1SE3Quat_a5fe6418e503491a65e3730d82704f6f6}{operator$\ast$} (const \hyperlink{classg2o_1_1SE3Quat}{S\+E3\+Quat} \&tr2) const 
+\item 
+\hyperlink{classg2o_1_1SE3Quat}{S\+E3\+Quat} \& \hyperlink{classg2o_1_1SE3Quat_a0b0c9d2ff23d7e1501bc79a32e958239}{operator$\ast$=} (const \hyperlink{classg2o_1_1SE3Quat}{S\+E3\+Quat} \&tr2)
+\item 
+Vector3d \hyperlink{classg2o_1_1SE3Quat_a001e7636e553222b559caec4f7da56e4}{operator$\ast$} (const Vector3d \&v) const 
+\item 
+\hyperlink{classg2o_1_1SE3Quat}{S\+E3\+Quat} \hyperlink{classg2o_1_1SE3Quat_a616c6599179b4b8fd619b7a8271a59ff}{inverse} () const 
+\item 
+double \hyperlink{classg2o_1_1SE3Quat_a20fbcb1726ebf6b7694c6ebf44053070}{operator\mbox{[}$\,$\mbox{]}} (int i) const 
+\item 
+\hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d} \hyperlink{classg2o_1_1SE3Quat_a0d600cd91fd366f4c4604bb4964db378}{to\+Vector} () const 
+\item 
+void \hyperlink{classg2o_1_1SE3Quat_a59aa7dffe9320761ee65bcdfa2bc61fd}{from\+Vector} (const \hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d} \&v)
+\item 
+\hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d} \hyperlink{classg2o_1_1SE3Quat_a5a33ee8d7795498f92588c8e33f7d1f3}{to\+Minimal\+Vector} () const 
+\item 
+void \hyperlink{classg2o_1_1SE3Quat_a65714851482e99558401d4ea66edb183}{from\+Minimal\+Vector} (const \hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d} \&v)
+\item 
+\hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d} \hyperlink{classg2o_1_1SE3Quat_a030bf8ba5f8ad0fa6f83d0c39bd22201}{log} () const 
+\item 
+Vector3d \hyperlink{classg2o_1_1SE3Quat_a9362387ec7f96589ebbdafb25abe50a4}{map} (const Vector3d \&xyz) const 
+\item 
+Matrix$<$ double, 6, 6 $>$ \hyperlink{classg2o_1_1SE3Quat_aa789e613e540b2f28b02b663c67c4f83}{adj} () const 
+\item 
+Matrix$<$ double, 4, 4 $>$ \hyperlink{classg2o_1_1SE3Quat_a942d8c3fc4de26560eaf187315700c5b}{to\+\_\+homogeneous\+\_\+matrix} () const 
+\item 
+void \hyperlink{classg2o_1_1SE3Quat_a0e2c54c6dfdaa71b677556a9d8e4e88a}{normalize\+Rotation} ()
+\item 
+\hyperlink{classg2o_1_1SE3Quat_ab71ee71bcff36763d611d63df72b04ca}{operator Eigen\+::\+Isometry3d} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classg2o_1_1SE3Quat}{S\+E3\+Quat} \hyperlink{classg2o_1_1SE3Quat_a374a05b202889d09d5a3a25e0fb6c103}{exp} (const \hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d} \&update)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1SE3Quat_a5bcd64993957b1a87a113d9a282d4fcb}{E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Quaterniond \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\+\_\+r}
+\item 
+Vector3d \hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 41 of file se3quat.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!S\+E3\+Quat@{S\+E3\+Quat}}
+\index{S\+E3\+Quat@{S\+E3\+Quat}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{S\+E3\+Quat()}{SE3Quat()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+S\+E3\+Quat\+::\+S\+E3\+Quat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a685de01e417e01f84d5b8389e5f5f333}{}\label{classg2o_1_1SE3Quat_a685de01e417e01f84d5b8389e5f5f333}
+
+
+Definition at line 53 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+53                \{
+54         \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.setIdentity();
+55         \hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}.setZero();
+56       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!S\+E3\+Quat@{S\+E3\+Quat}}
+\index{S\+E3\+Quat@{S\+E3\+Quat}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{S\+E3\+Quat(const Matrix3d \&\+R, const Vector3d \&t)}{SE3Quat(const Matrix3d &R, const Vector3d &t)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+S\+E3\+Quat\+::\+S\+E3\+Quat (
+\begin{DoxyParamCaption}
+\item[{const Matrix3d \&}]{R, }
+\item[{const Vector3d \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_abb3e9184aa02bf6ced3f6d4cd0825f33}{}\label{classg2o_1_1SE3Quat_abb3e9184aa02bf6ced3f6d4cd0825f33}
+
+
+Definition at line 58 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+58                                                    :\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}(Quaterniond(R)),\hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}(t)\{ 
+59         \hyperlink{classg2o_1_1SE3Quat_a0e2c54c6dfdaa71b677556a9d8e4e88a}{normalizeRotation}();
+60       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!S\+E3\+Quat@{S\+E3\+Quat}}
+\index{S\+E3\+Quat@{S\+E3\+Quat}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{S\+E3\+Quat(const Quaterniond \&q, const Vector3d \&t)}{SE3Quat(const Quaterniond &q, const Vector3d &t)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+S\+E3\+Quat\+::\+S\+E3\+Quat (
+\begin{DoxyParamCaption}
+\item[{const Quaterniond \&}]{q, }
+\item[{const Vector3d \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_ab22b3fde9b7e0a833b74b3453041c040}{}\label{classg2o_1_1SE3Quat_ab22b3fde9b7e0a833b74b3453041c040}
+
+
+Definition at line 62 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+62                                                       :\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}(q),\hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}(t)\{
+63         \hyperlink{classg2o_1_1SE3Quat_a0e2c54c6dfdaa71b677556a9d8e4e88a}{normalizeRotation}();
+64       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!S\+E3\+Quat@{S\+E3\+Quat}}
+\index{S\+E3\+Quat@{S\+E3\+Quat}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{S\+E3\+Quat(const Matrix\+Base$<$ Derived $>$ \&v)}{SE3Quat(const MatrixBase< Derived > &v)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Derived $>$ g2o\+::\+S\+E3\+Quat\+::\+S\+E3\+Quat (
+\begin{DoxyParamCaption}
+\item[{const Matrix\+Base$<$ Derived $>$ \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classg2o_1_1SE3Quat_ada36ff00a7a238cef3fe958ff9f7f9cd}{}\label{classg2o_1_1SE3Quat_ada36ff00a7a238cef3fe958ff9f7f9cd}
+templaized constructor which allows v to be an arbitrary Eigen Vector type, e.\+g., Vector6d or Map$<$\+Vector6d$>$ 
+
+Definition at line 70 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+71         \{
+72           assert((v.size() == 6 || v.size() == 7) && \textcolor{stringliteral}{"Vector dimension does not match"});
+73           \textcolor{keywordflow}{if} (v.size() == 6) \{
+74             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<3; i++)\{
+75               \hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}[i]=v[i];
+76               \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.coeffs()(i)=v[i+3];
+77             \}
+78             \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.w() = 0.; \textcolor{comment}{// recover the positive w}
+79             \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.norm()>1.)\{
+80               \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.normalize();
+81             \} \textcolor{keywordflow}{else} \{
+82               \textcolor{keywordtype}{double} w2=1.-\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.squaredNorm();
+83               \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.w()= (w2<0.) ? 0. : sqrt(w2);
+84             \}
+85           \}
+86           \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (v.size() == 7) \{
+87             \textcolor{keywordtype}{int} idx = 0;
+88             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<3; ++i, ++idx)
+89               \hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}(i) = v(idx);
+90             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<4; ++i, ++idx)
+91               \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.coeffs()(i) = v(idx);
+92             \hyperlink{classg2o_1_1SE3Quat_a0e2c54c6dfdaa71b677556a9d8e4e88a}{normalizeRotation}();
+93           \}
+94         \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!adj@{adj}}
+\index{adj@{adj}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{adj() const }{adj() const }}]{\setlength{\rightskip}{0pt plus 5cm}Matrix$<$double, 6, 6$>$ g2o\+::\+S\+E3\+Quat\+::adj (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_aa789e613e540b2f28b02b663c67c4f83}{}\label{classg2o_1_1SE3Quat_aa789e613e540b2f28b02b663c67c4f83}
+
+
+Definition at line 259 of file se3quat.\+h.
+
+
+
+References g2o\+::skew().
+
+
+\begin{DoxyCode}
+260       \{
+261         Matrix3d R = \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.toRotationMatrix();
+262         Matrix<double, 6, 6> res;
+263         res.block(0,0,3,3) = R;
+264         res.block(3,3,3,3) = R;
+265         res.block(3,0,3,3) = \hyperlink{namespaceg2o_adb3143a37b9bc002f4f7b6423061ef81}{skew}(\hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t})*R;
+266         res.block(0,3,3,3) = Matrix3d::Zero(3,3);
+267         \textcolor{keywordflow}{return} res;
+268       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!exp@{exp}}
+\index{exp@{exp}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{exp(const Vector6d \&update)}{exp(const Vector6d &update)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\+E3\+Quat} g2o\+::\+S\+E3\+Quat\+::exp (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector6d} \&}]{update}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classg2o_1_1SE3Quat_a374a05b202889d09d5a3a25e0fb6c103}{}\label{classg2o_1_1SE3Quat_a374a05b202889d09d5a3a25e0fb6c103}
+
+
+Definition at line 223 of file se3quat.\+h.
+
+
+
+References g2o\+::skew().
+
+
+
+Referenced by g2o\+::\+Vertex\+S\+E3\+Expmap\+::oplus\+Impl().
+
+
+\begin{DoxyCode}
+224       \{
+225         Vector3d omega;
+226         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<3; i++)
+227           omega[i]=update[i];
+228         Vector3d upsilon;
+229         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<3; i++)
+230           upsilon[i]=update[i+3];
+231 
+232         \textcolor{keywordtype}{double} theta = omega.norm();
+233         Matrix3d Omega = \hyperlink{namespaceg2o_adb3143a37b9bc002f4f7b6423061ef81}{skew}(omega);
+234 
+235         Matrix3d R;
+236         Matrix3d V;
+237         \textcolor{keywordflow}{if} (theta<0.00001)
+238         \{
+239           \textcolor{comment}{//TODO: CHECK WHETHER THIS IS CORRECT!!!}
+240           R = (Matrix3d::Identity() + Omega + Omega*Omega);
+241 
+242           V = R;
+243         \}
+244         \textcolor{keywordflow}{else}
+245         \{
+246           Matrix3d Omega2 = Omega*Omega;
+247 
+248           R = (Matrix3d::Identity()
+249               + sin(theta)/theta *Omega
+250               + (1-cos(theta))/(theta*theta)*Omega2);
+251 
+252           V = (Matrix3d::Identity()
+253               + (1-cos(theta))/(theta*theta)*Omega
+254               + (theta-sin(theta))/(pow(theta,3))*Omega2);
+255         \}
+256         \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SE3Quat_a685de01e417e01f84d5b8389e5f5f333}{SE3Quat}(Quaterniond(R),V*upsilon);
+257       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!from\+Minimal\+Vector@{from\+Minimal\+Vector}}
+\index{from\+Minimal\+Vector@{from\+Minimal\+Vector}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{from\+Minimal\+Vector(const Vector6d \&v)}{fromMinimalVector(const Vector6d &v)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+S\+E3\+Quat\+::from\+Minimal\+Vector (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector6d} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a65714851482e99558401d4ea66edb183}{}\label{classg2o_1_1SE3Quat_a65714851482e99558401d4ea66edb183}
+
+
+Definition at line 166 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+166                                                       \{
+167         \textcolor{keywordtype}{double} w = 1.-v[3]*v[3]-v[4]*v[4]-v[5]*v[5];
+168         \textcolor{keywordflow}{if} (w>0)\{
+169           \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}=Quaterniond(sqrt(w), v[3], v[4], v[5]);
+170         \} \textcolor{keywordflow}{else} \{
+171           \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}=Quaterniond(0, -v[3], -v[4], -v[5]);
+172         \}
+173         \hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}=Vector3d(v[0], v[1], v[2]);
+174       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!from\+Vector@{from\+Vector}}
+\index{from\+Vector@{from\+Vector}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{from\+Vector(const Vector7d \&v)}{fromVector(const Vector7d &v)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+S\+E3\+Quat\+::from\+Vector (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector7d} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a59aa7dffe9320761ee65bcdfa2bc61fd}{}\label{classg2o_1_1SE3Quat_a59aa7dffe9320761ee65bcdfa2bc61fd}
+
+
+Definition at line 150 of file se3quat.\+h.
+
+
+
+Referenced by g2o\+::\+Vertex\+S\+E3\+Expmap\+::read().
+
+
+\begin{DoxyCode}
+150                                                \{
+151         \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}=Quaterniond(v[6], v[3], v[4], v[5]);
+152         \hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}=Vector3d(v[0], v[1], v[2]);
+153       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!inverse@{inverse}}
+\index{inverse@{inverse}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{inverse() const }{inverse() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+E3\+Quat} g2o\+::\+S\+E3\+Quat\+::inverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a616c6599179b4b8fd619b7a8271a59ff}{}\label{classg2o_1_1SE3Quat_a616c6599179b4b8fd619b7a8271a59ff}
+
+
+Definition at line 123 of file se3quat.\+h.
+
+
+
+References \+\_\+r, and \+\_\+t.
+
+
+
+Referenced by g2o\+::\+Vertex\+S\+E3\+Expmap\+::read().
+
+
+\begin{DoxyCode}
+123                                     \{
+124         \hyperlink{classg2o_1_1SE3Quat_a685de01e417e01f84d5b8389e5f5f333}{SE3Quat} ret;
+125         ret.\_r=\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.conjugate();
+126         ret.\_t=ret.\_r*(\hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}*-1.);
+127         \textcolor{keywordflow}{return} ret;
+128       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!log@{log}}
+\index{log@{log}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{log() const }{log() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector6d} g2o\+::\+S\+E3\+Quat\+::log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a030bf8ba5f8ad0fa6f83d0c39bd22201}{}\label{classg2o_1_1SE3Quat_a030bf8ba5f8ad0fa6f83d0c39bd22201}
+
+
+Definition at line 178 of file se3quat.\+h.
+
+
+
+References g2o\+::delta\+R(), and g2o\+::skew().
+
+
+\begin{DoxyCode}
+178                            \{
+179         \hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d} res;
+180         Matrix3d \_R = \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.toRotationMatrix();
+181         \textcolor{keywordtype}{double} d =  0.5*(\_R(0,0)+\_R(1,1)+\_R(2,2)-1);
+182         Vector3d omega;
+183         Vector3d upsilon;
+184 
+185 
+186         Vector3d dR = \hyperlink{namespaceg2o_a2e39915fb420fd7dc2d3802435e4a6a9}{deltaR}(\_R);
+187         Matrix3d V\_inv;
+188 
+189         \textcolor{keywordflow}{if} (d>0.99999)
+190         \{
+191 
+192           omega=0.5*dR;
+193           Matrix3d Omega = \hyperlink{namespaceg2o_adb3143a37b9bc002f4f7b6423061ef81}{skew}(omega);
+194           V\_inv = Matrix3d::Identity()- 0.5*Omega + (1./12.)*(Omega*Omega);
+195         \}
+196         \textcolor{keywordflow}{else}
+197         \{
+198           \textcolor{keywordtype}{double} theta = acos(d);
+199           omega = theta/(2*sqrt(1-d*d))*dR;
+200           Matrix3d Omega = \hyperlink{namespaceg2o_adb3143a37b9bc002f4f7b6423061ef81}{skew}(omega);
+201           V\_inv = ( Matrix3d::Identity() - 0.5*Omega
+202               + ( 1-theta/(2*tan(theta/2)))/(theta*theta)*(Omega*Omega) );
+203         \}
+204 
+205         upsilon = V\_inv*\hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t};
+206         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<3;i++)\{
+207           res[i]=omega[i];
+208         \}
+209         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<3;i++)\{
+210           res[i+3]=upsilon[i];
+211         \}
+212 
+213         \textcolor{keywordflow}{return} res;
+214 
+215       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!map@{map}}
+\index{map@{map}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{map(const Vector3d \&xyz) const }{map(const Vector3d &xyz) const }}]{\setlength{\rightskip}{0pt plus 5cm}Vector3d g2o\+::\+S\+E3\+Quat\+::map (
+\begin{DoxyParamCaption}
+\item[{const Vector3d \&}]{xyz}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a9362387ec7f96589ebbdafb25abe50a4}{}\label{classg2o_1_1SE3Quat_a9362387ec7f96589ebbdafb25abe50a4}
+
+
+Definition at line 217 of file se3quat.\+h.
+
+
+
+Referenced by g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::compute\+Error(), g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::compute\+Error(), g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::compute\+Error(), g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::compute\+Error(), g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::is\+Depth\+Positive(), g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+::is\+Depth\+Positive(), g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::is\+Depth\+Positive(), g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::is\+Depth\+Positive(), g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::linearize\+Oplus(), and g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::linearize\+Oplus().
+
+
+\begin{DoxyCode}
+218       \{
+219         \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}*xyz + \hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t};
+220       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!normalize\+Rotation@{normalize\+Rotation}}
+\index{normalize\+Rotation@{normalize\+Rotation}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{normalize\+Rotation()}{normalizeRotation()}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+S\+E3\+Quat\+::normalize\+Rotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a0e2c54c6dfdaa71b677556a9d8e4e88a}{}\label{classg2o_1_1SE3Quat_a0e2c54c6dfdaa71b677556a9d8e4e88a}
+
+
+Definition at line 280 of file se3quat.\+h.
+
+
+
+Referenced by operator$\ast$().
+
+
+\begin{DoxyCode}
+280                               \{
+281         \textcolor{keywordflow}{if} (\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.w()<0)\{
+282           \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.coeffs() *= -1;
+283         \}
+284         \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.normalize();
+285       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!operator Eigen\+::\+Isometry3d@{operator Eigen\+::\+Isometry3d}}
+\index{operator Eigen\+::\+Isometry3d@{operator Eigen\+::\+Isometry3d}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{operator Eigen\+::\+Isometry3d() const }{operator Eigen::Isometry3d() const }}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+S\+E3\+Quat\+::operator Eigen\+::\+Isometry3d (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_ab71ee71bcff36763d611d63df72b04ca}{}\label{classg2o_1_1SE3Quat_ab71ee71bcff36763d611d63df72b04ca}
+cast \hyperlink{classg2o_1_1SE3Quat}{S\+E3\+Quat} into an Eigen\+::\+Isometry3d 
+
+Definition at line 290 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+291       \{
+292         Eigen::Isometry3d result = (Eigen::Isometry3d) \hyperlink{classg2o_1_1SE3Quat_a99a34e88f3425dee3d6a9b57c8d265d9}{rotation}();
+293         result.translation() = \hyperlink{classg2o_1_1SE3Quat_aefb19225648d06b536e143f7d037a65b}{translation}();
+294         \textcolor{keywordflow}{return} result;
+295       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const S\+E3\+Quat \&tr2) const }{operator*(const SE3Quat &tr2) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+E3\+Quat} g2o\+::\+S\+E3\+Quat\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E3\+Quat} \&}]{tr2}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a5fe6418e503491a65e3730d82704f6f6}{}\label{classg2o_1_1SE3Quat_a5fe6418e503491a65e3730d82704f6f6}
+
+
+Definition at line 104 of file se3quat.\+h.
+
+
+
+References \+\_\+r, \+\_\+t, and normalize\+Rotation().
+
+
+\begin{DoxyCode}
+104                                                          \{
+105         \hyperlink{classg2o_1_1SE3Quat_a685de01e417e01f84d5b8389e5f5f333}{SE3Quat} result(*\textcolor{keyword}{this});
+106         result.\_t += \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}*tr2.\_t;
+107         result.\_r*=tr2.\_r;
+108         result.normalizeRotation();
+109         \textcolor{keywordflow}{return} result;
+110       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const Vector3d \&v) const }{operator*(const Vector3d &v) const }}]{\setlength{\rightskip}{0pt plus 5cm}Vector3d g2o\+::\+S\+E3\+Quat\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const Vector3d \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a001e7636e553222b559caec4f7da56e4}{}\label{classg2o_1_1SE3Quat_a001e7636e553222b559caec4f7da56e4}
+
+
+Definition at line 119 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+119                                                           \{
+120         \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}+\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}*v;
+121       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{operator$\ast$=(const S\+E3\+Quat \&tr2)}{operator*=(const SE3Quat &tr2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+E3\+Quat}\& g2o\+::\+S\+E3\+Quat\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+E3\+Quat} \&}]{tr2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a0b0c9d2ff23d7e1501bc79a32e958239}{}\label{classg2o_1_1SE3Quat_a0b0c9d2ff23d7e1501bc79a32e958239}
+
+
+Definition at line 112 of file se3quat.\+h.
+
+
+
+References \+\_\+r, and \+\_\+t.
+
+
+\begin{DoxyCode}
+112                                                      \{
+113         \hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}+=\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}*tr2.\_t;
+114         \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}*=tr2.\_r;
+115         \hyperlink{classg2o_1_1SE3Quat_a0e2c54c6dfdaa71b677556a9d8e4e88a}{normalizeRotation}();
+116         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+117       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{operator[](int i) const }{operator[](int i) const }}]{\setlength{\rightskip}{0pt plus 5cm}double g2o\+::\+S\+E3\+Quat\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a20fbcb1726ebf6b7694c6ebf44053070}{}\label{classg2o_1_1SE3Quat_a20fbcb1726ebf6b7694c6ebf44053070}
+
+
+Definition at line 130 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+130                                              \{
+131         assert(i<7);
+132         \textcolor{keywordflow}{if} (i<3)
+133           \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}[i];
+134         \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.coeffs()[i-3];
+135       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!rotation@{rotation}}
+\index{rotation@{rotation}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{rotation() const }{rotation() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Quaterniond\& g2o\+::\+S\+E3\+Quat\+::rotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a99a34e88f3425dee3d6a9b57c8d265d9}{}\label{classg2o_1_1SE3Quat_a99a34e88f3425dee3d6a9b57c8d265d9}
+
+
+Definition at line 100 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+100 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r};\}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{set\+Rotation(const Quaterniond \&r\+\_\+)}{setRotation(const Quaterniond &r_)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+S\+E3\+Quat\+::set\+Rotation (
+\begin{DoxyParamCaption}
+\item[{const Quaterniond \&}]{r\+\_\+}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a1f55879ec2e4801d5de4b12b301ff59c}{}\label{classg2o_1_1SE3Quat_a1f55879ec2e4801d5de4b12b301ff59c}
+
+
+Definition at line 102 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+102 \{\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}=r\_;\}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!set\+Translation@{set\+Translation}}
+\index{set\+Translation@{set\+Translation}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{set\+Translation(const Vector3d \&t\+\_\+)}{setTranslation(const Vector3d &t_)}}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+S\+E3\+Quat\+::set\+Translation (
+\begin{DoxyParamCaption}
+\item[{const Vector3d \&}]{t\+\_\+}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_aaf12f03b09b2a3a4c9185edcc8b141cb}{}\label{classg2o_1_1SE3Quat_aaf12f03b09b2a3a4c9185edcc8b141cb}
+
+
+Definition at line 98 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+98 \{\hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t} = t\_;\}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!to\+\_\+homogeneous\+\_\+matrix@{to\+\_\+homogeneous\+\_\+matrix}}
+\index{to\+\_\+homogeneous\+\_\+matrix@{to\+\_\+homogeneous\+\_\+matrix}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{to\+\_\+homogeneous\+\_\+matrix() const }{to_homogeneous_matrix() const }}]{\setlength{\rightskip}{0pt plus 5cm}Matrix$<$double,4,4$>$ g2o\+::\+S\+E3\+Quat\+::to\+\_\+homogeneous\+\_\+matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a942d8c3fc4de26560eaf187315700c5b}{}\label{classg2o_1_1SE3Quat_a942d8c3fc4de26560eaf187315700c5b}
+
+
+Definition at line 270 of file se3quat.\+h.
+
+
+
+Referenced by g2o\+::operator$<$$<$().
+
+
+\begin{DoxyCode}
+271       \{
+272         Matrix<double,4,4> homogeneous\_matrix;
+273         homogeneous\_matrix.setIdentity();
+274         homogeneous\_matrix.block(0,0,3,3) = \hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.toRotationMatrix();
+275         homogeneous\_matrix.col(3).head(3) = \hyperlink{classg2o_1_1SE3Quat_aefb19225648d06b536e143f7d037a65b}{translation}();
+276 
+277         \textcolor{keywordflow}{return} homogeneous\_matrix;
+278       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!to\+Minimal\+Vector@{to\+Minimal\+Vector}}
+\index{to\+Minimal\+Vector@{to\+Minimal\+Vector}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{to\+Minimal\+Vector() const }{toMinimalVector() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector6d} g2o\+::\+S\+E3\+Quat\+::to\+Minimal\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a5a33ee8d7795498f92588c8e33f7d1f3}{}\label{classg2o_1_1SE3Quat_a5a33ee8d7795498f92588c8e33f7d1f3}
+
+
+Definition at line 155 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+155                                              \{
+156         \hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d} v;
+157         v[0]=\hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}(0);
+158         v[1]=\hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}(1);
+159         v[2]=\hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}(2);
+160         v[3]=\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.x();
+161         v[4]=\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.y();
+162         v[5]=\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.z();
+163         \textcolor{keywordflow}{return} v;
+164       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!to\+Vector@{to\+Vector}}
+\index{to\+Vector@{to\+Vector}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{to\+Vector() const }{toVector() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector7d} g2o\+::\+S\+E3\+Quat\+::to\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_a0d600cd91fd366f4c4604bb4964db378}{}\label{classg2o_1_1SE3Quat_a0d600cd91fd366f4c4604bb4964db378}
+
+
+Definition at line 138 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+138                                       \{
+139         \hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d} v;
+140         v[0]=\hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}(0);
+141         v[1]=\hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}(1);
+142         v[2]=\hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t}(2);
+143         v[3]=\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.x();
+144         v[4]=\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.y();
+145         v[5]=\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.z();
+146         v[6]=\hyperlink{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{\_r}.w();
+147         \textcolor{keywordflow}{return} v;
+148       \}
+\end{DoxyCode}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!translation@{translation}}
+\index{translation@{translation}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{translation() const }{translation() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Vector3d\& g2o\+::\+S\+E3\+Quat\+::translation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1SE3Quat_aefb19225648d06b536e143f7d037a65b}{}\label{classg2o_1_1SE3Quat_aefb19225648d06b536e143f7d037a65b}
+
+
+Definition at line 96 of file se3quat.\+h.
+
+
+\begin{DoxyCode}
+96 \{\textcolor{keywordflow}{return} \hyperlink{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{\_t};\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!\+\_\+r@{\+\_\+r}}
+\index{\+\_\+r@{\+\_\+r}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{\+\_\+r}{_r}}]{\setlength{\rightskip}{0pt plus 5cm}Quaterniond g2o\+::\+S\+E3\+Quat\+::\+\_\+r\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}{}\label{classg2o_1_1SE3Quat_a420255bcfca499dc2669b27fd373f665}
+
+
+Definition at line 48 of file se3quat.\+h.
+
+
+
+Referenced by inverse(), operator$\ast$(), and operator$\ast$=().
+
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!\+\_\+t@{\+\_\+t}}
+\index{\+\_\+t@{\+\_\+t}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{\+\_\+t}{_t}}]{\setlength{\rightskip}{0pt plus 5cm}Vector3d g2o\+::\+S\+E3\+Quat\+::\+\_\+t\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}{}\label{classg2o_1_1SE3Quat_a7f0078e2750e8f821926f2d51202a809}
+
+
+Definition at line 49 of file se3quat.\+h.
+
+
+
+Referenced by inverse(), operator$\ast$(), and operator$\ast$=().
+
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW@{E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW}}
+\index{E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW@{E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection[{\texorpdfstring{E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW}{EIGEN_MAKE_ALIGNED_OPERATOR_NEW}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+S\+E3\+Quat\+::\+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW}\hypertarget{classg2o_1_1SE3Quat_a5bcd64993957b1a87a113d9a282d4fcb}{}\label{classg2o_1_1SE3Quat_a5bcd64993957b1a87a113d9a282d4fcb}
+
+
+Definition at line 43 of file se3quat.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/types/\hyperlink{se3quat_8h}{se3quat.\+h}\end{DoxyCompactItemize}

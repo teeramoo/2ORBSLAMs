@@ -1,0 +1,91 @@
+\hypertarget{classg2o_1_1RegisterRobustKernelProxy}{}\section{g2o\+:\+:Register\+Robust\+Kernel\+Proxy$<$ T $>$ Class Template Reference}
+\label{classg2o_1_1RegisterRobustKernelProxy}\index{g2o\+::\+Register\+Robust\+Kernel\+Proxy$<$ T $>$@{g2o\+::\+Register\+Robust\+Kernel\+Proxy$<$ T $>$}}
+
+
+{\ttfamily \#include $<$robust\+\_\+kernel\+\_\+factory.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1RegisterRobustKernelProxy_a9eb5309c892d96d5cc5b3d7a15670818}{Register\+Robust\+Kernel\+Proxy} (const std\+::string \&name)
+\item 
+\hyperlink{classg2o_1_1RegisterRobustKernelProxy_a01e3078be667d1faaf2046da6c219eb7}{$\sim$\+Register\+Robust\+Kernel\+Proxy} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classg2o_1_1RegisterRobustKernelProxy_af88f8066f09024c0a94c90d1b99bf1c4}{\+\_\+name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class g2o\+::\+Register\+Robust\+Kernel\+Proxy$<$ T $>$}
+
+
+
+Definition at line 115 of file robust\+\_\+kernel\+\_\+factory.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Register\+Robust\+Kernel\+Proxy@{g2o\+::\+Register\+Robust\+Kernel\+Proxy}!Register\+Robust\+Kernel\+Proxy@{Register\+Robust\+Kernel\+Proxy}}
+\index{Register\+Robust\+Kernel\+Proxy@{Register\+Robust\+Kernel\+Proxy}!g2o\+::\+Register\+Robust\+Kernel\+Proxy@{g2o\+::\+Register\+Robust\+Kernel\+Proxy}}
+\subsubsection[{\texorpdfstring{Register\+Robust\+Kernel\+Proxy(const std\+::string \&name)}{RegisterRobustKernelProxy(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf g2o\+::\+Register\+Robust\+Kernel\+Proxy}$<$ T $>$\+::{\bf Register\+Robust\+Kernel\+Proxy} (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1RegisterRobustKernelProxy_a9eb5309c892d96d5cc5b3d7a15670818}{}\label{classg2o_1_1RegisterRobustKernelProxy_a9eb5309c892d96d5cc5b3d7a15670818}
+
+
+Definition at line 118 of file robust\+\_\+kernel\+\_\+factory.\+h.
+
+
+
+References g2o\+::\+Robust\+Kernel\+Factory\+::instance(), and g2o\+::\+Robust\+Kernel\+Factory\+::register\+Robust\+Kernel().
+
+
+\begin{DoxyCode}
+118                                                        : \hyperlink{classg2o_1_1RegisterRobustKernelProxy_af88f8066f09024c0a94c90d1b99bf1c4}{\_name}(name)
+119       \{
+120         \hyperlink{classg2o_1_1RobustKernelFactory_a9cc4361620f8d7269ad9774d3aba2fc0}{RobustKernelFactory::instance}()->
+      \hyperlink{classg2o_1_1RobustKernelFactory_a71de3f228b58ae4a2dd965cc2cd8ff95}{registerRobustKernel}(\hyperlink{classg2o_1_1RegisterRobustKernelProxy_af88f8066f09024c0a94c90d1b99bf1c4}{\_name}, \textcolor{keyword}{new} RobustKernelCreator<T>());
+121       \}
+\end{DoxyCode}
+\index{g2o\+::\+Register\+Robust\+Kernel\+Proxy@{g2o\+::\+Register\+Robust\+Kernel\+Proxy}!````~Register\+Robust\+Kernel\+Proxy@{$\sim$\+Register\+Robust\+Kernel\+Proxy}}
+\index{````~Register\+Robust\+Kernel\+Proxy@{$\sim$\+Register\+Robust\+Kernel\+Proxy}!g2o\+::\+Register\+Robust\+Kernel\+Proxy@{g2o\+::\+Register\+Robust\+Kernel\+Proxy}}
+\subsubsection[{\texorpdfstring{$\sim$\+Register\+Robust\+Kernel\+Proxy()}{~RegisterRobustKernelProxy()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf g2o\+::\+Register\+Robust\+Kernel\+Proxy}$<$ T $>$\+::$\sim${\bf Register\+Robust\+Kernel\+Proxy} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1RegisterRobustKernelProxy_a01e3078be667d1faaf2046da6c219eb7}{}\label{classg2o_1_1RegisterRobustKernelProxy_a01e3078be667d1faaf2046da6c219eb7}
+
+
+Definition at line 123 of file robust\+\_\+kernel\+\_\+factory.\+h.
+
+
+
+References g2o\+::\+Robust\+Kernel\+Factory\+::instance(), and g2o\+::\+Robust\+Kernel\+Factory\+::unregister\+Type().
+
+
+\begin{DoxyCode}
+124       \{
+125         \hyperlink{classg2o_1_1RobustKernelFactory_a9cc4361620f8d7269ad9774d3aba2fc0}{RobustKernelFactory::instance}()->
+      \hyperlink{classg2o_1_1RobustKernelFactory_af3b0dac653627b5f87c68d4180b87475}{unregisterType}(\hyperlink{classg2o_1_1RegisterRobustKernelProxy_af88f8066f09024c0a94c90d1b99bf1c4}{\_name});
+126       \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Register\+Robust\+Kernel\+Proxy@{g2o\+::\+Register\+Robust\+Kernel\+Proxy}!\+\_\+name@{\+\_\+name}}
+\index{\+\_\+name@{\+\_\+name}!g2o\+::\+Register\+Robust\+Kernel\+Proxy@{g2o\+::\+Register\+Robust\+Kernel\+Proxy}}
+\subsubsection[{\texorpdfstring{\+\_\+name}{_name}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::string {\bf g2o\+::\+Register\+Robust\+Kernel\+Proxy}$<$ T $>$\+::\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classg2o_1_1RegisterRobustKernelProxy_af88f8066f09024c0a94c90d1b99bf1c4}{}\label{classg2o_1_1RegisterRobustKernelProxy_af88f8066f09024c0a94c90d1b99bf1c4}
+
+
+Definition at line 129 of file robust\+\_\+kernel\+\_\+factory.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{robust__kernel__factory_8h}{robust\+\_\+kernel\+\_\+factory.\+h}\end{DoxyCompactItemize}

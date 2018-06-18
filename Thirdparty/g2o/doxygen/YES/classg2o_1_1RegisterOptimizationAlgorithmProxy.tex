@@ -1,0 +1,100 @@
+\hypertarget{classg2o_1_1RegisterOptimizationAlgorithmProxy}{}\section{g2o\+:\+:Register\+Optimization\+Algorithm\+Proxy Class Reference}
+\label{classg2o_1_1RegisterOptimizationAlgorithmProxy}\index{g2o\+::\+Register\+Optimization\+Algorithm\+Proxy@{g2o\+::\+Register\+Optimization\+Algorithm\+Proxy}}
+
+
+{\ttfamily \#include $<$optimization\+\_\+algorithm\+\_\+factory.\+h$>$}
+
+
+
+Collaboration diagram for g2o\+:\+:Register\+Optimization\+Algorithm\+Proxy\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1RegisterOptimizationAlgorithmProxy_acf89c65d6156d53014e0dcafd388258c}{Register\+Optimization\+Algorithm\+Proxy} (\hyperlink{classg2o_1_1AbstractOptimizationAlgorithmCreator}{Abstract\+Optimization\+Algorithm\+Creator} $\ast$\hyperlink{sparse__helper_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c})
+\item 
+\hyperlink{classg2o_1_1RegisterOptimizationAlgorithmProxy_a30f84a170a0d140ee60e1bc428d4c65f}{$\sim$\+Register\+Optimization\+Algorithm\+Proxy} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1AbstractOptimizationAlgorithmCreator}{Abstract\+Optimization\+Algorithm\+Creator} $\ast$ \hyperlink{classg2o_1_1RegisterOptimizationAlgorithmProxy_a75e4119a0fdcfe4c4267cd86a90073d6}{\+\_\+creator}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 119 of file optimization\+\_\+algorithm\+\_\+factory.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Register\+Optimization\+Algorithm\+Proxy@{g2o\+::\+Register\+Optimization\+Algorithm\+Proxy}!Register\+Optimization\+Algorithm\+Proxy@{Register\+Optimization\+Algorithm\+Proxy}}
+\index{Register\+Optimization\+Algorithm\+Proxy@{Register\+Optimization\+Algorithm\+Proxy}!g2o\+::\+Register\+Optimization\+Algorithm\+Proxy@{g2o\+::\+Register\+Optimization\+Algorithm\+Proxy}}
+\subsubsection[{\texorpdfstring{Register\+Optimization\+Algorithm\+Proxy(\+Abstract\+Optimization\+Algorithm\+Creator $\ast$c)}{RegisterOptimizationAlgorithmProxy(AbstractOptimizationAlgorithmCreator *c)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Register\+Optimization\+Algorithm\+Proxy\+::\+Register\+Optimization\+Algorithm\+Proxy (
+\begin{DoxyParamCaption}
+\item[{{\bf Abstract\+Optimization\+Algorithm\+Creator} $\ast$}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1RegisterOptimizationAlgorithmProxy_acf89c65d6156d53014e0dcafd388258c}{}\label{classg2o_1_1RegisterOptimizationAlgorithmProxy_acf89c65d6156d53014e0dcafd388258c}
+
+
+Definition at line 122 of file optimization\+\_\+algorithm\+\_\+factory.\+h.
+
+
+
+References c, g2o\+::\+Optimization\+Algorithm\+Factory\+::instance(), and g2o\+::\+Optimization\+Algorithm\+Factory\+::register\+Solver().
+
+
+\begin{DoxyCode}
+123       \{
+124         \hyperlink{classg2o_1_1RegisterOptimizationAlgorithmProxy_a75e4119a0fdcfe4c4267cd86a90073d6}{\_creator} = \hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c};
+125 \textcolor{preprocessor}{#ifdef G2O\_DEBUG\_OPTIMIZATION\_ALGORITHM\_FACTORY}
+126         std::cout << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{": Registering "} << \hyperlink{classg2o_1_1RegisterOptimizationAlgorithmProxy_a75e4119a0fdcfe4c4267cd86a90073d6}{\_creator}->
+      \hyperlink{classg2o_1_1AbstractOptimizationAlgorithmCreator_af070d079a64f6d23afe6df25e154b160}{property}().\hyperlink{structg2o_1_1OptimizationAlgorithmProperty_aedb3c54122d6a75d49e1677e836bac22}{name} << \textcolor{stringliteral}{" of type "} << \textcolor{keyword}{typeid}(*\_creator).name() << std::endl;
+127 \textcolor{preprocessor}{#endif}
+128         \hyperlink{classg2o_1_1OptimizationAlgorithmFactory_a4fe827a82f01c74ef124e7a9a9c98707}{OptimizationAlgorithmFactory::instance}()->
+      \hyperlink{classg2o_1_1OptimizationAlgorithmFactory_a7726ae90dc3d5baf62fa364517e0fed7}{registerSolver}(\hyperlink{sparse__block__matrix_8hpp_a4e1e0e72dd773439e333c84dd762a9c3}{c});
+129       \}
+\end{DoxyCode}
+\index{g2o\+::\+Register\+Optimization\+Algorithm\+Proxy@{g2o\+::\+Register\+Optimization\+Algorithm\+Proxy}!````~Register\+Optimization\+Algorithm\+Proxy@{$\sim$\+Register\+Optimization\+Algorithm\+Proxy}}
+\index{````~Register\+Optimization\+Algorithm\+Proxy@{$\sim$\+Register\+Optimization\+Algorithm\+Proxy}!g2o\+::\+Register\+Optimization\+Algorithm\+Proxy@{g2o\+::\+Register\+Optimization\+Algorithm\+Proxy}}
+\subsubsection[{\texorpdfstring{$\sim$\+Register\+Optimization\+Algorithm\+Proxy()}{~RegisterOptimizationAlgorithmProxy()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Register\+Optimization\+Algorithm\+Proxy\+::$\sim$\+Register\+Optimization\+Algorithm\+Proxy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classg2o_1_1RegisterOptimizationAlgorithmProxy_a30f84a170a0d140ee60e1bc428d4c65f}{}\label{classg2o_1_1RegisterOptimizationAlgorithmProxy_a30f84a170a0d140ee60e1bc428d4c65f}
+
+
+Definition at line 131 of file optimization\+\_\+algorithm\+\_\+factory.\+h.
+
+
+
+References g2o\+::\+Optimization\+Algorithm\+Factory\+::instance(), and g2o\+::\+Optimization\+Algorithm\+Factory\+::unregister\+Solver().
+
+
+\begin{DoxyCode}
+132       \{
+133 \textcolor{preprocessor}{#ifdef G2O\_DEBUG\_OPTIMIZATION\_ALGORITHM\_FACTORY}
+134         std::cout << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{": Unregistering "} << \hyperlink{classg2o_1_1RegisterOptimizationAlgorithmProxy_a75e4119a0fdcfe4c4267cd86a90073d6}{\_creator}->
+      \hyperlink{classg2o_1_1AbstractOptimizationAlgorithmCreator_af070d079a64f6d23afe6df25e154b160}{property}().\hyperlink{structg2o_1_1OptimizationAlgorithmProperty_aedb3c54122d6a75d49e1677e836bac22}{name} << std::endl;
+135 \textcolor{preprocessor}{#endif}
+136         \hyperlink{classg2o_1_1OptimizationAlgorithmFactory_a4fe827a82f01c74ef124e7a9a9c98707}{OptimizationAlgorithmFactory::instance}()->
+      \hyperlink{classg2o_1_1OptimizationAlgorithmFactory_adf79430f6176c9e9309a703ba2dbd14b}{unregisterSolver}(\hyperlink{classg2o_1_1RegisterOptimizationAlgorithmProxy_a75e4119a0fdcfe4c4267cd86a90073d6}{\_creator});
+137       \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{g2o\+::\+Register\+Optimization\+Algorithm\+Proxy@{g2o\+::\+Register\+Optimization\+Algorithm\+Proxy}!\+\_\+creator@{\+\_\+creator}}
+\index{\+\_\+creator@{\+\_\+creator}!g2o\+::\+Register\+Optimization\+Algorithm\+Proxy@{g2o\+::\+Register\+Optimization\+Algorithm\+Proxy}}
+\subsubsection[{\texorpdfstring{\+\_\+creator}{_creator}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Abstract\+Optimization\+Algorithm\+Creator}$\ast$ g2o\+::\+Register\+Optimization\+Algorithm\+Proxy\+::\+\_\+creator\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classg2o_1_1RegisterOptimizationAlgorithmProxy_a75e4119a0fdcfe4c4267cd86a90073d6}{}\label{classg2o_1_1RegisterOptimizationAlgorithmProxy_a75e4119a0fdcfe4c4267cd86a90073d6}
+
+
+Definition at line 139 of file optimization\+\_\+algorithm\+\_\+factory.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{optimization__algorithm__factory_8h}{optimization\+\_\+algorithm\+\_\+factory.\+h}\end{DoxyCompactItemize}

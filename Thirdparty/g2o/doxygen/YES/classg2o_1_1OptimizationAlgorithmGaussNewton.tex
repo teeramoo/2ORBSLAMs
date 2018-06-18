@@ -1,0 +1,182 @@
+\hypertarget{classg2o_1_1OptimizationAlgorithmGaussNewton}{}\section{g2o\+:\+:Optimization\+Algorithm\+Gauss\+Newton Class Reference}
+\label{classg2o_1_1OptimizationAlgorithmGaussNewton}\index{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}}
+
+
+Implementation of the Gauss Newton Algorithm.  
+
+
+
+
+{\ttfamily \#include $<$optimization\+\_\+algorithm\+\_\+gauss\+\_\+newton.\+h$>$}
+
+
+
+Inheritance diagram for g2o\+:\+:Optimization\+Algorithm\+Gauss\+Newton\+:
+% FIG 0
+
+
+Collaboration diagram for g2o\+:\+:Optimization\+Algorithm\+Gauss\+Newton\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classg2o_1_1OptimizationAlgorithmGaussNewton_aca16df79fa14caf3e77bef0ca9aaedc4}{Optimization\+Algorithm\+Gauss\+Newton} (\hyperlink{classg2o_1_1Solver}{Solver} $\ast$\hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a85473a4073c76b1a52cf9cf175e31c45}{solver})
+\item 
+virtual \hyperlink{classg2o_1_1OptimizationAlgorithmGaussNewton_ac86bc6829b12453693ee2c3967b11f0b}{$\sim$\+Optimization\+Algorithm\+Gauss\+Newton} ()
+\item 
+virtual \hyperlink{classg2o_1_1OptimizationAlgorithm_a705d58d7bc19528a8ab718570d090cdf}{Solver\+Result} \hyperlink{classg2o_1_1OptimizationAlgorithmGaussNewton_aba0b67eecaca01c576de7e605e5af5f1}{solve} (int iteration, bool online=false)
+\item 
+virtual void \hyperlink{classg2o_1_1OptimizationAlgorithmGaussNewton_a23d9d274c44841e034a9b4c93530ee18}{print\+Verbose} (std\+::ostream \&os) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of the Gauss Newton Algorithm. 
+
+Definition at line 37 of file optimization\+\_\+algorithm\+\_\+gauss\+\_\+newton.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}!Optimization\+Algorithm\+Gauss\+Newton@{Optimization\+Algorithm\+Gauss\+Newton}}
+\index{Optimization\+Algorithm\+Gauss\+Newton@{Optimization\+Algorithm\+Gauss\+Newton}!g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}}
+\subsubsection[{\texorpdfstring{Optimization\+Algorithm\+Gauss\+Newton(\+Solver $\ast$solver)}{OptimizationAlgorithmGaussNewton(Solver *solver)}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::\+Optimization\+Algorithm\+Gauss\+Newton (
+\begin{DoxyParamCaption}
+\item[{{\bf Solver} $\ast$}]{solver}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classg2o_1_1OptimizationAlgorithmGaussNewton_aca16df79fa14caf3e77bef0ca9aaedc4}{}\label{classg2o_1_1OptimizationAlgorithmGaussNewton_aca16df79fa14caf3e77bef0ca9aaedc4}
+construct the Gauss Newton algorithm, which use the given \hyperlink{classg2o_1_1Solver}{Solver} for solving the linearized system. 
+
+Definition at line 41 of file optimization\+\_\+algorithm\+\_\+gauss\+\_\+newton.\+cpp.
+
+
+\begin{DoxyCode}
+41                                                                                    :
+42     \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a1358f3500efe8b95a5af4a1b0edecdf0}{OptimizationAlgorithmWithHessian}(\hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a85473a4073c76b1a52cf9cf175e31c45}{solver})
+43   \{
+44   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}!````~Optimization\+Algorithm\+Gauss\+Newton@{$\sim$\+Optimization\+Algorithm\+Gauss\+Newton}}
+\index{````~Optimization\+Algorithm\+Gauss\+Newton@{$\sim$\+Optimization\+Algorithm\+Gauss\+Newton}!g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}}
+\subsubsection[{\texorpdfstring{$\sim$\+Optimization\+Algorithm\+Gauss\+Newton()}{~OptimizationAlgorithmGaussNewton()}}]{\setlength{\rightskip}{0pt plus 5cm}g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::$\sim$\+Optimization\+Algorithm\+Gauss\+Newton (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizationAlgorithmGaussNewton_ac86bc6829b12453693ee2c3967b11f0b}{}\label{classg2o_1_1OptimizationAlgorithmGaussNewton_ac86bc6829b12453693ee2c3967b11f0b}
+
+
+Definition at line 46 of file optimization\+\_\+algorithm\+\_\+gauss\+\_\+newton.\+cpp.
+
+
+\begin{DoxyCode}
+47   \{
+48   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}!print\+Verbose@{print\+Verbose}}
+\index{print\+Verbose@{print\+Verbose}!g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}}
+\subsubsection[{\texorpdfstring{print\+Verbose(std\+::ostream \&os) const }{printVerbose(std::ostream &os) const }}]{\setlength{\rightskip}{0pt plus 5cm}void g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::print\+Verbose (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizationAlgorithmGaussNewton_a23d9d274c44841e034a9b4c93530ee18}{}\label{classg2o_1_1OptimizationAlgorithmGaussNewton_a23d9d274c44841e034a9b4c93530ee18}
+called by the optimizer if verbose. re-\/implement, if you want to print something 
+
+Reimplemented from \hyperlink{classg2o_1_1OptimizationAlgorithm_a61fe205d498ed3b0ac1f812a78c4b0f0}{g2o\+::\+Optimization\+Algorithm}.
+
+
+
+Definition at line 95 of file optimization\+\_\+algorithm\+\_\+gauss\+\_\+newton.\+cpp.
+
+
+
+References g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::\+\_\+solver, and g2o\+::\+Solver\+::schur().
+
+
+\begin{DoxyCode}
+96   \{
+97     os
+98       << \textcolor{stringliteral}{"\(\backslash\)t schur= "} << \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_acc8d6a8ae7847a157d4a2f44aea14c74}{schur}();
+99   \}
+\end{DoxyCode}
+\index{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}!solve@{solve}}
+\index{solve@{solve}!g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}}
+\subsubsection[{\texorpdfstring{solve(int iteration, bool online=false)}{solve(int iteration, bool online=false)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Optimization\+Algorithm\+::\+Solver\+Result} g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::solve (
+\begin{DoxyParamCaption}
+\item[{int}]{iteration, }
+\item[{bool}]{online = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classg2o_1_1OptimizationAlgorithmGaussNewton_aba0b67eecaca01c576de7e605e5af5f1}{}\label{classg2o_1_1OptimizationAlgorithmGaussNewton_aba0b67eecaca01c576de7e605e5af5f1}
+Solve one iteration. The \hyperlink{classg2o_1_1SparseOptimizer}{Sparse\+Optimizer} running on-\/top will call this for the given number of iterations. 
+\begin{DoxyParams}{Parameters}
+{\em iteration} & indicates the current iteration \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classg2o_1_1OptimizationAlgorithm_ab174deeeb2551ceaf715ea09f0f9c077}{g2o\+::\+Optimization\+Algorithm}.
+
+
+
+Definition at line 50 of file optimization\+\_\+algorithm\+\_\+gauss\+\_\+newton.\+cpp.
+
+
+
+References \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, g2o\+::\+Optimization\+Algorithm\+::\+\_\+optimizer, g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::\+\_\+solver, g2o\+::\+Solver\+::build\+Structure(), g2o\+::\+Solver\+::build\+System(), g2o\+::\+Sparse\+Optimizer\+::compute\+Active\+Errors(), g2o\+::\+Optimization\+Algorithm\+::\+Fail, g2o\+::get\+\_\+monotonic\+\_\+time(), g2o\+::\+G2\+O\+Batch\+Statistics\+::global\+Stats(), g2o\+::\+Optimization\+Algorithm\+::\+OK, g2o\+::\+Solver\+::optimizer(), g2o\+::\+Solver\+::solve(), g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Linear\+Solution, g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Quadratic\+Form, g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Residuals, g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Update, and g2o\+::\+Solver\+::x().
+
+
+\begin{DoxyCode}
+51   \{
+52     assert(\hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer} && \textcolor{stringliteral}{"\_optimizer not set"});
+53     assert(\hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_a9ea585f131ab02ae1e0c0192126f0b5f}{optimizer}() == \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer} && \textcolor{stringliteral}{"underlying linear solver
+       operates on different graph"});
+54     \textcolor{keywordtype}{bool} ok = \textcolor{keyword}{true};
+55     
+56     \textcolor{comment}{//here so that correct component for max-mixtures can be computed before the build structure}
+57     \textcolor{keywordtype}{double} t=\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+58     \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer}->\hyperlink{classg2o_1_1SparseOptimizer_a09572668aa85b75a5bebf7b66401ce8f}{computeActiveErrors}();
+59     G2OBatchStatistics* globalStats = \hyperlink{structg2o_1_1G2OBatchStatistics_a06f9c667d8b48b8f0023e27011818b64}{G2OBatchStatistics::globalStats}();
+60     \textcolor{keywordflow}{if} (globalStats) \{
+61       globalStats->timeResiduals = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}()-t;
+62     \}
+63     
+64     \textcolor{keywordflow}{if} (iteration == 0 && !online) \{ \textcolor{comment}{// built up the CCS structure, here due to easy time measure}
+65       ok = \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_a6c93ac0f528ffe05867d33150c54f46f}{buildStructure}();
+66       \textcolor{keywordflow}{if} (! ok) \{
+67         cerr << \hyperlink{macros_8h_a9c15fe1e91b07ea3280f5239f9841b67}{\_\_PRETTY\_FUNCTION\_\_} << \textcolor{stringliteral}{": Failure while building CCS structure"} << endl;
+68         \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizationAlgorithm_a705d58d7bc19528a8ab718570d090cdfa375598c3a146bb5116b5d19bb1a88f84}{OptimizationAlgorithm::Fail};
+69       \}
+70     \}
+71 
+72     t=\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+73     \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_ac1565e85d5ca68a87ad7f06f8164a8c0}{buildSystem}();
+74     \textcolor{keywordflow}{if} (globalStats) \{
+75       globalStats->timeQuadraticForm = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}()-t;
+76       t=\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+77     \}
+78 
+79     ok = \hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_a9c359a886db57f2f81e54a2113f3bd38}{solve}();
+80     \textcolor{keywordflow}{if} (globalStats) \{
+81       globalStats->timeLinearSolution = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}()-t;
+82       t=\hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}();
+83     \}
+84 
+85     \hyperlink{classg2o_1_1OptimizationAlgorithm_a6017c344be0d9f09d6674849849c6b60}{\_optimizer}->update(\hyperlink{classg2o_1_1OptimizationAlgorithmWithHessian_a88a2d1dccee8f7481ece407f2681a151}{\_solver}->\hyperlink{classg2o_1_1Solver_acb097d8568624a1f3af4dba808e5593b}{x}());
+86     \textcolor{keywordflow}{if} (globalStats) \{
+87       globalStats->timeUpdate = \hyperlink{namespaceg2o_aa64237935c7d8411b4369234a5f661ea}{get\_monotonic\_time}()-t;
+88     \}
+89     \textcolor{keywordflow}{if} (ok)
+90       \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizationAlgorithm_a705d58d7bc19528a8ab718570d090cdfa5e94b8ee7748cc4c1a5c86de2e8cc962}{OK};
+91     \textcolor{keywordflow}{else}
+92       \textcolor{keywordflow}{return} \hyperlink{classg2o_1_1OptimizationAlgorithm_a705d58d7bc19528a8ab718570d090cdfa375598c3a146bb5116b5d19bb1a88f84}{Fail};
+93   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{optimization__algorithm__gauss__newton_8h}{optimization\+\_\+algorithm\+\_\+gauss\+\_\+newton.\+h}\item 
+/home/teeramoo/\+Desktop/\+O\+R\+B-\/slam-\/script/\+Using Opecv3.\+2/\+Learn\+V\+I\+O\+R\+B-\/master/\+Thirdparty/g2o/g2o/core/\hyperlink{optimization__algorithm__gauss__newton_8cpp}{optimization\+\_\+algorithm\+\_\+gauss\+\_\+newton.\+cpp}\end{DoxyCompactItemize}
