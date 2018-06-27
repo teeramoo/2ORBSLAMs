@@ -136,7 +136,7 @@ public:
     double imageDelaySec;
     void SetSecondSLAM(const bool bSecondSLAM);
     bool CheckInitialization();
-    void SetCamTopToBot(cv::Mat &_mCamTopToBot);
+    void SetCamBotToTop(cv::Mat &_mCamTopToBot);
     cv::Mat mInitCamPose;
     cv::Mat GetInitCamPose();
     bool bDebug;

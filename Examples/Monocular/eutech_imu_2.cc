@@ -55,14 +55,14 @@ void tokenize_space(const string &str, vector<string> &vTokens);
 void readFrameData(const string &strFrameFile, vector<double> &vTimestamps,
         vector<int> &vFrameNames, vector<Position> &vIMUPositions);
 
-void LoadImages(const string &strPathTimes, vector<double> &vTimeStamps);
+void LoadImages(const string &strPathTimes, vector<string> &vTimeStamps);
                 
 void LoadIMUData(const string &strIMUPath, vector<Position> &vIMUPositions);
 
 cv::Mat calculateMatCam1to2(cv::Mat &mCam1, cv::Mat &mCam2, bool &bDebug);
 
 int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, string &strInputFile,
-            vector<double> &vTimestamps, vector<Position> &vIMUPositions,ORB_SLAM2::System::eSensor &eSensor, bool &isVideo,
+            vector<string> &vTimestamps, vector<Position> &vIMUPositions,ORB_SLAM2::System::eSensor &eSensor, bool &isVideo,
             string &sPathToOutputFolder, bool &bDebug, bool &bUseViewer, bool &bSecondSLAM,
             vector<cv::Mat> &vCamPoses, vector<ORB_SLAM2::KeyFrame*> &vKeyFrames,
             vector<int> &vKeyFrameID, cv::Mat &mTrcBotCam, cv::Mat &mTrcTopCam);
@@ -91,7 +91,7 @@ int main(int argc, char **argv)
     ORB_SLAM2::System::eSensor bSensorType = ORB_SLAM2::System::MONOCULAR;
 
     // Retrieve paths to images
-    vector<double> vTimestamps;
+    vector<string> vTimestamps;
     LoadImages(strFrameFile, vTimestamps);
 
 	vector<Position> vIMUPositions;
@@ -313,6 +313,7 @@ int main(int argc, char **argv)
     runSLAM(strVoc, strDownCamSettings, strInputFormat, strDownInput, vTimestamps,vIMUPositions,
             bSensorType, isVideo, strDownOutput, bDebug, bViewer, isSecondSLAM,
             vCamPoses, vKeyFrames, vKeyFrameID, mTrcBotCam, mTrcTopCam);
+
     cout << "----------------------------------------------------------------------------" << endl;
 
     cout << "First SLAM process ended." << endl;
@@ -539,11 +540,12 @@ int main(int argc, char **argv)
 }
 
 int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, string &strInputFile,
-            vector<double> &vTimestamps, vector<Position> &vIMUPositions,ORB_SLAM2::System::eSensor &eSensor, bool &isVideo,
+            vector<string> &vTimestamps, vector<Position> &vIMUPositions,ORB_SLAM2::System::eSensor &eSensor, bool &isVideo,
             string &sPathToOutputFolder, bool &bDebug, bool &bUseViewer, bool &bSecondSLAM,
             vector<cv::Mat> &vCamPoses, vector<ORB_SLAM2::KeyFrame*> &vKeyFrames,
             vector<int> &vKeyFrameID, cv::Mat &mTrcBotCam, cv::Mat &mTrcTopCam)
 {
+
     cv::VideoCapture videoCapture;
     cv::Mat imSample;
 
@@ -553,7 +555,7 @@ int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, s
             throw runtime_error("Cannot open video file at " + strInputFile );
     }
     else {
-        string sampleImPath = strInputFile + to_string(vTimestamps.front()*10E6) + "." + strInputFormat;
+        string sampleImPath = strInputFile + vTimestamps.front() + "." + strInputFormat;
         imSample = cv::imread(sampleImPath,CV_LOAD_IMAGE_ANYDEPTH);
         if(imSample.empty())
             throw runtime_error("Cannot open a sample image at " + sampleImPath );
@@ -565,14 +567,16 @@ int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, s
 
     //Set 2nd SLAM
     if(bSecondSLAM) {
+        cout << "enabling 2nd SLAM" << endl;
         SLAM.SetSecondSLAM(true);
         mTrcTopCam = SLAM.GetInitCamPose();
 
         if(bDebug)
             cout << "mTrcTopCam is : " << mTrcTopCam << endl;
 
+        //Change matCam1to2
         cv::Mat mCamBotToTop = calculateMatCam1to2(mTrcBotCam, mTrcTopCam, bDebug);
-        SLAM.SetCamTopToBot(mCamBotToTop);
+        SLAM.SetCamBotToTop(mCamBotToTop);
 
     } else {
 
@@ -605,6 +609,10 @@ int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, s
 
     for(int ni=0; ni< nImages; ni++) {        // Start point of 1st SLAM
 
+        cout << "--------------------------------------" << endl;
+        cout << "Frame: "<< ni << " of " <<  nImages << endl;
+
+
         //Load image
         if(isVideo) {
 
@@ -614,7 +622,8 @@ int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, s
             }
 
         } else {
-            string imPath = strInputFile + to_string(vTimestamps[ni]) + "." + strInputFormat;
+            cout << "reading image number "<< ni << endl;
+            string imPath = strInputFile + vTimestamps[ni] + "." + strInputFormat;
             im = cv::imread(imPath, CV_LOAD_IMAGE_GRAYSCALE);
 
             if(im.empty()) {
@@ -622,12 +631,17 @@ int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, s
                 break;
             }
 
+            cout << "image number " << ni  << " loaded."<< endl;
         }
 
+        if(bSecondSLAM && ni == 0)
+            continue;
 
-        double tframe = vTimestamps[ni];	//Time is in millisecond so divide by 1000
+
+        double tframe = std::stod(vTimestamps[ni]);	//Time is in millisecond so divide by 1000
         double tempFrame = tframe/1e6;
 
+ //       cout << "read timestamp in double format" << endl;
         if(ni < skip) {
             nIMUc++;
             continue;
@@ -643,7 +657,9 @@ int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, s
 */
 
         //Check initialization
+
         if(!SLAM.CheckInitialization() && bSecondSLAM) {
+
 
             if(ni > vKeyFrameID[FirstFrameCounter]) {
 
@@ -662,102 +678,142 @@ int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, s
 
         }
 
-        cout << vIMUPositions.size() << endl;
+        cout << endl;
 
-        double tempIMU = vIMUPositions[nIMUc].timestamp/1e9;
+
+        cout << "size of vIMU is : " << vIMUPositions.size() << endl;
+
         std::vector<ORB_SLAM2::IMUData> vimuData;
 
-        cout << endl;
-        cout << "--------------------------------------" << endl;
-        cout << "Frame: "<< ni << " of " <<  nImages << endl;
 
-        if(bDebug && vIMUPositions.size() != 0)
-            cout << "Checking IMU data at frame "  << ni << endl;
+        if(vIMUPositions.size() > 0) {
 
-        while((tempFrame-tempIMU) > epsilon) {
+            double tempIMU = vIMUPositions[nIMUc].timestamp/1e9;
 
-            Position currentPos = vIMUPositions[nIMUc];
-            double ax = currentPos.X;
-            double ay = currentPos.Y;
-            double az = currentPos.Z;
-            double wx = currentPos.roll;
-            double wy = currentPos.pitch;
-            double wz = currentPos.yaw;
-            double dTime = currentPos.timestamp/1e9;
+
+
+            if(bDebug && vIMUPositions.size() != 0)
+                cout << "Checking IMU data at frame "  << ni << endl;
+
+            while((tempFrame-tempIMU) > epsilon) {
+
+                Position currentPos = vIMUPositions[nIMUc];
+                double ax = currentPos.X;
+                double ay = currentPos.Y;
+                double az = currentPos.Z;
+                double wx = currentPos.roll;
+                double wy = currentPos.pitch;
+                double wz = currentPos.yaw;
+                double dTime = currentPos.timestamp/1e9;
+
+                ORB_SLAM2::IMUData imudata(wx,wy,wz,ax,ay,az,dTime);
+
+                vimuData.push_back(imudata);
+
+                nIMUc++;
+                if(nIMUc <= vIMUPositions.size()) {
+                    tempIMU = vIMUPositions[nIMUc].timestamp/1e9;
+
+                } else
+                    break;
+
+            }
+
+            if(bDebug) {
+                cout << "Finish checking IMU data at frame :" << ni<< endl;
+                cout << "Size of vimuData is " << vimuData.size() << endl;
+            }
+
+            if(vimuData.size() == 0) {
+                cout<<"Hit blank IMU slot ###############################" << endl;
+                cout<<"Skipping this frame (Specially if before initializing)!" << endl;
+                if(!bSecondSLAM)
+                    vCamPoses.push_back(blankMat); // Add empty Matrix
+                continue;
+            }
+
+        }
+        else {
+            double ax = 0.0;
+            double ay = 0.0;
+            double az = 0.0;
+            double wx = 0.0;
+            double wy = 0.0;
+            double wz = 0.0;
+            double dTime = tempFrame;
 
             ORB_SLAM2::IMUData imudata(wx,wy,wz,ax,ay,az,dTime);
 
-            vimuData.push_back(imudata);
 
-            nIMUc++;
-            if(nIMUc <= vIMUPositions.size()) {
-                tempIMU = vIMUPositions[nIMUc].timestamp/1e9;
-
-            } else
-                break;
-
-        }
-
-        if(bDebug) {
-            cout << "Finish checking IMU data at frame :" << ni<< endl;
-            cout << "Size of vimuData is " << vimuData.size() << endl;
-        }
-
-        if(vimuData.size() == 0) {
-            cout<<"Hit blank IMU slot ###############################" << endl;
-            cout<<"Skipping this frame (Specially if before initializing)!" << endl;
-            if(!bSecondSLAM)
-                vCamPoses.push_back(blankMat); // Add empty Matrix
-            continue;
+        vimuData.push_back(imudata);
         }
 
 
+        #ifdef COMPILEDWITHC11
+            std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
+        #else
+            std::chrono::monotonic_clock::time_point t1 = std::chrono::monotonic_clock::now();
+        #endif
 
-#ifdef COMPILEDWITHC11
-        std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
-#else
-        std::chrono::monotonic_clock::time_point t1 = std::chrono::monotonic_clock::now();
-#endif
 
+        if(bSecondSLAM) {
+            cout << "FirstFrameCounter is : " << FirstFrameCounter << endl;
+            cout << "vKeyFrameID[FirstFrameCounter] : " << vKeyFrameID[FirstFrameCounter] << endl;
+            if (ni < vKeyFrameID[FirstFrameCounter] - 1) {
+//                cout << "FirstFrameCounter is : " << FirstFrameCounter << endl;
+                cout << "skip this frame b/c of ni < vKeyframeID " << endl;
+                im.release();
+                continue;
+            }
 
-        if(bSecondSLAM)
-            if (ni < vKeyFrameID[FirstFrameCounter] - 1) continue;
+        }
+
 
 
         SLAM.SetFrameNumber(ni);
 
 
         if(bSecondSLAM) {
-            cout << "vCamPose.size()" << vCamPoses.size();
-            cv::Mat mTempCamPose = vCamPoses[ni].clone();
+            cout << "vCamPose.size() : " << vCamPoses.size() << endl;
+            cout << "current ni is : " << ni << endl;
+            cout << "vCamPoses[ni] is : " << vCamPoses[ni]  << endl;
+            cout << "vCamPoses[ni+1] is : " << vCamPoses[ni+1]  << endl;
+            cout << "mTrcTopCam is : " << mTrcTopCam  << endl;
+            if(vCamPoses[ni+1].empty())
+                continue;
+            cv::Mat mTempCamPose = mTrcTopCam * vCamPoses[ni+1].clone();
             cv::Mat mCamPoseCurrent = SLAM.TrackMonoVI(im, vimuData, tempFrame - imageMsgDelaySec, mTempCamPose );
             mTempCamPose.release();
 
-        } else {
+        }
+
+        /*
+        else {
 
             if(ni < 200) {
                 vCamPoses.push_back(blankMat);
                 continue;
             }
+*/
 
             cv::Mat mCamPoseCurrent = SLAM.TrackMonoVI(im, vimuData, tempFrame - imageMsgDelaySec, blankMat );
             vCamPoses.push_back(mCamPoseCurrent);
             cout << "vCamPose.size()" << vCamPoses.size();
 
-        }
 
+        #ifdef COMPILEDWITHC11
+            std::chrono::steady_clock::time_point t2 = std::chrono::steady_clock::now();
+        #else
+            std::chrono::monotonic_clock::time_point t2 = std::chrono::monotonic_clock::now();
+        #endif
 
-#ifdef COMPILEDWITHC11
-        std::chrono::steady_clock::time_point t2 = std::chrono::steady_clock::now();
-#else
-        std::chrono::monotonic_clock::time_point t2 = std::chrono::monotonic_clock::now();
-#endif
 
         double ttrack= std::chrono::duration_cast<std::chrono::duration<double> >(t2 - t1).count();
 
         vTimesTrack[ni]=ttrack;
+        im.release();
+        }
 
-    }
 
     // Stop all threads
     cout << "Executing shutdown process SLAM.Shutdown() " << endl;
@@ -842,7 +898,7 @@ void tokenize(const string &str, vector<string> &vTokens)
 }
 
 
-void LoadImages(const string &strPathTimes, vector<double> &vTimeStamps)
+void LoadImages(const string &strPathTimes, vector<string> &vTimeStamps)
 {
     ifstream fTimes;
     fTimes.open(strPathTimes.c_str());
@@ -862,8 +918,8 @@ void LoadImages(const string &strPathTimes, vector<double> &vTimeStamps)
         	tokenize(s, vTokens);
         	if(vTokens.size() == 2)
         	{
-        		double t = std::stod(vTokens[0]);
-        		vTimeStamps.push_back(t);
+        		//double t = std::stod(vTokens[0]);
+        		vTimeStamps.push_back(vTokens[0]);
         	}
         }
     }
@@ -1022,6 +1078,12 @@ void readFrameData(const string &strFrameFile, vector<double> &vTimestamps,
 cv::Mat calculateMatCam1to2(cv::Mat &mCam1, cv::Mat &mCam2, bool &bDebug)
 {
 
+
+    cv::Mat mCamBotToTop = cv::Mat::eye(4,4,CV_32F);
+    mCamBotToTop = mCam2*mCam1*mCamBotToTop;
+
+/*
+    cout << "Calculating camera 1 to 2" << endl;
     cv::Mat _mCam1 = mCam1.inv();
     cv::Mat _mCam2 = mCam2.inv();
     cv::Mat mCamBotToTop = cv::Mat::eye(4,4,CV_32F);
@@ -1065,7 +1127,7 @@ if(bDebug)
     cout << "Check mCam2 * mCam1.inv() " << mCam1 * mCam2.inv()<< endl;
 
 }
-
+*/
     return mCamBotToTop;
 }
 
@@ -1134,8 +1196,6 @@ void readInputFile(string inputFile,string &strVoc,string &strDownCamSettings,st
         std::cout<<"Debug mode : ON "<<std::endl;
     else
         std::cout<<"Debug mode : OFF "<<std::endl;
-
-    sleep(10);
 
 
 }

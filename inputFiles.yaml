@@ -4,16 +4,18 @@
 vocab: "Vocabulary/ORBvoc.bin"
 
 # path to camera settings
-downward_cam_settings: "config/Handheld_Platform/down_Pitch-25deg.yaml"
+downward_cam_settings: "config/Handheld_Platform/downwardCamera.yaml"
 
-upward_cam_settings: "config/Handheld_Platform/up_Yaw20deg.yaml"
+upward_cam_settings: "config/Handheld_Platform/upwardCamera.yaml"
 
 
 #path to input video files or sequence of images
-#downward_input: "/home/teeramoo/Output_files/2018-Jun-08_09:43:49/vid1.avi"
-downward_input: "/home/teeramoo/OutputFiles/2018-06-14:10:22:45/camera1/"
-#upward_input: "/home/teeramoo/Output_files/2018-Jun-08_09:43:49/vid2.avi"
-upward_input: "/home/teeramoo/OutputFiles/2018-06-14:10:22:45/camera2/"
+#downward_input: "/home/teeramoo/Output_files/2018-Jun-08_10:04:00/vid1.avi"
+#downward_input: "/home/teeramoo/OutputFiles/2018-06-20:03:31:44/camera1/"
+downward_input: "/home/teeramoo/OutputFiles/2018-06-26:03:09:11/camera2/"
+#upward_input: "/home/teeramoo/Output_files/2018-Jun-08_10:04:00/vid2.avi"
+#upward_input: "/home/teeramoo/OutputFiles/2018-06-20:03:31:44/camera2/"
+upward_input: "/home/teeramoo/OutputFiles/2018-06-26:03:09:11/camera1/"
 #input type. True if it's a video, False if it's a sequence of images
 # if True, put 1. if False, put 0
 
@@ -24,8 +26,10 @@ input_format: "jpeg"
 
 
 #path to video or images timestamp ** timestamps are in microsecond.
-#timestamp_file: "/home/teeramoo/Output_files/2018-Jun-08_09:43:49/video_timestamp.txt"
-timestamp_file: "/home/teeramoo/OutputFiles/2018-06-14:10:22:45/video_timestamp.txt"
+#timestamp_file: "/home/teeramoo/Output_files/2018-Jun-08_10:04:00/video_timestamp.txt"
+#timestamp_file: "/home/teeramoo/OutputFiles/2018-06-20:03:31:44/video_timestamp.txt"
+timestamp_file: "/home/teeramoo/OutputFiles/2018-06-26:03:09:11/video_timestamp.txt"
+
 
 #path to IMU file ** timestamps in IMU file are in nanosecond.
 #IMU: "/home/teeramoo/Output_files/2018-Jun-08_09:43:49/IMU.csv"

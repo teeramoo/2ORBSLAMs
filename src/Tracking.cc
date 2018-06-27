@@ -86,11 +86,12 @@ bool Tracking::TrackFromFirstSLAM()
         if (!mCurrentFrame.mForcedFrame.empty() && isSecondSLAM)
         {
 //           cv::Mat mCurrentTopCamToWorld = mCamBotToTop * mCurrentFrame.mForcedFrame;
-            cv::Mat mCurrentTopCamToWorld = mCamBotToTop * mCurrentFrame.mForcedFrame;
+       //     cv::Mat mCurrentTopCamToWorld = mCamBotToTop * mCurrentFrame.mForcedFrame;
 //           cv::Mat mCurrentTopCamToWorld = mCurrentFrame.mForcedFrame * mCamBotToTop;
-            mCurrentFrame.SetPose(mCurrentTopCamToWorld);
+       //     mCurrentFrame.SetPose(mCurrentTopCamToWorld);
  //           cv::Mat Tcl = mCurrentFrame.mTcw * mLastFrame.mTcw.inv();
  //           mCurrentFrame.SetPose(Tcl * mLastFrame.mTcw);
+            mCurrentFrame.SetPose(mCurrentFrame.mForcedFrame);
             cout << "Checking at F1 E :" << endl;
         }
         else
@@ -965,8 +966,7 @@ void Tracking::Track()
     mLastProcessedState=mState;
 
     // Get Map Mutex -> Map cannot be changed
-    unique_lock<mutex> lock(mpMap->
-            mMutexMapUpdate);
+    unique_lock<mutex> lock(mpMap->mMutexMapUpdate);
 
     // Different operation, according to whether the map is updated
     bool bMapUpdated = false;
@@ -1445,6 +1445,16 @@ void Tracking::MonocularInitialization()
                 {
                     cout << "Create map with mForcedFrame" << endl;
 
+                    if(!mInitialFrame.mForcedFrame.empty())
+                        mInitialFrame.SetPose(mInitialFrame.mForcedFrame);
+                    else
+                        cerr << "MonocularInitialization : mInitFrame is empty." << endl;
+
+                    if(!mCurrentFrame.mForcedFrame.empty())
+                        mCurrentFrame.SetPose(mCurrentFrame.mForcedFrame);
+                    else
+                        cerr << "MonocularInitialization : mCurrentFrame is empty." << endl;
+/*
                     cv::Mat mTopCamToWorld = mCamBotToTop.clone()*mInitialFrame.mForcedFrame.clone();
                     mInitialFrame.SetPose(mTopCamToWorld);
 
@@ -1460,6 +1470,7 @@ void Tracking::MonocularInitialization()
                     cout << "Initial Frame in Monocular Initialization is : " << endl << mInitialFrame.mTcw << endl;
                     cout << "Current Frame in Monocular Initialization is : " << endl << mCurrentFrame.mTcw << endl;
                     sleep(1);
+*/
                 }
                 else
                 {
@@ -1571,14 +1582,14 @@ void Tracking::CreateInitialMapMonocular()
     {
         if(medianDepth<0 || pKFcur->TrackedMapPoints(1)<100)
         {
-            cout << "Bad initialization. Tracking may not accurate as it should be." << endl;
+            cout << "Bad initialization. Tracking may not as accurate as it should be." << endl;
         }
     }
 
 
     // Scale initial baseline
-    if(!isSecondSLAM)
-    {
+//    if(!isSecondSLAM)
+//    {
         cv::Mat Tc2w = pKFcur->GetPose();
         Tc2w.col(3).rowRange(0,3) = Tc2w.col(3).rowRange(0,3)*invMedianDepth;
         pKFcur->SetPose(Tc2w);
@@ -1593,7 +1604,7 @@ void Tracking::CreateInitialMapMonocular()
                 pMP->SetWorldPos(pMP->GetWorldPos()*invMedianDepth);
             }
         }
-    }
+//    }
 
     mpLocalMapper->InsertKeyFrame(pKFini);
     mpLocalMapper->InsertKeyFrame(pKFcur);

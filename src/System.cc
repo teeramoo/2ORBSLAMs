@@ -46,8 +46,9 @@ cv::Mat System::GetInitCamPose()
     {
         return mInitCamPose;
     }
-void System::SetCamTopToBot(cv::Mat &_mCamTopToBot)
+void System::SetCamBotToTop(cv::Mat &_mCamTopToBot)
 {
+    cout << "debug Cam Bot to Top " << endl;
     mpTracker->SetCamBotToTop(_mCamTopToBot);
 }
 

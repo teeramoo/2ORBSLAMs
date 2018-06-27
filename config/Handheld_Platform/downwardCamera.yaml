@@ -17,11 +17,23 @@ Camera.delaytoimu: 0
 IMU.multiplyG: 0
 
 # camera-imu frame transformation, Pi = Tic * Pc
+#Camera.Tbc:
+# [-0.024682356, 0.99087548, -0.13250136, 0.041862302,
+#  -0.084068544, 0.13001493, 0.98794162, -0.15906197,
+#  0.99615425, 0.035523925, 0.080092385, -0.15419175,
+#  0.0, 0.0, 0.0, 1.0]
+
 Camera.Tbc:
- [0.34202, 0.93969, 0.00000, 7.84091,
-   0.66446, -0.24184, 0.70711, -0.64387,
-   0.66446, -0.24184, -0.70711, -9.41199,
-   0.00000, 0.00000, 0.00000, 1.00000]
+ [ 1.0, 0.0, 0.0, 0.0,
+   0.0, 1.0, 0.0, 0.0,
+    0.0, 0.0, 1.0, 0.0,
+    0.0, 0.0, 0.0, 1.0]
+
+#Camera.Tbc:
+# [ 0.17365, 0.98481, 0.00000, 15.55474,
+#   -0.41620, 0.07339, 0.90631, 2.87567,
+#    0.89254, -0.15738, 0.42262, -6.16690,
+#    0.00000, 0.00000, 0.00000, 1.00000]
 
 # Local Window size
 LocalMapping.LocalWindowSize: 20
@@ -34,6 +46,7 @@ LocalMapping.LocalWindowSize: 20
 
 # Camera calibration and distortion parameters (OpenCV) 640x480 pixel^2
 # As of 15 Jan 18
+
 Camera.fx: 300.4129
 Camera.fy: 451.1327
 Camera.cx: 331.2164
@@ -45,30 +58,39 @@ Camera.p1: -0.0012
 Camera.p2:  4.3109e-04
 Camera.k3: -0.0338
 
+#Camera.fx: 296.144
+#Camera.fy: 445.125
+#Camera.cx: 315.418
+#Camera.cy: 252.9088
 
-Camera.width: 640 # 1920
-Camera.height: 480 #1080
+#Camera.k1: -0.3719
+#Camera.k2: 0.2072
+#Camera.p1: -0.002044613421971
+#Camera.p2: -1.6896e-4
+#Camera.k3: -0.0798
 
+Camera.width: 640
+Camera.height: 480
 
-# Camera calibration and distortion parameters (OpenCV)  1280x720
+# Camera calibration and distortion parameters (OpenCV) 1920x1080 pixel
 # As of 13 November 2017
-#Camera.fx: 616.3296
-#Camera.fy: 697.0888
-#Camera.cx: 640.8177
-#Camera.cy: 339.9978
 
-#Camera.k1: -0.3267
-#Camera.k2: 0.1078
-#Camera.p1: 0.0006
-#Camera.p2:  0.0016
-#Camera.k3: -0.0164
+#Camera.fx: 888.4345
+#Camera.fy: 1001.531
+#Camera.cx: 946.2542
+#Camera.cy: 569.0448
 
-#Camera.width: 1280
-#Camera.height: 720
+#Camera.k1: -0.3719
+#Camera.k2: 0.2072
+#Camera.p1: -0.0020
+#Camera.p2: -0.0002
+#Camera.k3: -0.0798
 
+#Camera.width: 1920
+#Camera.height: 1080
 
 # Camera frames per second 
-Camera.fps: 20.0
+Camera.fps: 30.0
 
 # IR projector baseline times fx (aprox.)
 Camera.bf: 10.0
@@ -87,7 +109,7 @@ DepthMapFactor: 1.0
 #--------------------------------------------------------------------------------------------
 
 # ORB Extractor: Number of features per image
-ORBextractor.nFeatures: 10000
+ORBextractor.nFeatures: 4000
 
 # ORB Extractor: Scale factor between levels in the scale pyramid 
 ORBextractor.scaleFactor: 1.2
