@@ -597,7 +597,7 @@ int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, s
     cv::Mat blankMat = cv::Mat();
     vector<float> vTimesTrack;
     vTimesTrack.resize(nImages);
-    int FirstFrameCounter = 0;
+    int FirstFrameCounter = 1;
     cv::Mat mForcedKF;
 
     cout << endl << "-------" << endl;
@@ -646,15 +646,6 @@ int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, s
             nIMUc++;
             continue;
         }
-/*
-        if(im.empty())
-        {
-            cerr << endl << "Failed to load image at: "
-                 <<  ni << endl;
-
-            return -1;
-        }
-*/
 
         //Check initialization
 
@@ -663,7 +654,7 @@ int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, s
 
             if(ni > vKeyFrameID[FirstFrameCounter]) {
 
-                while(vKeyFrameID[FirstFrameCounter] < ni)
+                while(vKeyFrameID[FirstFrameCounter] < ni && FirstFrameCounter < vKeyFrameID.size())
                     FirstFrameCounter++;
 
                 if(FirstFrameCounter < vKeyFrameID.size())
@@ -746,6 +737,7 @@ int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, s
 
 
         vimuData.push_back(imudata);
+        cout << "skipped IMU data." << endl;
         }
 
 
@@ -757,8 +749,8 @@ int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, s
 
 
         if(bSecondSLAM) {
-            cout << "FirstFrameCounter is : " << FirstFrameCounter << endl;
-            cout << "vKeyFrameID[FirstFrameCounter] : " << vKeyFrameID[FirstFrameCounter] << endl;
+       //     cout << "FirstFrameCounter is : " << FirstFrameCounter << endl;
+       //     cout << "vKeyFrameID[FirstFrameCounter] : " << vKeyFrameID[FirstFrameCounter] << endl;
             if (ni < vKeyFrameID[FirstFrameCounter] - 1) {
 //                cout << "FirstFrameCounter is : " << FirstFrameCounter << endl;
                 cout << "skip this frame b/c of ni < vKeyframeID " << endl;
@@ -773,32 +765,38 @@ int runSLAM(string &strVoc, string &strCameraSettings, string &strInputFormat, s
         SLAM.SetFrameNumber(ni);
 
 
-        if(bSecondSLAM) {
-            cout << "vCamPose.size() : " << vCamPoses.size() << endl;
-            cout << "current ni is : " << ni << endl;
-            cout << "vCamPoses[ni] is : " << vCamPoses[ni]  << endl;
-            cout << "vCamPoses[ni+1] is : " << vCamPoses[ni+1]  << endl;
-            cout << "mTrcTopCam is : " << mTrcTopCam  << endl;
-            if(vCamPoses[ni+1].empty())
+        if(bSecondSLAM) { // Second SLAM process
+      //      cout << "vCamPose.size() : " << vCamPoses.size() << endl;
+      //      cout << "current ni is : " << ni << endl;
+      //      cout << "vCamPoses[ni] is : " << vCamPoses[ni]  << endl;
+
+      //      cout << "mTrcTopCam is : " << mTrcTopCam  << endl;
+      //      if(!vCamPoses[ni].empty()) {
+      //          cout << "vCamPose.size() : " << vCamPoses.size() << endl;
+      //          cout << "vCamPoses[ni+1] is : " << endl;
+      //          cout << vCamPoses[ni]  << endl;
+      //      }
+      //      else
+      //          continue;
+//            cv::Mat mTempCamPose = mTrcTopCam * vCamPoses[ni+1].clone();
+            if(ni >= vCamPoses.size()-1)
                 continue;
-            cv::Mat mTempCamPose = mTrcTopCam * vCamPoses[ni+1].clone();
+
+            cv::Mat mTempCamPose = mTrcTopCam * vCamPoses[ni+1].clone(); // add if-statement to correct it
             cv::Mat mCamPoseCurrent = SLAM.TrackMonoVI(im, vimuData, tempFrame - imageMsgDelaySec, mTempCamPose );
             mTempCamPose.release();
 
-        }
-
-        /*
-        else {
-
-            if(ni < 200) {
-                vCamPoses.push_back(blankMat);
-                continue;
-            }
-*/
+        } else{ //First SLAM process
 
             cv::Mat mCamPoseCurrent = SLAM.TrackMonoVI(im, vimuData, tempFrame - imageMsgDelaySec, blankMat );
             vCamPoses.push_back(mCamPoseCurrent);
             cout << "vCamPose.size()" << vCamPoses.size();
+            if(mCamPoseCurrent.empty())
+                cout << "empty Current frame" << endl;
+
+        }
+
+
 
 
         #ifdef COMPILEDWITHC11

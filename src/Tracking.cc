@@ -1454,23 +1454,6 @@ void Tracking::MonocularInitialization()
                         mCurrentFrame.SetPose(mCurrentFrame.mForcedFrame);
                     else
                         cerr << "MonocularInitialization : mCurrentFrame is empty." << endl;
-/*
-                    cv::Mat mTopCamToWorld = mCamBotToTop.clone()*mInitialFrame.mForcedFrame.clone();
-                    mInitialFrame.SetPose(mTopCamToWorld);
-
-                    //Added on 2/1/2018
-                    // Try multiplying Tcw to mTcwCurrent ?
-                    // cv::Mat mTcwCurrent = Tcw * mInitialFrame.mTcw;
-                    // Or allow rotation matrix only, fix translation ?
-                    //End of added on 2/1/2018
-                    cv::Mat mTcwCurrent = mCamBotToTop.clone() * mCurrentFrame.mForcedFrame.clone();
-                //    cv::Mat mTcwCurrent = Tcw * mInitialFrame.mTcw;
-                    mCurrentFrame.SetPose(mTcwCurrent);
-
-                    cout << "Initial Frame in Monocular Initialization is : " << endl << mInitialFrame.mTcw << endl;
-                    cout << "Current Frame in Monocular Initialization is : " << endl << mCurrentFrame.mTcw << endl;
-                    sleep(1);
-*/
                 }
                 else
                 {

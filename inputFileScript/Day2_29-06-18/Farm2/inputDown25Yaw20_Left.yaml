@@ -12,10 +12,10 @@ upward_cam_settings: "config/Handheld_Platform/upwardCamera.yaml"
 #path to input video files or sequence of images
 #downward_input: "/home/teeramoo/Output_files/2018-Jun-08_10:04:00/vid1.avi"
 #downward_input: "/home/teeramoo/OutputFiles/2018-06-20:03:31:44/camera1/"
-downward_input: "/media/teeramoo/ubuntuSpace/OutputFiles/Day2/2018-06-29:03:50:12/camera2/"
+downward_input: "/home/teeramoo/OutputFiles/Day2/2018-06-29:04:31:55/camera2/"
 #upward_input: "/home/teeramoo/Output_files/2018-Jun-08_10:04:00/vid2.avi"
 #upward_input: "/home/teeramoo/OutputFiles/2018-06-20:03:31:44/camera2/"
-upward_input: "/media/teeramoo/ubuntuSpace/OutputFiles/Day2/2018-06-29:03:50:12/camera1/"
+upward_input: "/home/teeramoo/OutputFiles/Day2/2018-06-29:04:31:55/camera1/"
 #input type. True if it's a video, False if it's a sequence of images
 # if True, put 1. if False, put 0
 
@@ -28,17 +28,17 @@ input_format: "jpeg"
 #path to video or images timestamp ** timestamps are in microsecond.
 #timestamp_file: "/home/teeramoo/Output_files/2018-Jun-08_10:04:00/video_timestamp.txt"
 #timestamp_file: "/home/teeramoo/OutputFiles/2018-06-20:03:31:44/video_timestamp.txt"
-timestamp_file: "/media/teeramoo/ubuntuSpace/OutputFiles/Day2/2018-06-29:03:50:12/video_timestamp.txt"
+timestamp_file: "/home/teeramoo/OutputFiles/Day2/2018-06-29:04:31:55/video_timestamp.txt"
 
 
 #path to IMU file ** timestamps in IMU file are in nanosecond.
 #IMU: "/home/teeramoo/Output_files/2018-Jun-08_09:43:49/IMU.csv"
 IMU: ""
 #path to output for downward camera
-output_downward: "SLAMoutput/Sequence1/BotCamera/"
+output_downward: "SLAMoutput/Day2_29-06-18/Farm2/Down25Yaw20_Left/Downward/"
 
 #path to output for upward camera
-output_upward: "SLAMoutput/Sequence1/TopCamera/"
+output_upward: "SLAMoutput/Day2_29-06-18/Farm2/Down25Yaw20_Left/Upward/"
 
 
 #debug mode
