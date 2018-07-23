@@ -18,26 +18,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a9e6cf6b-c7cf-45a6-9eee-2d124f24a36c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/Monocular/euro_imu" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/Monocular/euro_imu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/Monocular/eutech_imu" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/Monocular/eutech_imu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/Monocular/eutech_imu_2" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/Monocular/eutech_imu_2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/Monocular/eutech_imu_2.cc" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/Monocular/eutech_imu_2.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/Monocular/eutech_no_imu" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/Monocular/eutech_no_imu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/Monocular/eutech_vertical" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/Monocular/eutech_vertical" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/euro_imu.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/euro_imu.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_imu.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_imu.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_imu_2.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_imu_2.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_no_imu.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_no_imu.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_vertical.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_vertical.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/Handheld_Platform/downwardCamera.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/Handheld_Platform/downwardCamera.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputFiles.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/inputFiles.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tracking.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tracking.cc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,8 +32,8 @@
       <file leaf-file-name="eutech_imu_2.cc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Examples/Monocular/eutech_imu_2.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="773" column="42" lean-forward="true" selection-start-line="773" selection-start-column="42" selection-end-line="773" selection-end-column="42" />
+            <state relative-caret-position="2067">
+              <caret line="753" column="16" selection-start-line="753" selection-start-column="16" selection-end-line="753" selection-end-column="16" />
               <folding>
                 <element signature="e#829#847#0" expanded="true" />
                 <element signature="e#3747#8594#0" />
@@ -94,7 +74,7 @@
       <file leaf-file-name="System.cc" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/System.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
+            <state relative-caret-position="4122">
               <caret line="229" column="36" selection-start-line="229" selection-start-column="36" selection-end-line="229" selection-end-column="36" />
             </state>
           </provider>
@@ -103,7 +83,7 @@
       <file leaf-file-name="Tracking.cc" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tracking.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
+            <state relative-caret-position="12636">
               <caret line="702" selection-start-line="702" selection-end-line="702" />
             </state>
           </provider>
@@ -234,10 +214,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1693" />
-    <option name="y" value="57" />
-    <option name="width" value="1291" />
-    <option name="height" value="728" />
+    <option name="x" value="71" />
+    <option name="y" value="-4" />
+    <option name="width" value="1295" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -271,7 +251,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Record-Image-IMU" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -449,7 +429,9 @@
       <workItem from="1531724736549" duration="621000" />
       <workItem from="1531900251509" duration="5000" />
       <workItem from="1531911105672" duration="987000" />
-      <workItem from="1532060866310" duration="2726000" />
+      <workItem from="1532060866310" duration="2794000" />
+      <workItem from="1532275120754" duration="61000" />
+      <workItem from="1532313443527" duration="1263000" />
     </task>
     <task id="LOCAL-00001" summary="add clion version control">
       <created>1529295118325</created>
@@ -462,22 +444,22 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="704102000" />
+    <option name="totallyTimeSpent" value="705494000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1437" y="29" width="1849" height="1084" extended-state="6" />
+    <frame x="71" y="-4" width="1295" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12102957" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12028302" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="CMake" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50278884" side_tool="true" weight="0.32868218" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32917318" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32917318" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32917318" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2498618" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49721116" weight="0.32761312" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -499,12 +481,12 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49721116" weight="0.32868218" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50278884" side_tool="true" weight="0.32868218" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="CMake" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
@@ -936,22 +918,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/System.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
+        <state relative-caret-position="4122">
           <caret line="229" column="36" selection-start-line="229" selection-start-column="36" selection-end-line="229" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tracking.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
+        <state relative-caret-position="12636">
           <caret line="702" selection-start-line="702" selection-end-line="702" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Examples/Monocular/eutech_imu_2.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="773" column="42" lean-forward="true" selection-start-line="773" selection-start-column="42" selection-end-line="773" selection-end-column="42" />
+        <state relative-caret-position="2067">
+          <caret line="753" column="16" selection-start-line="753" selection-start-column="16" selection-end-line="753" selection-end-column="16" />
           <folding>
             <element signature="e#829#847#0" expanded="true" />
             <element signature="e#3747#8594#0" />
