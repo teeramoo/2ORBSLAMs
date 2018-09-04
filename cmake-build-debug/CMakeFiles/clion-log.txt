@@ -1,4 +1,4 @@
-/home/teeramoo/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/teeramoo/Desktop/Thesis_work/LearnVIORB-master
+/home/teeramoo/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.3911.40/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/teeramoo/Desktop/Thesis_work/LearnVIORB-master
 Build type: Debug
 -- Using flag -std=c++11.
 -- found Pangolin at /usr/local/lib/cmake/Pangolin/../../../include;/usr/include;/usr/include;/usr/include;/usr/local/include/eigen3

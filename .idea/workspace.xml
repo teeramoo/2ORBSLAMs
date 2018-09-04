@@ -2,11 +2,11 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="ORB_SLAM2" targetName="eutech_no_imu" />
       <config projectName="ORB_SLAM2" targetName="eutech_vertical" />
       <config projectName="ORB_SLAM2" targetName="ORB_SLAM2" />
       <config projectName="ORB_SLAM2" targetName="eutech_imu" />
       <config projectName="ORB_SLAM2" targetName="eutech_imu_2" />
+      <config projectName="ORB_SLAM2" targetName="eutech_no_imu" />
       <config projectName="ORB_SLAM2" targetName="euro_imu" />
     </generated>
   </component>
@@ -17,61 +17,115 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9e6cf6b-c7cf-45a6-9eee-2d124f24a36c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/include/Frame.h.backup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Frame.cc.backup" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/BotCamera/KF_test2cam.pcd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/BotCamera/KeyFrameInfo_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/BotCamera/KeyFrameInfo_0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/BotCamera/KeyFrameTrajectory_0.pcd" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/BotCamera/KeyFrameTrajectory_0.pcd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/BotCamera/KeyFrameTrajectory_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/BotCamera/KeyFrameTrajectory_0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/BotCamera/MapPoints_0.pcd" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/BotCamera/MapPoints_0.pcd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/BotCamera/MapPoints_with_keyframes_0.pcd" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/BotCamera/MapPoints_with_keyframes_0.pcd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/BotCamera/downward_test2cam.pcd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameInfo_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameInfo_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameTrajectory_0.pcd" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameTrajectory_0.pcd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameTrajectory_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameTrajectory_0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameTrajectory_1.pcd" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameTrajectory_1.pcd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameTrajectory_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameTrajectory_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameTrajectory_2.pcd" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameTrajectory_2.pcd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameTrajectory_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/KeyFrameTrajectory_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/MapPoints_0.pcd" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/MapPoints_0.pcd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/MapPoints_1.pcd" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/MapPoints_1.pcd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/MapPoints_with_keyframes_0.pcd" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/MapPoints_with_keyframes_0.pcd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/MapPoints_with_keyframes_1.pcd" beforeDir="false" afterPath="$PROJECT_DIR$/SLAMoutput/Sequence1/TopCamera/MapPoints_with_keyframes_1.pcd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ORB_SLAM2.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/euro_imu.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/euro_imu.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/euro_imu.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/euro_imu.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_imu.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_imu.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_imu.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_imu.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_imu_2.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_imu_2.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_imu_2.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_imu_2.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_no_imu.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_no_imu.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_no_imu.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_no_imu.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_vertical.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_vertical.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_vertical.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/eutech_vertical.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tracking.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tracking.cc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="839718944">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.16" value="2" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.opened" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open" />
+      <usages-collector id="statistics.file.types.edit" />
+      <usages-collector id="statistics.file.extensions.edit" />
+      <usages-collector id="statistics.file.types.open" />
+      <usages-collector id="statistics.cidr.testingFrameworks.usages" />
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="eutech_imu_2.cc" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Examples/Monocular/eutech_imu_2.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2067">
-              <caret line="753" column="16" selection-start-line="753" selection-start-column="16" selection-end-line="753" selection-end-column="16" />
+            <state relative-caret-position="18">
+              <caret line="895" column="1" selection-start-line="877" selection-end-line="895" selection-end-column="1" />
               <folding>
                 <element signature="e#829#847#0" expanded="true" />
                 <element signature="e#3747#8594#0" />
                 <element signature="e#8595#10105#0" />
                 <element signature="e#11097#17589#0" />
+                <element signature="e#27152#28565#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KeyFrame.h" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/KeyFrame.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2106">
-              <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
+            <state relative-caret-position="3258">
+              <caret line="181" column="28" selection-start-line="181" selection-start-column="28" selection-end-line="181" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KeyFrame.cc" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/KeyFrame.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7434">
-              <caret line="413" column="15" selection-start-line="413" selection-start-column="15" selection-end-line="413" selection-end-column="15" />
+            <state relative-caret-position="4878">
+              <caret line="271" column="18" selection-start-line="271" selection-start-column="18" selection-end-line="271" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Frame.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/Frame.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3618">
-              <caret line="201" column="12" selection-start-line="201" selection-start-column="12" selection-end-line="201" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="System.cc" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/System.cc">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4122">
@@ -80,47 +134,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tracking.cc" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tracking.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12636">
-              <caret line="702" selection-start-line="702" selection-end-line="702" />
+            <state relative-caret-position="12312">
+              <caret line="684" column="28" selection-start-line="684" selection-start-column="28" selection-end-line="684" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Map.cc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Map.cc">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Optimizer.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1782">
-              <caret line="99" column="58" selection-start-line="99" selection-start-column="58" selection-end-line="99" selection-end-column="58" />
+            <state relative-caret-position="42642">
+              <caret line="2369" column="15" selection-start-line="2369" selection-start-column="15" selection-end-line="2369" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tracking.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/Tracking.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5022">
-              <caret line="279" column="16" selection-start-line="279" selection-start-column="16" selection-end-line="279" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapPoint.cc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MapPoint.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1548">
-              <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Frame.cc" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Frame.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+            <state relative-caret-position="2718">
+              <caret line="151" column="7" selection-start-line="151" selection-start-column="7" selection-end-line="151" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runSLAM.sh">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inputFiles.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/Frame.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3690">
+              <caret line="205" column="22" selection-start-line="205" selection-start-column="22" selection-end-line="205" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -129,8 +188,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>isini</find>
-      <find>checkInitial</find>
       <find>checkinit</find>
       <find>mTransIdent</find>
       <find>forcedKFMatrix</find>
@@ -159,6 +216,8 @@
       <find>string</find>
       <find>read t</find>
       <find>calculateMatCam1to2</find>
+      <find>mTcw</find>
+      <find>Track()</find>
     </findStrings>
     <replaceStrings>
       <replace>mForcedKF</replace>
@@ -198,8 +257,8 @@
         <option value="$PROJECT_DIR$/src/System.cc" />
         <option value="$PROJECT_DIR$/include/System.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/Tracking.cc" />
         <option value="$PROJECT_DIR$/Examples/Monocular/eutech_imu_2.cc" />
+        <option value="$PROJECT_DIR$/src/Tracking.cc" />
       </list>
     </option>
   </component>
@@ -209,15 +268,12 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="71" />
-    <option name="y" value="-4" />
-    <option name="width" value="1295" />
-    <option name="height" value="772" />
+    <option name="x" value="70" />
+    <option name="y" value="17" />
+    <option name="width" value="1297" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -243,6 +299,11 @@
               <item name="LearnVIORB-master" type="462c0819:PsiDirectoryNode" />
               <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ORB_SLAM2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LearnVIORB-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -251,8 +312,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Point_cloud_segmentation/tree_fit" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -266,7 +333,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Bash.build.sh">
+  <component name="RunManager" selected="Application.Build All">
     <configuration name="build.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
       <module name="LearnVIORB-master" />
       <option name="INTERPRETER_OPTIONS" value="bash" />
@@ -275,14 +342,43 @@
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/build.sh" />
       <option name="PARAMETERS" value="" />
+      <method v="2" />
     </configuration>
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ORB_SLAM2" RUN_TARGET_NAME="eutech_imu_2" EXPLICIT_BUILD_TARGET_NAME="all" />
-    <configuration name="ORB_SLAM2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ORB_SLAM2" TARGET_NAME="ORB_SLAM2" CONFIG_NAME="Debug" />
-    <configuration name="euro_imu" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ORB_SLAM2" TARGET_NAME="euro_imu" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ORB_SLAM2" RUN_TARGET_NAME="eutech_imu_2" />
-    <configuration name="eutech_imu" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ORB_SLAM2" TARGET_NAME="eutech_imu" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ORB_SLAM2" RUN_TARGET_NAME="eutech_imu_2" />
-    <configuration name="eutech_imu_2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ORB_SLAM2" TARGET_NAME="eutech_imu_2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ORB_SLAM2" RUN_TARGET_NAME="eutech_imu_2" />
-    <configuration name="eutech_no_imu" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ORB_SLAM2" TARGET_NAME="eutech_no_imu" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ORB_SLAM2" RUN_TARGET_NAME="eutech_no_imu" />
-    <configuration name="eutech_vertical" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ORB_SLAM2" TARGET_NAME="eutech_vertical" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ORB_SLAM2" RUN_TARGET_NAME="eutech_vertical" />
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ORB_SLAM2" RUN_TARGET_NAME="eutech_imu_2" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ORB_SLAM2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ORB_SLAM2" TARGET_NAME="ORB_SLAM2" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="euro_imu" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ORB_SLAM2" TARGET_NAME="euro_imu" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ORB_SLAM2" RUN_TARGET_NAME="eutech_imu_2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="eutech_imu" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ORB_SLAM2" TARGET_NAME="eutech_imu" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ORB_SLAM2" RUN_TARGET_NAME="eutech_imu_2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="eutech_imu_2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ORB_SLAM2" TARGET_NAME="eutech_imu_2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ORB_SLAM2" RUN_TARGET_NAME="eutech_imu_2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="eutech_no_imu" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ORB_SLAM2" TARGET_NAME="eutech_no_imu" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ORB_SLAM2" RUN_TARGET_NAME="eutech_no_imu">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="eutech_vertical" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ORB_SLAM2" TARGET_NAME="eutech_vertical" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ORB_SLAM2" RUN_TARGET_NAME="eutech_vertical">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Build All" />
       <item itemvalue="Application.euro_imu" />
@@ -293,11 +389,6 @@
       <item itemvalue="Application.ORB_SLAM2" />
       <item itemvalue="Bash.build.sh" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Bash.build.sh" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -431,7 +522,16 @@
       <workItem from="1531911105672" duration="987000" />
       <workItem from="1532060866310" duration="2794000" />
       <workItem from="1532275120754" duration="61000" />
-      <workItem from="1532313443527" duration="1263000" />
+      <workItem from="1532313443527" duration="4986000" />
+      <workItem from="1532905633140" duration="688000" />
+      <workItem from="1532922589285" duration="2147000" />
+      <workItem from="1533127931632" duration="1266000" />
+      <workItem from="1533483781588" duration="1054000" />
+      <workItem from="1533960927718" duration="14000" />
+      <workItem from="1533961028679" duration="25000" />
+      <workItem from="1534302242096" duration="3951000" />
+      <workItem from="1534418706243" duration="310000" />
+      <workItem from="1534733827946" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="add clion version control">
       <created>1529295118325</created>
@@ -444,51 +544,52 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="705494000" />
+    <option name="totallyTimeSpent" value="718680000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="-4" width="1295" height="772" extended-state="6" />
-    <editor active="true" />
+    <frame x="71" y="24" width="1295" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12028302" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="CMake" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50278884" side_tool="true" weight="0.32868218" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32917318" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32917318" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19215372" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2498618" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49721116" weight="0.32761312" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32970452" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32917318" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32984293" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49671412" weight="0.32670158" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5032859" side_tool="true" weight="0.32738718" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32917318" />
+      <window_info anchor="bottom" id="CMake" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Data View" order="3" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32984293" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32970452" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22727273" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Data View" order="3" />
       <window_info id="Structure" order="1" weight="0.2498618" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49721116" weight="0.32868218" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="CMake" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50278884" side_tool="true" weight="0.32868218" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="CMake" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49721116" weight="0.32868218" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Data View" order="3" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,27 +687,9 @@
           <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="37" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/IMU/g2otypes.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IMU/NavState.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1428" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IMU/IMUPreintegrator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="75" column="18" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/Initializer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="954">
@@ -811,24 +894,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Optimizer.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5202">
-          <caret line="289" column="14" selection-start-line="289" selection-start-column="14" selection-end-line="289" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LocalMapping.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="71" lean-forward="true" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inputFiles.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -853,31 +922,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Frame.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MapPoint.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1548">
           <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/Tracking.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5022">
-          <caret line="279" column="16" selection-start-line="279" selection-start-column="16" selection-end-line="279" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Map.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="99" column="58" selection-start-line="99" selection-start-column="58" selection-end-line="99" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -895,24 +943,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/KeyFrame.h">
+    <entry file="file://$PROJECT_DIR$/include/Tracking.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2106">
-          <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
+        <state relative-caret-position="553">
+          <caret line="130" column="10" selection-start-line="130" selection-start-column="10" selection-end-line="130" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/Frame.h">
+    <entry file="file://$PROJECT_DIR$/src/Map.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3618">
-          <caret line="201" column="12" selection-start-line="201" selection-start-column="12" selection-end-line="201" selection-end-column="12" />
+        <state relative-caret-position="-5">
+          <caret line="68" column="39" lean-forward="true" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/Frame.h.backup">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Frame.cc.backup">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Examples/Monocular/eutech_imu_2.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="895" column="1" selection-start-line="877" selection-end-line="895" selection-end-column="1" />
+          <folding>
+            <element signature="e#829#847#0" expanded="true" />
+            <element signature="e#3747#8594#0" />
+            <element signature="e#8595#10105#0" />
+            <element signature="e#11097#17589#0" />
+            <element signature="e#27152#28565#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/KeyFrame.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3258">
+          <caret line="181" column="28" selection-start-line="181" selection-start-column="28" selection-end-line="181" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/KeyFrame.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7434">
-          <caret line="413" column="15" selection-start-line="413" selection-start-column="15" selection-end-line="413" selection-end-column="15" />
+        <state relative-caret-position="4878">
+          <caret line="271" column="18" selection-start-line="271" selection-start-column="18" selection-end-line="271" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -925,21 +1000,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tracking.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12636">
-          <caret line="702" selection-start-line="702" selection-end-line="702" />
+        <state relative-caret-position="12312">
+          <caret line="684" column="28" selection-start-line="684" selection-start-column="28" selection-end-line="684" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Examples/Monocular/eutech_imu_2.cc">
+    <entry file="file://$PROJECT_DIR$/src/Optimizer.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2067">
-          <caret line="753" column="16" selection-start-line="753" selection-start-column="16" selection-end-line="753" selection-end-column="16" />
-          <folding>
-            <element signature="e#829#847#0" expanded="true" />
-            <element signature="e#3747#8594#0" />
-            <element signature="e#8595#10105#0" />
-            <element signature="e#11097#17589#0" />
-          </folding>
+        <state relative-caret-position="42642">
+          <caret line="2369" column="15" selection-start-line="2369" selection-start-column="15" selection-end-line="2369" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Frame.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2718">
+          <caret line="151" column="7" selection-start-line="151" selection-start-column="7" selection-end-line="151" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runSLAM.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inputFiles.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/Frame.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3690">
+          <caret line="205" column="22" selection-start-line="205" selection-start-column="22" selection-end-line="205" selection-end-column="22" />
         </state>
       </provider>
     </entry>

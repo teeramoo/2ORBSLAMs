@@ -71,7 +71,7 @@ bool Tracking::TrackFromFirstSLAM()
         // do not seem very consistentent)
 
     ORBmatcher matcher(0.9,false);
-        cout << "Doing IMU tracking..." << endl;
+       // cout << "Doing IMU tracking..." << endl;
 
         // Update last frame pose according to its reference keyframe
         // Create "visual odometry" points
@@ -1654,6 +1654,15 @@ bool Tracking::TrackReferenceKeyFrame()
 
     Optimizer::PoseOptimization(&mCurrentFrame);
 
+    if(!isSecondSLAM) {
+        cv::Mat tempMat, lastTempMat;
+        tempMat = mCurrentFrame.mTcw.clone();
+        lastTempMat = mLastFrame.mTcw.clone();
+        tempMat.at<double>(3,1) = lastTempMat.at<double>(3,1);
+        mCurrentFrame.SetPose(tempMat);
+    }
+
+
   //  if(isSecondSLAM)
   //      mCurrentFrame.SetPose(mCurrentFrame.mTcwFirstSLAM);
 
@@ -1759,6 +1768,17 @@ bool Tracking::TrackWithMotionModel()
 
     //  Original SLAM
     mCurrentFrame.SetPose(mVelocity*mLastFrame.mTcw);
+
+
+    if(!isSecondSLAM) {
+        // Try to force height from the ground to be constant
+        cv::Mat tempMat, lastTempMat;
+        tempMat = mCurrentFrame.mTcw.clone();
+        lastTempMat = mLastFrame.mTcw.clone();
+        tempMat.at<double>(3,1) = lastTempMat.at<double>(3,1);
+        mCurrentFrame.SetPose(tempMat);
+    }
+
 
     fill(mCurrentFrame.mvpMapPoints.begin(),mCurrentFrame.mvpMapPoints.end(),static_cast<MapPoint*>(NULL));
 

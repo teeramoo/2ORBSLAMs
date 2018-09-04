@@ -1,0 +1,46 @@
+%YAML:1.0
+
+#path to vocabulary
+vocab: "Vocabulary/ORBvoc.bin"
+
+# path to camera settings
+downward_cam_settings: "config/Handheld_Platform/downwardCamera.yaml"
+
+upward_cam_settings: "config/Handheld_Platform/upwardCameraYaw-20_Down_0.yaml"
+
+
+#path to input video files or sequence of images
+#downward_input: "/home/teeramoo/Output_files/2018-Jun-08_10:04:00/vid1.avi"
+#downward_input: "/home/teeramoo/OutputFiles/2018-06-20:03:31:44/camera1/"
+downward_input: "/media/teeramoo/Seagate Backup Plus Drive/Thesis works/2018 Collected_data/Records at EuTech/Day2/Farm2/2_Down(0,-20)Up(45,-20)_Left/camera1/"
+#upward_input: "/home/teeramoo/Output_files/2018-Jun-08_10:04:00/vid2.avi"
+#upward_input: "/home/teeramoo/OutputFiles/2018-06-20:03:31:44/camera2/"
+upward_input: "/media/teeramoo/Seagate Backup Plus Drive/Thesis works/2018 Collected_data/Records at EuTech/Day2/Farm2/2_Down(0,-20)Up(45,-20)_Left/camera2/"
+#input type. True if it's a video, False if it's a sequence of images
+# if True, put 1. if False, put 0
+
+isVideo: 0
+
+#input format (for example, jpeg, png, avi, mkv etc.) 
+input_format: "jpeg"
+
+
+#path to video or images timestamp ** timestamps are in microsecond.
+#timestamp_file: "/home/teeramoo/Output_files/2018-Jun-08_10:04:00/video_timestamp.txt"
+#timestamp_file: "/home/teeramoo/OutputFiles/2018-06-20:03:31:44/video_timestamp.txt"
+timestamp_file: "/media/teeramoo/Seagate Backup Plus Drive/Thesis works/2018 Collected_data/Records at EuTech/Day2/Farm2/2_Down(0,-20)Up(45,-20)_Left/video_timestamp.txt"
+
+
+#path to IMU file ** timestamps in IMU file are in nanosecond.
+#IMU: "/home/teeramoo/Output_files/2018-Jun-08_09:43:49/IMU.csv"
+IMU: ""
+#path to output for downward camera
+output_downward: "SLAMoutput/Day2/Farm2/2_Down(0,-20)Up(45,-20)_Left/BotCamera/"
+
+#path to output for upward camera
+output_upward: "SLAMoutput/Day2/Farm2/2_Down(0,-20)Up(45,-20)_Left/TopCamera/"
+
+
+#debug mode
+debug: true
+
