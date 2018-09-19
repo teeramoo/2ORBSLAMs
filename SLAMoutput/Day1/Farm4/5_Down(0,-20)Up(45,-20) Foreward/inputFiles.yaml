@@ -6,7 +6,7 @@ vocab: "Vocabulary/ORBvoc.bin"
 # path to camera settings
 downward_cam_settings: "config/Handheld_Platform/downwardCamera.yaml"
 
-upward_cam_settings: "config/Handheld_Platform/upwardCameraYaw-20_Down_0.yaml"
+upward_cam_settings: "config/Handheld_Platform/upwardCamera_Down(0,-20).yaml"
 
 
 #path to input video files or sequence of images
@@ -35,10 +35,10 @@ timestamp_file: "/media/teeramoo/Seagate Backup Plus Drive/Thesis works/2018 Col
 #IMU: "/home/teeramoo/Output_files/2018-Jun-08_09:43:49/IMU.csv"
 IMU: ""
 #path to output for downward camera
-output_downward: "SLAMoutput/Day1/BotCamera/"
+output_downward: "SLAMoutput/Day1/Farm4/5_Down(0,-20)Up(45,-20) Foreward/BotCamera/"
 
 #path to output for upward camera
-output_upward: "SLAMoutput/Day1/TopCamera/"
+output_upward: "SLAMoutput/Day1/Farm4/5_Down(0,-20)Up(45,-20) Foreward/TopCamera/"
 
 
 #debug mode

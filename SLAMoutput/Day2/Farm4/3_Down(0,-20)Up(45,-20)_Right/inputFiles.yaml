@@ -6,7 +6,7 @@ vocab: "Vocabulary/ORBvoc.bin"
 # path to camera settings
 downward_cam_settings: "config/Handheld_Platform/downwardCamera.yaml"
 
-upward_cam_settings: "config/Handheld_Platform/upwardCameraYaw-20_Down_0.yaml"
+upward_cam_settings: "config/Handheld_Platform/upwardCamera_Down(0,-20).yaml"
 
 
 #path to input video files or sequence of images
