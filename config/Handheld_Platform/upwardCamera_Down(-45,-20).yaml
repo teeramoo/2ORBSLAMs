@@ -38,16 +38,16 @@ LocalMapping.LocalWindowSize: 20
 
 # Camera calibration and distortion parameters (OpenCV) 640x480 pixel^2
 #As of 15 Jan 18
-Camera.fx: 300.4129
-Camera.fy: 451.1327
-Camera.cx: 331.2164
-Camera.cy: 222.607
+Camera.fx: 308.1648
+Camera.fy: 427.2118
+Camera.cx: 320.40885
+Camera.cy: 226.6652
 
-Camera.k1: -0.3636
-Camera.k2: 0.1564
-Camera.p1: -0.0012
-Camera.p2:  4.3109e-04
-Camera.k3: -0.0338
+Camera.k1: -0.3267
+Camera.k2: 0.1078
+Camera.p1: 0.0006
+Camera.p2:  0.0016
+Camera.k3: -0.0164
 
 Camera.width: 640
 Camera.height: 480
